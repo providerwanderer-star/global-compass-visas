@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowRight, Globe, Award, Users, Clock, CheckCircle, Star, BookOpen,
   Briefcase, GraduationCap, Search, Shield, Heart, Plane, FileText,
@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
+import AnimatedCounter from "@/components/AnimatedCounter";
+import AnimatedSection from "@/components/AnimatedSection";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -15,10 +17,21 @@ import newLifeImg from "@/assets/new-life-canada.jpg";
 import consultationImg from "@/assets/consultation.jpg";
 import { countries } from "@/data/countryData";
 import { blogPosts } from "@/data/blogData";
+import { useRef } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+
+const staggerItem = {
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 const canadaServices = [
@@ -51,6 +64,13 @@ const stats = [
 ];
 
 const HomePage = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const heroImgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+
   return (
     <div>
       <Helmet>
@@ -58,16 +78,17 @@ const HomePage = () => {
         <meta name="description" content="By the immigrants, for the immigrants. Expert immigration services for Canada PR, study visas, LMIA, PNP, work permits, visitor visas, and citizenship. Free assessment." />
         <link rel="canonical" href="https://4acesvisa.com" />
       </Helmet>
-      {/* Hero — Canada-Focused */}
-      <section className="relative min-h-[55vh] md:min-h-[65vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
+
+      {/* Hero — with parallax */}
+      <section ref={heroRef} className="relative min-h-[55vh] md:min-h-[65vh] flex items-center overflow-hidden">
+        <motion.div className="absolute inset-0" style={{ y: heroImgY }}>
+          <img src={heroBg} alt="" className="w-full h-[120%] object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-primary/85" />
-        </div>
+        </motion.div>
         <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
           <div className="max-w-3xl">
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
-              <span className="inline-flex items-center gap-2 bg-gold/15 text-gold px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+              <span className="inline-flex items-center gap-2 bg-gold/15 text-gold px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm badge-pulse">
                 <Globe className="h-4 w-4" />
                 By the Immigrants, For the Immigrants
               </span>
@@ -93,12 +114,12 @@ const HomePage = () => {
             </motion.p>
             <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
               <Link to="/contact">
-                <Button size="lg" className="w-full sm:w-auto bg-gold text-accent-foreground hover:bg-gold-dark font-bold text-base shadow-gold px-8 py-6 text-lg">
+                <Button size="lg" className="w-full sm:w-auto bg-gold text-accent-foreground hover:bg-gold-dark font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
                   🚀 Get FREE Assessment Now <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/immigration/canada">
-                <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-white/40 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
+                <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-white/40 text-white hover:bg-white/10 font-semibold text-base px-8 py-6 hover:border-white/70 transition-all">
                   Explore Canada Pathways
                 </Button>
               </Link>
@@ -121,15 +142,12 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* Stats — animated counters */}
       <section className="bg-card border-b border-border">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <div className="font-display text-3xl md:text-4xl font-bold text-primary">{s.value}</div>
-                <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
-              </div>
+              <AnimatedCounter key={s.label} value={s.value} label={s.label} />
             ))}
           </div>
         </div>
@@ -138,7 +156,7 @@ const HomePage = () => {
       {/* Canada Services Grid */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-8">
+          <AnimatedSection className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               🇨🇦 Canada Immigration Services
             </span>
@@ -146,15 +164,21 @@ const HomePage = () => {
               Complete Canadian Immigration Solutions
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              From your first study permit to becoming a Canadian citizen — we cover every step of the journey. By immigrants who've walked this path, for immigrants building their future.
+              From your first study permit to becoming a Canadian citizen — we cover every step of the journey.
             </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-            {canadaServices.map((s, i) => (
-              <motion.div key={s.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i % 5}>
+          </AnimatedSection>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {canadaServices.map((s) => (
+              <motion.div key={s.label} variants={staggerItem}>
                 <Link to={s.href} className="block group h-full">
-                  <div className="bg-card rounded-xl border border-border p-5 hover:shadow-elevated transition-all hover:border-gold/30 h-full flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-3">
+                  <div className="bg-card rounded-xl border border-border p-5 h-full flex flex-col items-center text-center card-interactive glow-hover">
+                    <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-3 group-hover:bg-gold/20 transition-colors group-hover:scale-110 duration-300">
                       <s.icon className="h-6 w-6 text-gold" />
                     </div>
                     <h3 className="font-display text-sm font-bold text-foreground mb-1">{s.label}</h3>
@@ -163,14 +187,14 @@ const HomePage = () => {
                 </Link>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Life in Canada — Visual Showcase */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-8">
+          <AnimatedSection className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               Your Future Awaits
             </span>
@@ -180,48 +204,35 @@ const HomePage = () => {
             <p className="text-muted-foreground max-w-xl mx-auto">
               Every year, thousands of immigrants build new lives in Canada. Here's what your journey could look like.
             </p>
-          </div>
+          </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="relative group overflow-hidden rounded-2xl">
-              <img src={studentsImg} alt="International students on a Canadian university campus in autumn" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Study in Canada</span>
-                <h3 className="font-display text-lg font-bold text-white">World-Class Education</h3>
-                <p className="text-white/80 text-xs mt-1">Join thousands of international students at top Canadian universities</p>
-              </div>
-            </motion.div>
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="relative group overflow-hidden rounded-2xl">
-              <img src={familyImg} alt="Indian family reuniting at Canadian airport" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Family Sponsorship</span>
-                <h3 className="font-display text-lg font-bold text-white">Reunite with Family</h3>
-                <p className="text-white/80 text-xs mt-1">Bring your parents, spouse, and children to Canada through sponsorship</p>
-              </div>
-            </motion.div>
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2} className="relative group overflow-hidden rounded-2xl">
-              <img src={newLifeImg} alt="Young couple with house keys in Canadian neighborhood" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Permanent Residency</span>
-                <h3 className="font-display text-lg font-bold text-white">Build Your New Life</h3>
-                <p className="text-white/80 text-xs mt-1">From PR to your first home — we help you settle into Canadian life</p>
-              </div>
-            </motion.div>
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3} className="relative group overflow-hidden rounded-2xl">
-              <img src={consultationImg} alt="Immigration consultant meeting with clients" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Expert Guidance</span>
-                <h3 className="font-display text-lg font-bold text-white">Personal Consultation</h3>
-                <p className="text-white/80 text-xs mt-1">One-on-one guidance from consultants who've been through the process</p>
-              </div>
-            </motion.div>
+            {[
+              { img: studentsImg, alt: "International students on a Canadian university campus in autumn", tag: "Study in Canada", title: "World-Class Education", desc: "Join thousands of international students at top Canadian universities" },
+              { img: familyImg, alt: "Indian family reuniting at Canadian airport", tag: "Family Sponsorship", title: "Reunite with Family", desc: "Bring your parents, spouse, and children to Canada through sponsorship" },
+              { img: newLifeImg, alt: "Young couple with house keys in Canadian neighborhood", tag: "Permanent Residency", title: "Build Your New Life", desc: "From PR to your first home — we help you settle into Canadian life" },
+              { img: consultationImg, alt: "Immigration consultant meeting with clients", tag: "Expert Guidance", title: "Personal Consultation", desc: "One-on-one guidance from consultants who've been through the process" },
+            ].map((item, i) => (
+              <motion.div
+                key={item.tag}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="relative group overflow-hidden rounded-2xl cursor-pointer"
+              >
+                <img src={item.img} alt={item.alt} loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 transform group-hover:-translate-y-1 transition-transform duration-300">
+                  <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">{item.tag}</span>
+                  <h3 className="font-display text-lg font-bold text-white">{item.title}</h3>
+                  <p className="text-white/80 text-xs mt-1 group-hover:text-white transition-colors">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
           <div className="mt-8 text-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold">
+              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold hover:scale-105 transition-transform">
                 Start Your Story Today <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -232,24 +243,32 @@ const HomePage = () => {
       {/* Country Comparison */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-8">
+          <AnimatedSection className="text-center mb-8">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Not Sure Which Country? We Help You Choose.
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Compare immigration pathways across four top destinations. Our consultants have personally immigrated — we know the reality, not just the paperwork.
             </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {countries.map((c, i) => (
-              <motion.div
-                key={c.slug}
-                initial="hidden" whileInView="visible" viewport={{ once: true }}
-                variants={fadeUp} custom={i}
-              >
+          </AnimatedSection>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {countries.map((c) => (
+              <motion.div key={c.slug} variants={staggerItem}>
                 <Link to={`/immigration/${c.slug}`} className="block group">
-                  <div className={`bg-card rounded-xl border p-6 hover:shadow-elevated transition-all h-full ${c.slug === "canada" ? "border-gold/40 ring-1 ring-gold/20" : "border-border hover:border-gold/30"}`}>
-                    <div className="text-4xl mb-3">{c.flag}</div>
+                  <div className={`bg-card rounded-xl border p-6 h-full card-interactive ${c.slug === "canada" ? "border-gold/40 ring-1 ring-gold/20" : "border-border"}`}>
+                    <motion.div
+                      className="text-4xl mb-3"
+                      whileHover={{ scale: 1.2, rotate: [0, -5, 5, 0] }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      {c.flag}
+                    </motion.div>
                     <h3 className="font-display text-xl font-bold text-foreground mb-1">{c.name}</h3>
                     <p className="text-gold text-xs font-medium mb-3">{c.tagline}</p>
                     <ul className="space-y-1.5 mb-4">
@@ -261,16 +280,16 @@ const HomePage = () => {
                       ))}
                     </ul>
                     <span className="inline-flex items-center text-xs font-medium text-gold group-hover:gap-2 transition-all">
-                      Explore pathways <ArrowRight className="h-3 w-3 ml-1" />
+                      Explore pathways <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </div>
                 </Link>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div className="mt-8 text-center">
             <Link to="/quiz">
-              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold">
+              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold hover:scale-105 transition-transform">
                 Take the Pathway Quiz <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -281,7 +300,7 @@ const HomePage = () => {
       {/* Testimonials */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-8">
+          <AnimatedSection className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               By the Immigrants, For the Immigrants
             </span>
@@ -289,15 +308,24 @@ const HomePage = () => {
               Real Stories from Real Immigrants
             </h2>
             <p className="text-muted-foreground">We've been where you are. These are stories from people just like you.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i % 3}>
-                <div className="bg-card rounded-xl border border-border p-6 h-full">
+          </AnimatedSection>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {testimonials.map((t) => (
+              <motion.div key={t.name} variants={staggerItem}>
+                <div className="bg-card rounded-xl border border-border p-6 h-full card-interactive">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+                    <motion.div
+                      className="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center shrink-0"
+                      whileHover={{ scale: 1.1 }}
+                    >
                       <span className="font-display font-bold text-gold text-sm">{t.name.split(" ").map(n => n[0]).join("")}</span>
-                    </div>
+                    </motion.div>
                     <div>
                       <div className="font-semibold text-sm text-foreground">{t.name}</div>
                       <div className="text-xs text-gold">{t.country}</div>
@@ -312,7 +340,7 @@ const HomePage = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -320,26 +348,35 @@ const HomePage = () => {
       <section className="section-padding bg-primary" id="eligibility">
         <div className="container-narrow mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <AnimatedSection>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 Check Your Immigration Eligibility — <span className="text-gold">Free</span>
               </h2>
-              <p className="text-gold/80 text-sm font-medium mb-3">⚡ Next Express Entry draw expected within 2 weeks — check your eligibility now</p>
+              <p className="text-gold/80 text-sm font-medium mb-3 badge-pulse inline-block">⚡ Next Express Entry draw expected within 2 weeks — check your eligibility now</p>
               <p className="text-primary-foreground/70 mb-6">
-                Get a personalized eligibility assessment from consultants who've been through the immigration process themselves. We analyze your profile and recommend the best pathway.
+                Get a personalized eligibility assessment from consultants who've been through the immigration process themselves.
               </p>
               <ul className="space-y-3">
-                {["Free expert assessment", "Response within 24 hours", "No obligation consultation", "100% confidential", "By immigrants, for immigrants"].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-primary-foreground/80 text-sm">
+                {["Free expert assessment", "Response within 24 hours", "No obligation consultation", "100% confidential", "By immigrants, for immigrants"].map((item, i) => (
+                  <motion.li
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-2 text-primary-foreground/80 text-sm"
+                  >
                     <CheckCircle className="h-4 w-4 text-gold" />
                     {item}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
-            </div>
-            <div className="bg-card rounded-xl p-6 md:p-8 shadow-elevated">
-              <EligibilityForm sourcePage="homepage" />
-            </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2}>
+              <div className="bg-card rounded-xl p-6 md:p-8 shadow-elevated">
+                <EligibilityForm sourcePage="homepage" />
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -348,23 +385,29 @@ const HomePage = () => {
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="flex justify-between items-end mb-12">
-            <div>
+            <AnimatedSection>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
                 Immigration Insights & Guides
               </h2>
               <p className="text-muted-foreground">Expert articles to help you navigate your immigration journey.</p>
-            </div>
-            <Link to="/blog" className="hidden md:inline-flex items-center text-sm font-medium text-gold hover:underline">
+            </AnimatedSection>
+            <Link to="/blog" className="hidden md:inline-flex items-center text-sm font-medium text-gold hover:underline hover:gap-2 transition-all">
               View all articles <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {blogPosts.slice(0, 3).map((post, i) => (
-              <motion.div key={post.slug} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {blogPosts.slice(0, 3).map((post) => (
+              <motion.div key={post.slug} variants={staggerItem}>
                 <Link to={`/blog/${post.slug}`} className="block group">
-                  <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-elevated transition-all h-full">
-                    <div className="bg-secondary p-4">
-                      <BookOpen className="h-8 w-8 text-gold" />
+                  <div className="bg-card rounded-xl border border-border overflow-hidden h-full card-interactive">
+                    <div className="bg-secondary p-4 group-hover:bg-gold/10 transition-colors duration-300">
+                      <BookOpen className="h-8 w-8 text-gold group-hover:scale-110 transition-transform duration-300" />
                     </div>
                     <div className="p-6">
                       <span className="text-xs font-medium text-gold">{post.category}</span>
@@ -374,14 +417,16 @@ const HomePage = () => {
                       <p className="text-sm text-muted-foreground line-clamp-2">{post.excerpt}</p>
                       <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
                         <span>{post.readTime} read</span>
-                        <span>{new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
+                        <span className="flex items-center text-gold font-medium group-hover:gap-1.5 transition-all">
+                          Read more <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </span>
                       </div>
                     </div>
                   </div>
                 </Link>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div className="mt-8 text-center md:hidden">
             <Link to="/blog">
               <Button variant="outline" className="border-gold text-gold hover:bg-gold/10">View All Articles</Button>
@@ -393,9 +438,11 @@ const HomePage = () => {
       {/* FAQ */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
+          <AnimatedSection className="text-center mb-8">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Frequently Asked Questions
+            </h2>
+          </AnimatedSection>
           <div className="space-y-4">
             {[
               { q: "Which country is easiest for immigration in 2026?", a: "Canada offers the fastest PR pathways through Express Entry (6 months processing). Germany's Job Seeker Visa is easiest to obtain initially. Australia rewards high-skilled professionals. The UK's Skilled Worker visa is efficient with a job offer. The best choice depends on your profile — book a free consultation." },
@@ -404,42 +451,51 @@ const HomePage = () => {
               { q: "Can 4 Aces Visa guarantee my visa approval?", a: "No ethical consultancy can guarantee approval as the final decision rests with immigration authorities. However, our 98% success rate reflects our expertise in preparing strong, compliant applications." },
               { q: "Do I need IELTS for immigration?", a: "For Canada, IELTS or equivalent is mandatory for Express Entry. Australia requires English for skilled migration. Germany may accept other certifications. UK requires B1 for Skilled Worker visa. Higher scores significantly improve your chances." },
             ].map((faq, i) => (
-              <details key={i} className="bg-card rounded-xl border border-border group">
+              <motion.details
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-card rounded-xl border border-border group card-interactive"
+              >
                 <summary className="flex items-center justify-between p-6 cursor-pointer font-display font-semibold text-foreground">
                   {faq.q}
-                  <span className="text-gold ml-4 text-xl group-open:rotate-45 transition-transform">+</span>
+                  <span className="text-gold ml-4 text-xl group-open:rotate-45 transition-transform duration-300">+</span>
                 </summary>
                 <div className="px-6 pb-6 text-sm text-muted-foreground leading-relaxed">
                   {faq.a}
                 </div>
-              </details>
+              </motion.details>
             ))}
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="section-padding bg-primary text-center">
+      <section className="section-padding bg-primary text-center overflow-hidden">
         <div className="container-narrow mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Ready to Start Your Immigration Journey?
-          </h2>
-          <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
-            Join 15,000+ successful immigrants who trusted 4 Aces Visa. By the immigrants, for the immigrants — we've been where you are.
-          </p>
-          <p className="text-gold/80 text-sm font-medium mb-8">⚡ Limited free consultation slots available this week</p>
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
-            <Link to="/contact">
-              <Button size="lg" className="w-full sm:w-auto bg-gold text-accent-foreground hover:bg-gold-dark font-bold text-lg shadow-gold px-10 py-6">
-                🚀 Start Your Journey — FREE <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <a href="https://wa.me/16478622190" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-white/40 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
-                💬 WhatsApp Us
-              </Button>
-            </a>
-          </div>
+          <AnimatedSection>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              Ready to Start Your Immigration Journey?
+            </h2>
+            <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
+              Join 15,000+ successful immigrants who trusted 4 Aces Visa. By the immigrants, for the immigrants — we've been where you are.
+            </p>
+            <p className="text-gold/80 text-sm font-medium mb-8 badge-pulse inline-block">⚡ Limited free consultation slots available this week</p>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+              <Link to="/contact">
+                <Button size="lg" className="w-full sm:w-auto bg-gold text-accent-foreground hover:bg-gold-dark font-bold text-lg shadow-gold px-10 py-6 hover:scale-105 transition-transform">
+                  🚀 Start Your Journey — FREE <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <a href="https://wa.me/16478622190" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-white/40 text-white hover:bg-white/10 font-semibold text-base px-8 py-6 hover:border-white/70 transition-all">
+                  💬 WhatsApp Us
+                </Button>
+              </a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
     </div>

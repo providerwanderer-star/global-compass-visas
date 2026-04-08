@@ -92,6 +92,7 @@ const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
             <SelectItem value="canada">🇨🇦 Canada</SelectItem>
             <SelectItem value="australia">🇦🇺 Australia</SelectItem>
             <SelectItem value="germany">🇩🇪 Germany</SelectItem>
+            <SelectItem value="uk">🇬🇧 United Kingdom</SelectItem>
             <SelectItem value="not-sure">Not Sure Yet</SelectItem>
           </SelectContent>
         </Select>
@@ -102,10 +103,15 @@ const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
           <SelectContent>
             <SelectItem value="pr">Permanent Residency</SelectItem>
             <SelectItem value="work">Work Permit</SelectItem>
-            <SelectItem value="study">Study Visa</SelectItem>
-            <SelectItem value="jobseeker">Job Seeker Visa</SelectItem>
+            <SelectItem value="study">Student Visa</SelectItem>
+            <SelectItem value="lmia">LMIA Assistance</SelectItem>
+            <SelectItem value="pnp">PNP Application</SelectItem>
+            <SelectItem value="visitor">Visitor Visa / Super Visa</SelectItem>
+            <SelectItem value="restoration">Visa Restoration</SelectItem>
             <SelectItem value="family">Family Sponsorship</SelectItem>
-            <SelectItem value="visitor">Visitor Visa</SelectItem>
+            <SelectItem value="citizenship">Citizenship Application</SelectItem>
+            <SelectItem value="jobseeker">Job Seeker Visa</SelectItem>
+            <SelectItem value="insurance">Visitor Visa Insurance</SelectItem>
           </SelectContent>
         </Select>
         <Select onValueChange={(v) => setFormData({ ...formData, education_level: v })}>

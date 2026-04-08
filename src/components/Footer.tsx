@@ -14,8 +14,8 @@ const Footer = () => {
                 4 Aces <span className="text-gold">Visa</span>
               </span>
             </div>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-4">
-              Your global immigration strategy partner. We help you choose the right country, pathway, and timeline for immigration success.
+            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-3">
+              By the immigrants, for the immigrants. Your global immigration strategy partner with first-hand experience.
             </p>
             <div className="flex items-center gap-2 text-sm text-primary-foreground/60">
               <MapPin className="h-4 w-4 text-gold" />
@@ -30,6 +30,7 @@ const Footer = () => {
                 { label: "🇨🇦 Canada Immigration", href: "/immigration/canada" },
                 { label: "🇦🇺 Australia Immigration", href: "/immigration/australia" },
                 { label: "🇩🇪 Germany Immigration", href: "/immigration/germany" },
+                { label: "🇬🇧 UK Immigration", href: "/immigration/uk" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link to={l.href} className="text-sm text-primary-foreground/60 hover:text-gold transition-colors">{l.label}</Link>
@@ -43,10 +44,13 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 { label: "Express Entry PR", href: "/services/express-entry" },
+                { label: "Student Visa", href: "/services/student-visa" },
+                { label: "LMIA Assistance", href: "/services/lmia-assistance" },
+                { label: "PNP Application", href: "/services/pnp-application" },
                 { label: "Work Permits", href: "/services/work-permits" },
-                { label: "Study Visas", href: "/services/study-visas" },
-                { label: "Job Seeker Visa", href: "/services/job-seeker-visa" },
+                { label: "Visitor Visa", href: "/services/visitor-visa" },
                 { label: "Family Sponsorship", href: "/services/family-sponsorship" },
+                { label: "Citizenship", href: "/services/citizenship-application" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link to={l.href} className="text-sm text-primary-foreground/60 hover:text-gold transition-colors">{l.label}</Link>
@@ -71,7 +75,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-foreground/40">© 2026 4 Aces Visa. All rights reserved.</p>
+          <p className="text-sm text-primary-foreground/40">© 2026 4 Aces Visa. All rights reserved. By the immigrants, for the immigrants.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">Terms of Service</Link>

@@ -34,17 +34,17 @@ const staggerItem = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
-const canadaServices = [
+const immigrationServices = [
   { icon: Award, label: "Express Entry PR", description: "CRS optimization & 6-month PR processing", href: "/services/express-entry" },
-  { icon: GraduationCap, label: "Student Visa", description: "DLI admission, study permits & PGWP pathway", href: "/services/student-visa" },
-  { icon: Briefcase, label: "LMIA Assistance", description: "Employer coordination & +50-200 CRS points", href: "/services/lmia-assistance" },
+  { icon: GraduationCap, label: "Student Visa", description: "Admissions, study permits & post-grad pathways", href: "/services/student-visa" },
+  { icon: Briefcase, label: "LMIA Assistance", description: "Employer coordination & CRS points boost", href: "/services/lmia-assistance" },
   { icon: MapPin, label: "PNP Application", description: "Provincial nomination with +600 CRS points", href: "/services/pnp-application" },
   { icon: RefreshCw, label: "Visa Restoration", description: "Restore expired status within 90 days", href: "/services/visa-restoration" },
-  { icon: Plane, label: "Visitor Visa & Super Visa", description: "Family visits & 10-year Super Visa", href: "/services/visitor-visa" },
-  { icon: Shield, label: "Visitor Visa Insurance", description: "Mandatory Super Visa medical coverage", href: "/services/visitor-visa-insurance" },
+  { icon: Plane, label: "Visitor & Super Visa", description: "Family visits & extended stay visas", href: "/services/visitor-visa" },
+  { icon: Shield, label: "Travel Insurance", description: "Mandatory medical coverage for visas", href: "/services/visitor-visa-insurance" },
   { icon: Heart, label: "Family Sponsorship", description: "Sponsor spouse, parents & children", href: "/services/family-sponsorship" },
-  { icon: BadgeCheck, label: "Citizenship Application", description: "Complete your Canadian journey", href: "/services/citizenship-application" },
-  { icon: FileText, label: "Work Permits", description: "LMIA, open & employer-specific permits", href: "/services/work-permits" },
+  { icon: BadgeCheck, label: "Citizenship Application", description: "Complete your immigration journey", href: "/services/citizenship-application" },
+  { icon: FileText, label: "Work Permits", description: "Open & employer-specific work permits", href: "/services/work-permits" },
 ];
 
 const testimonials = [
@@ -97,7 +97,7 @@ const HomePage = () => {
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
               initial="hidden" animate="visible" variants={fadeUp} custom={1}
             >
-              Your Canadian Dream{" "}
+              Your Dream of Living Abroad{" "}
               <span className="gradient-text">Starts Here.</span>
             </motion.h1>
             <motion.p
@@ -110,7 +110,7 @@ const HomePage = () => {
               className="text-base text-white/55 mb-8 max-w-xl"
               initial="hidden" animate="visible" variants={fadeUp} custom={3}
             >
-              Express Entry • Student Visa • LMIA • PNP • Visitor Visa • Family Sponsorship • Citizenship — Complete Canadian immigration services by consultants who've been through the process themselves.
+              Express Entry • Student Visa • Work Permits • Family Sponsorship • Citizenship — Complete immigration services across 4 countries by consultants who've been through the process themselves.
             </motion.p>
             <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
               <Link to="/contact">
@@ -118,9 +118,9 @@ const HomePage = () => {
                   🚀 Get FREE Assessment Now <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link to="/immigration/canada">
+              <Link to="/quiz">
                 <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-white/40 text-white hover:bg-white/10 font-semibold text-base px-8 py-6 hover:border-white/70 transition-all">
-                  Explore Canada Pathways
+                  Explore Immigration Pathways
                 </Button>
               </Link>
             </motion.div>
@@ -158,13 +158,13 @@ const HomePage = () => {
         <div className="container-narrow mx-auto">
           <AnimatedSection className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
-              🇨🇦 Canada Immigration Services
+              🌍 Immigration Services
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Complete Canadian Immigration Solutions
+              Complete Immigration Solutions
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              From your first study permit to becoming a Canadian citizen — we cover every step of the journey.
+              From your first study permit to becoming a permanent resident abroad — we cover every step of the journey.
             </p>
           </AnimatedSection>
           <motion.div
@@ -174,7 +174,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            {canadaServices.map((s) => (
+            {immigrationServices.map((s) => (
               <motion.div key={s.label} variants={staggerItem}>
                 <Link to={s.href} className="block group h-full">
                   <div className="bg-card rounded-xl border border-border p-5 h-full flex flex-col items-center text-center card-interactive glow-hover">
@@ -202,14 +202,14 @@ const HomePage = () => {
               This Could Be Your Story
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Every year, thousands of immigrants build new lives in Canada. Here's what your journey could look like.
+              Every year, thousands of immigrants build new lives abroad. Here's what your journey could look like.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { img: studentsImg, alt: "International students on a Canadian university campus in autumn", tag: "Study in Canada", title: "World-Class Education", desc: "Join thousands of international students at top Canadian universities" },
-              { img: familyImg, alt: "Indian family reuniting at Canadian airport", tag: "Family Sponsorship", title: "Reunite with Family", desc: "Bring your parents, spouse, and children to Canada through sponsorship" },
-              { img: newLifeImg, alt: "Young couple with house keys in Canadian neighborhood", tag: "Permanent Residency", title: "Build Your New Life", desc: "From PR to your first home — we help you settle into Canadian life" },
+              { img: studentsImg, alt: "International students on a university campus abroad", tag: "Study Abroad", title: "World-Class Education", desc: "Join thousands of international students at top universities worldwide" },
+              { img: familyImg, alt: "Family reuniting at airport", tag: "Family Sponsorship", title: "Reunite with Family", desc: "Bring your loved ones closer through family sponsorship programs" },
+              { img: newLifeImg, alt: "Young couple with house keys in new neighborhood", tag: "Permanent Residency", title: "Build Your New Life", desc: "From PR to your first home — we help you settle into life abroad" },
               { img: consultationImg, alt: "Immigration consultant meeting with clients", tag: "Expert Guidance", title: "Personal Consultation", desc: "One-on-one guidance from consultants who've been through the process" },
             ].map((item, i) => (
               <motion.div

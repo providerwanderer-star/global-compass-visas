@@ -138,7 +138,7 @@ const HomePage = () => {
       {/* Canada Services Grid */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               🇨🇦 Canada Immigration Services
             </span>
@@ -170,7 +170,7 @@ const HomePage = () => {
       {/* Life in Canada — Visual Showcase */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               Your Future Awaits
             </span>
@@ -232,7 +232,7 @@ const HomePage = () => {
       {/* Country Comparison */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Not Sure Which Country? We Help You Choose.
             </h2>
@@ -281,7 +281,7 @@ const HomePage = () => {
       {/* Testimonials */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               By the Immigrants, For the Immigrants
             </span>

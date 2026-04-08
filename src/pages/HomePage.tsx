@@ -221,16 +221,21 @@ const HomePage = () => {
             {testimonials.map((t, i) => (
               <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i % 3}>
                 <div className="bg-card rounded-xl border border-border p-6 h-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center shrink-0">
+                      <span className="font-display font-bold text-gold text-sm">{t.name.split(" ").map(n => n[0]).join("")}</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-foreground">{t.name}</div>
+                      <div className="text-xs text-gold">{t.country}</div>
+                    </div>
+                  </div>
                   <div className="flex gap-0.5 mb-3">
                     {Array.from({ length: t.rating }).map((_, j) => (
                       <Star key={j} className="h-4 w-4 fill-gold text-gold" />
                     ))}
                   </div>
-                  <p className="text-sm text-foreground mb-4 italic leading-relaxed">"{t.text}"</p>
-                  <div>
-                    <div className="font-semibold text-sm text-foreground">{t.name}</div>
-                    <div className="text-xs text-gold">{t.country}</div>
-                  </div>
+                  <p className="text-sm text-foreground italic leading-relaxed">"{t.text}"</p>
                 </div>
               </motion.div>
             ))}
@@ -246,6 +251,7 @@ const HomePage = () => {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 Check Your Immigration Eligibility — <span className="text-gold">Free</span>
               </h2>
+              <p className="text-gold/80 text-sm font-medium mb-3">⚡ Next Express Entry draw expected within 2 weeks — check your eligibility now</p>
               <p className="text-primary-foreground/70 mb-6">
                 Get a personalized eligibility assessment from consultants who've been through the immigration process themselves. We analyze your profile and recommend the best pathway.
               </p>
@@ -348,6 +354,7 @@ const HomePage = () => {
           <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
             Join 15,000+ successful immigrants who trusted 4 Aces Visa. By the immigrants, for the immigrants — we've been where you are.
           </p>
+          <p className="text-gold/80 text-sm font-medium mb-8">⚡ Limited free consultation slots available this week</p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link to="/contact">
               <Button size="lg" className="w-full sm:w-auto bg-gold text-accent-foreground hover:bg-gold-dark font-bold text-lg shadow-gold px-10 py-6">
@@ -355,7 +362,7 @@ const HomePage = () => {
               </Button>
             </Link>
             <a href="https://wa.me/16478622190" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
+              <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-white/40 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
                 💬 WhatsApp Us
               </Button>
             </a>

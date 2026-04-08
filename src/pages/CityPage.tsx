@@ -35,6 +35,39 @@ const CityPage = () => {
         <meta property="og:title" content={city.metaTitle} />
         <meta property="og:description" content={city.metaDescription} />
         <meta property="og:url" content={`https://4acesvisa.com/city/${city.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "LocalBusiness",
+                name: `4 Aces Visa – ${city.name}`,
+                description: city.metaDescription,
+                url: `https://4acesvisa.com/city/${city.slug}`,
+                telephone: "+16478622190",
+                email: "sahil280389@gmail.com",
+                address: { "@type": "PostalAddress", addressLocality: city.name, addressCountry: city.country === "india" ? "IN" : "CA" },
+                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500", bestRating: "5" },
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://4acesvisa.com/" },
+                  { "@type": "ListItem", position: 2, name: city.region, item: `https://4acesvisa.com/country/${city.country}` },
+                  { "@type": "ListItem", position: 3, name: city.name, item: `https://4acesvisa.com/city/${city.slug}` },
+                ],
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: city.faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: { "@type": "Answer", text: faq.answer },
+                })),
+              },
+            ],
+          })}
+        </script>
       </Helmet>
       {/* Hero */}
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-24">

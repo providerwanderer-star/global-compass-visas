@@ -107,7 +107,7 @@ const HomePage = () => {
         <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-8 items-stretch">
             {/* Left — Text */}
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 flex flex-col justify-center">
               <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
                 <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 badge-pulse">
                   <Globe className="h-4 w-4" />

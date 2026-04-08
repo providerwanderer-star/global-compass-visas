@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
-import logoIcon from "@/assets/logo-icon.png";
 
 const Footer = () => {
   return (
@@ -8,10 +7,12 @@ const Footer = () => {
       <div className="container-narrow mx-auto section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img src={logoIcon} alt="4 Aces Visa" className="h-8 w-8" loading="lazy" />
-              <span className="font-display text-xl font-bold">
-                4 Aces <span className="text-gold">Visa</span>
+            <div className="flex items-center gap-1 mb-4">
+              <span className="font-display text-xl font-extrabold tracking-tight text-white">
+                4 Aces
+              </span>
+              <span className="font-display text-xl font-extrabold tracking-tight text-gold">
+                Visa
               </span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-3">

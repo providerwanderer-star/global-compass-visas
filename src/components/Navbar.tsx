@@ -122,7 +122,7 @@ const Navbar = () => {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+1234567890" className="flex items-center gap-1.5 text-sm text-foreground/60 hover:text-gold transition-colors">
+          <a href="tel:+16478622190" className="flex items-center gap-1.5 text-sm text-foreground/60 hover:text-gold transition-colors">
             <Phone className="h-4 w-4" />
             <span>Call Now</span>
           </a>
@@ -188,7 +188,7 @@ const Navbar = () => {
               </div>
             ))}
             <div className="pt-3 flex flex-col gap-2">
-              <a href="tel:+1234567890" className="flex items-center justify-center gap-2 py-2.5 text-sm font-medium text-primary border border-primary rounded-lg hover:bg-primary/5 transition-colors">
+              <a href="tel:+16478622190" className="flex items-center justify-center gap-2 py-2.5 text-sm font-medium text-primary border border-primary rounded-lg hover:bg-primary/5 transition-colors">
                 <Phone className="h-4 w-4" />
                 Call Now
               </a>

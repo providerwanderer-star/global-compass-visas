@@ -31,7 +31,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Phone</h3>
-                    <a href="tel:+1234567890" className="text-sm text-muted-foreground hover:text-gold">+1 (234) 567-890</a>
+                    <a href="tel:+16478622190" className="text-sm text-muted-foreground hover:text-gold">+1 (647) 862-2190</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -40,7 +40,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
-                    <a href="mailto:info@4acesvisa.com" className="text-sm text-muted-foreground hover:text-gold">info@4acesvisa.com</a>
+                    <a href="mailto:sahil280389@gmail.com" className="text-sm text-muted-foreground hover:text-gold">sahil280389@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

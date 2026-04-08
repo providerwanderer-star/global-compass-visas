@@ -60,7 +60,7 @@ const CityPage = () => {
                 Speak to Expert in {city.name} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
-            <a href="tel:+1234567890">
+            <a href="tel:+16478622190">
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
                 <Phone className="mr-2 h-4 w-4" /> Call Now
               </Button>

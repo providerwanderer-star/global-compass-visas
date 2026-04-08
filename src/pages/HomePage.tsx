@@ -87,14 +87,14 @@ const HomePage = () => {
             >
               Express Entry • Student Visa • LMIA • PNP • Visitor Visa • Family Sponsorship • Citizenship — Complete Canadian immigration services by consultants who've been through the process themselves.
             </motion.p>
-            <motion.div className="flex flex-wrap gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
+            <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
               <Link to="/contact">
-                <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold text-base shadow-gold px-8">
-                  Check Eligibility <ArrowRight className="ml-2 h-4 w-4" />
+                <Button size="lg" className="w-full sm:w-auto bg-gold text-accent-foreground hover:bg-gold-dark font-bold text-base shadow-gold px-8 py-6 text-lg">
+                  🚀 Get FREE Assessment Now <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/immigration/canada">
-                <Button size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 font-semibold text-base px-8">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
                   Explore Canada Pathways
                 </Button>
               </Link>
@@ -334,15 +334,15 @@ const HomePage = () => {
           <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
             Join 15,000+ successful immigrants who trusted 4 Aces Visa. By the immigrants, for the immigrants — we've been where you are.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link to="/contact">
-              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold text-base shadow-gold px-8">
-                Get Free Assessment <ArrowRight className="ml-2 h-4 w-4" />
+              <Button size="lg" className="w-full sm:w-auto bg-gold text-accent-foreground hover:bg-gold-dark font-bold text-lg shadow-gold px-10 py-6">
+                🚀 Start Your Journey — FREE <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 font-semibold text-base px-8">
-                WhatsApp Us
+              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
+                💬 WhatsApp Us
               </Button>
             </a>
           </div>

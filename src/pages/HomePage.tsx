@@ -105,9 +105,9 @@ const HomePage = () => {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full translate-y-1/2 -translate-x-1/3" />
 
         <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-8 items-stretch">
             {/* Left — Text */}
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 flex flex-col justify-center">
               <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
                 <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 badge-pulse">
                   <Globe className="h-4 w-4" />
@@ -162,7 +162,7 @@ const HomePage = () => {
             </div>
 
             {/* Right — Hero image blended into background */}
-            <div className="order-1 lg:order-2 relative flex items-center justify-center">
+            <div className="order-1 lg:order-2 relative flex items-center justify-center lg:min-h-full">
               {/* Accent circle behind */}
               <motion.div
                 className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-primary/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -170,22 +170,24 @@ const HomePage = () => {
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
-              {/* Image with edge-fade mask */}
+              {/* Image with edge-fade mask — fills the column height */}
               <motion.div
-                className="relative w-full"
+                className="relative w-full lg:absolute lg:inset-0 overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 style={{
-                  WebkitMaskImage: "radial-gradient(ellipse 85% 80% at center, black 50%, transparent 100%)",
-                  maskImage: "radial-gradient(ellipse 85% 80% at center, black 50%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
+                  WebkitMaskComposite: "destination-in",
+                  maskImage: "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
+                  maskComposite: "intersect",
                 }}
               >
                 <img
                   src={heroCombined}
                   alt="Happy students and families starting their immigration journey"
-                  className="w-full object-cover"
-                  width={960}
+                  className="w-full h-full object-cover lg:object-center"
+                  width={1280}
                   height={720}
                 />
               </motion.div>

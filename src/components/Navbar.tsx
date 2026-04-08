@@ -1,0 +1,153 @@
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import logoIcon from "@/assets/logo-icon.png";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  {
+    label: "Countries", href: "#",
+    children: [
+      { label: "🇨🇦 Canada", href: "/immigration/canada" },
+      { label: "🇦🇺 Australia", href: "/immigration/australia" },
+      { label: "🇩🇪 Germany", href: "/immigration/germany" },
+    ],
+  },
+  {
+    label: "Services", href: "#",
+    children: [
+      { label: "Express Entry PR", href: "/services/express-entry" },
+      { label: "Work Permits", href: "/services/work-permits" },
+      { label: "Study Visas", href: "/services/study-visas" },
+      { label: "Job Seeker Visa", href: "/services/job-seeker-visa" },
+      { label: "Family Sponsorship", href: "/services/family-sponsorship" },
+    ],
+  },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+];
+
+const Navbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const location = useLocation();
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-navy-light/30">
+      <div className="container-narrow mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 md:h-20">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logoIcon} alt="4 Aces Visa" className="h-10 w-10" />
+          <span className="font-display text-xl font-bold text-cream">
+            4 Aces <span className="text-gold">Visa</span>
+          </span>
+        </Link>
+
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex items-center gap-1">
+          {navLinks.map((link) => (
+            <div
+              key={link.label}
+              className="relative"
+              onMouseEnter={() => link.children && setOpenDropdown(link.label)}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <Link
+                to={link.href}
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-md ${
+                  location.pathname === link.href
+                    ? "text-gold"
+                    : "text-cream/80 hover:text-gold"
+                }`}
+                onClick={(e) => link.children && e.preventDefault()}
+              >
+                {link.label}
+              </Link>
+              {link.children && openDropdown === link.label && (
+                <div className="absolute top-full left-0 mt-1 w-56 bg-card rounded-lg shadow-elevated border border-border p-2 animate-fade-up">
+                  {link.children.map((child) => (
+                    <Link
+                      key={child.label}
+                      to={child.href}
+                      className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary rounded-md transition-colors"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="hidden lg:flex items-center gap-3">
+          <a href="tel:+1234567890" className="flex items-center gap-1.5 text-cream/80 hover:text-gold text-sm transition-colors">
+            <Phone className="h-4 w-4" />
+            <span>Call Now</span>
+          </a>
+          <Link to="/contact">
+            <Button className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold shadow-gold">
+              Free Consultation
+            </Button>
+          </Link>
+        </div>
+
+        {/* Mobile toggle */}
+        <button className="lg:hidden text-cream" onClick={() => setMobileOpen(!mobileOpen)}>
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="lg:hidden bg-primary border-t border-navy-light/30 animate-fade-up">
+          <div className="px-4 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <div key={link.label}>
+                {link.children ? (
+                  <>
+                    <button
+                      className="w-full text-left px-4 py-2.5 text-cream/80 font-medium text-sm"
+                      onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
+                    >
+                      {link.label}
+                    </button>
+                    {openDropdown === link.label && link.children.map((child) => (
+                      <Link
+                        key={child.label}
+                        to={child.href}
+                        className="block pl-8 pr-4 py-2 text-cream/60 text-sm hover:text-gold"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </>
+                ) : (
+                  <Link
+                    to={link.href}
+                    className="block px-4 py-2.5 text-cream/80 font-medium text-sm hover:text-gold"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+            <div className="pt-3">
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>
+                <Button className="w-full bg-gold text-accent-foreground hover:bg-gold-dark font-semibold">
+                  Free Consultation
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;

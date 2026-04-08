@@ -161,26 +161,34 @@ const HomePage = () => {
               </motion.div>
             </div>
 
-            {/* Right — People images collage */}
+            {/* Right — Hero image blended into background */}
             <div className="order-1 lg:order-2 relative flex items-center justify-center">
               {/* Accent circle behind */}
               <motion.div
-                className="absolute w-[260px] h-[260px] md:w-[320px] md:h-[320px] rounded-full bg-primary/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-primary/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
-              {/* Single hero image */}
-              <motion.img
-                src={heroCombined}
-                alt="Happy students and families starting their immigration journey"
-                className="relative w-full max-w-[540px] rounded-2xl shadow-elevated object-cover aspect-[4/3]"
-                width={960}
-                height={720}
+              {/* Image with edge-fade mask */}
+              <motion.div
+                className="relative w-full"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-              />
+                style={{
+                  WebkitMaskImage: "radial-gradient(ellipse 85% 80% at center, black 50%, transparent 100%)",
+                  maskImage: "radial-gradient(ellipse 85% 80% at center, black 50%, transparent 100%)",
+                }}
+              >
+                <img
+                  src={heroCombined}
+                  alt="Happy students and families starting their immigration journey"
+                  className="w-full object-cover"
+                  width={960}
+                  height={720}
+                />
+              </motion.div>
               {/* Floating stat badge */}
               <motion.div
                 className="absolute -bottom-2 right-4 md:right-8 z-30 bg-card shadow-elevated rounded-xl px-4 py-3 border border-border"

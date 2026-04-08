@@ -340,7 +340,7 @@ const HomePage = () => {
                 🚀 Start Your Journey — FREE <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/16478622190" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
                 💬 WhatsApp Us
               </Button>

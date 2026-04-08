@@ -35,6 +35,42 @@ const ServicePage = () => {
         <meta property="og:title" content={service.metaTitle} />
         <meta property="og:description" content={service.metaDescription} />
         <meta property="og:url" content={`https://4acesvisa.com/services/${service.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Service",
+                name: service.title,
+                description: service.metaDescription,
+                url: `https://4acesvisa.com/services/${service.slug}`,
+                provider: {
+                  "@type": "Organization",
+                  name: "4 Aces Visa",
+                  telephone: "+16478622190",
+                  email: "sahil280389@gmail.com",
+                  url: "https://4acesvisa.com",
+                },
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://4acesvisa.com/" },
+                  { "@type": "ListItem", position: 2, name: "Services", item: "https://4acesvisa.com/services" },
+                  { "@type": "ListItem", position: 3, name: service.title, item: `https://4acesvisa.com/services/${service.slug}` },
+                ],
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: service.faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: { "@type": "Answer", text: faq.answer },
+                })),
+              },
+            ],
+          })}
+        </script>
       </Helmet>
       {/* Hero */}
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-24">

@@ -20,27 +20,29 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navbar />
-        <main className="pt-16 md:pt-20">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/immigration/:slug" element={<CountryPage />} />
-            <Route path="/services/:slug" element={<ServicePage />} />
-            <Route path="/city/:slug" element={<CityPage />} />
-            <Route path="/blog" element={<BlogListPage />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-        <WhatsAppButton />
-      </BrowserRouter>
-    </TooltipProvider>
+    <HelmetProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Navbar />
+          <main className="pt-16 md:pt-20">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/immigration/:slug" element={<CountryPage />} />
+              <Route path="/services/:slug" element={<ServicePage />} />
+              <Route path="/city/:slug" element={<CityPage />} />
+              <Route path="/blog" element={<BlogListPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+          <WhatsAppButton />
+        </BrowserRouter>
+      </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 

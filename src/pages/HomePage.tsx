@@ -183,41 +183,48 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="relative group overflow-hidden rounded-2xl">
-              <img src={studentsImg} alt="International students on a Canadian university campus in autumn" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={studentsImg} alt="International students on a Canadian university campus in autumn" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Study in Canada</span>
-                <h3 className="font-display text-xl font-bold text-white">World-Class Education</h3>
-                <p className="text-white/80 text-sm mt-1">Join thousands of international students at top Canadian universities</p>
+                <h3 className="font-display text-lg font-bold text-white">World-Class Education</h3>
+                <p className="text-white/80 text-xs mt-1">Join thousands of international students at top Canadian universities</p>
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="relative group overflow-hidden rounded-2xl">
-              <img src={familyImg} alt="Indian family reuniting at Canadian airport" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={familyImg} alt="Indian family reuniting at Canadian airport" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Family Sponsorship</span>
-                <h3 className="font-display text-xl font-bold text-white">Reunite with Family</h3>
-                <p className="text-white/80 text-sm mt-1">Bring your parents, spouse, and children to Canada through sponsorship</p>
+                <h3 className="font-display text-lg font-bold text-white">Reunite with Family</h3>
+                <p className="text-white/80 text-xs mt-1">Bring your parents, spouse, and children to Canada through sponsorship</p>
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2} className="relative group overflow-hidden rounded-2xl">
-              <img src={newLifeImg} alt="Young couple with house keys in Canadian neighborhood" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={newLifeImg} alt="Young couple with house keys in Canadian neighborhood" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Permanent Residency</span>
-                <h3 className="font-display text-xl font-bold text-white">Build Your New Life</h3>
-                <p className="text-white/80 text-sm mt-1">From PR to your first home — we help you settle into Canadian life</p>
+                <h3 className="font-display text-lg font-bold text-white">Build Your New Life</h3>
+                <p className="text-white/80 text-xs mt-1">From PR to your first home — we help you settle into Canadian life</p>
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3} className="relative group overflow-hidden rounded-2xl">
-              <img src={consultationImg} alt="Immigration consultant meeting with clients" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={consultationImg} alt="Immigration consultant meeting with clients" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Expert Guidance</span>
-                <h3 className="font-display text-xl font-bold text-white">Personal Consultation</h3>
-                <p className="text-white/80 text-sm mt-1">One-on-one guidance from consultants who've been through the process</p>
+                <h3 className="font-display text-lg font-bold text-white">Personal Consultation</h3>
+                <p className="text-white/80 text-xs mt-1">One-on-one guidance from consultants who've been through the process</p>
               </div>
             </motion.div>
+          </div>
+          <div className="mt-8 text-center">
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold">
+                Start Your Story Today <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

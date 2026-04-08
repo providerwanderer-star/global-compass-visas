@@ -172,23 +172,23 @@ const HomePage = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
               {/* Image grid */}
-              <div className="relative grid grid-cols-5 gap-3 w-full max-w-[500px]">
-                {/* Students — spans 3 cols */}
+              <div className="relative grid grid-cols-2 gap-4 w-full max-w-[500px]">
+                {/* Students */}
                 <motion.img
                   src={heroStudents}
                   alt="Happy international students starting their immigration journey"
-                  className="col-span-3 w-full rounded-2xl shadow-elevated object-cover aspect-[3/4] z-10"
+                  className="w-full rounded-2xl shadow-elevated object-cover aspect-[3/4]"
                   width={640}
                   height={640}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 />
-                {/* Family — spans 2 cols, offset down */}
+                {/* Family — offset down */}
                 <motion.img
                   src={heroFamily}
                   alt="Happy immigrant family reunited"
-                  className="col-span-2 w-full rounded-2xl shadow-elevated border-4 border-background object-cover aspect-[3/4] mt-8 z-10"
+                  className="w-full rounded-2xl shadow-elevated border-4 border-background object-cover aspect-[3/4] mt-10"
                   width={640}
                   height={640}
                   initial={{ opacity: 0, y: 30 }}

@@ -94,10 +94,24 @@ const HomePage = () => {
                 </Button>
               </Link>
               <Link to="/immigration/canada">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
+                <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-white/40 text-white hover:bg-white/10 font-semibold text-base px-8 py-6">
                   Explore Canada Pathways
                 </Button>
               </Link>
+            </motion.div>
+            <motion.div className="flex items-center gap-6 mt-6" initial="hidden" animate="visible" variants={fadeUp} custom={5}>
+              <div className="flex items-center gap-1.5">
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-gold text-gold" />
+                  ))}
+                </div>
+                <span className="text-white/70 text-sm">4.9/5</span>
+              </div>
+              <div className="text-white/40">|</div>
+              <span className="text-white/70 text-sm font-medium">15,000+ visas processed</span>
+              <div className="text-white/40 hidden sm:block">|</div>
+              <span className="text-white/70 text-sm font-medium hidden sm:block">98% success rate</span>
             </motion.div>
           </div>
         </div>

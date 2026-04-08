@@ -59,12 +59,12 @@ const HomePage = () => {
         <link rel="canonical" href="https://4acesvisa.com" />
       </Helmet>
       {/* Hero — Canada-Focused */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[55vh] md:min-h-[65vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
-        <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+        <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
           <div className="max-w-3xl">
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
               <span className="inline-flex items-center gap-2 bg-gold/15 text-gold px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
@@ -123,7 +123,7 @@ const HomePage = () => {
 
       {/* Stats */}
       <section className="bg-card border-b border-border">
-        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
@@ -138,7 +138,7 @@ const HomePage = () => {
       {/* Canada Services Grid */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               🇨🇦 Canada Immigration Services
             </span>
@@ -170,7 +170,7 @@ const HomePage = () => {
       {/* Life in Canada — Visual Showcase */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               Your Future Awaits
             </span>
@@ -183,41 +183,48 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="relative group overflow-hidden rounded-2xl">
-              <img src={studentsImg} alt="International students on a Canadian university campus in autumn" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={studentsImg} alt="International students on a Canadian university campus in autumn" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Study in Canada</span>
-                <h3 className="font-display text-xl font-bold text-white">World-Class Education</h3>
-                <p className="text-white/80 text-sm mt-1">Join thousands of international students at top Canadian universities</p>
+                <h3 className="font-display text-lg font-bold text-white">World-Class Education</h3>
+                <p className="text-white/80 text-xs mt-1">Join thousands of international students at top Canadian universities</p>
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="relative group overflow-hidden rounded-2xl">
-              <img src={familyImg} alt="Indian family reuniting at Canadian airport" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={familyImg} alt="Indian family reuniting at Canadian airport" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Family Sponsorship</span>
-                <h3 className="font-display text-xl font-bold text-white">Reunite with Family</h3>
-                <p className="text-white/80 text-sm mt-1">Bring your parents, spouse, and children to Canada through sponsorship</p>
+                <h3 className="font-display text-lg font-bold text-white">Reunite with Family</h3>
+                <p className="text-white/80 text-xs mt-1">Bring your parents, spouse, and children to Canada through sponsorship</p>
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2} className="relative group overflow-hidden rounded-2xl">
-              <img src={newLifeImg} alt="Young couple with house keys in Canadian neighborhood" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={newLifeImg} alt="Young couple with house keys in Canadian neighborhood" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Permanent Residency</span>
-                <h3 className="font-display text-xl font-bold text-white">Build Your New Life</h3>
-                <p className="text-white/80 text-sm mt-1">From PR to your first home — we help you settle into Canadian life</p>
+                <h3 className="font-display text-lg font-bold text-white">Build Your New Life</h3>
+                <p className="text-white/80 text-xs mt-1">From PR to your first home — we help you settle into Canadian life</p>
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3} className="relative group overflow-hidden rounded-2xl">
-              <img src={consultationImg} alt="Immigration consultant meeting with clients" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={consultationImg} alt="Immigration consultant meeting with clients" loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Expert Guidance</span>
-                <h3 className="font-display text-xl font-bold text-white">Personal Consultation</h3>
-                <p className="text-white/80 text-sm mt-1">One-on-one guidance from consultants who've been through the process</p>
+                <h3 className="font-display text-lg font-bold text-white">Personal Consultation</h3>
+                <p className="text-white/80 text-xs mt-1">One-on-one guidance from consultants who've been through the process</p>
               </div>
             </motion.div>
+          </div>
+          <div className="mt-8 text-center">
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold">
+                Start Your Story Today <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -225,7 +232,7 @@ const HomePage = () => {
       {/* Country Comparison */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Not Sure Which Country? We Help You Choose.
             </h2>
@@ -261,13 +268,20 @@ const HomePage = () => {
               </motion.div>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <Link to="/quiz">
+              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold">
+                Take the Pathway Quiz <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Testimonials */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
               By the Immigrants, For the Immigrants
             </span>

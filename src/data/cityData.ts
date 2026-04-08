@@ -6,10 +6,39 @@ export interface CityData {
   metaTitle: string;
   metaDescription: string;
   intro: string;
+  localInsight: string;
   services: string[];
   testimonial: { name: string; text: string; visa: string };
   faqs: { question: string; answer: string }[];
 }
+
+const indianCityInsights: Record<string, string> = {
+  "Delhi": "As India's capital and a major hub for embassies and visa application centres, Delhi residents benefit from proximity to VFS Global offices and quick document processing. The city's massive IT and corporate sector produces thousands of Express Entry-eligible professionals every year.",
+  "Mumbai": "India's financial capital has the highest concentration of skilled professionals in banking, finance, and tech — all in-demand occupations for Canada's NOC system. Mumbai's cosmopolitan culture means many applicants already have international work exposure.",
+  "Bangalore": "Known as India's Silicon Valley, Bangalore produces more tech-skilled immigrants than any other Indian city. Software engineers, data scientists, and IT managers from Bangalore consistently score 470+ CRS points.",
+  "Hyderabad": "Hyderabad's booming pharma and IT corridor (HITEC City) generates a strong pipeline of Canada-bound professionals. The city's lower cost of living means applicants can more easily meet proof-of-funds requirements.",
+  "Chennai": "Chennai's automotive and manufacturing industries align well with Australia's skilled occupation list. The city also has a strong tradition of educational migration, with many students transitioning to PR via PGWP pathways.",
+  "Pune": "Pune's mix of IT parks and educational institutions creates dual demand — both study visa and Express Entry applicants. The city's young professional demographic is ideal for Provincial Nominee Programs targeting under-35 applicants.",
+  "Ahmedabad": "Gujarat's commercial capital has a strong entrepreneurial community interested in Canada's Start-Up Visa program. Many Ahmedabad applicants also explore Germany's self-employment visa pathway.",
+  "Kolkata": "Eastern India's cultural capital has seen a 40% increase in immigration inquiries since 2024. Kolkata professionals in education, healthcare, and engineering find strong matches with Atlantic Immigration Program pathways.",
+  "Lucknow": "As UP's capital, Lucknow serves as a hub for immigration applicants across northern India. The city's growing medical and education sectors produce qualified candidates for healthcare worker pathways in Canada and Australia.",
+  "Jaipur": "Rajasthan's capital has a rapidly growing IT sector and a strong hospitality industry — both producing candidates eligible for Canada's LMIA-based work permits and Australia's employer-sponsored visas.",
+  "Chandigarh": "The tri-city area (Chandigarh-Mohali-Panchkula) is one of India's top immigration source regions, with high IELTS scores and strong CRS profiles thanks to Punjab's deep Canadian diaspora connections.",
+  "Noida": "Part of the NCR tech corridor, Noida's IT professionals from companies in Sectors 62-63 frequently qualify for Express Entry with 450+ CRS scores. Close proximity to Delhi's VFS centres speeds up biometrics processing.",
+  "Gurugram": "Home to 300+ Fortune 500 offices, Gurugram professionals have international corporate exposure that strengthens work permit and Express Entry applications. The city's expat community also drives family sponsorship demand.",
+  "Indore": "Central India's cleanest city has emerged as a growing IT hub, with Indore professionals increasingly exploring Canada PR and Germany's Job Seeker Visa as career acceleration moves.",
+  "Patna": "Bihar's capital has seen rising immigration interest, particularly among medical graduates and engineers. Many Patna applicants benefit from PNP streams in Saskatchewan and Manitoba that value smaller-city settlement intent.",
+  "Bhubaneswar": "Odisha's smart city is producing a new generation of tech professionals interested in Canadian immigration. The state's lower cost profile means applicants often exceed proof-of-funds requirements comfortably.",
+  "Coimbatore": "Tamil Nadu's industrial city has strong manufacturing and textile sector professionals who match well with Australia's Regional Skilled Migration (491) visa targeting non-metro settlement.",
+  "Vadodara": "Gujarat's cultural capital has a growing pool of chemical engineering and petrochemical professionals — occupations consistently on Canada's in-demand NOC list and Australia's MLTSSL.",
+  "Nagpur": "Central India's orange city is strategically positioned, drawing immigration aspirants from across Maharashtra and MP. Nagpur's IT and logistics sectors produce Canada-ready professionals.",
+  "Rajkot": "Saurashtra's commercial hub has a strong engineering and manufacturing base. Many Rajkot applicants explore both Canada Express Entry and Australia's skilled migration with strong points profiles.",
+  "Varanasi": "UP's spiritual capital has a growing education and tourism workforce. Young professionals from BHU and IIT-BHU frequently pursue study-to-PR pathways in Canada and Australia.",
+  "Kanpur": "IIT Kanpur and the city's industrial base produce engineering graduates highly sought after through Express Entry and Germany's EU Blue Card program for technical professionals.",
+  "Nashik": "Maharashtra's wine capital has a growing IT and agriculture-tech sector. Nashik professionals increasingly leverage PNP programs targeting semi-urban candidates with specific skill sets.",
+  "Agra": "Beyond the Taj Mahal, Agra has a growing service and tourism workforce. Many Agra residents pursue family sponsorship through established Canadian diaspora connections in the GTA.",
+  "Cochin": "Kerala's commercial capital has a strong maritime, IT, and healthcare workforce. Cochin professionals often score high in IELTS (thanks to Kerala's English proficiency) boosting CRS scores significantly.",
+};
 
 const indianCities: CityData[] = [
   "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Kolkata",
@@ -25,6 +54,7 @@ const indianCities: CityData[] = [
     metaTitle: `Best Immigration Consultant in ${name} | Canada, Australia & Germany PR – 4 Aces Visa`,
     metaDescription: `Looking for a trusted immigration consultant in ${name}? 4 Aces Visa helps with Canada PR, Australia migration, Germany work visa, study permits & more. Free assessment.`,
     intro: `Are you in ${name} and dreaming of settling abroad? 4 Aces Visa is your trusted immigration partner in ${name}, offering expert guidance for Canada PR, Australia skilled migration, and Germany Job Seeker Visa. Our ${name} team has helped hundreds of local professionals and families achieve their global immigration goals with a 98% success rate.`,
+    localInsight: indianCityInsights[name] || `${name} has a growing pool of immigration-ready professionals. Our local expertise helps ${name} residents navigate complex visa processes with confidence.`,
     services: [
       `Canada Express Entry PR from ${name}`,
       `Australia Skilled Migration (189/190/491)`,
@@ -48,6 +78,34 @@ const indianCities: CityData[] = [
   };
 });
 
+const canadianCityInsights: Record<string, string> = {
+  "Toronto": "Canada's largest city and the GTA is the top destination for newcomers, processing more PR applications than any other region. Toronto's diverse economy in finance, tech, and healthcare means strong LMIA opportunities and the Ontario PNP is one of the most active streams.",
+  "Vancouver": "BC's gateway city attracts immigrants with its Pacific Rim connections and strong tech sector. The BC PNP Tech stream offers fast-tracked processing for in-demand occupations, and Vancouver's mild climate is a major draw for families.",
+  "Calgary": "Alberta's economic engine offers lower cost of living than Toronto/Vancouver with strong oil & gas, tech, and agriculture sectors. The Alberta Advantage Immigration Program (AAIP) provides additional PR pathways beyond Express Entry.",
+  "Edmonton": "Alberta's capital is experiencing rapid growth in tech and healthcare. Edmonton offers more affordable housing than other major cities, and the AAIP frequently targets occupations in healthcare, trades, and engineering.",
+  "Mississauga": "Part of the GTA, Mississauga has one of Canada's largest South Asian communities and a thriving corporate sector. Many newcomers choose Mississauga for its proximity to Toronto with more affordable housing options.",
+  "Ottawa": "Canada's capital has a strong public sector and growing tech industry (Kanata North). Ottawa's bilingual environment can boost CRS scores for French-speaking applicants by 20-50 points.",
+  "Winnipeg": "Manitoba's capital is one of Canada's most immigrant-friendly cities, with the MPNP being one of the most accessible provincial nominee programs. Lower CRS scores are often sufficient through provincial streams.",
+  "Quebec City": "Quebec's capital operates under its own immigration system (ARRIMA). French proficiency is essential but opens doors to faster processing and dedicated Quebec-specific skilled worker programs.",
+  "Brampton": "Known as the 'Flower City,' Brampton has one of Canada's fastest-growing populations driven by immigration. Strong logistics, manufacturing, and healthcare sectors create consistent LMIA opportunities.",
+  "Surrey": "BC's second-largest city offers a more affordable alternative to Vancouver while maintaining access to BC PNP streams. Surrey's growing tech corridor and diverse community make it a top choice for newcomers.",
+  "Halifax": "Nova Scotia's capital offers the Atlantic Immigration Program (AIP) — one of Canada's fastest PR pathways. Lower competition and growing demand for skilled workers make Halifax increasingly attractive.",
+  "London ON": "Southwestern Ontario's hub has a strong healthcare and education sector. London's moderate size qualifies for rural and northern immigration streams with additional CRS points.",
+  "Kitchener": "Part of the Waterloo Region tech triangle, Kitchener attracts tech immigrants with its startup ecosystem. The Ontario PNP Tech stream frequently draws candidates working in this corridor.",
+  "Victoria": "BC's capital offers a unique blend of government, tech, and tourism employment. Victoria's exceptional quality of life and BC PNP access make it a sought-after destination for families.",
+  "Saskatoon": "Saskatchewan's largest city offers the SINP — one of Canada's most accessible PNPs with lower minimum requirements. Strong agriculture, mining, and growing tech sectors drive labour demand.",
+  "Regina": "Saskatchewan's capital actively recruits immigrants through SINP. Regina's affordable housing and strong job market in government, agriculture, and energy make it ideal for newcomers seeking quick settlement.",
+  "Hamilton": "The 'Steel City' is transforming into a healthcare and tech hub. Just 45 minutes from Toronto, Hamilton offers GTA proximity with significantly lower living costs and Ontario PNP eligibility.",
+  "Windsor": "Directly across from Detroit, Windsor's unique cross-border economy creates LMIA opportunities in automotive, logistics, and manufacturing. The city's affordable housing is a major draw for newcomers.",
+  "Kelowna": "BC's Okanagan gem offers lifestyle-focused immigration with growing tech, wine, and tourism industries. Rural and northern BC PNP streams provide additional pathways for Kelowna-bound applicants.",
+  "Richmond": "Part of Metro Vancouver, Richmond has the highest percentage of Chinese-speaking residents in North America. Strong connections to Asian business networks create unique entrepreneurial immigration opportunities.",
+  "Thunder Bay": "Northwestern Ontario's hub qualifies for Northern Ontario immigration streams with additional CRS points. Healthcare and natural resources sectors actively seek skilled immigrants.",
+  "Moncton": "New Brunswick's hub city offers the Atlantic Immigration Program and one of Canada's lowest costs of living. Moncton's bilingual community is especially welcoming to French-speaking immigrants.",
+  "Saint John": "New Brunswick's port city offers AIP pathways and a tight labour market actively seeking skilled workers. Lower competition means faster processing and easier job matching.",
+  "Charlottetown": "PEI's capital runs one of Canada's most active PNP programs relative to its size. Charlottetown's close-knit community and strong settlement services make it ideal for newcomer families.",
+  "Prince George": "Northern BC's largest city qualifies for rural and northern immigration streams. Strong forestry, healthcare, and education sectors create consistent demand for skilled immigrants.",
+};
+
 const canadianCities: CityData[] = [
   "Toronto", "Vancouver", "Calgary", "Edmonton", "Mississauga", "Ottawa", "Winnipeg",
   "Quebec City", "Brampton", "Surrey", "Halifax", "London ON", "Kitchener", "Victoria",
@@ -63,6 +121,7 @@ const canadianCities: CityData[] = [
     metaTitle: `Immigration Services in ${name} | PR, Work Permit & Sponsorship – 4 Aces Visa`,
     metaDescription: `Need immigration help in ${name}? 4 Aces Visa offers PR applications, work permits, family sponsorship, and citizenship guidance in ${name}. Free consultation.`,
     intro: `Welcome to 4 Aces Visa ${name} — your local immigration partner for all visa and PR needs. Whether you're a newcomer looking to extend your status, sponsor your family, or transition from a work permit to permanent residency, our ${name} team provides hands-on guidance every step of the way.`,
+    localInsight: canadianCityInsights[name] || `${name} offers unique immigration advantages with local PNP streams and a welcoming community for newcomers.`,
     services: [
       `PR Application & Express Entry in ${name}`,
       `Work Permit Extensions & LMIA`,

@@ -31,6 +31,7 @@ const navLinks = [
       { label: "Study Visas (Global)", href: "/services/study-visas" },
     ],
   },
+  { label: "Pathway Quiz", href: "/quiz" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];

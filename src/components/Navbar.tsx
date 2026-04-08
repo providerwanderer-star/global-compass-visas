@@ -12,16 +12,24 @@ const navLinks = [
       { label: "🇨🇦 Canada", href: "/immigration/canada" },
       { label: "🇦🇺 Australia", href: "/immigration/australia" },
       { label: "🇩🇪 Germany", href: "/immigration/germany" },
+      { label: "🇬🇧 United Kingdom", href: "/immigration/uk" },
     ],
   },
   {
     label: "Services", href: "#",
     children: [
       { label: "Express Entry PR", href: "/services/express-entry" },
+      { label: "Student Visa", href: "/services/student-visa" },
+      { label: "LMIA Assistance", href: "/services/lmia-assistance" },
+      { label: "PNP Application", href: "/services/pnp-application" },
       { label: "Work Permits", href: "/services/work-permits" },
-      { label: "Study Visas", href: "/services/study-visas" },
-      { label: "Job Seeker Visa", href: "/services/job-seeker-visa" },
+      { label: "Visitor Visa & Super Visa", href: "/services/visitor-visa" },
+      { label: "Visa Restoration", href: "/services/visa-restoration" },
       { label: "Family Sponsorship", href: "/services/family-sponsorship" },
+      { label: "Citizenship Application", href: "/services/citizenship-application" },
+      { label: "Visitor Visa Insurance", href: "/services/visitor-visa-insurance" },
+      { label: "Job Seeker Visa (Germany)", href: "/services/job-seeker-visa" },
+      { label: "Study Visas (Global)", href: "/services/study-visas" },
     ],
   },
   { label: "Blog", href: "/blog" },
@@ -72,7 +80,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
               {link.children && openDropdown === link.label && (
-                <div className="absolute top-full left-0 mt-1 w-56 bg-card rounded-lg shadow-elevated border border-border p-2 animate-fade-up">
+                <div className={`absolute top-full left-0 mt-1 bg-card rounded-lg shadow-elevated border border-border p-2 animate-fade-up ${link.label === "Services" ? "w-72 max-h-96 overflow-y-auto" : "w-56"}`}>
                   {link.children.map((child) => (
                     <Link
                       key={child.label}
@@ -109,7 +117,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-card border-t border-border shadow-elevated animate-fade-up">
+        <div className="lg:hidden bg-card border-t border-border shadow-elevated animate-fade-up max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <div key={link.label}>

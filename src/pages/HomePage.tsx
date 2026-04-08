@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Globe, Award, Users, Clock, CheckCircle, Star, BookOpen, Briefcase, GraduationCap, Search } from "lucide-react";
+import {
+  ArrowRight, Globe, Award, Users, Clock, CheckCircle, Star, BookOpen,
+  Briefcase, GraduationCap, Search, Shield, Heart, Plane, FileText,
+  RefreshCw, MapPin, BadgeCheck
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -12,31 +16,39 @@ const fadeUp = {
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
 };
 
-const pathways = [
-  { icon: Briefcase, label: "Work Permits", description: "LMIA, TSS & employer-sponsored visas", href: "/services/work-permits" },
-  { icon: GraduationCap, label: "Study Visas", description: "DLI admission + study permits + PGWP", href: "/services/study-visas" },
-  { icon: Award, label: "Permanent Residency", description: "Express Entry, skilled migration & PNP", href: "/services/express-entry" },
-  { icon: Search, label: "Job Seeker Visa", description: "Germany's unique job search pathway", href: "/services/job-seeker-visa" },
+const canadaServices = [
+  { icon: Award, label: "Express Entry PR", description: "CRS optimization & 6-month PR processing", href: "/services/express-entry" },
+  { icon: GraduationCap, label: "Student Visa", description: "DLI admission, study permits & PGWP pathway", href: "/services/student-visa" },
+  { icon: Briefcase, label: "LMIA Assistance", description: "Employer coordination & +50-200 CRS points", href: "/services/lmia-assistance" },
+  { icon: MapPin, label: "PNP Application", description: "Provincial nomination with +600 CRS points", href: "/services/pnp-application" },
+  { icon: RefreshCw, label: "Visa Restoration", description: "Restore expired status within 90 days", href: "/services/visa-restoration" },
+  { icon: Plane, label: "Visitor Visa & Super Visa", description: "Family visits & 10-year Super Visa", href: "/services/visitor-visa" },
+  { icon: Shield, label: "Visitor Visa Insurance", description: "Mandatory Super Visa medical coverage", href: "/services/visitor-visa-insurance" },
+  { icon: Heart, label: "Family Sponsorship", description: "Sponsor spouse, parents & children", href: "/services/family-sponsorship" },
+  { icon: BadgeCheck, label: "Citizenship Application", description: "Complete your Canadian journey", href: "/services/citizenship-application" },
+  { icon: FileText, label: "Work Permits", description: "LMIA, open & employer-specific permits", href: "/services/work-permits" },
 ];
 
 const testimonials = [
-  { name: "Rajesh K.", country: "Canada PR", text: "4 Aces Visa helped me get my Canada PR in just 8 months. Their CRS optimization strategy was brilliant!", rating: 5 },
-  { name: "Priya M.", country: "Australia 190", text: "I was confused between Canada and Australia. They analyzed my profile and Australia was perfect. Got my 190 visa!", rating: 5 },
-  { name: "Ahmed S.", country: "Germany Blue Card", text: "From Job Seeker Visa to EU Blue Card in 4 months. The Germany team knows exactly what they're doing.", rating: 5 },
-  { name: "Sneha R.", country: "Canada Study", text: "Got admission to a top DLI and study permit approved on first try. Now working on my PGWP!", rating: 5 },
+  { name: "Rajesh K.", country: "Canada PR", text: "4 Aces Visa helped me get my Canada PR in just 8 months. Their CRS optimization strategy was brilliant! By immigrants, for immigrants — they truly understand the journey.", rating: 5 },
+  { name: "Priya M.", country: "Australia 190", text: "I was confused between Canada and Australia. They analyzed my profile and Australia was perfect. Got my 190 visa! They've been through it themselves — that makes all the difference.", rating: 5 },
+  { name: "Ahmed S.", country: "Germany Blue Card", text: "From Job Seeker Visa to EU Blue Card in 4 months. The team knows exactly what they're doing because they've walked this path themselves.", rating: 5 },
+  { name: "Sneha R.", country: "Canada Study → PR", text: "Got admission to a top DLI and study permit approved on first try. Now working on my PGWP! By immigrants, for immigrants — they mean it.", rating: 5 },
+  { name: "David L.", country: "UK Skilled Worker", text: "The UK visa process felt overwhelming until 4 Aces Visa stepped in. Got my Skilled Worker visa approved in 5 weeks. Incredible service.", rating: 5 },
+  { name: "Maria C.", country: "Canada Family Sponsorship", text: "Sponsored my parents through Super Visa. The team handled insurance, documents, everything. So grateful to have my family together in Canada.", rating: 5 },
 ];
 
 const stats = [
   { value: "15,000+", label: "Successful Visas" },
   { value: "98%", label: "Success Rate" },
-  { value: "3", label: "Countries Served" },
+  { value: "4", label: "Countries Served" },
   { value: "10+", label: "Years Experience" },
 ];
 
 const HomePage = () => {
   return (
     <div>
-      {/* Hero */}
+      {/* Hero — Canada-Focused */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
@@ -47,27 +59,27 @@ const HomePage = () => {
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
               <span className="inline-flex items-center gap-2 bg-gold/15 text-gold px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
                 <Globe className="h-4 w-4" />
-                Trusted by 15,000+ immigrants worldwide
+                By the Immigrants, For the Immigrants
               </span>
             </motion.div>
             <motion.h1
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
               initial="hidden" animate="visible" variants={fadeUp} custom={1}
             >
-              Not Sure Which Country to Move To?{" "}
-              <span className="gradient-text">We Help You Choose.</span>
+              Your Canadian Dream{" "}
+              <span className="gradient-text">Starts Here.</span>
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-white/70 mb-4 max-w-2xl"
+              className="text-lg md:text-xl text-white/80 mb-4 max-w-2xl"
               initial="hidden" animate="visible" variants={fadeUp} custom={2}
             >
-              Canada 🇨🇦 &nbsp;|&nbsp; Australia 🇦🇺 &nbsp;|&nbsp; Germany 🇩🇪
+              🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 United Kingdom
             </motion.p>
             <motion.p
               className="text-base text-white/55 mb-8 max-w-xl"
               initial="hidden" animate="visible" variants={fadeUp} custom={3}
             >
-              Work | Study | PR Pathways — Get expert guidance to find the right immigration pathway for your profile.
+              Express Entry • Student Visa • LMIA • PNP • Visitor Visa • Family Sponsorship • Citizenship — Complete Canadian immigration services by consultants who've been through the process themselves.
             </motion.p>
             <motion.div className="flex flex-wrap gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
               <Link to="/contact">
@@ -75,9 +87,9 @@ const HomePage = () => {
                   Check Eligibility <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/immigration/canada">
                 <Button size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 font-semibold text-base px-8">
-                  Talk to Immigration Expert
+                  Explore Canada Pathways
                 </Button>
               </Link>
             </motion.div>
@@ -99,40 +111,30 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Country Comparison */}
+      {/* Canada Services Grid */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              🇨🇦 Canada Immigration Services
+            </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Canada vs Australia vs Germany — Which is Right for You?
+              Complete Canadian Immigration Solutions
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Compare immigration pathways, processing times, and opportunities across three top destinations.
+              From your first study permit to becoming a Canadian citizen — we cover every step of the journey. By immigrants who've walked this path, for immigrants building their future.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {countries.map((c, i) => (
-              <motion.div
-                key={c.slug}
-                initial="hidden" whileInView="visible" viewport={{ once: true }}
-                variants={fadeUp} custom={i}
-              >
-                <Link to={`/immigration/${c.slug}`} className="block group">
-                  <div className="bg-card rounded-xl border border-border p-8 hover:shadow-elevated transition-all hover:border-gold/30 h-full">
-                    <div className="text-5xl mb-4">{c.flag}</div>
-                    <h3 className="font-display text-2xl font-bold text-foreground mb-2">{c.name}</h3>
-                    <p className="text-gold text-sm font-medium mb-4">{c.tagline}</p>
-                    <ul className="space-y-2 mb-6">
-                      {c.pathways.map((p) => (
-                        <li key={p.title} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle className="h-4 w-4 text-success mt-0.5 shrink-0" />
-                          {p.title}
-                        </li>
-                      ))}
-                    </ul>
-                    <span className="inline-flex items-center text-sm font-medium text-gold group-hover:gap-2 transition-all">
-                      Explore pathways <ArrowRight className="h-4 w-4 ml-1" />
-                    </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            {canadaServices.map((s, i) => (
+              <motion.div key={s.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i % 5}>
+                <Link to={s.href} className="block group h-full">
+                  <div className="bg-card rounded-xl border border-border p-5 hover:shadow-elevated transition-all hover:border-gold/30 h-full flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-3">
+                      <s.icon className="h-6 w-6 text-gold" />
+                    </div>
+                    <h3 className="font-display text-sm font-bold text-foreground mb-1">{s.label}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{s.description}</p>
                   </div>
                 </Link>
               </motion.div>
@@ -141,27 +143,40 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Pathway Selector */}
+      {/* Country Comparison */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Choose Your Immigration Pathway
+              Not Sure Which Country? We Help You Choose.
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Whether you want to work, study, or settle permanently — we have the expertise to guide you.
+              Compare immigration pathways across four top destinations. Our consultants have personally immigrated — we know the reality, not just the paperwork.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pathways.map((p, i) => (
-              <motion.div key={p.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
-                <Link to={p.href} className="block group">
-                  <div className="bg-card rounded-xl border border-border p-6 hover:shadow-elevated transition-all hover:border-gold/30 text-center h-full">
-                    <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
-                      <p.icon className="h-7 w-7 text-gold" />
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-foreground mb-2">{p.label}</h3>
-                    <p className="text-sm text-muted-foreground">{p.description}</p>
+            {countries.map((c, i) => (
+              <motion.div
+                key={c.slug}
+                initial="hidden" whileInView="visible" viewport={{ once: true }}
+                variants={fadeUp} custom={i}
+              >
+                <Link to={`/immigration/${c.slug}`} className="block group">
+                  <div className={`bg-card rounded-xl border p-6 hover:shadow-elevated transition-all h-full ${c.slug === "canada" ? "border-gold/40 ring-1 ring-gold/20" : "border-border hover:border-gold/30"}`}>
+                    <div className="text-4xl mb-3">{c.flag}</div>
+                    <h3 className="font-display text-xl font-bold text-foreground mb-1">{c.name}</h3>
+                    <p className="text-gold text-xs font-medium mb-3">{c.tagline}</p>
+                    <ul className="space-y-1.5 mb-4">
+                      {c.pathways.slice(0, 4).map((p) => (
+                        <li key={p.title} className="flex items-start gap-2 text-xs text-muted-foreground">
+                          <CheckCircle className="h-3.5 w-3.5 text-success mt-0.5 shrink-0" />
+                          {p.title}
+                        </li>
+                      ))}
+                    </ul>
+                    <span className="inline-flex items-center text-xs font-medium text-gold group-hover:gap-2 transition-all">
+                      Explore pathways <ArrowRight className="h-3 w-3 ml-1" />
+                    </span>
                   </div>
                 </Link>
               </motion.div>
@@ -174,21 +189,24 @@ const HomePage = () => {
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              By the Immigrants, For the Immigrants
+            </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Success Stories from Our Clients
+              Real Stories from Real Immigrants
             </h2>
-            <p className="text-muted-foreground">Real people, real results. Join thousands who trusted 4 Aces Visa.</p>
+            <p className="text-muted-foreground">We've been where you are. These are stories from people just like you.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
-              <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+              <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i % 3}>
                 <div className="bg-card rounded-xl border border-border p-6 h-full">
                   <div className="flex gap-0.5 mb-3">
                     {Array.from({ length: t.rating }).map((_, j) => (
                       <Star key={j} className="h-4 w-4 fill-gold text-gold" />
                     ))}
                   </div>
-                  <p className="text-sm text-foreground mb-4 italic">"{t.text}"</p>
+                  <p className="text-sm text-foreground mb-4 italic leading-relaxed">"{t.text}"</p>
                   <div>
                     <div className="font-semibold text-sm text-foreground">{t.name}</div>
                     <div className="text-xs text-gold">{t.country}</div>
@@ -209,10 +227,10 @@ const HomePage = () => {
                 Check Your Immigration Eligibility — <span className="text-gold">Free</span>
               </h2>
               <p className="text-primary-foreground/70 mb-6">
-                Get a personalized eligibility assessment from our immigration experts. We'll analyze your profile and recommend the best pathway for you.
+                Get a personalized eligibility assessment from consultants who've been through the immigration process themselves. We analyze your profile and recommend the best pathway.
               </p>
               <ul className="space-y-3">
-                {["Free expert assessment", "Response within 24 hours", "No obligation consultation", "100% confidential"].map((item) => (
+                {["Free expert assessment", "Response within 24 hours", "No obligation consultation", "100% confidential", "By immigrants, for immigrants"].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-primary-foreground/80 text-sm">
                     <CheckCircle className="h-4 w-4 text-gold" />
                     {item}
@@ -281,11 +299,11 @@ const HomePage = () => {
           </h2>
           <div className="space-y-4">
             {[
-              { q: "Which country is easiest for immigration in 2026?", a: "Canada offers the fastest PR pathways through Express Entry (6 months processing). Germany's Job Seeker Visa is easiest to obtain initially. Australia rewards high-skilled professionals with its points system. The best choice depends on your profile — book a free consultation to find out." },
-              { q: "How much does immigration consulting cost?", a: "4 Aces Visa offers a free initial eligibility assessment. Our consulting packages vary based on the complexity of your case and destination country. We provide transparent pricing with no hidden fees." },
-              { q: "Can 4 Aces Visa guarantee my visa approval?", a: "No ethical consultancy can guarantee visa approval as the final decision rests with immigration authorities. However, our 98% success rate reflects our expertise in preparing strong, compliant applications that maximize your chances." },
-              { q: "How long does the entire immigration process take?", a: "Timelines vary by country and visa type: Canada Express Entry PR takes 6-12 months, Australia skilled migration takes 8-18 months, and Germany Job Seeker to Blue Card takes 6-12 months. We'll give you a realistic timeline during your consultation." },
-              { q: "Do I need IELTS for immigration?", a: "For Canada, IELTS or equivalent is mandatory for Express Entry. For Australia, English proficiency is required for skilled migration. Germany may accept other language certifications. Higher language scores significantly improve your chances and CRS/points score." },
+              { q: "Which country is easiest for immigration in 2026?", a: "Canada offers the fastest PR pathways through Express Entry (6 months processing). Germany's Job Seeker Visa is easiest to obtain initially. Australia rewards high-skilled professionals. The UK's Skilled Worker visa is efficient with a job offer. The best choice depends on your profile — book a free consultation." },
+              { q: "How much does immigration consulting cost?", a: "4 Aces Visa offers a free initial eligibility assessment. Our packages vary based on complexity and destination. Transparent pricing with no hidden fees." },
+              { q: "What does 'By immigrants, for immigrants' mean?", a: "Our consultants have personally gone through the immigration process. We understand the stress, confusion, and life-changing decisions involved — because we've lived it. This first-hand experience makes our guidance more practical and empathetic." },
+              { q: "Can 4 Aces Visa guarantee my visa approval?", a: "No ethical consultancy can guarantee approval as the final decision rests with immigration authorities. However, our 98% success rate reflects our expertise in preparing strong, compliant applications." },
+              { q: "Do I need IELTS for immigration?", a: "For Canada, IELTS or equivalent is mandatory for Express Entry. Australia requires English for skilled migration. Germany may accept other certifications. UK requires B1 for Skilled Worker visa. Higher scores significantly improve your chances." },
             ].map((faq, i) => (
               <details key={i} className="bg-card rounded-xl border border-border group">
                 <summary className="flex items-center justify-between p-6 cursor-pointer font-display font-semibold text-foreground">
@@ -308,7 +326,7 @@ const HomePage = () => {
             Ready to Start Your Immigration Journey?
           </h2>
           <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
-            Join 15,000+ successful immigrants who trusted 4 Aces Visa. Get your free eligibility assessment today.
+            Join 15,000+ successful immigrants who trusted 4 Aces Visa. By the immigrants, for the immigrants — we've been where you are.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">

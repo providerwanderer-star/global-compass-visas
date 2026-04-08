@@ -38,9 +38,13 @@ const ServicePage = () => {
         <title>{service.metaTitle}</title>
         <meta name="description" content={service.metaDescription} />
         <link rel="canonical" href={`https://4acesvisa.com/services/${service.slug}`} />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={service.metaTitle} />
         <meta property="og:description" content={service.metaDescription} />
         <meta property="og:url" content={`https://4acesvisa.com/services/${service.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={service.metaTitle} />
+        <meta name="twitter:description" content={service.metaDescription} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

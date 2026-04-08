@@ -51,11 +51,45 @@ const BlogPostPage = () => {
     <div>
       <Helmet>
         <title>{post.title} | 4 Aces Visa Blog</title>
-        <meta name="description" content={post.excerpt} />
+        <meta name="description" content={post.metaDescription || post.excerpt} />
         <link rel="canonical" href={`https://4acesvisa.com/blog/${post.slug}`} />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={`https://4acesvisa.com/blog/${post.slug}`} />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content="4 Aces Visa" />
+        <meta property="article:section" content={post.category} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title,
+            "description": post.metaDescription || post.excerpt,
+            "datePublished": post.date,
+            "dateModified": post.date,
+            "author": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://4acesvisa.com" },
+            "publisher": { "@type": "Organization", "name": "4 Aces Visa", "logo": { "@type": "ImageObject", "url": "https://4acesvisa.com/favicon.ico" } },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://4acesvisa.com/blog/${post.slug}` },
+            "articleSection": post.category,
+            "wordCount": post.content.split(/\s+/).length,
+            "inLanguage": "en-US"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://4acesvisa.com" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://4acesvisa.com/blog" },
+              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://4acesvisa.com/blog/${post.slug}` }
+            ]
+          })}
+        </script>
       </Helmet>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">

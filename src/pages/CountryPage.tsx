@@ -44,9 +44,34 @@ const CountryPage = () => {
         <title>{country.metaTitle}</title>
         <meta name="description" content={country.metaDescription} />
         <link rel="canonical" href={`https://4acesvisa.com/immigration/${country.slug}`} />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={country.metaTitle} />
         <meta property="og:description" content={country.metaDescription} />
         <meta property="og:url" content={`https://4acesvisa.com/immigration/${country.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={country.metaTitle} />
+        <meta name="twitter:description" content={country.metaDescription} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://4acesvisa.com" },
+              { "@type": "ListItem", "position": 2, "name": `${country.name} Immigration`, "item": `https://4acesvisa.com/immigration/${country.slug}` }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": country.faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+            }))
+          })}
+        </script>
       </Helmet>
       {/* Hero */}
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">

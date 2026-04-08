@@ -77,6 +77,24 @@ const HomePage = () => {
         <title>4 Aces Visa | Immigration Consultancy for Canada, Australia, Germany & UK</title>
         <meta name="description" content="By the immigrants, for the immigrants. Expert immigration services for Canada PR, study visas, LMIA, PNP, work permits, visitor visas, and citizenship. Free assessment." />
         <link rel="canonical" href="https://4acesvisa.com" />
+        <meta name="keywords" content="immigration consultancy, Canada PR, Express Entry, study visa, work permit, LMIA, PNP, family sponsorship, Australia migration, Germany Blue Card, UK Skilled Worker visa, 4 Aces Visa" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="4 Aces Visa | Immigration Consultancy" />
+        <meta property="og:description" content="Expert immigration services for Canada, Australia, Germany & UK. 15,000+ visas processed. 98% success rate." />
+        <meta property="og:url" content="https://4acesvisa.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Which country is easiest for immigration in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Canada offers the fastest PR pathways through Express Entry (6 months processing). Germany's Job Seeker Visa is easiest to obtain initially. Australia rewards high-skilled professionals. The UK's Skilled Worker visa is efficient with a job offer." }},
+              { "@type": "Question", "name": "How much does immigration consulting cost?", "acceptedAnswer": { "@type": "Answer", "text": "4 Aces Visa offers a free initial eligibility assessment. Our packages vary based on complexity and destination. Transparent pricing with no hidden fees." }},
+              { "@type": "Question", "name": "What does 'By immigrants, for immigrants' mean?", "acceptedAnswer": { "@type": "Answer", "text": "Our consultants have personally gone through the immigration process. We understand the stress, confusion, and life-changing decisions involved — because we've lived it." }},
+              { "@type": "Question", "name": "Can 4 Aces Visa guarantee my visa approval?", "acceptedAnswer": { "@type": "Answer", "text": "No ethical consultancy can guarantee approval as the final decision rests with immigration authorities. However, our 98% success rate reflects our expertise in preparing strong, compliant applications." }},
+              { "@type": "Question", "name": "Do I need IELTS for immigration?", "acceptedAnswer": { "@type": "Answer", "text": "For Canada, IELTS or equivalent is mandatory for Express Entry. Australia requires English for skilled migration. Germany may accept other certifications. UK requires B1 for Skilled Worker visa. Higher scores significantly improve your chances." }}
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* Hero — with parallax */}

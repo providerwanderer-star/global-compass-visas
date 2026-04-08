@@ -16,6 +16,7 @@ import BlogListPage from "@/pages/BlogListPage";
 import BlogPostPage from "@/pages/BlogPostPage";
 import ContactPage from "@/pages/ContactPage";
 import QuizPage from "@/pages/QuizPage";
+import ExpressEntryLandingPage from "@/pages/ExpressEntryLandingPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/immigration/:slug" element={<CountryPage />} />
+              <Route path="/express-entry" element={<ExpressEntryLandingPage />} />
               <Route path="/services/:slug" element={<ServicePage />} />
               <Route path="/city/:slug" element={<CityPage />} />
               <Route path="/blog" element={<BlogListPage />} />

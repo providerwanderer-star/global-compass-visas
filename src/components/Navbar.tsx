@@ -17,7 +17,7 @@ const navLinks = [
   {
     label: "Services", href: "#",
     children: [
-      { label: "Express Entry PR", href: "/services/express-entry" },
+      { label: "🔥 Express Entry PR", href: "/express-entry" },
       { label: "Student Visa", href: "/services/student-visa" },
       { label: "LMIA Assistance", href: "/services/lmia-assistance" },
       { label: "PNP Application", href: "/services/pnp-application" },

@@ -9,6 +9,10 @@ import {
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import heroBg from "@/assets/hero-bg.jpg";
+import studentsImg from "@/assets/students-canada.jpg";
+import familyImg from "@/assets/family-reunion.jpg";
+import newLifeImg from "@/assets/new-life-canada.jpg";
+import consultationImg from "@/assets/consultation.jpg";
 import { countries } from "@/data/countryData";
 import { blogPosts } from "@/data/blogData";
 

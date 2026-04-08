@@ -99,89 +99,116 @@ const HomePage = () => {
         </script>
       </Helmet>
 
-      {/* Hero — with parallax */}
-      <section ref={heroRef} className="relative min-h-[55vh] md:min-h-[65vh] flex items-center overflow-hidden">
-        {/* Lighter gradient background */}
-        <motion.div className="absolute inset-0" style={{ y: heroImgY }}>
-          <img src={heroBg} alt="" className="w-full h-[120%] object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/60 to-primary/40" />
-        </motion.div>
+      {/* Hero — bright split layout with people */}
+      <section ref={heroRef} className="relative bg-gradient-to-br from-secondary via-background to-muted overflow-hidden">
+        {/* Decorative shapes */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full translate-y-1/2 -translate-x-1/3" />
 
-        {/* Floating people images blended into background */}
-        <motion.img
-          src={heroStudents}
-          alt="Happy international students"
-          className="absolute right-0 bottom-0 w-[320px] md:w-[400px] lg:w-[480px] opacity-40 md:opacity-50 pointer-events-none select-none mix-blend-luminosity"
-          width={640}
-          height={640}
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 0.5, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        />
-        <motion.img
-          src={heroFamily}
-          alt="Happy immigrant family"
-          className="absolute right-[15%] md:right-[20%] bottom-0 w-[260px] md:w-[340px] lg:w-[400px] opacity-30 md:opacity-40 pointer-events-none select-none mix-blend-luminosity"
-          width={640}
-          height={640}
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 0.4, x: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-        />
-
-        <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 z-10">
-          <div className="max-w-3xl">
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
-              <span className="inline-flex items-center gap-2 bg-accent/15 text-accent-foreground bg-white/20 px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm badge-pulse border border-white/20">
-                <Globe className="h-4 w-4" />
-                By the Immigrants, For the Immigrants
-              </span>
-            </motion.div>
-            <motion.h1
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg"
-              initial="hidden" animate="visible" variants={fadeUp} custom={1}
-            >
-              Your Dream of Living Abroad{" "}
-              <span className="gradient-text">Starts Here.</span>
-            </motion.h1>
-            <motion.p
-              className="text-lg md:text-xl text-white/90 mb-4 max-w-2xl drop-shadow"
-              initial="hidden" animate="visible" variants={fadeUp} custom={2}
-            >
-              🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 United Kingdom
-            </motion.p>
-            <motion.p
-              className="text-base text-white/70 mb-8 max-w-xl"
-              initial="hidden" animate="visible" variants={fadeUp} custom={3}
-            >
-              Express Entry • Student Visa • Work Permits • Family Sponsorship • Citizenship — Complete immigration services across 4 countries by consultants who've been through the process themselves.
-            </motion.p>
-            <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
-              <Link to="/contact">
-                <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
-                  🚀 Get FREE Assessment Now <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/quiz">
-                <Button size="lg" className="w-full sm:w-auto bg-white/15 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/25 font-semibold text-base px-8 py-6 hover:border-white/70 transition-all">
-                  Explore Immigration Pathways
-                </Button>
-              </Link>
-            </motion.div>
-            <motion.div className="flex items-center gap-6 mt-6" initial="hidden" animate="visible" variants={fadeUp} custom={5}>
-              <div className="flex items-center gap-1.5">
-                <div className="flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
+        <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Left — Text */}
+            <div className="order-2 lg:order-1">
+              <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
+                <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 badge-pulse">
+                  <Globe className="h-4 w-4" />
+                  By the Immigrants, For the Immigrants
+                </span>
+              </motion.div>
+              <motion.h1
+                className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-foreground leading-tight mb-6"
+                initial="hidden" animate="visible" variants={fadeUp} custom={1}
+              >
+                Your Dream of Living Abroad{" "}
+                <span className="gradient-text">Starts Here.</span>
+              </motion.h1>
+              <motion.p
+                className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl"
+                initial="hidden" animate="visible" variants={fadeUp} custom={2}
+              >
+                🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 United Kingdom
+              </motion.p>
+              <motion.p
+                className="text-base text-muted-foreground/80 mb-8 max-w-xl"
+                initial="hidden" animate="visible" variants={fadeUp} custom={3}
+              >
+                Express Entry • Student Visa • Work Permits • Family Sponsorship • Citizenship — Complete immigration services across 4 countries.
+              </motion.p>
+              <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
+                <Link to="/contact">
+                  <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
+                    🚀 Get FREE Assessment <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link to="/quiz">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary/30 text-primary hover:bg-primary/5 font-semibold text-base px-8 py-6 transition-all">
+                    Explore Pathways
+                  </Button>
+                </Link>
+              </motion.div>
+              <motion.div className="flex items-center gap-6 mt-6" initial="hidden" animate="visible" variants={fadeUp} custom={5}>
+                <div className="flex items-center gap-1.5">
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                    ))}
+                  </div>
+                  <span className="text-muted-foreground text-sm">4.9/5</span>
                 </div>
-                <span className="text-white/80 text-sm">4.9/5</span>
-              </div>
-              <div className="text-white/40">|</div>
-              <span className="text-white/80 text-sm font-medium">15,000+ visas processed</span>
-              <div className="text-white/40 hidden sm:block">|</div>
-              <span className="text-white/80 text-sm font-medium hidden sm:block">98% success rate</span>
-            </motion.div>
+                <div className="text-border">|</div>
+                <span className="text-muted-foreground text-sm font-medium">15,000+ visas processed</span>
+                <div className="text-border hidden sm:block">|</div>
+                <span className="text-muted-foreground text-sm font-medium hidden sm:block">98% success rate</span>
+              </motion.div>
+            </div>
+
+            {/* Right — People images collage */}
+            <div className="order-1 lg:order-2 relative flex justify-center items-end min-h-[320px] md:min-h-[420px]">
+              {/* Accent circle behind */}
+              <motion.div
+                className="absolute w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full bg-primary/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              />
+              {/* Students image */}
+              <motion.img
+                src={heroStudents}
+                alt="Happy international students starting their immigration journey"
+                className="relative z-10 w-[260px] md:w-[340px] lg:w-[380px] drop-shadow-2xl"
+                width={640}
+                height={640}
+                initial={{ opacity: 0, y: 40, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+              />
+              {/* Family image — overlapping */}
+              <motion.img
+                src={heroFamily}
+                alt="Happy immigrant family reunited"
+                className="absolute bottom-0 -left-4 md:left-0 z-20 w-[180px] md:w-[220px] lg:w-[260px] rounded-2xl shadow-elevated border-4 border-background"
+                width={640}
+                height={640}
+                initial={{ opacity: 0, x: -40, y: 20 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.6 }}
+              />
+              {/* Floating stat badge */}
+              <motion.div
+                className="absolute top-4 right-4 md:top-8 md:right-0 z-30 bg-card shadow-elevated rounded-xl px-4 py-3 border border-border"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 1 }}
+              >
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <div>
+                    <p className="text-sm font-bold text-foreground">98% Success</p>
+                    <p className="text-xs text-muted-foreground">Visa Approval Rate</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>

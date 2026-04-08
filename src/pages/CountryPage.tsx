@@ -43,11 +43,11 @@ const CountryPage = () => {
       <Helmet>
         <title>{country.metaTitle}</title>
         <meta name="description" content={country.metaDescription} />
-        <link rel="canonical" href={`https://4acesvisa.com/immigration/${country.slug}`} />
+        <link rel="canonical" href={`https://www.4acesvisa.com/immigration/${country.slug}`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={country.metaTitle} />
         <meta property="og:description" content={country.metaDescription} />
-        <meta property="og:url" content={`https://4acesvisa.com/immigration/${country.slug}`} />
+        <meta property="og:url" content={`https://www.4acesvisa.com/immigration/${country.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={country.metaTitle} />
         <meta name="twitter:description" content={country.metaDescription} />
@@ -56,8 +56,8 @@ const CountryPage = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://4acesvisa.com" },
-              { "@type": "ListItem", "position": 2, "name": `${country.name} Immigration`, "item": `https://4acesvisa.com/immigration/${country.slug}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.4acesvisa.com" },
+              { "@type": "ListItem", "position": 2, "name": `${country.name} Immigration`, "item": `https://www.4acesvisa.com/immigration/${country.slug}` }
             ]
           })}
         </script>

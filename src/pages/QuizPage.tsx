@@ -278,7 +278,7 @@ const QuizPage = () => {
       <Helmet>
         <title>Immigration Pathway Quiz | Find Your Best Visa – 4 Aces Visa</title>
         <meta name="description" content="Take our free immigration quiz to discover the best country and visa pathway for your profile. Personalized recommendations for Canada, Australia, Germany, and UK." />
-        <link rel="canonical" href="https://4acesvisa.com/quiz" />
+        <link rel="canonical" href="https://www.4acesvisa.com/quiz" />
       </Helmet>
 
       {/* Header */}

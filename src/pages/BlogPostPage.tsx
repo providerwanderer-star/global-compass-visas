@@ -52,11 +52,11 @@ const BlogPostPage = () => {
       <Helmet>
         <title>{post.title} | 4 Aces Visa Blog</title>
         <meta name="description" content={post.metaDescription || post.excerpt} />
-        <link rel="canonical" href={`https://4acesvisa.com/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://www.4acesvisa.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:url" content={`https://4acesvisa.com/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://www.4acesvisa.com/blog/${post.slug}`} />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content="4 Aces Visa" />
         <meta property="article:section" content={post.category} />
@@ -71,9 +71,9 @@ const BlogPostPage = () => {
             "description": post.metaDescription || post.excerpt,
             "datePublished": post.date,
             "dateModified": post.date,
-            "author": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://4acesvisa.com" },
-            "publisher": { "@type": "Organization", "name": "4 Aces Visa", "logo": { "@type": "ImageObject", "url": "https://4acesvisa.com/favicon.ico" } },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://4acesvisa.com/blog/${post.slug}` },
+            "author": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://www.4acesvisa.com" },
+            "publisher": { "@type": "Organization", "name": "4 Aces Visa", "logo": { "@type": "ImageObject", "url": "https://www.4acesvisa.com/favicon.ico" } },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.4acesvisa.com/blog/${post.slug}` },
             "articleSection": post.category,
             "wordCount": post.content.split(/\s+/).length,
             "inLanguage": "en-US"
@@ -84,9 +84,9 @@ const BlogPostPage = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://4acesvisa.com" },
-              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://4acesvisa.com/blog" },
-              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://4acesvisa.com/blog/${post.slug}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.4acesvisa.com" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.4acesvisa.com/blog" },
+              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.4acesvisa.com/blog/${post.slug}` }
             ]
           })}
         </script>

@@ -20,11 +20,11 @@ const ContactPage = () => {
       <Helmet>
         <title>Contact Us | Free Immigration Consultation – 4 Aces Visa</title>
         <meta name="description" content="Get in touch with 4 Aces Visa for a free immigration consultation. Expert guidance for Canada, Australia, Germany, and UK immigration." />
-        <link rel="canonical" href="https://4acesvisa.com/contact" />
+        <link rel="canonical" href="https://www.4acesvisa.com/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Contact Us | Free Immigration Consultation" />
         <meta property="og:description" content="Get a free immigration consultation from 4 Aces Visa." />
-        <meta property="og:url" content="https://4acesvisa.com/contact" />
+        <meta property="og:url" content="https://www.4acesvisa.com/contact" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Contact 4 Aces Visa" />
         <meta name="twitter:description" content="Free immigration consultation for Canada, Australia, Germany & UK." />
@@ -33,7 +33,7 @@ const ContactPage = () => {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Contact 4 Aces Visa",
-            "url": "https://4acesvisa.com/contact",
+            "url": "https://www.4acesvisa.com/contact",
             "mainEntity": {
               "@type": "Organization",
               "name": "4 Aces Visa",

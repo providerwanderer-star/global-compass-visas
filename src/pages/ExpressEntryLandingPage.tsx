@@ -43,7 +43,7 @@ const ExpressEntryLandingPage = () => {
           name="description"
           content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS score calculator, and free eligibility assessment. 98% success rate — 15,000+ visas processed."
         />
-        <link rel="canonical" href="https://4acesvisa.com/express-entry" />
+        <link rel="canonical" href="https://www.4acesvisa.com/express-entry" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -52,13 +52,13 @@ const ExpressEntryLandingPage = () => {
                 "@type": "WebPage",
                 name: "Canada Express Entry 2026 – 4 Aces Visa",
                 description: "Dedicated Express Entry landing page with draw countdown, CRS breakdown, and free PR assessment.",
-                url: "https://4acesvisa.com/express-entry",
+                url: "https://www.4acesvisa.com/express-entry",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Express Entry", item: "https://4acesvisa.com/express-entry" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
+                  { "@type": "ListItem", position: 2, name: "Express Entry", item: "https://www.4acesvisa.com/express-entry" },
                 ],
               },
               {

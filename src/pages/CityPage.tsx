@@ -38,10 +38,10 @@ const CityPage = () => {
       <Helmet>
         <title>{city.metaTitle}</title>
         <meta name="description" content={city.metaDescription} />
-        <link rel="canonical" href={`https://4acesvisa.com/city/${city.slug}`} />
+        <link rel="canonical" href={`https://www.4acesvisa.com/city/${city.slug}`} />
         <meta property="og:title" content={city.metaTitle} />
         <meta property="og:description" content={city.metaDescription} />
-        <meta property="og:url" content={`https://4acesvisa.com/city/${city.slug}`} />
+        <meta property="og:url" content={`https://www.4acesvisa.com/city/${city.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -50,7 +50,7 @@ const CityPage = () => {
                 "@type": "LocalBusiness",
                 name: `4 Aces Visa – ${city.name}`,
                 description: city.metaDescription,
-                url: `https://4acesvisa.com/city/${city.slug}`,
+                url: `https://www.4acesvisa.com/city/${city.slug}`,
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
                 address: { "@type": "PostalAddress", addressLocality: city.name, addressCountry: city.country === "india" ? "IN" : "CA" },
@@ -59,9 +59,9 @@ const CityPage = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: city.region, item: `https://4acesvisa.com/country/${city.country}` },
-                  { "@type": "ListItem", position: 3, name: city.name, item: `https://4acesvisa.com/city/${city.slug}` },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
+                  { "@type": "ListItem", position: 2, name: city.region, item: `https://www.4acesvisa.com/country/${city.country}` },
+                  { "@type": "ListItem", position: 3, name: city.name, item: `https://www.4acesvisa.com/city/${city.slug}` },
                 ],
               },
               {

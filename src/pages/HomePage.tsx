@@ -75,14 +75,14 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>4 Aces Visa | Immigration Consultancy for Canada, Australia, Germany & UK</title>
-        <meta name="description" content="By the immigrants, for the immigrants. Expert immigration services for Canada PR, study visas, LMIA, PNP, work permits, visitor visas, and citizenship. Free assessment." />
-        <link rel="canonical" href="https://4acesvisa.com" />
-        <meta name="keywords" content="immigration consultancy, Canada PR, Express Entry, study visa, work permit, LMIA, PNP, family sponsorship, Australia migration, Germany Blue Card, UK Skilled Worker visa, 4 Aces Visa" />
+        <title>Canada Immigration Consultants — Work Permit, PR & Express Entry | 4 Aces Visa</title>
+        <meta name="description" content="Licensed Canadian immigration consultants. Expert help for Express Entry, LMIA work permits, PNP, study permits & PR — for Canada, Australia, Germany & UK. Free assessment." />
+        <link rel="canonical" href="https://www.4acesvisa.com" />
+        <meta name="keywords" content="Canada immigration consultants, Canada PR, Express Entry 2026, work permit Canada, LMIA, PNP, study permit, family sponsorship, Australia migration, Germany Blue Card, UK Skilled Worker visa, immigration from India, 4 Aces Visa" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="4 Aces Visa | Immigration Consultancy" />
-        <meta property="og:description" content="Expert immigration services for Canada, Australia, Germany & UK. 15,000+ visas processed. 98% success rate." />
-        <meta property="og:url" content="https://4acesvisa.com" />
+        <meta property="og:title" content="Canada Immigration Consultants — Work Permit, PR & Express Entry | 4 Aces Visa" />
+        <meta property="og:description" content="Licensed immigration consultants for Canada, Australia, Germany & UK. 15,000+ visas processed. 98% success rate. Free assessment." />
+        <meta property="og:url" content="https://www.4acesvisa.com" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -118,8 +118,8 @@ const HomePage = () => {
                 className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-foreground leading-tight mb-6"
                 initial="hidden" animate="visible" variants={fadeUp} custom={1}
               >
-                Your Dream of Living Abroad{" "}
-                <span className="gradient-text">Starts Here.</span>
+                Canada Immigration Consultants{" "}
+                <span className="gradient-text">& Global Visa Experts.</span>
               </motion.h1>
               <motion.p
                 className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl"

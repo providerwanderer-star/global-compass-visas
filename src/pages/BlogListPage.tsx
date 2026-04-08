@@ -21,11 +21,11 @@ const BlogListPage = () => {
       <Helmet>
         <title>Immigration Blog & Guides | 4 Aces Visa</title>
         <meta name="description" content="Expert immigration articles, guides, and updates for Canada, Australia, Germany, and UK immigration. Tips on Express Entry, study visas, work permits, and more." />
-        <link rel="canonical" href="https://4acesvisa.com/blog" />
+        <link rel="canonical" href="https://www.4acesvisa.com/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Immigration Blog & Guides | 4 Aces Visa" />
         <meta property="og:description" content="Expert immigration articles, guides, and updates for Canada, Australia, Germany, and UK." />
-        <meta property="og:url" content="https://4acesvisa.com/blog" />
+        <meta property="og:url" content="https://www.4acesvisa.com/blog" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Immigration Blog & Guides | 4 Aces Visa" />
         <meta name="twitter:description" content="Expert immigration articles and guides for Canada, Australia, Germany, and UK." />
@@ -35,14 +35,14 @@ const BlogListPage = () => {
             "@type": "CollectionPage",
             "name": "Immigration Blog & Guides",
             "description": "Expert immigration articles for Canada, Australia, Germany, and UK.",
-            "url": "https://4acesvisa.com/blog",
+            "url": "https://www.4acesvisa.com/blog",
             "publisher": { "@type": "Organization", "name": "4 Aces Visa" },
             "mainEntity": {
               "@type": "ItemList",
               "itemListElement": blogPosts.map((post, i) => ({
                 "@type": "ListItem",
                 "position": i + 1,
-                "url": `https://4acesvisa.com/blog/${post.slug}`,
+                "url": `https://www.4acesvisa.com/blog/${post.slug}`,
                 "name": post.title
               }))
             }

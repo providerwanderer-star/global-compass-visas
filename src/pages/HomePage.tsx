@@ -40,31 +40,31 @@ const HomePage = () => {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-primary/80" />
+          <div className="absolute inset-0 bg-primary/85" />
         </div>
         <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
           <div className="max-w-3xl">
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
-              <span className="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+              <span className="inline-flex items-center gap-2 bg-gold/15 text-gold px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
                 <Globe className="h-4 w-4" />
                 Trusted by 15,000+ immigrants worldwide
               </span>
             </motion.div>
             <motion.h1
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6"
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
               initial="hidden" animate="visible" variants={fadeUp} custom={1}
             >
               Not Sure Which Country to Move To?{" "}
               <span className="gradient-text">We Help You Choose.</span>
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-cream/70 mb-4 max-w-2xl"
+              className="text-lg md:text-xl text-white/70 mb-4 max-w-2xl"
               initial="hidden" animate="visible" variants={fadeUp} custom={2}
             >
               Canada 🇨🇦 &nbsp;|&nbsp; Australia 🇦🇺 &nbsp;|&nbsp; Germany 🇩🇪
             </motion.p>
             <motion.p
-              className="text-base text-cream/60 mb-8 max-w-xl"
+              className="text-base text-white/55 mb-8 max-w-xl"
               initial="hidden" animate="visible" variants={fadeUp} custom={3}
             >
               Work | Study | PR Pathways — Get expert guidance to find the right immigration pathway for your profile.
@@ -76,7 +76,7 @@ const HomePage = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-cream/30 text-cream hover:bg-cream/10 font-semibold text-base px-8">
+                <Button size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 font-semibold text-base px-8">
                   Talk to Immigration Expert
                 </Button>
               </Link>
@@ -87,7 +87,7 @@ const HomePage = () => {
 
       {/* Stats */}
       <section className="bg-card border-b border-border">
-        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
@@ -100,7 +100,7 @@ const HomePage = () => {
       </section>
 
       {/* Country Comparison */}
-      <section className="section-padding bg-background">
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -142,7 +142,7 @@ const HomePage = () => {
       </section>
 
       {/* Pathway Selector */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -171,7 +171,7 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-background">
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -205,15 +205,15 @@ const HomePage = () => {
         <div className="container-narrow mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-cream mb-4">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 Check Your Immigration Eligibility — <span className="text-gold">Free</span>
               </h2>
-              <p className="text-cream/70 mb-6">
+              <p className="text-primary-foreground/70 mb-6">
                 Get a personalized eligibility assessment from our immigration experts. We'll analyze your profile and recommend the best pathway for you.
               </p>
               <ul className="space-y-3">
                 {["Free expert assessment", "Response within 24 hours", "No obligation consultation", "100% confidential"].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-cream/80 text-sm">
+                  <li key={item} className="flex items-center gap-2 text-primary-foreground/80 text-sm">
                     <CheckCircle className="h-4 w-4 text-gold" />
                     {item}
                   </li>
@@ -221,14 +221,14 @@ const HomePage = () => {
               </ul>
             </div>
             <div className="bg-card rounded-xl p-6 md:p-8 shadow-elevated">
-              <EligibilityForm />
+              <EligibilityForm sourcePage="homepage" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Blog Preview */}
-      <section className="section-padding bg-background">
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -246,7 +246,7 @@ const HomePage = () => {
               <motion.div key={post.slug} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <Link to={`/blog/${post.slug}`} className="block group">
                   <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-elevated transition-all h-full">
-                    <div className="bg-primary/5 p-4">
+                    <div className="bg-secondary p-4">
                       <BookOpen className="h-8 w-8 text-gold" />
                     </div>
                     <div className="p-6">
@@ -274,7 +274,7 @@ const HomePage = () => {
       </section>
 
       {/* FAQ */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding section-soft">
         <div className="container-narrow mx-auto max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
             Frequently Asked Questions
@@ -304,10 +304,10 @@ const HomePage = () => {
       {/* Final CTA */}
       <section className="section-padding bg-primary text-center">
         <div className="container-narrow mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-cream mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
             Ready to Start Your Immigration Journey?
           </h2>
-          <p className="text-cream/70 max-w-xl mx-auto mb-8">
+          <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
             Join 15,000+ successful immigrants who trusted 4 Aces Visa. Get your free eligibility assessment today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -317,7 +317,7 @@ const HomePage = () => {
               </Button>
             </Link>
             <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-cream/30 text-cream hover:bg-cream/10 font-semibold text-base px-8">
+              <Button size="lg" variant="outline" className="border-white/25 text-white hover:bg-white/10 font-semibold text-base px-8">
                 WhatsApp Us
               </Button>
             </a>

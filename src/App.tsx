@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import HomePage from "@/pages/HomePage";
 import CountryPage from "@/pages/CountryPage";
+import ServicePage from "@/pages/ServicePage";
+import CityPage from "@/pages/CityPage";
 import BlogListPage from "@/pages/BlogListPage";
 import BlogPostPage from "@/pages/BlogPostPage";
 import ContactPage from "@/pages/ContactPage";
@@ -26,10 +28,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/immigration/:slug" element={<CountryPage />} />
+            <Route path="/services/:slug" element={<ServicePage />} />
+            <Route path="/city/:slug" element={<CityPage />} />
             <Route path="/blog" element={<BlogListPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services/:slug" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

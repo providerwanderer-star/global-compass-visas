@@ -4,14 +4,48 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { CheckCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
-const EligibilityForm = () => {
+interface EligibilityFormProps {
+  sourcePage?: string;
+}
+
+const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email: "",
+    phone: "",
+    destination_country: "",
+    visa_type: "",
+    education_level: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    toast.success("Thank you! Our immigration expert will contact you within 24 hours.");
+    setLoading(true);
+
+    try {
+      const { error } = await supabase.from("leads").insert({
+        full_name: formData.full_name,
+        email: formData.email,
+        phone: formData.phone,
+        destination_country: formData.destination_country || null,
+        visa_type: formData.visa_type || null,
+        education_level: formData.education_level || null,
+        source_page: sourcePage,
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      toast.success("Thank you! Our immigration expert will contact you within 24 hours.");
+    } catch {
+      toast.error("Something went wrong. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -27,10 +61,30 @@ const EligibilityForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Input placeholder="Full Name *" required className="bg-card border-border" />
-        <Input type="email" placeholder="Email *" required className="bg-card border-border" />
-        <Input type="tel" placeholder="Phone Number *" required className="bg-card border-border" />
-        <Select required>
+        <Input
+          placeholder="Full Name *"
+          required
+          className="bg-card border-border"
+          value={formData.full_name}
+          onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
+        />
+        <Input
+          type="email"
+          placeholder="Email *"
+          required
+          className="bg-card border-border"
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        />
+        <Input
+          type="tel"
+          placeholder="Phone Number *"
+          required
+          className="bg-card border-border"
+          value={formData.phone}
+          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+        />
+        <Select onValueChange={(v) => setFormData({ ...formData, destination_country: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Destination Country" />
           </SelectTrigger>
@@ -41,7 +95,7 @@ const EligibilityForm = () => {
             <SelectItem value="not-sure">Not Sure Yet</SelectItem>
           </SelectContent>
         </Select>
-        <Select required>
+        <Select onValueChange={(v) => setFormData({ ...formData, visa_type: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Visa Type" />
           </SelectTrigger>
@@ -54,7 +108,7 @@ const EligibilityForm = () => {
             <SelectItem value="visitor">Visitor Visa</SelectItem>
           </SelectContent>
         </Select>
-        <Select>
+        <Select onValueChange={(v) => setFormData({ ...formData, education_level: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Education Level" />
           </SelectTrigger>
@@ -67,8 +121,12 @@ const EligibilityForm = () => {
           </SelectContent>
         </Select>
       </div>
-      <Button type="submit" className="w-full bg-gold text-accent-foreground hover:bg-gold-dark font-semibold text-base py-6 shadow-gold">
-        Check My Eligibility — Free Assessment
+      <Button
+        type="submit"
+        disabled={loading}
+        className="w-full bg-gold text-accent-foreground hover:bg-gold-dark font-semibold text-base py-6 shadow-gold"
+      >
+        {loading ? "Submitting..." : "Check My Eligibility — Free Assessment"}
       </Button>
       <p className="text-xs text-muted-foreground text-center">100% confidential. No spam. Expert response within 24 hours.</p>
     </form>

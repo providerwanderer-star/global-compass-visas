@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, ArrowRight, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import EligibilityForm from "@/components/EligibilityForm";
 
 const ContactPage = () => {
@@ -8,14 +6,14 @@ const ContactPage = () => {
     <div>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-cream mb-4">Get in Touch</h1>
-          <p className="text-cream/70 text-lg max-w-2xl">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">Get in Touch</h1>
+          <p className="text-primary-foreground/70 text-lg max-w-2xl">
             Ready to start your immigration journey? Book a free consultation with our experts.
           </p>
         </div>
       </section>
 
-      <section className="section-padding bg-background">
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -63,7 +61,7 @@ const ContactPage = () => {
 
             <div className="bg-card rounded-xl border border-border p-6 md:p-8">
               <h2 className="font-display text-2xl font-bold text-foreground mb-6">Free Eligibility Assessment</h2>
-              <EligibilityForm />
+              <EligibilityForm sourcePage="contact" />
             </div>
           </div>
         </div>

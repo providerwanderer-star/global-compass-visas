@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
 import { ChevronRight, Clock, ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import { blogPosts } from "@/data/blogData";
 
@@ -19,7 +18,6 @@ const BlogPostPage = () => {
     );
   }
 
-  // Simple markdown-like rendering
   const renderContent = (content: string) => {
     return content.split("\n").map((line, i) => {
       if (line.startsWith("## ")) return <h2 key={i} className="font-display text-2xl font-bold text-foreground mt-8 mb-4">{line.replace("## ", "")}</h2>;
@@ -52,7 +50,7 @@ const BlogPostPage = () => {
     <div>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-sm text-cream/50 mb-6">
+          <nav className="flex items-center gap-2 text-sm text-primary-foreground/50 mb-6">
             <Link to="/" className="hover:text-gold">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <Link to="/blog" className="hover:text-gold">Blog</Link>
@@ -61,8 +59,8 @@ const BlogPostPage = () => {
           </nav>
           <div className="max-w-3xl">
             <span className="text-xs font-medium text-gold uppercase tracking-wider">{post.category}</span>
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-cream mt-2 mb-4">{post.title}</h1>
-            <div className="flex items-center gap-4 text-cream/50 text-sm">
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mt-2 mb-4">{post.title}</h1>
+            <div className="flex items-center gap-4 text-primary-foreground/50 text-sm">
               <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {post.readTime} read</span>
               <span>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
             </div>
@@ -70,12 +68,11 @@ const BlogPostPage = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-background">
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <article className="lg:col-span-2 prose-sm max-w-none">
               {renderContent(post.content)}
-
               <div className="mt-12 pt-8 border-t border-border">
                 <Link to="/blog" className="inline-flex items-center text-gold hover:underline">
                   <ArrowLeft className="h-4 w-4 mr-1" /> Back to all articles
@@ -85,7 +82,7 @@ const BlogPostPage = () => {
             <aside className="space-y-6">
               <div className="bg-card rounded-xl border border-border p-6 sticky top-24">
                 <h3 className="font-display text-lg font-bold text-foreground mb-4">Free Eligibility Check</h3>
-                <EligibilityForm />
+                <EligibilityForm sourcePage={`blog-${post.slug}`} />
               </div>
             </aside>
           </div>

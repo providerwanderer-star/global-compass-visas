@@ -9,6 +9,10 @@ import {
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import heroBg from "@/assets/hero-bg.jpg";
+import studentsImg from "@/assets/students-canada.jpg";
+import familyImg from "@/assets/family-reunion.jpg";
+import newLifeImg from "@/assets/new-life-canada.jpg";
+import consultationImg from "@/assets/consultation.jpg";
 import { countries } from "@/data/countryData";
 import { blogPosts } from "@/data/blogData";
 
@@ -163,8 +167,63 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Country Comparison */}
+      {/* Life in Canada — Visual Showcase */}
       <section className="section-padding section-soft">
+        <div className="container-narrow mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              Your Future Awaits
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              This Could Be Your Story
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Every year, thousands of immigrants build new lives in Canada. Here's what your journey could look like.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="relative group overflow-hidden rounded-2xl">
+              <img src={studentsImg} alt="International students on a Canadian university campus in autumn" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Study in Canada</span>
+                <h3 className="font-display text-xl font-bold text-white">World-Class Education</h3>
+                <p className="text-white/80 text-sm mt-1">Join thousands of international students at top Canadian universities</p>
+              </div>
+            </motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="relative group overflow-hidden rounded-2xl">
+              <img src={familyImg} alt="Indian family reuniting at Canadian airport" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Family Sponsorship</span>
+                <h3 className="font-display text-xl font-bold text-white">Reunite with Family</h3>
+                <p className="text-white/80 text-sm mt-1">Bring your parents, spouse, and children to Canada through sponsorship</p>
+              </div>
+            </motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2} className="relative group overflow-hidden rounded-2xl">
+              <img src={newLifeImg} alt="Young couple with house keys in Canadian neighborhood" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Permanent Residency</span>
+                <h3 className="font-display text-xl font-bold text-white">Build Your New Life</h3>
+                <p className="text-white/80 text-sm mt-1">From PR to your first home — we help you settle into Canadian life</p>
+              </div>
+            </motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3} className="relative group overflow-hidden rounded-2xl">
+              <img src={consultationImg} alt="Immigration consultant meeting with clients" loading="lazy" width={1280} height={720} className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">Expert Guidance</span>
+                <h3 className="font-display text-xl font-bold text-white">Personal Consultation</h3>
+                <p className="text-white/80 text-sm mt-1">One-on-one guidance from consultants who've been through the process</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Country Comparison */}
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">

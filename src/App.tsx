@@ -14,6 +14,7 @@ import CityPage from "@/pages/CityPage";
 import BlogListPage from "@/pages/BlogListPage";
 import BlogPostPage from "@/pages/BlogPostPage";
 import ContactPage from "@/pages/ContactPage";
+import QuizPage from "@/pages/QuizPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/city/:slug" element={<CityPage />} />
               <Route path="/blog" element={<BlogListPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
+              <Route path="/quiz" element={<QuizPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

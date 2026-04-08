@@ -91,25 +91,36 @@ const Navbar = () => {
               onMouseEnter={() => link.children && setOpenDropdown(link.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <Link
-                to={link.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors rounded-md inline-flex items-center gap-1 ${
-                  location.pathname === link.href
-                    ? "text-gold"
-                    : "text-foreground/70 hover:text-gold"
-                }`}
-                onClick={(e) => link.children && e.preventDefault()}
-              >
-                {link.label}
-                {link.children && <ChevronDown className="h-3 w-3" />}
-              </Link>
+              {link.children ? (
+                <button
+                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-md inline-flex items-center gap-1 ${
+                    "text-foreground/70 hover:text-gold"
+                  }`}
+                  onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
+                >
+                  {link.label}
+                  <ChevronDown className="h-3 w-3" />
+                </button>
+              ) : (
+                <Link
+                  to={link.href}
+                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-md inline-flex items-center gap-1 ${
+                    location.pathname === link.href
+                      ? "text-gold"
+                      : "text-foreground/70 hover:text-gold"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )}
               {link.children && openDropdown === link.label && (
                 <div className={`absolute top-full left-0 mt-1 bg-white rounded-lg shadow-elevated border border-border p-2 animate-fade-up ${link.label === "Services" || link.label === "Cities" ? "w-72 max-h-96 overflow-y-auto" : "w-56"}`}>
                   {link.children.map((child) => (
-                    <Link
+                     <Link
                       key={child.label}
                       to={child.href}
                       className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-gold rounded-md transition-colors"
+                      onClick={() => setOpenDropdown(null)}
                     >
                       {child.label}
                     </Link>

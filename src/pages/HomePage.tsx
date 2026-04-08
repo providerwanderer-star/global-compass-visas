@@ -123,7 +123,7 @@ const HomePage = () => {
 
       {/* Stats */}
       <section className="bg-card border-b border-border">
-        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s) => (
               <div key={s.label} className="text-center">

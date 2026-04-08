@@ -163,7 +163,7 @@ const HomePage = () => {
             </div>
 
             {/* Right — People images collage */}
-            <div className="order-1 lg:order-2 relative flex justify-center items-end min-h-[320px] md:min-h-[420px]">
+            <div className="order-1 lg:order-2 relative flex justify-center items-center min-h-[320px] md:min-h-[420px]">
               {/* Accent circle behind */}
               <motion.div
                 className="absolute w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full bg-primary/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -171,22 +171,22 @@ const HomePage = () => {
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
-              {/* Students image */}
+              {/* Students image — right side */}
               <motion.img
                 src={heroStudents}
                 alt="Happy international students starting their immigration journey"
-                className="relative z-10 w-[260px] md:w-[340px] lg:w-[380px] drop-shadow-2xl"
+                className="relative z-10 w-[200px] md:w-[260px] lg:w-[300px] drop-shadow-2xl ml-auto"
                 width={640}
                 height={640}
                 initial={{ opacity: 0, y: 40, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
               />
-              {/* Family image — overlapping */}
+              {/* Family image — bottom left, offset so no overlap */}
               <motion.img
                 src={heroFamily}
                 alt="Happy immigrant family reunited"
-                className="absolute bottom-0 -left-4 md:left-0 z-20 w-[180px] md:w-[220px] lg:w-[260px] rounded-2xl shadow-elevated border-4 border-background"
+                className="absolute bottom-4 left-0 md:left-4 z-20 w-[150px] md:w-[190px] lg:w-[220px] rounded-2xl shadow-elevated border-4 border-background object-cover"
                 width={640}
                 height={640}
                 initial={{ opacity: 0, x: -40, y: 20 }}
@@ -195,7 +195,7 @@ const HomePage = () => {
               />
               {/* Floating stat badge */}
               <motion.div
-                className="absolute top-4 right-4 md:top-8 md:right-0 z-30 bg-card shadow-elevated rounded-xl px-4 py-3 border border-border"
+                className="absolute top-4 right-0 md:top-8 md:right-4 z-30 bg-card shadow-elevated rounded-xl px-4 py-3 border border-border"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}

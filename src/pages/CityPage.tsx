@@ -86,7 +86,8 @@ const CityPage = () => {
           <h1 className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
             Immigration Consultant in {city.name}
           </h1>
-          <p className="text-lg text-primary-foreground/70 max-w-2xl mb-8">{city.intro}</p>
+          <p className="text-lg text-primary-foreground/70 max-w-2xl mb-4">{city.intro}</p>
+          <p className="text-gold/80 text-sm font-medium mb-6">⚡ Limited free consultation slots available — book your assessment today</p>
           <div className="flex flex-wrap gap-4">
             <a href="#form">
               <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold shadow-gold">
@@ -94,7 +95,7 @@ const CityPage = () => {
               </Button>
             </a>
             <a href="tel:+16478622190">
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
+              <Button size="lg" className="bg-transparent border-2 border-white/40 text-white hover:bg-white/10 font-semibold">
                 <Phone className="mr-2 h-4 w-4" /> Call Now
               </Button>
             </a>
@@ -102,9 +103,16 @@ const CityPage = () => {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Local Insight */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
+          <div className="bg-card rounded-xl border border-gold/20 p-6 md:p-8 mb-12">
+            <h2 className="font-display text-xl font-bold text-foreground mb-3">
+              Why {city.name} for Immigration?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">{city.localInsight}</p>
+          </div>
+
           <h2 className="font-display text-3xl font-bold text-foreground mb-8">
             Our Immigration Services in {city.name}
           </h2>

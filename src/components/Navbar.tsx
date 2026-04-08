@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoIcon from "@/assets/logo-icon.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -51,11 +50,13 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-card border-b border-border" : "bg-primary/95 backdrop-blur-md"}`}>
       <div className="container-narrow mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 md:h-20">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5">
-          <img src={logoIcon} alt="4 Aces Visa" className="h-10 w-10" />
-          <span className={`font-display text-xl font-bold transition-colors ${scrolled ? "text-primary" : "text-white"}`}>
-            4 Aces <span className="text-gold">Visa</span>
+        {/* Logo — Text Only */}
+        <Link to="/" className="flex items-center gap-1">
+          <span className={`font-display text-xl font-extrabold tracking-tight transition-colors ${scrolled ? "text-primary" : "text-white"}`}>
+            4 Aces
+          </span>
+          <span className="font-display text-xl font-extrabold tracking-tight text-gold">
+            Visa
           </span>
         </Link>
 

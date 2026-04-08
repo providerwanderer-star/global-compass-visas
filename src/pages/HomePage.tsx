@@ -163,39 +163,42 @@ const HomePage = () => {
             </div>
 
             {/* Right — People images collage */}
-            <div className="order-1 lg:order-2 relative flex justify-center items-center min-h-[320px] md:min-h-[420px]">
+            <div className="order-1 lg:order-2 relative flex items-center justify-center">
               {/* Accent circle behind */}
               <motion.div
-                className="absolute w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full bg-primary/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                className="absolute w-[260px] h-[260px] md:w-[320px] md:h-[320px] rounded-full bg-primary/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
-              {/* Students image — right side */}
-              <motion.img
-                src={heroStudents}
-                alt="Happy international students starting their immigration journey"
-                className="relative z-10 w-[200px] md:w-[260px] lg:w-[300px] drop-shadow-2xl ml-auto"
-                width={640}
-                height={640}
-                initial={{ opacity: 0, y: 40, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-              />
-              {/* Family image — bottom left, offset so no overlap */}
-              <motion.img
-                src={heroFamily}
-                alt="Happy immigrant family reunited"
-                className="absolute bottom-4 left-0 md:left-4 z-20 w-[150px] md:w-[190px] lg:w-[220px] rounded-2xl shadow-elevated border-4 border-background object-cover"
-                width={640}
-                height={640}
-                initial={{ opacity: 0, x: -40, y: 20 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.6 }}
-              />
+              {/* Image grid */}
+              <div className="relative grid grid-cols-5 gap-3 w-full max-w-[420px]">
+                {/* Students — spans 3 cols */}
+                <motion.img
+                  src={heroStudents}
+                  alt="Happy international students starting their immigration journey"
+                  className="col-span-3 w-full rounded-2xl shadow-elevated object-cover aspect-[3/4] z-10"
+                  width={640}
+                  height={640}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                />
+                {/* Family — spans 2 cols, offset down */}
+                <motion.img
+                  src={heroFamily}
+                  alt="Happy immigrant family reunited"
+                  className="col-span-2 w-full rounded-2xl shadow-elevated border-4 border-background object-cover aspect-[3/4] mt-8 z-10"
+                  width={640}
+                  height={640}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                />
+              </div>
               {/* Floating stat badge */}
               <motion.div
-                className="absolute top-4 right-0 md:top-8 md:right-4 z-30 bg-card shadow-elevated rounded-xl px-4 py-3 border border-border"
+                className="absolute -bottom-2 right-4 md:right-8 z-30 bg-card shadow-elevated rounded-xl px-4 py-3 border border-border"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}

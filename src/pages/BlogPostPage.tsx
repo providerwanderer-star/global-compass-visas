@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ChevronRight, Clock, ArrowLeft } from "lucide-react";
 import EligibilityForm from "@/components/EligibilityForm";
 import { blogPosts } from "@/data/blogData";
@@ -48,6 +49,14 @@ const BlogPostPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{post.title} | 4 Aces Visa Blog</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://4acesvisa.com/blog/${post.slug}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={`https://4acesvisa.com/blog/${post.slug}`} />
+      </Helmet>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-primary-foreground/50 mb-6">

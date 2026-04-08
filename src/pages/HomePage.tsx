@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import {
   ArrowRight, Globe, Award, Users, Clock, CheckCircle, Star, BookOpen,
@@ -48,6 +49,11 @@ const stats = [
 const HomePage = () => {
   return (
     <div>
+      <Helmet>
+        <title>4 Aces Visa | Immigration Consultancy for Canada, Australia, Germany & UK</title>
+        <meta name="description" content="By the immigrants, for the immigrants. Expert immigration services for Canada PR, study visas, LMIA, PNP, work permits, visitor visas, and citizenship. Free assessment." />
+        <link rel="canonical" href="https://4acesvisa.com" />
+      </Helmet>
       {/* Hero — Canada-Focused */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">

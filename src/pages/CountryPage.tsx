@@ -30,32 +30,30 @@ const CountryPage = () => {
       {/* Hero */}
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-sm text-cream/50 mb-8">
+          <nav className="flex items-center gap-2 text-sm text-primary-foreground/50 mb-8">
             <Link to="/" className="hover:text-gold">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-cream">Immigration</span>
+            <span className="text-primary-foreground/70">Immigration</span>
             <ChevronRight className="h-3 w-3" />
             <span className="text-gold">{country.name}</span>
           </nav>
           <div className="max-w-3xl">
             <span className="text-6xl mb-4 block">{country.flag}</span>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-cream mb-4">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               {country.name} Immigration 2026
             </h1>
-            <p className="text-lg text-cream/70 mb-6">{country.heroDescription}</p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#eligibility">
-                <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold shadow-gold">
-                  Check Eligibility <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-            </div>
+            <p className="text-lg text-primary-foreground/70 mb-6">{country.heroDescription}</p>
+            <a href="#eligibility">
+              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold shadow-gold">
+                Check Eligibility <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Pathways */}
-      <section className="section-padding bg-background">
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <h2 className="font-display text-3xl font-bold text-foreground mb-8">
             Immigration Pathways to {country.name}
@@ -74,7 +72,7 @@ const CountryPage = () => {
       </section>
 
       {/* Eligibility */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
           <h2 className="font-display text-3xl font-bold text-foreground mb-8">Eligibility Requirements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -95,8 +93,21 @@ const CountryPage = () => {
         </div>
       </section>
 
+      {/* Mid CTA */}
+      <section className="py-12 bg-gold/10">
+        <div className="container-narrow mx-auto text-center px-4">
+          <h2 className="font-display text-2xl font-bold text-foreground mb-3">Not Sure If You Qualify?</h2>
+          <p className="text-muted-foreground mb-6">Get a free assessment — our experts will match you with the right pathway.</p>
+          <a href="#eligibility">
+            <Button className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold shadow-gold">
+              Free Eligibility Check <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
+        </div>
+      </section>
+
       {/* Steps */}
-      <section className="section-padding bg-background">
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <h2 className="font-display text-3xl font-bold text-foreground mb-8">Step-by-Step Process</h2>
           <div className="space-y-4">
@@ -116,7 +127,7 @@ const CountryPage = () => {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
           <h2 className="font-display text-3xl font-bold text-foreground mb-8">
             <Clock className="inline h-7 w-7 text-gold mr-2" />
@@ -144,7 +155,7 @@ const CountryPage = () => {
       </section>
 
       {/* Job Market */}
-      <section className="section-padding bg-background">
+      <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <h2 className="font-display text-3xl font-bold text-foreground mb-8">
             <TrendingUp className="inline h-7 w-7 text-gold mr-2" />
@@ -162,7 +173,7 @@ const CountryPage = () => {
       </section>
 
       {/* FAQ */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding section-soft">
         <div className="container-narrow mx-auto max-w-3xl">
           <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">
             {country.name} Immigration FAQ
@@ -186,13 +197,13 @@ const CountryPage = () => {
         <div className="container-narrow mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-display text-3xl font-bold text-cream mb-4">
+              <h2 className="font-display text-3xl font-bold text-primary-foreground mb-4">
                 Start Your {country.name} Immigration Journey
               </h2>
-              <p className="text-cream/70">Get a free eligibility assessment and personalized pathway recommendation from our {country.name} immigration experts.</p>
+              <p className="text-primary-foreground/70">Get a free eligibility assessment and personalized pathway recommendation from our {country.name} immigration experts.</p>
             </div>
             <div className="bg-card rounded-xl p-6 md:p-8 shadow-elevated">
-              <EligibilityForm />
+              <EligibilityForm sourcePage={`country-${country.slug}`} />
             </div>
           </div>
         </div>

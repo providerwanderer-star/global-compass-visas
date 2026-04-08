@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,14 @@ const ServicePage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{service.metaTitle}</title>
+        <meta name="description" content={service.metaDescription} />
+        <link rel="canonical" href={`https://4acesvisa.com/services/${service.slug}`} />
+        <meta property="og:title" content={service.metaTitle} />
+        <meta property="og:description" content={service.metaDescription} />
+        <meta property="og:url" content={`https://4acesvisa.com/services/${service.slug}`} />
+      </Helmet>
       {/* Hero */}
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">

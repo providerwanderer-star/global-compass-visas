@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { BookOpen, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/data/blogData";
@@ -11,6 +12,11 @@ const fadeUp = {
 const BlogListPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>Immigration Blog & Guides | 4 Aces Visa</title>
+        <meta name="description" content="Expert immigration articles, guides, and updates for Canada, Australia, Germany, and UK immigration. Tips on Express Entry, study visas, work permits, and more." />
+        <link rel="canonical" href="https://4acesvisa.com/blog" />
+      </Helmet>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">Immigration Blog</h1>

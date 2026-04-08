@@ -1,9 +1,15 @@
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import EligibilityForm from "@/components/EligibilityForm";
 
 const ContactPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>Contact Us | Free Immigration Consultation – 4 Aces Visa</title>
+        <meta name="description" content="Get in touch with 4 Aces Visa for a free immigration consultation. Expert guidance for Canada, Australia, Germany, and UK immigration." />
+        <link rel="canonical" href="https://4acesvisa.com/contact" />
+      </Helmet>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">Get in Touch</h1>

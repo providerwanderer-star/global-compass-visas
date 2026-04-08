@@ -105,7 +105,7 @@ const HomePage = () => {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full translate-y-1/2 -translate-x-1/3" />
 
         <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-8 items-stretch">
             {/* Left — Text */}
             <div className="order-2 lg:order-1">
               <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>

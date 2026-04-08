@@ -176,12 +176,6 @@ const HomePage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                style={{
-                  WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 12%, black 90%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%)",
-                  WebkitMaskComposite: "destination-in",
-                  maskImage: "linear-gradient(to right, transparent 0%, black 12%, black 90%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%)",
-                  maskComposite: "intersect",
-                }}
               >
                 <img
                   src={heroCombined}

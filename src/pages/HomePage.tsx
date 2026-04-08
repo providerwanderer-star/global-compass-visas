@@ -59,12 +59,12 @@ const HomePage = () => {
         <link rel="canonical" href="https://4acesvisa.com" />
       </Helmet>
       {/* Hero — Canada-Focused */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[55vh] md:min-h-[65vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-primary/85" />
         </div>
-        <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+        <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
           <div className="max-w-3xl">
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
               <span className="inline-flex items-center gap-2 bg-gold/15 text-gold px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">

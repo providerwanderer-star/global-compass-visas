@@ -172,7 +172,7 @@ const HomePage = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
               {/* Image grid */}
-              <div className="relative grid grid-cols-5 gap-3 w-full max-w-[420px]">
+              <div className="relative grid grid-cols-5 gap-3 w-full max-w-[500px]">
                 {/* Students — spans 3 cols */}
                 <motion.img
                   src={heroStudents}

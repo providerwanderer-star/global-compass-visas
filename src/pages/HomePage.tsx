@@ -268,6 +268,13 @@ const HomePage = () => {
               </motion.div>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <Link to="/quiz">
+              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold">
+                Take the Pathway Quiz <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

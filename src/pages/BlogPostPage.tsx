@@ -6,12 +6,12 @@ import EligibilityForm from "@/components/EligibilityForm";
 import InternalLinks from "@/components/InternalLinks";
 import { blogPosts } from "@/data/blogData";
 import { blogToServices, getRelatedServiceData } from "@/data/internalLinks";
-import { blogEnhancements } from "@/data/blogEnhancements";
+import { blogEnhancements, newBlogEnhancements } from "@/data/blogEnhancements";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
-  const enhancement = post ? blogEnhancements[post.slug] : undefined;
+  const enhancement = post ? (blogEnhancements[post.slug] || newBlogEnhancements[post.slug]) : undefined;
 
   // Extract headings for Table of Contents
   const headings = useMemo(() => {

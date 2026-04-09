@@ -56,7 +56,7 @@ const indianCities: CityData[] = [
   "Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Bathinda", "Patiala", "Hoshiarpur", "Moga", "Pathankot"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
-  const isPunjab = ["Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Chandigarh"].includes(name);
+  const isPunjab = ["Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Chandigarh", "Bathinda", "Patiala", "Hoshiarpur", "Moga", "Pathankot"].includes(name);
   const region = isPunjab ? "Punjab, India" : "India";
   return {
     slug,

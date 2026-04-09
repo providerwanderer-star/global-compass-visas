@@ -48,10 +48,10 @@ const indianCities: CityData[] = [
   "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Kolkata",
   "Lucknow", "Jaipur", "Chandigarh", "Noida", "Gurugram", "Indore", "Patna", "Bhubaneswar",
   "Coimbatore", "Vadodara", "Nagpur", "Rajkot", "Varanasi", "Kanpur", "Nashik", "Agra", "Cochin",
-  "Ludhiana", "Amritsar", "Jalandhar", "Mohali"
+  "Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Bathinda", "Patiala", "Hoshiarpur", "Moga", "Pathankot"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
-  const isPunjab = ["Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Chandigarh"].includes(name);
+  const isPunjab = ["Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Chandigarh", "Bathinda", "Patiala", "Hoshiarpur", "Moga", "Pathankot"].includes(name);
   const region = isPunjab ? "Punjab, India" : "India";
   return {
     slug,
@@ -121,7 +121,7 @@ const canadianCityInsights: Record<string, string> = {
 
 const canadianCities: CityData[] = [
   "Toronto", "Vancouver", "Calgary", "Edmonton", "Mississauga", "Ottawa", "Winnipeg",
-  "Quebec City", "Brampton", "Surrey", "Halifax", "London ON", "Kitchener", "Victoria",
+  "Quebec City", "Brampton", "Surrey", "Halifax", "London ON", "Kitchener", "Victoria", "Scarborough", "Milton", "Waterloo",
   "Saskatoon", "Regina", "Hamilton", "Windsor", "Kelowna", "Richmond", "Thunder Bay",
   "Moncton", "Saint John", "Charlottetown", "Prince George"
 ].map((name) => {

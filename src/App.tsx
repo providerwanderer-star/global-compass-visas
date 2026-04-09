@@ -17,6 +17,11 @@ import BlogPostPage from "@/pages/BlogPostPage";
 import ContactPage from "@/pages/ContactPage";
 import QuizPage from "@/pages/QuizPage";
 import ExpressEntryLandingPage from "@/pages/ExpressEntryLandingPage";
+import IndiaHubPage from "@/pages/IndiaHubPage";
+import IndiaStudyPermitPage from "@/pages/IndiaStudyPermitPage";
+import IndiaWorkPermitPage from "@/pages/IndiaWorkPermitPage";
+import IndiaPRPage from "@/pages/IndiaPRPage";
+import CRSCalculatorPage from "@/pages/CRSCalculatorPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +46,11 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/quiz" element={<QuizPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/india" element={<IndiaHubPage />} />
+              <Route path="/india/study-permit-india" element={<IndiaStudyPermitPage />} />
+              <Route path="/india/work-permit-india" element={<IndiaWorkPermitPage />} />
+              <Route path="/india/canada-pr-india" element={<IndiaPRPage />} />
+              <Route path="/crs-calculator" element={<CRSCalculatorPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

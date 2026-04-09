@@ -11,6 +11,18 @@ import { blogEnhancements } from "@/data/blogEnhancements";
 const BlogPostPage = () => {
   const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
+  const enhancement = post ? blogEnhancements[post.slug] : undefined;
+
+  // Extract headings for Table of Contents
+  const headings = useMemo(() => {
+    if (!post) return [];
+    return post.content.split("\n").filter((line) => line.startsWith("## ") || line.startsWith("### ")).map((line) => {
+      const level = line.startsWith("### ") ? 3 : 2;
+      const text = line.replace(/^#{2,3}\s/, "");
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+      return { level, text, id };
+    });
+  }, [post]);
 
   if (!post) {
     return (
@@ -22,8 +34,6 @@ const BlogPostPage = () => {
       </div>
     );
   }
-
-  const enhancement = blogEnhancements[post.slug];
 
   // Extract headings for Table of Contents
   const headings = useMemo(() => {

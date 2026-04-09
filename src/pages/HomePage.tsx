@@ -233,6 +233,55 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* How We Help You Migrate — Step Process */}
+      <section className="section-padding section-soft">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-10">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              🚀 Your Pathway to PR
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              How We Help You Migrate to Canada
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Whether you're in Punjab or Ontario, our proven 5-step process has helped 15,000+ immigrants achieve their Canadian dream.
+            </p>
+          </AnimatedSection>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-5 gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {[
+              { step: "01", title: "Free Assessment", desc: "We evaluate your CRS score, education, work experience & language proficiency to identify the best pathway." },
+              { step: "02", title: "Strategy & Optimization", desc: "Personalized plan to maximize your CRS score — IELTS coaching, PNP targeting, LMIA coordination." },
+              { step: "03", title: "Document Preparation", desc: "Complete document compilation, WES/ECA evaluation, and application-ready dossier preparation." },
+              { step: "04", title: "Application Filing", desc: "Expert submission of your Express Entry profile, PNP application, or work permit with zero errors." },
+              { step: "05", title: "Landing & Settlement", desc: "Post-approval guidance — COPR, landing prep, and settlement support in Canada." },
+            ].map((item) => (
+              <motion.div key={item.step} variants={staggerItem}>
+                <div className="bg-card rounded-xl border border-border p-5 h-full card-interactive text-center">
+                  <div className="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center mx-auto mb-3">
+                    <span className="font-display font-bold text-gold text-sm">{item.step}</span>
+                  </div>
+                  <h3 className="font-display text-sm font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+          <div className="mt-8 text-center">
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold hover:scale-105 transition-transform">
+                Get Your Free Assessment <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Canada Services Grid */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">

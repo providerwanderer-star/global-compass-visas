@@ -35,15 +35,6 @@ const BlogPostPage = () => {
     );
   }
 
-  // Extract headings for Table of Contents
-  const headings = useMemo(() => {
-    return post.content.split("\n").filter((line) => line.startsWith("## ") || line.startsWith("### ")).map((line) => {
-      const level = line.startsWith("### ") ? 3 : 2;
-      const text = line.replace(/^#{2,3}\s/, "");
-      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-      return { level, text, id };
-    });
-  }, [post.content]);
 
   let sectionCount = 0;
 

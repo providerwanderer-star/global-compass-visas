@@ -38,12 +38,17 @@ const indianCityInsights: Record<string, string> = {
   "Nashik": "Maharashtra's wine capital has a growing IT and agriculture-tech sector. Nashik professionals increasingly leverage PNP programs targeting semi-urban candidates with specific skill sets.",
   "Agra": "Beyond the Taj Mahal, Agra has a growing service and tourism workforce. Many Agra residents pursue family sponsorship through established Canadian diaspora connections in the GTA.",
   "Cochin": "Kerala's commercial capital has a strong maritime, IT, and healthcare workforce. Cochin professionals often score high in IELTS (thanks to Kerala's English proficiency) boosting CRS scores significantly.",
+  "Ludhiana": "Punjab's industrial capital is one of India's top immigration source cities for Canada. Ludhiana's strong manufacturing, textile, and small business sectors produce thousands of LMIA and Express Entry applicants annually. The city's deep Canadian diaspora connections in Brampton and Surrey make family sponsorship a major pathway, while young professionals increasingly qualify for Express Entry with 450+ CRS scores.",
+  "Amritsar": "As the spiritual and cultural heart of Punjab, Amritsar has one of India's highest per-capita rates of Canada PR applications. The city's proximity to the Wagah border and strong IELTS coaching infrastructure means Amritsar applicants consistently score CLB 8+. The established Punjabi diaspora across Ontario and BC creates strong family sponsorship and LMIA job offer pipelines.",
+  "Jalandhar": "Jalandhar is a major immigration hub in the Doaba region of Punjab, with deep-rooted connections to Canada's Punjabi community. The city's sports goods, hand tools, and IT sectors produce skilled workers eligible for LMIA and Express Entry. Jalandhar's numerous IELTS coaching centres help applicants achieve high language scores critical for CRS optimization.",
+  "Mohali": "Part of the Chandigarh tri-city area, Mohali's IT and pharma corridor (IT City, Phase 8B) produces highly qualified Express Entry candidates. Mohali professionals from companies like Infosys, TCS, and Quark frequently score 470+ CRS points. The city's proximity to Chandigarh's VFS centre and IELTS test centres makes the application process seamless.",
 };
 
 const indianCities: CityData[] = [
   "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Kolkata",
   "Lucknow", "Jaipur", "Chandigarh", "Noida", "Gurugram", "Indore", "Patna", "Bhubaneswar",
-  "Coimbatore", "Vadodara", "Nagpur", "Rajkot", "Varanasi", "Kanpur", "Nashik", "Agra", "Cochin"
+  "Coimbatore", "Vadodara", "Nagpur", "Rajkot", "Varanasi", "Kanpur", "Nashik", "Agra", "Cochin",
+  "Ludhiana", "Amritsar", "Jalandhar", "Mohali"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
   return {

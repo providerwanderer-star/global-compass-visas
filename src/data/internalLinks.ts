@@ -23,6 +23,17 @@ export const blogToServices: Record<string, string[]> = {
   "ielts-tips-immigration-success": ["express-entry", "student-visa", "pnp-application"],
   "canada-family-sponsorship-explained": ["family-sponsorship", "visitor-visa", "express-entry"],
   "canada-visitor-visa-guide": ["visitor-visa", "visitor-visa-insurance", "family-sponsorship"],
+  // New Punjab/Ontario focused blogs
+  "ontario-pnp-guide-2026": ["pnp-application", "express-entry", "work-permits"],
+  "punjab-to-canada-work-permit-2026": ["work-permits", "lmia-assistance", "express-entry"],
+  "brampton-immigration-guide-2026": ["express-entry", "lmia-assistance", "family-sponsorship"],
+  "canada-pr-points-calculator-guide-2026": ["express-entry", "pnp-application", "lmia-assistance"],
+  "toronto-immigration-services-2026": ["express-entry", "work-permits", "family-sponsorship"],
+  "ielts-score-canada-immigration-punjab-2026": ["express-entry", "student-visa", "pnp-application"],
+  "canada-pr-fees-from-india-complete-breakdown-2026": ["express-entry", "pnp-application", "student-visa"],
+  "pnp-programs-ontario-vs-bc-vs-alberta-2026": ["pnp-application", "express-entry", "work-permits"],
+  "canada-student-visa-from-punjab-2026": ["student-visa", "express-entry", "work-permits"],
+  "family-sponsorship-super-visa-parents-2026": ["family-sponsorship", "visitor-visa", "visitor-visa-insurance"],
 };
 
 // Service → 5 blog posts

@@ -307,4 +307,124 @@ export const blogEnhancements: Record<string, BlogEnhancement> = {
       { question: "Can my parents work in Canada on a Super Visa?", answer: "No. Super Visa is a visitor visa — parents cannot work in Canada. They can stay up to 5 years per entry and must maintain valid medical insurance throughout. For work rights, parents need PR through PGP sponsorship." },
     ],
   },
+  "canada-pr-eligibility-requirements-2026": {
+    quickAnswer: "To qualify for Canada PR in 2026, you need skilled work experience (1+ year NOC TEER 0-3), IELTS CLB 7+ (6.0 each band), a post-secondary degree with WES evaluation, and proof of funds (CAD 14,690 for single applicant). Express Entry CRS cutoffs range 430-490.",
+    faqs: [
+      { question: "What is the minimum age for Canada PR?", answer: "You must be 18+ to apply. Maximum CRS age points are awarded at 20-29 years. Points decrease from 30 onwards, reaching zero at 45. However, you can still get PR at any age through PNP or LMIA pathways." },
+      { question: "Do I need a job offer for Canada PR?", answer: "No. Express Entry FSW and CEC do not require a job offer. However, a valid LMIA job offer adds 50-200 CRS points, significantly boosting your chances." },
+      { question: "What IELTS score is needed for Canada PR?", answer: "Minimum CLB 7 (IELTS 6.0 in each band) for Federal Skilled Worker. CEC requires CLB 7 for TEER 0/1 and CLB 5 for TEER 2/3. Higher scores (CLB 9-10) add 50-70 extra CRS points." },
+      { question: "How much money do I need for Canada PR?", answer: "Proof of funds: CAD 14,690 (single), CAD 18,288 (family of 2), CAD 27,297 (family of 4). Plus government fees of CAD 1,365 per person. Total budget: CAD 3,000-5,000 in fees." },
+      { question: "Can I apply for Canada PR without work experience?", answer: "Federal Skilled Worker requires minimum 1 year of continuous skilled work experience. CEC requires 1 year of Canadian experience. Without experience, consider the study permit → PGWP → CEC pathway." },
+    ],
+  },
+  "canada-pr-timeline-how-long-does-it-take-2026": {
+    quickAnswer: "Express Entry PR takes 8-14 months total: 1-3 months prep, 2 weeks-6 months in pool, then 6 months processing after ITA. PNP takes 12-20 months. CEC is fastest at 8-12 months since you already have Canadian work experience.",
+    faqs: [
+      { question: "How long does Express Entry take in 2026?", answer: "Total 8-14 months: IELTS + WES preparation (1-3 months), time in Express Entry pool (2 weeks-6 months), PR processing after ITA (6 months). Optimized profiles with 4 Aces Visa typically get ITA within 3 months." },
+      { question: "Why is my PR application taking so long?", answer: "Common delays: background security checks (3-6 months extra), missing documents, additional medical exams, procedural fairness letters. Respond to any IRCC requests within 24 hours to minimize delays." },
+      { question: "Can I speed up my Canada PR?", answer: "Yes: Do IELTS and WES simultaneously, apply to PNP early, keep all documents current, respond to IRCC requests immediately, and work with an expert to avoid errors that trigger additional review." },
+      { question: "How long does PNP take for Canada PR?", answer: "PNP nomination: 2-6 months (varies by province). Federal processing after nomination: 6 months. Total: 12-20 months. Ontario PNP is typically fastest at 2-3 months for nomination." },
+      { question: "What happens after landing in Canada with PR?", answer: "After landing: get SIN number (same day), apply for health card (province-dependent), open bank account, and your PR card arrives by mail in 4-8 weeks. You're a permanent resident from landing day." },
+    ],
+  },
+  "express-entry-vs-pnp-which-is-better-2026": {
+    quickAnswer: "Express Entry is faster (6 months processing) and doesn't restrict where you live, but requires CRS 430-490. PNP adds 600 CRS points guaranteeing an ITA, but takes 12-18 months and requires settling in the nominating province. Best strategy: apply to both simultaneously.",
+    faqs: [
+      { question: "Can I apply for Express Entry and PNP at the same time?", answer: "Yes! Create your Express Entry profile first, then apply to PNP streams. If PNP nominates you, your CRS jumps by 600 points. If Express Entry draws you first, proceed without PNP. This dual strategy gives the highest success rate." },
+      { question: "Which PNP is easiest to get in 2026?", answer: "Saskatchewan SINP and Manitoba MPNP have the lowest requirements. BC PNP Tech is fast for tech workers. Ontario OINP Human Capital Priorities targets Express Entry candidates. Each province prioritizes different occupations." },
+      { question: "Do I have to live in the PNP province permanently?", answer: "You must initially settle in the nominating province and demonstrate genuine intent to live there. After becoming a PR, Canadian mobility rights allow you to move anywhere, but moving immediately can affect future citizenship applications." },
+      { question: "What CRS score do I need without PNP?", answer: "General Express Entry draws in 2026 range from 430-490 CRS. Category-based draws (healthcare, STEM, French, trades) may have different cutoffs. Score below 450? PNP is your best bet." },
+      { question: "Is PNP more expensive than Express Entry?", answer: "Slightly. Express Entry alone costs ~CAD 2,500 in government fees. PNP adds CAD 0-1,500 in provincial fees depending on the program. 4 Aces Visa offers all-inclusive packages covering both." },
+    ],
+  },
+  "lmia-jobs-canada-how-to-get-employer-sponsorship-2026": {
+    quickAnswer: "To get an LMIA job in Canada, find employers willing to sponsor foreign workers through the Labour Market Impact Assessment process. Employers pay CAD 1,000 per LMIA application, advertise the job for 4 weeks, then apply to ESDC. Processing takes 2-4 months. A positive LMIA adds 50 CRS points for PR.",
+    faqs: [
+      { question: "Can I pay for my own LMIA?", answer: "No! It is illegal for employers to charge workers for LMIA costs. The CAD 1,000 LMIA fee is 100% the employer's responsibility. If anyone asks you to pay for LMIA, report them." },
+      { question: "How long does LMIA processing take?", answer: "Standard LMIA: 2-4 months. Global Talent Stream: 2 weeks. Agricultural stream: 1-2 months. Processing varies by region and occupation demand." },
+      { question: "Does LMIA guarantee a work permit?", answer: "A positive LMIA means the employer is approved to hire a foreign worker, but you still need to apply for and be approved for a work permit separately. Work permit approval depends on your admissibility." },
+      { question: "How many CRS points does LMIA give?", answer: "A valid LMIA job offer gives 50 CRS points for NOC TEER 0, 1, 2, or 3 positions. For Senior Management (NOC 00), it gives 200 points. This can be the difference between getting an ITA or not." },
+      { question: "Can I change employers with an LMIA work permit?", answer: "LMIA work permits are employer-specific. To change employers, your new employer must obtain a new LMIA for you. Alternatively, if eligible, apply for an open work permit (BOWP if PR is in progress)." },
+    ],
+  },
+  "canada-work-permit-to-pr-pathway-2026": {
+    quickAnswer: "Transition from work permit to PR via Canadian Experience Class (1 year skilled Canadian work experience → Express Entry), Provincial Nominee Program (employer support + provincial nomination → 600 CRS points), or LMIA route (job offer adds 50 CRS points). Total timeline: 20-30 months.",
+    faqs: [
+      { question: "How long do I need to work in Canada to get PR?", answer: "CEC requires 12 months of full-time skilled work (NOC TEER 0-3) in Canada within the last 3 years. Part-time counts if it totals 1,560 hours. Self-employment does not count." },
+      { question: "Can I get PR on an open work permit?", answer: "Yes! Work experience on any valid work permit (open or employer-specific) counts for CEC, as long as it's full-time skilled work in eligible NOC categories." },
+      { question: "What if my work permit expires before PR?", answer: "Apply for a Bridging Open Work Permit (BOWP) if your PR application is in progress. You can also apply for a work permit extension. Maintaining valid status is critical — never let your permit expire." },
+      { question: "Does volunteer work count for Canadian experience?", answer: "No. Only paid, full-time or equivalent part-time work in skilled occupations (NOC TEER 0-3) counts toward CEC eligibility. Unpaid internships and volunteer work are excluded." },
+      { question: "Can my spouse work while I'm on a work permit?", answer: "If you hold a skilled work permit (NOC TEER 0-3), your spouse can apply for a Spousal Open Work Permit (SOWP) allowing them to work for any employer anywhere in Canada." },
+    ],
+  },
+  "open-work-permit-canada-who-qualifies-2026": {
+    quickAnswer: "Open work permits let you work for any Canadian employer. You qualify through: Post-Graduation Work Permit (after completing a DLI program), Spousal Open Work Permit (spouse of skilled worker/student), Bridging Open Work Permit (PR application in progress), or vulnerable worker permit.",
+    faqs: [
+      { question: "How long is a post-graduation work permit valid?", answer: "PGWP duration matches your program length: 8-month program = 8-month PGWP, 2-year program = 3-year PGWP (maximum). Programs under 8 months don't qualify. Apply within 180 days of graduation." },
+      { question: "Can my spouse get an open work permit?", answer: "Yes, if you hold a skilled work permit (NOC TEER 0-3) or are a full-time student at a DLI in an eligible program. Your spouse receives a Spousal Open Work Permit valid for the same duration as your permit." },
+      { question: "Can I study on an open work permit?", answer: "Yes! Open work permit holders can study part-time without a study permit. For full-time study programs longer than 6 months, you'll need a separate study permit." },
+      { question: "What's a Bridging Open Work Permit?", answer: "BOWP bridges the gap between your expiring work permit and PR approval. Requirements: valid work permit, submitted PR application, and work permit expiring within 4 months. Processing: 2-3 months." },
+      { question: "Can I be self-employed on an open work permit?", answer: "Open work permits allow you to work for any employer but do NOT permit self-employment. For self-employment, you'd need a specific business visa or PR status." },
+    ],
+  },
+  "sds-vs-non-sds-canada-study-visa-2026": {
+    quickAnswer: "SDS (Student Direct Stream) processes in 20 days but requires IELTS 6.0 each band + CAD 20,635 GIC + first-year tuition paid upfront. Non-SDS takes 8-12 weeks but has no minimum IELTS and flexible financial proof. Choose SDS if you meet the requirements; Non-SDS if you don't.",
+    faqs: [
+      { question: "Is SDS approval rate higher than Non-SDS?", answer: "SDS has historically had higher approval rates (80-85%) compared to Non-SDS (55-65%) because SDS applicants meet stricter financial and language requirements upfront. However, a strong Non-SDS application with proper documentation can also succeed." },
+      { question: "Can I switch from Non-SDS to SDS?", answer: "You cannot switch after applying. Choose your stream before submission. If your IELTS scores improve to 6.0+ in all bands after applying Non-SDS, you'd need to withdraw and reapply under SDS." },
+      { question: "Do I need a GIC for Non-SDS?", answer: "GIC is not mandatory for Non-SDS, but having one significantly strengthens your application. Alternative financial proof includes bank statements, fixed deposits, property documents, and education loans." },
+      { question: "What is the GIC refund process?", answer: "After arriving in Canada, GIC funds are released in monthly installments (approximately CAD 1,700/month) over 12 months. The first installment is available immediately upon arrival. This ensures you have living expenses covered." },
+      { question: "Which countries are eligible for SDS?", answer: "SDS is available for applicants from India, China, Philippines, Pakistan, Vietnam, Morocco, Senegal, Colombia, Costa Rica, Trinidad and Tobago, Peru, and Brazil. Citizens of other countries must apply through the regular (Non-SDS) stream." },
+    ],
+  },
+  "best-colleges-ontario-international-students-2026": {
+    quickAnswer: "Top Ontario colleges for international students in 2026: Conestoga College (Kitchener, best for tech), Humber College (Toronto, media/business), George Brown (downtown Toronto, hospitality), Sheridan (animation), and Centennial (Scarborough, affordable). Choose 2-year programs for 3-year PGWP and PR pathway.",
+    faqs: [
+      { question: "Which Ontario college has the highest PR rate for graduates?", answer: "Conestoga College and Humber College graduates have among the highest PR conversion rates due to strong co-op programs and employer connections. 2-year diploma graduates qualify for 3-year PGWP, enabling CEC eligibility within 1 year." },
+      { question: "How much does it cost to study at an Ontario college?", answer: "Annual tuition for international students: CAD 14,000-25,000 depending on the program. Total annual cost including living: CAD 28,000-48,000. Colleges in smaller cities (Kitchener, Hamilton) are more affordable than Toronto." },
+      { question: "Do Ontario colleges accept students without IELTS?", answer: "Most colleges require IELTS 6.0-6.5 overall. Some accept alternative tests (Duolingo, PTE, TOEFL). A few offer conditional admission with English pathway programs if your language score is slightly below the requirement." },
+      { question: "Can I work while studying at an Ontario college?", answer: "Yes. International students can work up to 24 hours per week during academic terms and full-time during scheduled breaks. Co-op programs offer additional paid work experience integrated into your curriculum." },
+      { question: "What's the difference between a college diploma and university degree for PR?", answer: "For CRS: A 3-year college diploma earns the same points as a bachelor's degree. College diplomas are cheaper, more practical, and have strong PGWP eligibility. Universities offer higher prestige but similar PR pathway outcomes." },
+    ],
+  },
+  "cost-of-studying-in-canada-from-india-2026": {
+    quickAnswer: "Total cost for Indian students studying in Canada: CAD 28,000-48,000/year (INR 18L-30L) including tuition (CAD 15,000-30,000), living expenses (CAD 12,000-18,000), GIC (CAD 20,635), and visa fees (CAD 235). Budget INR 35-60L for the complete first year.",
+    faqs: [
+      { question: "Is studying in Canada worth the cost for Indian students?", answer: "Yes, with the right strategy. A 2-year diploma costs CAD 60,000-100,000 total but leads to a 3-year PGWP. Average Canadian salary after graduation: CAD 45,000-65,000/year. PR gives access to subsidized healthcare and education. ROI is typically achieved within 2-3 years of graduation." },
+      { question: "Can I earn back my tuition while studying?", answer: "Working 24 hours/week at CAD 16-18/hour, you can earn CAD 16,000-18,000/year. This covers living expenses but not tuition. Co-op programs pay CAD 18-25/hour for 4-8 month terms, helping significantly with costs." },
+      { question: "What's the cheapest province to study in Canada?", answer: "Manitoba, Saskatchewan, and New Brunswick offer the lowest tuition + living costs. Annual total: CAD 22,000-30,000 vs CAD 35,000-50,000 in Ontario/BC. These provinces also have easier PNP pathways after graduation." },
+      { question: "Do I need to show funds in my parents' account?", answer: "Yes, for study visa applications, funds can be in your parents' or sponsor's bank account. The key is showing consistent, legitimate savings — avoid sudden large deposits. A 12-month bank statement history is recommended." },
+      { question: "Is education loan a good option for studying in Canada?", answer: "Yes. SBI (8.5% interest), HDFC Credila, and Prodigy Finance offer competitive rates. Loans cover tuition + living. Repayment starts 6-12 months after program completion. Canadian earnings make repayment manageable." },
+    ],
+  },
+  "best-immigration-consultant-ludhiana-2026": {
+    quickAnswer: "The best immigration consultant in Ludhiana should be ICCRC-registered, have a verifiable 90%+ success rate, offer transparent pricing, and provide post-landing support. Verify any consultant's RCIC license on the CICC website. Avoid consultants who guarantee approvals or demand full upfront payment.",
+    faqs: [
+      { question: "How do I verify if a Ludhiana consultant is legitimate?", answer: "Visit college-ic.ca and search by name or RCIC number. Only Regulated Canadian Immigration Consultants can legally represent you at IRCC. Also check Google reviews, ask for 3 client references, and verify their physical office exists." },
+      { question: "How much does an immigration consultant charge in Ludhiana?", answer: "Express Entry: INR 50,000-1,50,000. Study visa: INR 25,000-75,000. LMIA: INR 75,000-2,00,000. Beware of unusually low fees (corner-cutting) or excessively high fees (overcharging). Get 3 quotes before deciding." },
+      { question: "Can a Ludhiana consultant guarantee my visa?", answer: "No legitimate consultant can guarantee visa approval. IRCC makes all final decisions. Anyone guaranteeing approval is being dishonest. A good consultant maximizes your chances through proper documentation and strategy, but cannot control IRCC outcomes." },
+      { question: "Should I choose a local or Canada-based consultant?", answer: "Canada-based RCIC consultants can legally represent you at IRCC and have firsthand knowledge of Canadian immigration. Local consultants offer in-person convenience. 4 Aces Visa offers a hybrid model: Canadian RCIC expertise with Punjab accessibility." },
+      { question: "What if my consultant makes a mistake on my application?", answer: "File a complaint with CICC (College of Immigration and Citizenship Consultants). If the consultant is RCIC-registered, they carry professional liability. This is why ICCRC registration is critical — unregistered consultants offer no legal recourse." },
+    ],
+  },
+  "canada-pr-from-brampton-guide-2026": {
+    quickAnswer: "Brampton residents can get PR through Express Entry CEC (1 year Canadian work experience), Ontario PNP (Human Capital Priorities stream), or LMIA job offers (logistics, healthcare, construction sectors). Brampton's 40% South Asian population and GTA job market make it one of Canada's best cities for immigration.",
+    faqs: [
+      { question: "What are the best LMIA jobs in Brampton?", answer: "Top LMIA sectors: warehouse/logistics (Amazon, Loblaw), healthcare (William Osler), construction, trucking/transportation, and IT. Many Brampton employers in industrial zones actively recruit through LMIA due to persistent labour shortages." },
+      { question: "Can I get PR faster living in Brampton?", answer: "Ontario residency qualifies you for OINP, which adds 600 CRS points. Brampton's job market provides ample opportunities to accumulate Canadian experience for CEC. Combined with strong IELTS, Brampton residents often get PR within 18-24 months." },
+      { question: "Is Brampton expensive for newcomers?", answer: "Brampton is more affordable than Toronto: 1-bedroom rent CAD 1,800-2,300 vs Toronto's CAD 2,200-2,800. Groceries and transit are comparable. South Asian grocery stores and restaurants keep food costs reasonable." },
+      { question: "How do I sponsor my family from Brampton?", answer: "As a PR/citizen in Brampton, you can sponsor spouse (12 months), parents via PGP (20-24 months), or get Super Visa for parents (2-3 months). Brampton has one of Canada's highest family sponsorship rates." },
+      { question: "Are there free immigration services in Brampton?", answer: "Yes: Brampton Multicultural Community Centre, YMCA Newcomer Centre, Peel Settlement Services, and Punjabi Community Health Services all offer free settlement support, job help, and language training for newcomers." },
+    ],
+  },
+  "immigration-consultant-punjab-vs-canada-based-2026": {
+    quickAnswer: "Canada-based RCIC consultants are safer: they're legally regulated, can represent you at IRCC, have firsthand Canadian knowledge, and offer legal recourse through CICC. Punjab consultants are cheaper and offer in-person meetings. Best approach: hybrid model with Canadian RCIC expertise and Punjab accessibility.",
+    faqs: [
+      { question: "Can a Punjab consultant represent me at IRCC?", answer: "Only RCIC-licensed consultants can legally represent you at IRCC. Most Punjab-based consultants are not RCIC registered and cannot directly communicate with immigration officers on your behalf. This can be a significant disadvantage." },
+      { question: "Why are Canada-based consultants more expensive?", answer: "Higher fees reflect RCIC licensing costs, Canadian operating expenses, legal liability insurance, and direct IRCC access. However, the investment often pays off through higher approval rates and fewer costly mistakes." },
+      { question: "How do I file a complaint against an immigration consultant?", answer: "For RCIC consultants: file with CICC (college-ic.ca). For unregistered consultants: report to local police (fraud), provincial consumer protection, or Canadian Anti-Fraud Centre. Keep all receipts and written communications." },
+      { question: "Can I switch consultants mid-application?", answer: "Yes. You can change consultants at any point. The new consultant files a 'Use of Representative' form with IRCC. Ensure you get all your documents back from the previous consultant before switching." },
+      { question: "Is it safe to share documents with an online consultant?", answer: "Yes, if they're RCIC-registered. Use secure file-sharing platforms, never send originals, and keep copies of everything. 4 Aces Visa uses encrypted portals for document exchange and never stores originals." },
+    ],
+  },
 };

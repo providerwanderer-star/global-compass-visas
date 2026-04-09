@@ -51,12 +51,22 @@ const indianCities: CityData[] = [
   "Ludhiana", "Amritsar", "Jalandhar", "Mohali"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
+  const isPunjab = ["Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Chandigarh"].includes(name);
+  const region = isPunjab ? "Punjab, India" : "India";
   return {
     slug,
     name,
     country: "india" as const,
-    region: "India",
-    metaTitle: `Best Immigration Consultant in ${name} | Canada, Australia & Germany PR – 4 Aces Visa`,
+    region,
+    metaTitle: isPunjab
+      ? `Best Canada PR Consultant in ${name}, Punjab | Express Entry & LMIA – 4 Aces Visa`
+      : `Best Immigration Consultant in ${name} | Canada, Australia & Germany PR – 4 Aces Visa`,
+    metaDescription: isPunjab
+      ? `Top-rated Canada PR consultant in ${name}, Punjab. Expert help for Express Entry, LMIA work permits, PNP & study permits from ${name}. Free assessment. 98% success rate.`
+      : `Looking for a trusted immigration consultant in ${name}? 4 Aces Visa helps with Canada PR, Australia migration, Germany work visa, study permits & more. Free assessment.`,
+    intro: isPunjab
+      ? `If you're in ${name} looking to apply for Canada PR, understanding the right pathway is crucial. 4 Aces Visa is Punjab's trusted immigration partner in ${name}, offering expert guidance for Express Entry, LMIA work permits, PNP applications, and study permits. Our ${name} specialists have helped hundreds of Punjab families achieve their Canadian dream with a 98% success rate.`
+      : `Are you in ${name} and dreaming of settling abroad? 4 Aces Visa is your trusted immigration partner in ${name}, offering expert guidance for Canada PR, Australia skilled migration, and Germany Job Seeker Visa. Our ${name} team has helped hundreds of local professionals and families achieve their global immigration goals with a 98% success rate.`,
     metaDescription: `Looking for a trusted immigration consultant in ${name}? 4 Aces Visa helps with Canada PR, Australia migration, Germany work visa, study permits & more. Free assessment.`,
     intro: `Are you in ${name} and dreaming of settling abroad? 4 Aces Visa is your trusted immigration partner in ${name}, offering expert guidance for Canada PR, Australia skilled migration, and Germany Job Seeker Visa. Our ${name} team has helped hundreds of local professionals and families achieve their global immigration goals with a 98% success rate.`,
     localInsight: indianCityInsights[name] || `${name} has a growing pool of immigration-ready professionals. Our local expertise helps ${name} residents navigate complex visa processes with confidence.`,

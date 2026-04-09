@@ -1813,7 +1813,7 @@ A: You have the right to switch consultants at any time. Request your file and d
 **Q: Is 4 Aces Visa a registered consultancy?**
 A: Yes, 4 Aces Visa operates with qualified immigration professionals. We offer a free initial assessment so you can evaluate our expertise before committing.
 
-Ready to work with a trusted consultant? [Book your free assessment](/contact) with 4 Aces Visa — by immigrants, for immigrants.\`
+Ready to work with a trusted consultant? [Book your free assessment](/contact) with 4 Aces Visa — by immigrants, for immigrants.`
   },
   {
     slug: "ontario-pnp-guide-2026",

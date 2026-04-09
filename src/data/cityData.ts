@@ -38,22 +38,35 @@ const indianCityInsights: Record<string, string> = {
   "Nashik": "Maharashtra's wine capital has a growing IT and agriculture-tech sector. Nashik professionals increasingly leverage PNP programs targeting semi-urban candidates with specific skill sets.",
   "Agra": "Beyond the Taj Mahal, Agra has a growing service and tourism workforce. Many Agra residents pursue family sponsorship through established Canadian diaspora connections in the GTA.",
   "Cochin": "Kerala's commercial capital has a strong maritime, IT, and healthcare workforce. Cochin professionals often score high in IELTS (thanks to Kerala's English proficiency) boosting CRS scores significantly.",
+  "Ludhiana": "Punjab's industrial capital is one of India's top immigration source cities for Canada. Ludhiana's strong manufacturing, textile, and small business sectors produce thousands of LMIA and Express Entry applicants annually. The city's deep Canadian diaspora connections in Brampton and Surrey make family sponsorship a major pathway, while young professionals increasingly qualify for Express Entry with 450+ CRS scores.",
+  "Amritsar": "As the spiritual and cultural heart of Punjab, Amritsar has one of India's highest per-capita rates of Canada PR applications. The city's proximity to the Wagah border and strong IELTS coaching infrastructure means Amritsar applicants consistently score CLB 8+. The established Punjabi diaspora across Ontario and BC creates strong family sponsorship and LMIA job offer pipelines.",
+  "Jalandhar": "Jalandhar is a major immigration hub in the Doaba region of Punjab, with deep-rooted connections to Canada's Punjabi community. The city's sports goods, hand tools, and IT sectors produce skilled workers eligible for LMIA and Express Entry. Jalandhar's numerous IELTS coaching centres help applicants achieve high language scores critical for CRS optimization.",
+  "Mohali": "Part of the Chandigarh tri-city area, Mohali's IT and pharma corridor (IT City, Phase 8B) produces highly qualified Express Entry candidates. Mohali professionals from companies like Infosys, TCS, and Quark frequently score 470+ CRS points. The city's proximity to Chandigarh's VFS centre and IELTS test centres makes the application process seamless.",
 };
 
 const indianCities: CityData[] = [
   "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Kolkata",
   "Lucknow", "Jaipur", "Chandigarh", "Noida", "Gurugram", "Indore", "Patna", "Bhubaneswar",
-  "Coimbatore", "Vadodara", "Nagpur", "Rajkot", "Varanasi", "Kanpur", "Nashik", "Agra", "Cochin"
+  "Coimbatore", "Vadodara", "Nagpur", "Rajkot", "Varanasi", "Kanpur", "Nashik", "Agra", "Cochin",
+  "Ludhiana", "Amritsar", "Jalandhar", "Mohali"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
+  const isPunjab = ["Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Chandigarh"].includes(name);
+  const region = isPunjab ? "Punjab, India" : "India";
   return {
     slug,
     name,
     country: "india" as const,
-    region: "India",
-    metaTitle: `Best Immigration Consultant in ${name} | Canada, Australia & Germany PR – 4 Aces Visa`,
-    metaDescription: `Looking for a trusted immigration consultant in ${name}? 4 Aces Visa helps with Canada PR, Australia migration, Germany work visa, study permits & more. Free assessment.`,
-    intro: `Are you in ${name} and dreaming of settling abroad? 4 Aces Visa is your trusted immigration partner in ${name}, offering expert guidance for Canada PR, Australia skilled migration, and Germany Job Seeker Visa. Our ${name} team has helped hundreds of local professionals and families achieve their global immigration goals with a 98% success rate.`,
+    region,
+    metaTitle: isPunjab
+      ? `Best Canada PR Consultant in ${name}, Punjab | Express Entry & LMIA – 4 Aces Visa`
+      : `Best Immigration Consultant in ${name} | Canada, Australia & Germany PR – 4 Aces Visa`,
+    metaDescription: isPunjab
+      ? `Top-rated Canada PR consultant in ${name}, Punjab. Expert help for Express Entry, LMIA work permits, PNP & study permits from ${name}. Free assessment. 98% success rate.`
+      : `Looking for a trusted immigration consultant in ${name}? 4 Aces Visa helps with Canada PR, Australia migration, Germany work visa, study permits & more. Free assessment.`,
+    intro: isPunjab
+      ? `If you're in ${name} looking to apply for Canada PR, understanding the right pathway is crucial. 4 Aces Visa is Punjab's trusted immigration partner in ${name}, offering expert guidance for Express Entry, LMIA work permits, PNP applications, and study permits. Our ${name} specialists have helped hundreds of Punjab families achieve their Canadian dream with a 98% success rate.`
+      : `Are you in ${name} and dreaming of settling abroad? 4 Aces Visa is your trusted immigration partner in ${name}, offering expert guidance for Canada PR, Australia skilled migration, and Germany Job Seeker Visa. Our ${name} team has helped hundreds of local professionals and families achieve their global immigration goals with a 98% success rate.`,
     localInsight: indianCityInsights[name] || `${name} has a growing pool of immigration-ready professionals. Our local expertise helps ${name} residents navigate complex visa processes with confidence.`,
     services: [
       `Canada Express Entry PR from ${name}`,

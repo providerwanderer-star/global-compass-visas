@@ -85,7 +85,7 @@ const IndiaHubPage = () => {
           content="Canada immigration consultants for Indian nationals. Expert help for work permits, study permits, Express Entry PR & PNP from India. Free assessment. 98% success rate."
         />
         <link rel="canonical" href="https://www.4acesvisa.com/india" />
-        <link rel="alternate" hreflang="en-IN" href="https://www.4acesvisa.com/india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india" />
         <meta property="og:title" content="Canada Immigration from India 2026 | 4 Aces Visa" />
         <meta property="og:description" content="Canada immigration consultants for Indian nationals. Expert help for work permits, study permits, Express Entry PR & PNP from India." />
         <meta property="og:url" content="https://www.4acesvisa.com/india" />

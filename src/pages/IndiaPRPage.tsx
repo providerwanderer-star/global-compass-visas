@@ -95,7 +95,7 @@ const IndiaPRPage = () => {
           content="Canada permanent residency from India in 2026. Complete guide to Express Entry, PNP, and family sponsorship pathways. 80,000+ Indians got PR in 2024. Free CRS assessment."
         />
         <link rel="canonical" href="https://www.4acesvisa.com/india/canada-pr-india" />
-        <link rel="alternate" hreflang="en-IN" href="https://www.4acesvisa.com/india/canada-pr-india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india/canada-pr-india" />
         <meta property="og:title" content="Canada PR from India 2026 — Express Entry & PNP | 4 Aces Visa" />
         <meta property="og:description" content="Complete guide to Canada permanent residency from India. Express Entry, PNP, family sponsorship pathways. 80,000+ Indians got PR in 2024." />
         <meta property="og:url" content="https://www.4acesvisa.com/india/canada-pr-india" />

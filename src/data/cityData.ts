@@ -122,13 +122,16 @@ const canadianCityInsights: Record<string, string> = {
   "Saint John": "New Brunswick's port city offers AIP pathways and a tight labour market actively seeking skilled workers. Lower competition means faster processing and easier job matching.",
   "Charlottetown": "PEI's capital runs one of Canada's most active PNP programs relative to its size. Charlottetown's close-knit community and strong settlement services make it ideal for newcomer families.",
   "Prince George": "Northern BC's largest city qualifies for rural and northern immigration streams. Strong forestry, healthcare, and education sectors create consistent demand for skilled immigrants.",
+  "Scarborough": "Part of Toronto's east end, Scarborough has one of Canada's most diverse immigrant populations with thriving South Asian, Chinese, and Filipino communities. The area's strong healthcare, retail, and transit infrastructure creates consistent LMIA opportunities, while its affordable housing relative to downtown Toronto makes it a top landing destination for newcomers.",
+  "Milton": "One of Canada's fastest-growing towns, Milton in Halton Region has seen a massive influx of South Asian immigrants. Its proximity to Toronto, excellent schools, and growing commercial sector make it ideal for newcomer families. Milton's logistics and warehouse industry generates strong LMIA-based work permit opportunities.",
+  "Waterloo": "Home to the University of Waterloo and a globally recognized tech corridor, Waterloo attracts skilled immigrants in software, AI, and engineering. The Waterloo Region's startup ecosystem rivals Silicon Valley in density, and the Ontario PNP Tech stream frequently targets professionals in this corridor.",
 };
 
 const canadianCities: CityData[] = [
   "Toronto", "Vancouver", "Calgary", "Edmonton", "Mississauga", "Ottawa", "Winnipeg",
   "Quebec City", "Brampton", "Surrey", "Halifax", "London ON", "Kitchener", "Victoria",
   "Saskatoon", "Regina", "Hamilton", "Windsor", "Kelowna", "Richmond", "Thunder Bay",
-  "Moncton", "Saint John", "Charlottetown", "Prince George"
+  "Moncton", "Saint John", "Charlottetown", "Prince George", "Scarborough", "Milton", "Waterloo"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
   return {

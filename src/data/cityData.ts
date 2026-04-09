@@ -53,7 +53,7 @@ const indianCities: CityData[] = [
   "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Kolkata",
   "Lucknow", "Jaipur", "Chandigarh", "Noida", "Gurugram", "Indore", "Patna", "Bhubaneswar",
   "Coimbatore", "Vadodara", "Nagpur", "Rajkot", "Varanasi", "Kanpur", "Nashik", "Agra", "Cochin",
-  "Ludhiana", "Amritsar", "Jalandhar", "Mohali"
+  "Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Bathinda", "Patiala", "Hoshiarpur", "Moga", "Pathankot"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
   const isPunjab = ["Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Chandigarh"].includes(name);

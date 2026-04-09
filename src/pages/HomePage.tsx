@@ -75,24 +75,41 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada Immigration Consultants — Work Permit, PR & Express Entry | 4 Aces Visa</title>
-        <meta name="description" content="Licensed Canadian immigration consultants. Expert help for Express Entry, LMIA work permits, PNP, study permits & PR — for Canada, Australia, Germany & UK. Free assessment." />
+        <title>Top Immigration Consultant for Canada PR in Punjab & Ontario | 4 Aces Visa</title>
+        <meta name="description" content="Top-rated Canada PR consultant in Punjab & Ontario. Expert help for Express Entry, LMIA work permits, PNP, study permits & PR from India. Free assessment. 98% success rate." />
         <link rel="canonical" href="https://www.4acesvisa.com" />
-        <meta name="keywords" content="Canada immigration consultants, Canada PR, Express Entry 2026, work permit Canada, LMIA, PNP, study permit, family sponsorship, Australia migration, Germany Blue Card, UK Skilled Worker visa, immigration from India, 4 Aces Visa" />
+        <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Canada Immigration Consultants — Work Permit, PR & Express Entry | 4 Aces Visa" />
-        <meta property="og:description" content="Licensed immigration consultants for Canada, Australia, Germany & UK. 15,000+ visas processed. 98% success rate. Free assessment." />
+        <meta property="og:title" content="Top Immigration Consultant for Canada PR in Punjab & Ontario | 4 Aces Visa" />
+        <meta property="og:description" content="Licensed Canada PR consultants serving Punjab (India) & Ontario (Canada). 15,000+ visas processed. 98% success rate. Free assessment." />
         <meta property="og:url" content="https://www.4acesvisa.com" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              { "@type": "Question", "name": "Which country is easiest for immigration in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Canada offers the fastest PR pathways through Express Entry (6 months processing). Germany's Job Seeker Visa is easiest to obtain initially. Australia rewards high-skilled professionals. The UK's Skilled Worker visa is efficient with a job offer." }},
-              { "@type": "Question", "name": "How much does immigration consulting cost?", "acceptedAnswer": { "@type": "Answer", "text": "4 Aces Visa offers a free initial eligibility assessment. Our packages vary based on complexity and destination. Transparent pricing with no hidden fees." }},
-              { "@type": "Question", "name": "What does 'By immigrants, for immigrants' mean?", "acceptedAnswer": { "@type": "Answer", "text": "Our consultants have personally gone through the immigration process. We understand the stress, confusion, and life-changing decisions involved — because we've lived it." }},
-              { "@type": "Question", "name": "Can 4 Aces Visa guarantee my visa approval?", "acceptedAnswer": { "@type": "Answer", "text": "No ethical consultancy can guarantee approval as the final decision rests with immigration authorities. However, our 98% success rate reflects our expertise in preparing strong, compliant applications." }},
-              { "@type": "Question", "name": "Do I need IELTS for immigration?", "acceptedAnswer": { "@type": "Answer", "text": "For Canada, IELTS or equivalent is mandatory for Express Entry. Australia requires English for skilled migration. Germany may accept other certifications. UK requires B1 for Skilled Worker visa. Higher scores significantly improve your chances." }}
+            "@graph": [
+              {
+                "@type": "Organization",
+                "name": "4 Aces Visa",
+                "url": "https://www.4acesvisa.com",
+                "logo": "https://www.4acesvisa.com/logo.png",
+                "description": "Top immigration consultants for Canada PR from Punjab & Ontario. Expert guidance for Express Entry, LMIA, PNP, study permits & work permits.",
+                "telephone": "+16478622190",
+                "email": "sahil280389@gmail.com",
+                "areaServed": ["Punjab, India", "Ontario, Canada"],
+                "sameAs": ["https://wa.me/16478622190"]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  { "@type": "Question", "name": "How can I apply for Canada PR from Punjab?", "acceptedAnswer": { "@type": "Answer", "text": "You can apply through Express Entry, PNP, or LMIA pathways depending on your profile. A consultant like 4 Aces Visa can assess your CRS score, optimize your application, and improve approval chances significantly." }},
+                  { "@type": "Question", "name": "Which country is easiest for immigration in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Canada offers the fastest PR pathways through Express Entry (6 months processing). Germany's Job Seeker Visa is easiest to obtain initially. Australia rewards high-skilled professionals. The best choice depends on your profile." }},
+                  { "@type": "Question", "name": "What is the cost of Canada PR from India in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Canada PR costs from India include government fees (CAD 1,365), IELTS exam (~₹16,000), WES credential evaluation (~₹15,000), and professional consulting fees. Total investment is typically ₹3-5 lakhs depending on complexity." }},
+                  { "@type": "Question", "name": "How much CRS score is needed for Canada PR in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Recent Express Entry draws have had CRS cutoffs between 430-490 for general draws. Category-based draws for healthcare, STEM, and French speakers may have lower cutoffs. A PNP nomination adds 600 points." }},
+                  { "@type": "Question", "name": "Can I get Canada PR without a job offer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the Federal Skilled Worker Program under Express Entry does not require a job offer. However, a valid LMIA job offer adds 50-200 CRS points and significantly improves your chances." }},
+                  { "@type": "Question", "name": "What is the difference between Express Entry and PNP?", "acceptedAnswer": { "@type": "Answer", "text": "Express Entry is the federal system that ranks candidates by CRS score. PNP allows provinces to nominate candidates based on local labor needs and adds 600 CRS points, virtually guaranteeing a PR invitation." }},
+                  { "@type": "Question", "name": "How long does Canada PR process take from India?", "acceptedAnswer": { "@type": "Answer", "text": "Express Entry PR typically takes 6-8 months from ITA to approval. PNP-based applications take 12-18 months. Total timeline from profile creation to landing is usually 8-18 months depending on the pathway." }}
+                ]
+              }
             ]
           })}
         </script>
@@ -118,20 +135,20 @@ const HomePage = () => {
                 className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-foreground leading-tight mb-6"
                 initial="hidden" animate="visible" variants={fadeUp} custom={1}
               >
-                Canada Immigration Consultants{" "}
-                <span className="gradient-text">& Global Visa Experts.</span>
+                Top Immigration Consultant for{" "}
+                <span className="gradient-text">Canada PR in Punjab & Ontario</span>
               </motion.h1>
               <motion.p
                 className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={2}
               >
-                🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 United Kingdom
+                Expert Canada PR consultants serving Punjab (India) & Ontario (Canada). Express Entry, LMIA, PNP & Work Permits — 98% success rate.
               </motion.p>
               <motion.p
                 className="text-base text-muted-foreground/80 mb-8 max-w-xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={3}
               >
-                Express Entry • Student Visa • Work Permits • Family Sponsorship • Citizenship — Complete immigration services across 4 countries.
+                🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — Complete immigration services from Ludhiana, Chandigarh, Brampton & Toronto.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
                 <Link to="/contact">

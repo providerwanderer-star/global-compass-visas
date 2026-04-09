@@ -34,6 +34,18 @@ export const blogToServices: Record<string, string[]> = {
   "pnp-programs-ontario-vs-bc-vs-alberta-2026": ["pnp-application", "express-entry", "work-permits"],
   "canada-student-visa-from-punjab-2026": ["student-visa", "express-entry", "work-permits"],
   "family-sponsorship-super-visa-parents-2026": ["family-sponsorship", "visitor-visa", "visitor-visa-insurance"],
+  "canada-pr-eligibility-requirements-2026": ["express-entry", "pnp-application", "lmia-assistance"],
+  "canada-pr-timeline-how-long-does-it-take-2026": ["express-entry", "pnp-application", "work-permits"],
+  "express-entry-vs-pnp-which-is-better-2026": ["express-entry", "pnp-application", "lmia-assistance"],
+  "lmia-jobs-canada-how-to-get-employer-sponsorship-2026": ["lmia-assistance", "work-permits", "express-entry"],
+  "canada-work-permit-to-pr-pathway-2026": ["work-permits", "express-entry", "pnp-application"],
+  "open-work-permit-canada-who-qualifies-2026": ["work-permits", "lmia-assistance", "family-sponsorship"],
+  "sds-vs-non-sds-canada-study-visa-2026": ["student-visa", "express-entry", "work-permits"],
+  "best-colleges-ontario-international-students-2026": ["student-visa", "work-permits", "pnp-application"],
+  "cost-of-studying-in-canada-from-india-2026": ["student-visa", "express-entry", "work-permits"],
+  "best-immigration-consultant-ludhiana-2026": ["express-entry", "lmia-assistance", "pnp-application"],
+  "canada-pr-from-brampton-guide-2026": ["express-entry", "lmia-assistance", "family-sponsorship"],
+  "immigration-consultant-punjab-vs-canada-based-2026": ["express-entry", "pnp-application", "lmia-assistance"],
 };
 
 // Service → 5 blog posts

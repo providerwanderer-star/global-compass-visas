@@ -67,8 +67,6 @@ const indianCities: CityData[] = [
     intro: isPunjab
       ? `If you're in ${name} looking to apply for Canada PR, understanding the right pathway is crucial. 4 Aces Visa is Punjab's trusted immigration partner in ${name}, offering expert guidance for Express Entry, LMIA work permits, PNP applications, and study permits. Our ${name} specialists have helped hundreds of Punjab families achieve their Canadian dream with a 98% success rate.`
       : `Are you in ${name} and dreaming of settling abroad? 4 Aces Visa is your trusted immigration partner in ${name}, offering expert guidance for Canada PR, Australia skilled migration, and Germany Job Seeker Visa. Our ${name} team has helped hundreds of local professionals and families achieve their global immigration goals with a 98% success rate.`,
-    metaDescription: `Looking for a trusted immigration consultant in ${name}? 4 Aces Visa helps with Canada PR, Australia migration, Germany work visa, study permits & more. Free assessment.`,
-    intro: `Are you in ${name} and dreaming of settling abroad? 4 Aces Visa is your trusted immigration partner in ${name}, offering expert guidance for Canada PR, Australia skilled migration, and Germany Job Seeker Visa. Our ${name} team has helped hundreds of local professionals and families achieve their global immigration goals with a 98% success rate.`,
     localInsight: indianCityInsights[name] || `${name} has a growing pool of immigration-ready professionals. Our local expertise helps ${name} residents navigate complex visa processes with confidence.`,
     services: [
       `Canada Express Entry PR from ${name}`,

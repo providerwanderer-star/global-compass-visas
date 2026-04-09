@@ -34,16 +34,33 @@ const navLinks = [
   {
     label: "Cities", href: "#",
     children: [
-      { label: "📍 Delhi", href: "/city/delhi" },
-      { label: "📍 Mumbai", href: "/city/mumbai" },
-      { label: "📍 Bangalore", href: "/city/bangalore" },
-      { label: "📍 Hyderabad", href: "/city/hyderabad" },
-      { label: "📍 Chennai", href: "/city/chennai" },
-      { label: "📍 Pune", href: "/city/pune" },
-      { label: "📍 Chandigarh", href: "/city/chandigarh" },
-      { label: "📍 Toronto", href: "/city/toronto" },
-      { label: "📍 Vancouver", href: "/city/vancouver" },
-      { label: "📍 Brampton", href: "/city/brampton" },
+      { label: "🇮🇳 Punjab", header: true },
+      { label: "Ludhiana", href: "/city/ludhiana" },
+      { label: "Chandigarh", href: "/city/chandigarh" },
+      { label: "Amritsar", href: "/city/amritsar" },
+      { label: "Jalandhar", href: "/city/jalandhar" },
+      { label: "Bathinda", href: "/city/bathinda" },
+      { label: "Patiala", href: "/city/patiala" },
+      { label: "Hoshiarpur", href: "/city/hoshiarpur" },
+      { label: "Moga", href: "/city/moga" },
+      { label: "Pathankot", href: "/city/pathankot" },
+      { label: "Mohali", href: "/city/mohali" },
+      { label: "🇮🇳 Other India", header: true },
+      { label: "Delhi", href: "/city/delhi" },
+      { label: "Mumbai", href: "/city/mumbai" },
+      { label: "Bangalore", href: "/city/bangalore" },
+      { label: "Hyderabad", href: "/city/hyderabad" },
+      { label: "Chennai", href: "/city/chennai" },
+      { label: "Pune", href: "/city/pune" },
+      { label: "🇨🇦 Canada", header: true },
+      { label: "Toronto", href: "/city/toronto" },
+      { label: "Brampton", href: "/city/brampton" },
+      { label: "Scarborough", href: "/city/scarborough" },
+      { label: "Mississauga", href: "/city/mississauga" },
+      { label: "Milton", href: "/city/milton" },
+      { label: "Waterloo", href: "/city/waterloo" },
+      { label: "Vancouver", href: "/city/vancouver" },
+      { label: "Calgary", href: "/city/calgary" },
     ],
   },
   { label: "Pathway Quiz", href: "/quiz" },
@@ -117,14 +134,20 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 pt-2">
                   <div className={`bg-white rounded-lg shadow-elevated border border-border p-2 ${link.label === "Services" || link.label === "Cities" ? "w-72 max-h-96 overflow-y-auto" : "w-56"}`}>
                     {link.children.map((child) => (
-                       <Link
-                        key={child.label}
-                        to={child.href}
-                        className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-gold rounded-md transition-colors"
-                        onClick={() => setOpenDropdown(null)}
-                      >
-                        {child.label}
-                      </Link>
+                      'header' in child && child.header ? (
+                        <div key={child.label} className="px-4 py-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider mt-2 first:mt-0">
+                          {child.label}
+                        </div>
+                      ) : (
+                        <Link
+                          key={child.label}
+                          to={child.href!}
+                          className="block px-4 py-2 text-sm text-foreground hover:bg-secondary hover:text-gold rounded-md transition-colors"
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {child.label}
+                        </Link>
+                      )
                     ))}
                   </div>
                 </div>
@@ -177,14 +200,20 @@ const Navbar = () => {
                     {openDropdown === link.label && (
                       <div className="bg-secondary/50 rounded-lg mb-1">
                         {link.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            to={child.href}
-                            className="block pl-6 pr-4 py-2 text-foreground/60 text-sm hover:text-gold transition-colors"
-                            onClick={() => setMobileOpen(false)}
-                          >
-                            {child.label}
-                          </Link>
+                          'header' in child && child.header ? (
+                            <div key={child.label} className="pl-6 pr-4 py-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1 first:mt-0">
+                              {child.label}
+                            </div>
+                          ) : (
+                            <Link
+                              key={child.label}
+                              to={child.href!}
+                              className="block pl-8 pr-4 py-2 text-foreground/60 text-sm hover:text-gold transition-colors"
+                              onClick={() => setMobileOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          )
                         ))}
                       </div>
                     )}

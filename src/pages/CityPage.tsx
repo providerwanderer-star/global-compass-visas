@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import InternalLinks from "@/components/InternalLinks";
 import { cities } from "@/data/cityData";
+import { cityToLinks, getRelatedBlogData, getRelatedServiceData } from "@/data/internalLinks";
 
 const staggerContainer = {
   hidden: {},
@@ -234,6 +236,18 @@ const CityPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Related Resources */}
+      {(() => {
+        const links = cityToLinks[city.slug] || { blogs: ["canada-pr-process-from-punjab-2026", "increase-crs-score-fast-2026"], services: ["express-entry", "pnp-application"] };
+        return (
+          <InternalLinks
+            blogs={getRelatedBlogData(links.blogs).map((b) => ({ slug: b.slug, title: b.title, excerpt: b.excerpt }))}
+            services={getRelatedServiceData(links.services).map((s) => ({ slug: s.slug, title: s.title }))}
+            title={`Immigration Resources for ${city.name}`}
+          />
+        );
+      })()}
 
       {/* Lead Form */}
       <section className="section-padding bg-primary" id="form">

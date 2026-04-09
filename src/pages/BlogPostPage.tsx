@@ -2,7 +2,9 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ChevronRight, Clock, ArrowLeft } from "lucide-react";
 import EligibilityForm from "@/components/EligibilityForm";
+import InternalLinks from "@/components/InternalLinks";
 import { blogPosts } from "@/data/blogData";
+import { blogToServices, getRelatedServiceData } from "@/data/internalLinks";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -131,6 +133,11 @@ const BlogPostPage = () => {
           </div>
         </div>
       </section>
+
+      <InternalLinks
+        services={getRelatedServiceData(blogToServices[post.slug] || []).map((s) => ({ slug: s.slug, title: s.title }))}
+        title="Explore Our Services"
+      />
     </div>
   );
 };

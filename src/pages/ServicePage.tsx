@@ -5,7 +5,9 @@ import { ArrowRight, CheckCircle, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
+import InternalLinks from "@/components/InternalLinks";
 import { services } from "@/data/serviceData";
+import { serviceToBlogs, getRelatedBlogData } from "@/data/internalLinks";
 
 const staggerContainer = {
   hidden: {},
@@ -247,6 +249,11 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
+
+      <InternalLinks
+        blogs={getRelatedBlogData(serviceToBlogs[service.slug] || []).map((b) => ({ slug: b.slug, title: b.title, excerpt: b.excerpt }))}
+        title="Related Articles"
+      />
 
       {/* Lead Form */}
       <section className="section-padding bg-primary" id="form">

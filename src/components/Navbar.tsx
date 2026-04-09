@@ -134,14 +134,20 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 pt-2">
                   <div className={`bg-white rounded-lg shadow-elevated border border-border p-2 ${link.label === "Services" || link.label === "Cities" ? "w-72 max-h-96 overflow-y-auto" : "w-56"}`}>
                     {link.children.map((child) => (
-                       <Link
-                        key={child.label}
-                        to={child.href}
-                        className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-gold rounded-md transition-colors"
-                        onClick={() => setOpenDropdown(null)}
-                      >
-                        {child.label}
-                      </Link>
+                      'header' in child && child.header ? (
+                        <div key={child.label} className="px-4 py-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider mt-2 first:mt-0">
+                          {child.label}
+                        </div>
+                      ) : (
+                        <Link
+                          key={child.label}
+                          to={child.href!}
+                          className="block px-4 py-2 text-sm text-foreground hover:bg-secondary hover:text-gold rounded-md transition-colors"
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {child.label}
+                        </Link>
+                      )
                     ))}
                   </div>
                 </div>
@@ -194,14 +200,20 @@ const Navbar = () => {
                     {openDropdown === link.label && (
                       <div className="bg-secondary/50 rounded-lg mb-1">
                         {link.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            to={child.href}
-                            className="block pl-6 pr-4 py-2 text-foreground/60 text-sm hover:text-gold transition-colors"
-                            onClick={() => setMobileOpen(false)}
-                          >
-                            {child.label}
-                          </Link>
+                          'header' in child && child.header ? (
+                            <div key={child.label} className="pl-6 pr-4 py-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1 first:mt-0">
+                              {child.label}
+                            </div>
+                          ) : (
+                            <Link
+                              key={child.label}
+                              to={child.href!}
+                              className="block pl-8 pr-4 py-2 text-foreground/60 text-sm hover:text-gold transition-colors"
+                              onClick={() => setMobileOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          )
                         ))}
                       </div>
                     )}

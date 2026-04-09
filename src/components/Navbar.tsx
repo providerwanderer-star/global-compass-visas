@@ -114,17 +114,19 @@ const Navbar = () => {
                 </Link>
               )}
               {link.children && openDropdown === link.label && (
-                <div className={`absolute top-full left-0 mt-1 bg-white rounded-lg shadow-elevated border border-border p-2 animate-fade-up ${link.label === "Services" || link.label === "Cities" ? "w-72 max-h-96 overflow-y-auto" : "w-56"}`}>
-                  {link.children.map((child) => (
-                     <Link
-                      key={child.label}
-                      to={child.href}
-                      className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-gold rounded-md transition-colors"
-                      onClick={() => setOpenDropdown(null)}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2">
+                  <div className={`bg-white rounded-lg shadow-elevated border border-border p-2 ${link.label === "Services" || link.label === "Cities" ? "w-72 max-h-96 overflow-y-auto" : "w-56"}`}>
+                    {link.children.map((child) => (
+                       <Link
+                        key={child.label}
+                        to={child.href}
+                        className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-gold rounded-md transition-colors"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

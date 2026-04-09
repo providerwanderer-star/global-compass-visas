@@ -65,7 +65,7 @@ const IndiaStudyPermitPage = () => {
           content="Study in Canada from India in 2026. Complete guide to study permit application, top universities, financial requirements, and PGWP to PR pathway. Free assessment."
         />
         <link rel="canonical" href="https://www.4acesvisa.com/india/study-permit-india" />
-        <link rel="alternate" hreflang="en-IN" href="https://www.4acesvisa.com/india/study-permit-india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india/study-permit-india" />
         <meta property="og:title" content="Canada Study Permit for Indians 2026 | 4 Aces Visa" />
         <meta property="og:description" content="Study in Canada from India. Complete guide to study permit, PGWP and PR pathway. Free assessment by expert consultants." />
         <meta property="og:url" content="https://www.4acesvisa.com/india/study-permit-india" />

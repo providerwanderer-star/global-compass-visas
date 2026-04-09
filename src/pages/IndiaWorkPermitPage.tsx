@@ -87,7 +87,7 @@ const IndiaWorkPermitPage = () => {
           content="Canada work permit for Indian professionals in 2026. LMIA work permits, Global Talent Stream, and employer-specific permits. Build Canadian experience for PR. Free assessment."
         />
         <link rel="canonical" href="https://www.4acesvisa.com/india/work-permit-india" />
-        <link rel="alternate" hreflang="en-IN" href="https://www.4acesvisa.com/india/work-permit-india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india/work-permit-india" />
         <meta property="og:title" content="Canada Work Permit for Indians 2026 | 4 Aces Visa" />
         <meta property="og:description" content="Canada work permit for Indian professionals. LMIA permits, Global Talent Stream, and PR pathway guidance. Free expert assessment." />
         <meta property="og:url" content="https://www.4acesvisa.com/india/work-permit-india" />

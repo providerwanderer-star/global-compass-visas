@@ -142,6 +142,16 @@ export const cityToLinks: Record<string, { blogs: string[]; services: string[] }
   calgary: { blogs: ["best-provinces-for-canada-pr-2026", "lmia-jobs-canada-from-india-2026"], services: ["pnp-application", "lmia-assistance"] },
   edmonton: { blogs: ["best-provinces-for-canada-pr-2026", "express-entry-vs-pnp-2026"], services: ["pnp-application", "work-permits"] },
   surrey: { blogs: ["best-provinces-for-canada-pr-2026", "canada-pr-process-from-punjab-2026"], services: ["express-entry", "family-sponsorship"] },
+  // New Punjab cities
+  bathinda: { blogs: ["canada-pr-process-from-punjab-2026", "cost-of-canada-pr-from-india-2026"], services: ["express-entry", "lmia-assistance"] },
+  patiala: { blogs: ["canada-pr-process-from-punjab-2026", "study-visa-canada-complete-guide-2026"], services: ["express-entry", "student-visa"] },
+  hoshiarpur: { blogs: ["canada-pr-process-from-punjab-2026", "lmia-jobs-canada-from-india-2026"], services: ["express-entry", "family-sponsorship"] },
+  moga: { blogs: ["canada-pr-process-from-punjab-2026", "express-entry-vs-pnp-2026"], services: ["express-entry", "pnp-application"] },
+  pathankot: { blogs: ["canada-pr-process-from-punjab-2026", "increase-crs-score-fast-2026"], services: ["express-entry", "lmia-assistance"] },
+  // New Ontario cities
+  scarborough: { blogs: ["best-provinces-for-canada-pr-2026", "lmia-jobs-canada-from-india-2026"], services: ["lmia-assistance", "family-sponsorship"] },
+  milton: { blogs: ["best-provinces-for-canada-pr-2026", "choosing-right-immigration-consultant-2026"], services: ["express-entry", "lmia-assistance"] },
+  waterloo: { blogs: ["best-provinces-for-canada-pr-2026", "express-entry-vs-pnp-2026"], services: ["pnp-application", "work-permits"] },
 };
 
 // Helper to get blog data by slug

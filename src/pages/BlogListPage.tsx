@@ -1,9 +1,9 @@
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { BookOpen, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/data/blogData";
-import AnimatedSection from "@/components/AnimatedSection";
 
 const staggerContainer = {
   hidden: {},
@@ -15,7 +15,23 @@ const staggerItem = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
+const categories = [
+  { label: "All", value: "all" },
+  { label: "Canada PR", value: "Canada PR" },
+  { label: "Work Permit", value: "Work Permit" },
+  { label: "Study Visa", value: "Study Visa" },
+  { label: "Local Intent", value: "Local Intent" },
+  { label: "Immigration Guide", value: "Immigration Guide" },
+];
+
 const BlogListPage = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filteredPosts = useMemo(
+    () => activeFilter === "all" ? blogPosts : blogPosts.filter((p) => p.category === activeFilter),
+    [activeFilter]
+  );
+
   return (
     <div>
       <Helmet>
@@ -49,6 +65,7 @@ const BlogListPage = () => {
           })}
         </script>
       </Helmet>
+
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h1
@@ -68,16 +85,39 @@ const BlogListPage = () => {
           </motion.p>
         </div>
       </section>
+
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {categories.map((cat) => (
+              <button
+                key={cat.value}
+                onClick={() => setActiveFilter(cat.value)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  activeFilter === cat.value
+                    ? "bg-gold text-accent-foreground shadow-gold"
+                    : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-gold/40"
+                }`}
+              >
+                {cat.label}
+                {cat.value !== "all" && (
+                  <span className="ml-1.5 text-xs opacity-70">
+                    ({blogPosts.filter((p) => p.category === cat.value).length})
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+
           <motion.div
+            key={activeFilter}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+            animate="visible"
             variants={staggerContainer}
           >
-            {blogPosts.map((post) => (
+            {filteredPosts.map((post) => (
               <motion.div key={post.slug} variants={staggerItem}>
                 <Link to={`/blog/${post.slug}`} className="block group h-full">
                   <div className="bg-card rounded-xl border border-border overflow-hidden h-full flex flex-col card-interactive">
@@ -100,6 +140,12 @@ const BlogListPage = () => {
               </motion.div>
             ))}
           </motion.div>
+
+          {filteredPosts.length === 0 && (
+            <div className="text-center py-12 text-muted-foreground">
+              No articles found in this category.
+            </div>
+          )}
         </div>
       </section>
     </div>

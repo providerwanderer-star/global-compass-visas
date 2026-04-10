@@ -75,13 +75,13 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>Top Immigration Consultant for Canada PR in Punjab & Ontario | 4 Aces Visa</title>
-        <meta name="description" content="Top-rated Canada PR consultant in Punjab & Ontario. Expert help for Express Entry, LMIA work permits, PNP, study permits & PR from India. Free assessment. 98% success rate." />
+        <title>Your Complete Visa & Immigration Solution Specialist | 4 Aces Visa</title>
+        <meta name="description" content="Your all-in-one visa & immigration specialists. PR, work permits, study visas, visitor visas & family sponsorship for Canada, Australia, Germany & UK. 15,000+ visas processed. Free assessment." />
         <link rel="canonical" href="https://www.4acesvisa.com" />
         <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Top Immigration Consultant for Canada PR in Punjab & Ontario | 4 Aces Visa" />
-        <meta property="og:description" content="Licensed Canada PR consultants serving Punjab (India) & Ontario (Canada). 15,000+ visas processed. 98% success rate. Free assessment." />
+        <meta property="og:title" content="Your Complete Visa & Immigration Solution Specialist | 4 Aces Visa" />
+        <meta property="og:description" content="All-in-one immigration experts. PR, work permits, study visas, visitor visas & family sponsorship for Canada, Australia, Germany & UK. 15,000+ visas processed." />
         <meta property="og:url" content="https://www.4acesvisa.com" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -92,7 +92,7 @@ const HomePage = () => {
                 "name": "4 Aces Visa",
                 "url": "https://www.4acesvisa.com",
                 "logo": "https://www.4acesvisa.com/logo.png",
-                "description": "Top immigration consultants for Canada PR from Punjab & Ontario. Expert guidance for Express Entry, LMIA, PNP, study permits & work permits.",
+                "description": "Your complete visa & immigration solution specialist. Expert guidance for PR, work permits, study visas, visitor visas & family sponsorship across Canada, Australia, Germany & UK.",
                 "telephone": "+16478622190",
                 "email": "sahil280389@gmail.com",
                 "areaServed": ["Punjab, India", "Ontario, Canada"],
@@ -135,20 +135,20 @@ const HomePage = () => {
                 className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-foreground leading-tight mb-6"
                 initial="hidden" animate="visible" variants={fadeUp} custom={1}
               >
-                Top Immigration Consultant for{" "}
-                <span className="gradient-text">Canada PR in Punjab & Ontario</span>
+                Your Complete{" "}
+                <span className="gradient-text">Visa & Immigration Solution Specialist</span>
               </motion.h1>
               <motion.p
                 className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={2}
               >
-                Expert Canada PR consultants serving Punjab (India) & Ontario (Canada). Express Entry, LMIA, PNP & Work Permits — 98% success rate.
+                PR, work permits, study visas, visitor visas, family sponsorship & more — one team, every pathway, 98% success rate.
               </motion.p>
               <motion.p
                 className="text-base text-muted-foreground/80 mb-8 max-w-xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={3}
               >
-                🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — Complete immigration services from Ludhiana, Chandigarh, Brampton & Toronto.
+                🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — Every visa type, every destination, handled end-to-end.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
                 <Link to="/contact">

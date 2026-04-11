@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import InternalLinks from "@/components/InternalLinks";
 import { services } from "@/data/serviceData";
 import { serviceToBlogs, getRelatedBlogData } from "@/data/internalLinks";
+import FAQCallToAction from "@/components/FAQCallToAction";
 
 const staggerContainer = {
   hidden: {},
@@ -254,6 +255,8 @@ const ServicePage = () => {
         blogs={getRelatedBlogData(serviceToBlogs[service.slug] || []).map((b) => ({ slug: b.slug, title: b.title, excerpt: b.excerpt }))}
         title="Related Articles"
       />
+
+      <FAQCallToAction />
 
       {/* Lead Form */}
       <section className="section-padding bg-primary" id="form">

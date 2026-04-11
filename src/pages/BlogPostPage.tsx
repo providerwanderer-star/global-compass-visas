@@ -7,6 +7,7 @@ import InternalLinks from "@/components/InternalLinks";
 import { blogPosts } from "@/data/blogData";
 import { blogToServices, getRelatedServiceData } from "@/data/internalLinks";
 import { blogEnhancements } from "@/data/blogEnhancements";
+import FAQCallToAction from "@/components/FAQCallToAction";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -264,6 +265,8 @@ const BlogPostPage = () => {
         services={getRelatedServiceData(blogToServices[post.slug] || []).map((s) => ({ slug: s.slug, title: s.title }))}
         title="Explore Our Services"
       />
+
+      <FAQCallToAction />
     </div>
   );
 };

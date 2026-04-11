@@ -95,7 +95,7 @@ const HomePage = () => {
                 "description": "Your complete visa & immigration solution specialist. Expert guidance for PR, work permits, study visas, visitor visas & family sponsorship across Canada, Australia, Germany & UK.",
                 "telephone": "+16478622190",
                 "email": "sahil280389@gmail.com",
-                "areaServed": ["Punjab, India", "Ontario, Canada"],
+                "areaServed": ["Punjab, India", "Gujarat, India", "Haryana, India", "Rajasthan, India", "Ontario, Canada", "British Columbia, Canada"],
                 "sameAs": ["https://wa.me/16478622190"]
               },
               {

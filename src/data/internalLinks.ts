@@ -164,6 +164,26 @@ export const cityToLinks: Record<string, { blogs: string[]; services: string[] }
   scarborough: { blogs: ["best-provinces-for-canada-pr-2026", "lmia-jobs-canada-from-india-2026"], services: ["lmia-assistance", "family-sponsorship"] },
   milton: { blogs: ["best-provinces-for-canada-pr-2026", "choosing-right-immigration-consultant-2026"], services: ["express-entry", "lmia-assistance"] },
   waterloo: { blogs: ["best-provinces-for-canada-pr-2026", "express-entry-vs-pnp-2026"], services: ["pnp-application", "work-permits"] },
+  // Gujarat cities
+  surat: { blogs: ["canada-vs-australia-vs-germany-immigration-2026", "cost-of-canada-pr-from-india-2026"], services: ["express-entry", "job-seeker-visa"] },
+  gandhinagar: { blogs: ["canada-vs-australia-vs-germany-immigration-2026", "increase-crs-score-fast-2026"], services: ["express-entry", "pnp-application"] },
+  ahmedabad: { blogs: ["canada-vs-australia-vs-germany-immigration-2026", "cost-of-canada-pr-from-india-2026"], services: ["express-entry", "job-seeker-visa"] },
+  vadodara: { blogs: ["increase-crs-score-fast-2026", "lmia-jobs-canada-from-india-2026"], services: ["express-entry", "lmia-assistance"] },
+  rajkot: { blogs: ["canada-vs-australia-vs-germany-immigration-2026", "increase-crs-score-fast-2026"], services: ["express-entry", "pnp-application"] },
+  // Haryana cities
+  faridabad: { blogs: ["increase-crs-score-fast-2026", "lmia-jobs-canada-from-india-2026"], services: ["express-entry", "lmia-assistance"] },
+  ambala: { blogs: ["canada-pr-process-from-punjab-2026", "increase-crs-score-fast-2026"], services: ["express-entry", "lmia-assistance"] },
+  karnal: { blogs: ["increase-crs-score-fast-2026", "best-provinces-for-canada-pr-2026"], services: ["express-entry", "pnp-application"] },
+  panipat: { blogs: ["lmia-jobs-canada-from-india-2026", "increase-crs-score-fast-2026"], services: ["lmia-assistance", "express-entry"] },
+  // Rajasthan cities
+  jodhpur: { blogs: ["canada-vs-australia-vs-germany-immigration-2026", "increase-crs-score-fast-2026"], services: ["express-entry", "student-visa"] },
+  udaipur: { blogs: ["lmia-jobs-canada-from-india-2026", "study-visa-canada-complete-guide-2026"], services: ["lmia-assistance", "student-visa"] },
+  kota: { blogs: ["study-visa-canada-complete-guide-2026", "increase-crs-score-fast-2026"], services: ["student-visa", "express-entry"] },
+  // BC cities
+  abbotsford: { blogs: ["best-provinces-for-canada-pr-2026", "canada-pr-process-from-punjab-2026"], services: ["pnp-application", "family-sponsorship"] },
+  burnaby: { blogs: ["best-provinces-for-canada-pr-2026", "lmia-jobs-canada-from-india-2026"], services: ["pnp-application", "work-permits"] },
+  nanaimo: { blogs: ["best-provinces-for-canada-pr-2026", "study-in-canada-complete-guide"], services: ["pnp-application", "student-visa"] },
+  kamloops: { blogs: ["best-provinces-for-canada-pr-2026", "study-in-canada-complete-guide"], services: ["pnp-application", "student-visa"] },
 };
 
 // Helper to get blog data by slug

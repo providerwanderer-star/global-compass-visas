@@ -55,6 +55,7 @@ const App = () => (
               <Route path="/india/canada-pr-india" element={<IndiaPRPage />} />
               <Route path="/crs-calculator" element={<CRSCalculatorPage />} />
               <Route path="/documents/:slug" element={<DocumentsPage />} />
+              <Route path="/faq" element={<FAQPage />} />
               <Route path="/india/:slug" element={<StateHubPage />} />
               <Route path="/canada/:slug" element={<StateHubPage />} />
               <Route path="*" element={<NotFound />} />

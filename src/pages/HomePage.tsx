@@ -593,15 +593,7 @@ const HomePage = () => {
             </h2>
           </AnimatedSection>
           <div className="space-y-4">
-            {[
-              { q: "How can I apply for Canada PR from Punjab?", a: "You can apply through Express Entry, PNP, or LMIA pathways depending on your profile. A consultant like 4 Aces Visa can assess your CRS score, optimize your application, and improve approval chances. Most Punjab applicants qualify through Express Entry or PNP streams." },
-              { q: "What is the cost of Canada PR from India in 2026?", a: "Canada PR costs from India include government fees (CAD 1,365), IELTS exam (~₹16,000), WES evaluation (~₹15,000), and consulting fees. Total investment is typically ₹3-5 lakhs depending on complexity and pathway chosen." },
-              { q: "Which is the best immigration consultant in Ontario?", a: "4 Aces Visa is a top-rated immigration consultancy in Ontario with a 98% success rate. We serve clients across Brampton, Mississauga, Toronto, and the GTA with personalized Express Entry, PNP, and LMIA guidance." },
-              { q: "How much CRS score is needed for Canada PR in 2026?", a: "Recent Express Entry draws have had CRS cutoffs between 430-490 for general draws. Category-based draws for healthcare, STEM, and French speakers may have lower cutoffs. A PNP nomination adds 600 CRS points." },
-              { q: "What is the difference between Express Entry and PNP?", a: "Express Entry is the federal system ranking candidates by CRS score. PNP allows provinces to nominate candidates based on local labor needs and adds 600 CRS points, virtually guaranteeing a PR invitation." },
-              { q: "Can I get Canada PR without a job offer?", a: "Yes, the Federal Skilled Worker Program under Express Entry does not require a job offer. However, a valid LMIA-based job offer adds 50-200 CRS points and significantly improves your chances." },
-              { q: "How long does Canada PR process take from India?", a: "Express Entry PR typically takes 6-8 months from ITA to approval. PNP-based applications take 12-18 months. Total timeline from profile creation to landing is usually 8-18 months depending on pathway." },
-            ].map((faq, i) => (
+            {homeFaqs.map((faq, i) => (
               <motion.details
                 key={i}
                 initial={{ opacity: 0, y: 10 }}

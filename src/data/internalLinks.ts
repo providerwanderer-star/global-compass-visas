@@ -46,6 +46,10 @@ export const blogToServices: Record<string, string[]> = {
   "best-immigration-consultant-ludhiana-2026": ["express-entry", "lmia-assistance", "pnp-application"],
   "canada-pr-from-brampton-guide-2026": ["express-entry", "lmia-assistance", "family-sponsorship"],
   "immigration-consultant-punjab-vs-canada-based-2026": ["express-entry", "pnp-application", "lmia-assistance"],
+  "canada-pr-from-gujarat-2026": ["express-entry", "pnp-application", "lmia-assistance"],
+  "best-immigration-consultant-haryana-2026": ["express-entry", "lmia-assistance", "pnp-application"],
+  "bc-pnp-guide-indian-immigrants-2026": ["pnp-application", "express-entry", "work-permits"],
+  "rajasthan-to-canada-immigration-guide-2026": ["express-entry", "student-visa", "lmia-assistance"],
 };
 
 // Service → 5 blog posts

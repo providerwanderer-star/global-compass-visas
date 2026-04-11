@@ -194,7 +194,7 @@ const canadianCities: CityData[] = [
     slug,
     name,
     country: "canada" as const,
-    region: "Canada",
+    region: canadianProvinceMap[name] || "Canada",
     metaTitle: `Immigration Services in ${name} | PR, Work Permit & Sponsorship – 4 Aces Visa`,
     metaDescription: `Need immigration help in ${name}? 4 Aces Visa offers PR applications, work permits, family sponsorship, and citizenship guidance in ${name}. Free consultation.`,
     intro: `Welcome to 4 Aces Visa ${name} — your local immigration partner for all visa and PR needs. Whether you're a newcomer looking to extend your status, sponsor your family, or transition from a work permit to permanent residency, our ${name} team provides hands-on guidance every step of the way.`,

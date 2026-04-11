@@ -160,15 +160,24 @@ const CRSCalculatorPage = () => {
         <meta property="og:description" content="Free Canada Express Entry CRS score calculator. Estimate your Comprehensive Ranking System points and check if you qualify for permanent residency." />
         <meta property="og:url" content="https://www.4acesvisa.com/crs-calculator" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Canada CRS Score Calculator 2026 | 4 Aces Visa" />
+        <meta name="twitter:description" content="Free online CRS calculator for Canada Express Entry PR eligibility." />
+        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "WebPage",
-                name: "Canada CRS Score Calculator 2026 — 4 Aces Visa",
-                description: "Free online CRS calculator for Canada Express Entry. Estimate your Comprehensive Ranking System score for PR eligibility.",
-                url: "https://www.4acesvisa.com/crs-calculator",
+                "@type": "WebApplication",
+                "name": "Canada CRS Score Calculator 2026 — 4 Aces Visa",
+                "description": "Free online CRS calculator for Canada Express Entry. Estimate your Comprehensive Ranking System score for PR eligibility.",
+                "url": "https://www.4acesvisa.com/crs-calculator",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+                "provider": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://www.4acesvisa.com" }
               },
               {
                 "@type": "BreadcrumbList",

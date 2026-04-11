@@ -44,6 +44,15 @@ const ExpressEntryLandingPage = () => {
           content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS score calculator, and free eligibility assessment. 98% success rate — 15,000+ visas processed."
         />
         <link rel="canonical" href="https://www.4acesvisa.com/express-entry" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa" />
+        <meta property="og:description" content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS calculator, and free eligibility assessment. 98% success rate." />
+        <meta property="og:url" content="https://www.4acesvisa.com/express-entry" />
+        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa" />
+        <meta name="twitter:description" content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS calculator, and free eligibility assessment." />
+        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

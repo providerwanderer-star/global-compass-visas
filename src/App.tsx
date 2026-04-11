@@ -24,6 +24,7 @@ import IndiaPRPage from "@/pages/IndiaPRPage";
 import CRSCalculatorPage from "@/pages/CRSCalculatorPage";
 import StateHubPage from "@/pages/StateHubPage";
 import DocumentsPage from "@/pages/DocumentsPage";
+import FAQPage from "@/pages/FAQPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();

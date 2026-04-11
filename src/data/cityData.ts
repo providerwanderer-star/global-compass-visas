@@ -47,30 +47,68 @@ const indianCityInsights: Record<string, string> = {
   "Hoshiarpur": "Hoshiarpur is one of Punjab's highest per-capita emigration districts, with deep generational ties to Canada. The Doaba region's tradition of Canadian migration means nearly every family has relatives in the GTA, Vancouver, or Calgary — creating strong sponsorship and LMIA job offer pipelines. Hoshiarpur applicants consistently score well on IELTS due to the district's strong English coaching infrastructure.",
   "Moga": "Moga district in the Malwa belt of Punjab has seen a significant rise in Canada PR applications since 2024. The city's dairy and agriculture sector professionals are increasingly seeking Express Entry and LMIA pathways. Moga's close-knit community connections to Canada's Manitoba and Saskatchewan provinces create unique PNP nomination opportunities for applicants from this region.",
   "Pathankot": "Situated at the gateway of Punjab, Himachal Pradesh, and Jammu & Kashmir, Pathankot draws immigration aspirants from across northern India. The city's military and government sector employees often transition to Canada through Federal Skilled Worker streams. Pathankot's growing IELTS coaching industry and affordable living costs make it an emerging immigration hotspot for families seeking PR.",
+  // Gujarat cities
+  "Surat": "Gujarat's diamond capital and one of India's fastest-growing cities, Surat's textile and diamond polishing industries produce skilled workers increasingly seeking Canada Express Entry and Australia PR. The city's entrepreneurial culture aligns with Canada's Start-Up Visa and self-employed pathways. Surat's growing IT sector and proximity to Mumbai's VFS centre make immigration processing convenient.",
+  "Gandhinagar": "Gujarat's capital and home to GIFT City — India's first International Financial Services Centre — Gandhinagar produces finance, IT, and government professionals eligible for Express Entry and EU Blue Card programs. The city's planned infrastructure and high literacy rate mean applicants typically have strong documentation and language scores.",
+  // Haryana cities
+  "Faridabad": "As Haryana's most populous city and part of the NCR, Faridabad's manufacturing, automotive, and engineering sectors produce skilled workers who score well on Express Entry. The city's proximity to Delhi's VFS Global centre and multiple IELTS coaching institutes make the immigration process accessible. Faridabad professionals in mechanical and electrical engineering find strong matches with Canada's NOC in-demand list.",
+  "Ambala": "Ambala, at the crossroads of Haryana and Punjab, serves as a key immigration hub for the region. The city's defence, scientific instruments, and food processing industries produce candidates eligible for LMIA and Express Entry. Ambala's strong educational infrastructure (including Ambala Cantonment's coaching centres) helps applicants achieve competitive IELTS scores.",
+  "Karnal": "Known as the 'Rice Bowl of India,' Karnal's agriculture-tech and dairy research sectors (NDRI, CSSRI) produce professionals with specialized skills valued by Canada's agri-food immigration streams. The city's growing IT and education sectors are also driving Express Entry and study visa applications. Karnal's affordable cost of living ensures applicants easily meet proof-of-funds requirements.",
+  "Panipat": "The 'City of Weavers' has diversified beyond textiles into oil refining and IT. Panipat professionals in manufacturing and engineering increasingly pursue Canada PR through Express Entry and LMIA pathways. The city's proximity to Delhi's VFS centre and strong community networks in Canada's Ontario make family sponsorship a popular pathway.",
+  // Rajasthan cities
+  "Jodhpur": "The 'Blue City' of Rajasthan has a growing IT and tourism sector producing candidates for Canada Express Entry and Australia skilled migration. Jodhpur's IIT and AIIMS campuses generate highly qualified medical and engineering graduates who consistently score high CRS points. The city's handicraft and hospitality professionals also find pathways through LMIA work permits.",
+  "Udaipur": "The 'City of Lakes' has a thriving tourism, hospitality, and IT sector. Udaipur's hotel management graduates are in demand for Canada's hospitality LMIA positions. The city's growing tech startup scene and engineering colleges (like CTAE) produce Express Entry-eligible professionals. Udaipur's relatively low cost of living ensures applicants comfortably meet proof-of-funds requirements.",
+  "Kota": "Known as India's coaching capital, Kota produces thousands of engineering and medical graduates annually who are prime candidates for Canada Express Entry, Australia skilled migration, and Germany's EU Blue Card. The city's intense academic culture means applicants typically have strong educational credentials. Many Kota students transition through study visa to PGWP to PR pathways.",
+};
+
+const regionMap: Record<string, string> = {
+  // Punjab
+  "Ludhiana": "Punjab, India", "Amritsar": "Punjab, India", "Jalandhar": "Punjab, India",
+  "Mohali": "Punjab, India", "Chandigarh": "Punjab, India", "Bathinda": "Punjab, India",
+  "Patiala": "Punjab, India", "Hoshiarpur": "Punjab, India", "Moga": "Punjab, India",
+  "Pathankot": "Punjab, India",
+  // Gujarat
+  "Ahmedabad": "Gujarat, India", "Vadodara": "Gujarat, India", "Rajkot": "Gujarat, India",
+  "Surat": "Gujarat, India", "Gandhinagar": "Gujarat, India",
+  // Haryana
+  "Gurugram": "Haryana, India", "Faridabad": "Haryana, India", "Ambala": "Haryana, India",
+  "Karnal": "Haryana, India", "Panipat": "Haryana, India",
+  // Rajasthan
+  "Jaipur": "Rajasthan, India", "Jodhpur": "Rajasthan, India", "Udaipur": "Rajasthan, India",
+  "Kota": "Rajasthan, India",
+};
+
+const getStateTag = (name: string) => regionMap[name] || "India";
+const getStateName = (name: string) => {
+  const r = regionMap[name];
+  return r ? r.split(",")[0].trim() : null;
 };
 
 const indianCities: CityData[] = [
   "Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai", "Pune", "Ahmedabad", "Kolkata",
   "Lucknow", "Jaipur", "Chandigarh", "Noida", "Gurugram", "Indore", "Patna", "Bhubaneswar",
   "Coimbatore", "Vadodara", "Nagpur", "Rajkot", "Varanasi", "Kanpur", "Nashik", "Agra", "Cochin",
-  "Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Bathinda", "Patiala", "Hoshiarpur", "Moga", "Pathankot"
+  "Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Bathinda", "Patiala", "Hoshiarpur", "Moga", "Pathankot",
+  "Surat", "Gandhinagar", "Faridabad", "Ambala", "Karnal", "Panipat", "Jodhpur", "Udaipur", "Kota"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
-  const isPunjab = ["Ludhiana", "Amritsar", "Jalandhar", "Mohali", "Chandigarh", "Bathinda", "Patiala", "Hoshiarpur", "Moga", "Pathankot"].includes(name);
-  const region = isPunjab ? "Punjab, India" : "India";
+  const region = getStateTag(name);
+  const state = getStateName(name);
+  const hasState = !!state;
+  const stateLabel = state || "India";
   return {
     slug,
     name,
     country: "india" as const,
     region,
-    metaTitle: isPunjab
-      ? `Best Canada PR Consultant in ${name}, Punjab | Express Entry & LMIA – 4 Aces Visa`
+    metaTitle: hasState
+      ? `Best Immigration Consultant in ${name}, ${stateLabel} | Canada PR, LMIA & Study Visa – 4 Aces Visa`
       : `Best Immigration Consultant in ${name} | Canada, Australia & Germany PR – 4 Aces Visa`,
-    metaDescription: isPunjab
-      ? `Top-rated Canada PR consultant in ${name}, Punjab. Expert help for Express Entry, LMIA work permits, PNP & study permits from ${name}. Free assessment. 98% success rate.`
+    metaDescription: hasState
+      ? `Top-rated immigration consultant in ${name}, ${stateLabel}. Expert help for Canada PR, Express Entry, LMIA work permits, PNP & study permits from ${name}. Free assessment. 98% success rate.`
       : `Looking for a trusted immigration consultant in ${name}? 4 Aces Visa helps with Canada PR, Australia migration, Germany work visa, study permits & more. Free assessment.`,
-    intro: isPunjab
-      ? `If you're in ${name} looking to apply for Canada PR, understanding the right pathway is crucial. 4 Aces Visa is Punjab's trusted immigration partner in ${name}, offering expert guidance for Express Entry, LMIA work permits, PNP applications, and study permits. Our ${name} specialists have helped hundreds of Punjab families achieve their Canadian dream with a 98% success rate.`
+    intro: hasState
+      ? `If you're in ${name}, ${stateLabel} looking to immigrate, 4 Aces Visa is your trusted partner. We offer expert guidance for Canada Express Entry, LMIA work permits, PNP applications, study permits, and more. Our ${name} specialists have helped hundreds of ${stateLabel} families achieve their immigration goals with a 98% success rate.`
       : `Are you in ${name} and dreaming of settling abroad? 4 Aces Visa is your trusted immigration partner in ${name}, offering expert guidance for Canada PR, Australia skilled migration, and Germany Job Seeker Visa. Our ${name} team has helped hundreds of local professionals and families achieve their global immigration goals with a 98% success rate.`,
     localInsight: indianCityInsights[name] || `${name} has a growing pool of immigration-ready professionals. Our local expertise helps ${name} residents navigate complex visa processes with confidence.`,
     services: [
@@ -125,20 +163,38 @@ const canadianCityInsights: Record<string, string> = {
   "Scarborough": "Part of Toronto's east end, Scarborough has one of Canada's most diverse immigrant populations with thriving South Asian, Chinese, and Filipino communities. The area's strong healthcare, retail, and transit infrastructure creates consistent LMIA opportunities, while its affordable housing relative to downtown Toronto makes it a top landing destination for newcomers.",
   "Milton": "One of Canada's fastest-growing towns, Milton in Halton Region has seen a massive influx of South Asian immigrants. Its proximity to Toronto, excellent schools, and growing commercial sector make it ideal for newcomer families. Milton's logistics and warehouse industry generates strong LMIA-based work permit opportunities.",
   "Waterloo": "Home to the University of Waterloo and a globally recognized tech corridor, Waterloo attracts skilled immigrants in software, AI, and engineering. The Waterloo Region's startup ecosystem rivals Silicon Valley in density, and the Ontario PNP Tech stream frequently targets professionals in this corridor.",
+  // BC cities
+  "Abbotsford": "The heart of BC's Fraser Valley, Abbotsford has a large South Asian (Punjabi) community and a strong agriculture and transportation sector. The BC PNP regional streams offer expedited processing for Abbotsford-bound applicants. Many newcomers choose Abbotsford for its affordable housing, proximity to Vancouver, and strong community support networks.",
+  "Burnaby": "Metro Vancouver's third-largest city, Burnaby is home to SFU, BCIT, and a booming tech corridor (Metrotown, Brentwood). The city's diverse economy in film, tech, and retail creates strong LMIA opportunities. Burnaby's excellent transit connections to Vancouver and more affordable housing make it a preferred landing destination for newcomers.",
+  "Nanaimo": "Vancouver Island's second city offers a relaxed lifestyle with growing healthcare, education, and tourism sectors. Nanaimo qualifies for BC PNP regional pilot programs, and its lower cost of living compared to Vancouver makes it attractive for families. The city's Vancouver Island University produces study-to-PR pathway candidates.",
+  "Kamloops": "BC's interior hub has a strong forestry, mining, healthcare, and education economy. Thompson Rivers University makes Kamloops a study visa destination with PGWP-to-PR pathways. The city's affordable housing and BC PNP regional streams make it an increasingly popular choice for newcomers seeking quality of life outside Metro Vancouver.",
+};
+
+const canadianProvinceMap: Record<string, string> = {
+  "Toronto": "Ontario, Canada", "Mississauga": "Ontario, Canada", "Brampton": "Ontario, Canada",
+  "Ottawa": "Ontario, Canada", "London ON": "Ontario, Canada", "Kitchener": "Ontario, Canada",
+  "Hamilton": "Ontario, Canada", "Windsor": "Ontario, Canada", "Thunder Bay": "Ontario, Canada",
+  "Scarborough": "Ontario, Canada", "Milton": "Ontario, Canada", "Waterloo": "Ontario, Canada",
+  "Vancouver": "British Columbia, Canada", "Surrey": "British Columbia, Canada",
+  "Victoria": "British Columbia, Canada", "Kelowna": "British Columbia, Canada",
+  "Richmond": "British Columbia, Canada", "Prince George": "British Columbia, Canada",
+  "Abbotsford": "British Columbia, Canada", "Burnaby": "British Columbia, Canada",
+  "Nanaimo": "British Columbia, Canada", "Kamloops": "British Columbia, Canada",
 };
 
 const canadianCities: CityData[] = [
   "Toronto", "Vancouver", "Calgary", "Edmonton", "Mississauga", "Ottawa", "Winnipeg",
   "Quebec City", "Brampton", "Surrey", "Halifax", "London ON", "Kitchener", "Victoria",
   "Saskatoon", "Regina", "Hamilton", "Windsor", "Kelowna", "Richmond", "Thunder Bay",
-  "Moncton", "Saint John", "Charlottetown", "Prince George", "Scarborough", "Milton", "Waterloo"
+  "Moncton", "Saint John", "Charlottetown", "Prince George", "Scarborough", "Milton", "Waterloo",
+  "Abbotsford", "Burnaby", "Nanaimo", "Kamloops"
 ].map((name) => {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
   return {
     slug,
     name,
     country: "canada" as const,
-    region: "Canada",
+    region: canadianProvinceMap[name] || "Canada",
     metaTitle: `Immigration Services in ${name} | PR, Work Permit & Sponsorship – 4 Aces Visa`,
     metaDescription: `Need immigration help in ${name}? 4 Aces Visa offers PR applications, work permits, family sponsorship, and citizenship guidance in ${name}. Free consultation.`,
     intro: `Welcome to 4 Aces Visa ${name} — your local immigration partner for all visa and PR needs. Whether you're a newcomer looking to extend your status, sponsor your family, or transition from a work permit to permanent residency, our ${name} team provides hands-on guidance every step of the way.`,

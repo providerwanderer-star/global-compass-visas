@@ -22,6 +22,7 @@ import IndiaStudyPermitPage from "@/pages/IndiaStudyPermitPage";
 import IndiaWorkPermitPage from "@/pages/IndiaWorkPermitPage";
 import IndiaPRPage from "@/pages/IndiaPRPage";
 import CRSCalculatorPage from "@/pages/CRSCalculatorPage";
+import StateHubPage from "@/pages/StateHubPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -51,6 +52,8 @@ const App = () => (
               <Route path="/india/work-permit-india" element={<IndiaWorkPermitPage />} />
               <Route path="/india/canada-pr-india" element={<IndiaPRPage />} />
               <Route path="/crs-calculator" element={<CRSCalculatorPage />} />
+              <Route path="/india/:slug" element={<StateHubPage />} />
+              <Route path="/canada/:slug" element={<StateHubPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

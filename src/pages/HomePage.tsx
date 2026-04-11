@@ -100,15 +100,11 @@ const HomePage = () => {
               },
               {
                 "@type": "FAQPage",
-                "mainEntity": [
-                  { "@type": "Question", "name": "How can I apply for Canada PR from Punjab?", "acceptedAnswer": { "@type": "Answer", "text": "You can apply through Express Entry, PNP, or LMIA pathways depending on your profile. A consultant like 4 Aces Visa can assess your CRS score, optimize your application, and improve approval chances significantly." }},
-                  { "@type": "Question", "name": "Which country is easiest for immigration in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Canada offers the fastest PR pathways through Express Entry (6 months processing). Germany's Job Seeker Visa is easiest to obtain initially. Australia rewards high-skilled professionals. The best choice depends on your profile." }},
-                  { "@type": "Question", "name": "What is the cost of Canada PR from India in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Canada PR costs from India include government fees (CAD 1,365), IELTS exam (~₹16,000), WES credential evaluation (~₹15,000), and professional consulting fees. Total investment is typically ₹3-5 lakhs depending on complexity." }},
-                  { "@type": "Question", "name": "How much CRS score is needed for Canada PR in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Recent Express Entry draws have had CRS cutoffs between 430-490 for general draws. Category-based draws for healthcare, STEM, and French speakers may have lower cutoffs. A PNP nomination adds 600 points." }},
-                  { "@type": "Question", "name": "Can I get Canada PR without a job offer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the Federal Skilled Worker Program under Express Entry does not require a job offer. However, a valid LMIA job offer adds 50-200 CRS points and significantly improves your chances." }},
-                  { "@type": "Question", "name": "What is the difference between Express Entry and PNP?", "acceptedAnswer": { "@type": "Answer", "text": "Express Entry is the federal system that ranks candidates by CRS score. PNP allows provinces to nominate candidates based on local labor needs and adds 600 CRS points, virtually guaranteeing a PR invitation." }},
-                  { "@type": "Question", "name": "How long does Canada PR process take from India?", "acceptedAnswer": { "@type": "Answer", "text": "Express Entry PR typically takes 6-8 months from ITA to approval. PNP-based applications take 12-18 months. Total timeline from profile creation to landing is usually 8-18 months depending on the pathway." }}
-                ]
+                "mainEntity": homeFaqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.q,
+                  "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+                }))
               }
             ]
           })}

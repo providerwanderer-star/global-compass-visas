@@ -63,7 +63,7 @@ const CityPage = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: city.region, item: `https://www.4acesvisa.com/country/${city.country}` },
+                  { "@type": "ListItem", position: 2, name: city.region, item: `https://www.4acesvisa.com/immigration/${city.country === "india" ? "canada" : city.country}` },
                   { "@type": "ListItem", position: 3, name: city.name, item: `https://www.4acesvisa.com/city/${city.slug}` },
                 ],
               },

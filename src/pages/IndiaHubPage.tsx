@@ -90,6 +90,11 @@ const IndiaHubPage = () => {
         <meta property="og:description" content="Canada immigration consultants for Indian nationals. Expert help for work permits, study permits, Express Entry PR & PNP from India." />
         <meta property="og:url" content="https://www.4acesvisa.com/india" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Canada Immigration from India 2026 | 4 Aces Visa" />
+        <meta name="twitter:description" content="Canada immigration consultants for Indian nationals. Expert help for work permits, study permits, Express Entry PR & PNP from India." />
+        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

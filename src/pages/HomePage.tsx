@@ -113,14 +113,99 @@ const HomePage = () => {
             "@graph": [
               {
                 "@type": "Organization",
+                "@id": "https://www.4acesvisa.com/#organization",
                 "name": "4 Aces Visa",
                 "url": "https://www.4acesvisa.com",
-                "logo": "https://www.4acesvisa.com/logo.png",
-                "description": "Your complete visa & immigration solution specialist. Expert guidance for PR, work permits, study visas, visitor visas & family sponsorship across Canada, Australia, Germany & UK.",
-                "telephone": "+16478622190",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.4acesvisa.com/favicon.ico",
+                  "width": 512,
+                  "height": 512
+                },
+                "description": "By the immigrants, for the immigrants. Global immigration consultancy for Canada, Australia, Germany & UK with 15,000+ successful visas and 98% approval rate.",
+                "foundingDate": "2016",
+                "telephone": "+1-647-862-2190",
                 "email": "sahil280389@gmail.com",
-                "areaServed": ["Punjab, India", "Gujarat, India", "Haryana, India", "Rajasthan, India", "Ontario, Canada", "British Columbia, Canada"],
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-647-862-2190",
+                    "contactType": "customer service",
+                    "availableLanguage": ["English", "Hindi", "Punjabi"],
+                    "areaServed": ["CA", "AU", "DE", "GB", "IN"]
+                  }
+                ],
+                "areaServed": [
+                  {"@type": "Country", "name": "Canada"},
+                  {"@type": "Country", "name": "Australia"},
+                  {"@type": "Country", "name": "Germany"},
+                  {"@type": "Country", "name": "United Kingdom"},
+                  {"@type": "Country", "name": "India"}
+                ],
+                "knowsAbout": [
+                  "Immigration Consulting", "Express Entry Canada", "Study Visa",
+                  "Work Permits", "Provincial Nominee Program", "LMIA",
+                  "Family Sponsorship", "Visitor Visa", "Citizenship Application",
+                  "Australia Skilled Migration", "Germany Job Seeker Visa",
+                  "EU Blue Card", "UK Skilled Worker Visa"
+                ],
                 "sameAs": ["https://wa.me/16478622190"]
+              },
+              {
+                "@type": "LocalBusiness",
+                "@id": "https://www.4acesvisa.com/#localbusiness",
+                "name": "4 Aces Visa — Immigration Consultants",
+                "image": "https://www.4acesvisa.com/favicon.ico",
+                "url": "https://www.4acesvisa.com",
+                "telephone": "+1-647-862-2190",
+                "email": "sahil280389@gmail.com",
+                "description": "Licensed immigration consultants specializing in Canada Express Entry PR, LMIA work permits, PNP, study permits, family sponsorship, visitor visas & citizenship for Canada, Australia, Germany & UK.",
+                "priceRange": "$$",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Brampton",
+                  "addressRegion": "Ontario",
+                  "addressCountry": "CA"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 43.7315,
+                  "longitude": -79.7624
+                },
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "10:00",
+                    "closes": "15:00"
+                  }
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "15000",
+                  "bestRating": "5"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Immigration Services",
+                  "itemListElement": [
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Express Entry PR"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Student Visa"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "LMIA Work Permit"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Provincial Nominee Program"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Family Sponsorship"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Visitor & Super Visa"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Citizenship Application"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Work Permits"}}
+                  ]
+                }
               },
               {
                 "@type": "FAQPage",

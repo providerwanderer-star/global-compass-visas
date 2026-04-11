@@ -76,6 +76,7 @@ const navLinks = [
       { label: "🇩🇪 Germany Job Seeker", href: "/documents/job-seeker-visa" },
     ],
   },
+  { label: "FAQ", href: "/faq" },
   { label: "Pathway Quiz", href: "/quiz" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },

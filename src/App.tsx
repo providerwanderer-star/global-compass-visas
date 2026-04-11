@@ -24,6 +24,7 @@ import IndiaPRPage from "@/pages/IndiaPRPage";
 import CRSCalculatorPage from "@/pages/CRSCalculatorPage";
 import StateHubPage from "@/pages/StateHubPage";
 import DocumentsPage from "@/pages/DocumentsPage";
+import FAQPage from "@/pages/FAQPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +55,7 @@ const App = () => (
               <Route path="/india/canada-pr-india" element={<IndiaPRPage />} />
               <Route path="/crs-calculator" element={<CRSCalculatorPage />} />
               <Route path="/documents/:slug" element={<DocumentsPage />} />
+              <Route path="/faq" element={<FAQPage />} />
               <Route path="/india/:slug" element={<StateHubPage />} />
               <Route path="/canada/:slug" element={<StateHubPage />} />
               <Route path="*" element={<NotFound />} />

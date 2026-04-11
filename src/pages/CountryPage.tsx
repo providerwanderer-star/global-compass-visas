@@ -7,6 +7,7 @@ import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { countries } from "@/data/countryData";
+import FAQCallToAction from "@/components/FAQCallToAction";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -338,6 +339,8 @@ const CountryPage = () => {
           </div>
         </div>
       </section>
+
+      <FAQCallToAction />
     </div>
   );
 };

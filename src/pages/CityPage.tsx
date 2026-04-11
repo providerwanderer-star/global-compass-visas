@@ -7,6 +7,7 @@ import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import InternalLinks from "@/components/InternalLinks";
+import FAQCallToAction from "@/components/FAQCallToAction";
 import { cities } from "@/data/cityData";
 import { cityToLinks, getRelatedBlogData, getRelatedServiceData } from "@/data/internalLinks";
 
@@ -248,6 +249,8 @@ const CityPage = () => {
           />
         );
       })()}
+
+      <FAQCallToAction />
 
       {/* Lead Form */}
       <section className="section-padding bg-primary" id="form">

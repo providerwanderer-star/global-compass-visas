@@ -170,10 +170,14 @@ const CRSCalculatorPage = () => {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "WebPage",
-                name: "Canada CRS Score Calculator 2026 — 4 Aces Visa",
-                description: "Free online CRS calculator for Canada Express Entry. Estimate your Comprehensive Ranking System score for PR eligibility.",
-                url: "https://www.4acesvisa.com/crs-calculator",
+                "@type": "WebApplication",
+                "name": "Canada CRS Score Calculator 2026 — 4 Aces Visa",
+                "description": "Free online CRS calculator for Canada Express Entry. Estimate your Comprehensive Ranking System score for PR eligibility.",
+                "url": "https://www.4acesvisa.com/crs-calculator",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+                "provider": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://www.4acesvisa.com" }
               },
               {
                 "@type": "BreadcrumbList",

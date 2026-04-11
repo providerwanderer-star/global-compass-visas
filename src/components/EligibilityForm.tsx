@@ -39,6 +39,26 @@ const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
 
       if (error) throw error;
 
+      // Send email notification
+      await fetch("https://formsubmit.co/ajax/sahil280389@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `🆕 New Lead from 4 Aces Visa — ${sourcePage}`,
+          Name: formData.full_name,
+          Email: formData.email,
+          Phone: formData.phone,
+          "Destination Country": formData.destination_country || "Not specified",
+          "Visa Type": formData.visa_type || "Not specified",
+          "Education Level": formData.education_level || "Not specified",
+          "Source Page": sourcePage,
+          _template: "table",
+        }),
+      });
+
       setSubmitted(true);
       toast.success("Thank you! Our immigration expert will contact you within 24 hours.");
     } catch {

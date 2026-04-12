@@ -37,8 +37,14 @@ const DocumentsPage = () => {
       <Helmet>
         <title>{doc.title} | 4 Aces Visa</title>
         <meta name="description" content={doc.description} />
+        <link rel="canonical" href={`https://www.4acesvisa.com/documents/${doc.slug}`} />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={`${doc.title} | 4 Aces Visa`} />
         <meta property="og:description" content={doc.description} />
+        <meta property="og:url" content={`https://www.4acesvisa.com/documents/${doc.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${doc.title} | 4 Aces Visa`} />
+        <meta name="twitter:description" content={doc.description} />
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 

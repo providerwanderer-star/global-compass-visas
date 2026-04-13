@@ -459,4 +459,15 @@ const HomePage = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-5 transform group-hover:-translate-y-1 transition-transform duration-300">
                   <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">{item.tag}</span>
                   <h3 className="font-display text-lg font-bold text-white">{item.title}</h3>
- 
+                  <p className="text-white/80 text-sm mt-1">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default HomePage;

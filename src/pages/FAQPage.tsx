@@ -190,10 +190,10 @@ const FAQPage = () => {
           <AnimatedSection>
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
               <HelpCircle className="h-4 w-4" />
-              35+ Expert Answers
+              55+ Expert Answers
             </div>
             <h1 className="font-display text-3xl md:text-5xl font-bold mb-4">
-              Immigration FAQ — 2026
+              Immigration FAQ — 2026 Updated
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               Expert answers to the most-asked immigration questions about Canada PR, study visas, work permits, IELTS, CRS scores, and more.

@@ -163,7 +163,7 @@ const FAQPage = () => {
     <>
       <Helmet>
         <title>Immigration FAQ 2026 — Canada PR, Study Visa, IELTS, CRS | 4 Aces Visa</title>
-        <meta name="description" content="Expert answers to 35+ immigration questions: Canada PR pathways, CRS score, IELTS requirements, best courses for PR, government settlement programs, Australia & Germany immigration, costs and timelines." />
+        <meta name="description" content="Expert answers to 55+ immigration questions: Canada PR pathways, CRS score, IELTS requirements, 2026 policy updates, AI/tech immigration, best courses for PR, government settlement programs, Australia & Germany immigration, costs and timelines." />
         <link rel="canonical" href="https://www.4acesvisa.com/faq" />
         <script type="application/ld+json">
           {JSON.stringify([

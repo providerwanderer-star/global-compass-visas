@@ -98,6 +98,41 @@ const faqCategories = [
       { q: "What regions does 4 Aces Visa serve?", a: "We serve clients across India (Punjab, Gujarat, Haryana, Rajasthan — including Ludhiana, Amritsar, Jalandhar, Chandigarh, Ahmedabad, Surat, Gurugram, Jaipur) and Canada (Ontario and British Columbia — including Toronto, Brampton, Mississauga, Vancouver, Surrey). We offer both in-person and virtual consultations for clients worldwide." },
     ],
   },
+  {
+    id: "policy-2026",
+    title: "2026 Policy Updates",
+    icon: "📰",
+    faqs: [
+      { q: "What are the major Canada immigration changes in 2026?", a: "Key 2026 changes: Express Entry category-based draws expanded to cover more STEM, healthcare, and trades occupations. PNP allocations increased across provinces. Study permit financial requirements updated to CAD 20,635/year. PGWP eligibility tightened — only programs aligned with labor market needs qualify. Spousal open work permits limited to spouses of master's/doctoral students. LMIA processing targets reduced to 30 business days." },
+      { q: "Has Express Entry CRS cutoff changed in 2026?", a: "Yes. General draw CRS cutoffs range between 430-490 in 2026. Category-based draws (healthcare, STEM, trades, French speakers) have lower cutoffs of 380-440. IRCC conducts draws biweekly, sometimes weekly. The trend shows slightly lower cutoffs due to increased draw frequency and PNP allocations." },
+      { q: "Is PGWP still available for international students in 2026?", a: "Yes, but with restrictions. PGWP eligibility now requires programs to be aligned with labor market needs. Language benchmarks added: CLB 7 for university graduates, CLB 5 for college graduates. Not all programs qualify — verify PGWP eligibility before enrollment. Two-year programs still offer 3-year PGWPs." },
+      { q: "What is Canada's immigration target for 2026?", a: "Canada's Immigration Levels Plan targets approximately 395,000 new permanent residents in 2026, reduced from previous years' higher targets. This includes approximately 110,000 through Express Entry, 120,000 through PNP, 80,000 through family sponsorship, and 85,000 through other categories including refugees and humanitarian." },
+      { q: "Are LMIA rules changing in 2026?", a: "Yes. LMIA processing now targets 30 business days. Global Talent Stream maintains 2-week processing. Low-wage LMIA applications face increased scrutiny with stricter employer compliance requirements. Employers must demonstrate genuine recruitment efforts for Canadian workers before LMIA approval." },
+    ],
+  },
+  {
+    id: "tech-ai",
+    title: "Tech & AI Immigration",
+    icon: "💻",
+    faqs: [
+      { q: "How can AI and tech professionals immigrate to Canada in 2026?", a: "Three main pathways: 1) Express Entry STEM category draws with CRS cutoffs of 400-440. 2) Global Talent Stream providing work permits in 2 weeks for specialized tech roles. 3) BC Tech Pilot and Ontario Tech Draws through PNP. Key NOC codes: 21231 (Software Engineers), 21211 (Data Scientists), 21222 (Cybersecurity Analysts), 21232 (Software Developers)." },
+      { q: "What is the Global Talent Stream for tech workers?", a: "The Global Talent Stream (GTS) is a fast-track work permit program processing in just 2 weeks. Category A is for unique talent referred by designated partners. Category B is for employers hiring occupations on the Global Talent Occupations List (including software engineers, data scientists, AI specialists). Employers must create a Labour Market Benefits Plan committing to job creation and skills training." },
+      { q: "Which Canadian cities are best for tech jobs?", a: "Top tech hubs: Toronto (Vector Institute, 400+ tech companies), Vancouver (growing AI corridor, gaming industry), Montreal (Mila AI Institute, strong French-English tech scene), Ottawa (government tech, Shopify HQ), Waterloo (Waterloo Region tech triangle, BlackBerry, Google). Toronto and Vancouver offer highest salaries; Montreal and Ottawa have lower cost of living." },
+      { q: "What salary can tech workers expect in Canada?", a: "Average salaries: AI/ML Engineer CAD 120,000-180,000, Software Engineer CAD 90,000-140,000, Data Scientist CAD 95,000-150,000, Cybersecurity Analyst CAD 85,000-130,000, Cloud Architect CAD 110,000-170,000, DevOps Engineer CAD 95,000-145,000. Tech salaries in Toronto and Vancouver are highest but also have higher cost of living." },
+    ],
+  },
+  {
+    id: "documents",
+    title: "Documents & Checklists",
+    icon: "📄",
+    faqs: [
+      { q: "What documents do I need for Canada Express Entry?", a: "Essential documents: valid passport, IELTS/CELPIP results (within 2 years), WES credential assessment, reference letters from employers (must include job title, duties, hours, salary), police clearance certificates from every country lived in 6+ months, medical exam results from panel physician, proof of funds (bank statements), digital photos meeting IRCC specifications, and birth certificates." },
+      { q: "How do I get my education credentials assessed for Canada?", a: "Use a designated organization: WES (World Education Services) is most common. Process: 1) Create WES account and select 'ECA for IRCC'. 2) Request official transcripts sent directly from your university to WES. 3) Submit academic documents. 4) WES evaluates and issues ECA report. Timeline: 6-8 weeks. Cost: CAD 300. Valid for 5 years." },
+      { q: "What are the proof of funds requirements for Canada PR?", a: "You must show settlement funds (unless you have a valid job offer or are CEC applicant): 1 person = CAD 14,690, 2 people = CAD 18,288, 3 people = CAD 22,483, 4 people = CAD 27,297. Show funds through bank statements, fixed deposits, or investment statements. Funds must be available and transferable — not borrowed or pledged." },
+      { q: "How do I write an employer reference letter for Express Entry?", a: "The reference letter must be on company letterhead and include: your full name, company name and address, your job title, dates of employment (start and end), number of hours per week, annual salary or hourly wage, main duties and responsibilities (match NOC description), and supervisor's name, title, and signature. Each position requires a separate letter." },
+      { q: "What medical tests are required for Canada immigration?", a: "IRCC medical exam includes: general physical examination, blood tests (HIV, syphilis, hepatitis), urine test, chest X-ray (for ages 11+), and vision test. Must be done by an IRCC-designated panel physician. Results are sent directly to IRCC. Valid for 12 months. Cost: approximately ₹5,000-8,000 in India." },
+    ],
+  },
 ];
 
 const FAQPage = () => {

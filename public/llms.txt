@@ -109,6 +109,41 @@ Complete visa document checklists prepared by immigration experts — every form
 - [Brampton Immigration Guide 2026](https://www.4acesvisa.com/blog/brampton-immigration-guide-2026)
 - [Toronto Immigration Services 2026](https://www.4acesvisa.com/blog/toronto-immigration-services-2026)
 
+## Immigration Comparison
+
+- [Canada vs Australia vs Germany vs UK Comparison](https://www.4acesvisa.com/compare): Side-by-side comparison of all four immigration destinations — PR speed, cost, salary, language requirements, and which country is best for Indian applicants.
+
+## Australia Skilled Migration Pages
+
+- [Australia Skilled Migration Hub](https://www.4acesvisa.com/australia/skilled-migration): Complete guide to Subclass 189, 190, and 491 — points test, skills assessment bodies, processing times.
+- [Subclass 189 Skilled Independent](https://www.4acesvisa.com/australia/subclass-189): No nomination needed. 90+ points competitive. Permanent from day 1. Processing 12–18 months.
+- [Subclass 190 State Nominated](https://www.4acesvisa.com/australia/subclass-190): State nomination adds +5 pts. Permanent from day 1. Must live in nominating state 2 years.
+- [Subclass 491 Regional](https://www.4acesvisa.com/australia/subclass-491): Regional nomination adds +15 pts. Provisional 5-year visa. Path to permanent via Subclass 191.
+
+## UK Immigration Pages
+
+- [UK Skilled Worker Visa](https://www.4acesvisa.com/uk/skilled-worker): 70-point system, £26,200 salary threshold, ILR after 5 years. Complete guide.
+- [UK Graduate Route](https://www.4acesvisa.com/uk/graduate-route): 2–3 years post-study work, no job offer needed. Transition to Skilled Worker Visa.
+
+## Germany Immigration Pages
+
+- [Germany Chancenkarte Guide](https://www.4acesvisa.com/germany/chancenkarte): Opportunity Card — 6+ points, EUR 12,000 blocked account, 20 hrs/week work while searching.
+- [Germany EU Blue Card](https://www.4acesvisa.com/germany/eu-blue-card): EUR 43,759+ salary, PR in 21 months with B1 German, EU-wide mobility after 18 months.
+
+## New Blog Posts (April 2026)
+
+- [UK Skilled Worker Visa Complete Guide 2026](https://www.4acesvisa.com/blog/uk-skilled-worker-visa-complete-guide-2026)
+- [Australia Subclass 189 vs 190 vs 491 Comparison 2026](https://www.4acesvisa.com/blog/australia-subclass-189-190-491-comparison-2026)
+- [Germany Chancenkarte vs EU Blue Card Guide 2026](https://www.4acesvisa.com/blog/germany-chancenkarte-eu-blue-card-guide-2026)
+- [CRS Draw History & Statistics 2025–2026](https://www.4acesvisa.com/blog/crs-score-draw-history-statistics-2026)
+- [IELTS vs PTE vs CELPIP for Canada Immigration 2026](https://www.4acesvisa.com/blog/ielts-vs-pte-vs-celpip-canada-immigration-2026)
+- [Canada PR Timeline Week-by-Week 2026](https://www.4acesvisa.com/blog/canada-pr-timeline-week-by-week-2026)
+
+## AI Citation Data
+
+- [Structured Citation Data (JSON)](https://www.4acesvisa.com/citations.json): Machine-readable Q&A pairs, statistics, and verified facts for AI citation systems.
+- [AI Plugin Manifest](https://www.4acesvisa.com/.well-known/ai-plugin.json): AI plugin discovery file for ChatGPT, Claude, and Perplexity.
+
 ## Free Assessment
 
 Get a free immigration eligibility assessment at [https://www.4acesvisa.com/contact](https://www.4acesvisa.com/contact) or take the [Immigration Pathway Quiz](https://www.4acesvisa.com/quiz).

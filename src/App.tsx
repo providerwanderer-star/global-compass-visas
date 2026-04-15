@@ -26,6 +26,10 @@ import StateHubPage from "@/pages/StateHubPage";
 import DocumentsPage from "@/pages/DocumentsPage";
 import FAQPage from "@/pages/FAQPage";
 import NotFound from "@/pages/NotFound";
+import ComparisonPage from "@/pages/ComparisonPage";
+import AustraliaSubPage from "@/pages/AustraliaSubPage";
+import UKImmigrationPage from "@/pages/UKImmigrationPage";
+import GermanyImmigrationPage from "@/pages/GermanyImmigrationPage";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +62,16 @@ const App = () => (
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/india/:slug" element={<StateHubPage />} />
               <Route path="/canada/:slug" element={<StateHubPage />} />
+              {/* GEO/AIO Optimized New Pages */}
+              <Route path="/compare" element={<ComparisonPage />} />
+              <Route path="/australia/skilled-migration" element={<AustraliaSubPage />} />
+              <Route path="/australia/subclass-189" element={<AustraliaSubPage />} />
+              <Route path="/australia/subclass-190" element={<AustraliaSubPage />} />
+              <Route path="/australia/subclass-491" element={<AustraliaSubPage />} />
+              <Route path="/uk/skilled-worker" element={<UKImmigrationPage />} />
+              <Route path="/uk/graduate-route" element={<UKImmigrationPage />} />
+              <Route path="/germany/chancenkarte" element={<GermanyImmigrationPage />} />
+              <Route path="/germany/eu-blue-card" element={<GermanyImmigrationPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

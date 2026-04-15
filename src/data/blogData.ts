@@ -4320,4 +4320,231 @@ Each province has its own nursing regulatory body:
 
 Book a free healthcare immigration assessment with 4 Aces Visa — we specialize in fast-tracking nurses and healthcare professionals to Canada.`
   },
+
+  {
+    slug: "uk-skilled-worker-visa-complete-guide-2026",
+    title: "UK Skilled Worker Visa 2026: Complete Guide, Requirements & Salary Threshold",
+    excerpt: "Everything you need to know about the UK Skilled Worker Visa in 2026 — from the 70-point system to ILR after 5 years.",
+    date: "2026-04-10",
+    readTime: "9 min",
+    category: "UK",
+    metaDescription: "Complete guide to UK Skilled Worker Visa 2026. Learn the 70-point system, £26,200 salary threshold, Graduate Route, and path to ILR. Expert advice from 4 Aces Visa.",
+    content: `The UK Skilled Worker Visa is the main work visa route for overseas nationals with a job offer from a licensed UK employer. It leads to ILR (permanent residence) after 5 years.
+
+## The 70-Point System (2026)
+
+Mandatory (50 pts): Job offer from UKVI-licensed sponsor (20 pts), job at RQF Level 3+ (20 pts), English at B1 level (10 pts).
+
+Tradeable (20 more pts needed): Salary >= GBP 26,200/year or going rate (20 pts), PhD in relevant subject (10 pts), shortage occupation (20 pts).
+
+## Salary Threshold 2026
+
+The minimum salary is GBP 26,200/year (raised from GBP 25,600 in April 2024). For shortage occupations or new entrants, a lower threshold of GBP 20,960 may apply.
+
+## Application Steps
+
+1. Get a job offer from a UKVI-licensed sponsor
+2. Receive Certificate of Sponsorship (CoS) from employer
+3. Verify 70-point threshold is met
+4. Apply online at gov.uk, pay fees + Immigration Health Surcharge (IHS = GBP 1,035/year)
+5. Attend biometrics appointment
+6. Receive decision in 3-8 weeks
+
+## UK Graduate Route — Post-Study Work
+
+- 2 years for bachelor's/master's graduates (no job offer required)
+- 3 years for PhD graduates
+- No minimum salary requirement
+- Transition to Skilled Worker Visa for ILR pathway
+
+## ILR — Indefinite Leave to Remain
+
+After 5 continuous years on a Skilled Worker Visa: Life in the UK test, English proof, continuous residence (max 180 days/year absence). Citizenship eligible 1 year after ILR.
+
+Book a free consultation with 4 Aces Visa for UK immigration guidance.`
+  },
+  {
+    slug: "australia-subclass-189-190-491-comparison-2026",
+    title: "Australia Subclass 189 vs 190 vs 491: Which Visa is Right for You in 2026?",
+    excerpt: "Compare Australia's three main skilled migration visa subclasses — 189, 190, and 491 — to find the best pathway for your profile.",
+    date: "2026-04-08",
+    readTime: "10 min",
+    category: "Australia",
+    metaDescription: "Detailed comparison of Australia Subclass 189, 190, and 491 skilled migration visas in 2026. Points requirements, processing times, and which is best for Indian applicants.",
+    content: `Australia's General Skilled Migration (GSM) program uses a points-based Expression of Interest via SkillSelect. Three main subclasses serve different profiles.
+
+## Quick Answer
+
+- Subclass 189 (Skilled Independent): Best if you have 90+ points, no nomination needed, permanent from day 1, processing 12-18 months.
+- Subclass 190 (State Nominated): Best if you have 75-89 points, state nomination adds +5 pts, must live in nominating state 2 years, permanent from day 1, processing 9-15 months.
+- Subclass 491 (Regional Provisional): Best if you have 65-79 points, regional nomination adds +15 pts, must live regionally 3 years, provisional 5-year visa, path to permanent via Subclass 191, processing 6-12 months.
+
+## Points Breakdown Example
+
+Age 25-32 (30 pts) + IELTS 8+ Superior English (20 pts) + Bachelor's degree (15 pts) + 5+ years experience (10 pts) = 75 pts baseline. Add state nomination (+5) = 80 pts for 190. Add regional nomination (+15) = 90 pts for 491.
+
+## Skills Assessment — Start First
+
+Required before submitting EOI. ACS for IT, Engineers Australia for engineers, AHPRA for healthcare, VETASSESS for many other occupations. Takes 2-6 months.
+
+## Best States for Indian IT Professionals
+
+South Australia (SA), Tasmania (TAS), and Northern Territory (NT) often have shorter waits and broader occupation lists than NSW or VIC.
+
+Get expert Australia PR guidance from 4 Aces Visa — free assessment available.`
+  },
+  {
+    slug: "germany-chancenkarte-eu-blue-card-guide-2026",
+    title: "Germany Chancenkarte vs EU Blue Card 2026: Complete Immigration Guide",
+    excerpt: "Germany's Chancenkarte and EU Blue Card are the two main pathways for non-EU skilled workers. Compare them to find your best route to German PR.",
+    date: "2026-04-05",
+    readTime: "8 min",
+    category: "Germany",
+    metaDescription: "Complete guide to Germany's Chancenkarte (Opportunity Card) and EU Blue Card in 2026. Requirements, points, salary thresholds, and path to German PR.",
+    content: `Germany overhauled its immigration system in 2024, replacing the old Job Seeker Visa with the Chancenkarte (Opportunity Card), which now allows 20 hours/week part-time work during your job search.
+
+## Chancenkarte (Opportunity Card) — For Those Without a Job Offer
+
+Points required: Minimum 6 out of 10.
+
+Points: STEM/IT/healthcare degree (3 pts), other degree (1 pt), German B2+ (3 pts), German A1/A2 (1 pt), 2+ years experience (1 pt), under 35 years (2 pts), previous Germany connection (1 pt).
+
+Financial requirement: EUR 12,000 in a blocked account (Sperrkonto) or monthly EUR 1,027 proof.
+
+Work rights: Up to 20 hrs/week while searching. Valid 1 year. After finding work: convert to EU Blue Card.
+
+## EU Blue Card — For Those With a Job Offer
+
+Requirements: Recognized university degree + job offer with salary >= EUR 43,759/year (EUR 39,682 for shortage occupations: IT, engineering, healthcare).
+
+Benefits: Immediate full-time work, family join immediately, permanent residence after 21 months (B1 German) or 33 months (no B1), move to another EU country after 18 months.
+
+## Recognition of Indian Degrees
+
+Check anabin database (anabin.kmk.org). IIT and NIT degrees typically rated H+ (recognized automatically). Private university degrees may need ZAB assessment.
+
+## Fast-Track German PR Route
+
+1. Chancenkarte (no job offer) -> 2. Find job in Germany -> 3. Switch to EU Blue Card -> 4. Work 21 months with B1 German -> 5. Apply for Niederlassungserlaubnis (permanent settlement). Total: approximately 3-4 years.
+
+Book a free Germany immigration consultation with 4 Aces Visa.`
+  },
+  {
+    slug: "crs-score-draw-history-statistics-2026",
+    title: "Canada CRS Draw History & Statistics 2025-2026: What Score Do You Need?",
+    excerpt: "Complete analysis of Express Entry CRS cutoff scores, draw frequency, and category-based draws to help you plan your Canada PR strategy.",
+    date: "2026-04-03",
+    readTime: "7 min",
+    category: "Canada",
+    metaDescription: "Canada Express Entry CRS draw history 2025-2026. General draws, category draws (STEM, healthcare, French), cutoff scores, and how to maximize your chances.",
+    content: `Understanding Express Entry CRS draw patterns is essential for planning your Canada PR strategy.
+
+## How Express Entry Draws Work
+
+IRCC holds draws approximately 2-4 times per month. Each draw has a CRS cutoff score. Candidates at or above the cutoff receive an Invitation to Apply (ITA). Category-based draws (introduced May 2023) target specific groups with typically lower cutoffs than general draws.
+
+## 2025-2026 Draw Patterns
+
+General draws: CRS cutoff 430-490. Draw frequency: 2-4/month. Invitations per draw: 3,500-7,000.
+
+Category draws: Healthcare 430-445, STEM 425-455, Trades 400-430, French language 375-395, Agriculture 385-420, Transport 400-435.
+
+## What CRS Score Do You Need?
+
+500+: Very likely ITA in next general draw. 470-499: Good chance general draw. 450-469: Focus on category draws. 430-449: May require category draw or PNP. Below 430: PNP nomination recommended (+600 CRS).
+
+## Most Impactful CRS Boosts
+
+PNP nomination: +600. LMIA job offer (senior management): +200. LMIA job offer (skilled TEER 0-3): +50. IELTS CLB 7 to CLB 9: +82. French bilingual bonus: +25-50.
+
+## 2026 Immigration Target Reductions
+
+IRCC has reduced targets to 395,000 PRs in 2025 and 380,000 in 2026. This may increase CRS cutoffs due to more competition. Optimize your profile now.
+
+Contact 4 Aces Visa for a free CRS assessment and personalized draw strategy.`
+  },
+  {
+    slug: "ielts-vs-pte-vs-celpip-canada-immigration-2026",
+    title: "IELTS vs PTE vs CELPIP for Canada Immigration 2026: Which Test to Take?",
+    excerpt: "Comparing IELTS General Training, PTE Core, and CELPIP-General for Canada Express Entry — which test is easiest, fastest, and gives the best CRS boost?",
+    date: "2026-04-01",
+    readTime: "6 min",
+    category: "Canada",
+    metaDescription: "IELTS vs PTE Core vs CELPIP for Canada PR 2026. Compare test formats, costs, result speed, and CRS impact to choose the best English test for Express Entry.",
+    content: `Choosing the right English language test for Canada immigration can add dozens of CRS points. IRCC accepts IELTS General Training, CELPIP-General, and PTE Core for Express Entry.
+
+## IELTS General Training
+
+Format: Paper or computer-based, 4 sections. Results: 3-13 days. Cost: INR 17,000 / CAD 310. Best for: global accessibility, also accepted for Australia and UK immigration.
+
+CLB conversion: CLB 7 = L6.0, R6.0, W6.0, S6.0. CLB 9 = L8.0, R7.0, W7.0, S7.0.
+
+## CELPIP-General
+
+Format: Computer only, all-in-one session. Results: 4-8 days. Cost: CAD 280-295. Best for: candidates in Canada, those who prefer typing and AI-scored speaking (no face-to-face interview).
+
+CELPIP 9 is approximately equivalent to IELTS 7.0-7.5.
+
+## PTE Core (Since 2023)
+
+Format: Computer, 2 hours. Results: 48 hours (fastest). Cost: INR 18,000. Note: Use PTE Core specifically for Canadian immigration — PTE Academic is for Australia.
+
+## Which Test to Choose?
+
+In India with IELTS access: Take IELTS (most familiar, globally recognized). Want fastest results: PTE Core (48 hrs). In Canada or prefer computer testing: CELPIP. Applying to Australia too: Take IELTS (works for both).
+
+## Maximize CRS from Language Tests
+
+Improving from CLB 7 to CLB 9 adds +40-80 CRS points. Strategy: take diagnostic tests for each format, choose the format where you score best, study 4-6 weeks intensively, aim for CLB 9 in all four bands.
+
+Book a free CRS assessment with 4 Aces Visa for personalized language test strategy.`
+  },
+  {
+    slug: "canada-pr-timeline-week-by-week-2026",
+    title: "Canada PR Timeline 2026: Week-by-Week Guide from Profile to Landing",
+    excerpt: "Exact Canada PR timeline from creating your Express Entry profile to landing in Canada. See what happens each week and month.",
+    date: "2026-03-30",
+    readTime: "7 min",
+    category: "Canada",
+    metaDescription: "Canada PR timeline 2026 week-by-week guide. From Express Entry profile to ITA, PR application, COPR, and Canadian landing. What to expect at each stage.",
+    content: `Getting Canada PR through Express Entry takes 8-18 months total. Here's an accurate timeline.
+
+## Pre-Application Phase (Weeks 1-8)
+
+Weeks 1-2: Language testing (IELTS 3-13 days, CELPIP 4-8 days, PTE Core 48 hrs).
+Weeks 2-4: Credential assessment — WES standard 7-8 weeks, express 20 days. Start immediately — runs parallel.
+Weeks 3-6: Police certificates from each country lived in 6+ months (1-4 weeks per country).
+Weeks 6-8: Express Entry profile creation on IRCC portal. Receive CRS score instantly.
+
+## In the Pool (Variable: 2 weeks to 12 months)
+
+CRS 500+: Invited within 1-2 draws (2-4 weeks). CRS 470-499: 1-3 months. CRS 450-469: 3-6 months. CRS below 450: PNP nomination strongly recommended.
+
+While waiting: retake IELTS, apply for PNP nominations (+600 CRS), pursue LMIA (+50-200 CRS).
+
+## Post-ITA: 60-Day Application Window
+
+Accept ITA immediately. 60 days to submit complete application — deadline is firm.
+
+Weeks 1-2: Begin medical exam booking (Panel Physician, results to IRCC in 1-3 weeks).
+Weeks 2-4: Obtain police certificates if not already done. RCMP (Canada): 2-4 weeks. India: 1-3 weeks.
+Weeks 4-8: Upload all documents: passport, civil docs, employment records, proof of funds (CAD 13,757+ for single applicant), education credentials.
+
+## PR Application Processing (6 months)
+
+Months 1-2: File assigned to officer; Additional Document Request (ADR) possible — respond within 30 days.
+Months 3-4: Security screening by CSIS and RCMP; background checks.
+Months 5-6: PR approval; receive COPR (Confirmation of Permanent Residence).
+
+## Landing in Canada
+
+Present COPR and passport at Port of Entry. PR status activated. Receive SIN within days. Ensure proof of funds: CAD 13,757+ (single applicant, 2026 rates).
+
+## Total Timeline
+
+Language + credential assessment: 6-10 weeks parallel. Profile creation: 1-2 weeks. Pool wait: 2 weeks to 12 months. PR application preparation: 60 days. IRCC processing: 6 months. Total: 8-18 months.
+
+Contact 4 Aces Visa for a free assessment and realistic timeline for your profile.`
+  },
+
 ];

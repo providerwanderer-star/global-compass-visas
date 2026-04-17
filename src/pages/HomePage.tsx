@@ -229,7 +229,7 @@ const HomePage = () => {
         <div className="relative container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-8 items-stretch">
             {/* Left — Text */}
-            <div className="order-2 lg:order-1 flex flex-col justify-center">
+            <div className="order-1 lg:order-1 flex flex-col justify-center">
               <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
                 <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 badge-pulse">
                   <Globe className="h-4 w-4" />
@@ -278,13 +278,13 @@ const HomePage = () => {
                 </div>
                 <div className="text-border">|</div>
                 <span className="text-muted-foreground text-sm font-medium">15,000+ visas processed</span>
-                <div className="text-border hidden sm:block">|</div>
-                <span className="text-muted-foreground text-sm font-medium hidden sm:block">98% success rate</span>
+                <div className="text-border">|</div>
+                <span className="text-muted-foreground text-sm font-medium">98% success rate</span>
               </motion.div>
             </div>
 
             {/* Right — Hero image blended into background */}
-            <div className="order-1 lg:order-2 relative flex items-center justify-center lg:min-h-full">
+            <div className="order-2 lg:order-2 relative flex items-center justify-center lg:min-h-full">
               {/* Accent circle behind */}
               <motion.div
                 className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-primary/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -338,6 +338,37 @@ const HomePage = () => {
         </div>
       </section>
 
+
+      {/* Destination Quick-Select — Where do you want to move? */}
+      <section className="py-8 px-4 bg-white border-b border-border">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-6">
+            <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">🌐 Where do you want to move?</p>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { flag: "🇨🇦", country: "Canada", label: "Express Entry PR", time: "6 months", href: "/immigration/canada" },
+              { flag: "🇦🇺", country: "Australia", label: "Skilled Migration", time: "8–12 months", href: "/australia/skilled-migration" },
+              { flag: "🇩🇪", country: "Germany", label: "EU Blue Card / Chancenkarte", time: "4–12 weeks", href: "/germany/chancenkarte" },
+              { flag: "🇬🇧", country: "United Kingdom", label: "Skilled Worker Visa", time: "3–8 weeks", href: "/uk/skilled-worker" },
+            ].map((c, i) => (
+              <Link key={i} to={c.href} className="block group">
+                <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all h-full">
+                  <span className="text-3xl block mb-2">{c.flag}</span>
+                  <h3 className="font-bold text-foreground text-sm">{c.country}</h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">{c.label}</p>
+                  <span className="text-xs text-gold font-semibold mt-1.5 block">⏱ {c.time}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <p className="text-center mt-4">
+            <Link to="/compare" className="text-sm text-primary underline underline-offset-2 font-medium hover:text-primary/80">
+              Compare all countries side-by-side →
+            </Link>
+          </p>
+        </div>
+      </section>
       {/* How We Help You Migrate — Step Process */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
@@ -463,6 +494,89 @@ const HomePage = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="section-padding section-soft">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-10">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              ⭐ Client Stories
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Real Results, Real People
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Over 15,000 successful visas — here’s what our clients say about their journey.
+            </p>
+          </AnimatedSection>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {testimonials.map((t, i) => (
+              <motion.div key={i} variants={staggerItem}>
+                <div className="bg-card rounded-xl border border-border p-5 h-full flex flex-col shadow-sm">
+                  <div className="flex gap-0.5 mb-3">
+                    {Array.from({ length: t.rating }).map((_, j) => (
+                      <Star key={j} className="h-4 w-4 fill-accent text-accent" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 italic">&ldquo;{t.text}&rdquo;</p>
+                  <div className="mt-4 pt-4 border-t border-border flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-gold/15 flex items-center justify-center font-bold text-gold text-sm flex-shrink-0">
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-sm">{t.name}</p>
+                      <p className="text-xs text-gold font-medium">{t.country}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding section-light">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-10">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              ❓ Common Questions
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Immigration FAQ 2026
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Answers to the most common questions about Canada PR, Express Entry, and global immigration.
+            </p>
+          </AnimatedSection>
+          <div className="max-w-3xl mx-auto space-y-3">
+            {homeFaqs.slice(0, 10).map((faq, i) => (
+              <details key={i} className="bg-card rounded-xl border border-border overflow-hidden">
+                <summary className="flex items-center justify-between gap-3 px-5 py-4 cursor-pointer list-none font-semibold text-foreground text-sm hover:bg-muted/30 transition-colors">
+                  <span>{faq.q}</span>
+                  <span className="text-gold text-xl flex-shrink-0 select-none">+</span>
+                </summary>
+                <div className="px-5 pb-4 text-muted-foreground text-sm leading-relaxed border-t border-border pt-3">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/faq">
+              <Button variant="outline" size="lg" className="border-2 border-primary/30 text-primary hover:bg-primary/5 font-semibold">
+                View All FAQs <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

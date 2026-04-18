@@ -21,6 +21,7 @@ export const services: ServiceData[] = [
     metaTitle: "Canada Express Entry 2026 | PR in 6 Months – 4 Aces Visa",
     metaDescription: "Apply for Canada Permanent Residency through Express Entry. CRS score optimization, profile creation, and ITA guidance. 98% success rate with 4 Aces Visa.",
     heroDescription: "Express Entry is Canada's flagship immigration system for skilled workers. Get your Permanent Residency in as little as 6 months with our expert CRS optimization strategy.",
+    quickAnswer: "Canada Express Entry is a points-based PR system covering FSWP, FSTP and CEC. Eligible candidates create a profile, are ranked by CRS, and the highest-scoring receive Invitations to Apply. In 2026, general draw cutoffs sit between 430–490, and PR is typically granted within 6 months of ITA.",
     overview: "Canada's Express Entry system manages three federal economic immigration programs: Federal Skilled Worker Program (FSWP), Federal Skilled Trades Program (FSTP), and Canadian Experience Class (CEC). Candidates are ranked using the Comprehensive Ranking System (CRS) and top-ranked candidates receive Invitations to Apply (ITA) for permanent residency through regular draws.",
     benefits: [
       "PR in as little as 6 months from ITA",
@@ -47,6 +48,10 @@ export const services: ServiceData[] = [
       { question: "How long does Express Entry take?", answer: "From profile submission to PR approval, the process typically takes 6-8 months if you receive an ITA quickly. The PR application itself is processed in about 6 months." },
       { question: "Can I apply without a job offer?", answer: "Yes! The Federal Skilled Worker Program does not require a Canadian job offer. However, a valid job offer adds 50-200 CRS points." },
       { question: "What if my CRS score is low?", answer: "Our team specializes in CRS optimization: improving IELTS scores, PNP nominations (+600 points), additional education credentials, and spousal factors can significantly boost your score." },
+      { question: "What are category-based Express Entry draws in 2026?", answer: "IRCC runs targeted draws for healthcare, STEM, French speakers, trades, transport, agri-food and education occupations. Cutoffs are often 50–100 points lower than general draws, making category-based draws the fastest current route to ITA." },
+      { question: "How long is an Express Entry profile valid?", answer: "Your profile remains in the pool for 12 months. After expiry you can resubmit with updated information. Updating your IELTS, education, or work experience refreshes your CRS in real time." },
+      { question: "Do Express Entry fees change in 2026?", answer: "Government fees in 2026 are CAD 950 application + CAD 575 right of permanent residence fee per adult, CAD 260 per child, plus CAD 85 biometrics per person. Total for a couple is roughly CAD 3,300, excluding ECA, IELTS and medicals." },
+      { question: "Can I include my spouse and children in Express Entry?", answer: "Yes. Your spouse/common-law partner and dependent children under 22 are included in the same application. Your spouse's language, education, and work experience can also add up to 40 CRS points to your profile." },
     ],
     relatedCountries: ["canada"],
   },

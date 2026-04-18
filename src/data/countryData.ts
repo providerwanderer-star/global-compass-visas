@@ -6,6 +6,8 @@ export interface CountryData {
   metaTitle: string;
   metaDescription: string;
   heroDescription: string;
+  /** 40–60 word direct answer shown under H1 for AEO/GEO snippets. Optional for backwards compatibility. */
+  quickAnswer?: string;
   pathways: { title: string; description: string; icon: string }[];
   eligibility: { title: string; items: string[] }[];
   steps: { step: number; title: string; description: string }[];

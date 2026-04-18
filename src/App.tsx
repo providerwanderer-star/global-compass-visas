@@ -25,6 +25,9 @@ import CRSCalculatorPage from "@/pages/CRSCalculatorPage";
 import StateHubPage from "@/pages/StateHubPage";
 import DocumentsPage from "@/pages/DocumentsPage";
 import FAQPage from "@/pages/FAQPage";
+import H1BToCanadaPRPage from "@/pages/H1BToCanadaPRPage";
+import USAToCanadaPage from "@/pages/USAToCanadaPage";
+import CanadaPRForIndiansPage from "@/pages/CanadaPRForIndiansPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -56,6 +59,9 @@ const App = () => (
               <Route path="/crs-calculator" element={<CRSCalculatorPage />} />
               <Route path="/documents/:slug" element={<DocumentsPage />} />
               <Route path="/faq" element={<FAQPage />} />
+              <Route path="/h1b-to-canada-pr" element={<H1BToCanadaPRPage />} />
+              <Route path="/usa-to-canada-immigration" element={<USAToCanadaPage />} />
+              <Route path="/canada-pr-for-indians" element={<CanadaPRForIndiansPage />} />
               <Route path="/india/:slug" element={<StateHubPage />} />
               <Route path="/canada/:slug" element={<StateHubPage />} />
               <Route path="*" element={<NotFound />} />

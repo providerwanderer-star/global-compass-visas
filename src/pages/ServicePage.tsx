@@ -114,7 +114,17 @@ const ServicePage = () => {
         </div>
       </section>
 
-      {/* Overview */}
+      {/* Quick Answer (AEO/GEO direct-answer block) */}
+      {service.quickAnswer && (
+        <section className="bg-card border-b border-border">
+          <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="max-w-3xl border-l-4 border-gold pl-6">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-2">Quick Answer</p>
+              <p className="text-base md:text-lg text-foreground leading-relaxed">{service.quickAnswer}</p>
+            </div>
+          </div>
+        </section>
+      )}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

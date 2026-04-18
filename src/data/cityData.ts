@@ -76,6 +76,15 @@ const regionMap: Record<string, string> = {
   // Rajasthan
   "Jaipur": "Rajasthan, India", "Jodhpur": "Rajasthan, India", "Udaipur": "Rajasthan, India",
   "Kota": "Rajasthan, India",
+  // Maharashtra
+  "Mumbai": "Maharashtra, India", "Pune": "Maharashtra, India",
+  "Nashik": "Maharashtra, India", "Nagpur": "Maharashtra, India",
+  // Tamil Nadu
+  "Chennai": "Tamil Nadu, India", "Coimbatore": "Tamil Nadu, India",
+  // Karnataka
+  "Bangalore": "Karnataka, India",
+  // Telangana
+  "Hyderabad": "Telangana, India",
 };
 
 const getStateTag = (name: string) => regionMap[name] || "India";

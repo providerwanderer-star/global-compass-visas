@@ -4,12 +4,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowRight, Globe, Award, Users, Clock, CheckCircle, Star, BookOpen,
   Briefcase, GraduationCap, Search, Shield, Heart, Plane, FileText,
-  RefreshCw, MapPin, BadgeCheck
+  RefreshCw, MapPin, BadgeCheck, TrendingUp
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
+import Shareable from "@/components/Shareable";
+import LiveExpressEntry from "@/components/LiveExpressEntry";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -99,13 +101,13 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>Your Complete Visa & Immigration Solution Specialist | 4 Aces Visa</title>
-        <meta name="description" content="Your all-in-one visa & immigration specialists. PR, work permits, study visas, visitor visas & family sponsorship for Canada, Australia, Germany & UK. 15,000+ visas processed. Free assessment." />
+        <title>Move & Settle to Canada — End-to-end Immigration | 4 Aces Visa</title>
+        <meta name="description" content="Move to Canada end-to-end. For US H-1B holders, Indian professionals, students & families. Express Entry, PNP, LMIA, study & work permits. 15,000+ visas processed. Free assessment." />
         <link rel="canonical" href="https://www.4acesvisa.com/" />
         <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Your Complete Visa & Immigration Solution Specialist | 4 Aces Visa" />
-        <meta property="og:description" content="All-in-one immigration experts. PR, work permits, study visas, visitor visas & family sponsorship for Canada, Australia, Germany & UK. 15,000+ visas processed." />
+        <meta property="og:title" content="Move & Settle to Canada — End-to-end Immigration | 4 Aces Visa" />
+        <meta property="og:description" content="Move to Canada end-to-end. For US H-1B holders, Indian professionals, students & families. Express Entry, PNP, LMIA, study & work permits. 15,000+ visas processed." />
         <meta property="og:url" content="https://www.4acesvisa.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -240,20 +242,20 @@ const HomePage = () => {
                 className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-foreground leading-tight mb-6"
                 initial="hidden" animate="visible" variants={fadeUp} custom={1}
               >
-                Your Complete{" "}
-                <span className="gradient-text">Visa & Immigration Solution Specialist</span>
+                Move & Settle to Canada.{" "}
+                <span className="gradient-text">End-to-end.</span>
               </motion.h1>
               <motion.p
                 className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={2}
               >
-                PR, work permits, study visas, visitor visas, family sponsorship & more — one team, every pathway, 98% success rate.
+                Leaving the US on H-1B? Applying from India? Studying, working, or bringing family — one RCIC-led team covers every pathway to Canada.
               </motion.p>
               <motion.p
                 className="text-base text-muted-foreground/80 mb-8 max-w-xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={3}
               >
-                🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — Every visa type, every destination, handled end-to-end.
+                🇨🇦 Canada-first &nbsp;•&nbsp; Also: 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — 98% success rate, 15,000+ visas processed.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
                 <Link to="/contact">
@@ -338,6 +340,85 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Live Express Entry draw ticker */}
+      <LiveExpressEntry />
+
+      {/* Pick your pathway — audience router */}
+      <section className="section-padding section-light">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-8">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              🧭 Pick Your Pathway
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Where are you moving from?
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Canada has a pathway for you. Start where you are today.
+            </p>
+          </AnimatedSection>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {[
+              {
+                flag: "🇺🇸",
+                title: "US H-1B Professional",
+                desc: "Express Entry, CUSMA & intra-company transfers. Protect your career before the $100K fee hits.",
+                href: "/immigration/canada",
+                tag: "Fastest route",
+              },
+              {
+                flag: "🇮🇳",
+                title: "From India",
+                desc: "Express Entry, PNP, LMIA — CRS optimization tailored to Indian profiles.",
+                href: "/india/canada-pr-india",
+                tag: "Most popular",
+              },
+              {
+                flag: "🎓",
+                title: "Student → PR",
+                desc: "DLI admission + study permit + PGWP + CEC. End-to-end from Punjab, Gujarat, or abroad.",
+                href: "/services/student-visa",
+                tag: "2–5 year plan",
+              },
+              {
+                flag: "❤️",
+                title: "Family Sponsorship",
+                desc: "Sponsor spouse, parents, kids or invite family on Super Visa (10-yr multi-entry).",
+                href: "/services/family-sponsorship",
+                tag: "Keep loved ones close",
+              },
+            ].map((p) => (
+              <motion.div key={p.title} variants={staggerItem}>
+                <Link to={p.href} className="block group h-full">
+                  <div className="bg-card rounded-2xl border-2 border-border hover:border-gold p-6 h-full card-interactive transition-all">
+                    <div className="flex items-start justify-between mb-3">
+                      <span className="text-4xl">{p.flag}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider bg-gold/15 text-gold px-2 py-0.5 rounded-full">
+                        {p.tag}
+                      </span>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                      {p.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                      {p.desc}
+                    </p>
+                    <span className="inline-flex items-center gap-1 text-sm text-primary font-semibold group-hover:gap-2 transition-all">
+                      Start here <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* Destination Quick-Select — Where do you want to move? */}
       <section className="py-8 px-4 bg-white border-b border-border">
@@ -544,6 +625,88 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Latest Updates — blog feed */}
+      <section className="section-padding section-light">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+            <div>
+              <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-2">
+                📰 Latest Updates
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+                Fresh immigration news
+              </h2>
+              <p className="text-muted-foreground max-w-xl mt-2">
+                Policy shifts, Express Entry draws, category rounds — updated weekly.
+              </p>
+            </div>
+            <Link to="/blog" className="inline-flex items-center gap-1 text-primary font-semibold hover:underline">
+              All articles <ArrowRight className="h-4 w-4" />
+            </Link>
+          </AnimatedSection>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {blogPosts.slice(0, 6).map((post) => (
+              <motion.div key={post.slug} variants={staggerItem}>
+                <Link to={`/blog/${post.slug}`} className="block h-full group">
+                  <article className="bg-card rounded-xl border border-border p-5 h-full flex flex-col card-interactive">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
+                      <span className="inline-flex items-center gap-1 bg-gold/10 text-gold px-2 py-0.5 rounded-full font-semibold">
+                        {post.category}
+                      </span>
+                      <Clock className="h-3 w-3" />
+                      <span>{post.readTime}</span>
+                    </div>
+                    <h3 className="font-display text-base font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-1">
+                      {post.excerpt}
+                    </p>
+                    <span className="text-xs text-muted-foreground mt-3">{post.date}</span>
+                  </article>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Tools strip */}
+      <section className="py-10 px-4 bg-gradient-to-br from-primary/5 to-accent/5 border-y border-border">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-6">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Free immigration tools
+            </h2>
+            <p className="text-sm text-muted-foreground">
+              Score yourself, compare countries, get a checklist — no signup.
+            </p>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            {[
+              { icon: Award, label: "CRS Calculator", href: "/crs-calculator" },
+              { icon: Search, label: "Eligibility Quiz", href: "/quiz" },
+              { icon: Globe, label: "Compare Countries", href: "/compare" },
+              { icon: TrendingUp, label: "EE Draw Tracker", href: "/express-entry" },
+              { icon: FileText, label: "Doc Checklist", href: "/documents/canada-pr" },
+            ].map((t) => (
+              <Link key={t.label} to={t.href} className="group">
+                <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all">
+                  <t.icon className="h-6 w-6 text-gold mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                  <p className="text-xs md:text-sm font-semibold text-foreground">{t.label}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
@@ -555,18 +718,24 @@ const HomePage = () => {
               Immigration FAQ 2026
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Answers to the most common questions about Canada PR, Express Entry, and global immigration.
+              Copy-paste-ready answers for AI search, social, and WhatsApp.
             </p>
           </AnimatedSection>
           <div className="max-w-3xl mx-auto space-y-3">
             {homeFaqs.slice(0, 10).map((faq, i) => (
-              <details key={i} className="bg-card rounded-xl border border-border overflow-hidden">
+              <details key={i} className="bg-card rounded-xl border border-border overflow-hidden group">
                 <summary className="flex items-center justify-between gap-3 px-5 py-4 cursor-pointer list-none font-semibold text-foreground text-sm hover:bg-muted/30 transition-colors">
                   <span>{faq.q}</span>
-                  <span className="text-gold text-xl flex-shrink-0 select-none">+</span>
+                  <span className="text-gold text-xl flex-shrink-0 select-none group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div className="px-5 pb-4 text-muted-foreground text-sm leading-relaxed border-t border-border pt-3">
-                  {faq.a}
+                <div className="px-5 pb-4 border-t border-border pt-3">
+                  <Shareable
+                    question={faq.q}
+                    answer={faq.a}
+                    permalink={`/faq#q${i + 1}`}
+                  >
+                    <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
+                  </Shareable>
                 </div>
               </details>
             ))}
@@ -578,6 +747,39 @@ const HomePage = () => {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="relative section-padding bg-gradient-to-br from-primary via-primary to-primary/90 overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, white 1px, transparent 1px), radial-gradient(circle at 80% 80%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+        <div className="relative container-narrow mx-auto text-center">
+          <AnimatedSection>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
+              Ready to move to Canada?
+            </h2>
+            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+              Book a free 15-minute assessment with an RCIC. We'll map your fastest pathway — no commitment, no pressure.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold text-lg px-8 py-6 hover:scale-105 transition-transform">
+                  🚀 Book Free Assessment <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <a
+                href="https://wa.me/16478622190"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary-foreground font-semibold border-2 border-primary-foreground/30 hover:border-primary-foreground px-6 py-4 rounded-lg transition-colors"
+              >
+                💬 WhatsApp us instead
+              </a>
+            </div>
+            <p className="text-primary-foreground/70 text-sm mt-6">
+              RCIC-licensed • CICC Member • 98% success rate • 15,000+ visas processed
+            </p>
+          </AnimatedSection>
         </div>
       </section>
     </div>

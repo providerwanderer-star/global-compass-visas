@@ -716,6 +716,9 @@ const HomePage = () => {
       {/* High-Demand Jobs → PR Pathway Engine */}
       <HighDemandJobsHome />
 
+      {/* Live Job Signals — ticker strip */}
+      <LiveJobsHighlightStrip />
+
       {/* FAQ */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">

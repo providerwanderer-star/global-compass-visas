@@ -18,6 +18,7 @@ const navLinks = [
     label: "Services", href: "#",
     children: [
       { label: "🔥 Express Entry PR", href: "/express-entry" },
+      { label: "💼 In-Demand Jobs (PR)", href: "/in-demand-jobs" },
       { label: "Student Visa", href: "/services/student-visa" },
       { label: "LMIA Assistance", href: "/services/lmia-assistance" },
       { label: "PNP Application", href: "/services/pnp-application" },

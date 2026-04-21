@@ -650,6 +650,13 @@ const CRSCalculatorPage = () => {
           </div>
         </div>
       </section>
+      <PathwayWidget />
+      <ReturnLoopCard />
+      <ConnectedFooter
+        tool={{ label: "Find your NOC code", href: "/noc-finder" }}
+        hub={{ label: "Express Entry Hub", href: "/express-entry" }}
+        funnel={{ label: "Get your best pathway", href: "/quiz" }}
+      />
     </div>
   );
 };

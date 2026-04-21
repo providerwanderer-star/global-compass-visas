@@ -13,6 +13,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Shareable from "@/components/Shareable";
 import LiveExpressEntry from "@/components/LiveExpressEntry";
 import LiveDataStrip from "@/components/LiveDataStrip";
+import HighDemandJobsHome from "@/components/HighDemandJobsHome";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -710,6 +711,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* High-Demand Jobs → PR Pathway Engine */}
+      <HighDemandJobsHome />
 
       {/* FAQ */}
       <section className="section-padding section-light">

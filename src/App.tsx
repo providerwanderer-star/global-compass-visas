@@ -36,6 +36,7 @@ import ComparisonPage from "@/pages/ComparisonPage";
 import AustraliaSubPage from "@/pages/AustraliaSubPage";
 import UKImmigrationPage from "@/pages/UKImmigrationPage";
 import GermanyImmigrationPage from "@/pages/GermanyImmigrationPage";
+import InDemandJobsPage from "@/pages/InDemandJobsPage";
 
 const queryClient = new QueryClient();
 
@@ -84,6 +85,7 @@ const App = () => (
               <Route path="/pnp-tracker" element={<PNPTrackerPage />} />
               <Route path="/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/immigration-cost-calculator" element={<ImmigrationCostPage />} />
+              <Route path="/in-demand-jobs" element={<InDemandJobsPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

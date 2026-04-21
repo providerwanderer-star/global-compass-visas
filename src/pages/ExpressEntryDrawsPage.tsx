@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { ChevronRight, ExternalLink, ArrowRight, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 import { expressEntryDraws, drawsLastUpdated } from "@/data/expressEntryDraws";
 
 const formatDate = (iso: string) =>
@@ -112,6 +114,30 @@ const ExpressEntryDrawsPage = () => (
           <ExternalLink className="h-3.5 w-3.5" /> Source:
           <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/submit-profile/rounds-invitations.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-gold underline">IRCC — Rounds of Invitations</a>
         </p>
+
+        {/* CRS Trend Chart */}
+        <div className="mt-12">
+          <h2 className="font-display text-2xl font-bold text-foreground mb-2">CRS cutoff trend (last {expressEntryDraws.length} draws)</h2>
+          <p className="text-sm text-muted-foreground mb-5">PNP draws inflate the line because they require 600+ bonus points. General CEC draws hover around 510–540 in 2026.</p>
+          <div className="bg-card border border-border rounded-2xl p-4 md:p-6">
+            <ResponsiveContainer width="100%" height={320}>
+              <LineChart data={[...expressEntryDraws].reverse().map(d => ({ date: d.date.slice(5), crs: d.crsCutoff, category: d.category }))}>
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                <XAxis dataKey="date" stroke="hsl(var(--muted-foreground))" fontSize={11} />
+                <YAxis stroke="hsl(var(--muted-foreground))" fontSize={11} domain={[380, 760]} />
+                <Tooltip
+                  contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8, fontSize: 12 }}
+                  labelStyle={{ color: "hsl(var(--foreground))", fontWeight: 600 }}
+                />
+                <Line type="monotone" dataKey="crs" stroke="hsl(var(--gold))" strokeWidth={2.5} dot={{ r: 3, fill: "hsl(var(--gold))" }} activeDot={{ r: 5 }} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        <div className="mt-10">
+          <PathwayWidget />
+        </div>
 
         {/* CTA */}
         <div className="mt-10 bg-gradient-to-br from-primary to-primary/90 text-primary-foreground rounded-2xl p-6 md:p-8 text-center">

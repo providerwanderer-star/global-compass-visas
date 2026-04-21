@@ -1,8 +1,10 @@
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ChevronRight, ExternalLink, ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
 import { pnpSnapshots, pnpLastUpdated } from "@/data/pnpDraws";
 
 const formatDate = (iso: string) =>
@@ -15,7 +17,13 @@ const faqs = [
   { q: "How long does PNP processing take?", a: "Provincial nomination itself takes 2–6 months depending on stream. Once nominated, PR processing via Express Entry takes about 11 months; paper-based PNP takes around 21 months." },
 ];
 
-const PNPDrawsPage = () => (
+const PNPDrawsPage = () => {
+  const [filter, setFilter] = useState<string>("all");
+  const filtered = useMemo(
+    () => filter === "all" ? pnpSnapshots : pnpSnapshots.filter((p) => p.code === filter),
+    [filter]
+  );
+  return (
   <div>
     <Helmet>
       <title>Canada PNP Draw Tracker 2026 — Provincial Nomination Updates | 4 Aces Visa</title>
@@ -62,8 +70,22 @@ const PNPDrawsPage = () => (
           ⚠️ <strong className="text-foreground">Snapshot data:</strong> Provincial draws happen on different schedules and aren't published via a unified API. We mirror official sources weekly. Always verify the latest update on each province's official page (linked below).
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="flex flex-wrap items-center gap-2 mb-6">
+          <span className="text-sm font-semibold text-foreground mr-2">Filter province:</span>
+          <button onClick={() => setFilter("all")}
+            className={`text-xs font-bold px-3 py-1.5 rounded-full transition-colors ${filter === "all" ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground hover:bg-secondary/70"}`}>
+            All ({pnpSnapshots.length})
+          </button>
           {pnpSnapshots.map((p) => (
+            <button key={p.code} onClick={() => setFilter(p.code)}
+              className={`text-xs font-bold px-3 py-1.5 rounded-full transition-colors ${filter === p.code ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground hover:bg-secondary/70"}`}>
+              {p.flag} {p.code}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {filtered.map((p) => (
             <div key={p.code} className="bg-card border border-border rounded-2xl p-6 card-interactive">
               <div className="flex items-start justify-between mb-3">
                 <div>
@@ -94,6 +116,10 @@ const PNPDrawsPage = () => (
             <Link to="/services/pnp-application"><Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">PNP Service Details</Button></Link>
           </div>
         </div>
+
+        <div className="mt-8">
+          <PathwayWidget />
+        </div>
       </div>
     </section>
 
@@ -116,6 +142,7 @@ const PNPDrawsPage = () => (
       </div>
     </section>
   </div>
-);
+  );
+};
 
 export default PNPDrawsPage;

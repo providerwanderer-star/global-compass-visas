@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
 import { expressEntryDraws, drawsLastUpdated } from "@/data/expressEntryDraws";
 
 const crsFaqs = [
@@ -289,7 +290,7 @@ const CRSCalculatorPage = () => {
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 bg-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-bold mb-4 border border-gold/30">
               <Calculator className="h-3.5 w-3.5" />
-              Free — Instant — Accurate to 2026 CRS Formula
+              Free — Instant — Updated {new Date(drawsLastUpdated).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" })}
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4 leading-tight">
               Canada CRS Score
@@ -756,6 +757,9 @@ const CRSCalculatorPage = () => {
       {/* FAQ */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto max-w-3xl">
+          <div className="mb-10">
+            <PathwayWidget />
+          </div>
           <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
               CRS Calculator — FAQ

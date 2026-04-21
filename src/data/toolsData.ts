@@ -1,4 +1,4 @@
-import { Calculator, Search, TrendingUp, Map, Clock, Compass, Scale, DollarSign, LucideIcon } from "lucide-react";
+import { Calculator, Search, TrendingUp, Map, Clock, Compass, Scale, DollarSign, CheckCircle2, LucideIcon } from "lucide-react";
 
 export interface ToolItem {
   icon: LucideIcon;
@@ -71,6 +71,14 @@ export const tools: ToolItem[] = [
     title: "IRCC Fees Calculator",
     desc: "Current government fees in CAD + custom estimator for your application.",
     href: "/tools/ircc-fees",
+    status: "live",
+    updated: "2026-04-21",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Eligibility Checker",
+    desc: "6 questions, 60 seconds — see which Canadian pathways you qualify for.",
+    href: "/eligibility-checker",
     status: "live",
     updated: "2026-04-21",
   },

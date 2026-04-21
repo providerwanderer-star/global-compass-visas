@@ -41,6 +41,8 @@ import ProvinceHubPage from "@/pages/ProvinceHubPage";
 import CaregiverPathwayPage from "@/pages/CaregiverPathwayPage";
 import IrccFeesPage from "@/pages/IrccFeesPage";
 import ImmigrationCostCalculatorPage from "@/pages/ImmigrationCostCalculatorPage";
+import EligibilityCheckerPage from "@/pages/EligibilityCheckerPage";
+import OPTToCanadaPage from "@/pages/OPTToCanadaPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -81,6 +83,7 @@ const App = () => (
               <Route path="/tools/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/tools/noc-finder" element={<NOCFinderPage />} />
               <Route path="/tools/compare-pathways" element={<ComparePathwaysPage />} />
+              <Route path="/compare" element={<ComparePathwaysPage />} />
               <Route path="/tools/ircc-fees" element={<IrccFeesPage />} />
               {/* Spec-aliased flat routes (mirror /tools/* for SEO) */}
               <Route path="/noc-finder" element={<NOCFinderPage />} />
@@ -88,6 +91,9 @@ const App = () => (
               <Route path="/pnp-tracker" element={<PNPDrawsPage />} />
               <Route path="/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/immigration-cost-calculator" element={<ImmigrationCostCalculatorPage />} />
+              <Route path="/eligibility-checker" element={<EligibilityCheckerPage />} />
+              <Route path="/tools/eligibility-checker" element={<EligibilityCheckerPage />} />
+              <Route path="/opt-to-canada" element={<OPTToCanadaPage />} />
               <Route path="/family-sponsorship" element={<FamilySponsorshipHubPage />} />
               <Route path="/study-to-pr" element={<StudyToPRPage />} />
               <Route path="/caregiver-pathway" element={<CaregiverPathwayPage />} />

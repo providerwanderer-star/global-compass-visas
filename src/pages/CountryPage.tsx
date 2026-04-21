@@ -124,6 +124,8 @@ const CountryPage = () => {
         </div>
       </section>
 
+      {country.slug !== "canada" && <CanadaRedirectBanner countryName={country.name} />}
+
       {/* Quick Answer (AEO/GEO direct-answer block) */}
       {country.quickAnswer && (
         <section className="bg-card border-b border-border">

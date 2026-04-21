@@ -96,6 +96,7 @@ const defaults: FormState = {
 const CRSCalculatorPage = () => {
   const [form, setForm] = useState<FormState>(defaults);
   const [calculated, setCalculated] = useState(false);
+  const { profile, update } = useUserProfile();
 
   const set = (key: keyof FormState, value: string | number | boolean) => {
     setForm((f) => ({ ...f, [key]: value }));
@@ -131,6 +132,26 @@ const CRSCalculatorPage = () => {
   if (form.sibling) additional += 15;
 
   const total = Math.min(coreHuman + skillTransfer + additional, 1200);
+
+  // Persist score to profile (debounced via effect)
+  useEffect(() => {
+    if (total > 0 && total !== profile.crsScore) {
+      update({ crsScore: total, intent: "PR" });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [total]);
+
+  // ── CRS vs latest cutoff intelligence ──
+  const latestGeneral = expressEntryDraws.find((d) => d.category === "General");
+  const latestSTEM = expressEntryDraws.find((d) => d.category === "STEM");
+  const latestHealth = expressEntryDraws.find((d) => d.category === "Healthcare");
+  const latestFrench = expressEntryDraws.find((d) => d.category === "French");
+  const cutoffComparisons = [
+    { name: "General", draw: latestGeneral },
+    { name: "STEM", draw: latestSTEM },
+    { name: "Healthcare", draw: latestHealth },
+    { name: "French", draw: latestFrench },
+  ].filter((c) => c.draw);
 
   const breakdown = [
     { label: "Age", points: age, max: form.hasSpouse ? 100 : 110 },

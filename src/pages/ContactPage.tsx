@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Phone, MapPin, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import EligibilityForm from "@/components/EligibilityForm";
@@ -38,7 +38,6 @@ const ContactPage = () => {
               "@type": "Organization",
               "name": "4 Aces Visa",
               "telephone": "+1-647-862-2190",
-              "email": "sahil280389@gmail.com"
             }
           })}
         </script>

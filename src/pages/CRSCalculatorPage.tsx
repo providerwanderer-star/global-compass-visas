@@ -79,6 +79,9 @@ interface FormState {
   jobOfferNOC: string;
   canadianEducation: string;
   sibling: boolean;
+  spouseEducation: number;
+  spouseClb: number;
+  spouseCanadianExp: number;
 }
 
 const defaults: FormState = {
@@ -94,7 +97,57 @@ const defaults: FormState = {
   jobOfferNOC: "none",
   canadianEducation: "none",
   sibling: false,
+  spouseEducation: 4,
+  spouseClb: 7,
+  spouseCanadianExp: 0,
 };
+
+// Spouse factor points (added to total when hasSpouse = true)
+function getSpousePoints(form: FormState): number {
+  let pts = 0;
+  // Spouse education (max 10)
+  const spouseEduPts = [0, 2, 6, 7, 8, 9, 10, 10, 10];
+  pts += spouseEduPts[form.spouseEducation] ?? 0;
+  // Spouse first language (max 20)
+  const clbLang = Math.min(form.spouseClb, 10);
+  pts +=
+    clbLang >= 9 ? 20 : clbLang >= 8 ? 16 : clbLang >= 7 ? 12 : clbLang >= 6 ? 8 : clbLang >= 5 ? 4 : 0;
+  // Spouse Canadian work exp (max 10)
+  const spouseWorkPts = [0, 5, 7, 8, 9, 10];
+  pts += spouseWorkPts[Math.min(form.spouseCanadianExp, 5)] ?? 0;
+  return pts;
+}
+
+// Single source of truth for total CRS calculation (used by main display + What-If scenarios)
+function calculateTotal(form: FormState): number {
+  const age = getAgePoints(form.age, form.hasSpouse);
+  const education = getEducationPoints(form.education, form.hasSpouse);
+  const langFirst = getLanguagePoints(form.clbFirst, form.hasSpouse, true);
+  const langSecond = getLanguagePoints(form.clbSecond, form.hasSpouse, false);
+  const foreignExp = getWorkExpPoints(form.foreignExp, form.hasSpouse, false);
+  const canadianExp = getWorkExpPoints(form.canadianExp, form.hasSpouse, true);
+  const coreHuman = age + education + langFirst + langSecond + foreignExp + canadianExp;
+
+  let skillTransfer = 0;
+  if (form.clbFirst >= 9 && form.education !== "none") skillTransfer += 25;
+  if (form.clbFirst >= 7 && form.canadianExp > 0) skillTransfer += 25;
+  if (form.foreignExp >= 3 && form.education !== "none") skillTransfer += 25;
+  skillTransfer = Math.min(skillTransfer, 100);
+
+  let additional = 0;
+  if (form.hasPNP) additional += 600;
+  if (form.hasJobOffer) {
+    if (form.jobOfferNOC === "00") additional += 200;
+    else additional += 50;
+  }
+  if (form.canadianEducation === "one_two_year") additional += 15;
+  if (form.canadianEducation === "degree") additional += 30;
+  if (form.sibling) additional += 15;
+
+  const spouse = form.hasSpouse ? getSpousePoints(form) : 0;
+
+  return Math.min(coreHuman + skillTransfer + additional + spouse, 1200);
+}
 
 const CRSCalculatorPage = () => {
   const [form, setForm] = useState<FormState>(defaults);
@@ -133,7 +186,8 @@ const CRSCalculatorPage = () => {
   if (form.canadianEducation === "degree") additional += 30;
   if (form.sibling) additional += 15;
 
-  const total = Math.min(coreHuman + skillTransfer + additional, 1200);
+  const spousePts = form.hasSpouse ? getSpousePoints(form) : 0;
+  const total = calculateTotal(form);
 
   const breakdown = [
     { label: "Age", points: age, max: form.hasSpouse ? 100 : 110 },
@@ -143,6 +197,7 @@ const CRSCalculatorPage = () => {
     { label: "Foreign Work Exp.", points: foreignExp, max: form.hasSpouse ? 38 : 38 },
     { label: "Canadian Work Exp.", points: canadianExp, max: 80 },
     { label: "Skill Transferability", points: skillTransfer, max: 100 },
+    ...(form.hasSpouse ? [{ label: "Spouse Factors", points: spousePts, max: 40 }] : []),
     { label: "Additional (PNP/Offer/etc)", points: additional, max: 600 },
   ];
 
@@ -286,6 +341,60 @@ const CRSCalculatorPage = () => {
                     <option value="married">Married / Common-Law Partner</option>
                   </select>
                 </div>
+
+                {/* Spouse-specific fields */}
+                {form.hasSpouse && (
+                  <div className="bg-muted/30 rounded-xl p-4 space-y-4 border border-border">
+                    <h3 className="font-semibold text-foreground text-sm">Spouse / Common-Law Partner Details</h3>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1">Spouse Education Level</label>
+                      <select
+                        value={form.spouseEducation}
+                        onChange={(e) => set("spouseEducation", +e.target.value)}
+                        className="w-full border border-border rounded-lg px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-gold/40"
+                      >
+                        <option value={0}>Less than secondary</option>
+                        <option value={1}>Secondary diploma</option>
+                        <option value={2}>One-year post-secondary</option>
+                        <option value={3}>Two-year post-secondary</option>
+                        <option value={4}>Bachelor's degree</option>
+                        <option value={5}>Two+ degrees (one 3+ years)</option>
+                        <option value={6}>Master's degree</option>
+                        <option value={7}>Doctoral (PhD)</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1">Spouse First Language CLB</label>
+                      <select
+                        value={form.spouseClb}
+                        onChange={(e) => set("spouseClb", +e.target.value)}
+                        className="w-full border border-border rounded-lg px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-gold/40"
+                      >
+                        {[4, 5, 6, 7, 8, 9, 10].map((n) => (
+                          <option key={n} value={n}>CLB {n}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1">Spouse Canadian Work Experience</label>
+                      <select
+                        value={form.spouseCanadianExp}
+                        onChange={(e) => set("spouseCanadianExp", +e.target.value)}
+                        className="w-full border border-border rounded-lg px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-gold/40"
+                      >
+                        <option value={0}>None</option>
+                        <option value={1}>1 year</option>
+                        <option value={2}>2 years</option>
+                        <option value={3}>3 years</option>
+                        <option value={4}>4 years</option>
+                        <option value={5}>5+ years</option>
+                      </select>
+                    </div>
+                  </div>
+                )}
 
                 {/* Education */}
                 <div>
@@ -495,6 +604,59 @@ const CRSCalculatorPage = () => {
                   </Button>
                 </a>
               </motion.div>
+
+              {/* What If Scenarios */}
+              <div className="bg-card rounded-2xl border border-border p-6">
+                <h3 className="font-display font-bold text-lg text-foreground mb-1">What If I…</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  See how changes to your profile would affect your CRS score.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    {
+                      label: "Improved my language to CLB 9",
+                      condition: form.clbFirst < 9,
+                      delta: calculateTotal({ ...form, clbFirst: 9 }) - calculateTotal(form),
+                    },
+                    {
+                      label: "Improved my language to CLB 10",
+                      condition: form.clbFirst < 10,
+                      delta: calculateTotal({ ...form, clbFirst: 10 }) - calculateTotal(form),
+                    },
+                    {
+                      label: "Added 1 more year of Canadian work experience",
+                      condition: form.canadianExp < 5,
+                      delta:
+                        calculateTotal({ ...form, canadianExp: Math.min(form.canadianExp + 1, 5) }) -
+                        calculateTotal(form),
+                    },
+                    {
+                      label: "Had a valid job offer (NOC TEER 0/1/2/3)",
+                      condition: !form.hasJobOffer,
+                      delta:
+                        calculateTotal({ ...form, hasJobOffer: true, jobOfferNOC: "none" }) -
+                        calculateTotal(form),
+                    },
+                    {
+                      label: "Got a Provincial Nomination (PNP)",
+                      condition: !form.hasPNP,
+                      delta: 600,
+                    },
+                  ]
+                    .filter((s) => s.condition && s.delta > 0)
+                    .map((scenario) => (
+                      <div
+                        key={scenario.label}
+                        className="flex items-center justify-between gap-3 p-3 bg-success/10 border border-success/30 rounded-lg"
+                      >
+                        <span className="text-sm text-foreground">{scenario.label}</span>
+                        <span className="shrink-0 font-bold text-success text-sm">
+                          +{scenario.delta} pts
+                        </span>
+                      </div>
+                    ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

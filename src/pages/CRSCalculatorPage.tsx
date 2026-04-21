@@ -79,6 +79,9 @@ interface FormState {
   jobOfferNOC: string;
   canadianEducation: string;
   sibling: boolean;
+  spouseEducation: number;
+  spouseClb: number;
+  spouseCanadianExp: number;
 }
 
 const defaults: FormState = {
@@ -94,7 +97,57 @@ const defaults: FormState = {
   jobOfferNOC: "none",
   canadianEducation: "none",
   sibling: false,
+  spouseEducation: 4,
+  spouseClb: 7,
+  spouseCanadianExp: 0,
 };
+
+// Spouse factor points (added to total when hasSpouse = true)
+function getSpousePoints(form: FormState): number {
+  let pts = 0;
+  // Spouse education (max 10)
+  const spouseEduPts = [0, 2, 6, 7, 8, 9, 10, 10, 10];
+  pts += spouseEduPts[form.spouseEducation] ?? 0;
+  // Spouse first language (max 20)
+  const clbLang = Math.min(form.spouseClb, 10);
+  pts +=
+    clbLang >= 9 ? 20 : clbLang >= 8 ? 16 : clbLang >= 7 ? 12 : clbLang >= 6 ? 8 : clbLang >= 5 ? 4 : 0;
+  // Spouse Canadian work exp (max 10)
+  const spouseWorkPts = [0, 5, 7, 8, 9, 10];
+  pts += spouseWorkPts[Math.min(form.spouseCanadianExp, 5)] ?? 0;
+  return pts;
+}
+
+// Single source of truth for total CRS calculation (used by main display + What-If scenarios)
+function calculateTotal(form: FormState): number {
+  const age = getAgePoints(form.age, form.hasSpouse);
+  const education = getEducationPoints(form.education, form.hasSpouse);
+  const langFirst = getLanguagePoints(form.clbFirst, form.hasSpouse, true);
+  const langSecond = getLanguagePoints(form.clbSecond, form.hasSpouse, false);
+  const foreignExp = getWorkExpPoints(form.foreignExp, form.hasSpouse, false);
+  const canadianExp = getWorkExpPoints(form.canadianExp, form.hasSpouse, true);
+  const coreHuman = age + education + langFirst + langSecond + foreignExp + canadianExp;
+
+  let skillTransfer = 0;
+  if (form.clbFirst >= 9 && form.education !== "none") skillTransfer += 25;
+  if (form.clbFirst >= 7 && form.canadianExp > 0) skillTransfer += 25;
+  if (form.foreignExp >= 3 && form.education !== "none") skillTransfer += 25;
+  skillTransfer = Math.min(skillTransfer, 100);
+
+  let additional = 0;
+  if (form.hasPNP) additional += 600;
+  if (form.hasJobOffer) {
+    if (form.jobOfferNOC === "00") additional += 200;
+    else additional += 50;
+  }
+  if (form.canadianEducation === "one_two_year") additional += 15;
+  if (form.canadianEducation === "degree") additional += 30;
+  if (form.sibling) additional += 15;
+
+  const spouse = form.hasSpouse ? getSpousePoints(form) : 0;
+
+  return Math.min(coreHuman + skillTransfer + additional + spouse, 1200);
+}
 
 const CRSCalculatorPage = () => {
   const [form, setForm] = useState<FormState>(defaults);

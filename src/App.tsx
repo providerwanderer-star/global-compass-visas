@@ -47,7 +47,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <Navbar />
-          <main className="pt-16 md:pt-20">
+          <main className="pt-16 md:pt-20 pb-20 md:pb-0">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/immigration/:slug" element={<CountryPage />} />

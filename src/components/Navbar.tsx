@@ -18,6 +18,7 @@ const navLinks = [
     label: "Services", href: "#",
     children: [
       { label: "🔥 Express Entry PR", href: "/express-entry" },
+      { label: "💼 In-Demand Jobs (PR)", href: "/in-demand-jobs" },
       { label: "Student Visa", href: "/services/student-visa" },
       { label: "LMIA Assistance", href: "/services/lmia-assistance" },
       { label: "PNP Application", href: "/services/pnp-application" },
@@ -82,6 +83,7 @@ const navLinks = [
     children: [
       { label: "🧮 CRS Calculator", href: "/crs-calculator" },
       { label: "🔍 NOC Finder", href: "/noc-finder" },
+      { label: "💼 In-Demand Jobs", href: "/in-demand-jobs" },
       { label: "📊 EE Draw History", href: "/express-entry/draws" },
       { label: "🗺️ PNP Tracker", href: "/pnp-tracker" },
       { label: "⏱️ Processing Times", href: "/processing-times" },

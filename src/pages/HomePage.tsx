@@ -14,6 +14,7 @@ import Shareable from "@/components/Shareable";
 import LiveExpressEntry from "@/components/LiveExpressEntry";
 import LiveDataStrip from "@/components/LiveDataStrip";
 import HighDemandJobsHome from "@/components/HighDemandJobsHome";
+import LiveJobsHighlightStrip from "@/components/LiveJobsHighlightStrip";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -714,6 +715,9 @@ const HomePage = () => {
 
       {/* High-Demand Jobs → PR Pathway Engine */}
       <HighDemandJobsHome />
+
+      {/* Live Job Signals — ticker strip */}
+      <LiveJobsHighlightStrip />
 
       {/* FAQ */}
       <section className="section-padding section-light">

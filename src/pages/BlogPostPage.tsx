@@ -223,6 +223,9 @@ const BlogPostPage = () => {
 
               {renderContent(post.content)}
 
+              {/* Mid-content conversion */}
+              <SmartCTA variant="crs" position="mid" />
+
               {/* FAQ Section */}
               {enhancement?.faqs && enhancement.faqs.length > 0 && (
                 <div id="faqs" className="mt-12 pt-8 border-t border-border scroll-mt-24">

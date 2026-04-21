@@ -229,6 +229,7 @@ const ServicePage = () => {
       {/* FAQ */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto max-w-3xl">
+          <SmartCTA variant="pathway" position="mid" />
           <AnimatedSection className="text-center mb-8">
             <h2 className="font-display text-3xl font-bold text-foreground">Frequently Asked Questions</h2>
           </AnimatedSection>

@@ -326,6 +326,7 @@ const CountryPage = () => {
       {/* CTA */}
       <section className="section-padding bg-primary" id="eligibility">
         <div className="container-narrow mx-auto">
+          <SmartCTA variant="crs" position="mid" className="mb-10 bg-card/95" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-primary-foreground mb-4">

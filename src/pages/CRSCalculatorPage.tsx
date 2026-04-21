@@ -9,6 +9,15 @@ import {
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
+import { expressEntryDraws, drawsLastUpdated } from "@/data/expressEntryDraws";
+
+const crsFaqs = [
+  { q: "What is a good CRS score for Canada PR in 2026?", a: "Recent general Express Entry draws have had CRS cutoffs between 510 and 540. Category-based draws (healthcare, STEM, French, trades) typically cut off lower at 380–470. With a Provincial Nomination, any score above ~550 effectively guarantees an ITA because PNP adds 600 points." },
+  { q: "How accurate is this CRS calculator?", a: "This calculator uses the official IRCC CRS formula for core human capital, skill transferability, and additional points. It produces an estimate accurate within ±5 points for most profiles. Final official scoring requires submitting an Express Entry profile on the IRCC portal." },
+  { q: "Does my spouse's score count?", a: "Yes — when married or in a common-law partnership where the spouse is accompanying you to Canada, your maximum points for age, education, language, and work experience are reduced (because some are reallocated to the spouse). This calculator handles both single and partnered scoring." },
+  { q: "How can I improve my CRS score the fastest?", a: "Top three levers: (1) Get a PNP nomination — adds 600 points instantly. (2) Improve IELTS to CLB 9 or higher — can add 30–80 points depending on starting band. (3) Add French language test results — second-language CLB 7+ adds up to 74 points." },
+  { q: "Is the CRS calculator free?", a: "Yes — completely free, no signup required. We provide it as a public tool. If you want a personalised improvement plan, you can book a free profile assessment with our licensed consultants." },
+];
 
 // ─── CRS Scoring Functions ──────────────────────────────────────────────────
 
@@ -147,6 +156,20 @@ const CRSCalculatorPage = () => {
 
   const status = getCutoffStatus();
 
+  // Pull the most recent live draws for the comparison panel (auto-refreshes from expressEntryDraws.ts)
+  const liveCutoffs = (() => {
+    const general = expressEntryDraws.find((d) => /Canadian Experience|General|All program/i.test(d.category));
+    const stem = expressEntryDraws.find((d) => /STEM/i.test(d.category));
+    const healthcare = expressEntryDraws.find((d) => /Healthcare/i.test(d.category));
+    const french = expressEntryDraws.find((d) => /French/i.test(d.category));
+    const fallback = expressEntryDraws[0];
+    return [
+      { label: "Latest Draw", cutoff: (general ?? fallback).crsCutoff },
+      { label: "Healthcare Category", cutoff: (healthcare ?? fallback).crsCutoff },
+      { label: french ? "French Category" : "STEM Category", cutoff: (french ?? stem ?? fallback).crsCutoff },
+    ];
+  })();
+
   return (
     <div>
       <Helmet>
@@ -185,6 +208,14 @@ const CRSCalculatorPage = () => {
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
                   { "@type": "ListItem", position: 2, name: "CRS Calculator", item: "https://www.4acesvisa.com/crs-calculator" },
                 ],
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: crsFaqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
               },
             ],
           })}
@@ -426,12 +457,10 @@ const CRSCalculatorPage = () => {
 
                 {/* Recent cutoff comparison */}
                 <div className="bg-white/5 rounded-xl p-4 mb-5 text-left">
-                  <p className="text-xs text-primary-foreground/50 mb-2 font-semibold uppercase tracking-wider">Recent Draw Cutoffs</p>
-                  {[
-                    { label: "Latest General Draw", cutoff: 448 },
-                    { label: "Category (STEM)", cutoff: 435 },
-                    { label: "Category (Healthcare)", cutoff: 422 },
-                  ].map((d) => (
+                  <p className="text-xs text-primary-foreground/50 mb-2 font-semibold uppercase tracking-wider">
+                    Latest IRCC Cutoffs · Updated {new Date(drawsLastUpdated).toLocaleDateString("en-CA", { month: "short", day: "numeric" })}
+                  </p>
+                  {liveCutoffs.map((d) => (
                     <div key={d.label} className="flex items-center justify-between mb-1.5">
                       <span className="text-xs text-primary-foreground/70">{d.label}</span>
                       <div className="flex items-center gap-2">
@@ -559,6 +588,31 @@ const CRSCalculatorPage = () => {
             </table>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-3">⭐ CLB 9 is the recommended target for maximum CRS impact</p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding section-soft">
+        <div className="container-narrow mx-auto max-w-3xl">
+          <AnimatedSection>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
+              CRS Calculator — FAQ
+            </h2>
+          </AnimatedSection>
+          <div className="space-y-3">
+            {crsFaqs.map((f) => (
+              <details key={f.q} className="bg-card border border-border rounded-xl p-5 group">
+                <summary className="font-semibold text-foreground cursor-pointer list-none flex items-start justify-between gap-4">
+                  <span>{f.q}</span>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0 mt-1 group-open:rotate-90 transition-transform" />
+                </summary>
+                <div className="text-sm text-muted-foreground mt-3 leading-relaxed">{f.a}</div>
+              </details>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground text-center mt-6">
+            Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-gold underline">IRCC CRS Grid</a>
+          </p>
         </div>
       </section>
 

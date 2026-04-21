@@ -29,6 +29,10 @@ import H1BToCanadaPRPage from "@/pages/H1BToCanadaPRPage";
 import USAToCanadaPage from "@/pages/USAToCanadaPage";
 import CanadaPRForIndiansPage from "@/pages/CanadaPRForIndiansPage";
 import ToolsHubPage from "@/pages/ToolsHubPage";
+import ExpressEntryDrawsPage from "@/pages/ExpressEntryDrawsPage";
+import PNPDrawsPage from "@/pages/PNPDrawsPage";
+import ProcessingTimesPage from "@/pages/ProcessingTimesPage";
+import NOCFinderPage from "@/pages/NOCFinderPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -64,6 +68,10 @@ const App = () => (
               <Route path="/usa-to-canada-immigration" element={<USAToCanadaPage />} />
               <Route path="/canada-pr-for-indians" element={<CanadaPRForIndiansPage />} />
               <Route path="/tools" element={<ToolsHubPage />} />
+              <Route path="/tools/express-entry-draws" element={<ExpressEntryDrawsPage />} />
+              <Route path="/tools/pnp-draws" element={<PNPDrawsPage />} />
+              <Route path="/tools/processing-times" element={<ProcessingTimesPage />} />
+              <Route path="/tools/noc-finder" element={<NOCFinderPage />} />
               <Route path="/india/:slug" element={<StateHubPage />} />
               <Route path="/canada/:slug" element={<StateHubPage />} />
               <Route path="*" element={<NotFound />} />

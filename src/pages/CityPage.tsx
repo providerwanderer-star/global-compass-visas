@@ -9,7 +9,13 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import InternalLinks from "@/components/InternalLinks";
 import FAQCallToAction from "@/components/FAQCallToAction";
 import { cities } from "@/data/cityData";
-import { cityToLinks, getRelatedBlogData, getRelatedServiceData } from "@/data/internalLinks";
+import {
+  cityToLinks,
+  getRelatedBlogData,
+  getRelatedServiceData,
+  getRelatedToolData,
+  DEFAULT_TOOL_SET,
+} from "@/data/internalLinks";
 
 const staggerContainer = {
   hidden: {},
@@ -245,6 +251,7 @@ const CityPage = () => {
           <InternalLinks
             blogs={getRelatedBlogData(links.blogs).map((b) => ({ slug: b.slug, title: b.title, excerpt: b.excerpt }))}
             services={getRelatedServiceData(links.services).map((s) => ({ slug: s.slug, title: s.title }))}
+            tools={getRelatedToolData(DEFAULT_TOOL_SET).map((t) => ({ slug: t.slug, title: t.title, href: t.href, excerpt: t.excerpt }))}
             title={`Immigration Resources for ${city.name}`}
           />
         );

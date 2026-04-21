@@ -83,6 +83,7 @@ const App = () => (
               <Route path="/tools/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/tools/noc-finder" element={<NOCFinderPage />} />
               <Route path="/tools/compare-pathways" element={<ComparePathwaysPage />} />
+              <Route path="/compare" element={<ComparePathwaysPage />} />
               <Route path="/tools/ircc-fees" element={<IrccFeesPage />} />
               {/* Spec-aliased flat routes (mirror /tools/* for SEO) */}
               <Route path="/noc-finder" element={<NOCFinderPage />} />

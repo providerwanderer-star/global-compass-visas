@@ -335,6 +335,9 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Quick search strip — CRS jump + NOC search (matches solutionhub.ca pattern) */}
+      <HomeQuickSearch />
+
       {/* Live Express Entry draw ticker — freshness signal for AEO/GEO */}
       <LiveDrawTicker />
 

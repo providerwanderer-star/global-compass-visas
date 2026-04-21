@@ -193,6 +193,9 @@ const NOCFinderPage = () => {
 
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto max-w-3xl">
+          <div className="mb-10">
+            <PathwayWidget />
+          </div>
           <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">NOC Finder — FAQ</h2>
           </AnimatedSection>

@@ -83,6 +83,7 @@ const navLinks = [
     children: [
       { label: "🧮 CRS Calculator", href: "/crs-calculator" },
       { label: "🔍 NOC Finder", href: "/noc-finder" },
+      { label: "💼 In-Demand Jobs", href: "/in-demand-jobs" },
       { label: "📊 EE Draw History", href: "/express-entry/draws" },
       { label: "🗺️ PNP Tracker", href: "/pnp-tracker" },
       { label: "⏱️ Processing Times", href: "/processing-times" },

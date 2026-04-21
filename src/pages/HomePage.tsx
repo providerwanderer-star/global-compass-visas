@@ -10,6 +10,10 @@ import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
+import LiveDrawTicker from "@/components/LiveDrawTicker";
+import PathwayPicker from "@/components/PathwayPicker";
+import ToolsStrip from "@/components/ToolsStrip";
+import AudienceShortcuts from "@/components/AudienceShortcuts";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -99,13 +103,13 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>Your Complete Visa & Immigration Solution Specialist | 4 Aces Visa</title>
-        <meta name="description" content="Your all-in-one visa & immigration specialists. PR, work permits, study visas, visitor visas & family sponsorship for Canada, Australia, Germany & UK. 15,000+ visas processed. Free assessment." />
+        <title>Move to Canada — PR, Work & Study Pathway Portal | 4 Aces Visa</title>
+        <meta name="description" content="Canada immigration portal: CRS calculator, Express Entry draw tracker, NOC finder, PNP guidance and licensed consultants. PR, work permits, study & family pathways — end-to-end." />
         <link rel="canonical" href="https://www.4acesvisa.com/" />
-        <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
+        <meta name="keywords" content="move to Canada, Canada PR pathway, Express Entry 2026, CRS calculator, NOC finder, PNP draw tracker, Canada work permit, study to PR Canada, Canada immigration from India, H1B to Canada, 4 Aces Visa" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Your Complete Visa & Immigration Solution Specialist | 4 Aces Visa" />
-        <meta property="og:description" content="All-in-one immigration experts. PR, work permits, study visas, visitor visas & family sponsorship for Canada, Australia, Germany & UK. 15,000+ visas processed." />
+        <meta property="og:title" content="Move to Canada — PR, Work & Study Pathway Portal | 4 Aces Visa" />
+        <meta property="og:description" content="Canada immigration portal: CRS calculator, draw tracker, NOC finder and licensed consultants for PR, work, study & family pathways." />
         <meta property="og:url" content="https://www.4acesvisa.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -125,7 +129,6 @@ const HomePage = () => {
                 "description": "By the immigrants, for the immigrants. Global immigration consultancy for Canada, Australia, Germany & UK with 15,000+ successful visas and 98% approval rate.",
                 "foundingDate": "2016",
                 "telephone": "+1-647-862-2190",
-                "email": "sahil280389@gmail.com",
                 "contactPoint": [
                   {
                     "@type": "ContactPoint",
@@ -158,7 +161,6 @@ const HomePage = () => {
                 "image": "https://www.4acesvisa.com/favicon.ico",
                 "url": "https://www.4acesvisa.com",
                 "telephone": "+1-647-862-2190",
-                "email": "sahil280389@gmail.com",
                 "description": "Licensed immigration consultants specializing in Canada Express Entry PR, LMIA work permits, PNP, study permits, family sponsorship, visitor visas & citizenship for Canada, Australia, Germany & UK.",
                 "priceRange": "$$",
                 "address": {

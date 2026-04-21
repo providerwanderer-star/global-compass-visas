@@ -342,6 +342,60 @@ const CRSCalculatorPage = () => {
                   </select>
                 </div>
 
+                {/* Spouse-specific fields */}
+                {form.hasSpouse && (
+                  <div className="bg-muted/30 rounded-xl p-4 space-y-4 border border-border">
+                    <h3 className="font-semibold text-foreground text-sm">Spouse / Common-Law Partner Details</h3>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1">Spouse Education Level</label>
+                      <select
+                        value={form.spouseEducation}
+                        onChange={(e) => set("spouseEducation", +e.target.value)}
+                        className="w-full border border-border rounded-lg px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-gold/40"
+                      >
+                        <option value={0}>Less than secondary</option>
+                        <option value={1}>Secondary diploma</option>
+                        <option value={2}>One-year post-secondary</option>
+                        <option value={3}>Two-year post-secondary</option>
+                        <option value={4}>Bachelor's degree</option>
+                        <option value={5}>Two+ degrees (one 3+ years)</option>
+                        <option value={6}>Master's degree</option>
+                        <option value={7}>Doctoral (PhD)</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1">Spouse First Language CLB</label>
+                      <select
+                        value={form.spouseClb}
+                        onChange={(e) => set("spouseClb", +e.target.value)}
+                        className="w-full border border-border rounded-lg px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-gold/40"
+                      >
+                        {[4, 5, 6, 7, 8, 9, 10].map((n) => (
+                          <option key={n} value={n}>CLB {n}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1">Spouse Canadian Work Experience</label>
+                      <select
+                        value={form.spouseCanadianExp}
+                        onChange={(e) => set("spouseCanadianExp", +e.target.value)}
+                        className="w-full border border-border rounded-lg px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-gold/40"
+                      >
+                        <option value={0}>None</option>
+                        <option value={1}>1 year</option>
+                        <option value={2}>2 years</option>
+                        <option value={3}>3 years</option>
+                        <option value={4}>4 years</option>
+                        <option value={5}>5+ years</option>
+                      </select>
+                    </div>
+                  </div>
+                )}
+
                 {/* Education */}
                 <div>
                   <label className="block text-sm font-semibold text-foreground mb-1.5">Highest Education Level</label>

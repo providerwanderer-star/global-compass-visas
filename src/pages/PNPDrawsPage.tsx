@@ -1,8 +1,10 @@
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ChevronRight, ExternalLink, ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
 import { pnpSnapshots, pnpLastUpdated } from "@/data/pnpDraws";
 
 const formatDate = (iso: string) =>
@@ -15,7 +17,13 @@ const faqs = [
   { q: "How long does PNP processing take?", a: "Provincial nomination itself takes 2–6 months depending on stream. Once nominated, PR processing via Express Entry takes about 11 months; paper-based PNP takes around 21 months." },
 ];
 
-const PNPDrawsPage = () => (
+const PNPDrawsPage = () => {
+  const [filter, setFilter] = useState<string>("all");
+  const filtered = useMemo(
+    () => filter === "all" ? pnpSnapshots : pnpSnapshots.filter((p) => p.code === filter),
+    [filter]
+  );
+  return (
   <div>
     <Helmet>
       <title>Canada PNP Draw Tracker 2026 — Provincial Nomination Updates | 4 Aces Visa</title>

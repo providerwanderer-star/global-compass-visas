@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, Briefcase } from "lucide-react";
+import { ArrowRight, BookOpen, Briefcase, Wrench } from "lucide-react";
 
 interface RelatedLink {
   slug: string;
   title: string;
   excerpt?: string;
+  href?: string;
 }
 
 interface InternalLinksProps {
   blogs?: RelatedLink[];
   services?: RelatedLink[];
+  tools?: RelatedLink[];
   title?: string;
 }
 
-const InternalLinks = ({ blogs = [], services = [], title = "Related Resources" }: InternalLinksProps) => {
-  if (blogs.length === 0 && services.length === 0) return null;
+const InternalLinks = ({ blogs = [], services = [], tools = [], title = "Related Resources" }: InternalLinksProps) => {
+  if (blogs.length === 0 && services.length === 0 && tools.length === 0) return null;
 
   return (
     <section className="section-padding section-soft">
@@ -22,7 +24,33 @@ const InternalLinks = ({ blogs = [], services = [], title = "Related Resources" 
         <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8">
           {title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className={`grid grid-cols-1 ${tools.length > 0 ? "md:grid-cols-3" : "md:grid-cols-2"} gap-6`}>
+          {tools.length > 0 && (
+            <div>
+              <h3 className="font-display text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                <Wrench className="h-5 w-5 text-gold" /> Free Tools
+              </h3>
+              <div className="space-y-3">
+                {tools.map((t) => (
+                  <Link
+                    key={t.slug}
+                    to={t.href || `/tools/${t.slug}`}
+                    className="block bg-card rounded-xl border border-border p-4 card-interactive glow-hover group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-medium text-foreground text-sm group-hover:text-gold transition-colors">
+                        {t.title}
+                      </span>
+                      <ArrowRight className="h-4 w-4 text-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    {t.excerpt && (
+                      <p className="text-xs text-muted-foreground mt-1 line-clamp-1">{t.excerpt}</p>
+                    )}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
           {services.length > 0 && (
             <div>
               <h3 className="font-display text-lg font-semibold text-foreground mb-4 flex items-center gap-2">

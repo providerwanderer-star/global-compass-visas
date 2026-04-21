@@ -484,8 +484,49 @@ const HomePage = () => {
       {/* Pathway picker — 4 main PR routes to Canada */}
       <PathwayPicker />
 
-      {/* Tools & live data strip */}
-      <ToolsStrip />
+      {/* Immigration Tools Hub — 10-tile grid (spec) */}
+      <section className="section-padding section-light">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-8">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              🛠 Free Immigration Tools
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Everything You Need to Plan Your Move
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Canada's most comprehensive immigration toolkit — free, instant, no login required.
+            </p>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { icon: "🧮", label: "CRS Calculator", desc: "Check your Express Entry score", href: "/crs-calculator", badge: "Most Used" },
+              { icon: "🔍", label: "NOC Finder", desc: "Find your job's immigration code", href: "/noc-finder", badge: "New" },
+              { icon: "📊", label: "Draw History", desc: "Latest Express Entry cutoffs", href: "/express-entry/draws", badge: "Live" },
+              { icon: "🗺️", label: "PNP Tracker", desc: "All provincial draws in one place", href: "/pnp-tracker", badge: "New" },
+              { icon: "⏱️", label: "Processing Times", desc: "IRCC wait times by application", href: "/processing-times", badge: "" },
+              { icon: "💰", label: "Cost Calculator", desc: "Total immigration cost estimate", href: "/immigration-cost-calculator", badge: "New" },
+              { icon: "📋", label: "Pathway Quiz", desc: "Find your best immigration route", href: "/quiz", badge: "" },
+              { icon: "🌍", label: "Country Compare", desc: "Canada vs AU vs UK vs Germany", href: "/tools/compare-pathways", badge: "" },
+              { icon: "📝", label: "Document Checklist", desc: "Never miss a required document", href: "/documents/canada-pr", badge: "" },
+              { icon: "❓", label: "Immigration FAQ", desc: "Answers to 500+ questions", href: "/faq", badge: "" },
+            ].map((tool, i) => (
+              <Link key={i} to={tool.href} className="block group">
+                <div className="bg-card rounded-xl border border-border p-4 text-center hover:border-gold/50 hover:shadow-md transition-all h-full relative">
+                  {tool.badge && (
+                    <span className="absolute -top-2 -right-2 bg-gold text-accent-foreground text-[10px] font-bold px-2 py-0.5 rounded-full shadow-gold">
+                      {tool.badge}
+                    </span>
+                  )}
+                  <span className="text-2xl block mb-2">{tool.icon}</span>
+                  <h3 className="font-bold text-foreground text-xs mb-1">{tool.label}</h3>
+                  <p className="text-[11px] text-muted-foreground leading-tight">{tool.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Audience shortcuts — India / H1B / Student */}
       <AudienceShortcuts />

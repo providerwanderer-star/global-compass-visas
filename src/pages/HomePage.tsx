@@ -15,6 +15,7 @@ import LiveExpressEntry from "@/components/LiveExpressEntry";
 import LiveDataStrip from "@/components/LiveDataStrip";
 import HighDemandJobsHome from "@/components/HighDemandJobsHome";
 import LiveJobsHighlightStrip from "@/components/LiveJobsHighlightStrip";
+import NewsStripHome from "@/components/NewsStripHome";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -718,6 +719,9 @@ const HomePage = () => {
 
       {/* Live Job Signals — ticker strip */}
       <LiveJobsHighlightStrip />
+
+      {/* Immigration News strip */}
+      <NewsStripHome />
 
       {/* FAQ */}
       <section className="section-padding section-light">

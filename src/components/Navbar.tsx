@@ -93,7 +93,7 @@ const navLinks = [
     ],
   },
   { label: "Pathway Quiz", href: "/quiz" },
-  { label: "Blog", href: "/blog" },
+  { label: "News", href: "/news" },
   { label: "Contact", href: "/contact" },
 ];
 

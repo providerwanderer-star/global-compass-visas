@@ -8,9 +8,13 @@ import {
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/CountdownTimer";
 import EligibilityForm from "@/components/EligibilityForm";
+import ToolsCallout from "@/components/ToolsCallout";
+import { expressEntryDraws, drawsLastUpdated } from "@/data/expressEntryDraws";
 
 // Next anticipated Express Entry draw — update this regularly
 const NEXT_DRAW_DATE = new Date("2026-04-22T12:00:00-04:00");
+
+const latestDraw = expressEntryDraws[0];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -201,7 +205,10 @@ const ExpressEntryLandingPage = () => {
               Recent Express Entry Draws
             </h2>
             <p className="text-muted-foreground text-center mb-8 max-w-xl mx-auto">
-              Track the latest draw results to understand where your CRS score stands
+              Latest cutoff: <strong className="text-foreground">{latestDraw.crsCutoff} CRS</strong> ({latestDraw.category}) — updated {drawsLastUpdated}.{" "}
+              <Link to="/tools/express-entry-draws" className="text-gold font-semibold hover:underline">
+                View full archive →
+              </Link>
             </p>
           </motion.div>
           <div className="overflow-x-auto">
@@ -341,6 +348,13 @@ const ExpressEntryLandingPage = () => {
           </div>
         </div>
       </section>
+
+      <ToolsCallout
+        tools={["crs-calculator", "express-entry-draws", "noc-finder"]}
+        title="Plan your Express Entry move"
+        description="Use these free tools to validate your CRS score, latest cutoffs, and NOC eligibility before you apply."
+        variant="light"
+      />
 
       {/* Lead Form */}
       <section className="section-padding section-soft" id="assessment">

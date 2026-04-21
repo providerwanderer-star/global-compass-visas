@@ -7,7 +7,7 @@ import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
 import InternalLinks from "@/components/InternalLinks";
 import { services } from "@/data/serviceData";
-import { serviceToBlogs, getRelatedBlogData } from "@/data/internalLinks";
+import { serviceToBlogs, getRelatedBlogData, getRelatedToolData, DEFAULT_TOOL_SET } from "@/data/internalLinks";
 import FAQCallToAction from "@/components/FAQCallToAction";
 
 const staggerContainer = {
@@ -263,6 +263,7 @@ const ServicePage = () => {
 
       <InternalLinks
         blogs={getRelatedBlogData(serviceToBlogs[service.slug] || []).map((b) => ({ slug: b.slug, title: b.title, excerpt: b.excerpt }))}
+        tools={getRelatedToolData(DEFAULT_TOOL_SET).map((t) => ({ slug: t.slug, title: t.title, href: t.href, excerpt: t.excerpt }))}
         title="Related Articles"
       />
 

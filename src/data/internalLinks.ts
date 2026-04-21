@@ -203,3 +203,26 @@ export function getRelatedServiceData(slugs: string[]) {
     .map((slug) => services.find((s) => s.slug === slug))
     .filter(Boolean) as typeof services;
 }
+
+// ─── Tools registry ─────────────────────────────────────────────────────────
+export interface ToolLink {
+  slug: string;
+  title: string;
+  href: string;
+  excerpt: string;
+}
+
+export const TOOLS: ToolLink[] = [
+  { slug: "crs-calculator", title: "CRS Score Calculator", href: "/crs-calculator", excerpt: "Score your Express Entry profile" },
+  { slug: "express-entry-draws", title: "Express Entry Draw Tracker", href: "/tools/express-entry-draws", excerpt: "Latest IRCC draw cutoffs" },
+  { slug: "pnp-draws", title: "PNP Draw Tracker", href: "/tools/pnp-draws", excerpt: "Province-by-province nominations" },
+  { slug: "noc-finder", title: "NOC Finder", href: "/tools/noc-finder", excerpt: "Find your job code & TEER" },
+  { slug: "processing-times", title: "Processing Times", href: "/tools/processing-times", excerpt: "PR, work, study, sponsorship" },
+];
+
+export function getRelatedToolData(slugs: string[]): ToolLink[] {
+  return slugs.map((slug) => TOOLS.find((t) => t.slug === slug)).filter(Boolean) as ToolLink[];
+}
+
+/** Default tool set surfaced on most blog/city/service pages. */
+export const DEFAULT_TOOL_SET = ["crs-calculator", "express-entry-draws", "noc-finder"];

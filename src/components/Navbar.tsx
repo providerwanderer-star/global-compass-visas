@@ -24,9 +24,12 @@ const navLinks: NavItem[] = [
     children: [
       { label: "🔥 Express Entry PR", href: "/express-entry" },
       { label: "🏛️ Provincial Nominee (PNP)", href: "/services/pnp-application" },
+      { label: "🍁 Ontario PNP", href: "/canada-pnp/ontario" },
+      { label: "🌲 BC PNP", href: "/canada-pnp/british-columbia" },
+      { label: "🛢️ Alberta PNP", href: "/canada-pnp/alberta" },
       { label: "💼 Work Permits & LMIA", href: "/services/work-permits" },
-      { label: "🎓 Study → PR", href: "/services/student-visa" },
-      { label: "👨‍👩‍👧 Family Sponsorship", href: "/services/family-sponsorship" },
+      { label: "🎓 Study → PR Hub", href: "/study-to-pr" },
+      { label: "👨‍👩‍👧 Family Sponsorship", href: "/family-sponsorship" },
       { label: "✈️ Visitor & Super Visa", href: "/services/visitor-visa" },
       { label: "🍁 Citizenship", href: "/services/citizenship-application" },
     ],
@@ -37,6 +40,7 @@ const navLinks: NavItem[] = [
     children: [
       { label: "🧮 CRS Score Calculator", href: "/crs-calculator" },
       { label: "🧭 Pathway Quiz", href: "/quiz" },
+      { label: "⚖️ Compare PR Pathways", href: "/tools/compare-pathways" },
       { label: "📊 Express Entry Draws", href: "/tools/express-entry-draws" },
       { label: "🗺️ PNP Draw Tracker", href: "/tools/pnp-draws" },
       { label: "🔎 NOC Finder", href: "/tools/noc-finder" },

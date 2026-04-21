@@ -453,22 +453,37 @@ const CRSCalculatorPage = () => {
 
                 {/* Recent cutoff comparison */}
                 <div className="bg-white/5 rounded-xl p-4 mb-5 text-left">
-                  <p className="text-xs text-primary-foreground/50 mb-2 font-semibold uppercase tracking-wider">Recent Draw Cutoffs</p>
-                  {[
-                    { label: "Latest General Draw", cutoff: 448 },
-                    { label: "Category (STEM)", cutoff: 435 },
-                    { label: "Category (Healthcare)", cutoff: 422 },
-                  ].map((d) => (
-                    <div key={d.label} className="flex items-center justify-between mb-1.5">
-                      <span className="text-xs text-primary-foreground/70">{d.label}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-white">{d.cutoff}</span>
-                        {total >= d.cutoff
-                          ? <CheckCircle className="h-3.5 w-3.5 text-success" />
-                          : <AlertTriangle className="h-3.5 w-3.5 text-destructive" />}
+                  <p className="text-xs text-primary-foreground/50 mb-2 font-semibold uppercase tracking-wider">
+                    Your score vs latest draws
+                  </p>
+                  {cutoffComparisons.map((c) => {
+                    const cutoff = c.draw!.crsMin;
+                    const delta = total - cutoff;
+                    const passes = delta >= 0;
+                    return (
+                      <div key={c.name} className="flex items-center justify-between mb-1.5">
+                        <span className="text-xs text-primary-foreground/70">
+                          {c.name} <span className="text-primary-foreground/40">#{c.draw!.drawNumber}</span>
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-bold text-white">{cutoff}</span>
+                          <span className={`text-[10px] font-semibold ${passes ? "text-success" : "text-destructive"}`}>
+                            {passes ? `+${delta}` : delta}
+                          </span>
+                          {passes
+                            ? <CheckCircle className="h-3.5 w-3.5 text-success" />
+                            : <AlertTriangle className="h-3.5 w-3.5 text-destructive" />}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
+                  {latestGeneral && (
+                    <p className="text-[11px] text-primary-foreground/50 mt-2 pt-2 border-t border-white/10">
+                      {total >= latestGeneral.crsMin
+                        ? `You'd have been invited in draw #${latestGeneral.drawNumber} on ${latestGeneral.date}.`
+                        : `You needed ${latestGeneral.crsMin - total} more points for draw #${latestGeneral.drawNumber}. PNP adds 600.`}
+                    </p>
+                  )}
                 </div>
 
                 {/* Breakdown */}

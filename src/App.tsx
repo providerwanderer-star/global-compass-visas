@@ -38,6 +38,7 @@ import UKImmigrationPage from "@/pages/UKImmigrationPage";
 import GermanyImmigrationPage from "@/pages/GermanyImmigrationPage";
 import InDemandJobsPage from "@/pages/InDemandJobsPage";
 import NOCDetailPage from "@/pages/NOCDetailPage";
+import NewsHubPage from "@/pages/NewsHubPage";
 
 const queryClient = new QueryClient();
 
@@ -88,6 +89,7 @@ const App = () => (
               <Route path="/immigration-cost-calculator" element={<ImmigrationCostPage />} />
               <Route path="/in-demand-jobs" element={<InDemandJobsPage />} />
               <Route path="/noc/:code" element={<NOCDetailPage />} />
+              <Route path="/news" element={<NewsHubPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

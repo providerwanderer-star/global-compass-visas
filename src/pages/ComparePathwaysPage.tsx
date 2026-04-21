@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
 
 type Fit = "best" | "good" | "tough";
 
@@ -332,6 +333,10 @@ const ComparePathwaysPage = () => {
             </Button>
           </Link>
         </div>
+      </section>
+
+      <section className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 my-10 max-w-3xl">
+        <PathwayWidget />
       </section>
     </div>
   );

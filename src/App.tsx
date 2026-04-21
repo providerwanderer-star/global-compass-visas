@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import ScrollToTop from "@/components/ScrollToTop";
 import HomePage from "@/pages/HomePage";
 import CountryPage from "@/pages/CountryPage";
@@ -46,7 +47,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <Navbar />
-          <main className="pt-16 md:pt-20">
+          <main className="pt-16 md:pt-20 pb-20 md:pb-0">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/immigration/:slug" element={<CountryPage />} />
@@ -79,6 +80,7 @@ const App = () => (
           </main>
           <Footer />
           <WhatsAppButton />
+          <StickyMobileCTA />
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>

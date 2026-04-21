@@ -61,7 +61,6 @@ const CityPage = () => {
                 description: city.metaDescription,
                 url: `https://www.4acesvisa.com/city/${city.slug}`,
                 telephone: "+16478622190",
-                email: "sahil280389@gmail.com",
                 address: { "@type": "PostalAddress", addressLocality: city.name, addressCountry: city.country === "india" ? "IN" : "CA" },
                 aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500", bestRating: "5" },
               },

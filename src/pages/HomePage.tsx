@@ -12,6 +12,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
 import Shareable from "@/components/Shareable";
 import LiveExpressEntry from "@/components/LiveExpressEntry";
+import LiveDataStrip from "@/components/LiveDataStrip";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";

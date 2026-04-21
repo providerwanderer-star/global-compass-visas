@@ -604,6 +604,59 @@ const CRSCalculatorPage = () => {
                   </Button>
                 </a>
               </motion.div>
+
+              {/* What If Scenarios */}
+              <div className="bg-card rounded-2xl border border-border p-6">
+                <h3 className="font-display font-bold text-lg text-foreground mb-1">What If I…</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  See how changes to your profile would affect your CRS score.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    {
+                      label: "Improved my language to CLB 9",
+                      condition: form.clbFirst < 9,
+                      delta: calculateTotal({ ...form, clbFirst: 9 }) - calculateTotal(form),
+                    },
+                    {
+                      label: "Improved my language to CLB 10",
+                      condition: form.clbFirst < 10,
+                      delta: calculateTotal({ ...form, clbFirst: 10 }) - calculateTotal(form),
+                    },
+                    {
+                      label: "Added 1 more year of Canadian work experience",
+                      condition: form.canadianExp < 5,
+                      delta:
+                        calculateTotal({ ...form, canadianExp: Math.min(form.canadianExp + 1, 5) }) -
+                        calculateTotal(form),
+                    },
+                    {
+                      label: "Had a valid job offer (NOC TEER 0/1/2/3)",
+                      condition: !form.hasJobOffer,
+                      delta:
+                        calculateTotal({ ...form, hasJobOffer: true, jobOfferNOC: "none" }) -
+                        calculateTotal(form),
+                    },
+                    {
+                      label: "Got a Provincial Nomination (PNP)",
+                      condition: !form.hasPNP,
+                      delta: 600,
+                    },
+                  ]
+                    .filter((s) => s.condition && s.delta > 0)
+                    .map((scenario) => (
+                      <div
+                        key={scenario.label}
+                        className="flex items-center justify-between gap-3 p-3 bg-success/10 border border-success/30 rounded-lg"
+                      >
+                        <span className="text-sm text-foreground">{scenario.label}</span>
+                        <span className="shrink-0 font-bold text-success text-sm">
+                          +{scenario.delta} pts
+                        </span>
+                      </div>
+                    ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

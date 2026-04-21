@@ -14,6 +14,7 @@ import LiveDrawTicker from "@/components/LiveDrawTicker";
 import PathwayPicker from "@/components/PathwayPicker";
 import ToolsStrip from "@/components/ToolsStrip";
 import AudienceShortcuts from "@/components/AudienceShortcuts";
+import HomeQuickSearch from "@/components/HomeQuickSearch";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -333,6 +334,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Quick search strip — CRS jump + NOC search (matches solutionhub.ca pattern) */}
+      <HomeQuickSearch />
 
       {/* Live Express Entry draw ticker — freshness signal for AEO/GEO */}
       <LiveDrawTicker />

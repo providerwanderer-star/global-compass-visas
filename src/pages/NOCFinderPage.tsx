@@ -193,7 +193,8 @@ const NOCFinderPage = () => {
                 return (
                   <article
                     key={noc.code}
-                    className="bg-card rounded-2xl border border-border p-5 shadow-sm hover:border-primary/40 transition-colors"
+                      onClick={() => update({ nocCode: noc.code })}
+                      className="bg-card rounded-2xl border border-border p-5 shadow-sm hover:border-primary/40 transition-colors cursor-pointer"
                   >
                     {/* Header row */}
                     <div className="flex items-start justify-between gap-3 mb-3">
@@ -248,6 +249,16 @@ const NOCFinderPage = () => {
                       <div className="mt-2 text-xs text-muted-foreground">
                         <span className="font-semibold text-foreground">Also known as: </span>
                         {noc.altTitles.slice(0, 3).join(", ")}
+                      </div>
+                    )}
+                    {/* Pathway suggestion based on NOC */}
+                    {noc.eeEligible && (
+                      <div className="mt-3 pt-3 border-t border-border bg-secondary/40 -mx-5 -mb-5 px-5 py-3 rounded-b-2xl">
+                        <p className="text-xs font-semibold text-primary mb-1">✓ Eligible pathways</p>
+                        <p className="text-xs text-muted-foreground">
+                          Express Entry (FSW/CEC), {(noc as any).teer <= 3 ? "PNP streams" : "select PNP"} •
+                          {" "}<Link to="/crs-calculator" className="text-primary hover:underline font-semibold">Check your CRS →</Link>
+                        </p>
                       </div>
                     )}
                   </article>

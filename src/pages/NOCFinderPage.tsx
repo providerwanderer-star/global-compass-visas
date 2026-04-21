@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { Search, CheckCircle2, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { nocData, nocCategories, teerInfo, type NOCEntry } from "@/data/nocData";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
 
 const NOCFinderPage = () => {
   const [query, setQuery] = useState("");

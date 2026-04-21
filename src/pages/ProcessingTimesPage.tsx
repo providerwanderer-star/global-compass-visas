@@ -1,6 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Clock, TrendingDown, TrendingUp, Minus } from "lucide-react";
 import { Link } from "react-router-dom";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
 
 interface ProcessingItem {
   name: string;

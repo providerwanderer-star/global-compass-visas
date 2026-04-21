@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { MapPin, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { pnpDraws, pnpProvinces } from "@/data/pnpDraws";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
 
 const provinceColors: Record<string, string> = {
   ON: "bg-blue-100 text-blue-800 border-blue-200",

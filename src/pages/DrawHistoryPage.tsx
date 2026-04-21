@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { TrendingUp, CheckCircle2, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { expressEntryDraws, drawCategories, avgCRS } from "@/data/expressEntryDraws";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
 
 const categoryColors: Record<string, string> = {
   General:     "bg-blue-100 text-blue-800 border-blue-200",

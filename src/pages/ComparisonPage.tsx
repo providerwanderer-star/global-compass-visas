@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { CheckCircle, XCircle, ArrowRight, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
 
 const countries = [
   {

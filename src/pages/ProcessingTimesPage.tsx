@@ -301,6 +301,13 @@ const ProcessingTimesPage = () => {
           </div>
         </div>
       </section>
+      <PathwayWidget />
+      <ReturnLoopCard />
+      <ConnectedFooter
+        tool={{ label: "Cost Calculator", href: "/immigration-cost-calculator" }}
+        hub={{ label: "Express Entry Draws", href: "/express-entry/draws" }}
+        funnel={{ label: "Find your pathway", href: "/quiz" }}
+      />
     </>
   );
 };

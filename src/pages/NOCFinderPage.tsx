@@ -360,6 +360,13 @@ const NOCFinderPage = () => {
           </div>
         </div>
       </section>
+      <PathwayWidget />
+      <ReturnLoopCard />
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "PNP Draw Tracker", href: "/pnp-tracker" }}
+        funnel={{ label: "Get your best pathway", href: "/quiz" }}
+      />
     </>
   );
 };

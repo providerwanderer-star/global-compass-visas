@@ -392,6 +392,13 @@ const ImmigrationCostPage = () => {
           </div>
         </div>
       </section>
+      <PathwayWidget />
+      <ReturnLoopCard />
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Compare countries", href: "/compare" }}
+        funnel={{ label: "Get your best pathway", href: "/quiz" }}
+      />
     </>
   );
 };

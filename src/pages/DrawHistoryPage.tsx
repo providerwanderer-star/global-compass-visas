@@ -286,6 +286,13 @@ const DrawHistoryPage = () => {
           </div>
         </div>
       </section>
+      <PathwayWidget />
+      <ReturnLoopCard />
+      <ConnectedFooter
+        tool={{ label: "PNP Draw Tracker", href: "/pnp-tracker" }}
+        hub={{ label: "Express Entry Hub", href: "/express-entry" }}
+        funnel={{ label: "Compare your profile", href: "/compare" }}
+      />
     </>
   );
 };

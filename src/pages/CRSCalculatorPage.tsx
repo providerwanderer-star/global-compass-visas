@@ -186,7 +186,8 @@ const CRSCalculatorPage = () => {
   if (form.canadianEducation === "degree") additional += 30;
   if (form.sibling) additional += 15;
 
-  const total = Math.min(coreHuman + skillTransfer + additional, 1200);
+  const spousePts = form.hasSpouse ? getSpousePoints(form) : 0;
+  const total = calculateTotal(form);
 
   const breakdown = [
     { label: "Age", points: age, max: form.hasSpouse ? 100 : 110 },
@@ -196,6 +197,7 @@ const CRSCalculatorPage = () => {
     { label: "Foreign Work Exp.", points: foreignExp, max: form.hasSpouse ? 38 : 38 },
     { label: "Canadian Work Exp.", points: canadianExp, max: 80 },
     { label: "Skill Transferability", points: skillTransfer, max: 100 },
+    ...(form.hasSpouse ? [{ label: "Spouse Factors", points: spousePts, max: 40 }] : []),
     { label: "Additional (PNP/Offer/etc)", points: additional, max: 600 },
   ];
 

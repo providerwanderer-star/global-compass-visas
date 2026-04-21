@@ -38,6 +38,8 @@ import ComparePathwaysPage from "@/pages/ComparePathwaysPage";
 import FamilySponsorshipHubPage from "@/pages/FamilySponsorshipHubPage";
 import StudyToPRPage from "@/pages/StudyToPRPage";
 import ProvinceHubPage from "@/pages/ProvinceHubPage";
+import CaregiverPathwayPage from "@/pages/CaregiverPathwayPage";
+import IrccFeesPage from "@/pages/IrccFeesPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -78,8 +80,10 @@ const App = () => (
               <Route path="/tools/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/tools/noc-finder" element={<NOCFinderPage />} />
               <Route path="/tools/compare-pathways" element={<ComparePathwaysPage />} />
+              <Route path="/tools/ircc-fees" element={<IrccFeesPage />} />
               <Route path="/family-sponsorship" element={<FamilySponsorshipHubPage />} />
               <Route path="/study-to-pr" element={<StudyToPRPage />} />
+              <Route path="/caregiver-pathway" element={<CaregiverPathwayPage />} />
               <Route path="/canada-pnp/:slug" element={<ProvinceHubPage />} />
               <Route path="/india/:slug" element={<StateHubPage />} />
               <Route path="/canada/:slug" element={<StateHubPage />} />

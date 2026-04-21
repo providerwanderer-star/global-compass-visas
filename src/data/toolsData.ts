@@ -1,4 +1,4 @@
-import { Calculator, Search, TrendingUp, Map, Clock, Compass, Scale, LucideIcon } from "lucide-react";
+import { Calculator, Search, TrendingUp, Map, Clock, Compass, Scale, DollarSign, LucideIcon } from "lucide-react";
 
 export interface ToolItem {
   icon: LucideIcon;
@@ -63,6 +63,14 @@ export const tools: ToolItem[] = [
     title: "Compare PR Pathways",
     desc: "Side-by-side ranking of EE, PNP, Study-to-PR & Work Permit for your profile.",
     href: "/tools/compare-pathways",
+    status: "live",
+    updated: "2026-04-21",
+  },
+  {
+    icon: DollarSign,
+    title: "IRCC Fees Calculator",
+    desc: "Current government fees in CAD + custom estimator for your application.",
+    href: "/tools/ircc-fees",
     status: "live",
     updated: "2026-04-21",
   },

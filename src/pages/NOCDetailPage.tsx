@@ -172,7 +172,7 @@ const NOCDetailPage = () => {
               {teer.label}
             </span>
             {noc.eeEligible ? (
-              <span className="inline-flex items-center gap-1 bg-emerald-500/20 border border-emerald-300/40 text-emerald-50 text-xs font-bold px-3 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1 bg-gold/25 border border-gold/40 text-gold text-xs font-bold px-3 py-1 rounded-full">
                 <CheckCircle2 className="h-3 w-3" /> Express Entry Eligible
               </span>
             ) : (
@@ -180,7 +180,7 @@ const NOCDetailPage = () => {
                 <XCircle className="h-3 w-3" /> Not EE Eligible
               </span>
             )}
-            <span className="inline-flex items-center gap-1 bg-gold/25 border border-gold/40 text-gold text-xs font-bold px-3 py-1 rounded-full">
+            <span className="inline-flex items-center gap-1 bg-white/15 border border-white/30 text-xs font-bold px-3 py-1 rounded-full">
               <TrendingUp className="h-3 w-3" /> CRS {impact.range}
             </span>
           </div>

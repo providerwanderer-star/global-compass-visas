@@ -12,7 +12,6 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
 import LiveDrawTicker from "@/components/LiveDrawTicker";
 import PathwayPicker from "@/components/PathwayPicker";
-import ToolsStrip from "@/components/ToolsStrip";
 import AudienceShortcuts from "@/components/AudienceShortcuts";
 import HomeQuickSearch from "@/components/HomeQuickSearch";
 import heroBg from "@/assets/hero-bg.jpg";

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 const staggerContainer = {
@@ -83,10 +83,6 @@ const Footer = () => {
               <li className="flex items-center gap-2 text-sm text-primary-foreground/60 group">
                 <Phone className="h-4 w-4 text-gold group-hover:scale-110 transition-transform" />
                 <a href="tel:+16478622190" className="hover:text-gold transition-colors">+1 (647) 862-2190</a>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-primary-foreground/60 group">
-                <Mail className="h-4 w-4 text-gold group-hover:scale-110 transition-transform" />
-                <a href="mailto:sahil280389@gmail.com" className="hover:text-gold transition-colors">sahil280389@gmail.com</a>
               </li>
             </ul>
           </motion.div>

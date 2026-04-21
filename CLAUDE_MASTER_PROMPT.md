@@ -9,22 +9,21 @@
 | Phase | Feature | Status | Notes |
 |-------|---------|--------|-------|
 | Pre-work | Homepage mobile fixes (hero order, 98% success, testimonials, FAQ, country cards) | ✅ DONE | 788-line HomePage.tsx |
-| Phase 1 | NOC Finder (`/noc-finder`) | ❌ TODO | Highest SEO priority |
-| Phase 2 | Express Entry Draw History (`/express-entry/draws`) | ❌ TODO | |
-| Phase 3 | PNP Draws Dashboard (`/pnp-tracker`) | ❌ TODO | |
-| Phase 4 | Processing Times Tracker (`/processing-times`) | ❌ TODO | |
-| Phase 5 | Immigration Cost Calculator (`/immigration-cost-calculator`) | ❌ TODO | |
-| Phase 6 | CRS Calculator Enhancements | ❌ TODO | File: `src/pages/CRSCalculatorPage.tsx` |
+| Phase 1 | NOC Finder (`/noc-finder`) | ✅ DONE | `src/pages/NOCFinderPage.tsx` + `src/data/nocData.ts` |
+| Phase 2 | Express Entry Draw History (`/express-entry/draws`) | ✅ DONE | `src/pages/DrawHistoryPage.tsx` + `src/data/expressEntryDraws.ts` |
+| Phase 3 | PNP Draws Dashboard (`/pnp-tracker`) | ✅ DONE | `src/pages/PNPTrackerPage.tsx` + `src/data/pnpDraws.ts` |
+| Phase 4 | Processing Times Tracker (`/processing-times`) | ✅ DONE | `src/pages/ProcessingTimesPage.tsx` |
+| Phase 5 | Immigration Cost Calculator (`/immigration-cost-calculator`) | ✅ DONE | `src/pages/ImmigrationCostPage.tsx` |
+| Phase 6 | CRS Calculator Enhancements | ❌ TODO | File: `src/pages/CRSCalculatorPage.tsx` — add IELTS→CLB converter, spouse scoring, what-if scenarios |
 | Phase 7 | HomePage Tools Hub (10-card grid) | ❌ TODO | Country cards exist; full tools hub still needed |
-| Phase 8 | Navbar "Tools" dropdown + App.tsx routes | ❌ TODO | Must be done AFTER phases 1-5 create the pages |
-| Phase 9 | SEO: sitemap.xml, llms.txt, citations.json | ❌ TODO | Do last |
+| Phase 8 | Navbar "Tools" dropdown + App.tsx routes | ✅ DONE | Done — Navbar has Tools dropdown with all 6 tools; App.tsx has all 5 new routes |
+| Phase 9 | SEO: sitemap.xml, llms.txt, citations.json | ❌ TODO | Add 5 new URLs |
 
-**Confirmed: Lovable has NOT yet built any of the 5 tool pages.** Start at Phase 1.
-
-**Data files needed (none exist yet):**
-- `src/data/nocData.ts`
-- `src/data/expressEntryDraws.ts`
-- `src/data/pnpDraws.ts`
+**Data files created:**
+- ✅ `src/data/nocData.ts` — 30 NOC entries, TEER system, salary ranges
+- ✅ `src/data/expressEntryDraws.ts` — 16 draws Sep 2025–Apr 2026
+- ✅ `src/data/pnpDraws.ts` — 14 draws across 8 provinces
+- ✅ `src/components/LiveExpressEntry.tsx` — link updated to `/express-entry/draws`
 
 ---
 

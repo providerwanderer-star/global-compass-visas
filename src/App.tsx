@@ -26,6 +26,11 @@ import StateHubPage from "@/pages/StateHubPage";
 import DocumentsPage from "@/pages/DocumentsPage";
 import FAQPage from "@/pages/FAQPage";
 import NotFound from "@/pages/NotFound";
+import NOCFinderPage from "@/pages/NOCFinderPage";
+import DrawHistoryPage from "@/pages/DrawHistoryPage";
+import PNPTrackerPage from "@/pages/PNPTrackerPage";
+import ProcessingTimesPage from "@/pages/ProcessingTimesPage";
+import ImmigrationCostPage from "@/pages/ImmigrationCostPage";
 import ComparisonPage from "@/pages/ComparisonPage";
 import AustraliaSubPage from "@/pages/AustraliaSubPage";
 import UKImmigrationPage from "@/pages/UKImmigrationPage";
@@ -72,6 +77,11 @@ const App = () => (
               <Route path="/uk/graduate-route" element={<UKImmigrationPage />} />
               <Route path="/germany/chancenkarte" element={<GermanyImmigrationPage />} />
               <Route path="/germany/eu-blue-card" element={<GermanyImmigrationPage />} />
+              <Route path="/noc-finder" element={<NOCFinderPage />} />
+              <Route path="/express-entry/draws" element={<DrawHistoryPage />} />
+              <Route path="/pnp-tracker" element={<PNPTrackerPage />} />
+              <Route path="/processing-times" element={<ProcessingTimesPage />} />
+              <Route path="/immigration-cost-calculator" element={<ImmigrationCostPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

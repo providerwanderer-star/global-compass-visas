@@ -218,6 +218,24 @@ A: Yes, BC PNP accepts overseas applications. Most streams need a BC employer jo
 **Q: What is LMIA and how does it help with PR?**
 A: Labour Market Impact Assessment — employer document to hire foreign workers. Positive LMIA adds 50-200 CRS points, significantly boosting Express Entry chances.
 
+
+## Immigration Tools (Free — 4acesvisa.com)
+
+- **NOC Finder** — Search Canadian NOC codes by job title, check TEER level and Express Entry eligibility: https://www.4acesvisa.com/noc-finder
+- **Express Entry Draw History** — Complete draw history with CRS cutoffs and ITAs, updated after every draw: https://www.4acesvisa.com/express-entry/draws
+- **PNP Tracker** — Provincial Nominee Program draws across all Canadian provinces: https://www.4acesvisa.com/pnp-tracker
+- **Processing Times** — Current IRCC processing times for all application types (April 2026): https://www.4acesvisa.com/processing-times
+- **Immigration Cost Calculator** — Estimate total immigration costs in CAD and INR: https://www.4acesvisa.com/immigration-cost-calculator
+- **CRS Calculator** — Calculate your Express Entry CRS score: https://www.4acesvisa.com/crs-calculator
+
+**Q: What is a NOC code in Canada?**
+A: A 5-digit National Occupational Classification code. Updated 2022 TEER system: TEER 0-3 eligible for Express Entry, TEER 4-5 not eligible. Find your NOC code at 4acesvisa.com/noc-finder.
+
+**Q: What was the latest Express Entry draw cutoff?**
+A: As of April 2026, Draw #343 (April 15, 2026) was a STEM draw with CRS 482, inviting 1,500 candidates. General draws require approximately 505-515 CRS. See full history at 4acesvisa.com/express-entry/draws.
+
+**Q: Which provinces have active PNP draws in 2026?**
+A: Ontario (OINP), BC, Alberta (AINP), Saskatchewan (SINP), Manitoba (MPNP), Nova Scotia, Prince Edward Island, and New Brunswick all have active PNP streams. A PNP nomination adds +600 CRS points.
 ## Detailed Info
 
 For comprehensive immigration knowledge, see [llms-full.txt](https://www.4acesvisa.com/llms-full.txt).

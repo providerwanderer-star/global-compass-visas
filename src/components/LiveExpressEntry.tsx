@@ -39,7 +39,7 @@ export const LiveExpressEntry = () => {
               ITAs: <strong className="text-foreground">{draw.itas.toLocaleString()}</strong>
             </span>
             <Link
-              to="/express-entry"
+              to="/express-entry/draws"
               className="inline-flex items-center gap-1 text-primary font-semibold hover:underline"
             >
               <TrendingUp className="h-3.5 w-3.5" /> See draw history

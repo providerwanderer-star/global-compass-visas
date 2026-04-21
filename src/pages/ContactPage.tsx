@@ -77,7 +77,6 @@ const ContactPage = () => {
               >
                 {[
                   { icon: Phone, title: "Phone", content: <a href="tel:+16478622190" className="text-sm text-muted-foreground hover:text-gold transition-colors">+1 (647) 862-2190</a> },
-                  { icon: Mail, title: "Email", content: <a href="mailto:sahil280389@gmail.com" className="text-sm text-muted-foreground hover:text-gold transition-colors">sahil280389@gmail.com</a> },
                   { icon: MapPin, title: "Offices", content: <p className="text-sm text-muted-foreground">Canada & India</p> },
                 ].map((item) => (
                   <motion.div key={item.title} variants={staggerItem} className="flex items-start gap-4 group">

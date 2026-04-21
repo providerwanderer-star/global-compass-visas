@@ -254,10 +254,19 @@ const NOCFinderPage = () => {
                     {/* Pathway suggestion based on NOC */}
                     {noc.eeEligible && (
                       <div className="mt-3 pt-3 border-t border-border bg-secondary/40 -mx-5 -mb-5 px-5 py-3 rounded-b-2xl">
-                        <p className="text-xs font-semibold text-primary mb-1">✓ Eligible pathways</p>
-                        <p className="text-xs text-muted-foreground">
-                          Express Entry (FSW/CEC), {(noc as any).teer <= 3 ? "PNP streams" : "select PNP"} •
-                          {" "}<Link to="/crs-calculator" className="text-primary hover:underline font-semibold">Check your CRS →</Link>
+                        <div className="flex items-center justify-between gap-2">
+                          <p className="text-xs font-semibold text-primary">✓ Eligible pathways</p>
+                          <Link
+                            to={`/noc/${noc.code}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1"
+                          >
+                            Open NOC {noc.code} →
+                          </Link>
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Express Entry (FSW/CEC), {noc.teer <= 3 ? "PNP streams" : "select PNP"} •
+                          {" "}<Link to="/crs-calculator" onClick={(e) => e.stopPropagation()} className="text-primary hover:underline font-semibold">Check your CRS →</Link>
                         </p>
                       </div>
                     )}

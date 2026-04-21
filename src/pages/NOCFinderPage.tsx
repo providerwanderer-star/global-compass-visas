@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ChevronRight, Search, ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,8 +27,14 @@ const faqs = [
 ];
 
 const NOCFinderPage = () => {
-  const [query, setQuery] = useState("");
+  const [params] = useSearchParams();
+  const [query, setQuery] = useState(params.get("q") ?? "");
   const [cat, setCat] = useState<Cat>("All");
+
+  useEffect(() => {
+    const q = params.get("q");
+    if (q) setQuery(q);
+  }, [params]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();

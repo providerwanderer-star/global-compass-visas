@@ -6,11 +6,13 @@ import { nocData, nocCategories, teerInfo, type NOCEntry } from "@/data/nocData"
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
+import { useUserProfile } from "@/hooks/useUserProfile";
 
 const NOCFinderPage = () => {
   const [query, setQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedTeer, setSelectedTeer] = useState<string>("All");
+  const { update } = useUserProfile();
 
   const results = useMemo<NOCEntry[]>(() => {
     const q = query.trim().toLowerCase();

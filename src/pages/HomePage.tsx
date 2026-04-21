@@ -344,6 +344,9 @@ const HomePage = () => {
       {/* Live Express Entry draw ticker */}
       <LiveExpressEntry />
 
+      {/* 3-card live data block */}
+      <LiveDataStrip />
+
       {/* Pick your pathway — audience router */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">

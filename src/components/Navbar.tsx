@@ -37,10 +37,10 @@ const navLinks: NavItem[] = [
     children: [
       { label: "🧮 CRS Score Calculator", href: "/crs-calculator" },
       { label: "🧭 Pathway Quiz", href: "/quiz" },
-      { label: "📊 Express Entry Draws", href: "/tools" },
-      { label: "🗺️ PNP Draw Tracker", href: "/tools" },
-      { label: "🔎 NOC Finder", href: "/tools" },
-      { label: "⏱️ Processing Times", href: "/tools" },
+      { label: "📊 Express Entry Draws", href: "/tools/express-entry-draws" },
+      { label: "🗺️ PNP Draw Tracker", href: "/tools/pnp-draws" },
+      { label: "🔎 NOC Finder", href: "/tools/noc-finder" },
+      { label: "⏱️ Processing Times", href: "/tools/processing-times" },
     ],
   },
   {

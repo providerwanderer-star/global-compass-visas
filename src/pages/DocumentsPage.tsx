@@ -74,7 +74,7 @@ const DocumentsPage = () => {
           {doc.documents.map((cat) => (
             <a
               key={cat.category}
-              href={`#${cat.category.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`#${cat.category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
               className="text-xs whitespace-nowrap px-3 py-1.5 rounded-full border border-border hover:bg-gold/10 hover:border-gold hover:text-gold transition-colors font-medium"
             >
               {cat.category}
@@ -89,7 +89,7 @@ const DocumentsPage = () => {
           {doc.documents.map((cat, idx) => (
             <AnimatedSection key={cat.category} delay={idx * 0.05}>
               <div
-                id={cat.category.toLowerCase().replace(/\s+/g, "-")}
+                id={cat.category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
                 className="scroll-mt-32"
               >
                 <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 flex items-center gap-2">

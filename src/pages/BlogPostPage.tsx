@@ -5,7 +5,7 @@ import { useState, useMemo } from "react";
 import EligibilityForm from "@/components/EligibilityForm";
 import InternalLinks from "@/components/InternalLinks";
 import { blogPosts } from "@/data/blogData";
-import { blogToServices, getRelatedServiceData } from "@/data/internalLinks";
+import { blogToServices, getRelatedServiceData, getRelatedToolData, DEFAULT_TOOL_SET } from "@/data/internalLinks";
 import { blogEnhancements } from "@/data/blogEnhancements";
 import FAQCallToAction from "@/components/FAQCallToAction";
 
@@ -266,6 +266,7 @@ const BlogPostPage = () => {
 
       <InternalLinks
         services={getRelatedServiceData(blogToServices[post.slug] || []).map((s) => ({ slug: s.slug, title: s.title }))}
+        tools={getRelatedToolData(DEFAULT_TOOL_SET).map((t) => ({ slug: t.slug, title: t.title, href: t.href, excerpt: t.excerpt }))}
         title="Explore Our Services"
       />
 

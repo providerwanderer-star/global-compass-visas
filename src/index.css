@@ -151,4 +151,8 @@
   .text-balance {
     text-wrap: balance;
   }
+  .mask-fade {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 64px, black calc(100% - 64px), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, black 64px, black calc(100% - 64px), transparent 100%);
+  }
 }

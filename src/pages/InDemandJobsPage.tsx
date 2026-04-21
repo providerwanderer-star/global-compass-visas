@@ -236,7 +236,7 @@ const InDemandJobsPage = () => {
                   </div>
 
                   <div className="grid grid-cols-2 gap-2 text-xs mb-3">
-                    <Link to={`/noc-finder?q=${j.noc}`} className="bg-secondary/60 hover:bg-secondary rounded-lg px-2 py-1.5 transition-colors">
+                    <Link to={`/noc/${j.noc}`} className="bg-secondary/60 hover:bg-secondary rounded-lg px-2 py-1.5 transition-colors">
                       <span className="text-muted-foreground">NOC</span>
                       <p className="font-bold text-primary">{j.noc} <span className="text-foreground font-normal">· TEER {j.teer}</span></p>
                     </Link>
@@ -342,7 +342,7 @@ const JobDetailDrawer = ({ job, onClose }: { job: InDemandJob; onClose: () => vo
             <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{job.industry}</span>
             <h2 className="font-display text-xl font-bold text-foreground">{job.title}</h2>
             <p className="text-xs text-muted-foreground mt-0.5">
-              <Link to={`/noc-finder?q=${job.noc}`} className="text-primary hover:underline font-semibold">NOC {job.noc}</Link> · TEER {job.teer} · ${(job.salaryLow / 1000).toFixed(0)}k–${(job.salaryHigh / 1000).toFixed(0)}k
+              <Link to={`/noc/${job.noc}`} className="text-primary hover:underline font-semibold">NOC {job.noc}</Link> · TEER {job.teer} · ${(job.salaryLow / 1000).toFixed(0)}k–${(job.salaryHigh / 1000).toFixed(0)}k
             </p>
           </div>
           <button onClick={onClose} className="p-2 rounded-lg hover:bg-secondary" aria-label="Close"><X className="h-5 w-5" /></button>

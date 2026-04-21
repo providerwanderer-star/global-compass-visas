@@ -234,7 +234,7 @@ const CaregiverPathwayPage = () => (
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-white mb-3">Ready to start your caregiver PR application?</h2>
         <p className="text-center text-white/70 mb-8">Free assessment in 24 hours. We help with job offer matching, document prep and IRCC submission.</p>
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-elevated">
-          <EligibilityForm visaType="caregiver" sourcePage="caregiver-pathway" />
+          <EligibilityForm sourcePage="caregiver-pathway" />
         </div>
       </div>
     </section>

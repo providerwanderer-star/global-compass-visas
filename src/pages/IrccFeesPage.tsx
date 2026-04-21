@@ -222,7 +222,7 @@ const IrccFeesPage = () => {
           <h2 className="font-display text-2xl md:text-3xl font-bold text-center mb-3">Need help estimating total cost?</h2>
           <p className="text-center text-muted-foreground mb-6">Free assessment includes a personalized cost breakdown across IRCC fees, third-party costs and our consultancy fees.</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-card">
-            <EligibilityForm visaType="cost-estimate" sourcePage="ircc-fees" />
+            <EligibilityForm sourcePage="ircc-fees" />
           </div>
         </div>
       </AnimatedSection>

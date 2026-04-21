@@ -235,37 +235,42 @@ const HomePage = () => {
               <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
                 <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 badge-pulse">
                   <Globe className="h-4 w-4" />
-                  By the Immigrants, For the Immigrants
+                  🍁 Canada-first immigration portal
                 </span>
               </motion.div>
               <motion.h1
                 className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-foreground leading-tight mb-6"
                 initial="hidden" animate="visible" variants={fadeUp} custom={1}
               >
-                Your Complete{" "}
-                <span className="gradient-text">Visa & Immigration Solution Specialist</span>
+                Move to Canada.{" "}
+                <span className="gradient-text">Your complete pathway portal.</span>
               </motion.h1>
               <motion.p
                 className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={2}
               >
-                PR, work permits, study visas, visitor visas, family sponsorship & more — one team, every pathway, 98% success rate.
+                Calculate your CRS, find your NOC, track every IRCC draw and pick the right PR pathway — backed by licensed consultants.
               </motion.p>
               <motion.p
                 className="text-base text-muted-foreground/80 mb-8 max-w-xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={3}
               >
-                🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — Every visa type, every destination, handled end-to-end.
+                Express Entry · PNP · Study → PR · Work permits · Family sponsorship — end-to-end.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
-                <Link to="/contact">
+                <Link to="/crs-calculator">
                   <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
-                    🚀 Get FREE Assessment <ArrowRight className="ml-2 h-5 w-5" />
+                    🧮 Check My CRS Score <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link to="/quiz">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary/30 text-primary hover:bg-primary/5 font-semibold text-base px-8 py-6 transition-all">
-                    Explore Pathways
+                    Find My Pathway
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary/30 text-primary hover:bg-primary/5 font-semibold text-base px-8 py-6 transition-all">
+                    Talk to an Expert
                   </Button>
                 </Link>
               </motion.div>

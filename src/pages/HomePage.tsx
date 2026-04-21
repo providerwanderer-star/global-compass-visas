@@ -334,6 +334,9 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Live Express Entry draw ticker — freshness signal for AEO/GEO */}
+      <LiveDrawTicker />
+
       {/* Stats — animated counters */}
       <section className="bg-card border-b border-border">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
@@ -473,6 +476,15 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Pathway picker — 4 main PR routes to Canada */}
+      <PathwayPicker />
+
+      {/* Tools & live data strip */}
+      <ToolsStrip />
+
+      {/* Audience shortcuts — India / H1B / Student */}
+      <AudienceShortcuts />
     </div>
   );
 };

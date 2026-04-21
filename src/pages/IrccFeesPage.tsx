@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
 import ToolsCallout from "@/components/ToolsCallout";
+import PathwayWidget from "@/components/PathwayWidget";
 import { irccFees, irccFeesUpdated, categoryLabels, IrccFee } from "@/data/irccFees";
 
 const categories = Object.keys(categoryLabels) as IrccFee["category"][];
@@ -216,6 +217,10 @@ const IrccFeesPage = () => {
       </section>
 
       <ToolsCallout />
+
+      <section className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 my-8 max-w-3xl">
+        <PathwayWidget />
+      </section>
 
       <AnimatedSection className="bg-secondary/30 section-padding">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">

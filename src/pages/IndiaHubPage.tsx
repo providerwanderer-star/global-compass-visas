@@ -8,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
+import ToolsCallout from "@/components/ToolsCallout";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -322,6 +323,13 @@ const IndiaHubPage = () => {
           </div>
         </div>
       </section>
+
+      <ToolsCallout
+        tools={["crs-calculator", "express-entry-draws", "pnp-draws"]}
+        title="Tools for Indian applicants"
+        description="Score your CRS, check the latest Express Entry & PNP draws, and benchmark your profile."
+        variant="light"
+      />
 
       {/* FAQ */}
       <section className="section-padding section-soft">

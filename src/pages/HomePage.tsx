@@ -10,6 +10,10 @@ import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
+import LiveDrawTicker from "@/components/LiveDrawTicker";
+import PathwayPicker from "@/components/PathwayPicker";
+import ToolsStrip from "@/components/ToolsStrip";
+import AudienceShortcuts from "@/components/AudienceShortcuts";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -99,13 +103,13 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>Your Complete Visa & Immigration Solution Specialist | 4 Aces Visa</title>
-        <meta name="description" content="Your all-in-one visa & immigration specialists. PR, work permits, study visas, visitor visas & family sponsorship for Canada, Australia, Germany & UK. 15,000+ visas processed. Free assessment." />
+        <title>Move to Canada — PR, Work & Study Pathway Portal | 4 Aces Visa</title>
+        <meta name="description" content="Canada immigration portal: CRS calculator, Express Entry draw tracker, NOC finder, PNP guidance and licensed consultants. PR, work permits, study & family pathways — end-to-end." />
         <link rel="canonical" href="https://www.4acesvisa.com/" />
-        <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
+        <meta name="keywords" content="move to Canada, Canada PR pathway, Express Entry 2026, CRS calculator, NOC finder, PNP draw tracker, Canada work permit, study to PR Canada, Canada immigration from India, H1B to Canada, 4 Aces Visa" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Your Complete Visa & Immigration Solution Specialist | 4 Aces Visa" />
-        <meta property="og:description" content="All-in-one immigration experts. PR, work permits, study visas, visitor visas & family sponsorship for Canada, Australia, Germany & UK. 15,000+ visas processed." />
+        <meta property="og:title" content="Move to Canada — PR, Work & Study Pathway Portal | 4 Aces Visa" />
+        <meta property="og:description" content="Canada immigration portal: CRS calculator, draw tracker, NOC finder and licensed consultants for PR, work, study & family pathways." />
         <meta property="og:url" content="https://www.4acesvisa.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -125,7 +129,6 @@ const HomePage = () => {
                 "description": "By the immigrants, for the immigrants. Global immigration consultancy for Canada, Australia, Germany & UK with 15,000+ successful visas and 98% approval rate.",
                 "foundingDate": "2016",
                 "telephone": "+1-647-862-2190",
-                "email": "sahil280389@gmail.com",
                 "contactPoint": [
                   {
                     "@type": "ContactPoint",
@@ -158,7 +161,6 @@ const HomePage = () => {
                 "image": "https://www.4acesvisa.com/favicon.ico",
                 "url": "https://www.4acesvisa.com",
                 "telephone": "+1-647-862-2190",
-                "email": "sahil280389@gmail.com",
                 "description": "Licensed immigration consultants specializing in Canada Express Entry PR, LMIA work permits, PNP, study permits, family sponsorship, visitor visas & citizenship for Canada, Australia, Germany & UK.",
                 "priceRange": "$$",
                 "address": {
@@ -233,37 +235,42 @@ const HomePage = () => {
               <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
                 <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 badge-pulse">
                   <Globe className="h-4 w-4" />
-                  By the Immigrants, For the Immigrants
+                  🍁 Canada-first immigration portal
                 </span>
               </motion.div>
               <motion.h1
                 className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-foreground leading-tight mb-6"
                 initial="hidden" animate="visible" variants={fadeUp} custom={1}
               >
-                Your Complete{" "}
-                <span className="gradient-text">Visa & Immigration Solution Specialist</span>
+                Move to Canada.{" "}
+                <span className="gradient-text">Your complete pathway portal.</span>
               </motion.h1>
               <motion.p
                 className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={2}
               >
-                PR, work permits, study visas, visitor visas, family sponsorship & more — one team, every pathway, 98% success rate.
+                Calculate your CRS, find your NOC, track every IRCC draw and pick the right PR pathway — backed by licensed consultants.
               </motion.p>
               <motion.p
                 className="text-base text-muted-foreground/80 mb-8 max-w-xl"
                 initial="hidden" animate="visible" variants={fadeUp} custom={3}
               >
-                🇨🇦 Canada &nbsp;•&nbsp; 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — Every visa type, every destination, handled end-to-end.
+                Express Entry · PNP · Study → PR · Work permits · Family sponsorship — end-to-end.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
-                <Link to="/contact">
+                <Link to="/crs-calculator">
                   <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
-                    🚀 Get FREE Assessment <ArrowRight className="ml-2 h-5 w-5" />
+                    🧮 Check My CRS Score <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link to="/quiz">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary/30 text-primary hover:bg-primary/5 font-semibold text-base px-8 py-6 transition-all">
-                    Explore Pathways
+                    Find My Pathway
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary/30 text-primary hover:bg-primary/5 font-semibold text-base px-8 py-6 transition-all">
+                    Talk to an Expert
                   </Button>
                 </Link>
               </motion.div>
@@ -326,6 +333,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Live Express Entry draw ticker — freshness signal for AEO/GEO */}
+      <LiveDrawTicker />
 
       {/* Stats — animated counters */}
       <section className="bg-card border-b border-border">
@@ -466,6 +476,15 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Pathway picker — 4 main PR routes to Canada */}
+      <PathwayPicker />
+
+      {/* Tools & live data strip */}
+      <ToolsStrip />
+
+      {/* Audience shortcuts — India / H1B / Student */}
+      <AudienceShortcuts />
     </div>
   );
 };

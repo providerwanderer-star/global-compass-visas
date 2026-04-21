@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import ScrollToTop from "@/components/ScrollToTop";
 import HomePage from "@/pages/HomePage";
 import CountryPage from "@/pages/CountryPage";
@@ -79,6 +80,7 @@ const App = () => (
           </main>
           <Footer />
           <WhatsAppButton />
+          <StickyMobileCTA />
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>

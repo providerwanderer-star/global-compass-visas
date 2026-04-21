@@ -61,7 +61,6 @@ const ServicePage = () => {
                   "@type": "Organization",
                   name: "4 Aces Visa",
                   telephone: "+16478622190",
-                  email: "sahil280389@gmail.com",
                   url: "https://www.4acesvisa.com",
                 },
               },

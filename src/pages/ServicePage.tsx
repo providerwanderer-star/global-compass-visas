@@ -9,6 +9,8 @@ import InternalLinks from "@/components/InternalLinks";
 import { services } from "@/data/serviceData";
 import { serviceToBlogs, getRelatedBlogData } from "@/data/internalLinks";
 import FAQCallToAction from "@/components/FAQCallToAction";
+import SmartCTA from "@/components/SmartCTA";
+import ConnectedFooter from "@/components/ConnectedFooter";
 
 const staggerContainer = {
   hidden: {},
@@ -293,6 +295,11 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Canada Immigration Hub", href: "/immigration/canada" }}
+        funnel={{ label: "Get your best pathway", href: "/quiz" }}
+      />
     </div>
   );
 };

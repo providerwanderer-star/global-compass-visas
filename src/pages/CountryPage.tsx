@@ -8,6 +8,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { countries } from "@/data/countryData";
 import FAQCallToAction from "@/components/FAQCallToAction";
+import SmartCTA from "@/components/SmartCTA";
+import ConnectedFooter from "@/components/ConnectedFooter";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -341,6 +343,11 @@ const CountryPage = () => {
       </section>
 
       <FAQCallToAction />
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Compare countries", href: "/compare" }}
+        funnel={{ label: "Find your best pathway", href: "/quiz" }}
+      />
     </div>
   );
 };

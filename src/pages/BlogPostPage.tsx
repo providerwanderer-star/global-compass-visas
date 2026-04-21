@@ -8,6 +8,8 @@ import { blogPosts } from "@/data/blogData";
 import { blogToServices, getRelatedServiceData } from "@/data/internalLinks";
 import { blogEnhancements } from "@/data/blogEnhancements";
 import FAQCallToAction from "@/components/FAQCallToAction";
+import SmartCTA from "@/components/SmartCTA";
+import ConnectedFooter from "@/components/ConnectedFooter";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -270,6 +272,11 @@ const BlogPostPage = () => {
       />
 
       <FAQCallToAction />
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Canada Immigration Hub", href: "/immigration/canada" }}
+        funnel={{ label: "Find your best pathway", href: "/quiz" }}
+      />
     </div>
   );
 };

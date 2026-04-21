@@ -4,6 +4,30 @@
 
 ---
 
+## 📊 STATUS UPDATE — Last reviewed: April 21, 2026
+
+| Phase | Feature | Status | Notes |
+|-------|---------|--------|-------|
+| Pre-work | Homepage mobile fixes (hero order, 98% success, testimonials, FAQ, country cards) | ✅ DONE | 788-line HomePage.tsx |
+| Phase 1 | NOC Finder (`/noc-finder`) | ❌ TODO | Highest SEO priority |
+| Phase 2 | Express Entry Draw History (`/express-entry/draws`) | ❌ TODO | |
+| Phase 3 | PNP Draws Dashboard (`/pnp-tracker`) | ❌ TODO | |
+| Phase 4 | Processing Times Tracker (`/processing-times`) | ❌ TODO | |
+| Phase 5 | Immigration Cost Calculator (`/immigration-cost-calculator`) | ❌ TODO | |
+| Phase 6 | CRS Calculator Enhancements | ❌ TODO | File: `src/pages/CRSCalculatorPage.tsx` |
+| Phase 7 | HomePage Tools Hub (10-card grid) | ❌ TODO | Country cards exist; full tools hub still needed |
+| Phase 8 | Navbar "Tools" dropdown + App.tsx routes | ❌ TODO | Must be done AFTER phases 1-5 create the pages |
+| Phase 9 | SEO: sitemap.xml, llms.txt, citations.json | ❌ TODO | Do last |
+
+**Confirmed: Lovable has NOT yet built any of the 5 tool pages.** Start at Phase 1.
+
+**Data files needed (none exist yet):**
+- `src/data/nocData.ts`
+- `src/data/expressEntryDraws.ts`
+- `src/data/pnpDraws.ts`
+
+---
+
 ## CONTEXT (Read First — Do Not Skip)
 
 You are implementing a comprehensive portal revamp for **4acesvisa.com**, a React/Vite/TypeScript SPA using:

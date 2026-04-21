@@ -66,6 +66,9 @@ export function intentFromPath(pathname: string): CTAIntent {
   if (
     pathname === "/india" ||
     pathname === "/express-entry" ||
+    pathname === "/family-sponsorship" ||
+    pathname === "/study-to-pr" ||
+    pathname.startsWith("/canada-pnp/") ||
     pathname.startsWith("/india/") ||
     pathname === "/h1b-to-canada-pr" ||
     pathname === "/usa-to-canada-immigration" ||

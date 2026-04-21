@@ -1,4 +1,4 @@
-import { Calculator, Search, TrendingUp, Map, Clock, Compass, LucideIcon } from "lucide-react";
+import { Calculator, Search, TrendingUp, Map, Clock, Compass, Scale, LucideIcon } from "lucide-react";
 
 export interface ToolItem {
   icon: LucideIcon;
@@ -57,5 +57,13 @@ export const tools: ToolItem[] = [
     href: "/tools/processing-times",
     status: "live",
     updated: "2026-04-15",
+  },
+  {
+    icon: Scale,
+    title: "Compare PR Pathways",
+    desc: "Side-by-side ranking of EE, PNP, Study-to-PR & Work Permit for your profile.",
+    href: "/tools/compare-pathways",
+    status: "live",
+    updated: "2026-04-21",
   },
 ];

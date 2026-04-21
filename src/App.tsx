@@ -34,6 +34,10 @@ import ExpressEntryDrawsPage from "@/pages/ExpressEntryDrawsPage";
 import PNPDrawsPage from "@/pages/PNPDrawsPage";
 import ProcessingTimesPage from "@/pages/ProcessingTimesPage";
 import NOCFinderPage from "@/pages/NOCFinderPage";
+import ComparePathwaysPage from "@/pages/ComparePathwaysPage";
+import FamilySponsorshipHubPage from "@/pages/FamilySponsorshipHubPage";
+import StudyToPRPage from "@/pages/StudyToPRPage";
+import ProvinceHubPage from "@/pages/ProvinceHubPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -73,6 +77,10 @@ const App = () => (
               <Route path="/tools/pnp-draws" element={<PNPDrawsPage />} />
               <Route path="/tools/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/tools/noc-finder" element={<NOCFinderPage />} />
+              <Route path="/tools/compare-pathways" element={<ComparePathwaysPage />} />
+              <Route path="/family-sponsorship" element={<FamilySponsorshipHubPage />} />
+              <Route path="/study-to-pr" element={<StudyToPRPage />} />
+              <Route path="/canada-pnp/:slug" element={<ProvinceHubPage />} />
               <Route path="/india/:slug" element={<StateHubPage />} />
               <Route path="/canada/:slug" element={<StateHubPage />} />
               <Route path="*" element={<NotFound />} />

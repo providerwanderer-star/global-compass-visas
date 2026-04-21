@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -9,6 +9,12 @@ import {
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
+import SmartCTA from "@/components/SmartCTA";
+import { useUserProfile } from "@/hooks/useUserProfile";
+import { expressEntryDraws } from "@/data/expressEntryDraws";
 
 // ─── CRS Scoring Functions ──────────────────────────────────────────────────
 

@@ -12,6 +12,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
 import Shareable from "@/components/Shareable";
 import LiveExpressEntry from "@/components/LiveExpressEntry";
+import LiveDataStrip from "@/components/LiveDataStrip";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -342,6 +343,9 @@ const HomePage = () => {
 
       {/* Live Express Entry draw ticker */}
       <LiveExpressEntry />
+
+      {/* 3-card live data block */}
+      <LiveDataStrip />
 
       {/* Pick your pathway — audience router */}
       <section className="section-padding section-light">

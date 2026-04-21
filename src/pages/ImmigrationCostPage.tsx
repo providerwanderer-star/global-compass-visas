@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
 
 const INR_RATE = 61; // 1 CAD ≈ 61 INR (update periodically)
 
@@ -392,6 +395,13 @@ const ImmigrationCostPage = () => {
           </div>
         </div>
       </section>
+      <PathwayWidget />
+      <ReturnLoopCard />
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Compare countries", href: "/compare" }}
+        funnel={{ label: "Get your best pathway", href: "/quiz" }}
+      />
     </>
   );
 };

@@ -8,6 +8,8 @@ import { blogPosts } from "@/data/blogData";
 import { blogToServices, getRelatedServiceData } from "@/data/internalLinks";
 import { blogEnhancements } from "@/data/blogEnhancements";
 import FAQCallToAction from "@/components/FAQCallToAction";
+import SmartCTA from "@/components/SmartCTA";
+import ConnectedFooter from "@/components/ConnectedFooter";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -221,6 +223,9 @@ const BlogPostPage = () => {
 
               {renderContent(post.content)}
 
+              {/* Mid-content conversion */}
+              <SmartCTA variant="crs" position="mid" />
+
               {/* FAQ Section */}
               {enhancement?.faqs && enhancement.faqs.length > 0 && (
                 <div id="faqs" className="mt-12 pt-8 border-t border-border scroll-mt-24">
@@ -270,6 +275,11 @@ const BlogPostPage = () => {
       />
 
       <FAQCallToAction />
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Canada Immigration Hub", href: "/immigration/canada" }}
+        funnel={{ label: "Find your best pathway", href: "/quiz" }}
+      />
     </div>
   );
 };

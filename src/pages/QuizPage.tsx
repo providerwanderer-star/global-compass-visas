@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft, RotateCcw, CheckCircle, Globe, GraduationCap, Briefcase, Heart, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useUserProfile, type Intent } from "@/hooks/useUserProfile";
 
 interface QuizOption {
   label: string;
@@ -240,6 +241,7 @@ const QuizPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResults, setShowResults] = useState(false);
+  const { update } = useUserProfile();
 
   const currentQuestion = questions[currentStep];
   const progress = ((currentStep + (showResults ? 1 : 0)) / questions.length) * 100;
@@ -272,6 +274,18 @@ const QuizPage = () => {
   };
 
   const recommendations = showResults ? getRecommendations(answers) : [];
+
+  // Persist quiz outcomes to profile
+  useEffect(() => {
+    if (!showResults) return;
+    const goal = answers.goal;
+    const intentMap: Record<string, Intent> = {
+      pr: "PR", study: "Study", work: "Work", visit: "Visit", family: "PR",
+    };
+    update({
+      intent: goal ? intentMap[goal] ?? null : null,
+    });
+  }, [showResults, answers, update]);
 
   return (
     <div className="min-h-screen bg-secondary/30">

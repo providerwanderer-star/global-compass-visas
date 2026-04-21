@@ -8,6 +8,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { countries } from "@/data/countryData";
 import FAQCallToAction from "@/components/FAQCallToAction";
+import SmartCTA from "@/components/SmartCTA";
+import ConnectedFooter from "@/components/ConnectedFooter";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -324,6 +326,7 @@ const CountryPage = () => {
       {/* CTA */}
       <section className="section-padding bg-primary" id="eligibility">
         <div className="container-narrow mx-auto">
+          <SmartCTA variant="crs" position="mid" className="mb-10 bg-card/95" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-primary-foreground mb-4">
@@ -341,6 +344,11 @@ const CountryPage = () => {
       </section>
 
       <FAQCallToAction />
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Compare countries", href: "/compare" }}
+        funnel={{ label: "Find your best pathway", href: "/quiz" }}
+      />
     </div>
   );
 };

@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
+import ProfileBanner from "@/components/ProfileBanner";
 import HomePage from "@/pages/HomePage";
 import CountryPage from "@/pages/CountryPage";
 import ServicePage from "@/pages/ServicePage";
@@ -47,6 +48,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <Navbar />
+          <ProfileBanner />
           <main className="pt-16 md:pt-20">
             <Routes>
               <Route path="/" element={<HomePage />} />

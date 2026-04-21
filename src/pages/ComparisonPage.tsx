@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { CheckCircle, XCircle, ArrowRight, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
 
 const countries = [
   {
@@ -370,6 +373,13 @@ export default function ComparisonPage() {
           </div>
         </div>
       </section>
+      <PathwayWidget />
+      <ReturnLoopCard />
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Canada Immigration Hub", href: "/immigration/canada" }}
+        funnel={{ label: "Find your country", href: "/quiz" }}
+      />
     </>
   );
 }

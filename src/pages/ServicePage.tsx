@@ -9,6 +9,8 @@ import InternalLinks from "@/components/InternalLinks";
 import { services } from "@/data/serviceData";
 import { serviceToBlogs, getRelatedBlogData } from "@/data/internalLinks";
 import FAQCallToAction from "@/components/FAQCallToAction";
+import SmartCTA from "@/components/SmartCTA";
+import ConnectedFooter from "@/components/ConnectedFooter";
 
 const staggerContainer = {
   hidden: {},
@@ -227,6 +229,7 @@ const ServicePage = () => {
       {/* FAQ */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto max-w-3xl">
+          <SmartCTA variant="pathway" position="mid" />
           <AnimatedSection className="text-center mb-8">
             <h2 className="font-display text-3xl font-bold text-foreground">Frequently Asked Questions</h2>
           </AnimatedSection>
@@ -293,6 +296,11 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
+      <ConnectedFooter
+        tool={{ label: "CRS Score Calculator", href: "/crs-calculator" }}
+        hub={{ label: "Canada Immigration Hub", href: "/immigration/canada" }}
+        funnel={{ label: "Get your best pathway", href: "/quiz" }}
+      />
     </div>
   );
 };

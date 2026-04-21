@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -9,6 +9,12 @@ import {
 import { Button } from "@/components/ui/button";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
+import ConnectedFooter from "@/components/ConnectedFooter";
+import ReturnLoopCard from "@/components/ReturnLoopCard";
+import SmartCTA from "@/components/SmartCTA";
+import { useUserProfile } from "@/hooks/useUserProfile";
+import { expressEntryDraws } from "@/data/expressEntryDraws";
 
 // ─── CRS Scoring Functions ──────────────────────────────────────────────────
 
@@ -90,6 +96,7 @@ const defaults: FormState = {
 const CRSCalculatorPage = () => {
   const [form, setForm] = useState<FormState>(defaults);
   const [calculated, setCalculated] = useState(false);
+  const { profile, update } = useUserProfile();
 
   const set = (key: keyof FormState, value: string | number | boolean) => {
     setForm((f) => ({ ...f, [key]: value }));
@@ -125,6 +132,26 @@ const CRSCalculatorPage = () => {
   if (form.sibling) additional += 15;
 
   const total = Math.min(coreHuman + skillTransfer + additional, 1200);
+
+  // Persist score to profile (debounced via effect)
+  useEffect(() => {
+    if (total > 0 && total !== profile.crsScore) {
+      update({ crsScore: total, intent: "PR" });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [total]);
+
+  // ── CRS vs latest cutoff intelligence ──
+  const latestGeneral = expressEntryDraws.find((d) => d.category === "General");
+  const latestSTEM = expressEntryDraws.find((d) => d.category === "STEM");
+  const latestHealth = expressEntryDraws.find((d) => d.category === "Healthcare");
+  const latestFrench = expressEntryDraws.find((d) => d.category === "French");
+  const cutoffComparisons = [
+    { name: "General", draw: latestGeneral },
+    { name: "STEM", draw: latestSTEM },
+    { name: "Healthcare", draw: latestHealth },
+    { name: "French", draw: latestFrench },
+  ].filter((c) => c.draw);
 
   const breakdown = [
     { label: "Age", points: age, max: form.hasSpouse ? 100 : 110 },
@@ -426,22 +453,37 @@ const CRSCalculatorPage = () => {
 
                 {/* Recent cutoff comparison */}
                 <div className="bg-white/5 rounded-xl p-4 mb-5 text-left">
-                  <p className="text-xs text-primary-foreground/50 mb-2 font-semibold uppercase tracking-wider">Recent Draw Cutoffs</p>
-                  {[
-                    { label: "Latest General Draw", cutoff: 448 },
-                    { label: "Category (STEM)", cutoff: 435 },
-                    { label: "Category (Healthcare)", cutoff: 422 },
-                  ].map((d) => (
-                    <div key={d.label} className="flex items-center justify-between mb-1.5">
-                      <span className="text-xs text-primary-foreground/70">{d.label}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-white">{d.cutoff}</span>
-                        {total >= d.cutoff
-                          ? <CheckCircle className="h-3.5 w-3.5 text-success" />
-                          : <AlertTriangle className="h-3.5 w-3.5 text-destructive" />}
+                  <p className="text-xs text-primary-foreground/50 mb-2 font-semibold uppercase tracking-wider">
+                    Your score vs latest draws
+                  </p>
+                  {cutoffComparisons.map((c) => {
+                    const cutoff = c.draw!.crsMin;
+                    const delta = total - cutoff;
+                    const passes = delta >= 0;
+                    return (
+                      <div key={c.name} className="flex items-center justify-between mb-1.5">
+                        <span className="text-xs text-primary-foreground/70">
+                          {c.name} <span className="text-primary-foreground/40">#{c.draw!.drawNumber}</span>
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-bold text-white">{cutoff}</span>
+                          <span className={`text-[10px] font-semibold ${passes ? "text-success" : "text-destructive"}`}>
+                            {passes ? `+${delta}` : delta}
+                          </span>
+                          {passes
+                            ? <CheckCircle className="h-3.5 w-3.5 text-success" />
+                            : <AlertTriangle className="h-3.5 w-3.5 text-destructive" />}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
+                  {latestGeneral && (
+                    <p className="text-[11px] text-primary-foreground/50 mt-2 pt-2 border-t border-white/10">
+                      {total >= latestGeneral.crsMin
+                        ? `You'd have been invited in draw #${latestGeneral.drawNumber} on ${latestGeneral.date}.`
+                        : `You needed ${latestGeneral.crsMin - total} more points for draw #${latestGeneral.drawNumber}. PNP adds 600.`}
+                    </p>
+                  )}
                 </div>
 
                 {/* Breakdown */}
@@ -608,6 +650,13 @@ const CRSCalculatorPage = () => {
           </div>
         </div>
       </section>
+      <PathwayWidget />
+      <ReturnLoopCard />
+      <ConnectedFooter
+        tool={{ label: "Find your NOC code", href: "/noc-finder" }}
+        hub={{ label: "Express Entry Hub", href: "/express-entry" }}
+        funnel={{ label: "Get your best pathway", href: "/quiz" }}
+      />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { ChevronRight, Search, ArrowRight, ExternalLink, CheckCircle2 } from "lu
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
 import { nocList, nocLastUpdated } from "@/data/nocData";
 
 const categories = ["All", "Tech", "Healthcare", "Trades", "Transport", "Agriculture", "Business", "Education"] as const;

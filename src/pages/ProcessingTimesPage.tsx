@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { ChevronRight, ExternalLink, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PathwayWidget from "@/components/PathwayWidget";
 import { processingGroups, processingLastUpdated } from "@/data/processingTimes";
 
 const formatDate = (iso: string) =>

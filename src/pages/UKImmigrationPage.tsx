@@ -1,8 +1,43 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CheckCircle, ArrowRight, Briefcase, GraduationCap, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import SeoSchema from "@/components/SeoSchema";
+
+type Variant = {
+  title: string;
+  h1: string;
+  description: string;
+  canonical: string;
+  intro: string;
+  breadcrumbName: string;
+};
+
+const VARIANTS: Record<string, Variant> = {
+  "/uk/skilled-worker": {
+    title: "UK Skilled Worker Visa 2026 — Sponsorship, Salary & ILR Guide | 4 Aces Visa",
+    h1: "UK Skilled Worker Visa 2026",
+    description:
+      "Complete UK Skilled Worker Visa guide for 2026. £26,200 minimum salary, 70-point requirement, licensed sponsor list, processing times and 5-year ILR pathway. Expert RCIC guidance.",
+    canonical: "https://www.4acesvisa.com/uk/skilled-worker",
+    intro:
+      "The UK's main work visa for international skilled professionals with a job offer. 70-point requirement, £26,200 minimum salary, leads to Indefinite Leave to Remain after 5 years.",
+    breadcrumbName: "Skilled Worker Visa",
+  },
+  "/uk/graduate-route": {
+    title: "UK Graduate Route Visa 2026 — 2-Year Post-Study Work | 4 Aces Visa",
+    h1: "UK Graduate Route Visa 2026",
+    description:
+      "UK Graduate Route lets international graduates work in the UK for 2 years (3 for PhD) with no job offer or salary requirement. Switch to Skilled Worker for ILR. Eligibility & application steps.",
+    canonical: "https://www.4acesvisa.com/uk/graduate-route",
+    intro:
+      "Stay and work in the UK for 2 years (3 for PhD) after graduating from a UK university — no sponsor, no job offer, no salary threshold. The smartest stepping stone to a Skilled Worker visa and ILR.",
+    breadcrumbName: "Graduate Route",
+  },
+};
+
+const DEFAULT_VARIANT = VARIANTS["/uk/skilled-worker"];
 
 const routes = [
   {
@@ -97,15 +132,23 @@ export default function UKImmigrationPage() {
       "acceptedAnswer": { "@type": "Answer", "text": f.a }
     }))
   };
+  const location = useLocation();
+  const variant = VARIANTS[location.pathname] ?? DEFAULT_VARIANT;
 
   return (
     <>
       <Helmet>
-        <title>UK Immigration 2026 | Skilled Worker Visa, Graduate Route & ILR — 4 Aces Visa</title>
-        <meta name="description" content="Complete guide to UK immigration in 2026. Skilled Worker Visa (70 points, £26,200 salary), Graduate Route, Global Talent Visa, and ILR after 5 years. Expert guidance from 4 Aces Visa." />
-        <link rel="canonical" href="https://www.4acesvisa.com/uk/skilled-worker" />
+        <title>{variant.title}</title>
+        <meta name="description" content={variant.description} />
+        <link rel="canonical" href={variant.canonical} />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
+      <SeoSchema
+        breadcrumbs={[
+          { name: "UK Immigration", url: "/uk/skilled-worker" },
+          { name: variant.breadcrumbName, url: location.pathname },
+        ]}
+      />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20 px-4">
@@ -113,10 +156,10 @@ export default function UKImmigrationPage() {
           <AnimatedSection>
             <span className="text-5xl mb-4 block">🇬🇧</span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              UK Immigration 2026
+              {variant.h1}
             </h1>
             <p className="text-blue-100 text-lg max-w-3xl mx-auto mb-8">
-              The UK points-based immigration system. Skilled Worker Visa, Graduate Route, and Global Talent — multiple pathways to Indefinite Leave to Remain (ILR).
+              {variant.intro}
             </p>
             <div className="flex flex-wrap gap-6 justify-center text-center mb-8">
               {[

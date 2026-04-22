@@ -6,6 +6,7 @@ import { nocData, nocCategories, teerInfo, type NOCEntry } from "@/data/nocData"
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
+import DataSourceNote from "@/components/DataSourceNote";
 import { useUserProfile } from "@/hooks/useUserProfile";
 
 const NOCFinderPage = () => {
@@ -366,6 +367,16 @@ const NOCFinderPage = () => {
           </div>
         </div>
       </section>
+
+      <DataSourceNote
+        updated="2026-04-22"
+        sources={[
+          { label: "ESDC NOC 2021 v1.0 (official)", href: "https://noc.esdc.gc.ca/" },
+          { label: "IRCC Express Entry — eligible NOCs", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html" },
+          { label: "Job Bank Canada (wage & demand)", href: "https://www.jobbank.gc.ca/trend-analysis" },
+        ]}
+        caveat="Salary ranges are national medians from Job Bank; actual offers vary by employer and province."
+      />
 
       {/* ── CTA ── */}
       <section className="section-padding bg-primary text-primary-foreground">

@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { expressEntryDraws } from "@/data/expressEntryDraws";
 import { pnpDraws } from "@/data/pnpDraws";
 import { blogPosts } from "@/data/blogData";
+import { buildNewsSlug } from "@/lib/newsSlug";
 
 type FeedType = "all" | "draw" | "pnp" | "policy" | "blog";
 
@@ -297,7 +298,7 @@ const NewsHubPage = () => {
 const FeaturedCard = ({ item }: { item: NewsItem }) => {
   const meta = TYPE_META[item.type];
   const Icon = meta.icon;
-  const isExternal = item.url.startsWith("http");
+  const detailHref = `/news/${buildNewsSlug(item.id, item.title)}`;
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -316,23 +317,12 @@ const FeaturedCard = ({ item }: { item: NewsItem }) => {
         {item.title}
       </h2>
       <p className="text-muted-foreground mt-3 max-w-2xl">{item.summary}</p>
-      {isExternal ? (
-        <a
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-primary font-semibold mt-4 hover:text-gold"
-        >
-          Read full update <ExternalLink className="h-4 w-4" />
-        </a>
-      ) : (
-        <Link
-          to={item.url}
-          className="inline-flex items-center gap-1.5 text-primary font-semibold mt-4 hover:text-gold"
-        >
-          Open in tracker <ArrowRight className="h-4 w-4" />
-        </Link>
-      )}
+      <Link
+        to={detailHref}
+        className="inline-flex items-center gap-1.5 text-primary font-semibold mt-4 hover:text-gold"
+      >
+        Read full update <ArrowRight className="h-4 w-4" />
+      </Link>
     </motion.div>
   );
 };
@@ -340,7 +330,7 @@ const FeaturedCard = ({ item }: { item: NewsItem }) => {
 const TimelineItem = ({ item }: { item: NewsItem }) => {
   const meta = TYPE_META[item.type];
   const Icon = meta.icon;
-  const isExternal = item.url.startsWith("http");
+  const detailHref = `/news/${buildNewsSlug(item.id, item.title)}`;
   const Inner = (
     <div className="bg-card border border-border rounded-xl p-4 md:p-5 hover:border-gold/60 hover:shadow-card transition-all">
       <div className="flex items-center gap-2 mb-1.5 flex-wrap">
@@ -353,7 +343,7 @@ const TimelineItem = ({ item }: { item: NewsItem }) => {
       </h3>
       {item.summary && <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{item.summary}</p>}
       <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary mt-2">
-        {isExternal ? <>Read on source <ExternalLink className="h-3 w-3" /></> : <>View details <ArrowRight className="h-3 w-3" /></>}
+        Read full update <ArrowRight className="h-3 w-3" />
       </span>
     </div>
   );
@@ -366,11 +356,7 @@ const TimelineItem = ({ item }: { item: NewsItem }) => {
       className="relative pl-12 md:pl-14 pb-4 group"
     >
       <div className={`absolute left-2.5 md:left-3.5 top-3 h-3 w-3 rounded-full ring-4 ring-secondary/30 ${meta.color.split(" ")[0]}`} />
-      {isExternal ? (
-        <a href={item.url} target="_blank" rel="noopener noreferrer" className="block">{Inner}</a>
-      ) : (
-        <Link to={item.url} className="block">{Inner}</Link>
-      )}
+      <Link to={detailHref} className="block">{Inner}</Link>
     </motion.article>
   );
 };

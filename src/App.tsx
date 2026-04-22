@@ -46,6 +46,8 @@ import CanadaPRFromCountryPage from "@/pages/CanadaPRFromCountryPage";
 import CRSBandPage from "@/pages/CRSBandPage";
 import SettlementHubPage from "@/pages/SettlementHubPage";
 import SettlementGuidePage from "@/pages/SettlementGuidePage";
+import ProfileDashboardPage from "@/pages/ProfileDashboardPage";
+import ExitIntentModal from "@/components/ExitIntentModal";
 
 const queryClient = new QueryClient();
 
@@ -104,11 +106,13 @@ const App = () => (
               <Route path="/canada-pr/crs/:band" element={<CRSBandPage />} />
               <Route path="/settle-in-canada" element={<SettlementHubPage />} />
               <Route path="/settle-in-canada/:slug" element={<SettlementGuidePage />} />
+              <Route path="/dashboard" element={<ProfileDashboardPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
           <WhatsAppButton />
+          <ExitIntentModal />
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>

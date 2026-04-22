@@ -15,6 +15,8 @@ import FreshnessBanner from "@/components/FreshnessBanner";
 import { getFreshness } from "@/lib/freshness";
 import NotFound from "@/pages/NotFound";
 import { findCRSBand, crsBands } from "@/data/crsBandData";
+import RelatedLinks from "@/components/RelatedLinks";
+import { linksForCrsBand } from "@/lib/crossLinks";
 
 const CRSBandPage = () => {
   const { band: slug } = useParams<{ band: string }>();
@@ -243,6 +245,12 @@ const CRSBandPage = () => {
           </div>
         </div>
       </section>
+
+      <RelatedLinks
+        eyebrow="Pair this CRS strategy with"
+        title="Top NOCs, origins & settlement guides"
+        links={linksForCrsBand(data.slug)}
+      />
 
       {/* Lead form */}
       <section className="section-padding section-light">

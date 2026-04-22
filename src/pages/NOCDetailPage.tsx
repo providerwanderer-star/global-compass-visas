@@ -10,6 +10,8 @@ import { inDemandJobs } from "@/data/inDemandJobs";
 import AnimatedSection from "@/components/AnimatedSection";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import NotFound from "@/pages/NotFound";
+import RelatedLinks from "@/components/RelatedLinks";
+import { linksForNoc } from "@/lib/crossLinks";
 
 /**
  * Estimated CRS impact bands for an NOC, derived from observed
@@ -366,6 +368,12 @@ const NOCDetailPage = () => {
         tool={{ label: "PR Pathway Engine", href: "/in-demand-jobs" }}
         hub={{ label: "NOC Finder", href: "/noc-finder" }}
         funnel={{ label: "Get your best PR pathway", href: "/quiz" }}
+      />
+
+      <RelatedLinks
+        eyebrow={`NOC ${noc.code}`}
+        title="Where to go from here"
+        links={linksForNoc(noc.code, noc.teer as number)}
       />
     </div>
   );

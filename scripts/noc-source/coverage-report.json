@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-22T18:16:11.309Z",
+  "generatedAt": "2026-04-22T18:16:52.203Z",
   "curated": 75,
   "esdcTotal": 516,
   "eeEligibleTotal": 376,
   "fullCoveragePct": 14.53,
-  "eeCoveragePct": 18.35,
+  "eeCoveragePct": 18.62,
   "byTeer": [
     {
       "teer": 0,
@@ -27,8 +27,8 @@
     {
       "teer": 3,
       "total": 69,
-      "have": 9,
-      "pct": 13.043478260869565
+      "have": 10,
+      "pct": 14.492753623188406
     },
     {
       "teer": 4,
@@ -99,15 +99,6 @@
       "gap": 13
     },
     {
-      "mg": "73",
-      "name": "General trades",
-      "total": 18,
-      "have": 5,
-      "eeTotal": 18,
-      "eeHave": 5,
-      "gap": 13
-    },
-    {
       "mg": "92",
       "name": "Manufacturing/utilities supervisors",
       "total": 13,
@@ -123,6 +114,15 @@
       "have": 0,
       "eeTotal": 12,
       "eeHave": 0,
+      "gap": 12
+    },
+    {
+      "mg": "73",
+      "name": "General trades",
+      "total": 18,
+      "have": 6,
+      "eeTotal": 18,
+      "eeHave": 6,
       "gap": 12
     },
     {
@@ -1655,11 +1655,6 @@
       "title": "Concrete finishers"
     },
     {
-      "code": "73102",
-      "teer": 3,
-      "title": "Plasterers, drywall installers and finishers and lathers"
-    },
-    {
       "code": "73110",
       "teer": 3,
       "title": "Roofers and shinglers"
@@ -2662,11 +2657,6 @@
       "title": "Concrete finishers"
     },
     {
-      "code": "73102",
-      "teer": 3,
-      "title": "Plasterers, drywall installers and finishers and lathers"
-    },
-    {
       "code": "73110",
       "teer": 3,
       "title": "Roofers and shinglers"
@@ -2847,10 +2837,5 @@
       "title": "Aircraft assemblers and aircraft assembly inspectors"
     }
   ],
-  "missingFromMaster": [
-    {
-      "code": "72330",
-      "title": "Plasterer / Drywall Installer"
-    }
-  ]
+  "missingFromMaster": []
 }

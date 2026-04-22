@@ -6,6 +6,7 @@ import { nocData, nocCategories, teerInfo, type NOCEntry } from "@/data/nocData"
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
+import DataSourceNote from "@/components/DataSourceNote";
 import { useUserProfile } from "@/hooks/useUserProfile";
 
 const NOCFinderPage = () => {

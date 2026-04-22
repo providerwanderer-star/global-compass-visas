@@ -291,6 +291,26 @@ const BlogPostPage = () => {
         hub={{ label: "Canada Immigration Hub", href: "/immigration/canada" }}
         funnel={{ label: "Find your best pathway", href: "/quiz" }}
       />
+
+      {/* Sticky mobile CTA — visible on mobile only, dismissable */}
+      {!ctaDismissed && (
+        <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-primary text-primary-foreground shadow-elevated px-4 py-3 flex items-center justify-between gap-3">
+          <Link
+            to="/contact"
+            className="flex-1 text-sm font-semibold hover:text-gold transition-colors"
+          >
+            Ready to apply? Get a free assessment →
+          </Link>
+          <button
+            type="button"
+            onClick={() => setCtaDismissed(true)}
+            className="ml-4 text-primary-foreground/60 hover:text-primary-foreground text-xl leading-none"
+            aria-label="Dismiss"
+          >
+            ×
+          </button>
+        </div>
+      )}
     </div>
   );
 };

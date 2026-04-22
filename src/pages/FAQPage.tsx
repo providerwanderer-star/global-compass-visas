@@ -163,8 +163,19 @@ const FAQPage = () => {
     <>
       <Helmet>
         <title>Immigration FAQ 2026 — Canada PR, Study Visa, IELTS, CRS | 4 Aces Visa</title>
-        <meta name="description" content="Expert answers to 55+ immigration questions: Canada PR pathways, CRS score, IELTS requirements, 2026 policy updates, AI/tech immigration, best courses for PR, government settlement programs, Australia & Germany immigration, costs and timelines." />
+        <meta name="description" content="Answers to the most common Canada immigration questions — Express Entry, PNP, study permits, work permits, and PR processing times." />
         <link rel="canonical" href="https://www.4acesvisa.com/faq" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4 Aces Visa" />
+        <meta property="og:title" content="Immigration FAQ 2026 — Canada PR, Study Visa, IELTS, CRS | 4 Aces Visa" />
+        <meta property="og:description" content="Answers to the most common Canada immigration questions — Express Entry, PNP, study permits, work permits, and PR processing times." />
+        <meta property="og:url" content="https://www.4acesvisa.com/faq" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify([
             {

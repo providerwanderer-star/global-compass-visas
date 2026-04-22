@@ -291,17 +291,19 @@ const QuizPage = () => {
     <div className="min-h-screen bg-secondary/30">
       <Helmet>
         <title>Immigration Pathway Quiz | Find Your Best Visa – 4 Aces Visa</title>
-        <meta name="description" content="Take our free immigration quiz to discover the best country and visa pathway for your profile. Personalized recommendations for Canada, Australia, Germany, and UK." />
+        <meta name="description" content="Take the free Canada immigration quiz — 8 questions, instant result showing your best pathway: Express Entry, PNP, study permit, or family sponsorship." />
         <link rel="canonical" href="https://www.4acesvisa.com/quiz" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4 Aces Visa" />
         <meta property="og:title" content="Immigration Pathway Quiz | Find Your Best Visa – 4 Aces Visa" />
-        <meta property="og:description" content="Take our free quiz to discover the best immigration pathway for your profile." />
+        <meta property="og:description" content="Take the free Canada immigration quiz — 8 questions, instant result showing your best pathway: Express Entry, PNP, study permit, or family sponsorship." />
         <meta property="og:url" content="https://www.4acesvisa.com/quiz" />
-        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Immigration Pathway Quiz | 4 Aces Visa" />
-        <meta name="twitter:description" content="Discover the best immigration pathway for your profile in 2 minutes." />
-        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

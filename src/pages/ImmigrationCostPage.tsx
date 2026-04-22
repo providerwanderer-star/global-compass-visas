@@ -165,8 +165,20 @@ const ImmigrationCostPage = () => {
           content="Calculate total Canada immigration costs in CAD and INR for Express Entry PR, Study Permit, Work Permit, Super Visa, and Spousal Sponsorship. Updated government fees for 2026."
         />
         <link rel="canonical" href="https://www.4acesvisa.com/immigration-cost-calculator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4 Aces Visa" />
+        <meta property="og:title" content="Canada Immigration Cost Calculator 2026 — CAD & INR | 4 Aces Visa" />
+        <meta property="og:description" content="Calculate total Canada immigration costs in CAD and INR for Express Entry PR, Study Permit, Work Permit, Super Visa, and Spousal Sponsorship. Updated government fees for 2026." />
+        <meta property="og:url" content="https://www.4acesvisa.com/immigration-cost-calculator" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Immigration Cost Calculator","item":"https://www.4acesvisa.com/immigration-cost-calculator"}]})}</script>
       </Helmet>
 
       {/* ── HERO ── */}

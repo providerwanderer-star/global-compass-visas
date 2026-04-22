@@ -165,10 +165,19 @@ export default function ComparisonPage() {
     <>
       <Helmet>
         <title>Canada vs Australia vs Germany vs UK Immigration 2026 | Compare Pathways — 4 Aces Visa</title>
-        <meta name="description" content="Side-by-side comparison of Canada, Australia, Germany, and UK immigration in 2026. PR speed, cost, salary, language requirements, and which country is best for Indian applicants." />
-        <meta property="og:title" content="Canada vs Australia vs Germany vs UK Immigration Comparison 2026" />
-        <meta property="og:description" content="Compare all four major immigration destinations side-by-side: PR timeline, cost, salary, language requirements, and best fit for Indian applicants." />
+        <meta name="description" content="Compare Canada immigration pathways side by side — Express Entry vs PNP vs Study Permit vs Spousal Sponsorship. See costs, timelines, and eligibility." />
         <link rel="canonical" href="https://www.4acesvisa.com/compare" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4 Aces Visa" />
+        <meta property="og:title" content="Canada vs Australia vs Germany vs UK Immigration 2026 | Compare Pathways — 4 Aces Visa" />
+        <meta property="og:description" content="Compare Canada immigration pathways side by side — Express Entry vs PNP vs Study Permit vs Spousal Sponsorship. See costs, timelines, and eligibility." />
+        <meta property="og:url" content="https://www.4acesvisa.com/compare" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
@@ -178,6 +187,7 @@ export default function ComparisonPage() {
             "acceptedAnswer": { "@type": "Answer", "text": faq.a }
           }))
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Compare Pathways","item":"https://www.4acesvisa.com/compare"}]})}</script>
       </Helmet>
 
       {/* Hero */}

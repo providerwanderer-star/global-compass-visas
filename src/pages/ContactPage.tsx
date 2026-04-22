@@ -22,12 +22,16 @@ const ContactPage = () => {
         <meta name="description" content="Get in touch with 4 Aces Visa for a free immigration consultation. Expert guidance for Canada, Australia, Germany, and UK immigration." />
         <link rel="canonical" href="https://www.4acesvisa.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Contact Us | Free Immigration Consultation" />
-        <meta property="og:description" content="Get a free immigration consultation from 4 Aces Visa." />
+        <meta property="og:site_name" content="4 Aces Visa" />
+        <meta property="og:title" content="Contact Us | Free Immigration Consultation – 4 Aces Visa" />
+        <meta property="og:description" content="Get in touch with 4 Aces Visa for a free immigration consultation. Expert guidance for Canada, Australia, Germany, and UK immigration." />
         <meta property="og:url" content="https://www.4acesvisa.com/contact" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Contact 4 Aces Visa" />
-        <meta name="twitter:description" content="Free immigration consultation for Canada, Australia, Germany & UK." />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -42,6 +46,7 @@ const ContactPage = () => {
             }
           })}
         </script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.4acesvisa.com/contact"}]})}</script>
       </Helmet>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">

@@ -132,8 +132,20 @@ const ProcessingTimesPage = () => {
           content="Current Canada immigration processing times for Express Entry (6 months), work permits (1–5 months), study permits (4–8 weeks), PNP (10–18 months), and family sponsorship. Updated April 2026."
         />
         <link rel="canonical" href="https://www.4acesvisa.com/processing-times" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4 Aces Visa" />
+        <meta property="og:title" content="Canada Immigration Processing Times 2026 — Work Permit, PR, Study | 4 Aces Visa" />
+        <meta property="og:description" content="Current Canada immigration processing times for Express Entry (6 months), work permits (1–5 months), study permits (4–8 weeks), PNP (10–18 months), and family sponsorship. Updated April 2026." />
+        <meta property="og:url" content="https://www.4acesvisa.com/processing-times" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Processing Times","item":"https://www.4acesvisa.com/processing-times"}]})}</script>
       </Helmet>
 
       {/* ── HERO ── */}

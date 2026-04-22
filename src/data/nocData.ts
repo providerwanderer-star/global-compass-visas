@@ -607,6 +607,114 @@ export const nocData: NOCEntry[] = [
     description:
       "Constructs and repairs frameworks and structures made of wood and other materials.",
   },
+  {
+    code: "72400",
+    title: "Heavy-Duty Equipment Mechanic",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Diesel Mechanic", "Industrial Mechanic", "Construction Equipment Mechanic"],
+    salaryRange: "$65,000 – $105,000",
+    topProvinces: ["Alberta", "British Columbia", "Saskatchewan"],
+    description:
+      "Repairs and maintains heavy mobile equipment used in construction, mining, and forestry. Trades category eligible.",
+  },
+  {
+    code: "72410",
+    title: "Automotive Service Technician",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Auto Mechanic", "Auto Technician", "Vehicle Repair Technician"],
+    salaryRange: "$45,000 – $80,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Inspects, diagnoses, and repairs cars and light trucks.",
+  },
+  {
+    code: "72500",
+    title: "Crane Operator",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Tower Crane Operator", "Mobile Crane Operator", "Hoist Operator"],
+    salaryRange: "$65,000 – $110,000",
+    topProvinces: ["Alberta", "British Columbia", "Ontario"],
+    description:
+      "Operates cranes to lift, move, position, or place equipment and materials.",
+  },
+  {
+    code: "72330",
+    title: "Plasterer / Drywall Installer",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Drywaller", "Lather", "Stucco Mason"],
+    salaryRange: "$45,000 – $75,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Applies plaster, drywall, and decorative finishes to interior walls and ceilings.",
+  },
+  {
+    code: "73101",
+    title: "Concrete Finisher / Mason",
+    teer: 3,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Bricklayer", "Stonemason", "Cement Mason"],
+    salaryRange: "$48,000 – $80,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Smooths and finishes concrete and lays brick/stone — Red Seal trade.",
+  },
+  {
+    code: "73400",
+    title: "Construction Trades Helper / Labourer",
+    teer: 4,
+    category: "Trades & Skilled",
+    eeEligible: false,
+    altTitles: ["General Labourer", "Construction Labourer", "Site Helper"],
+    salaryRange: "$38,000 – $60,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Assists skilled trades workers on construction sites. Not EE eligible — explore PNP / TFW pathways.",
+  },
+  {
+    code: "62020",
+    title: "Chef / Cook",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Sous Chef", "Line Cook", "Head Chef", "Pastry Chef"],
+    salaryRange: "$40,000 – $75,000",
+    topProvinces: ["Ontario", "British Columbia", "Quebec", "Alberta"],
+    description:
+      "Prepares and cooks food in restaurants, hotels, hospitals, and other establishments.",
+  },
+  {
+    code: "63200",
+    title: "Baker",
+    teer: 3,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Pastry Cook", "Bread Maker", "Patissier"],
+    salaryRange: "$35,000 – $55,000",
+    topProvinces: ["Ontario", "British Columbia", "Quebec"],
+    description:
+      "Prepares baked goods in bakeries, restaurants, and food service establishments.",
+  },
+  {
+    code: "65201",
+    title: "Food and Beverage Server",
+    teer: 5,
+    category: "Trades & Skilled",
+    eeEligible: false,
+    altTitles: ["Waiter", "Bartender", "Restaurant Server"],
+    salaryRange: "$30,000 – $55,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Serves food and drinks. Not Express Entry eligible — consider PNP or work permits.",
+  },
 
   // ── TRANSPORTATION ────────────────────────────────────────────────────────
   {
@@ -632,6 +740,116 @@ export const nocData: NOCEntry[] = [
     topProvinces: ["Alberta", "British Columbia", "Saskatchewan"],
     description:
       "Operates heavy construction and mining equipment such as cranes, excavators, and bulldozers.",
+  },
+  {
+    code: "73301",
+    title: "Bus Driver / Subway Operator",
+    teer: 3,
+    category: "Transportation",
+    eeEligible: true,
+    altTitles: ["Transit Bus Driver", "Coach Bus Driver", "School Bus Driver"],
+    salaryRange: "$45,000 – $75,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Drives buses to transport passengers along established routes.",
+  },
+  {
+    code: "73310",
+    title: "Delivery & Courier Service Driver",
+    teer: 4,
+    category: "Transportation",
+    eeEligible: false,
+    altTitles: ["Courier", "Local Delivery Driver", "Parcel Driver"],
+    salaryRange: "$38,000 – $58,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Drives light vans for local pickup and delivery. Not EE eligible.",
+  },
+  {
+    code: "72601",
+    title: "Aircraft Mechanic / AME",
+    teer: 2,
+    category: "Transportation",
+    eeEligible: true,
+    altTitles: ["AME", "Aviation Maintenance Engineer", "Aircraft Technician"],
+    salaryRange: "$60,000 – $100,000",
+    topProvinces: ["Quebec", "Ontario", "British Columbia", "Manitoba"],
+    description:
+      "Inspects, repairs, and maintains aircraft systems. Trades + Transport category eligible.",
+  },
+  {
+    code: "72604",
+    title: "Railway Conductor / Locomotive Engineer",
+    teer: 2,
+    category: "Transportation",
+    eeEligible: true,
+    altTitles: ["Train Conductor", "Locomotive Engineer", "Railway Engineer"],
+    salaryRange: "$70,000 – $115,000",
+    topProvinces: ["Alberta", "British Columbia", "Saskatchewan", "Ontario"],
+    description:
+      "Operates railway locomotives and oversees train movements. Transport category eligible.",
+  },
+
+  // ── EDUCATION (early-childhood + post-secondary) ─────────────────────────
+  {
+    code: "42202",
+    title: "Early Childhood Educator (ECE)",
+    teer: 3,
+    category: "Education",
+    eeEligible: true,
+    altTitles: ["ECE", "Daycare Teacher", "Childcare Worker", "Preschool Teacher"],
+    salaryRange: "$40,000 – $62,000",
+    topProvinces: ["Ontario", "British Columbia", "Manitoba", "Alberta"],
+    description:
+      "Plans and delivers programs for children in childcare centres. Targeted by the new Education category Express Entry draws (2025+).",
+  },
+  {
+    code: "44100",
+    title: "Home Child Care Provider",
+    teer: 4,
+    category: "Education",
+    eeEligible: true,
+    altTitles: ["Nanny", "Babysitter", "Live-in Caregiver"],
+    salaryRange: "$32,000 – $50,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Provides childcare in family homes. Eligible via the dedicated Home Care Worker PR pilot.",
+  },
+  {
+    code: "44101",
+    title: "Home Support Worker / Caregiver",
+    teer: 4,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["Live-in Caregiver", "Elder Care Worker", "Companion"],
+    salaryRange: "$35,000 – $52,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Provides personal care and household help for seniors or persons with disabilities. Home Care Worker PR pilot — direct PR on landing.",
+  },
+  {
+    code: "41200",
+    title: "University Professor / Lecturer",
+    teer: 1,
+    category: "Education",
+    eeEligible: true,
+    altTitles: ["Assistant Professor", "Associate Professor", "Lecturer", "Researcher"],
+    salaryRange: "$80,000 – $160,000",
+    topProvinces: ["Ontario", "Quebec", "British Columbia", "Alberta"],
+    description:
+      "Teaches at universities and conducts research. Education category eligible.",
+  },
+  {
+    code: "41221",
+    title: "College & Vocational Instructor",
+    teer: 1,
+    category: "Education",
+    eeEligible: true,
+    altTitles: ["College Instructor", "Trade Instructor", "Continuing Education Teacher"],
+    salaryRange: "$60,000 – $100,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Teaches applied and vocational subjects at community colleges and CEGEPs.",
   },
 
   // ── EDUCATION ─────────────────────────────────────────────────────────────
@@ -672,6 +890,42 @@ export const nocData: NOCEntry[] = [
     topProvinces: ["Saskatchewan", "Alberta", "Ontario"],
     description:
       "Operates farm machinery such as tractors and combines for crop production and harvesting.",
+  },
+  {
+    code: "82031",
+    title: "Farm Supervisor / Agricultural Service Contractor",
+    teer: 2,
+    category: "Agriculture & Food",
+    eeEligible: true,
+    altTitles: ["Farm Manager", "Livestock Supervisor", "Crop Supervisor"],
+    salaryRange: "$45,000 – $75,000",
+    topProvinces: ["Saskatchewan", "Alberta", "Manitoba", "Ontario"],
+    description:
+      "Supervises farm workers and operations. Targeted by the Agriculture & Agri-Food category EE draws — lowest CRS cut-off (~355).",
+  },
+  {
+    code: "63201",
+    title: "Butcher / Meat Cutter (Industrial)",
+    teer: 3,
+    category: "Agriculture & Food",
+    eeEligible: true,
+    altTitles: ["Industrial Butcher", "Meat Processor", "Slaughterhouse Worker"],
+    salaryRange: "$40,000 – $60,000",
+    topProvinces: ["Alberta", "Ontario", "Manitoba"],
+    description:
+      "Cuts and prepares meat in industrial plants. Eligible via Agri-Food Pilot and Agriculture EE category.",
+  },
+  {
+    code: "85100",
+    title: "Livestock Labourer",
+    teer: 5,
+    category: "Agriculture & Food",
+    eeEligible: false,
+    altTitles: ["Ranch Hand", "Dairy Worker", "Poultry Farm Worker"],
+    salaryRange: "$32,000 – $48,000",
+    topProvinces: ["Alberta", "Saskatchewan", "Manitoba"],
+    description:
+      "Performs general farm labour. Not EE eligible — explore Agri-Food Pilot or PNP.",
   },
   {
     code: "94141",

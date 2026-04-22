@@ -169,6 +169,174 @@ export const nocData: NOCEntry[] = [
     description:
       "Dispenses prescription medications, advises patients on drug interactions, and manages medication therapy.",
   },
+  {
+    code: "32101",
+    title: "Licensed Practical Nurse (LPN)",
+    teer: 2,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["LPN", "Registered Practical Nurse", "RPN", "Vocational Nurse"],
+    salaryRange: "$55,000 – $80,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia", "Manitoba"],
+    description:
+      "Provides nursing care under the direction of registered nurses or physicians. Targeted in Express Entry healthcare category draws.",
+  },
+  {
+    code: "31302",
+    title: "Nurse Practitioner",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["NP", "Advanced Practice Nurse", "Primary Care NP"],
+    salaryRange: "$95,000 – $140,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Diagnoses and treats patients with extended scope of practice. Eligible for Express Entry healthcare draws — among lowest CRS cut-offs.",
+  },
+  {
+    code: "31303",
+    title: "Physician Assistant / Midwife / Allied Health",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["Midwife", "Physician Assistant", "PA"],
+    salaryRange: "$80,000 – $130,000",
+    topProvinces: ["Ontario", "British Columbia", "Manitoba"],
+    description:
+      "Provides clinical care under physician supervision or independent midwifery services. Targeted by healthcare category draws.",
+  },
+  {
+    code: "32102",
+    title: "Paramedic / Emergency Medical Responder",
+    teer: 2,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["EMT", "Advanced Care Paramedic", "Primary Care Paramedic"],
+    salaryRange: "$55,000 – $90,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Responds to medical emergencies, provides pre-hospital care, and transports patients. High demand across all provinces.",
+  },
+  {
+    code: "31202",
+    title: "Physiotherapist",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["PT", "Physical Therapist", "Sports Physiotherapist"],
+    salaryRange: "$72,000 – $110,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Assesses and treats patients with physical impairments. Targeted by healthcare category Express Entry draws.",
+  },
+  {
+    code: "31203",
+    title: "Occupational Therapist",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["OT", "Rehabilitation Therapist"],
+    salaryRange: "$70,000 – $105,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Helps patients develop daily-living skills after injury or illness. Eligible for healthcare category draws.",
+  },
+  {
+    code: "31112",
+    title: "Specialist Physician (Internal/Surgery/Psychiatry)",
+    teer: 0,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["Surgeon", "Psychiatrist", "Cardiologist", "Anesthesiologist", "Pediatrician"],
+    salaryRange: "$280,000 – $500,000+",
+    topProvinces: ["Ontario", "Alberta", "British Columbia", "Quebec"],
+    description:
+      "Diagnoses and treats specialized medical conditions. Severe shortage — healthcare category Express Entry priority.",
+  },
+  {
+    code: "31100",
+    title: "Optometrist",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["Eye Care Specialist", "Vision Care Doctor"],
+    salaryRange: "$110,000 – $180,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Examines eyes, prescribes corrective lenses, and detects ocular diseases.",
+  },
+  {
+    code: "31201",
+    title: "Chiropractor",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["DC", "Doctor of Chiropractic"],
+    salaryRange: "$70,000 – $130,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Diagnoses and treats musculoskeletal disorders, especially of the spine.",
+  },
+  {
+    code: "31209",
+    title: "Other Health Diagnosing & Treating Professional",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["Naturopath", "Audiologist", "Speech-Language Pathologist", "Dietitian"],
+    salaryRange: "$65,000 – $110,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Includes audiologists, dietitians, and speech-language pathologists. Healthcare category eligible.",
+  },
+  {
+    code: "32109",
+    title: "Medical Laboratory Technologist",
+    teer: 2,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["Med Lab Tech", "MLT", "Cytotechnologist"],
+    salaryRange: "$60,000 – $90,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Performs medical laboratory tests to assist in diagnosis and treatment of patients.",
+  },
+  {
+    code: "32121",
+    title: "Medical Radiation Technologist",
+    teer: 2,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["X-Ray Technologist", "MRI Tech", "CT Tech", "Radiographer"],
+    salaryRange: "$65,000 – $95,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Operates medical imaging equipment. Healthcare category Express Entry eligible.",
+  },
+  {
+    code: "41301",
+    title: "Social Worker",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["MSW", "Clinical Social Worker", "Community Social Worker"],
+    salaryRange: "$58,000 – $90,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Helps individuals, families, and groups address social and personal problems. High demand in mental health and child welfare.",
+  },
+  {
+    code: "41320",
+    title: "Psychologist",
+    teer: 1,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["Clinical Psychologist", "Counselling Psychologist", "PhD Psychology"],
+    salaryRange: "$80,000 – $140,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Assesses and treats mental, emotional, and behavioural disorders. Healthcare category eligible.",
+  },
 
   // ── ENGINEERING ──────────────────────────────────────────────────────────
   {
@@ -219,6 +387,78 @@ export const nocData: NOCEntry[] = [
     description:
       "Designs and develops processes for manufacturing chemicals, petroleum products, and other materials.",
   },
+  {
+    code: "21311",
+    title: "Computer Engineer",
+    teer: 1,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Hardware Engineer", "Embedded Systems Engineer", "FPGA Engineer"],
+    salaryRange: "$85,000 – $135,000",
+    topProvinces: ["Ontario", "British Columbia", "Quebec"],
+    description:
+      "Designs computer hardware and embedded systems. STEM category Express Entry eligible.",
+  },
+  {
+    code: "21390",
+    title: "Aerospace Engineer",
+    teer: 1,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Avionics Engineer", "Aircraft Engineer"],
+    salaryRange: "$80,000 – $135,000",
+    topProvinces: ["Quebec", "Ontario", "Manitoba"],
+    description:
+      "Designs aircraft, spacecraft, and related systems. Strong demand in Montreal aerospace cluster.",
+  },
+  {
+    code: "21331",
+    title: "Industrial / Manufacturing Engineer",
+    teer: 1,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Production Engineer", "Process Engineer", "Quality Engineer"],
+    salaryRange: "$72,000 – $115,000",
+    topProvinces: ["Ontario", "Quebec", "Alberta"],
+    description:
+      "Optimizes production processes and systems. STEM Express Entry eligible.",
+  },
+  {
+    code: "21332",
+    title: "Mining Engineer",
+    teer: 1,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Geological Engineer", "Metallurgical Engineer"],
+    salaryRange: "$90,000 – $150,000",
+    topProvinces: ["British Columbia", "Ontario", "Quebec", "Saskatchewan"],
+    description:
+      "Plans and oversees mining operations. STEM category eligible.",
+  },
+  {
+    code: "22301",
+    title: "Mechanical Engineering Technologist",
+    teer: 2,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["CAD Technician", "Mechanical Drafter", "Design Technician"],
+    salaryRange: "$55,000 – $85,000",
+    topProvinces: ["Ontario", "Alberta", "Quebec"],
+    description:
+      "Provides technical support to mechanical engineers and operates CAD software.",
+  },
+  {
+    code: "22300",
+    title: "Civil Engineering Technologist",
+    teer: 2,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Construction Technologist", "Land Surveyor Tech"],
+    salaryRange: "$55,000 – $85,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Assists civil engineers in design, construction, inspection, and surveying.",
+  },
 
   // ── BUSINESS & FINANCE ───────────────────────────────────────────────────
   {
@@ -256,6 +496,66 @@ export const nocData: NOCEntry[] = [
     topProvinces: ["Ontario", "British Columbia", "Alberta"],
     description:
       "Plans, organizes, and directs human resources activities within an organization.",
+  },
+  {
+    code: "11200",
+    title: "Human Resources Professional",
+    teer: 1,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["HR Generalist", "Recruiter", "Talent Acquisition Specialist", "HR Business Partner"],
+    salaryRange: "$60,000 – $95,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Recruits, hires, and supports employees. CHRP designation valued.",
+  },
+  {
+    code: "11202",
+    title: "Marketing & Advertising Professional",
+    teer: 1,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["Digital Marketing Manager", "Brand Manager", "SEO Specialist", "Growth Marketer"],
+    salaryRange: "$60,000 – $115,000",
+    topProvinces: ["Ontario", "British Columbia", "Quebec"],
+    description:
+      "Plans and executes marketing campaigns. Strong demand in tech and retail.",
+  },
+  {
+    code: "13110",
+    title: "Administrative Assistant",
+    teer: 3,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["Executive Assistant", "Office Administrator", "Office Coordinator"],
+    salaryRange: "$40,000 – $65,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Performs administrative duties and provides support to managers and teams.",
+  },
+  {
+    code: "60020",
+    title: "Restaurant & Food Service Manager",
+    teer: 0,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["Restaurant Manager", "Food Service Supervisor", "Hospitality Manager"],
+    salaryRange: "$50,000 – $80,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Plans, organizes, and directs the operations of restaurants and food service establishments.",
+  },
+  {
+    code: "60030",
+    title: "Retail & Wholesale Trade Manager",
+    teer: 0,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["Store Manager", "Retail Operations Manager", "District Manager"],
+    salaryRange: "$55,000 – $95,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Manages day-to-day operations of retail or wholesale establishments.",
   },
 
   // ── TRADES & SKILLED ─────────────────────────────────────────────────────
@@ -307,6 +607,114 @@ export const nocData: NOCEntry[] = [
     description:
       "Constructs and repairs frameworks and structures made of wood and other materials.",
   },
+  {
+    code: "72400",
+    title: "Heavy-Duty Equipment Mechanic",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Diesel Mechanic", "Industrial Mechanic", "Construction Equipment Mechanic"],
+    salaryRange: "$65,000 – $105,000",
+    topProvinces: ["Alberta", "British Columbia", "Saskatchewan"],
+    description:
+      "Repairs and maintains heavy mobile equipment used in construction, mining, and forestry. Trades category eligible.",
+  },
+  {
+    code: "72410",
+    title: "Automotive Service Technician",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Auto Mechanic", "Auto Technician", "Vehicle Repair Technician"],
+    salaryRange: "$45,000 – $80,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Inspects, diagnoses, and repairs cars and light trucks.",
+  },
+  {
+    code: "72500",
+    title: "Crane Operator",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Tower Crane Operator", "Mobile Crane Operator", "Hoist Operator"],
+    salaryRange: "$65,000 – $110,000",
+    topProvinces: ["Alberta", "British Columbia", "Ontario"],
+    description:
+      "Operates cranes to lift, move, position, or place equipment and materials.",
+  },
+  {
+    code: "72330",
+    title: "Plasterer / Drywall Installer",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Drywaller", "Lather", "Stucco Mason"],
+    salaryRange: "$45,000 – $75,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Applies plaster, drywall, and decorative finishes to interior walls and ceilings.",
+  },
+  {
+    code: "73101",
+    title: "Concrete Finisher / Mason",
+    teer: 3,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Bricklayer", "Stonemason", "Cement Mason"],
+    salaryRange: "$48,000 – $80,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Smooths and finishes concrete and lays brick/stone — Red Seal trade.",
+  },
+  {
+    code: "73400",
+    title: "Construction Trades Helper / Labourer",
+    teer: 4,
+    category: "Trades & Skilled",
+    eeEligible: false,
+    altTitles: ["General Labourer", "Construction Labourer", "Site Helper"],
+    salaryRange: "$38,000 – $60,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Assists skilled trades workers on construction sites. Not EE eligible — explore PNP / TFW pathways.",
+  },
+  {
+    code: "62020",
+    title: "Chef / Cook",
+    teer: 2,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Sous Chef", "Line Cook", "Head Chef", "Pastry Chef"],
+    salaryRange: "$40,000 – $75,000",
+    topProvinces: ["Ontario", "British Columbia", "Quebec", "Alberta"],
+    description:
+      "Prepares and cooks food in restaurants, hotels, hospitals, and other establishments.",
+  },
+  {
+    code: "63200",
+    title: "Baker",
+    teer: 3,
+    category: "Trades & Skilled",
+    eeEligible: true,
+    altTitles: ["Pastry Cook", "Bread Maker", "Patissier"],
+    salaryRange: "$35,000 – $55,000",
+    topProvinces: ["Ontario", "British Columbia", "Quebec"],
+    description:
+      "Prepares baked goods in bakeries, restaurants, and food service establishments.",
+  },
+  {
+    code: "65201",
+    title: "Food and Beverage Server",
+    teer: 5,
+    category: "Trades & Skilled",
+    eeEligible: false,
+    altTitles: ["Waiter", "Bartender", "Restaurant Server"],
+    salaryRange: "$30,000 – $55,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Serves food and drinks. Not Express Entry eligible — consider PNP or work permits.",
+  },
 
   // ── TRANSPORTATION ────────────────────────────────────────────────────────
   {
@@ -332,6 +740,116 @@ export const nocData: NOCEntry[] = [
     topProvinces: ["Alberta", "British Columbia", "Saskatchewan"],
     description:
       "Operates heavy construction and mining equipment such as cranes, excavators, and bulldozers.",
+  },
+  {
+    code: "73301",
+    title: "Bus Driver / Subway Operator",
+    teer: 3,
+    category: "Transportation",
+    eeEligible: true,
+    altTitles: ["Transit Bus Driver", "Coach Bus Driver", "School Bus Driver"],
+    salaryRange: "$45,000 – $75,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Drives buses to transport passengers along established routes.",
+  },
+  {
+    code: "73310",
+    title: "Delivery & Courier Service Driver",
+    teer: 4,
+    category: "Transportation",
+    eeEligible: false,
+    altTitles: ["Courier", "Local Delivery Driver", "Parcel Driver"],
+    salaryRange: "$38,000 – $58,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Drives light vans for local pickup and delivery. Not EE eligible.",
+  },
+  {
+    code: "72601",
+    title: "Aircraft Mechanic / AME",
+    teer: 2,
+    category: "Transportation",
+    eeEligible: true,
+    altTitles: ["AME", "Aviation Maintenance Engineer", "Aircraft Technician"],
+    salaryRange: "$60,000 – $100,000",
+    topProvinces: ["Quebec", "Ontario", "British Columbia", "Manitoba"],
+    description:
+      "Inspects, repairs, and maintains aircraft systems. Trades + Transport category eligible.",
+  },
+  {
+    code: "72604",
+    title: "Railway Conductor / Locomotive Engineer",
+    teer: 2,
+    category: "Transportation",
+    eeEligible: true,
+    altTitles: ["Train Conductor", "Locomotive Engineer", "Railway Engineer"],
+    salaryRange: "$70,000 – $115,000",
+    topProvinces: ["Alberta", "British Columbia", "Saskatchewan", "Ontario"],
+    description:
+      "Operates railway locomotives and oversees train movements. Transport category eligible.",
+  },
+
+  // ── EDUCATION (early-childhood + post-secondary) ─────────────────────────
+  {
+    code: "42202",
+    title: "Early Childhood Educator (ECE)",
+    teer: 3,
+    category: "Education",
+    eeEligible: true,
+    altTitles: ["ECE", "Daycare Teacher", "Childcare Worker", "Preschool Teacher"],
+    salaryRange: "$40,000 – $62,000",
+    topProvinces: ["Ontario", "British Columbia", "Manitoba", "Alberta"],
+    description:
+      "Plans and delivers programs for children in childcare centres. Targeted by the new Education category Express Entry draws (2025+).",
+  },
+  {
+    code: "44100",
+    title: "Home Child Care Provider",
+    teer: 4,
+    category: "Education",
+    eeEligible: true,
+    altTitles: ["Nanny", "Babysitter", "Live-in Caregiver"],
+    salaryRange: "$32,000 – $50,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Provides childcare in family homes. Eligible via the dedicated Home Care Worker PR pilot.",
+  },
+  {
+    code: "44101",
+    title: "Home Support Worker / Caregiver",
+    teer: 4,
+    category: "Healthcare",
+    eeEligible: true,
+    altTitles: ["Live-in Caregiver", "Elder Care Worker", "Companion"],
+    salaryRange: "$35,000 – $52,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Provides personal care and household help for seniors or persons with disabilities. Home Care Worker PR pilot — direct PR on landing.",
+  },
+  {
+    code: "41200",
+    title: "University Professor / Lecturer",
+    teer: 1,
+    category: "Education",
+    eeEligible: true,
+    altTitles: ["Assistant Professor", "Associate Professor", "Lecturer", "Researcher"],
+    salaryRange: "$80,000 – $160,000",
+    topProvinces: ["Ontario", "Quebec", "British Columbia", "Alberta"],
+    description:
+      "Teaches at universities and conducts research. Education category eligible.",
+  },
+  {
+    code: "41221",
+    title: "College & Vocational Instructor",
+    teer: 1,
+    category: "Education",
+    eeEligible: true,
+    altTitles: ["College Instructor", "Trade Instructor", "Continuing Education Teacher"],
+    salaryRange: "$60,000 – $100,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Teaches applied and vocational subjects at community colleges and CEGEPs.",
   },
 
   // ── EDUCATION ─────────────────────────────────────────────────────────────
@@ -372,6 +890,42 @@ export const nocData: NOCEntry[] = [
     topProvinces: ["Saskatchewan", "Alberta", "Ontario"],
     description:
       "Operates farm machinery such as tractors and combines for crop production and harvesting.",
+  },
+  {
+    code: "82031",
+    title: "Farm Supervisor / Agricultural Service Contractor",
+    teer: 2,
+    category: "Agriculture & Food",
+    eeEligible: true,
+    altTitles: ["Farm Manager", "Livestock Supervisor", "Crop Supervisor"],
+    salaryRange: "$45,000 – $75,000",
+    topProvinces: ["Saskatchewan", "Alberta", "Manitoba", "Ontario"],
+    description:
+      "Supervises farm workers and operations. Targeted by the Agriculture & Agri-Food category EE draws — lowest CRS cut-off (~355).",
+  },
+  {
+    code: "63201",
+    title: "Butcher / Meat Cutter (Industrial)",
+    teer: 3,
+    category: "Agriculture & Food",
+    eeEligible: true,
+    altTitles: ["Industrial Butcher", "Meat Processor", "Slaughterhouse Worker"],
+    salaryRange: "$40,000 – $60,000",
+    topProvinces: ["Alberta", "Ontario", "Manitoba"],
+    description:
+      "Cuts and prepares meat in industrial plants. Eligible via Agri-Food Pilot and Agriculture EE category.",
+  },
+  {
+    code: "85100",
+    title: "Livestock Labourer",
+    teer: 5,
+    category: "Agriculture & Food",
+    eeEligible: false,
+    altTitles: ["Ranch Hand", "Dairy Worker", "Poultry Farm Worker"],
+    salaryRange: "$32,000 – $48,000",
+    topProvinces: ["Alberta", "Saskatchewan", "Manitoba"],
+    description:
+      "Performs general farm labour. Not EE eligible — explore Agri-Food Pilot or PNP.",
   },
   {
     code: "94141",

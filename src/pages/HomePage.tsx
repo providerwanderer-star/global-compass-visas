@@ -691,13 +691,13 @@ const HomePage = () => {
             </p>
           </AnimatedSection>
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            className="grid grid-cols-1 md:grid-cols-3 gap-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            {testimonials.map((t, i) => (
+            {testimonials.slice(0, 3).map((t, i) => (
               <motion.div key={i} variants={staggerItem}>
                 <div className="bg-card rounded-xl border border-border p-5 h-full flex flex-col shadow-sm">
                   <div className="flex gap-0.5 mb-3">

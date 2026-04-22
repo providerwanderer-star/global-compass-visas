@@ -54,28 +54,31 @@ async function fetchLinkedInJobs(
   const html = await res.text();
 
   const jobs: JobOut[] = [];
-  // Each card is wrapped in <div class="base-card ... job-search-card" ...>
-  const cardRe = /<div[^>]*class="[^"]*job-search-card[^"]*"[\s\S]*?<\/div>\s*<\/div>\s*<\/li>/g;
-  let m: RegExpExecArray | null;
-  while ((m = cardRe.exec(html)) && jobs.length < limit) {
-    const card = m[0];
-    const titleMatch = card.match(/<h3[^>]*class="[^"]*base-search-card__title[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/h3>/i);
-    const companyMatch = card.match(/<h4[^>]*class="[^"]*base-search-card__subtitle[^"]*"[^>]*>[\s\S]*?<a[^>]*>\s*([\s\S]*?)\s*<\/a>/i)
-      || card.match(/<h4[^>]*class="[^"]*base-search-card__subtitle[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/h4>/i);
-    const locationMatch = card.match(/<span[^>]*class="[^"]*job-search-card__location[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/span>/i);
-    const linkMatch = card.match(/<a[^>]*class="base-card__full-link[^"]*"[^>]*href="([^"]+)"/i);
-    const dateMatch = card.match(/<time[^>]*datetime="([^"]+)"/i);
+  // The endpoint returns a series of <li>...</li> blocks (no surrounding <ul>).
+  // Split on <li> and parse each chunk independently.
+  const chunks = html.split(/<li[\s>]/);
+  for (const chunk of chunks) {
+    if (jobs.length >= limit) break;
+    if (!chunk.includes("job-search-card")) continue;
 
-    if (titleMatch && linkMatch) {
-      const cleanUrl = decodeHtml(linkMatch[1]).split("?")[0];
-      jobs.push({
-        title: decodeHtml(titleMatch[1].replace(/<[^>]+>/g, "")),
-        company: decodeHtml((companyMatch?.[1] ?? "—").replace(/<[^>]+>/g, "")) || "—",
-        location: decodeHtml((locationMatch?.[1] ?? "Canada").replace(/<[^>]+>/g, "")),
-        url: cleanUrl,
-        postedAt: dateMatch?.[1],
-      });
-    }
+    const linkMatch = chunk.match(/<a[^>]*class="[^"]*base-card__full-link[^"]*"[^>]*href="([^"]+)"/i);
+    const titleMatch = chunk.match(/<h3[^>]*class="[^"]*base-search-card__title[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/h3>/i);
+    const companyMatch =
+      chunk.match(/<h4[^>]*class="[^"]*base-search-card__subtitle[^"]*"[^>]*>[\s\S]*?<a[^>]*>\s*([\s\S]*?)\s*<\/a>/i)
+      || chunk.match(/<h4[^>]*class="[^"]*base-search-card__subtitle[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/h4>/i);
+    const locationMatch = chunk.match(/<span[^>]*class="[^"]*job-search-card__location[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/span>/i);
+    const dateMatch = chunk.match(/<time[^>]*datetime="([^"]+)"/i);
+
+    if (!titleMatch || !linkMatch) continue;
+
+    const cleanUrl = decodeHtml(linkMatch[1]).split("?")[0];
+    jobs.push({
+      title: decodeHtml(titleMatch[1].replace(/<[^>]+>/g, "")),
+      company: decodeHtml((companyMatch?.[1] ?? "—").replace(/<[^>]+>/g, "")) || "—",
+      location: decodeHtml((locationMatch?.[1] ?? "Canada").replace(/<[^>]+>/g, "")),
+      url: cleanUrl,
+      postedAt: dateMatch?.[1],
+    });
   }
   return jobs;
 }

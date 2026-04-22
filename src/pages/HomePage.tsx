@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
-  ArrowRight, Globe, Award, Users, Clock, CheckCircle, Star, BookOpen,
+  ArrowRight, Globe, Award, Clock, CheckCircle, Star,
   Briefcase, GraduationCap, Search, Shield, Heart, Plane, FileText,
   RefreshCw, MapPin, BadgeCheck, TrendingUp, Activity
 } from "lucide-react";
@@ -11,7 +11,6 @@ import { Input } from "@/components/ui/input";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
-import Shareable from "@/components/Shareable";
 import LiveExpressEntry from "@/components/LiveExpressEntry";
 import LiveDataStrip from "@/components/LiveDataStrip";
 import HighDemandJobsHome from "@/components/HighDemandJobsHome";
@@ -20,9 +19,7 @@ import NewsStripHome from "@/components/NewsStripHome";
 import GlobalImmigrationSearch from "@/components/GlobalImmigrationSearch";
 import { originCountries } from "@/data/geoOriginData";
 import { crsBands } from "@/data/crsBandData";
-import heroBg from "@/assets/hero-bg.jpg";
 import heroCombined from "@/assets/hero-combined.jpg";
-import { countries } from "@/data/countryData";
 import { blogPosts } from "@/data/blogData";
 import { useRef, useState } from "react";
 

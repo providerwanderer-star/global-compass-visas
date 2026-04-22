@@ -265,6 +265,16 @@ const HomePage = () => {
                   { "@type": "HowToStep", "position": 4, "name": "Application Filing", "text": "Expert submission of your Express Entry profile, PNP application, or work permit with zero errors." },
                   { "@type": "HowToStep", "position": 5, "name": "Landing & Settlement", "text": "Post-approval guidance — COPR, landing prep, and settlement support in Canada." }
                 ]
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://www.4acesvisa.com/#webpage",
+                "name": "Move & Settle to Canada — 4 Aces Visa",
+                "url": "https://www.4acesvisa.com/",
+                "speakable": {
+                  "@type": "SpeakableSpecification",
+                  "cssSelector": ["h1", "h2", ".text-gold"]
+                }
               }
             ]
           })}

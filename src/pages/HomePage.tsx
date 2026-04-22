@@ -249,6 +249,27 @@ const HomePage = () => {
                   "name": faq.q,
                   "acceptedAnswer": { "@type": "Answer", "text": faq.a }
                 }))
+              },
+              {
+                "@type": "HowTo",
+                "name": "How to Migrate to Canada — 4 Aces Visa 5-Step Process",
+                "description": "Our proven 5-step process to assess, optimize, prepare, file, and land your Canadian immigration application.",
+                "totalTime": "P8M",
+                "estimatedCost": { "@type": "MonetaryAmount", "currency": "CAD", "value": "2500" },
+                "supply": [
+                  { "@type": "HowToSupply", "name": "IELTS / CELPIP / TEF score" },
+                  { "@type": "HowToSupply", "name": "Educational Credential Assessment (WES/ECA)" },
+                  { "@type": "HowToSupply", "name": "Work experience reference letters" },
+                  { "@type": "HowToSupply", "name": "Police clearance certificate" },
+                  { "@type": "HowToSupply", "name": "Medical examination report" }
+                ],
+                "step": [
+                  { "@type": "HowToStep", "position": 1, "name": "Free Assessment", "text": "We evaluate your CRS score, education, work experience and language proficiency to identify the best pathway." },
+                  { "@type": "HowToStep", "position": 2, "name": "Strategy & Optimization", "text": "Personalized plan to maximize your CRS score — IELTS coaching, PNP targeting, LMIA coordination." },
+                  { "@type": "HowToStep", "position": 3, "name": "Document Preparation", "text": "Complete document compilation, WES/ECA evaluation, and application-ready dossier preparation." },
+                  { "@type": "HowToStep", "position": 4, "name": "Application Filing", "text": "Expert submission of your Express Entry profile, PNP application, or work permit with zero errors." },
+                  { "@type": "HowToStep", "position": 5, "name": "Landing & Settlement", "text": "Post-approval guidance — COPR, landing prep, and settlement support in Canada." }
+                ]
               }
             ]
           })}

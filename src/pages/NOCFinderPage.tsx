@@ -368,6 +368,16 @@ const NOCFinderPage = () => {
         </div>
       </section>
 
+      <DataSourceNote
+        updated="2026-04-22"
+        sources={[
+          { label: "ESDC NOC 2021 v1.0 (official)", href: "https://noc.esdc.gc.ca/" },
+          { label: "IRCC Express Entry — eligible NOCs", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html" },
+          { label: "Job Bank Canada (wage & demand)", href: "https://www.jobbank.gc.ca/trend-analysis" },
+        ]}
+        caveat="Salary ranges are national medians from Job Bank; actual offers vary by employer and province."
+      />
+
       {/* ── CTA ── */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 text-center">

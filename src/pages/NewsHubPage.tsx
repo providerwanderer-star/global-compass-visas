@@ -149,6 +149,32 @@ const NewsHubPage = () => {
   const featured = filtered[0];
   const rest = filtered.slice(1, visible);
 
+  // Group remaining items by friendly date bucket (Today, Yesterday, This week, Earlier)
+  const grouped = useMemo(() => {
+    const buckets: Record<string, NewsItem[]> = {
+      "Today": [],
+      "Yesterday": [],
+      "This week": [],
+      "Earlier this month": [],
+      "Older": [],
+    };
+    const now = new Date();
+    const startOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+    const today0 = startOfDay(now);
+    const yest0 = today0 - 86400000;
+    const week0 = today0 - 6 * 86400000;
+    const month0 = today0 - 30 * 86400000;
+    rest.forEach((item) => {
+      const t = new Date(item.publishedAt).getTime();
+      if (t >= today0) buckets["Today"].push(item);
+      else if (t >= yest0) buckets["Yesterday"].push(item);
+      else if (t >= week0) buckets["This week"].push(item);
+      else if (t >= month0) buckets["Earlier this month"].push(item);
+      else buckets["Older"].push(item);
+    });
+    return Object.entries(buckets).filter(([, items]) => items.length > 0);
+  }, [rest]);
+
   return (
     <div className="min-h-screen bg-secondary/30">
       <Helmet>
@@ -254,12 +280,30 @@ const NewsHubPage = () => {
           <FeaturedCard item={featured} />
         )}
 
-        {/* Timeline */}
-        <div className="mt-8 relative">
-          <div className="absolute left-4 md:left-5 top-2 bottom-2 w-px bg-border" aria-hidden />
+        {/* Grouped news cards */}
+        <div className="mt-10 space-y-10">
           <AnimatePresence initial={false}>
-            {rest.map((item) => (
-              <TimelineItem key={item.id} item={item} />
+            {grouped.map(([bucket, items]) => (
+              <motion.div
+                key={bucket}
+                layout
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    <Clock className="h-3.5 w-3.5" /> {bucket}
+                  </div>
+                  <span className="text-xs text-muted-foreground">{items.length} update{items.length === 1 ? "" : "s"}</span>
+                  <div className="flex-1 h-px bg-border" />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {items.map((item) => (
+                    <NewsCard key={item.id} item={item} />
+                  ))}
+                </div>
+              </motion.div>
             ))}
           </AnimatePresence>
 

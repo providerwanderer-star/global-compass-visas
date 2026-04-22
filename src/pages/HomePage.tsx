@@ -458,6 +458,14 @@ const HomePage = () => {
       </section>
 
       {/* Live Express Entry draw ticker */}
+      <div className="bg-gradient-to-r from-success/5 to-success/10 border-b border-success/20">
+        <div className="container-narrow mx-auto px-4 py-1.5">
+          <p className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-success">
+            <Activity className="h-3 w-3 animate-pulse" />
+            Live data — updated with every new draw
+          </p>
+        </div>
+      </div>
       <LiveExpressEntry />
 
       {/* 3-card live data block */}
@@ -537,37 +545,6 @@ const HomePage = () => {
               </motion.div>
             ))}
           </motion.div>
-        </div>
-      </section>
-
-      {/* Destination Quick-Select — Where do you want to move? */}
-      <section className="py-8 px-4 bg-white border-b border-border">
-        <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-6">
-            <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">🌐 Where do you want to move?</p>
-          </AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              { flag: "🇨🇦", country: "Canada", label: "Express Entry PR", time: "6 months", href: "/immigration/canada" },
-              { flag: "🇦🇺", country: "Australia", label: "Skilled Migration", time: "8–12 months", href: "/australia/skilled-migration" },
-              { flag: "🇩🇪", country: "Germany", label: "EU Blue Card / Chancenkarte", time: "4–12 weeks", href: "/germany/chancenkarte" },
-              { flag: "🇬🇧", country: "United Kingdom", label: "Skilled Worker Visa", time: "3–8 weeks", href: "/uk/skilled-worker" },
-            ].map((c, i) => (
-              <Link key={i} to={c.href} className="block group">
-                <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all h-full">
-                  <span className="text-3xl block mb-2">{c.flag}</span>
-                  <h3 className="font-bold text-foreground text-sm">{c.country}</h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">{c.label}</p>
-                  <span className="text-xs text-gold font-semibold mt-1.5 block">⏱ {c.time}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <p className="text-center mt-4">
-            <Link to="/compare" className="text-sm text-primary underline underline-offset-2 font-medium hover:text-primary/80">
-              Compare all countries side-by-side →
-            </Link>
-          </p>
         </div>
       </section>
 

@@ -8,17 +8,11 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
 import LiveExpressEntry from "@/components/LiveExpressEntry";
 import LiveDataStrip from "@/components/LiveDataStrip";
-import HighDemandJobsHome from "@/components/HighDemandJobsHome";
-import LiveJobsHighlightStrip from "@/components/LiveJobsHighlightStrip";
-import NewsStripHome from "@/components/NewsStripHome";
 import GlobalImmigrationSearch from "@/components/GlobalImmigrationSearch";
-import { originCountries } from "@/data/geoOriginData";
-import { crsBands } from "@/data/crsBandData";
 import heroCombined from "@/assets/hero-combined.jpg";
 import { countries } from "@/data/countryData";
 import { blogPosts } from "@/data/blogData";

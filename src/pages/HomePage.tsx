@@ -307,12 +307,6 @@ const HomePage = () => {
               >
                 Leaving the US on H-1B? Applying from India? Studying, working, or bringing family — one RCIC-led team covers every pathway to Canada.
               </motion.p>
-              <motion.p
-                className="text-base text-muted-foreground/80 mb-8 max-w-xl"
-                initial="hidden" animate="visible" variants={fadeUp} custom={3}
-              >
-                🇨🇦 Canada-first &nbsp;•&nbsp; Also: 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — 98% success rate, 15,000+ visas processed.
-              </motion.p>
               <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
                 <Link to="/contact">
                   <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
@@ -325,6 +319,62 @@ const HomePage = () => {
                   </Button>
                 </Link>
               </motion.div>
+
+              {/* Quick Situation Picker — intake chips */}
+              <motion.div
+                className="mt-8"
+                initial="hidden" animate="visible" variants={fadeUp} custom={5}
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+                  What describes you best?
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: "🇺🇸 On H-1B / US visa", href: "/immigration/canada" },
+                    { label: "🇮🇳 Applying from India", href: "/india/canada-pr-india" },
+                    { label: "🎓 Student → PR path", href: "/services/student-visa" },
+                    { label: "👨‍👩‍👧 Family sponsorship", href: "/services/family-sponsorship" },
+                    { label: "💼 Have a job offer", href: "/services/lmia-assistance" },
+                    { label: "🤔 Not sure yet", href: "/quiz" },
+                  ].map((chip) => (
+                    <Link
+                      key={chip.label}
+                      to={chip.href}
+                      className="text-sm font-medium px-3.5 py-2 rounded-full border border-border bg-card hover:border-primary hover:text-primary hover:shadow-sm transition-all"
+                    >
+                      {chip.label}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Job / NOC search bar */}
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const q = jobQuery.trim();
+                    navigate(q ? `/noc-finder?q=${encodeURIComponent(q)}` : "/noc-finder");
+                  }}
+                  className="mt-4 flex gap-2"
+                  role="search"
+                  aria-label="Search occupations or NOC codes"
+                >
+                  <div className="relative flex-1">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                    <Input
+                      type="search"
+                      value={jobQuery}
+                      onChange={(e) => setJobQuery(e.target.value)}
+                      placeholder="Search by job title or NOC code (e.g. Software Developer, 21232)…"
+                      className="pl-10 h-11"
+                      aria-label="Search by job title or NOC code"
+                    />
+                  </div>
+                  <Button type="submit" size="lg" className="h-11">
+                    Search
+                  </Button>
+                </form>
+              </motion.div>
+
               <motion.div className="flex items-center gap-6 mt-6" initial="hidden" animate="visible" variants={fadeUp} custom={5}>
                 <div className="flex items-center gap-1.5">
                   <div className="flex gap-0.5">

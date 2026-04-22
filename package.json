@@ -16,7 +16,8 @@
     "test:watch": "vitest",
     "verify:prerender": "node scripts/verify-prerender.mjs",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
-    "validate:data": "node scripts/validate-data.mjs"
+    "validate:data": "node scripts/validate-data.mjs",
+    "audit:noc": "node scripts/audit-noc-coverage.mjs"
   },
   "reactSnap": {
     "source": "dist",

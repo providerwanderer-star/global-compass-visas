@@ -644,9 +644,9 @@ export const nocData: NOCEntry[] = [
       "Operates cranes to lift, move, position, or place equipment and materials.",
   },
   {
-    code: "72330",
+    code: "73102",
     title: "Plasterer / Drywall Installer",
-    teer: 2,
+    teer: 3,
     category: "Trades & Skilled",
     eeEligible: true,
     altTitles: ["Drywaller", "Lather", "Stucco Mason"],

@@ -638,6 +638,36 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* Tools strip — moved above services for fast self-serve access */}
+      <section className="py-10 px-4 bg-gradient-to-br from-primary/5 to-accent/5 border-y border-border">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-6">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Free immigration tools
+            </h2>
+            <p className="text-sm text-muted-foreground">
+              Score yourself, compare countries, get a checklist — no signup.
+            </p>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            {[
+              { icon: Award, label: "CRS Calculator", href: "/crs-calculator" },
+              { icon: Search, label: "Eligibility Quiz", href: "/quiz" },
+              { icon: Globe, label: "Compare Countries", href: "/compare" },
+              { icon: TrendingUp, label: "EE Draw Tracker", href: "/express-entry" },
+              { icon: FileText, label: "Doc Checklist", href: "/documents/canada-pr" },
+            ].map((t) => (
+              <Link key={t.label} to={t.href} className="group">
+                <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all">
+                  <t.icon className="h-6 w-6 text-gold mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                  <p className="text-xs md:text-sm font-semibold text-foreground">{t.label}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Canada Services Grid */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">

@@ -26,9 +26,24 @@ export const expressEntryDraws: DrawRecord[] = [
   { drawNumber: 330, date: "October 8, 2025",   category: "General",     crsMin: 509, itas: 4000 },
   { drawNumber: 329, date: "September 24, 2025",category: "Transport",   crsMin: 435, itas: 1000 },
   { drawNumber: 328, date: "September 10, 2025",category: "General",     crsMin: 515, itas: 3800 },
+  { drawNumber: 327, date: "August 27, 2025",   category: "Education",   crsMin: 479, itas: 1000 },
+  { drawNumber: 326, date: "August 13, 2025",   category: "General",     crsMin: 517, itas: 4500 },
+  { drawNumber: 325, date: "July 30, 2025",     category: "Healthcare",  crsMin: 422, itas: 1500 },
+  { drawNumber: 324, date: "July 16, 2025",     category: "STEM",        crsMin: 475, itas: 1800 },
+  { drawNumber: 323, date: "July 2, 2025",      category: "General",     crsMin: 518, itas: 3500 },
+  { drawNumber: 322, date: "June 18, 2025",     category: "French",      crsMin: 388, itas: 1500 },
+  { drawNumber: 321, date: "June 4, 2025",      category: "General",     crsMin: 521, itas: 3300 },
+  { drawNumber: 320, date: "May 21, 2025",      category: "Trades",      crsMin: 374, itas: 700  },
+  { drawNumber: 319, date: "May 7, 2025",       category: "General",     crsMin: 524, itas: 3000 },
+  { drawNumber: 318, date: "April 23, 2025",    category: "Healthcare",  crsMin: 425, itas: 1200 },
+  { drawNumber: 317, date: "April 9, 2025",     category: "Education",   crsMin: 482, itas: 800  },
+  { drawNumber: 316, date: "March 26, 2025",    category: "General",     crsMin: 519, itas: 3500 },
+  { drawNumber: 315, date: "March 12, 2025",    category: "Agriculture", crsMin: 358, itas: 450  },
+  { drawNumber: 314, date: "February 26, 2025", category: "STEM",        crsMin: 477, itas: 1600 },
+  { drawNumber: 313, date: "February 12, 2025", category: "General",     crsMin: 522, itas: 3700 },
 ];
 
-export const drawCategories = ["All", "General", "STEM", "Healthcare", "Trades", "Transport", "Agriculture", "French"] as const;
+export const drawCategories = ["All", "General", "STEM", "Healthcare", "Trades", "Transport", "Agriculture", "French", "Education"] as const;
 
 /** Returns the most recent draw for a given category */
 export function latestByCat(cat: DrawRecord["category"]): DrawRecord | undefined {

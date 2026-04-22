@@ -7,6 +7,7 @@ import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
 import FreshnessBanner from "@/components/FreshnessBanner";
+import DataSourceNote from "@/components/DataSourceNote";
 
 const provinceColors: Record<string, string> = {
   ON: "bg-blue-100 text-blue-800 border-blue-200",
@@ -275,6 +276,18 @@ const PNPTrackerPage = () => {
           </div>
         </div>
       </section>
+
+      <DataSourceNote
+        updated="2026-04-22"
+        sources={[
+          { label: "Ontario (OINP)", href: "https://www.ontario.ca/page/ontario-immigrant-nominee-program" },
+          { label: "BC PNP", href: "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-pnp" },
+          { label: "Alberta (AAIP)", href: "https://www.alberta.ca/alberta-advantage-immigration-program" },
+          { label: "Saskatchewan (SINP)", href: "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program" },
+          { label: "Manitoba (MPNP)", href: "https://immigratemanitoba.com/" },
+        ]}
+        caveat="Each province publishes its own draw history; we mirror the most recent invitations and minimum scores. Always confirm eligibility on the official provincial site before applying."
+      />
 
       {/* ── CTA ── */}
       <section className="section-padding bg-primary text-primary-foreground">

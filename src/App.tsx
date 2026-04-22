@@ -42,6 +42,8 @@ import NOCDetailPage from "@/pages/NOCDetailPage";
 import NewsHubPage from "@/pages/NewsHubPage";
 import NewsDetailPage from "@/pages/NewsDetailPage";
 import SearchResultsPage from "@/pages/SearchResultsPage";
+import CanadaPRFromCountryPage from "@/pages/CanadaPRFromCountryPage";
+import CRSBandPage from "@/pages/CRSBandPage";
 
 const queryClient = new QueryClient();
 
@@ -96,6 +98,8 @@ const App = () => (
               <Route path="/news" element={<NewsHubPage />} />
               <Route path="/news/:slug" element={<NewsDetailPage />} />
               <Route path="/search" element={<SearchResultsPage />} />
+              <Route path="/canada-pr-from/:country" element={<CanadaPRFromCountryPage />} />
+              <Route path="/canada-pr/crs/:band" element={<CRSBandPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

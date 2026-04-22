@@ -817,11 +817,11 @@ const CRSCalculatorPage = () => {
                       </div>
                     );
                   })}
-                  {latestGeneral && (
+                  {latestCore && (
                     <p className="text-[11px] text-primary-foreground/50 mt-2 pt-2 border-t border-white/10">
-                      {score.total >= latestGeneral.crsMin
-                        ? `You'd have been invited in draw #${latestGeneral.drawNumber} on ${latestGeneral.date}.`
-                        : `You needed ${latestGeneral.crsMin - score.total} more points for draw #${latestGeneral.drawNumber}. PNP adds 600.`}
+                      {score.total >= latestCore.crsMin
+                        ? `You'd have been invited in draw #${latestCore.drawNumber} on ${latestCore.date}.`
+                        : `You needed ${latestCore.crsMin - score.total} more points for draw #${latestCore.drawNumber}. PNP adds 600.`}
                     </p>
                   )}
                 </div>

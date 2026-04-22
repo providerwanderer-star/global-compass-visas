@@ -164,12 +164,12 @@ const DrawHistoryPage = () => {
                     ? `Your score of ${crsNum} would have qualified for the last ${lastDraw.category} draw (cutoff: ${lastDraw.crsMin})`
                     : `Your score of ${crsNum} is ${lastDraw.crsMin - crsNum} points below the last ${lastDraw.category} draw (cutoff: ${lastDraw.crsMin})`}
                 </div>
-                {lastGeneral && (
+                {lastCore && (
                   <div className={`flex items-center gap-2 p-3 rounded-lg text-sm font-semibold ${qualifiesGeneral ? "bg-emerald-50 text-emerald-800" : "bg-amber-50 text-amber-800"}`}>
                     {qualifiesGeneral ? <CheckCircle2 className="h-4 w-4 shrink-0" /> : <XCircle className="h-4 w-4 shrink-0" />}
                     {qualifiesGeneral
-                      ? `You would have qualified for the last General draw (cutoff: ${lastGeneral.crsMin})`
-                      : `${lastGeneral.crsMin - crsNum} points below last General draw (cutoff: ${lastGeneral.crsMin}) — consider category draws or improving your profile`}
+                      ? `You would have qualified for the last ${lastCore.category} draw (cutoff: ${lastCore.crsMin})`
+                      : `${lastCore.crsMin - crsNum} points below last ${lastCore.category} draw (cutoff: ${lastCore.crsMin}) — consider category draws or improving your profile`}
                   </div>
                 )}
               </div>

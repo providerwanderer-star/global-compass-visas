@@ -199,7 +199,7 @@ export const inDemandJobs: InDemandJob[] = [
     slug: "physician",
     title: "Family Physician / Specialist",
     noc: "31111",
-    teer: 1,
+    teer: 0,
     industry: "Healthcare",
     salaryLow: 220000, salaryHigh: 450000,
     demand: "Very High",

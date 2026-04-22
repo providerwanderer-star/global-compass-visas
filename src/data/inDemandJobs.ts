@@ -198,8 +198,8 @@ export const inDemandJobs: InDemandJob[] = [
   {
     slug: "physician",
     title: "Family Physician / Specialist",
-    noc: "31102",
-    teer: 1,
+    noc: "31111",
+    teer: 0,
     industry: "Healthcare",
     salaryLow: 220000, salaryHigh: 450000,
     demand: "Very High",
@@ -213,7 +213,7 @@ export const inDemandJobs: InDemandJob[] = [
   {
     slug: "civil-engineer",
     title: "Civil Engineer",
-    noc: "21300",
+    noc: "21301",
     teer: 1,
     industry: "Engineering",
     salaryLow: 78000, salaryHigh: 130000,
@@ -228,7 +228,7 @@ export const inDemandJobs: InDemandJob[] = [
   {
     slug: "mechanical-engineer",
     title: "Mechanical Engineer",
-    noc: "21301",
+    noc: "21321",
     teer: 1,
     industry: "Engineering",
     salaryLow: 75000, salaryHigh: 125000,
@@ -258,7 +258,7 @@ export const inDemandJobs: InDemandJob[] = [
   {
     slug: "welder",
     title: "Welder",
-    noc: "72106",
+    noc: "72021",
     teer: 2,
     industry: "Trades & Construction",
     salaryLow: 52000, salaryHigh: 95000,
@@ -345,7 +345,7 @@ export const inDemandJobs: InDemandJob[] = [
   {
     slug: "agri-supervisor",
     title: "Agricultural Service Contractor & Farm Supervisor",
-    noc: "82030",
+    noc: "82031",
     teer: 2,
     industry: "Agriculture & Food",
     salaryLow: 42000, salaryHigh: 70000,

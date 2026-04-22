@@ -91,6 +91,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/40">© 2026 4 Aces Visa. All rights reserved. By the immigrants, for the immigrants.</p>
           <div className="flex gap-6">
+            <Link to="/dashboard" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">My Dashboard</Link>
             <Link to="/privacy" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">Terms of Service</Link>
           </div>

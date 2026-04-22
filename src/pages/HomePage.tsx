@@ -110,9 +110,38 @@ const HomePage = () => {
         <link rel="canonical" href="https://www.4acesvisa.com/" />
         <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4 Aces Visa" />
         <meta property="og:title" content="Move & Settle to Canada — End-to-end Immigration | 4 Aces Visa" />
-        <meta property="og:description" content="Move to Canada end-to-end. For US H-1B holders, Indian professionals, students & families. Express Entry, PNP, LMIA, study & work permits. 15,000+ visas processed." />
+        <meta property="og:description" content="RCIC-regulated Canadian immigration consultants. Express Entry, PNP, study permits, work permits and family sponsorship — end to end." />
         <meta property="og:url" content="https://www.4acesvisa.com/" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "4 Aces Visa",
+            "url": "https://www.4acesvisa.com",
+            "logo": "https://www.4acesvisa.com/logo.png",
+            "description": "RCIC-regulated Canadian immigration consultants helping skilled workers, families, and students move to Canada.",
+            "address": { "@type": "PostalAddress", "addressCountry": "CA" },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "87",
+              "bestRating": "5"
+            },
+            "sameAs": [
+              "https://www.facebook.com/4acesvisa",
+              "https://www.instagram.com/4acesvisa",
+              "https://www.linkedin.com/company/4acesvisa"
+            ]
+          })}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

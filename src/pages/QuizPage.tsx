@@ -519,6 +519,36 @@ const QuizPage = () => {
                 ))}
               </div>
 
+              {/* Full Eligibility Report — pre-filled from quiz */}
+              {topRec && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="mt-8 bg-card rounded-2xl shadow-lg border-2 border-accent/40 p-6 md:p-8"
+                >
+                  <div className="text-center mb-5">
+                    <span className="inline-flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-wider mb-2">
+                      🎯 Next Step
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                      Get Your Full Eligibility Report — Free
+                    </h3>
+                    <p className="text-muted-foreground text-sm md:text-base">
+                      We've pre-filled your recommended pathway:{" "}
+                      <strong className="text-foreground">
+                        {topRec.flag} {topRec.country} — {topRec.visa}
+                      </strong>
+                      . Add your contact details and an RCIC-led expert will email your detailed report within 24 hours.
+                    </p>
+                  </div>
+                  <EligibilityForm
+                    sourcePage={`quiz-result-${topRec.countrySlug}-${topRec.visaSlug}`}
+                    defaultValues={prefill}
+                  />
+                </motion.div>
+              )}
+
               {/* CTA section */}
               <div className="mt-10 bg-primary text-primary-foreground rounded-2xl p-6 md:p-8 text-center">
                 <h3 className="text-xl font-bold mb-2">Ready to Start Your Journey?</h3>

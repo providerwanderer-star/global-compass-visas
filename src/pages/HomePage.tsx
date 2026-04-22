@@ -17,6 +17,8 @@ import HighDemandJobsHome from "@/components/HighDemandJobsHome";
 import LiveJobsHighlightStrip from "@/components/LiveJobsHighlightStrip";
 import NewsStripHome from "@/components/NewsStripHome";
 import GlobalImmigrationSearch from "@/components/GlobalImmigrationSearch";
+import { originCountries } from "@/data/geoOriginData";
+import { crsBands } from "@/data/crsBandData";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";

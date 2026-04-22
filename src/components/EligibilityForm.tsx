@@ -110,7 +110,7 @@ const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: Eli
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
         />
-        <Select onValueChange={(v) => setFormData({ ...formData, destination_country: v })}>
+        <Select value={formData.destination_country || undefined} onValueChange={(v) => setFormData({ ...formData, destination_country: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Destination Country" />
           </SelectTrigger>
@@ -122,7 +122,7 @@ const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: Eli
             <SelectItem value="not-sure">Not Sure Yet</SelectItem>
           </SelectContent>
         </Select>
-        <Select onValueChange={(v) => setFormData({ ...formData, visa_type: v })}>
+        <Select value={formData.visa_type || undefined} onValueChange={(v) => setFormData({ ...formData, visa_type: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Visa Type" />
           </SelectTrigger>
@@ -140,7 +140,7 @@ const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: Eli
             <SelectItem value="insurance">Visitor Visa Insurance</SelectItem>
           </SelectContent>
         </Select>
-        <Select onValueChange={(v) => setFormData({ ...formData, education_level: v })}>
+        <Select value={formData.education_level || undefined} onValueChange={(v) => setFormData({ ...formData, education_level: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Education Level" />
           </SelectTrigger>

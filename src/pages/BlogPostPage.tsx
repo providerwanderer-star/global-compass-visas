@@ -15,6 +15,7 @@ const BlogPostPage = () => {
   const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
   const enhancement = post ? blogEnhancements[post.slug] : undefined;
+  const [ctaDismissed, setCtaDismissed] = useState(false);
 
   // Extract headings for Table of Contents
   const headings = useMemo(() => {
@@ -99,10 +100,11 @@ const BlogPostPage = () => {
         <meta name="description" content={post.metaDescription || post.excerpt} />
         <link rel="canonical" href={`https://www.4acesvisa.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="4 Aces Visa" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={`https://www.4acesvisa.com/blog/${post.slug}`} />
-        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content={post.title} />
@@ -110,22 +112,31 @@ const BlogPostPage = () => {
         <meta property="article:author" content="4 Aces Visa" />
         <meta property="article:section" content={post.category} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
+            "@type": "BlogPosting",
             "headline": post.title,
             "description": post.metaDescription || post.excerpt,
-            "image": [
-              "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png"
-            ],
+            "image": "https://www.4acesvisa.com/og-default.jpg",
+            "url": `https://www.4acesvisa.com/blog/${post.slug}`,
             "datePublished": post.date,
             "dateModified": post.date,
-            "author": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://www.4acesvisa.com" },
-            "publisher": { "@type": "Organization", "name": "4 Aces Visa", "logo": { "@type": "ImageObject", "url": "https://www.4acesvisa.com/favicon.ico" } },
+            "author": {
+              "@type": "Person",
+              "name": "4 Aces Visa Team",
+              "jobTitle": "RCIC-Regulated Immigration Consultant",
+              "url": "https://www.4acesvisa.com/about"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "4 Aces Visa",
+              "logo": { "@type": "ImageObject", "url": "https://www.4acesvisa.com/logo.png" }
+            },
             "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.4acesvisa.com/blog/${post.slug}` },
             "articleSection": post.category,
             "wordCount": post.content.split(/\s+/).length,

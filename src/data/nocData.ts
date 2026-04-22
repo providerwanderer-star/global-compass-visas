@@ -147,15 +147,15 @@ export const nocData: NOCEntry[] = [
   },
   {
     code: "33102",
-    title: "Personal Support Worker",
+    title: "Nurse Aide / Orderly / Patient Service Associate",
     teer: 3,
     category: "Healthcare",
     eeEligible: true,
-    altTitles: ["PSW", "Home Support Worker", "Care Aide", "Personal Care Attendant"],
+    altTitles: ["PSW (institutional)", "Nurse Aide", "Orderly", "Patient Service Associate", "Hospital Care Aide"],
     salaryRange: "$35,000 – $55,000",
     topProvinces: ["Ontario", "British Columbia", "Alberta"],
     description:
-      "Provides personal care and assistance to elderly, disabled, or ill individuals. High demand especially post-pandemic.",
+      "Assists nurses and physicians in hospitals and long-term care facilities — bathing, mobility, vitals. TEER 3 and Express Entry eligible (CEC + Healthcare category). Note: home-based PSWs fall under NOC 44101 (TEER 4, Home Care Worker Pilot).",
   },
   {
     code: "31204",
@@ -793,15 +793,15 @@ export const nocData: NOCEntry[] = [
   // ── EDUCATION (early-childhood + post-secondary) ─────────────────────────
   {
     code: "42202",
-    title: "Early Childhood Educator (ECE)",
+    title: "Early Childhood Educator & Assistant (ECE / ECA)",
     teer: 3,
     category: "Education",
     eeEligible: true,
-    altTitles: ["ECE", "Daycare Teacher", "Childcare Worker", "Preschool Teacher"],
+    altTitles: ["ECE", "ECA", "Early Childhood Assistant", "Daycare Teacher", "Childcare Worker", "Preschool Teacher", "Registered ECE (RECE)"],
     salaryRange: "$40,000 – $62,000",
     topProvinces: ["Ontario", "British Columbia", "Manitoba", "Alberta"],
     description:
-      "Plans and delivers programs for children in childcare centres. Targeted by the new Education category Express Entry draws (2025+).",
+      "Plans and delivers childcare programs (ECEs) or assists licensed educators (ECAs) in licensed centres and home-based daycares. Both ECE and ECA roles share NOC 42202 and are Express Entry eligible — targeted by the new Education category draws (2025+).",
   },
   {
     code: "44100",

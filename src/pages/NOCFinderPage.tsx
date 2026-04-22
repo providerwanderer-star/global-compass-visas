@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Search, CheckCircle2, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,12 +8,14 @@ import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
 import DataSourceNote from "@/components/DataSourceNote";
 import { useUserProfile } from "@/hooks/useUserProfile";
+import { trackEvent } from "@/lib/analytics";
 
 const NOCFinderPage = () => {
   const [query, setQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedTeer, setSelectedTeer] = useState<string>("All");
   const { update } = useUserProfile();
+  const trackedSearchRef = useRef(false);
 
   const results = useMemo<NOCEntry[]>(() => {
     const q = query.trim().toLowerCase();
@@ -137,7 +139,16 @@ const NOCFinderPage = () => {
               type="text"
               placeholder="Search by job title, NOC code, or keyword (e.g. nurse, 21232, welder)…"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                if (!trackedSearchRef.current && e.target.value.trim().length > 0) {
+                  trackedSearchRef.current = true;
+                  trackEvent("tool_used", {
+                    event_category: "Tool",
+                    event_label: "NOC Finder",
+                  });
+                }
+              }}
               className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-border focus:border-primary focus:outline-none text-base bg-background shadow-sm"
               aria-label="Search NOC occupations"
             />

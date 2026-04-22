@@ -83,6 +83,25 @@ const ServicePage = () => {
                   acceptedAnswer: { "@type": "Answer", text: faq.answer },
                 })),
               },
+              ...(service.slug === "express-entry"
+                ? [
+                    {
+                      "@type": "HowTo",
+                      name: "How to Apply for Canada PR via Express Entry",
+                      description:
+                        "Step-by-step guide to applying for Canadian permanent residence through Express Entry",
+                      totalTime: "PT6M",
+                      step: [
+                        { "@type": "HowToStep", position: 1, name: "Get IELTS score", text: "Take IELTS and aim for CLB 7 minimum (L6.0, R6.0, W6.0, S6.0) for Federal Skilled Worker eligibility." },
+                        { "@type": "HowToStep", position: 2, name: "Get WES credential evaluation", text: "Submit your foreign degree to WES (World Education Services) for an Educational Credential Assessment (ECA)." },
+                        { "@type": "HowToStep", position: 3, name: "Create Express Entry profile", text: "Submit your profile on IRCC's online system. Your CRS score is calculated automatically from your age, education, language, and work experience." },
+                        { "@type": "HowToStep", position: 4, name: "Receive Invitation to Apply (ITA)", text: "IRCC runs draws every 2 weeks. If your CRS score meets the cutoff, you receive an ITA and have 60 days to submit a complete PR application." },
+                        { "@type": "HowToStep", position: 5, name: "Submit PR application", text: "Upload all documents: passport, IELTS, WES, work reference letters, police clearances, medical exam, and pay the IRCC fee (CAD 1,365)." },
+                        { "@type": "HowToStep", position: 6, name: "Receive PR approval and land", text: "IRCC processing takes 6 months. Once approved, you receive a COPR (Confirmation of Permanent Residence) and must land in Canada before the deadline." },
+                      ],
+                    },
+                  ]
+                : []),
             ],
           })}
         </script>

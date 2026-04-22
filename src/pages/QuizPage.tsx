@@ -6,6 +6,7 @@ import { ArrowRight, ArrowLeft, RotateCcw, CheckCircle, Globe, GraduationCap, Br
 import { Button } from "@/components/ui/button";
 import { useUserProfile, type Intent } from "@/hooks/useUserProfile";
 import EligibilityForm from "@/components/EligibilityForm";
+import { trackEvent } from "@/lib/analytics";
 
 interface QuizOption {
   label: string;
@@ -256,6 +257,10 @@ const QuizPage = () => {
         setCurrentStep(currentStep + 1);
       } else {
         setShowResults(true);
+        trackEvent("quiz_complete", {
+          event_category: "Tool",
+          event_label: "Pathway Quiz",
+        });
       }
     }, 300);
   };

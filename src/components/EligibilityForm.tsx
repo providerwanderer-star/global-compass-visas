@@ -5,6 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { CheckCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { trackEvent } from "@/lib/analytics";
 
 interface EligibilityFormProps {
   sourcePage?: string;
@@ -63,6 +64,14 @@ const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: Eli
           "Source Page": sourcePage,
           _template: "table",
         }),
+      });
+
+      // GA4 — lead conversion
+      trackEvent("generate_lead", {
+        event_category: "Lead",
+        event_label: "Eligibility Form",
+        value: 1,
+        source_page: sourcePage,
       });
 
       setSubmitted(true);

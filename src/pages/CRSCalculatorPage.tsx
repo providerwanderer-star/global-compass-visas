@@ -15,6 +15,7 @@ import ReturnLoopCard from "@/components/ReturnLoopCard";
 import SmartCTA from "@/components/SmartCTA";
 import { useUserProfile } from "@/hooks/useUserProfile";
 import { expressEntryDraws } from "@/data/expressEntryDraws";
+import { trackEvent } from "@/lib/analytics";
 
 // ─── CRS Scoring Functions ──────────────────────────────────────────────────
 
@@ -430,7 +431,13 @@ const CRSCalculatorPage = () => {
                 </div>
 
                 <Button
-                  onClick={() => setCalculated(true)}
+                  onClick={() => {
+                    setCalculated(true);
+                    trackEvent("tool_used", {
+                      event_category: "Tool",
+                      event_label: "CRS Calculator",
+                    });
+                  }}
                   size="lg"
                   className="w-full bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold"
                 >

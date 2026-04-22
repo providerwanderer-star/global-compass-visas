@@ -191,6 +191,16 @@ fs.writeFileSync(outPath, JSON.stringify({
 }, null, 2));
 
 console.log(`\n✓ Full report written to ${path.relative(ROOT, outPath)}`);
+
+// ── Mirror artifacts into public/admin so the in-app admin page can fetch them ─
+const publicDir = path.join(ROOT, "public/admin");
+fs.mkdirSync(publicDir, { recursive: true });
+fs.copyFileSync(outPath, path.join(publicDir, "coverage-report.json"));
+fs.copyFileSync(
+  path.join(ROOT, "scripts/noc-source/noc-2021-master.csv"),
+  path.join(publicDir, "noc-2021-master.csv"),
+);
+console.log(`✓ Mirrored to public/admin/ for in-app admin viewer`);
 console.log("✓ Done.\n");
 
 fs.rmSync(path.join(ROOT, ".cache-audit"), { recursive: true, force: true });

@@ -13,6 +13,8 @@ import { Button } from "@/components/ui/button";
 import AnswerBlock from "@/components/AnswerBlock";
 import EligibilityForm from "@/components/EligibilityForm";
 import SeoSchema from "@/components/SeoSchema";
+import FreshnessBanner from "@/components/FreshnessBanner";
+import { getFreshness } from "@/lib/freshness";
 import NotFound from "@/pages/NotFound";
 import { findOriginCountry, originCountries } from "@/data/geoOriginData";
 
@@ -21,6 +23,8 @@ const CanadaPRFromCountryPage = () => {
   const data = slug ? findOriginCountry(slug) : null;
 
   if (!data) return <NotFound />;
+
+  const freshness = getFreshness("geo-country");
 
   const title = `Canada PR from ${data.country} (2026) — Pathways, Cost & Timeline | 4 Aces Visa`;
   const description = `Complete 2026 guide to Canada PR from ${data.country}. Express Entry, PNP, study & work permits. Top NOC codes, cost (${data.estCostCAD}) and timeline (${data.avgTimelineMonths}).`;
@@ -89,11 +93,12 @@ const CanadaPRFromCountryPage = () => {
 
       {/* Answer block (AEO) */}
       <section className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+        <FreshnessBanner topic="geo-country" className="mb-5" />
         <AnswerBlock
           answer={summary}
           whoFor={data.whoFor}
           whoNotFor={data.whoNotFor}
-          lastUpdated="April 2026"
+          lastUpdated={freshness.lastUpdatedLabel}
         />
       </section>
 

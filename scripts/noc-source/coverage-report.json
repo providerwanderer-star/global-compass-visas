@@ -1,0 +1,2585 @@
+{
+  "generatedAt": "2026-04-22T18:12:53.338Z",
+  "curated": 75,
+  "esdcTotal": 406,
+  "eeEligibleTotal": 362,
+  "fullCoveragePct": 18.47,
+  "eeCoveragePct": 17.68,
+  "byTeer": [
+    {
+      "teer": 0,
+      "total": 64,
+      "have": 6,
+      "pct": 9.375
+    },
+    {
+      "teer": 1,
+      "total": 141,
+      "have": 16,
+      "pct": 11.347517730496454
+    },
+    {
+      "teer": 2,
+      "total": 98,
+      "have": 22,
+      "pct": 22.448979591836736
+    },
+    {
+      "teer": 3,
+      "total": 59,
+      "have": 20,
+      "pct": 33.89830508474576
+    },
+    {
+      "teer": 4,
+      "total": 36,
+      "have": 3,
+      "pct": 8.333333333333332
+    },
+    {
+      "teer": 5,
+      "total": 2,
+      "have": 1,
+      "pct": 50
+    }
+  ],
+  "byMajor": [
+    {
+      "mg": "72",
+      "name": "Technical trades & transport officers",
+      "total": 53,
+      "have": 10,
+      "eeTotal": 31,
+      "eeHave": 5,
+      "gap": 26
+    },
+    {
+      "mg": "22",
+      "name": "Technical natural & applied sciences",
+      "total": 27,
+      "have": 3,
+      "eeTotal": 27,
+      "eeHave": 3,
+      "gap": 24
+    },
+    {
+      "mg": "21",
+      "name": "Professional natural & applied sciences",
+      "total": 36,
+      "have": 13,
+      "eeTotal": 36,
+      "eeHave": 13,
+      "gap": 23
+    },
+    {
+      "mg": "12",
+      "name": "Admin & financial supervisors",
+      "total": 17,
+      "have": 0,
+      "eeTotal": 17,
+      "eeHave": 0,
+      "gap": 17
+    },
+    {
+      "mg": "65",
+      "name": "Sales/service support",
+      "total": 16,
+      "have": 1,
+      "eeTotal": 16,
+      "eeHave": 1,
+      "gap": 15
+    },
+    {
+      "mg": "64",
+      "name": "Sales/service representatives",
+      "total": 18,
+      "have": 0,
+      "eeTotal": 14,
+      "eeHave": 0,
+      "gap": 14
+    },
+    {
+      "mg": "32",
+      "name": "Technical health occupations",
+      "total": 18,
+      "have": 5,
+      "eeTotal": 18,
+      "eeHave": 5,
+      "gap": 13
+    },
+    {
+      "mg": "14",
+      "name": "Admin & financial support",
+      "total": 18,
+      "have": 0,
+      "eeTotal": 12,
+      "eeHave": 0,
+      "gap": 12
+    },
+    {
+      "mg": "53",
+      "name": "Occupations in art/culture/sport",
+      "total": 12,
+      "have": 0,
+      "eeTotal": 12,
+      "eeHave": 0,
+      "gap": 12
+    },
+    {
+      "mg": "51",
+      "name": "Professional art & culture",
+      "total": 11,
+      "have": 0,
+      "eeTotal": 11,
+      "eeHave": 0,
+      "gap": 11
+    },
+    {
+      "mg": "62",
+      "name": "Retail sales supervisors & specialists",
+      "total": 12,
+      "have": 1,
+      "eeTotal": 12,
+      "eeHave": 1,
+      "gap": 11
+    },
+    {
+      "mg": "73",
+      "name": "General trades",
+      "total": 18,
+      "have": 5,
+      "eeTotal": 15,
+      "eeHave": 4,
+      "gap": 11
+    },
+    {
+      "mg": "40",
+      "name": "Mgmt (education/social/govt)",
+      "total": 10,
+      "have": 0,
+      "eeTotal": 10,
+      "eeHave": 0,
+      "gap": 10
+    },
+    {
+      "mg": "52",
+      "name": "Technical art/culture/sport",
+      "total": 9,
+      "have": 0,
+      "eeTotal": 9,
+      "eeHave": 0,
+      "gap": 9
+    },
+    {
+      "mg": "10",
+      "name": "Specialized middle mgmt (admin/finance)",
+      "total": 9,
+      "have": 1,
+      "eeTotal": 9,
+      "eeHave": 1,
+      "gap": 8
+    },
+    {
+      "mg": "41",
+      "name": "Professional law/education/social",
+      "total": 23,
+      "have": 6,
+      "eeTotal": 14,
+      "eeHave": 6,
+      "gap": 8
+    },
+    {
+      "mg": "63",
+      "name": "Sales & service occupations",
+      "total": 10,
+      "have": 2,
+      "eeTotal": 10,
+      "eeHave": 2,
+      "gap": 8
+    },
+    {
+      "mg": "13",
+      "name": "Admin & transport logistics",
+      "total": 8,
+      "have": 1,
+      "eeTotal": 8,
+      "eeHave": 1,
+      "gap": 7
+    },
+    {
+      "mg": "31",
+      "name": "Professional health occupations",
+      "total": 19,
+      "have": 12,
+      "eeTotal": 19,
+      "eeHave": 12,
+      "gap": 7
+    },
+    {
+      "mg": "42",
+      "name": "Front-line public protection & paraprofessionals",
+      "total": 8,
+      "have": 1,
+      "eeTotal": 8,
+      "eeHave": 1,
+      "gap": 7
+    },
+    {
+      "mg": "43",
+      "name": "Assisting in education/legal/protection",
+      "total": 7,
+      "have": 0,
+      "eeTotal": 7,
+      "eeHave": 0,
+      "gap": 7
+    },
+    {
+      "mg": "00",
+      "name": "Legislative & senior managers",
+      "total": 6,
+      "have": 0,
+      "eeTotal": 6,
+      "eeHave": 0,
+      "gap": 6
+    },
+    {
+      "mg": "70",
+      "name": "Mgmt trades & transportation",
+      "total": 5,
+      "have": 0,
+      "eeTotal": 5,
+      "eeHave": 0,
+      "gap": 5
+    },
+    {
+      "mg": "74",
+      "name": "Mail/message distribution & maintenance",
+      "total": 5,
+      "have": 0,
+      "eeTotal": 5,
+      "eeHave": 0,
+      "gap": 5
+    },
+    {
+      "mg": "11",
+      "name": "Professional finance & business",
+      "total": 8,
+      "have": 4,
+      "eeTotal": 8,
+      "eeHave": 4,
+      "gap": 4
+    },
+    {
+      "mg": "33",
+      "name": "Assisting health-services occupations",
+      "total": 5,
+      "have": 1,
+      "eeTotal": 5,
+      "eeHave": 1,
+      "gap": 4
+    },
+    {
+      "mg": "20",
+      "name": "Specialized mgmt (eng/sci/IT)",
+      "total": 3,
+      "have": 0,
+      "eeTotal": 3,
+      "eeHave": 0,
+      "gap": 3
+    },
+    {
+      "mg": "50",
+      "name": "Specialized mgmt (art/culture/sport)",
+      "total": 3,
+      "have": 0,
+      "eeTotal": 3,
+      "eeHave": 0,
+      "gap": 3
+    },
+    {
+      "mg": "60",
+      "name": "Mgmt retail/wholesale/customer",
+      "total": 5,
+      "have": 2,
+      "eeTotal": 5,
+      "eeHave": 2,
+      "gap": 3
+    },
+    {
+      "mg": "30",
+      "name": "Specialized mgmt (healthcare)",
+      "total": 1,
+      "have": 0,
+      "eeTotal": 1,
+      "eeHave": 0,
+      "gap": 1
+    },
+    {
+      "mg": "44",
+      "name": "Care providers & public-protection support",
+      "total": 3,
+      "have": 2,
+      "eeTotal": 3,
+      "eeHave": 2,
+      "gap": 1
+    },
+    {
+      "mg": "45",
+      "name": "Student monitors, crossing guards",
+      "total": 1,
+      "have": 0,
+      "eeTotal": 1,
+      "eeHave": 0,
+      "gap": 1
+    },
+    {
+      "mg": "54",
+      "name": "Support occupations in sport",
+      "total": 1,
+      "have": 0,
+      "eeTotal": 1,
+      "eeHave": 0,
+      "gap": 1
+    },
+    {
+      "mg": "55",
+      "name": "Support in art & culture",
+      "total": 1,
+      "have": 0,
+      "eeTotal": 1,
+      "eeHave": 0,
+      "gap": 1
+    }
+  ],
+  "eeGaps": [
+    {
+      "code": "00010",
+      "teer": 0,
+      "title": "Legislators"
+    },
+    {
+      "code": "00011",
+      "teer": 0,
+      "title": "Senior government managers and officials"
+    },
+    {
+      "code": "00012",
+      "teer": 0,
+      "title": "Senior managers - financial, communications and other business services"
+    },
+    {
+      "code": "00013",
+      "teer": 0,
+      "title": "Senior managers - health, education, social and community services and membership organizations"
+    },
+    {
+      "code": "00014",
+      "teer": 0,
+      "title": "Senior managers - trade, broadcasting and other services"
+    },
+    {
+      "code": "00015",
+      "teer": 0,
+      "title": "Senior managers - construction, transportation, production and utilities"
+    },
+    {
+      "code": "10011",
+      "teer": 0,
+      "title": "Human resources managers"
+    },
+    {
+      "code": "10012",
+      "teer": 0,
+      "title": "Purchasing managers"
+    },
+    {
+      "code": "10019",
+      "teer": 0,
+      "title": "Other administrative services managers"
+    },
+    {
+      "code": "10020",
+      "teer": 0,
+      "title": "Insurance, real estate and financial brokerage managers"
+    },
+    {
+      "code": "10021",
+      "teer": 0,
+      "title": "Banking, credit and other investment managers"
+    },
+    {
+      "code": "10022",
+      "teer": 0,
+      "title": "Advertising, marketing and public relations managers"
+    },
+    {
+      "code": "10029",
+      "teer": 0,
+      "title": "Other business services managers"
+    },
+    {
+      "code": "10030",
+      "teer": 0,
+      "title": "Telecommunication carriers managers"
+    },
+    {
+      "code": "11101",
+      "teer": 1,
+      "title": "Financial and investment analysts"
+    },
+    {
+      "code": "11103",
+      "teer": 1,
+      "title": "Securities agents, investment dealers and brokers"
+    },
+    {
+      "code": "11109",
+      "teer": 1,
+      "title": "Other financial officers"
+    },
+    {
+      "code": "11201",
+      "teer": 2,
+      "title": "Professional occupations in business management consulting"
+    },
+    {
+      "code": "12010",
+      "teer": 0,
+      "title": "Supervisors, general office and administrative support workers"
+    },
+    {
+      "code": "12011",
+      "teer": 0,
+      "title": "Supervisors, finance and insurance office workers"
+    },
+    {
+      "code": "12012",
+      "teer": 0,
+      "title": "Supervisors, library, correspondence and related information workers"
+    },
+    {
+      "code": "12013",
+      "teer": 0,
+      "title": "Supervisors, supply chain, tracking and scheduling coordination occupations"
+    },
+    {
+      "code": "12100",
+      "teer": 1,
+      "title": "Executive assistants"
+    },
+    {
+      "code": "12101",
+      "teer": 1,
+      "title": "Human resources and recruitment officers"
+    },
+    {
+      "code": "12102",
+      "teer": 1,
+      "title": "Procurement and purchasing agents and officers"
+    },
+    {
+      "code": "12103",
+      "teer": 1,
+      "title": "Conference and event planners"
+    },
+    {
+      "code": "12104",
+      "teer": 1,
+      "title": "Employment insurance and revenue officers"
+    },
+    {
+      "code": "12110",
+      "teer": 1,
+      "title": "Court reporters, medical transcriptionists and related occupations"
+    },
+    {
+      "code": "12111",
+      "teer": 1,
+      "title": "Health information management occupations"
+    },
+    {
+      "code": "12112",
+      "teer": 1,
+      "title": "Records management technicians"
+    },
+    {
+      "code": "12113",
+      "teer": 1,
+      "title": "Statistical officers and related research support occupations"
+    },
+    {
+      "code": "12200",
+      "teer": 2,
+      "title": "Accounting technicians and bookkeepers"
+    },
+    {
+      "code": "12201",
+      "teer": 2,
+      "title": "Insurance adjusters and claims examiners"
+    },
+    {
+      "code": "12202",
+      "teer": 2,
+      "title": "Insurance underwriters"
+    },
+    {
+      "code": "12203",
+      "teer": 2,
+      "title": "Assessors, business valuators and appraisers"
+    },
+    {
+      "code": "13100",
+      "teer": 1,
+      "title": "Administrative officers"
+    },
+    {
+      "code": "13101",
+      "teer": 1,
+      "title": "Property administrators"
+    },
+    {
+      "code": "13102",
+      "teer": 1,
+      "title": "Payroll administrators"
+    },
+    {
+      "code": "13111",
+      "teer": 1,
+      "title": "Legal administrative assistants"
+    },
+    {
+      "code": "13112",
+      "teer": 1,
+      "title": "Medical administrative assistants"
+    },
+    {
+      "code": "13200",
+      "teer": 2,
+      "title": "Customs, ship and other brokers"
+    },
+    {
+      "code": "13201",
+      "teer": 2,
+      "title": "Production and transportation logistics coordinators"
+    },
+    {
+      "code": "14100",
+      "teer": 1,
+      "title": "General office support workers"
+    },
+    {
+      "code": "14101",
+      "teer": 1,
+      "title": "Receptionists"
+    },
+    {
+      "code": "14102",
+      "teer": 1,
+      "title": "Personnel clerks"
+    },
+    {
+      "code": "14103",
+      "teer": 1,
+      "title": "Court clerks and related court services occupations"
+    },
+    {
+      "code": "14110",
+      "teer": 1,
+      "title": "Survey interviewers and statistical clerks"
+    },
+    {
+      "code": "14111",
+      "teer": 1,
+      "title": "Data entry clerks"
+    },
+    {
+      "code": "14112",
+      "teer": 1,
+      "title": "Desktop publishing operators and related occupations"
+    },
+    {
+      "code": "14200",
+      "teer": 2,
+      "title": "Accounting and related clerks"
+    },
+    {
+      "code": "14201",
+      "teer": 2,
+      "title": "Banking, insurance and other financial clerks"
+    },
+    {
+      "code": "14202",
+      "teer": 2,
+      "title": "Collection clerks"
+    },
+    {
+      "code": "14300",
+      "teer": 3,
+      "title": "Library assistants and clerks"
+    },
+    {
+      "code": "14301",
+      "teer": 3,
+      "title": "Correspondence, publication and regulatory clerks"
+    },
+    {
+      "code": "20010",
+      "teer": 0,
+      "title": "Engineering managers"
+    },
+    {
+      "code": "20011",
+      "teer": 0,
+      "title": "Architecture and science managers"
+    },
+    {
+      "code": "20012",
+      "teer": 0,
+      "title": "Computer and information systems managers"
+    },
+    {
+      "code": "21100",
+      "teer": 1,
+      "title": "Physicists and astronomers"
+    },
+    {
+      "code": "21101",
+      "teer": 1,
+      "title": "Chemists"
+    },
+    {
+      "code": "21102",
+      "teer": 1,
+      "title": "Geoscientists and oceanographers"
+    },
+    {
+      "code": "21103",
+      "teer": 1,
+      "title": "Meteorologists and climatologists"
+    },
+    {
+      "code": "21109",
+      "teer": 1,
+      "title": "Other professional occupations in physical sciences"
+    },
+    {
+      "code": "21110",
+      "teer": 1,
+      "title": "Biologists and related scientists"
+    },
+    {
+      "code": "21111",
+      "teer": 1,
+      "title": "Forestry professionals"
+    },
+    {
+      "code": "21112",
+      "teer": 1,
+      "title": "Agricultural representatives, consultants and specialists"
+    },
+    {
+      "code": "21120",
+      "teer": 1,
+      "title": "Public and environmental health and safety professionals"
+    },
+    {
+      "code": "21200",
+      "teer": 2,
+      "title": "Architects"
+    },
+    {
+      "code": "21201",
+      "teer": 2,
+      "title": "Landscape architects"
+    },
+    {
+      "code": "21202",
+      "teer": 2,
+      "title": "Urban and land use planners"
+    },
+    {
+      "code": "21203",
+      "teer": 2,
+      "title": "Land surveyors"
+    },
+    {
+      "code": "21210",
+      "teer": 2,
+      "title": "Mathematicians, statisticians and actuaries"
+    },
+    {
+      "code": "21222",
+      "teer": 2,
+      "title": "Information systems specialists"
+    },
+    {
+      "code": "21223",
+      "teer": 2,
+      "title": "Database analysts and data administrators"
+    },
+    {
+      "code": "21230",
+      "teer": 2,
+      "title": "Computer systems developers and programmers"
+    },
+    {
+      "code": "21231",
+      "teer": 2,
+      "title": "Software engineers and designers"
+    },
+    {
+      "code": "21233",
+      "teer": 2,
+      "title": "Web designers"
+    },
+    {
+      "code": "21300",
+      "teer": 3,
+      "title": "Civil engineers"
+    },
+    {
+      "code": "21320",
+      "teer": 3,
+      "title": "Chemical engineers"
+    },
+    {
+      "code": "21322",
+      "teer": 3,
+      "title": "Metallurgical and materials engineers"
+    },
+    {
+      "code": "21399",
+      "teer": 3,
+      "title": "Other professional engineers"
+    },
+    {
+      "code": "22100",
+      "teer": 1,
+      "title": "Chemical technologists and technicians"
+    },
+    {
+      "code": "22101",
+      "teer": 1,
+      "title": "Geological and mineral technologists and technicians"
+    },
+    {
+      "code": "22110",
+      "teer": 1,
+      "title": "Biological technologists and technicians"
+    },
+    {
+      "code": "22111",
+      "teer": 1,
+      "title": "Agricultural and fish products inspectors"
+    },
+    {
+      "code": "22112",
+      "teer": 1,
+      "title": "Forestry technologists and technicians"
+    },
+    {
+      "code": "22113",
+      "teer": 1,
+      "title": "Conservation and fishery officers"
+    },
+    {
+      "code": "22114",
+      "teer": 1,
+      "title": "Landscape and horticulture technicians and specialists"
+    },
+    {
+      "code": "22210",
+      "teer": 2,
+      "title": "Architectural technologists and technicians"
+    },
+    {
+      "code": "22211",
+      "teer": 2,
+      "title": "Industrial designers"
+    },
+    {
+      "code": "22212",
+      "teer": 2,
+      "title": "Drafting technologists and technicians"
+    },
+    {
+      "code": "22213",
+      "teer": 2,
+      "title": "Land survey technologists and technicians"
+    },
+    {
+      "code": "22214",
+      "teer": 2,
+      "title": "Technical occupations in geomatics and meteorology"
+    },
+    {
+      "code": "22221",
+      "teer": 2,
+      "title": "User support technicians"
+    },
+    {
+      "code": "22222",
+      "teer": 2,
+      "title": "Information systems testing technicians"
+    },
+    {
+      "code": "22230",
+      "teer": 2,
+      "title": "Non-destructive testers and inspectors"
+    },
+    {
+      "code": "22231",
+      "teer": 2,
+      "title": "Engineering inspectors and regulatory officers"
+    },
+    {
+      "code": "22232",
+      "teer": 2,
+      "title": "Occupational health and safety specialists"
+    },
+    {
+      "code": "22233",
+      "teer": 2,
+      "title": "Construction inspectors"
+    },
+    {
+      "code": "22302",
+      "teer": 3,
+      "title": "Industrial engineering and manufacturing technologists and technicians"
+    },
+    {
+      "code": "22303",
+      "teer": 3,
+      "title": "Construction estimators"
+    },
+    {
+      "code": "22310",
+      "teer": 3,
+      "title": "Electrical and electronics engineering technologists and technicians"
+    },
+    {
+      "code": "22311",
+      "teer": 3,
+      "title": "Electronic service technicians (household and business equipment)"
+    },
+    {
+      "code": "22312",
+      "teer": 3,
+      "title": "Industrial instrument technicians and mechanics"
+    },
+    {
+      "code": "22313",
+      "teer": 3,
+      "title": "Aircraft instrument, electrical and avionics mechanics, technicians and inspectors"
+    },
+    {
+      "code": "30010",
+      "teer": 0,
+      "title": "Managers in health care"
+    },
+    {
+      "code": "31101",
+      "teer": 1,
+      "title": "Specialists in surgery"
+    },
+    {
+      "code": "31102",
+      "teer": 1,
+      "title": "General practitioners and family physicians"
+    },
+    {
+      "code": "31103",
+      "teer": 1,
+      "title": "Veterinarians"
+    },
+    {
+      "code": "31110",
+      "teer": 1,
+      "title": "Dentists"
+    },
+    {
+      "code": "31121",
+      "teer": 1,
+      "title": "Dietitians and nutritionists"
+    },
+    {
+      "code": "31200",
+      "teer": 2,
+      "title": "Psychologists"
+    },
+    {
+      "code": "31300",
+      "teer": 3,
+      "title": "Nursing coordinators and supervisors"
+    },
+    {
+      "code": "32100",
+      "teer": 1,
+      "title": "Opticians"
+    },
+    {
+      "code": "32103",
+      "teer": 1,
+      "title": "Respiratory therapists, clinical perfusionists and cardiopulmonary technologists"
+    },
+    {
+      "code": "32104",
+      "teer": 1,
+      "title": "Animal health technologists and veterinary technicians"
+    },
+    {
+      "code": "32110",
+      "teer": 1,
+      "title": "Denturists"
+    },
+    {
+      "code": "32111",
+      "teer": 1,
+      "title": "Dental hygienists and dental therapists"
+    },
+    {
+      "code": "32112",
+      "teer": 1,
+      "title": "Dental technologists and technicians"
+    },
+    {
+      "code": "32122",
+      "teer": 1,
+      "title": "Medical sonographers"
+    },
+    {
+      "code": "32123",
+      "teer": 1,
+      "title": "Cardiology technologists and electrophysiological diagnostic technologists"
+    },
+    {
+      "code": "32124",
+      "teer": 1,
+      "title": "Pharmacy technicians"
+    },
+    {
+      "code": "32129",
+      "teer": 1,
+      "title": "Other medical technologists and technicians"
+    },
+    {
+      "code": "32200",
+      "teer": 2,
+      "title": "Traditional Chinese medicine practitioners and acupuncturists"
+    },
+    {
+      "code": "32201",
+      "teer": 2,
+      "title": "Massage therapists"
+    },
+    {
+      "code": "32209",
+      "teer": 2,
+      "title": "Other practitioners of natural healing"
+    },
+    {
+      "code": "33100",
+      "teer": 1,
+      "title": "Dental assistants and dental laboratory assistants"
+    },
+    {
+      "code": "33101",
+      "teer": 1,
+      "title": "Medical laboratory assistants and related technical occupations"
+    },
+    {
+      "code": "33103",
+      "teer": 1,
+      "title": "Pharmacy technical assistants and pharmacy assistants"
+    },
+    {
+      "code": "33109",
+      "teer": 1,
+      "title": "Other assisting occupations in support of health services"
+    },
+    {
+      "code": "40010",
+      "teer": 0,
+      "title": "Government managers - health and social policy development and program administration"
+    },
+    {
+      "code": "40011",
+      "teer": 0,
+      "title": "Government managers - economic analysis, policy development and program administration"
+    },
+    {
+      "code": "40012",
+      "teer": 0,
+      "title": "Government managers - education policy development and program administration"
+    },
+    {
+      "code": "40019",
+      "teer": 0,
+      "title": "Other managers in public administration"
+    },
+    {
+      "code": "40020",
+      "teer": 0,
+      "title": "Administrators - post-secondary education and vocational training"
+    },
+    {
+      "code": "40021",
+      "teer": 0,
+      "title": "School principals and administrators of elementary and secondary education"
+    },
+    {
+      "code": "40030",
+      "teer": 0,
+      "title": "Managers in social, community and correctional services"
+    },
+    {
+      "code": "40040",
+      "teer": 0,
+      "title": "Commissioned police officers and related occupations in public protection services"
+    },
+    {
+      "code": "40041",
+      "teer": 0,
+      "title": "Fire chiefs and senior firefighting officers"
+    },
+    {
+      "code": "40042",
+      "teer": 0,
+      "title": "Commissioned officers of the Canadian Armed Forces"
+    },
+    {
+      "code": "41100",
+      "teer": 1,
+      "title": "Judges"
+    },
+    {
+      "code": "41101",
+      "teer": 1,
+      "title": "Lawyers and Quebec notaries"
+    },
+    {
+      "code": "41201",
+      "teer": 2,
+      "title": "Post-secondary teaching and research assistants"
+    },
+    {
+      "code": "41300",
+      "teer": 3,
+      "title": "Social workers"
+    },
+    {
+      "code": "41302",
+      "teer": 3,
+      "title": "Religious leaders"
+    },
+    {
+      "code": "41310",
+      "teer": 3,
+      "title": "Police investigators and other investigative occupations"
+    },
+    {
+      "code": "41311",
+      "teer": 3,
+      "title": "Probation and parole officers"
+    },
+    {
+      "code": "41321",
+      "teer": 3,
+      "title": "Career development practitioners and career counsellors (except education)"
+    },
+    {
+      "code": "42100",
+      "teer": 1,
+      "title": "Police officers (except commissioned)"
+    },
+    {
+      "code": "42101",
+      "teer": 1,
+      "title": "Firefighters"
+    },
+    {
+      "code": "42102",
+      "teer": 1,
+      "title": "Specialized members of the Canadian Armed Forces"
+    },
+    {
+      "code": "42200",
+      "teer": 2,
+      "title": "Paralegals and related occupations"
+    },
+    {
+      "code": "42201",
+      "teer": 2,
+      "title": "Social and community service workers"
+    },
+    {
+      "code": "42203",
+      "teer": 2,
+      "title": "Instructors of persons with disabilities"
+    },
+    {
+      "code": "42204",
+      "teer": 2,
+      "title": "Religion workers"
+    },
+    {
+      "code": "43100",
+      "teer": 1,
+      "title": "Elementary and secondary school teacher assistants"
+    },
+    {
+      "code": "43109",
+      "teer": 1,
+      "title": "Other instructors"
+    },
+    {
+      "code": "43200",
+      "teer": 2,
+      "title": "Sheriffs and bailiffs"
+    },
+    {
+      "code": "43201",
+      "teer": 2,
+      "title": "Correctional service officers"
+    },
+    {
+      "code": "43202",
+      "teer": 2,
+      "title": "By-law enforcement and other regulatory officers"
+    },
+    {
+      "code": "43203",
+      "teer": 2,
+      "title": "Border services, customs, and immigration officers"
+    },
+    {
+      "code": "43204",
+      "teer": 2,
+      "title": "Operations Members of the Canadian Armed Forces"
+    },
+    {
+      "code": "44200",
+      "teer": 2,
+      "title": "Primary combat members of the Canadian Armed Forces"
+    },
+    {
+      "code": "45100",
+      "teer": 1,
+      "title": "Student monitors, crossing guards and related occupations"
+    },
+    {
+      "code": "50010",
+      "teer": 0,
+      "title": "Library, archive, museum and art gallery managers"
+    },
+    {
+      "code": "50011",
+      "teer": 0,
+      "title": "Managers - publishing, motion pictures, broadcasting and performing arts"
+    },
+    {
+      "code": "50012",
+      "teer": 0,
+      "title": "Recreation, sports and fitness program and service directors"
+    },
+    {
+      "code": "51100",
+      "teer": 1,
+      "title": "Librarians"
+    },
+    {
+      "code": "51101",
+      "teer": 1,
+      "title": "Conservators and curators"
+    },
+    {
+      "code": "51102",
+      "teer": 1,
+      "title": "Archivists"
+    },
+    {
+      "code": "51110",
+      "teer": 1,
+      "title": "Editors"
+    },
+    {
+      "code": "51111",
+      "teer": 1,
+      "title": "Authors and writers (except technical)"
+    },
+    {
+      "code": "51112",
+      "teer": 1,
+      "title": "Technical writers"
+    },
+    {
+      "code": "51113",
+      "teer": 1,
+      "title": "Journalists"
+    },
+    {
+      "code": "51114",
+      "teer": 1,
+      "title": "Translators, terminologists and interpreters"
+    },
+    {
+      "code": "51120",
+      "teer": 1,
+      "title": "Producers, directors, choreographers and related occupations"
+    },
+    {
+      "code": "51121",
+      "teer": 1,
+      "title": "Conductors, composers and arrangers"
+    },
+    {
+      "code": "51122",
+      "teer": 1,
+      "title": "Musicians and singers"
+    },
+    {
+      "code": "52100",
+      "teer": 1,
+      "title": "Library and public archive technicians"
+    },
+    {
+      "code": "52110",
+      "teer": 1,
+      "title": "Film and video camera operators"
+    },
+    {
+      "code": "52111",
+      "teer": 1,
+      "title": "Graphic arts technicians"
+    },
+    {
+      "code": "52112",
+      "teer": 1,
+      "title": "Broadcast technicians"
+    },
+    {
+      "code": "52113",
+      "teer": 1,
+      "title": "Audio and video recording technicians"
+    },
+    {
+      "code": "52114",
+      "teer": 1,
+      "title": "Announcers and other broadcasters"
+    },
+    {
+      "code": "52119",
+      "teer": 1,
+      "title": "Other technical and coordinating occupations in motion pictures, broadcasting and the performing arts"
+    },
+    {
+      "code": "52120",
+      "teer": 1,
+      "title": "Graphic designers and illustrators"
+    },
+    {
+      "code": "52121",
+      "teer": 1,
+      "title": "Interior designers and interior decorators"
+    },
+    {
+      "code": "53100",
+      "teer": 1,
+      "title": "Registrars, restorers, interpreters and other occupations related to museum and art galleries"
+    },
+    {
+      "code": "53110",
+      "teer": 1,
+      "title": "Photographers"
+    },
+    {
+      "code": "53111",
+      "teer": 1,
+      "title": "Motion pictures, broadcasting, photography and performing arts assistants and operators"
+    },
+    {
+      "code": "53120",
+      "teer": 1,
+      "title": "Dancers"
+    },
+    {
+      "code": "53121",
+      "teer": 1,
+      "title": "Actors, comedians and circus performers"
+    },
+    {
+      "code": "53122",
+      "teer": 1,
+      "title": "Painters, sculptors and other visual artists"
+    },
+    {
+      "code": "53123",
+      "teer": 1,
+      "title": "Theatre, fashion, exhibit and other creative designers"
+    },
+    {
+      "code": "53124",
+      "teer": 1,
+      "title": "Artisans and craftspersons"
+    },
+    {
+      "code": "53125",
+      "teer": 1,
+      "title": "Patternmakers - textile, leather and fur products"
+    },
+    {
+      "code": "53200",
+      "teer": 2,
+      "title": "Athletes"
+    },
+    {
+      "code": "53201",
+      "teer": 2,
+      "title": "Coaches"
+    },
+    {
+      "code": "53202",
+      "teer": 2,
+      "title": "Sports officials and referees"
+    },
+    {
+      "code": "54100",
+      "teer": 1,
+      "title": "Program leaders and instructors in recreation, sport and fitness"
+    },
+    {
+      "code": "55109",
+      "teer": 1,
+      "title": "Other performers"
+    },
+    {
+      "code": "60010",
+      "teer": 0,
+      "title": "Corporate sales managers"
+    },
+    {
+      "code": "60031",
+      "teer": 0,
+      "title": "Accommodation service managers"
+    },
+    {
+      "code": "60040",
+      "teer": 0,
+      "title": "Managers in customer and personal services"
+    },
+    {
+      "code": "62010",
+      "teer": 0,
+      "title": "Retail sales supervisors"
+    },
+    {
+      "code": "62021",
+      "teer": 0,
+      "title": "Executive housekeepers"
+    },
+    {
+      "code": "62022",
+      "teer": 0,
+      "title": "Accommodation, travel, tourism and related services supervisors"
+    },
+    {
+      "code": "62023",
+      "teer": 0,
+      "title": "Customer and information services supervisors"
+    },
+    {
+      "code": "62024",
+      "teer": 0,
+      "title": "Cleaning supervisors"
+    },
+    {
+      "code": "62029",
+      "teer": 0,
+      "title": "Other services supervisors"
+    },
+    {
+      "code": "62100",
+      "teer": 1,
+      "title": "Technical sales specialists - wholesale trade"
+    },
+    {
+      "code": "62101",
+      "teer": 1,
+      "title": "Retail and wholesale buyers"
+    },
+    {
+      "code": "62200",
+      "teer": 2,
+      "title": "Chefs"
+    },
+    {
+      "code": "62201",
+      "teer": 2,
+      "title": "Funeral directors and embalmers"
+    },
+    {
+      "code": "62202",
+      "teer": 2,
+      "title": "Jewellers, jewellery and watch repairers and related occupations"
+    },
+    {
+      "code": "63100",
+      "teer": 1,
+      "title": "Insurance agents and brokers"
+    },
+    {
+      "code": "63101",
+      "teer": 1,
+      "title": "Real estate agents and salespersons"
+    },
+    {
+      "code": "63102",
+      "teer": 1,
+      "title": "Financial sales representatives"
+    },
+    {
+      "code": "63202",
+      "teer": 2,
+      "title": "Bakers"
+    },
+    {
+      "code": "63210",
+      "teer": 2,
+      "title": "Hairstylists and barbers"
+    },
+    {
+      "code": "63211",
+      "teer": 2,
+      "title": "Estheticians, electrologists and related occupations"
+    },
+    {
+      "code": "63220",
+      "teer": 2,
+      "title": "Shoe repairers and shoemakers"
+    },
+    {
+      "code": "63221",
+      "teer": 2,
+      "title": "Upholsterers"
+    },
+    {
+      "code": "64100",
+      "teer": 1,
+      "title": "Retail salespersons and visual merchandisers"
+    },
+    {
+      "code": "64101",
+      "teer": 1,
+      "title": "Sales and account representatives - wholesale trade (non-technical)"
+    },
+    {
+      "code": "64200",
+      "teer": 2,
+      "title": "Tailors, dressmakers, furriers and milliners"
+    },
+    {
+      "code": "64201",
+      "teer": 2,
+      "title": "Image, social and other personal consultants"
+    },
+    {
+      "code": "64300",
+      "teer": 3,
+      "title": "Maîtres d'hôtel and hosts/hostesses"
+    },
+    {
+      "code": "64301",
+      "teer": 3,
+      "title": "Bartenders"
+    },
+    {
+      "code": "64310",
+      "teer": 3,
+      "title": "Travel counsellors"
+    },
+    {
+      "code": "64311",
+      "teer": 3,
+      "title": "Pursers and flight attendants"
+    },
+    {
+      "code": "64312",
+      "teer": 3,
+      "title": "Airline ticket and service agents"
+    },
+    {
+      "code": "64313",
+      "teer": 3,
+      "title": "Ground and water transport ticket agents, cargo service representatives and related clerks"
+    },
+    {
+      "code": "64314",
+      "teer": 3,
+      "title": "Hotel front desk clerks"
+    },
+    {
+      "code": "64320",
+      "teer": 3,
+      "title": "Tour and travel guides"
+    },
+    {
+      "code": "64321",
+      "teer": 3,
+      "title": "Casino workers"
+    },
+    {
+      "code": "64322",
+      "teer": 3,
+      "title": "Outdoor sport and recreational guides"
+    },
+    {
+      "code": "65100",
+      "teer": 1,
+      "title": "Cashiers"
+    },
+    {
+      "code": "65101",
+      "teer": 1,
+      "title": "Service station attendants"
+    },
+    {
+      "code": "65102",
+      "teer": 1,
+      "title": "Store shelf stockers, clerks and order fillers"
+    },
+    {
+      "code": "65109",
+      "teer": 1,
+      "title": "Other sales related occupations"
+    },
+    {
+      "code": "65200",
+      "teer": 2,
+      "title": "Food and beverage servers"
+    },
+    {
+      "code": "65202",
+      "teer": 2,
+      "title": "Meat cutters and fishmongers – retail and wholesale"
+    },
+    {
+      "code": "65210",
+      "teer": 2,
+      "title": "Support occupations in accommodation, travel and facilities set-up services"
+    },
+    {
+      "code": "65211",
+      "teer": 2,
+      "title": "Operators and attendants in amusement, recreation and sport"
+    },
+    {
+      "code": "65220",
+      "teer": 2,
+      "title": "Pet groomers and animal care workers"
+    },
+    {
+      "code": "65229",
+      "teer": 2,
+      "title": "Other support occupations in personal services"
+    },
+    {
+      "code": "65310",
+      "teer": 3,
+      "title": "Light duty cleaners"
+    },
+    {
+      "code": "65311",
+      "teer": 3,
+      "title": "Specialized cleaners"
+    },
+    {
+      "code": "65312",
+      "teer": 3,
+      "title": "Janitors, caretakers and heavy-duty cleaners"
+    },
+    {
+      "code": "65320",
+      "teer": 3,
+      "title": "Dry cleaning, laundry and related occupations"
+    },
+    {
+      "code": "65329",
+      "teer": 3,
+      "title": "Other service support occupations"
+    },
+    {
+      "code": "70010",
+      "teer": 0,
+      "title": "Construction managers"
+    },
+    {
+      "code": "70011",
+      "teer": 0,
+      "title": "Home building and renovation managers"
+    },
+    {
+      "code": "70012",
+      "teer": 0,
+      "title": "Facility operation and maintenance managers"
+    },
+    {
+      "code": "70020",
+      "teer": 0,
+      "title": "Managers in transportation"
+    },
+    {
+      "code": "70021",
+      "teer": 0,
+      "title": "Postal and courier services managers"
+    },
+    {
+      "code": "72010",
+      "teer": 0,
+      "title": "Contractors and supervisors, machining, metal forming, shaping and erecting trades and related occupations"
+    },
+    {
+      "code": "72011",
+      "teer": 0,
+      "title": "Contractors and supervisors, electrical trades and telecommunications occupations"
+    },
+    {
+      "code": "72012",
+      "teer": 0,
+      "title": "Contractors and supervisors, pipefitting trades"
+    },
+    {
+      "code": "72013",
+      "teer": 0,
+      "title": "Contractors and supervisors, carpentry trades"
+    },
+    {
+      "code": "72014",
+      "teer": 0,
+      "title": "Contractors and supervisors, other construction trades, installers, repairers and servicers"
+    },
+    {
+      "code": "72020",
+      "teer": 0,
+      "title": "Contractors and supervisors, mechanic trades"
+    },
+    {
+      "code": "72022",
+      "teer": 0,
+      "title": "Supervisors, printing and related occupations"
+    },
+    {
+      "code": "72023",
+      "teer": 0,
+      "title": "Supervisors, railway transport operations"
+    },
+    {
+      "code": "72025",
+      "teer": 0,
+      "title": "Supervisors, mail and message distribution occupations"
+    },
+    {
+      "code": "72100",
+      "teer": 1,
+      "title": "Machinists and machining and tooling inspectors"
+    },
+    {
+      "code": "72101",
+      "teer": 1,
+      "title": "Tool and die makers"
+    },
+    {
+      "code": "72102",
+      "teer": 1,
+      "title": "Sheet metal workers"
+    },
+    {
+      "code": "72103",
+      "teer": 1,
+      "title": "Boilermakers"
+    },
+    {
+      "code": "72104",
+      "teer": 1,
+      "title": "Structural metal and platework fabricators and fitters"
+    },
+    {
+      "code": "72105",
+      "teer": 1,
+      "title": "Ironworkers"
+    },
+    {
+      "code": "72106",
+      "teer": 1,
+      "title": "Welders and related machine operators"
+    },
+    {
+      "code": "72201",
+      "teer": 2,
+      "title": "Industrial electricians"
+    },
+    {
+      "code": "72202",
+      "teer": 2,
+      "title": "Power system electricians"
+    },
+    {
+      "code": "72203",
+      "teer": 2,
+      "title": "Electrical power line and cable workers"
+    },
+    {
+      "code": "72204",
+      "teer": 2,
+      "title": "Telecommunications line and cable installers and repairers"
+    },
+    {
+      "code": "72205",
+      "teer": 2,
+      "title": "Telecommunications equipment installation and cable television service technicians"
+    },
+    {
+      "code": "72300",
+      "teer": 3,
+      "title": "Plumbers"
+    },
+    {
+      "code": "72301",
+      "teer": 3,
+      "title": "Steamfitters, pipefitters and sprinkler system installers"
+    },
+    {
+      "code": "72302",
+      "teer": 3,
+      "title": "Gas fitters"
+    },
+    {
+      "code": "72311",
+      "teer": 3,
+      "title": "Cabinetmakers"
+    },
+    {
+      "code": "72321",
+      "teer": 3,
+      "title": "Insulators"
+    },
+    {
+      "code": "73100",
+      "teer": 1,
+      "title": "Concrete finishers"
+    },
+    {
+      "code": "73102",
+      "teer": 1,
+      "title": "Plasterers, drywall installers and finishers and lathers"
+    },
+    {
+      "code": "73110",
+      "teer": 1,
+      "title": "Roofers and shinglers"
+    },
+    {
+      "code": "73111",
+      "teer": 1,
+      "title": "Glaziers"
+    },
+    {
+      "code": "73112",
+      "teer": 1,
+      "title": "Painters and decorators (except interior decorators)"
+    },
+    {
+      "code": "73113",
+      "teer": 1,
+      "title": "Floor covering installers"
+    },
+    {
+      "code": "73200",
+      "teer": 2,
+      "title": "Residential and commercial installers and servicers"
+    },
+    {
+      "code": "73201",
+      "teer": 2,
+      "title": "General building maintenance workers and building superintendents"
+    },
+    {
+      "code": "73202",
+      "teer": 2,
+      "title": "Pest controllers and fumigators"
+    },
+    {
+      "code": "73209",
+      "teer": 2,
+      "title": "Other repairers and servicers"
+    },
+    {
+      "code": "73311",
+      "teer": 3,
+      "title": "Railway conductors and brakemen/women"
+    },
+    {
+      "code": "74100",
+      "teer": 1,
+      "title": "Mail and parcel sorters and related occupations"
+    },
+    {
+      "code": "74101",
+      "teer": 1,
+      "title": "Letter carriers"
+    },
+    {
+      "code": "74102",
+      "teer": 1,
+      "title": "Couriers and messengers"
+    },
+    {
+      "code": "74200",
+      "teer": 2,
+      "title": "Railway yard and track maintenance workers"
+    },
+    {
+      "code": "74201",
+      "teer": 2,
+      "title": "Water transport deck and engine room crew"
+    }
+  ],
+  "priorityGaps": [
+    {
+      "code": "21100",
+      "teer": 1,
+      "title": "Physicists and astronomers"
+    },
+    {
+      "code": "21101",
+      "teer": 1,
+      "title": "Chemists"
+    },
+    {
+      "code": "21102",
+      "teer": 1,
+      "title": "Geoscientists and oceanographers"
+    },
+    {
+      "code": "21103",
+      "teer": 1,
+      "title": "Meteorologists and climatologists"
+    },
+    {
+      "code": "21109",
+      "teer": 1,
+      "title": "Other professional occupations in physical sciences"
+    },
+    {
+      "code": "21110",
+      "teer": 1,
+      "title": "Biologists and related scientists"
+    },
+    {
+      "code": "21111",
+      "teer": 1,
+      "title": "Forestry professionals"
+    },
+    {
+      "code": "21112",
+      "teer": 1,
+      "title": "Agricultural representatives, consultants and specialists"
+    },
+    {
+      "code": "21120",
+      "teer": 1,
+      "title": "Public and environmental health and safety professionals"
+    },
+    {
+      "code": "21200",
+      "teer": 2,
+      "title": "Architects"
+    },
+    {
+      "code": "21201",
+      "teer": 2,
+      "title": "Landscape architects"
+    },
+    {
+      "code": "21202",
+      "teer": 2,
+      "title": "Urban and land use planners"
+    },
+    {
+      "code": "21203",
+      "teer": 2,
+      "title": "Land surveyors"
+    },
+    {
+      "code": "21210",
+      "teer": 2,
+      "title": "Mathematicians, statisticians and actuaries"
+    },
+    {
+      "code": "21222",
+      "teer": 2,
+      "title": "Information systems specialists"
+    },
+    {
+      "code": "21223",
+      "teer": 2,
+      "title": "Database analysts and data administrators"
+    },
+    {
+      "code": "21230",
+      "teer": 2,
+      "title": "Computer systems developers and programmers"
+    },
+    {
+      "code": "21231",
+      "teer": 2,
+      "title": "Software engineers and designers"
+    },
+    {
+      "code": "21233",
+      "teer": 2,
+      "title": "Web designers"
+    },
+    {
+      "code": "21300",
+      "teer": 3,
+      "title": "Civil engineers"
+    },
+    {
+      "code": "21320",
+      "teer": 3,
+      "title": "Chemical engineers"
+    },
+    {
+      "code": "21322",
+      "teer": 3,
+      "title": "Metallurgical and materials engineers"
+    },
+    {
+      "code": "21399",
+      "teer": 3,
+      "title": "Other professional engineers"
+    },
+    {
+      "code": "22100",
+      "teer": 1,
+      "title": "Chemical technologists and technicians"
+    },
+    {
+      "code": "22101",
+      "teer": 1,
+      "title": "Geological and mineral technologists and technicians"
+    },
+    {
+      "code": "22110",
+      "teer": 1,
+      "title": "Biological technologists and technicians"
+    },
+    {
+      "code": "22111",
+      "teer": 1,
+      "title": "Agricultural and fish products inspectors"
+    },
+    {
+      "code": "22112",
+      "teer": 1,
+      "title": "Forestry technologists and technicians"
+    },
+    {
+      "code": "22113",
+      "teer": 1,
+      "title": "Conservation and fishery officers"
+    },
+    {
+      "code": "22114",
+      "teer": 1,
+      "title": "Landscape and horticulture technicians and specialists"
+    },
+    {
+      "code": "22210",
+      "teer": 2,
+      "title": "Architectural technologists and technicians"
+    },
+    {
+      "code": "22211",
+      "teer": 2,
+      "title": "Industrial designers"
+    },
+    {
+      "code": "22212",
+      "teer": 2,
+      "title": "Drafting technologists and technicians"
+    },
+    {
+      "code": "22213",
+      "teer": 2,
+      "title": "Land survey technologists and technicians"
+    },
+    {
+      "code": "22214",
+      "teer": 2,
+      "title": "Technical occupations in geomatics and meteorology"
+    },
+    {
+      "code": "22221",
+      "teer": 2,
+      "title": "User support technicians"
+    },
+    {
+      "code": "22222",
+      "teer": 2,
+      "title": "Information systems testing technicians"
+    },
+    {
+      "code": "22230",
+      "teer": 2,
+      "title": "Non-destructive testers and inspectors"
+    },
+    {
+      "code": "22231",
+      "teer": 2,
+      "title": "Engineering inspectors and regulatory officers"
+    },
+    {
+      "code": "22232",
+      "teer": 2,
+      "title": "Occupational health and safety specialists"
+    },
+    {
+      "code": "22233",
+      "teer": 2,
+      "title": "Construction inspectors"
+    },
+    {
+      "code": "22302",
+      "teer": 3,
+      "title": "Industrial engineering and manufacturing technologists and technicians"
+    },
+    {
+      "code": "22303",
+      "teer": 3,
+      "title": "Construction estimators"
+    },
+    {
+      "code": "22310",
+      "teer": 3,
+      "title": "Electrical and electronics engineering technologists and technicians"
+    },
+    {
+      "code": "22311",
+      "teer": 3,
+      "title": "Electronic service technicians (household and business equipment)"
+    },
+    {
+      "code": "22312",
+      "teer": 3,
+      "title": "Industrial instrument technicians and mechanics"
+    },
+    {
+      "code": "22313",
+      "teer": 3,
+      "title": "Aircraft instrument, electrical and avionics mechanics, technicians and inspectors"
+    },
+    {
+      "code": "31101",
+      "teer": 1,
+      "title": "Specialists in surgery"
+    },
+    {
+      "code": "31102",
+      "teer": 1,
+      "title": "General practitioners and family physicians"
+    },
+    {
+      "code": "31103",
+      "teer": 1,
+      "title": "Veterinarians"
+    },
+    {
+      "code": "31110",
+      "teer": 1,
+      "title": "Dentists"
+    },
+    {
+      "code": "31121",
+      "teer": 1,
+      "title": "Dietitians and nutritionists"
+    },
+    {
+      "code": "31200",
+      "teer": 2,
+      "title": "Psychologists"
+    },
+    {
+      "code": "31300",
+      "teer": 3,
+      "title": "Nursing coordinators and supervisors"
+    },
+    {
+      "code": "32100",
+      "teer": 1,
+      "title": "Opticians"
+    },
+    {
+      "code": "32103",
+      "teer": 1,
+      "title": "Respiratory therapists, clinical perfusionists and cardiopulmonary technologists"
+    },
+    {
+      "code": "32104",
+      "teer": 1,
+      "title": "Animal health technologists and veterinary technicians"
+    },
+    {
+      "code": "32110",
+      "teer": 1,
+      "title": "Denturists"
+    },
+    {
+      "code": "32111",
+      "teer": 1,
+      "title": "Dental hygienists and dental therapists"
+    },
+    {
+      "code": "32112",
+      "teer": 1,
+      "title": "Dental technologists and technicians"
+    },
+    {
+      "code": "32122",
+      "teer": 1,
+      "title": "Medical sonographers"
+    },
+    {
+      "code": "32123",
+      "teer": 1,
+      "title": "Cardiology technologists and electrophysiological diagnostic technologists"
+    },
+    {
+      "code": "32124",
+      "teer": 1,
+      "title": "Pharmacy technicians"
+    },
+    {
+      "code": "32129",
+      "teer": 1,
+      "title": "Other medical technologists and technicians"
+    },
+    {
+      "code": "32200",
+      "teer": 2,
+      "title": "Traditional Chinese medicine practitioners and acupuncturists"
+    },
+    {
+      "code": "32201",
+      "teer": 2,
+      "title": "Massage therapists"
+    },
+    {
+      "code": "32209",
+      "teer": 2,
+      "title": "Other practitioners of natural healing"
+    },
+    {
+      "code": "33100",
+      "teer": 1,
+      "title": "Dental assistants and dental laboratory assistants"
+    },
+    {
+      "code": "33101",
+      "teer": 1,
+      "title": "Medical laboratory assistants and related technical occupations"
+    },
+    {
+      "code": "33103",
+      "teer": 1,
+      "title": "Pharmacy technical assistants and pharmacy assistants"
+    },
+    {
+      "code": "33109",
+      "teer": 1,
+      "title": "Other assisting occupations in support of health services"
+    },
+    {
+      "code": "41100",
+      "teer": 1,
+      "title": "Judges"
+    },
+    {
+      "code": "41101",
+      "teer": 1,
+      "title": "Lawyers and Quebec notaries"
+    },
+    {
+      "code": "41201",
+      "teer": 2,
+      "title": "Post-secondary teaching and research assistants"
+    },
+    {
+      "code": "41300",
+      "teer": 3,
+      "title": "Social workers"
+    },
+    {
+      "code": "41302",
+      "teer": 3,
+      "title": "Religious leaders"
+    },
+    {
+      "code": "41310",
+      "teer": 3,
+      "title": "Police investigators and other investigative occupations"
+    },
+    {
+      "code": "41311",
+      "teer": 3,
+      "title": "Probation and parole officers"
+    },
+    {
+      "code": "41321",
+      "teer": 3,
+      "title": "Career development practitioners and career counsellors (except education)"
+    },
+    {
+      "code": "42100",
+      "teer": 1,
+      "title": "Police officers (except commissioned)"
+    },
+    {
+      "code": "42101",
+      "teer": 1,
+      "title": "Firefighters"
+    },
+    {
+      "code": "42102",
+      "teer": 1,
+      "title": "Specialized members of the Canadian Armed Forces"
+    },
+    {
+      "code": "42200",
+      "teer": 2,
+      "title": "Paralegals and related occupations"
+    },
+    {
+      "code": "42201",
+      "teer": 2,
+      "title": "Social and community service workers"
+    },
+    {
+      "code": "42203",
+      "teer": 2,
+      "title": "Instructors of persons with disabilities"
+    },
+    {
+      "code": "42204",
+      "teer": 2,
+      "title": "Religion workers"
+    },
+    {
+      "code": "44200",
+      "teer": 2,
+      "title": "Primary combat members of the Canadian Armed Forces"
+    },
+    {
+      "code": "62010",
+      "teer": 0,
+      "title": "Retail sales supervisors"
+    },
+    {
+      "code": "62021",
+      "teer": 0,
+      "title": "Executive housekeepers"
+    },
+    {
+      "code": "62022",
+      "teer": 0,
+      "title": "Accommodation, travel, tourism and related services supervisors"
+    },
+    {
+      "code": "62023",
+      "teer": 0,
+      "title": "Customer and information services supervisors"
+    },
+    {
+      "code": "62024",
+      "teer": 0,
+      "title": "Cleaning supervisors"
+    },
+    {
+      "code": "62029",
+      "teer": 0,
+      "title": "Other services supervisors"
+    },
+    {
+      "code": "62100",
+      "teer": 1,
+      "title": "Technical sales specialists - wholesale trade"
+    },
+    {
+      "code": "62101",
+      "teer": 1,
+      "title": "Retail and wholesale buyers"
+    },
+    {
+      "code": "62200",
+      "teer": 2,
+      "title": "Chefs"
+    },
+    {
+      "code": "62201",
+      "teer": 2,
+      "title": "Funeral directors and embalmers"
+    },
+    {
+      "code": "62202",
+      "teer": 2,
+      "title": "Jewellers, jewellery and watch repairers and related occupations"
+    },
+    {
+      "code": "63100",
+      "teer": 1,
+      "title": "Insurance agents and brokers"
+    },
+    {
+      "code": "63101",
+      "teer": 1,
+      "title": "Real estate agents and salespersons"
+    },
+    {
+      "code": "63102",
+      "teer": 1,
+      "title": "Financial sales representatives"
+    },
+    {
+      "code": "63202",
+      "teer": 2,
+      "title": "Bakers"
+    },
+    {
+      "code": "63210",
+      "teer": 2,
+      "title": "Hairstylists and barbers"
+    },
+    {
+      "code": "63211",
+      "teer": 2,
+      "title": "Estheticians, electrologists and related occupations"
+    },
+    {
+      "code": "63220",
+      "teer": 2,
+      "title": "Shoe repairers and shoemakers"
+    },
+    {
+      "code": "63221",
+      "teer": 2,
+      "title": "Upholsterers"
+    },
+    {
+      "code": "72010",
+      "teer": 0,
+      "title": "Contractors and supervisors, machining, metal forming, shaping and erecting trades and related occupations"
+    },
+    {
+      "code": "72011",
+      "teer": 0,
+      "title": "Contractors and supervisors, electrical trades and telecommunications occupations"
+    },
+    {
+      "code": "72012",
+      "teer": 0,
+      "title": "Contractors and supervisors, pipefitting trades"
+    },
+    {
+      "code": "72013",
+      "teer": 0,
+      "title": "Contractors and supervisors, carpentry trades"
+    },
+    {
+      "code": "72014",
+      "teer": 0,
+      "title": "Contractors and supervisors, other construction trades, installers, repairers and servicers"
+    },
+    {
+      "code": "72020",
+      "teer": 0,
+      "title": "Contractors and supervisors, mechanic trades"
+    },
+    {
+      "code": "72022",
+      "teer": 0,
+      "title": "Supervisors, printing and related occupations"
+    },
+    {
+      "code": "72023",
+      "teer": 0,
+      "title": "Supervisors, railway transport operations"
+    },
+    {
+      "code": "72025",
+      "teer": 0,
+      "title": "Supervisors, mail and message distribution occupations"
+    },
+    {
+      "code": "72100",
+      "teer": 1,
+      "title": "Machinists and machining and tooling inspectors"
+    },
+    {
+      "code": "72101",
+      "teer": 1,
+      "title": "Tool and die makers"
+    },
+    {
+      "code": "72102",
+      "teer": 1,
+      "title": "Sheet metal workers"
+    },
+    {
+      "code": "72103",
+      "teer": 1,
+      "title": "Boilermakers"
+    },
+    {
+      "code": "72104",
+      "teer": 1,
+      "title": "Structural metal and platework fabricators and fitters"
+    },
+    {
+      "code": "72105",
+      "teer": 1,
+      "title": "Ironworkers"
+    },
+    {
+      "code": "72106",
+      "teer": 1,
+      "title": "Welders and related machine operators"
+    },
+    {
+      "code": "72201",
+      "teer": 2,
+      "title": "Industrial electricians"
+    },
+    {
+      "code": "72202",
+      "teer": 2,
+      "title": "Power system electricians"
+    },
+    {
+      "code": "72203",
+      "teer": 2,
+      "title": "Electrical power line and cable workers"
+    },
+    {
+      "code": "72204",
+      "teer": 2,
+      "title": "Telecommunications line and cable installers and repairers"
+    },
+    {
+      "code": "72205",
+      "teer": 2,
+      "title": "Telecommunications equipment installation and cable television service technicians"
+    },
+    {
+      "code": "72300",
+      "teer": 3,
+      "title": "Plumbers"
+    },
+    {
+      "code": "72301",
+      "teer": 3,
+      "title": "Steamfitters, pipefitters and sprinkler system installers"
+    },
+    {
+      "code": "72302",
+      "teer": 3,
+      "title": "Gas fitters"
+    },
+    {
+      "code": "72311",
+      "teer": 3,
+      "title": "Cabinetmakers"
+    },
+    {
+      "code": "72321",
+      "teer": 3,
+      "title": "Insulators"
+    },
+    {
+      "code": "73100",
+      "teer": 1,
+      "title": "Concrete finishers"
+    },
+    {
+      "code": "73102",
+      "teer": 1,
+      "title": "Plasterers, drywall installers and finishers and lathers"
+    },
+    {
+      "code": "73110",
+      "teer": 1,
+      "title": "Roofers and shinglers"
+    },
+    {
+      "code": "73111",
+      "teer": 1,
+      "title": "Glaziers"
+    },
+    {
+      "code": "73112",
+      "teer": 1,
+      "title": "Painters and decorators (except interior decorators)"
+    },
+    {
+      "code": "73113",
+      "teer": 1,
+      "title": "Floor covering installers"
+    },
+    {
+      "code": "73200",
+      "teer": 2,
+      "title": "Residential and commercial installers and servicers"
+    },
+    {
+      "code": "73201",
+      "teer": 2,
+      "title": "General building maintenance workers and building superintendents"
+    },
+    {
+      "code": "73202",
+      "teer": 2,
+      "title": "Pest controllers and fumigators"
+    },
+    {
+      "code": "73209",
+      "teer": 2,
+      "title": "Other repairers and servicers"
+    },
+    {
+      "code": "73311",
+      "teer": 3,
+      "title": "Railway conductors and brakemen/women"
+    }
+  ],
+  "missingFromMaster": [
+    {
+      "code": "72330",
+      "title": "Plasterer / Drywall Installer"
+    },
+    {
+      "code": "82030",
+      "title": "Agricultural Equipment Operator"
+    },
+    {
+      "code": "82031",
+      "title": "Farm Supervisor / Agricultural Service Contractor"
+    },
+    {
+      "code": "85100",
+      "title": "Livestock Labourer"
+    },
+    {
+      "code": "94141",
+      "title": "Food and Beverage Processing Worker"
+    }
+  ]
+}

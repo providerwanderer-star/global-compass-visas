@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft, RotateCcw, CheckCircle, Globe, GraduationCap, Briefcase, Heart, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useUserProfile, type Intent } from "@/hooks/useUserProfile";
+import EligibilityForm from "@/components/EligibilityForm";
 
 interface QuizOption {
   label: string;
@@ -274,6 +275,40 @@ const QuizPage = () => {
   };
 
   const recommendations = showResults ? getRecommendations(answers) : [];
+  const topRec = recommendations[0];
+
+  // Map quiz answers/top recommendation → EligibilityForm prefill
+  const visaSlugToFormValue: Record<string, string> = {
+    "express-entry": "pr",
+    "student-visa": "study",
+    "work-permits": "work",
+    "lmia-assistance": "lmia",
+    "pnp-application": "pnp",
+    "visitor-visa": "visitor",
+    "family-sponsorship": "family",
+    "job-seeker-visa": "jobseeker",
+    "visitor-visa-insurance": "insurance",
+  };
+  const countrySlugToFormValue: Record<string, string> = {
+    canada: "canada",
+    australia: "australia",
+    germany: "germany",
+    uk: "uk",
+  };
+  const educationToFormValue: Record<string, string> = {
+    highschool: "highschool",
+    bachelors: "bachelors",
+    masters: "masters",
+    phd: "phd",
+    trade: "diploma",
+  };
+  const prefill = topRec
+    ? {
+        destination_country: countrySlugToFormValue[topRec.countrySlug] ?? "",
+        visa_type: visaSlugToFormValue[topRec.visaSlug] ?? "",
+        education_level: educationToFormValue[answers.education] ?? "",
+      }
+    : undefined;
 
   // Persist quiz outcomes to profile
   useEffect(() => {

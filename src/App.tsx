@@ -44,6 +44,8 @@ import NewsDetailPage from "@/pages/NewsDetailPage";
 import SearchResultsPage from "@/pages/SearchResultsPage";
 import CanadaPRFromCountryPage from "@/pages/CanadaPRFromCountryPage";
 import CRSBandPage from "@/pages/CRSBandPage";
+import SettlementHubPage from "@/pages/SettlementHubPage";
+import SettlementGuidePage from "@/pages/SettlementGuidePage";
 
 const queryClient = new QueryClient();
 
@@ -100,6 +102,8 @@ const App = () => (
               <Route path="/search" element={<SearchResultsPage />} />
               <Route path="/canada-pr-from/:country" element={<CanadaPRFromCountryPage />} />
               <Route path="/canada-pr/crs/:band" element={<CRSBandPage />} />
+              <Route path="/settle-in-canada" element={<SettlementHubPage />} />
+              <Route path="/settle-in-canada/:slug" element={<SettlementGuidePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

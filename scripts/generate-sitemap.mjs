@@ -43,6 +43,7 @@ const documentSlugs = extractSlugs(resolve(root, "src/data/documentsData.ts"));
 const stateSlugs = extractSlugs(resolve(root, "src/data/stateHubData.ts"));
 const originSlugs = extractSlugs(resolve(root, "src/data/geoOriginData.ts"));
 const crsBandSlugs = extractSlugs(resolve(root, "src/data/crsBandData.ts"));
+const settlementSlugs = extractSlugs(resolve(root, "src/data/settlementData.ts"));
 
 const indianCities = extractQuotedList(
   resolve(root, "src/data/cityData.ts"),
@@ -112,6 +113,10 @@ for (const slug of originSlugs) add(`/canada-pr-from/${slug}`, 0.85, "weekly");
 
 // Programmatic GEO: Canada PR by CRS score band
 for (const slug of crsBandSlugs) add(`/canada-pr/crs/${slug}`, 0.85, "weekly");
+
+// Settlement / Move-and-Settle hub
+add("/settle-in-canada", 0.9, "weekly");
+for (const slug of settlementSlugs) add(`/settle-in-canada/${slug}`, 0.8);
 
 // City pages (if routed via /city/:slug — the route exists in App.tsx)
 for (const slug of [...indianCities, ...canadianCities]) add(`/city/${slug}`, 0.7);

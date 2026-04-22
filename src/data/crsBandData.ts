@@ -146,4 +146,103 @@ export const crsBands: CRSBand[] = [
   },
 ];
 
+/* ─── Sprint E expansion: 4 finer-grained CRS bands ─── */
+
+const additionalBands: CRSBand[] = [
+  {
+    slug: "350-400",
+    label: "350 – 400",
+    range: "350 – 400",
+    realityCheck:
+      "CRS 350–400 is below current general Express Entry cutoffs (430–490), but you're a strong PNP candidate, especially in Saskatchewan, Manitoba, and the Atlantic provinces. Category-based draws (Trades, Agriculture, French) can reach this range.",
+    bestStrategies: [
+      { title: "Pursue PNP nomination", detail: "Saskatchewan SINP Occupation In-Demand and Manitoba MPNP Skilled Worker streams accept candidates in this range. +600 CRS guarantees an ITA." },
+      { title: "Improve language to CLB 9", detail: "Going from CLB 7 to CLB 9 adds 70+ CRS points. Combined with PNP, this can take you above 600." },
+      { title: "Add a TEER 0/1 work-experience year", detail: "Each additional year of skilled work adds 25–50 CRS points; a Canadian year doubles this." },
+    ],
+    recommendedPathways: [
+      "Saskatchewan SINP Occupation In-Demand stream",
+      "Manitoba PNP Skilled Worker stream",
+      "Atlantic Immigration Program",
+      "Express Entry — Trades / French / Agriculture category-based draws",
+    ],
+    topProvinces: [
+      { name: "Saskatchewan", reason: "SINP nominates non-EE candidates with as little as 60 SINP points" },
+      { name: "Manitoba", reason: "MPNP draws regularly invite candidates with low federal CRS" },
+      { name: "New Brunswick", reason: "NBPNP and AIP welcome trades, healthcare, and hospitality workers" },
+    ],
+    whoFor: "Skilled tradespeople, French speakers, and applicants willing to settle in less-populated provinces.",
+    whoNotFor: "Applicants targeting only Toronto/Vancouver without PNP or job offer.",
+    expectedTimeline: "12–18 months via PNP",
+    faqs: [
+      { q: "Can I get PR with CRS 350–400?", a: "Yes, primarily through PNP. A provincial nomination adds 600 CRS, virtually guaranteeing an Express Entry ITA. Category-based draws in Trades, Agriculture and French can also reach this range." },
+      { q: "Which province should I target?", a: "Saskatchewan, Manitoba, and the Atlantic provinces (NB, NS, PEI, NL) have the lowest thresholds. They actively nominate candidates with strong job-market alignment regardless of CRS." },
+      { q: "How long does PR take with PNP at 350–400?", a: "PNP nomination: 3–6 months. Federal Express Entry processing after nomination: 6 months. Total: 12–18 months from PNP application to PR." },
+    ],
+  },
+  {
+    slug: "400-450",
+    label: "400 – 450",
+    range: "400 – 450",
+    realityCheck:
+      "CRS 400–450 is the borderline zone. Category-based Express Entry draws (Healthcare, STEM, Trades, Transport, French) regularly invite candidates here, but general draws typically require 470+. PNP nomination is the most reliable path.",
+    bestStrategies: [
+      { title: "Apply to category-based draws", detail: "Healthcare (recent cutoff 422–435), STEM (479+), Trades (355–360), Transport (435), French (379) — much lower than general draws." },
+      { title: "Target PNP nomination", detail: "Ontario OINP Tech Draw, BC PNP Tech, Alberta AAIP and Saskatchewan SINP regularly invite in this range." },
+      { title: "Boost language one CLB band", detail: "Going from CLB 8 to CLB 9 can add 30–50 CRS points and unlock 50 spousal-language points if applicable." },
+    ],
+    recommendedPathways: [
+      "Express Entry — Category-Based Draws (Healthcare, STEM, Trades, Transport, French)",
+      "Ontario OINP Human Capital Priorities / Tech Draw",
+      "BC PNP Skills Immigration / Tech",
+      "Alberta AAIP Express Entry stream",
+    ],
+    topProvinces: [
+      { name: "Ontario", reason: "OINP Tech Draws regularly invite EE candidates with CRS 430+" },
+      { name: "British Columbia", reason: "BC PNP Tech invites tech workers with CRS 400+" },
+      { name: "Alberta", reason: "AAIP welcomes EE candidates with provincial connection or job offer" },
+    ],
+    whoFor: "Skilled professionals in healthcare, STEM, trades or transport occupations, with strong language scores.",
+    whoNotFor: "Applicants outside category-eligible NOCs without PNP strategy.",
+    expectedTimeline: "6–12 months via category draw or PNP",
+    faqs: [
+      { q: "What's the realistic timeline for CRS 400–450?", a: "If you're in a category-eligible NOC (healthcare, STEM, trades, transport, French), expect an ITA within 3–6 months. PNP route adds 3–6 months for nomination plus 6 months federal processing." },
+      { q: "Should I improve my CRS or pursue PNP?", a: "Both. Improving language from CLB 8 to CLB 9 takes 1–2 months and adds 30–50 points. Apply to PNPs concurrently — this maximizes your odds." },
+      { q: "Which category-based draw should I target?", a: "Match your NOC to the category. Healthcare (NOC 31xxx) and Trades (NOC 72xxx, 73xxx) have the lowest cutoffs (350–435). STEM (NOC 21xxx) requires 479+." },
+    ],
+  },
+  {
+    slug: "500-plus",
+    label: "500+",
+    range: "500 and above",
+    realityCheck:
+      "CRS 500+ is well above current general draw cutoffs. You'll receive an ITA in the next general Express Entry draw with very high probability. Focus on application quality and document readiness.",
+    bestStrategies: [
+      { title: "Maintain your profile", detail: "Keep IELTS valid (within 2 years), update work-experience entries every 6 months, and ensure ECA is fresh (within 5 years)." },
+      { title: "Prepare documents now", detail: "Pre-collect police clearances (valid 3 months), medicals (valid 12 months), proof of funds, and translations to submit within 60 days of ITA." },
+      { title: "Skip PNP unless strategic", detail: "At 500+ CRS, PNP nomination adds processing time without changing outcome. Pursue PNP only if you have specific provincial ties." },
+    ],
+    recommendedPathways: [
+      "Express Entry — Federal Skilled Worker Program (FSWP)",
+      "Canadian Experience Class (CEC) if you have 1+ year Canadian work",
+      "Federal Skilled Trades (FST) for tradespeople",
+    ],
+    topProvinces: [
+      { name: "Ontario", reason: "Largest job market and most PR landings — Toronto, Mississauga, Ottawa" },
+      { name: "British Columbia", reason: "Premium tech salaries in Vancouver and Victoria" },
+      { name: "Alberta", reason: "No provincial sales tax, strong energy and tech sectors" },
+    ],
+    whoFor: "Highly skilled professionals: PhD holders, CLB 10+ language, 5+ years of skilled work, ideally with Canadian education or work experience.",
+    whoNotFor: "No one — at 500+ CRS you're a top candidate. Focus on a flawless application.",
+    expectedTimeline: "6 months from ITA to PR (IRCC service standard)",
+    faqs: [
+      { q: "Will I get an ITA at CRS 500+?", a: "Almost certainly in the next general Express Entry draw. Recent general cutoffs have been 430–490. CRS 500+ is comfortably above this range." },
+      { q: "How fast can I get PR at CRS 500+?", a: "From profile creation to PR: 4–8 months in most cases. IRCC processes complete Express Entry applications within 6 months." },
+      { q: "Should I still take French to boost CRS further?", a: "If you're already at 500+, no significant benefit unless you want to relocate to Quebec or qualify for French category-based draws." },
+    ],
+  },
+];
+
+crsBands.push(...additionalBands);
+
 export const findCRSBand = (slug: string) => crsBands.find((b) => b.slug === slug);

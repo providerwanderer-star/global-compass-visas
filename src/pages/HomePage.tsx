@@ -16,6 +16,7 @@ import LiveDataStrip from "@/components/LiveDataStrip";
 import HighDemandJobsHome from "@/components/HighDemandJobsHome";
 import LiveJobsHighlightStrip from "@/components/LiveJobsHighlightStrip";
 import NewsStripHome from "@/components/NewsStripHome";
+import GlobalImmigrationSearch from "@/components/GlobalImmigrationSearch";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -391,6 +392,25 @@ const HomePage = () => {
               <AnimatedCounter key={s.label} value={s.value} label={s.label} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Global Immigration Search — find your pathway */}
+      <section className="section-padding section-light" aria-labelledby="search-heading">
+        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <AnimatedSection className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              🔎 One Search. Every Pathway.
+            </span>
+            <h2 id="search-heading" className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Find your immigration pathway in 60 seconds
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Search by occupation, NOC code, CRS score or province. We'll match you to the
+              right Express Entry, PNP, study or work-permit route.
+            </p>
+          </AnimatedSection>
+          <GlobalImmigrationSearch />
         </div>
       </section>
 

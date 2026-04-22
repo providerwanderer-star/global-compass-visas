@@ -17,6 +17,7 @@ import heroCombined from "@/assets/hero-combined.jpg";
 import { countries } from "@/data/countryData";
 import { blogPosts } from "@/data/blogData";
 import { useRef, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -300,7 +301,15 @@ const HomePage = () => {
                 Leaving the US on H-1B? Applying from India? Studying, working, or bringing family — one RCIC-led team covers every pathway to Canada.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-6" initial="hidden" animate="visible" variants={fadeUp} custom={3}>
-                <Link to="/contact">
+                <Link
+                  to="/contact"
+                  onClick={() =>
+                    trackEvent("cta_click", {
+                      event_category: "CTA",
+                      event_label: "Hero — Get Free Assessment",
+                    })
+                  }
+                >
                   <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
                     🚀 Get FREE Assessment <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -720,7 +729,15 @@ const HomePage = () => {
               Book a free 15-minute assessment with an RCIC. We'll map your fastest pathway — no commitment, no pressure.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link to="/contact">
+              <Link
+                to="/contact"
+                onClick={() =>
+                  trackEvent("cta_click", {
+                    event_category: "CTA",
+                    event_label: "Bottom CTA — Book Free Assessment",
+                  })
+                }
+              >
                 <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold text-lg px-8 py-6 hover:scale-105 transition-transform">
                   🚀 Book Free Assessment <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

@@ -387,6 +387,78 @@ export const nocData: NOCEntry[] = [
     description:
       "Designs and develops processes for manufacturing chemicals, petroleum products, and other materials.",
   },
+  {
+    code: "21311",
+    title: "Computer Engineer",
+    teer: 1,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Hardware Engineer", "Embedded Systems Engineer", "FPGA Engineer"],
+    salaryRange: "$85,000 – $135,000",
+    topProvinces: ["Ontario", "British Columbia", "Quebec"],
+    description:
+      "Designs computer hardware and embedded systems. STEM category Express Entry eligible.",
+  },
+  {
+    code: "21390",
+    title: "Aerospace Engineer",
+    teer: 1,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Avionics Engineer", "Aircraft Engineer"],
+    salaryRange: "$80,000 – $135,000",
+    topProvinces: ["Quebec", "Ontario", "Manitoba"],
+    description:
+      "Designs aircraft, spacecraft, and related systems. Strong demand in Montreal aerospace cluster.",
+  },
+  {
+    code: "21331",
+    title: "Industrial / Manufacturing Engineer",
+    teer: 1,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Production Engineer", "Process Engineer", "Quality Engineer"],
+    salaryRange: "$72,000 – $115,000",
+    topProvinces: ["Ontario", "Quebec", "Alberta"],
+    description:
+      "Optimizes production processes and systems. STEM Express Entry eligible.",
+  },
+  {
+    code: "21332",
+    title: "Mining Engineer",
+    teer: 1,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Geological Engineer", "Metallurgical Engineer"],
+    salaryRange: "$90,000 – $150,000",
+    topProvinces: ["British Columbia", "Ontario", "Quebec", "Saskatchewan"],
+    description:
+      "Plans and oversees mining operations. STEM category eligible.",
+  },
+  {
+    code: "22301",
+    title: "Mechanical Engineering Technologist",
+    teer: 2,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["CAD Technician", "Mechanical Drafter", "Design Technician"],
+    salaryRange: "$55,000 – $85,000",
+    topProvinces: ["Ontario", "Alberta", "Quebec"],
+    description:
+      "Provides technical support to mechanical engineers and operates CAD software.",
+  },
+  {
+    code: "22300",
+    title: "Civil Engineering Technologist",
+    teer: 2,
+    category: "Engineering",
+    eeEligible: true,
+    altTitles: ["Construction Technologist", "Land Surveyor Tech"],
+    salaryRange: "$55,000 – $85,000",
+    topProvinces: ["Ontario", "Alberta", "British Columbia"],
+    description:
+      "Assists civil engineers in design, construction, inspection, and surveying.",
+  },
 
   // ── BUSINESS & FINANCE ───────────────────────────────────────────────────
   {
@@ -424,6 +496,66 @@ export const nocData: NOCEntry[] = [
     topProvinces: ["Ontario", "British Columbia", "Alberta"],
     description:
       "Plans, organizes, and directs human resources activities within an organization.",
+  },
+  {
+    code: "11200",
+    title: "Human Resources Professional",
+    teer: 1,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["HR Generalist", "Recruiter", "Talent Acquisition Specialist", "HR Business Partner"],
+    salaryRange: "$60,000 – $95,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Recruits, hires, and supports employees. CHRP designation valued.",
+  },
+  {
+    code: "11202",
+    title: "Marketing & Advertising Professional",
+    teer: 1,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["Digital Marketing Manager", "Brand Manager", "SEO Specialist", "Growth Marketer"],
+    salaryRange: "$60,000 – $115,000",
+    topProvinces: ["Ontario", "British Columbia", "Quebec"],
+    description:
+      "Plans and executes marketing campaigns. Strong demand in tech and retail.",
+  },
+  {
+    code: "13110",
+    title: "Administrative Assistant",
+    teer: 3,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["Executive Assistant", "Office Administrator", "Office Coordinator"],
+    salaryRange: "$40,000 – $65,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Performs administrative duties and provides support to managers and teams.",
+  },
+  {
+    code: "60020",
+    title: "Restaurant & Food Service Manager",
+    teer: 0,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["Restaurant Manager", "Food Service Supervisor", "Hospitality Manager"],
+    salaryRange: "$50,000 – $80,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Plans, organizes, and directs the operations of restaurants and food service establishments.",
+  },
+  {
+    code: "60030",
+    title: "Retail & Wholesale Trade Manager",
+    teer: 0,
+    category: "Business & Finance",
+    eeEligible: true,
+    altTitles: ["Store Manager", "Retail Operations Manager", "District Manager"],
+    salaryRange: "$55,000 – $95,000",
+    topProvinces: ["Ontario", "British Columbia", "Alberta"],
+    description:
+      "Manages day-to-day operations of retail or wholesale establishments.",
   },
 
   // ── TRADES & SKILLED ─────────────────────────────────────────────────────

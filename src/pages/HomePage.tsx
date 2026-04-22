@@ -466,6 +466,14 @@ const HomePage = () => {
       </section>
 
       {/* Live Express Entry draw ticker */}
+      <div className="bg-background pt-4 px-4">
+        <div className="container-narrow mx-auto">
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-success">
+            <Activity className="h-3 w-3 animate-pulse" aria-hidden="true" />
+            Live data — updated with every new draw
+          </span>
+        </div>
+      </div>
       <LiveExpressEntry />
 
       {/* 3-card live data block */}

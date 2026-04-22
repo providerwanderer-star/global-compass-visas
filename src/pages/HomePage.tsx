@@ -305,13 +305,7 @@ const HomePage = () => {
               >
                 Leaving the US on H-1B? Applying from India? Studying, working, or bringing family — one RCIC-led team covers every pathway to Canada.
               </motion.p>
-              <motion.p
-                className="text-base text-muted-foreground/80 mb-8 max-w-xl"
-                initial="hidden" animate="visible" variants={fadeUp} custom={3}
-              >
-                🇨🇦 Canada-first &nbsp;•&nbsp; Also: 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — 98% success rate, 15,000+ visas processed.
-              </motion.p>
-              <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
+              <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-6" initial="hidden" animate="visible" variants={fadeUp} custom={3}>
                 <Link to="/contact">
                   <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
                     🚀 Get FREE Assessment <ArrowRight className="ml-2 h-5 w-5" />
@@ -322,6 +316,56 @@ const HomePage = () => {
                     Explore Pathways
                   </Button>
                 </Link>
+              </motion.div>
+              {/* Quick Situation Picker */}
+              <motion.div
+                className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-4 md:p-5 shadow-sm"
+                initial="hidden" animate="visible" variants={fadeUp} custom={4}
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+                  What describes you best?
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: "🇺🇸 On H-1B / US visa", href: "/immigration/canada" },
+                    { label: "🇮🇳 Applying from India", href: "/india/canada-pr-india" },
+                    { label: "🎓 Student → PR path", href: "/services/student-visa" },
+                    { label: "👨‍👩‍👧 Family sponsorship", href: "/services/family-sponsorship" },
+                    { label: "💼 Have a job offer", href: "/services/lmia-assistance" },
+                    { label: "🤔 Not sure yet", href: "/quiz" },
+                  ].map((chip) => (
+                    <Link
+                      key={chip.label}
+                      to={chip.href}
+                      className="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full border border-border bg-background hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors"
+                    >
+                      {chip.label}
+                    </Link>
+                  ))}
+                </div>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    navigate(
+                      jobQuery.trim()
+                        ? `/noc-finder?q=${encodeURIComponent(jobQuery.trim())}`
+                        : "/noc-finder"
+                    );
+                  }}
+                  className="mt-4 flex gap-2"
+                >
+                  <Input
+                    type="search"
+                    value={jobQuery}
+                    onChange={(e) => setJobQuery(e.target.value)}
+                    placeholder="Search your job, NOC code, or city — e.g. Software Engineer, 21232, Toronto"
+                    className="flex-1"
+                    aria-label="Search jobs and NOC codes"
+                  />
+                  <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+                    <Search className="h-4 w-4 mr-1.5" /> Search
+                  </Button>
+                </form>
               </motion.div>
               <motion.div className="flex items-center gap-6 mt-6" initial="hidden" animate="visible" variants={fadeUp} custom={5}>
                 <div className="flex items-center gap-1.5">

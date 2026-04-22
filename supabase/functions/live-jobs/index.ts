@@ -1,8 +1,9 @@
 /**
  * live-jobs edge function
- * Returns live job listings for a given query, sourced from Canada's Job Bank
- * (jobbank.gc.ca) via Firecrawl JSON extraction (the page is JSF/PrimeFaces
- * rendered, so a static fetch + regex no longer works). Cached 1h at the edge.
+ * Returns live job listings for a given query, sourced from LinkedIn's public
+ * guest jobs endpoint (no auth required). Filtered to Canada. Cached 1h.
+ * Job Bank's site is now JSF/PrimeFaces rendered with no public feed, so
+ * LinkedIn's guest API is the most reliable free source for live Canadian jobs.
  *
  * Request:  POST { query: string, location?: string, limit?: number }
  * Response: { source, fetchedAt, jobs: [{ title, company, location, url, postedAt }] }
@@ -23,62 +24,60 @@ interface JobOut {
   postedAt?: string;
 }
 
-const FIRECRAWL_V2 = "https://api.firecrawl.dev/v2";
+function decodeHtml(s: string): string {
+  return s
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .trim();
+}
 
-async function fetchJobBankViaFirecrawl(
+async function fetchLinkedInJobs(
   query: string,
   limit: number,
-  apiKey: string,
 ): Promise<JobOut[]> {
-  const target = `https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=${encodeURIComponent(
-    query,
-  )}&locationstring=Canada&sort=D`;
+  const url =
+    `https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search` +
+    `?keywords=${encodeURIComponent(query)}&location=Canada&start=0`;
 
-  const res = await fetch(`${FIRECRAWL_V2}/scrape`, {
-    method: "POST",
+  const res = await fetch(url, {
     headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
+      "User-Agent":
+        "Mozilla/5.0 (compatible; 4AcesVisaJobsBot/1.0; +https://www.4acesvisa.com)",
+      Accept: "text/html",
     },
-    body: JSON.stringify({
-      url: target,
-      onlyMainContent: true,
-      waitFor: 2500, // give JSF time to hydrate the results list
-      formats: [
-        {
-          type: "json",
-          prompt: `Extract the first ${limit} job postings from this Canada Job Bank search results page. For each job return: title (job title), company (employer name, use "—" if not visible), location (city + province), url (the absolute https://www.jobbank.gc.ca/jobsearch/jobposting/... link), postedAt (the posting date as shown). Return as { jobs: [...] }. Only include real job postings, ignore ads, filters, and navigation.`,
-        },
-      ],
-    }),
   });
+  if (!res.ok) throw new Error(`LinkedIn ${res.status}`);
+  const html = await res.text();
 
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    throw new Error(`Firecrawl ${res.status}: ${text.slice(0, 200)}`);
+  const jobs: JobOut[] = [];
+  // Each card is wrapped in <div class="base-card ... job-search-card" ...>
+  const cardRe = /<div[^>]*class="[^"]*job-search-card[^"]*"[\s\S]*?<\/div>\s*<\/div>\s*<\/li>/g;
+  let m: RegExpExecArray | null;
+  while ((m = cardRe.exec(html)) && jobs.length < limit) {
+    const card = m[0];
+    const titleMatch = card.match(/<h3[^>]*class="[^"]*base-search-card__title[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/h3>/i);
+    const companyMatch = card.match(/<h4[^>]*class="[^"]*base-search-card__subtitle[^"]*"[^>]*>[\s\S]*?<a[^>]*>\s*([\s\S]*?)\s*<\/a>/i)
+      || card.match(/<h4[^>]*class="[^"]*base-search-card__subtitle[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/h4>/i);
+    const locationMatch = card.match(/<span[^>]*class="[^"]*job-search-card__location[^"]*"[^>]*>\s*([\s\S]*?)\s*<\/span>/i);
+    const linkMatch = card.match(/<a[^>]*class="base-card__full-link[^"]*"[^>]*href="([^"]+)"/i);
+    const dateMatch = card.match(/<time[^>]*datetime="([^"]+)"/i);
+
+    if (titleMatch && linkMatch) {
+      const cleanUrl = decodeHtml(linkMatch[1]).split("?")[0];
+      jobs.push({
+        title: decodeHtml(titleMatch[1].replace(/<[^>]+>/g, "")),
+        company: decodeHtml((companyMatch?.[1] ?? "—").replace(/<[^>]+>/g, "")) || "—",
+        location: decodeHtml((locationMatch?.[1] ?? "Canada").replace(/<[^>]+>/g, "")),
+        url: cleanUrl,
+        postedAt: dateMatch?.[1],
+      });
+    }
   }
-  const data = await res.json();
-  // Firecrawl v2 returns either { data: { json: {...} } } or { json: {...} }
-  const extracted =
-    data?.data?.json ?? data?.json ?? data?.data ?? {};
-  const rawJobs: any[] = Array.isArray(extracted?.jobs)
-    ? extracted.jobs
-    : Array.isArray(extracted)
-      ? extracted
-      : [];
-
-  return rawJobs
-    .filter((j) => j && j.title && j.url)
-    .slice(0, limit)
-    .map((j): JobOut => ({
-      title: String(j.title).trim(),
-      company: String(j.company ?? "—").trim() || "—",
-      location: String(j.location ?? "Canada").trim() || "Canada",
-      url: String(j.url).startsWith("http")
-        ? String(j.url)
-        : `https://www.jobbank.gc.ca${String(j.url)}`,
-      postedAt: j.postedAt ? String(j.postedAt).trim() : undefined,
-    }));
+  return jobs;
 }
 
 Deno.serve(async (req) => {
@@ -97,30 +96,14 @@ Deno.serve(async (req) => {
       });
     }
 
-    const apiKey = Deno.env.get("FIRECRAWL_API_KEY");
-    if (!apiKey) {
-      return new Response(
-        JSON.stringify({
-          source: "Job Bank Canada (unconfigured)",
-          fetchedAt: new Date().toISOString(),
-          jobs: [],
-          error: "FIRECRAWL_API_KEY not configured",
-        }),
-        {
-          status: 200,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        },
-      );
-    }
-
     let jobs: JobOut[] = [];
-    let source = "Job Bank Canada";
+    let source = "LinkedIn (Canada)";
     try {
-      jobs = await fetchJobBankViaFirecrawl(query, limit, apiKey);
+      jobs = await fetchLinkedInJobs(query, limit);
     } catch (e) {
-      console.error("Job Bank fetch failed", e);
+      console.error("LinkedIn fetch failed", e);
       jobs = [];
-      source = "Job Bank Canada (unavailable)";
+      source = "LinkedIn (unavailable)";
     }
 
     return new Response(

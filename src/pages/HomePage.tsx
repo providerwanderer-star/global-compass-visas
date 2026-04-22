@@ -8,17 +8,11 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
 import LiveExpressEntry from "@/components/LiveExpressEntry";
 import LiveDataStrip from "@/components/LiveDataStrip";
-import HighDemandJobsHome from "@/components/HighDemandJobsHome";
-import LiveJobsHighlightStrip from "@/components/LiveJobsHighlightStrip";
-import NewsStripHome from "@/components/NewsStripHome";
 import GlobalImmigrationSearch from "@/components/GlobalImmigrationSearch";
-import { originCountries } from "@/data/geoOriginData";
-import { crsBands } from "@/data/crsBandData";
 import heroCombined from "@/assets/hero-combined.jpg";
 import { countries } from "@/data/countryData";
 import { blogPosts } from "@/data/blogData";
@@ -548,88 +542,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* GEO programmatic — Canada PR by origin & CRS band */}
-      <section className="section-padding bg-card border-b border-border">
-        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-6">
-            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
-              📍 Canada PR — Tailored Guides
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
-              Country-specific & score-specific PR guides
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Pathways, costs and timelines tailored to where you live and your CRS score.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div>
-              <h3 className="font-display text-lg font-bold text-foreground mb-3">
-                Canada PR by country of origin
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {originCountries.map((o) => (
-                  <Link
-                    key={o.slug}
-                    to={`/canada-pr-from/${o.slug}`}
-                    className="text-sm font-medium px-3 py-1.5 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors"
-                  >
-                    {o.flag} From {o.country}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="font-display text-lg font-bold text-foreground mb-3">
-                Canada PR by CRS score
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {crsBands.map((b) => (
-                  <Link
-                    key={b.slug}
-                    to={`/canada-pr/crs/${b.slug}`}
-                    className="text-sm font-medium px-3 py-1.5 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors"
-                  >
-                    CRS {b.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Eligibility Decision Engine — quick teaser */}
-      <section className="section-padding section-light">
-        <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-8">
-            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
-              ⚡ 60-Second Eligibility Check
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Find Your Best Pathway — Free
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Tell us about your profile and our RCIC-led team will return your personalized eligibility report within 24 hours — Express Entry, PNP, study or work pathway.
-            </p>
-          </AnimatedSection>
-          <div className="max-w-3xl mx-auto bg-card rounded-2xl border border-border p-6 md:p-8 shadow-elevated">
-            <EligibilityForm sourcePage="home-eligibility-teaser" />
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
-              <span className="inline-flex items-center gap-1"><Shield className="h-3.5 w-3.5 text-success" /> 100% confidential</span>
-              <span className="inline-flex items-center gap-1"><BadgeCheck className="h-3.5 w-3.5 text-success" /> RCIC-regulated</span>
-              <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5 text-success" /> 24-hour response</span>
-            </div>
-            <p className="text-center mt-4 text-sm">
-              Prefer the full quiz?{" "}
-              <Link to="/quiz" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">
-                Take the 2-minute Pathway Quiz →
-              </Link>
-            </p>
-          </div>
-        </div>
-      </section>
       {/* Free Tools strip — moved above services */}
       <section className="py-10 px-4 bg-gradient-to-br from-primary/5 to-accent/5 border-y border-border">
         <div className="container-narrow mx-auto">
@@ -795,15 +707,6 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* High-Demand Jobs → PR Pathway Engine */}
-      <HighDemandJobsHome />
-
-      {/* Live Job Signals — ticker strip */}
-      <LiveJobsHighlightStrip />
-
-      {/* Immigration News strip */}
-      <NewsStripHome />
 
       {/* Final CTA */}
       <section className="relative section-padding bg-gradient-to-br from-primary via-primary to-primary/90 overflow-hidden">

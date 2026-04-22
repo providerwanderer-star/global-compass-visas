@@ -6,6 +6,7 @@ import { expressEntryDraws, drawCategories, avgCRS } from "@/data/expressEntryDr
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
+import FreshnessBanner from "@/components/FreshnessBanner";
 
 const categoryColors: Record<string, string> = {
   General:     "bg-blue-100 text-blue-800 border-blue-200",
@@ -119,6 +120,7 @@ const DrawHistoryPage = () => {
       {/* ── DOES MY SCORE QUALIFY? WIDGET ── */}
       <section className="py-8 section-soft border-b border-border">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
+          <FreshnessBanner topic="express-entry" className="mb-6" />
           <div className="bg-card rounded-2xl border-2 border-border p-6 max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
               <TrendingUp className="h-5 w-5 text-primary" />

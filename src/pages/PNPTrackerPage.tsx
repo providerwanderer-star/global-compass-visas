@@ -6,6 +6,7 @@ import { pnpDraws, pnpProvinces } from "@/data/pnpDraws";
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
+import FreshnessBanner from "@/components/FreshnessBanner";
 
 const provinceColors: Record<string, string> = {
   ON: "bg-blue-100 text-blue-800 border-blue-200",
@@ -112,6 +113,7 @@ const PNPTrackerPage = () => {
       {/* ── PNP + EE ADVANTAGE CALLOUT ── */}
       <section className="py-8 section-soft border-b border-border">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
+          <FreshnessBanner topic="pnp" className="mb-6" />
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-card rounded-xl border border-border p-5 text-center">
               <div className="text-3xl font-bold text-primary mb-1">+600</div>

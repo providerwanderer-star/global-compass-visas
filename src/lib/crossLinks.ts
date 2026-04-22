@@ -22,7 +22,7 @@ const SETTLEMENT_DEFAULT_SLUGS = [
 function nocToCRSBand(teer: number): string {
   // Simple heuristic — TEER 0/1 candidates compete in higher draws,
   // TEER 2/3 in mid bands, TEER 4/5 are rare in EE.
-  if (teer <= 1) return "450-500";
+  if (teer <= 1) return "450-plus";
   if (teer === 2) return "400-450";
   return "350-400";
 }
@@ -79,7 +79,7 @@ export function linksForOrigin(originSlug: string): RelatedLink[] {
 
   // Pair each origin to a sensible CRS band based on first listed pathway.
   const defaultBand =
-    crsBands.find((b) => b.slug === "450-500") ?? crsBands[0];
+    crsBands.find((b) => b.slug === "450-plus") ?? crsBands[0];
 
   const out: RelatedLink[] = [
     {

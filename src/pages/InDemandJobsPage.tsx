@@ -116,13 +116,22 @@ const InDemandJobsPage = () => {
     <div>
       <Helmet>
         <title>In-Demand Jobs in Canada for PR 2026 | NOC + Pathway Engine | 4 Aces Visa</title>
-        <meta name="description" content="16 in-demand Canadian jobs ranked by PR pathway — NOC code, TEER level, salary, latest CRS cut-offs and live job listings. Updated April 2026." />
+        <meta name="description" content="Canada's most in-demand jobs for immigration in 2026. Browse NOC codes, TEER levels, and provincial demand for healthcare, trades, tech, and more." />
         <link rel="canonical" href="https://www.4acesvisa.com/in-demand-jobs" />
-        <meta property="og:title" content="In-Demand Jobs in Canada for PR — Pathway Engine" />
-        <meta property="og:description" content="See which jobs unlock the fastest Canadian PR pathway. Filter by industry, province, TEER and PR program." />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4 Aces Visa" />
+        <meta property="og:title" content="In-Demand Jobs in Canada for PR 2026 | NOC + Pathway Engine | 4 Aces Visa" />
+        <meta property="og:description" content="Canada's most in-demand jobs for immigration in 2026. Browse NOC codes, TEER levels, and provincial demand for healthcare, trades, tech, and more." />
         <meta property="og:url" content="https://www.4acesvisa.com/in-demand-jobs" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(itemListLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLD)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"In-Demand Jobs","item":"https://www.4acesvisa.com/in-demand-jobs"}]})}</script>
       </Helmet>
 
       {/* HERO */}

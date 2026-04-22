@@ -36,15 +36,19 @@ const BlogListPage = () => {
     <div>
       <Helmet>
         <title>Immigration Blog & Guides | 4 Aces Visa</title>
-        <meta name="description" content="Expert immigration articles, guides, and updates for Canada, Australia, Germany, and UK immigration. Tips on Express Entry, study visas, work permits, and more." />
+        <meta name="description" content="Canada immigration news, guides, and tips from RCIC-regulated consultants at 4 Aces Visa. Express Entry draws, PNP updates, and PR strategies." />
         <link rel="canonical" href="https://www.4acesvisa.com/blog" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4 Aces Visa" />
         <meta property="og:title" content="Immigration Blog & Guides | 4 Aces Visa" />
-        <meta property="og:description" content="Expert immigration articles, guides, and updates for Canada, Australia, Germany, and UK." />
+        <meta property="og:description" content="Canada immigration news, guides, and tips from RCIC-regulated consultants at 4 Aces Visa. Express Entry draws, PNP updates, and PR strategies." />
         <meta property="og:url" content="https://www.4acesvisa.com/blog" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Immigration Blog & Guides | 4 Aces Visa" />
-        <meta name="twitter:description" content="Expert immigration articles and guides for Canada, Australia, Germany, and UK." />
+        <meta name="twitter:site" content="@4acesvisa" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -64,6 +68,7 @@ const BlogListPage = () => {
             }
           })}
         </script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.4acesvisa.com/blog"}]})}</script>
       </Helmet>
 
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">

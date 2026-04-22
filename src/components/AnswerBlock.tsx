@@ -34,7 +34,7 @@ const AnswerBlock = ({
           {whoFor && (
             <div className="flex items-start gap-2">
               <CheckCircle2
-                className="h-5 w-5 text-green-600 shrink-0 mt-0.5"
+                className="h-5 w-5 text-primary shrink-0 mt-0.5"
                 aria-hidden="true"
               />
               <div>

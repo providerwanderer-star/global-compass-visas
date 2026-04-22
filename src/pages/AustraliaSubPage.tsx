@@ -1,8 +1,63 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CheckCircle, ArrowRight, Clock, DollarSign, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import SeoSchema from "@/components/SeoSchema";
+
+type Variant = {
+  title: string;
+  h1: string;
+  description: string;
+  canonical: string;
+  intro: string;
+  breadcrumbName: string;
+};
+
+const VARIANTS: Record<string, Variant> = {
+  "/australia/skilled-migration": {
+    title: "Australia Skilled Migration 2026 | Subclass 189, 190, 491 Guide — 4 Aces Visa",
+    h1: "Australia Skilled Migration 2026",
+    description:
+      "Complete guide to Australia skilled migration in 2026. Compare Subclass 189, 190, and 491 visas. Points test, skills assessment, processing times, and PR pathway.",
+    canonical: "https://www.4acesvisa.com/australia/skilled-migration",
+    intro:
+      "A points-based immigration system with three main visa subclasses — 189, 190, and 491. Minimum 65 points required; competitive scores are 80–95+. No job offer needed.",
+    breadcrumbName: "Skilled Migration",
+  },
+  "/australia/subclass-189": {
+    title: "Australia Subclass 189 Visa 2026 — Skilled Independent PR Guide | 4 Aces Visa",
+    h1: "Australia Subclass 189 — Skilled Independent Visa",
+    description:
+      "Subclass 189 is Australia's permanent independent skilled visa. No state nomination, no job offer. 90+ points competitive. Processing 12–18 months. Full eligibility, points test, and 2026 invitation rounds.",
+    canonical: "https://www.4acesvisa.com/australia/subclass-189",
+    intro:
+      "The Skilled Independent visa — permanent residence on day 1 with no state nomination and no job offer. The most competitive Australian skilled stream — invitations issue at 90+ points in 2026.",
+    breadcrumbName: "Subclass 189",
+  },
+  "/australia/subclass-190": {
+    title: "Australia Subclass 190 Visa 2026 — State Nominated PR | 4 Aces Visa",
+    h1: "Australia Subclass 190 — State Nominated Visa",
+    description:
+      "Subclass 190 is Australia's state-nominated permanent visa. +5 points from state nomination, 2-year commitment to nominating state, 9–15 month processing. Compare NSW, VIC, SA, TAS occupation lists.",
+    canonical: "https://www.4acesvisa.com/australia/subclass-190",
+    intro:
+      "State-nominated permanent visa — gain a +5-point boost from a participating state or territory. Permanent residence from day 1, 2-year commitment to live and work in the nominating state.",
+    breadcrumbName: "Subclass 190",
+  },
+  "/australia/subclass-491": {
+    title: "Australia Subclass 491 Visa 2026 — Skilled Regional Pathway | 4 Aces Visa",
+    h1: "Australia Subclass 491 — Skilled Work Regional",
+    description:
+      "Subclass 491 is Australia's regional skilled visa. +15 points from regional nomination — the biggest boost available. 5-year provisional visa, pathway to permanent Subclass 191 after 3 years living regionally.",
+    canonical: "https://www.4acesvisa.com/australia/subclass-491",
+    intro:
+      "Regional skilled visa offering the largest points boost (+15) of any Australian stream. Provisional 5-year visa with a clear pathway to permanent Subclass 191 after 3 years in a designated regional area.",
+    breadcrumbName: "Subclass 491",
+  },
+};
+
+const DEFAULT_VARIANT = VARIANTS["/australia/skilled-migration"];
 
 const subclasses = [
   {
@@ -100,15 +155,23 @@ export default function AustraliaSubPage() {
       "acceptedAnswer": { "@type": "Answer", "text": f.a }
     }))
   };
+  const location = useLocation();
+  const variant = VARIANTS[location.pathname] ?? DEFAULT_VARIANT;
 
   return (
     <>
       <Helmet>
-        <title>Australia Skilled Migration 2026 | Subclass 189, 190, 491 Guide — 4 Aces Visa</title>
-        <meta name="description" content="Complete guide to Australia skilled migration in 2026. Compare Subclass 189, 190, and 491 visas. Points test, skills assessment, processing times, and PR pathway." />
-        <link rel="canonical" href="https://www.4acesvisa.com/australia/skilled-migration" />
+        <title>{variant.title}</title>
+        <meta name="description" content={variant.description} />
+        <link rel="canonical" href={variant.canonical} />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
+      <SeoSchema
+        breadcrumbs={[
+          { name: "Australia Immigration", url: "/australia/skilled-migration" },
+          { name: variant.breadcrumbName, url: location.pathname },
+        ]}
+      />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-yellow-500 via-yellow-600 to-amber-700 text-white py-20 px-4">
@@ -116,10 +179,10 @@ export default function AustraliaSubPage() {
           <AnimatedSection>
             <span className="text-5xl mb-4 block">🇦🇺</span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Australia Skilled Migration 2026
+              {variant.h1}
             </h1>
             <p className="text-yellow-100 text-lg max-w-3xl mx-auto mb-8">
-              A points-based immigration system with three main visa subclasses — 189, 190, and 491. Minimum 65 points required; competitive scores are 80–95+. No job offer needed.
+              {variant.intro}
             </p>
             <div className="flex flex-wrap gap-6 justify-center text-center mb-8">
               {[

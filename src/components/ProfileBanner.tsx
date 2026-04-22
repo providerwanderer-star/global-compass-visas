@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Sparkles, RefreshCw, ArrowRight, X } from "lucide-react";
 import { useState } from "react";
 import { useUserProfile } from "@/hooks/useUserProfile";
-import { expressEntryDraws } from "@/data/expressEntryDraws";
+import { latestCoreDraw } from "@/data/expressEntryDraws";
 
 /**
  * ProfileBanner — personalized welcome strip.
@@ -16,8 +16,8 @@ const ProfileBanner = () => {
   // Only show if we know something about the user
   if (!profile.crsScore && !profile.origin && !profile.intent && (profile.visitCount ?? 0) < 2) return null;
 
-  const latestGeneral = expressEntryDraws.find((d) => d.category === "General");
-  const cutoff = latestGeneral?.crsMin ?? 510;
+  const latestCore = latestCoreDraw();
+  const cutoff = latestCore?.crsMin ?? 510;
   const userScore = profile.crsScore;
   const delta = userScore ? userScore - cutoff : null;
 

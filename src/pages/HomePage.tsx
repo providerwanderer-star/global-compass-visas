@@ -676,48 +676,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Life in Canada — Visual Showcase */}
-      <section className="section-padding section-soft">
-        <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-8">
-            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
-              Your Future Awaits
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              This Could Be Your Story
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Every year, thousands of immigrants build new lives abroad. Here's what your journey could look like.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { img: studentsImg, alt: "International students on a university campus abroad", tag: "Study Abroad", title: "World-Class Education", desc: "Join thousands of international students at top universities worldwide" },
-              { img: familyImg, alt: "Family reuniting at airport", tag: "Family Sponsorship", title: "Reunite with Family", desc: "Bring your loved ones closer through family sponsorship programs" },
-              { img: newLifeImg, alt: "Young couple with house keys in new neighborhood", tag: "Permanent Residency", title: "Build Your New Life", desc: "From PR to your first home — we help you settle into life abroad" },
-              { img: consultationImg, alt: "Immigration consultant meeting with clients", tag: "Expert Guidance", title: "Personal Consultation", desc: "One-on-one guidance from consultants who've been through the process" },
-            ].map((item, i) => (
-              <motion.div
-                key={item.tag}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="relative group overflow-hidden rounded-2xl cursor-pointer"
-              >
-                <img src={item.img} alt={item.alt} loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 transform group-hover:-translate-y-1 transition-transform duration-300">
-                  <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">{item.tag}</span>
-                  <h3 className="font-display text-lg font-bold text-white">{item.title}</h3>
-                  <p className="text-white/80 text-sm mt-1">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">

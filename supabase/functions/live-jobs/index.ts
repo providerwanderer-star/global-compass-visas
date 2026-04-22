@@ -24,6 +24,8 @@ interface JobOut {
   postedAt?: string;
 }
 
+const FIRECRAWL_V2 = "https://api.firecrawl.dev/v2";
+
 function decodeHtml(s: string): string {
   return s
     .replace(/&amp;/g, "&")
@@ -83,6 +85,60 @@ async function fetchLinkedInJobs(
   return jobs;
 }
 
+/**
+ * Fallback when LinkedIn rate-limits: use Firecrawl web search to find
+ * fresh Canadian job postings across multiple sites. Returns links to real
+ * postings on indeed.ca, ca.linkedin.com, jobbank.gc.ca, glassdoor.ca etc.
+ */
+async function fetchJobsViaFirecrawlSearch(
+  query: string,
+  limit: number,
+  apiKey: string,
+): Promise<JobOut[]> {
+  const res = await fetch(`${FIRECRAWL_V2}/search`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: `"${query}" jobs Canada hiring (site:ca.indeed.com OR site:ca.linkedin.com OR site:jobbank.gc.ca OR site:glassdoor.ca OR site:ziprecruiter.ca)`,
+      limit: Math.min(limit + 2, 10),
+      country: "ca",
+      lang: "en",
+      tbs: "qdr:m", // last month
+    }),
+  });
+  if (!res.ok) throw new Error(`Firecrawl search ${res.status}`);
+  const data = await res.json();
+  const results: any[] =
+    data?.data?.web ?? data?.web ?? data?.data ?? [];
+
+  const inferCompany = (url: string, title: string): string => {
+    if (url.includes("ca.indeed.com")) return "via Indeed";
+    if (url.includes("linkedin.com")) {
+      // LinkedIn titles often contain "...at Company"
+      const m = title.match(/\bat\s+(.+?)(?:\s+[-|·]\s+|$)/i);
+      return m ? m[1].trim() : "via LinkedIn";
+    }
+    if (url.includes("jobbank.gc.ca")) return "via Job Bank";
+    if (url.includes("glassdoor")) return "via Glassdoor";
+    if (url.includes("ziprecruiter")) return "via ZipRecruiter";
+    try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return "—"; }
+  };
+
+  return results
+    .filter((r) => r?.url && r?.title)
+    .slice(0, limit)
+    .map((r): JobOut => ({
+      title: String(r.title).replace(/\s*[-|·]\s*(Indeed|LinkedIn|Job Bank|Glassdoor|ZipRecruiter).*$/i, "").trim(),
+      company: inferCompany(String(r.url), String(r.title)),
+      location: "Canada",
+      url: String(r.url),
+      postedAt: r.publishedDate || r.date,
+    }));
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -103,10 +159,23 @@ Deno.serve(async (req) => {
     let source = "LinkedIn (Canada)";
     try {
       jobs = await fetchLinkedInJobs(query, limit);
+      if (jobs.length === 0) throw new Error("No jobs returned by LinkedIn");
     } catch (e) {
-      console.error("LinkedIn fetch failed", e);
-      jobs = [];
-      source = "LinkedIn (unavailable)";
+      console.warn("LinkedIn fetch failed, falling back to Firecrawl search:", e);
+      const apiKey = Deno.env.get("FIRECRAWL_API_KEY");
+      if (apiKey) {
+        try {
+          jobs = await fetchJobsViaFirecrawlSearch(query, limit, apiKey);
+          source = "Web search (Indeed, LinkedIn, Job Bank, Glassdoor)";
+        } catch (e2) {
+          console.error("Firecrawl fallback also failed:", e2);
+          jobs = [];
+          source = "Live jobs unavailable";
+        }
+      } else {
+        jobs = [];
+        source = "Live jobs unavailable";
+      }
     }
 
     return new Response(

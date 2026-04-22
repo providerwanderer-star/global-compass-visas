@@ -8,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/CountdownTimer";
 import EligibilityForm from "@/components/EligibilityForm";
+import AnswerBlock from "@/components/AnswerBlock";
 
 // Next anticipated Express Entry draw — update this regularly
 const NEXT_DRAW_DATE = new Date("2026-04-22T12:00:00-04:00");
@@ -191,6 +192,16 @@ const ExpressEntryLandingPage = () => {
             </Button>
           </a>
         </div>
+      </section>
+
+      {/* AEO answer block */}
+      <section className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+        <AnswerBlock
+          answer="Canada Express Entry is a points-based federal PR system that processes applications in 6 months. Eligible candidates create an online profile, receive a CRS score, and wait for an Invitation to Apply (ITA) in bi-weekly draws. Recent general draw cutoffs: 430–490."
+          whoFor="Skilled workers aged 18–45 with at least one year of NOC TEER 0/1/2/3 work experience, CLB 7+ English, and a post-secondary education credential."
+          whoNotFor="Applicants without skilled work experience, with language scores below CLB 7, or with no intent to settle outside Quebec."
+          lastUpdated="April 2026"
+        />
       </section>
 
       {/* Recent Draws Table */}

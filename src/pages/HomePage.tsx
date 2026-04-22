@@ -17,6 +17,8 @@ import HighDemandJobsHome from "@/components/HighDemandJobsHome";
 import LiveJobsHighlightStrip from "@/components/LiveJobsHighlightStrip";
 import NewsStripHome from "@/components/NewsStripHome";
 import GlobalImmigrationSearch from "@/components/GlobalImmigrationSearch";
+import { originCountries } from "@/data/geoOriginData";
+import { crsBands } from "@/data/crsBandData";
 import heroBg from "@/assets/hero-bg.jpg";
 import studentsImg from "@/assets/students-canada.jpg";
 import familyImg from "@/assets/family-reunion.jpg";
@@ -527,6 +529,59 @@ const HomePage = () => {
           </p>
         </div>
       </section>
+
+      {/* GEO programmatic — Canada PR by origin & CRS band */}
+      <section className="section-padding bg-card border-b border-border">
+        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              📍 Canada PR — Tailored Guides
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Country-specific & score-specific PR guides
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Pathways, costs and timelines tailored to where you live and your CRS score.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h3 className="font-display text-lg font-bold text-foreground mb-3">
+                Canada PR by country of origin
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {originCountries.map((o) => (
+                  <Link
+                    key={o.slug}
+                    to={`/canada-pr-from/${o.slug}`}
+                    className="text-sm font-medium px-3 py-1.5 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors"
+                  >
+                    {o.flag} From {o.country}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="font-display text-lg font-bold text-foreground mb-3">
+                Canada PR by CRS score
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {crsBands.map((b) => (
+                  <Link
+                    key={b.slug}
+                    to={`/canada-pr/crs/${b.slug}`}
+                    className="text-sm font-medium px-3 py-1.5 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors"
+                  >
+                    CRS {b.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Eligibility Decision Engine — quick teaser */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">

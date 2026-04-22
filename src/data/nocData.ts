@@ -808,24 +808,24 @@ export const nocData: NOCEntry[] = [
     title: "Home Child Care Provider",
     teer: 4,
     category: "Education",
-    eeEligible: true,
+    eeEligible: false,
     altTitles: ["Nanny", "Babysitter", "Live-in Caregiver"],
     salaryRange: "$32,000 – $50,000",
     topProvinces: ["Ontario", "British Columbia", "Alberta"],
     description:
-      "Provides childcare in family homes. Eligible via the dedicated Home Care Worker PR pilot.",
+      "Provides childcare in family homes. Not Express Entry eligible (TEER 4) — apply via the dedicated Home Care Worker PR pilot for direct PR.",
   },
   {
     code: "44101",
     title: "Home Support Worker / Caregiver",
     teer: 4,
     category: "Healthcare",
-    eeEligible: true,
+    eeEligible: false,
     altTitles: ["Live-in Caregiver", "Elder Care Worker", "Companion"],
     salaryRange: "$35,000 – $52,000",
     topProvinces: ["Ontario", "British Columbia", "Alberta"],
     description:
-      "Provides personal care and household help for seniors or persons with disabilities. Home Care Worker PR pilot — direct PR on landing.",
+      "Provides personal care and household help for seniors or persons with disabilities. Not Express Entry eligible (TEER 4) — apply via the Home Care Worker PR pilot for direct PR on landing.",
   },
   {
     code: "41200",

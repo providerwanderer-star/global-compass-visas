@@ -96,7 +96,7 @@ const BlogPostPage = () => {
   return (
     <div>
       <Helmet>
-        <title>{post.title} | 4 Aces Visa Blog</title>
+        <title>{`${post.title} | 4 Aces Visa Blog`}</title>
         <meta name="description" content={post.metaDescription || post.excerpt} />
         <link rel="canonical" href={`https://www.4acesvisa.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />

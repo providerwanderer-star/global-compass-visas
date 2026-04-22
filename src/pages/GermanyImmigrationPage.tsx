@@ -139,6 +139,13 @@ export default function GermanyImmigrationPage() {
         <title>{variant.title}</title>
         <meta name="description" content={variant.description} />
         <link rel="canonical" href={variant.canonical} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={variant.title} />
+        <meta property="og:description" content={variant.description} />
+        <meta property="og:url" content={variant.canonical} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={variant.title} />
+        <meta name="twitter:description" content={variant.description} />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <SeoSchema

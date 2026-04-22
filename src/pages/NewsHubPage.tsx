@@ -378,36 +378,54 @@ const FeaturedCard = ({ item }: { item: NewsItem }) => {
   );
 };
 
-const TimelineItem = ({ item }: { item: NewsItem }) => {
+const NewsCard = ({ item }: { item: NewsItem }) => {
   const meta = TYPE_META[item.type];
   const Icon = meta.icon;
   const detailHref = `/news/${buildNewsSlug(item.id, item.title)}`;
-  const Inner = (
-    <div className="bg-card border border-border rounded-xl p-4 md:p-5 hover:border-gold/60 hover:shadow-card transition-all">
-      <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-        <Badge className={`${meta.color} gap-1 text-[10px]`}><Icon className="h-3 w-3" /> {meta.label}</Badge>
-        <span className="text-[11px] text-muted-foreground">{timeAgo(item.publishedAt)}</span>
-        <span className="text-[11px] text-muted-foreground">· {item.source}</span>
-      </div>
-      <h3 className="font-display font-bold text-base md:text-lg text-foreground leading-snug group-hover:text-primary transition-colors">
-        {item.title}
-      </h3>
-      {item.summary && <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{item.summary}</p>}
-      <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary mt-2">
-        Read full update <ArrowRight className="h-3 w-3" />
-      </span>
-    </div>
-  );
+  const accentBg = meta.color.split(" ")[0];
   return (
     <motion.article
       layout
-      initial={{ opacity: 0, x: -8 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
-      className="relative pl-12 md:pl-14 pb-4 group"
+      className="group h-full"
     >
-      <div className={`absolute left-2.5 md:left-3.5 top-3 h-3 w-3 rounded-full ring-4 ring-secondary/30 ${meta.color.split(" ")[0]}`} />
-      <Link to={detailHref} className="block">{Inner}</Link>
+      <Link
+        to={detailHref}
+        className="relative h-full flex flex-col bg-card border border-border rounded-xl overflow-hidden hover:border-gold hover:shadow-elevated transition-all"
+      >
+        {/* accent stripe */}
+        <div className={`absolute left-0 top-0 bottom-0 w-1 ${accentBg}`} aria-hidden />
+
+        <div className="p-5 pl-6 flex-1 flex flex-col">
+          <div className="flex items-center gap-2 mb-2 flex-wrap">
+            <Badge className={`${meta.color} gap-1 text-[10px] py-0.5`}>
+              <Icon className="h-3 w-3" /> {meta.label}
+            </Badge>
+            <span className="text-[11px] text-muted-foreground inline-flex items-center gap-1">
+              <Clock className="h-3 w-3" /> {timeAgo(item.publishedAt)}
+            </span>
+          </div>
+
+          <h3 className="font-display font-bold text-base md:text-lg text-foreground leading-snug group-hover:text-primary transition-colors line-clamp-2">
+            {item.title}
+          </h3>
+
+          {item.summary && (
+            <p className="text-sm text-muted-foreground mt-2 line-clamp-3 flex-1">{item.summary}</p>
+          )}
+
+          <div className="mt-4 pt-3 border-t border-border/60 flex items-center justify-between">
+            <span className="text-[11px] text-muted-foreground truncate max-w-[55%]" title={item.source}>
+              {item.source}
+            </span>
+            <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary group-hover:gap-2 transition-all">
+              Read update <ArrowRight className="h-3 w-3" />
+            </span>
+          </div>
+        </div>
+      </Link>
     </motion.article>
   );
 };

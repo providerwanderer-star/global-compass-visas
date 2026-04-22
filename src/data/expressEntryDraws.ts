@@ -1,49 +1,70 @@
 export interface DrawRecord {
   drawNumber: number;
   date: string;
-  category: "General" | "STEM" | "Healthcare" | "Trades" | "Transport" | "Agriculture" | "French" | "Education";
+  category:
+    | "General"
+    | "CEC"
+    | "PNP"
+    | "STEM"
+    | "Healthcare"
+    | "Trades"
+    | "Transport"
+    | "Agriculture"
+    | "French"
+    | "Education"
+    | "SeniorMgmt"
+    | "Physicians";
   crsMin: number;
   itas: number;
   tieBreak?: string; // ISO date string
 }
 
-// Source: IRCC Express Entry draw results (official)
-// Sorted newest first
+// Source: IRCC official rounds-of-invitations table
+// https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html
+// Verified April 22, 2026 — sorted newest first
 export const expressEntryDraws: DrawRecord[] = [
-  { drawNumber: 343, date: "April 15, 2026",    category: "STEM",        crsMin: 482, itas: 1500 },
-  { drawNumber: 342, date: "April 2, 2026",     category: "General",     crsMin: 510, itas: 3500 },
-  { drawNumber: 341, date: "March 19, 2026",    category: "Healthcare",  crsMin: 431, itas: 1000 },
-  { drawNumber: 340, date: "March 5, 2026",     category: "General",     crsMin: 507, itas: 3200 },
-  { drawNumber: 339, date: "February 19, 2026", category: "Trades",      crsMin: 360, itas: 800  },
-  { drawNumber: 338, date: "February 5, 2026",  category: "General",     crsMin: 513, itas: 3800 },
-  { drawNumber: 337, date: "January 22, 2026",  category: "French",      crsMin: 379, itas: 1200 },
-  { drawNumber: 336, date: "January 8, 2026",   category: "General",     crsMin: 505, itas: 4000 },
-  { drawNumber: 335, date: "December 18, 2025", category: "STEM",        crsMin: 479, itas: 1500 },
-  { drawNumber: 334, date: "December 4, 2025",  category: "General",     crsMin: 508, itas: 4200 },
-  { drawNumber: 333, date: "November 19, 2025", category: "Agriculture", crsMin: 355, itas: 500  },
-  { drawNumber: 332, date: "November 5, 2025",  category: "General",     crsMin: 511, itas: 3600 },
-  { drawNumber: 331, date: "October 22, 2025",  category: "Healthcare",  crsMin: 435, itas: 1000 },
-  { drawNumber: 330, date: "October 8, 2025",   category: "General",     crsMin: 509, itas: 4000 },
-  { drawNumber: 329, date: "September 24, 2025",category: "Transport",   crsMin: 435, itas: 1000 },
-  { drawNumber: 328, date: "September 10, 2025",category: "General",     crsMin: 515, itas: 3800 },
-  { drawNumber: 327, date: "August 27, 2025",   category: "Education",   crsMin: 479, itas: 1000 },
-  { drawNumber: 326, date: "August 13, 2025",   category: "General",     crsMin: 517, itas: 4500 },
-  { drawNumber: 325, date: "July 30, 2025",     category: "Healthcare",  crsMin: 422, itas: 1500 },
-  { drawNumber: 324, date: "July 16, 2025",     category: "STEM",        crsMin: 475, itas: 1800 },
-  { drawNumber: 323, date: "July 2, 2025",      category: "General",     crsMin: 518, itas: 3500 },
-  { drawNumber: 322, date: "June 18, 2025",     category: "French",      crsMin: 388, itas: 1500 },
-  { drawNumber: 321, date: "June 4, 2025",      category: "General",     crsMin: 521, itas: 3300 },
-  { drawNumber: 320, date: "May 21, 2025",      category: "Trades",      crsMin: 374, itas: 700  },
-  { drawNumber: 319, date: "May 7, 2025",       category: "General",     crsMin: 524, itas: 3000 },
-  { drawNumber: 318, date: "April 23, 2025",    category: "Healthcare",  crsMin: 425, itas: 1200 },
-  { drawNumber: 317, date: "April 9, 2025",     category: "Education",   crsMin: 482, itas: 800  },
-  { drawNumber: 316, date: "March 26, 2025",    category: "General",     crsMin: 519, itas: 3500 },
-  { drawNumber: 315, date: "March 12, 2025",    category: "Agriculture", crsMin: 358, itas: 450  },
-  { drawNumber: 314, date: "February 26, 2025", category: "STEM",        crsMin: 477, itas: 1600 },
-  { drawNumber: 313, date: "February 12, 2025", category: "General",     crsMin: 522, itas: 3700 },
+  { drawNumber: 411, date: "April 15, 2026",    category: "French",      crsMin: 419, itas: 4000 },
+  { drawNumber: 410, date: "April 14, 2026",    category: "CEC",         crsMin: 515, itas: 2000 },
+  { drawNumber: 409, date: "April 13, 2026",    category: "PNP",         crsMin: 786, itas: 324  },
+  { drawNumber: 408, date: "April 2, 2026",     category: "Trades",      crsMin: 477, itas: 3000 },
+  { drawNumber: 407, date: "March 31, 2026",    category: "CEC",         crsMin: 509, itas: 2250 },
+  { drawNumber: 406, date: "March 30, 2026",    category: "PNP",         crsMin: 802, itas: 356  },
+  { drawNumber: 405, date: "March 18, 2026",    category: "French",      crsMin: 393, itas: 4000 },
+  { drawNumber: 404, date: "March 17, 2026",    category: "CEC",         crsMin: 507, itas: 4000 },
+  { drawNumber: 403, date: "March 16, 2026",    category: "PNP",         crsMin: 742, itas: 362  },
+  { drawNumber: 402, date: "March 5, 2026",     category: "SeniorMgmt",  crsMin: 429, itas: 250  },
+  { drawNumber: 401, date: "March 4, 2026",     category: "French",      crsMin: 397, itas: 5500 },
+  { drawNumber: 400, date: "March 3, 2026",     category: "CEC",         crsMin: 508, itas: 4000 },
+  { drawNumber: 399, date: "March 2, 2026",     category: "PNP",         crsMin: 710, itas: 264  },
+  { drawNumber: 398, date: "February 20, 2026", category: "Healthcare",  crsMin: 467, itas: 4000 },
+  { drawNumber: 397, date: "February 19, 2026", category: "Physicians",  crsMin: 169, itas: 391  },
+  { drawNumber: 396, date: "February 17, 2026", category: "CEC",         crsMin: 508, itas: 6000 },
+  { drawNumber: 395, date: "February 16, 2026", category: "PNP",         crsMin: 789, itas: 279  },
+  { drawNumber: 394, date: "February 6, 2026",  category: "French",      crsMin: 400, itas: 8500 },
+  { drawNumber: 393, date: "February 3, 2026",  category: "PNP",         crsMin: 749, itas: 423  },
+  { drawNumber: 392, date: "January 21, 2026",  category: "CEC",         crsMin: 509, itas: 6000 },
+  { drawNumber: 391, date: "January 20, 2026",  category: "PNP",         crsMin: 746, itas: 681  },
+  { drawNumber: 390, date: "January 7, 2026",   category: "CEC",         crsMin: 511, itas: 8000 },
+  { drawNumber: 389, date: "January 5, 2026",   category: "PNP",         crsMin: 711, itas: 574  },
+  { drawNumber: 388, date: "December 17, 2025", category: "French",      crsMin: 399, itas: 6000 },
+  { drawNumber: 387, date: "December 16, 2025", category: "CEC",         crsMin: 515, itas: 5000 },
 ];
 
-export const drawCategories = ["All", "General", "STEM", "Healthcare", "Trades", "Transport", "Agriculture", "French", "Education"] as const;
+export const drawCategories = [
+  "All",
+  "General",
+  "CEC",
+  "PNP",
+  "STEM",
+  "Healthcare",
+  "Trades",
+  "Transport",
+  "Agriculture",
+  "French",
+  "Education",
+  "SeniorMgmt",
+  "Physicians",
+] as const;
 
 /** Returns the most recent draw for a given category */
 export function latestByCat(cat: DrawRecord["category"]): DrawRecord | undefined {

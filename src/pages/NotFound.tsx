@@ -14,6 +14,15 @@ const NotFound = () => {
       <Helmet>
         <meta name="robots" content="noindex, nofollow" />
         <title>Page Not Found | 4 Aces Visa</title>
+        <meta name="description" content="The page you’re looking for doesn’t exist. Return to 4 Aces Visa for Canada Express Entry, PNP, study and work-permit guidance." />
+        <link rel="canonical" href={`https://www.4acesvisa.com${location.pathname}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Page Not Found | 4 Aces Visa" />
+        <meta property="og:description" content="The page you’re looking for doesn’t exist on 4 Aces Visa." />
+        <meta property="og:url" content={`https://www.4acesvisa.com${location.pathname}`} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Page Not Found | 4 Aces Visa" />
+        <meta name="twitter:description" content="The page you’re looking for doesn’t exist on 4 Aces Visa." />
       </Helmet>
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold">404</h1>

@@ -214,6 +214,13 @@ const SearchResultsPage = () => {
         <meta name="description" content={seoDesc} />
         <link rel="canonical" href="https://www.4acesvisa.com/search" />
         <meta name="robots" content="noindex,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDesc} />
+        <meta property="og:url" content="https://www.4acesvisa.com/search" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDesc} />
       </Helmet>
       <SeoSchema
         breadcrumbs={[{ name: "Search", url: "/search" }]}

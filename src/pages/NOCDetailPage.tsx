@@ -138,6 +138,9 @@ const NOCDetailPage = () => {
         <meta property="og:title" content={`NOC ${noc.code} — ${noc.title}`} />
         <meta property="og:description" content={`TEER ${noc.teer} · CRS ${impact.range} · ${noc.salaryRange}. PR pathways for ${noc.title} in Canada.`} />
         <meta property="og:url" content={url} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`NOC ${noc.code} — ${noc.title}`} />
+        <meta name="twitter:description" content={`TEER ${noc.teer} · CRS ${impact.range} · ${noc.salaryRange}. PR pathways for ${noc.title} in Canada.`} />
         <script type="application/ld+json">{JSON.stringify(occupationLD)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLD)}</script>

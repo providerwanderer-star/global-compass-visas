@@ -100,6 +100,9 @@ const IndiaPRPage = () => {
         <meta property="og:description" content="Complete guide to Canada permanent residency from India. Express Entry, PNP, family sponsorship pathways. 80,000+ Indians got PR in 2024." />
         <meta property="og:url" content="https://www.4acesvisa.com/india/canada-pr-india" />
         <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Canada PR from India 2026 — Express Entry & PNP | 4 Aces Visa" />
+        <meta name="twitter:description" content="Complete guide to Canada permanent residency from India. Express Entry, PNP, family sponsorship pathways. 80,000+ Indians got PR in 2024." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

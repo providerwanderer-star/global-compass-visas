@@ -158,6 +158,13 @@ const NewsHubPage = () => {
           content="Live Canada immigration news: latest IRCC announcements, Express Entry draws, PNP updates, policy changes and PR pathway insights — updated every 30 minutes."
         />
         <link rel="canonical" href="https://www.4acesvisa.com/news" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Canada Immigration News & Updates 2026 · 4 Aces Visa" />
+        <meta property="og:description" content="Live Canada immigration news: latest IRCC announcements, Express Entry draws, PNP updates, policy changes and PR pathway insights — updated every 30 minutes." />
+        <meta property="og:url" content="https://www.4acesvisa.com/news" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Canada Immigration News & Updates 2026 · 4 Aces Visa" />
+        <meta name="twitter:description" content="Live Canada immigration news: IRCC announcements, Express Entry draws, PNP updates and PR pathway insights." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

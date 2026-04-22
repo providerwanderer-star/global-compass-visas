@@ -45,6 +45,9 @@ const CityPage = () => {
         <meta property="og:title" content={city.metaTitle} />
         <meta property="og:description" content={city.metaDescription} />
         <meta property="og:url" content={`https://www.4acesvisa.com/city/${city.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={city.metaTitle} />
+        <meta name="twitter:description" content={city.metaDescription} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

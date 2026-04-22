@@ -92,6 +92,9 @@ const IndiaWorkPermitPage = () => {
         <meta property="og:description" content="Canada work permit for Indian professionals. LMIA permits, Global Talent Stream, and PR pathway guidance. Free expert assessment." />
         <meta property="og:url" content="https://www.4acesvisa.com/india/work-permit-india" />
         <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Canada Work Permit for Indians 2026 | 4 Aces Visa" />
+        <meta name="twitter:description" content="Canada work permit for Indian professionals. LMIA permits, Global Talent Stream, and PR pathway guidance." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

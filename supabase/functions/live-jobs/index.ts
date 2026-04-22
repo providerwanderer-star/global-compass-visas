@@ -1,8 +1,8 @@
 /**
  * live-jobs edge function
- * Returns live job listings for a given query, sourced from the public
- * Canada Job Bank "jobsearch" public JSON endpoint, with a 1-hour CDN cache.
- * No API key required.
+ * Returns live job listings for a given query, sourced from Canada's Job Bank
+ * (jobbank.gc.ca) via Firecrawl JSON extraction (the page is JSF/PrimeFaces
+ * rendered, so a static fetch + regex no longer works). Cached 1h at the edge.
  *
  * Request:  POST { query: string, location?: string, limit?: number }
  * Response: { source, fetchedAt, jobs: [{ title, company, location, url, postedAt }] }
@@ -23,41 +23,62 @@ interface JobOut {
   postedAt?: string;
 }
 
-async function fetchJobBank(query: string, limit: number): Promise<JobOut[]> {
-  // Public Job Bank search RSS — stable, CORS-friendly, no key.
-  const url = `https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=${encodeURIComponent(
-    query,
-  )}&locationstring=Canada&sort=D&fsrc=21`;
-  const res = await fetch(url, {
-    headers: { "User-Agent": "4AcesVisa-LiveJobs/1.0" },
-  });
-  if (!res.ok) throw new Error(`Job Bank ${res.status}`);
-  const html = await res.text();
+const FIRECRAWL_V2 = "https://api.firecrawl.dev/v2";
 
-  // Parse <article class="..."> blocks lightly.
-  const jobs: JobOut[] = [];
-  const articleRegex = /<article[^>]*resultJobItem[^>]*>([\s\S]*?)<\/article>/g;
-  let m: RegExpExecArray | null;
-  while ((m = articleRegex.exec(html)) && jobs.length < limit) {
-    const block = m[1];
-    const titleMatch = block.match(/<h3[^>]*class="title"[^>]*>\s*<span[^>]*>([^<]+)<\/span>/i)
-      || block.match(/<h3[^>]*>\s*([^<]+)\s*<\/h3>/i);
-    const companyMatch = block.match(/<li class="business">\s*([^<]+?)\s*<\/li>/i);
-    const locationMatch = block.match(/<li class="location">\s*<span[^>]*>([^<]+)<\/span>/i)
-      || block.match(/<li class="location">\s*([^<]+?)\s*<\/li>/i);
-    const hrefMatch = block.match(/href="(\/jobsearch\/jobposting\/[^"]+)"/i);
-    const dateMatch = block.match(/<li class="date">\s*<span[^>]*>([^<]+)<\/span>/i);
-    if (titleMatch && hrefMatch) {
-      jobs.push({
-        title: titleMatch[1].trim(),
-        company: (companyMatch?.[1] ?? "—").trim(),
-        location: (locationMatch?.[1] ?? "Canada").trim(),
-        url: `https://www.jobbank.gc.ca${hrefMatch[1]}`,
-        postedAt: dateMatch?.[1]?.trim(),
-      });
-    }
+async function fetchJobBankViaFirecrawl(
+  query: string,
+  limit: number,
+  apiKey: string,
+): Promise<JobOut[]> {
+  const target = `https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=${encodeURIComponent(
+    query,
+  )}&locationstring=Canada&sort=D`;
+
+  const res = await fetch(`${FIRECRAWL_V2}/scrape`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      url: target,
+      onlyMainContent: true,
+      waitFor: 2500, // give JSF time to hydrate the results list
+      formats: [
+        {
+          type: "json",
+          prompt: `Extract the first ${limit} job postings from this Canada Job Bank search results page. For each job return: title (job title), company (employer name, use "—" if not visible), location (city + province), url (the absolute https://www.jobbank.gc.ca/jobsearch/jobposting/... link), postedAt (the posting date as shown). Return as { jobs: [...] }. Only include real job postings, ignore ads, filters, and navigation.`,
+        },
+      ],
+    }),
+  });
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`Firecrawl ${res.status}: ${text.slice(0, 200)}`);
   }
-  return jobs;
+  const data = await res.json();
+  // Firecrawl v2 returns either { data: { json: {...} } } or { json: {...} }
+  const extracted =
+    data?.data?.json ?? data?.json ?? data?.data ?? {};
+  const rawJobs: any[] = Array.isArray(extracted?.jobs)
+    ? extracted.jobs
+    : Array.isArray(extracted)
+      ? extracted
+      : [];
+
+  return rawJobs
+    .filter((j) => j && j.title && j.url)
+    .slice(0, limit)
+    .map((j): JobOut => ({
+      title: String(j.title).trim(),
+      company: String(j.company ?? "—").trim() || "—",
+      location: String(j.location ?? "Canada").trim() || "Canada",
+      url: String(j.url).startsWith("http")
+        ? String(j.url)
+        : `https://www.jobbank.gc.ca${String(j.url)}`,
+      postedAt: j.postedAt ? String(j.postedAt).trim() : undefined,
+    }));
 }
 
 Deno.serve(async (req) => {
@@ -76,10 +97,26 @@ Deno.serve(async (req) => {
       });
     }
 
+    const apiKey = Deno.env.get("FIRECRAWL_API_KEY");
+    if (!apiKey) {
+      return new Response(
+        JSON.stringify({
+          source: "Job Bank Canada (unconfigured)",
+          fetchedAt: new Date().toISOString(),
+          jobs: [],
+          error: "FIRECRAWL_API_KEY not configured",
+        }),
+        {
+          status: 200,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        },
+      );
+    }
+
     let jobs: JobOut[] = [];
     let source = "Job Bank Canada";
     try {
-      jobs = await fetchJobBank(query, limit);
+      jobs = await fetchJobBankViaFirecrawl(query, limit, apiKey);
     } catch (e) {
       console.error("Job Bank fetch failed", e);
       jobs = [];

@@ -1,8 +1,43 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CheckCircle, ArrowRight, Globe, Star, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import SeoSchema from "@/components/SeoSchema";
+
+type Variant = {
+  title: string;
+  h1: string;
+  description: string;
+  canonical: string;
+  intro: string;
+  breadcrumbName: string;
+};
+
+const VARIANTS: Record<string, Variant> = {
+  "/germany/chancenkarte": {
+    title: "Germany Chancenkarte 2026 — Opportunity Card Guide | 4 Aces Visa",
+    h1: "Germany Chancenkarte (Opportunity Card)",
+    description:
+      "Germany Chancenkarte 2026 — points-based job search visa. No job offer needed, work 20 hrs/week while searching. 6-of-10 points test, EUR 12,000 blocked account, 1-year validity. Full eligibility and application steps.",
+    canonical: "https://www.4acesvisa.com/germany/chancenkarte",
+    intro:
+      "Germany's new points-based job-search visa (replaced the Job Seeker Visa in 2024). Enter Germany without a job offer, work up to 20 hours/week while searching, and convert to an EU Blue Card on hire.",
+    breadcrumbName: "Chancenkarte",
+  },
+  "/germany/eu-blue-card": {
+    title: "Germany EU Blue Card 2026 — Salary, Eligibility & PR | 4 Aces Visa",
+    h1: "Germany EU Blue Card 2026",
+    description:
+      "Germany EU Blue Card guide for 2026. EUR 43,759 salary threshold (EUR 39,682 for shortage roles), recognized degree, fast-track to permanent residence in 21 months with B1 German. Family joins immediately.",
+    canonical: "https://www.4acesvisa.com/germany/eu-blue-card",
+    intro:
+      "Germany's premium work permit for highly qualified professionals — fast-track to permanent residence in 21 months (with B1 German), family joins immediately, and free movement across the EU after 18 months.",
+    breadcrumbName: "EU Blue Card",
+  },
+};
+
+const DEFAULT_VARIANT = VARIANTS["/germany/chancenkarte"];
 
 const pathways = [
   {
@@ -95,15 +130,23 @@ export default function GermanyImmigrationPage() {
       "acceptedAnswer": { "@type": "Answer", "text": f.a }
     }))
   };
+  const location = useLocation();
+  const variant = VARIANTS[location.pathname] ?? DEFAULT_VARIANT;
 
   return (
     <>
       <Helmet>
-        <title>Germany Immigration 2026 | Chancenkarte, EU Blue Card & PR Guide — 4 Aces Visa</title>
-        <meta name="description" content="Complete guide to Germany immigration in 2026. Chancenkarte (Opportunity Card), EU Blue Card, salary requirements, degree recognition, and path to German PR. Expert advice from 4 Aces Visa." />
-        <link rel="canonical" href="https://www.4acesvisa.com/germany/chancenkarte" />
+        <title>{variant.title}</title>
+        <meta name="description" content={variant.description} />
+        <link rel="canonical" href={variant.canonical} />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
+      <SeoSchema
+        breadcrumbs={[
+          { name: "Germany Immigration", url: "/germany/chancenkarte" },
+          { name: variant.breadcrumbName, url: location.pathname },
+        ]}
+      />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-yellow-900 text-white py-20 px-4">
@@ -111,10 +154,10 @@ export default function GermanyImmigrationPage() {
           <AnimatedSection>
             <span className="text-5xl mb-4 block">🇩🇪</span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Germany Immigration 2026
+              {variant.h1}
             </h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-8">
-              Gateway to the EU. Germany's Chancenkarte (no job offer needed) and EU Blue Card (fast-track PR in 21 months) make Germany one of the most strategic immigration destinations for skilled professionals.
+              {variant.intro}
             </p>
             <div className="flex flex-wrap gap-6 justify-center text-center mb-8">
               {[

@@ -11,6 +11,8 @@ import { Button } from "@/components/ui/button";
 import AnswerBlock from "@/components/AnswerBlock";
 import EligibilityForm from "@/components/EligibilityForm";
 import SeoSchema from "@/components/SeoSchema";
+import FreshnessBanner from "@/components/FreshnessBanner";
+import { getFreshness } from "@/lib/freshness";
 import NotFound from "@/pages/NotFound";
 import { findCRSBand, crsBands } from "@/data/crsBandData";
 
@@ -19,6 +21,8 @@ const CRSBandPage = () => {
   const data = slug ? findCRSBand(slug) : null;
 
   if (!data) return <NotFound />;
+
+  const freshness = getFreshness("crs-band");
 
   const title = `Canada PR with CRS ${data.label} — Best Pathways 2026 | 4 Aces Visa`;
   const description = `Can you get Canada PR with a CRS score of ${data.range}? Best PNPs, category-based draws, study and work-permit strategies. Updated April 2026.`;
@@ -83,11 +87,12 @@ const CRSBandPage = () => {
 
       {/* AEO answer */}
       <section className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+        <FreshnessBanner topic="crs-band" className="mb-5" />
         <AnswerBlock
           answer={summary}
           whoFor={data.whoFor}
           whoNotFor={data.whoNotFor}
-          lastUpdated="April 2026"
+          lastUpdated={freshness.lastUpdatedLabel}
         />
       </section>
 

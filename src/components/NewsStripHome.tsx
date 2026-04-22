@@ -5,6 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { expressEntryDraws } from "@/data/expressEntryDraws";
 import { pnpDraws } from "@/data/pnpDraws";
 import { blogPosts } from "@/data/blogData";
+import { buildNewsSlug } from "@/lib/newsSlug";
 
 /**
  * Homepage News strip — surfaces the 6 most recent updates across
@@ -28,7 +29,7 @@ const buildHighlights = (): Highlight[] => {
     title: `EE Draw #${d.drawNumber} — ${d.category}`,
     meta: `CRS ${d.crsMin} · ${d.itas.toLocaleString()} ITAs`,
     date: d.date,
-    href: "/news",
+    href: `/news/${buildNewsSlug(`ee-${d.drawNumber}`, `Express Entry Draw #${d.drawNumber} — ${d.category} (CRS ${d.crsMin})`)}`,
     iso: Date.parse(d.date),
   }));
 
@@ -37,7 +38,7 @@ const buildHighlights = (): Highlight[] => {
     title: `${p.province} — ${p.stream}`,
     meta: `${p.invitations} invites${p.minScore ? ` · Min ${p.minScore}` : ""}`,
     date: p.date,
-    href: "/news",
+    href: `/news/${buildNewsSlug(`pnp-${p.provinceCode}-${i}-${p.date}`, `${p.province} PNP — ${p.stream} (${p.invitations} invites)`)}`,
     iso: Date.parse(p.date) + i, // tiebreak
   }));
 
@@ -46,7 +47,7 @@ const buildHighlights = (): Highlight[] => {
     title: b.title,
     meta: `${b.category} · ${b.readTime}`,
     date: b.date,
-    href: `/blog/${b.slug}`,
+    href: `/news/${buildNewsSlug(`blog-${b.slug}`, b.title)}`,
     iso: Date.parse(b.date),
   }));
 

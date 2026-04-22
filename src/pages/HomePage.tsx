@@ -95,6 +95,8 @@ const stats = [
 ];
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const [jobQuery, setJobQuery] = useState("");
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,

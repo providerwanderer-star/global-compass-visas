@@ -8,18 +8,24 @@ import { supabase } from "@/integrations/supabase/client";
 
 interface EligibilityFormProps {
   sourcePage?: string;
+  defaultValues?: {
+    destination_country?: string;
+    visa_type?: string;
+    education_level?: string;
+  };
+  heading?: string;
 }
 
-const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
+const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: EligibilityFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     full_name: "",
     email: "",
     phone: "",
-    destination_country: "",
-    visa_type: "",
-    education_level: "",
+    destination_country: defaultValues?.destination_country ?? "",
+    visa_type: defaultValues?.visa_type ?? "",
+    education_level: defaultValues?.education_level ?? "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -104,7 +110,7 @@ const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
         />
-        <Select onValueChange={(v) => setFormData({ ...formData, destination_country: v })}>
+        <Select value={formData.destination_country || undefined} onValueChange={(v) => setFormData({ ...formData, destination_country: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Destination Country" />
           </SelectTrigger>
@@ -116,7 +122,7 @@ const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
             <SelectItem value="not-sure">Not Sure Yet</SelectItem>
           </SelectContent>
         </Select>
-        <Select onValueChange={(v) => setFormData({ ...formData, visa_type: v })}>
+        <Select value={formData.visa_type || undefined} onValueChange={(v) => setFormData({ ...formData, visa_type: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Visa Type" />
           </SelectTrigger>
@@ -134,7 +140,7 @@ const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
             <SelectItem value="insurance">Visitor Visa Insurance</SelectItem>
           </SelectContent>
         </Select>
-        <Select onValueChange={(v) => setFormData({ ...formData, education_level: v })}>
+        <Select value={formData.education_level || undefined} onValueChange={(v) => setFormData({ ...formData, education_level: v })}>
           <SelectTrigger className="bg-card border-border">
             <SelectValue placeholder="Education Level" />
           </SelectTrigger>

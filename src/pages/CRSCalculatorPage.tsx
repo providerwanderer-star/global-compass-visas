@@ -13,7 +13,7 @@ import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
 import { useUserProfile } from "@/hooks/useUserProfile";
-import { expressEntryDraws } from "@/data/expressEntryDraws";
+import { expressEntryDraws, latestCoreDraw } from "@/data/expressEntryDraws";
 import { trackEvent } from "@/lib/analytics";
 
 /* ════════════════════════════════════════════════════════════════════════════
@@ -337,16 +337,18 @@ const CRSCalculatorPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [score.total]);
 
-  // Cutoff comparison
-  const latestGeneral = expressEntryDraws.find((d) => d.category === "General");
+  // Cutoff comparison — use latest CEC as modern "core" proxy (no pure General draws since 2024)
+  const latestCore = latestCoreDraw();
   const latestSTEM = expressEntryDraws.find((d) => d.category === "STEM");
   const latestHealth = expressEntryDraws.find((d) => d.category === "Healthcare");
   const latestFrench = expressEntryDraws.find((d) => d.category === "French");
+  const latestTrades = expressEntryDraws.find((d) => d.category === "Trades");
   const cutoffComparisons = [
-    { name: "General", draw: latestGeneral },
+    { name: latestCore.category === "CEC" ? "CEC (core)" : "General", draw: latestCore },
     { name: "STEM", draw: latestSTEM },
     { name: "Healthcare", draw: latestHealth },
     { name: "French", draw: latestFrench },
+    { name: "Trades", draw: latestTrades },
   ].filter((c) => c.draw);
 
   const breakdown = [

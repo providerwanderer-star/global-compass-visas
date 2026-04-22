@@ -77,3 +77,16 @@ export function avgCRS(cat: DrawRecord["category"] | "General"): number {
   if (!filtered.length) return 0;
   return Math.round(filtered.reduce((sum, d) => sum + d.crsMin, 0) / filtered.length);
 }
+
+/**
+ * Latest "core" draw used as the comparable CRS cut-off across the site.
+ * IRCC stopped running pure General draws in 2024; CEC draws have replaced
+ * them as the primary all-program proxy. Falls back to General then any draw.
+ */
+export function latestCoreDraw(): DrawRecord {
+  return (
+    expressEntryDraws.find((d) => d.category === "CEC") ??
+    expressEntryDraws.find((d) => d.category === "General") ??
+    expressEntryDraws[0]
+  );
+}

@@ -11,6 +11,8 @@ import DataSourceNote from "@/components/DataSourceNote";
 
 const categoryColors: Record<string, string> = {
   General:     "bg-blue-100 text-blue-800 border-blue-200",
+  CEC:         "bg-blue-100 text-blue-800 border-blue-200",
+  PNP:         "bg-indigo-100 text-indigo-800 border-indigo-200",
   STEM:        "bg-purple-100 text-purple-800 border-purple-200",
   Healthcare:  "bg-emerald-100 text-emerald-800 border-emerald-200",
   Trades:      "bg-orange-100 text-orange-800 border-orange-200",
@@ -18,6 +20,8 @@ const categoryColors: Record<string, string> = {
   Agriculture: "bg-lime-100 text-lime-800 border-lime-200",
   French:      "bg-red-100 text-red-800 border-red-200",
   Education:   "bg-teal-100 text-teal-800 border-teal-200",
+  SeniorMgmt:  "bg-slate-100 text-slate-800 border-slate-200",
+  Physicians:  "bg-pink-100 text-pink-800 border-pink-200",
 };
 
 const DrawHistoryPage = () => {
@@ -29,12 +33,14 @@ const DrawHistoryPage = () => {
     return expressEntryDraws.filter((d) => d.category === activeCategory);
   }, [activeCategory]);
 
-  // "Does my score qualify?" widget
+  // "Does my score qualify?" widget — compare against latest core (CEC) draw
   const crsNum = parseInt(crsCheck, 10);
-  const lastGeneral = expressEntryDraws.find((d) => d.category === "General");
+  const lastCore =
+    expressEntryDraws.find((d) => d.category === "CEC") ??
+    expressEntryDraws.find((d) => d.category === "General");
   const lastDraw = expressEntryDraws[0];
   const qualifiesLatest = !isNaN(crsNum) && crsNum >= lastDraw.crsMin;
-  const qualifiesGeneral = !isNaN(crsNum) && lastGeneral && crsNum >= lastGeneral.crsMin;
+  const qualifiesGeneral = !isNaN(crsNum) && lastCore && crsNum >= lastCore.crsMin;
 
   const schema = {
     "@context": "https://schema.org",

@@ -15,10 +15,10 @@ for (const r of routes) {
   if (!fs.existsSync(file)) { results.push({ ...r, missing: true }); continue; }
   const src = fs.readFileSync(file, 'utf8');
 
-  // Match <title>literal</title> OR <title>{expr}</title>
+  // Match <title>literal</title>, <title>{expr}</title>, <title>{`tpl ${x}`}</title>
   const titleM = src.match(/<title>([^<{][^<]*)<\/title>/);
-  const titleExpr = src.match(/<title>\{([^}]+)\}<\/title>/);
-  const title = titleM ? titleM[1].trim() : titleExpr ? `[dyn]` : null;
+  const titleTpl = src.match(/<title>\s*\{[\s\S]*?\}\s*<\/title>/);
+  const title = titleM ? titleM[1].trim() : titleTpl ? `[dyn]` : null;
 
   const canM = src.match(/rel="canonical"\s+href=(?:"([^"]+)"|\{([^}]+)\})/);
   const canonical = canM ? (canM[1] ?? `[dyn]`) : null;

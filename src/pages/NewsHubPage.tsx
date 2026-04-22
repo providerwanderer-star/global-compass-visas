@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Activity, ArrowRight, BookOpen, Calendar, FileText,
-  MapPin, Newspaper, RefreshCw, Sparkles, TrendingUp,
+  MapPin, Newspaper, RefreshCw, Sparkles, TrendingUp, Clock, ExternalLink,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";

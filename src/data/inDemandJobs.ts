@@ -55,7 +55,7 @@ export interface InDemandJob {
   title: string;
   /** NOC 2021 5-digit code — links to /noc-finder */
   noc: string;
-  teer: 0 | 1 | 2 | 3;
+  teer: 0 | 1 | 2 | 3 | 4 | 5;
   industry: Industry;
   /** Annual CAD salary range, low + high used for JobPosting baseSalary */
   salaryLow: number;

@@ -55,6 +55,13 @@ const ProfileDashboardPage = () => {
         />
         <meta name="robots" content="noindex,follow" />
         <link rel="canonical" href="https://www.4acesvisa.com/dashboard" />
+        <meta property="og:title" content="Your immigration dashboard | 4 Aces Visa" />
+        <meta property="og:description" content="Your personalized Canada immigration dashboard — CRS, NOC, origin and recommended pathway in one view." />
+        <meta property="og:url" content="https://www.4acesvisa.com/dashboard" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Your immigration dashboard | 4 Aces Visa" />
+        <meta name="twitter:description" content="Your personalized Canada immigration dashboard — CRS, NOC, origin and recommended pathway in one view." />
       </Helmet>
 
       <section className="section-padding section-light">

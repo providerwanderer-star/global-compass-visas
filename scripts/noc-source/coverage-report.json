@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-04-22T18:13:41.088Z",
+  "generatedAt": "2026-04-22T18:16:05.165Z",
   "curated": 75,
-  "esdcTotal": 406,
-  "eeEligibleTotal": 343,
-  "fullCoveragePct": 18.47,
-  "eeCoveragePct": 19.53,
+  "esdcTotal": 516,
+  "eeEligibleTotal": 376,
+  "fullCoveragePct": 14.53,
+  "eeCoveragePct": 18.35,
   "byTeer": [
     {
       "teer": 0,
-      "total": 42,
+      "total": 48,
       "have": 3,
-      "pct": 7.142857142857142
+      "pct": 6.25
     },
     {
       "teer": 1,
@@ -20,27 +20,27 @@
     },
     {
       "teer": 2,
-      "total": 144,
-      "have": 20,
-      "pct": 13.88888888888889
+      "total": 162,
+      "have": 22,
+      "pct": 13.580246913580247
     },
     {
       "teer": 3,
-      "total": 60,
+      "total": 69,
       "have": 9,
-      "pct": 15
+      "pct": 13.043478260869565
     },
     {
       "teer": 4,
-      "total": 45,
-      "have": 2,
-      "pct": 4.444444444444445
+      "total": 95,
+      "have": 3,
+      "pct": 3.1578947368421053
     },
     {
       "teer": 5,
-      "total": 18,
-      "have": 1,
-      "pct": 5.555555555555555
+      "total": 45,
+      "have": 2,
+      "pct": 4.444444444444445
     }
   ],
   "byMajor": [
@@ -105,6 +105,15 @@
       "have": 5,
       "eeTotal": 18,
       "eeHave": 5,
+      "gap": 13
+    },
+    {
+      "mg": "92",
+      "name": "Manufacturing/utilities supervisors",
+      "total": 13,
+      "have": 0,
+      "eeTotal": 13,
+      "eeHave": 0,
       "gap": 13
     },
     {
@@ -225,6 +234,15 @@
       "gap": 5
     },
     {
+      "mg": "83",
+      "name": "Natural-resources & related production",
+      "total": 5,
+      "have": 0,
+      "eeTotal": 5,
+      "eeHave": 0,
+      "gap": 5
+    },
+    {
       "mg": "11",
       "name": "Professional finance & business",
       "total": 8,
@@ -240,6 +258,24 @@
       "have": 1,
       "eeTotal": 5,
       "eeHave": 1,
+      "gap": 4
+    },
+    {
+      "mg": "80",
+      "name": "Mgmt production & agriculture",
+      "total": 4,
+      "have": 0,
+      "eeTotal": 4,
+      "eeHave": 0,
+      "gap": 4
+    },
+    {
+      "mg": "93",
+      "name": "Central control & process operators",
+      "total": 4,
+      "have": 0,
+      "eeTotal": 4,
+      "eeHave": 0,
       "gap": 4
     },
     {
@@ -268,6 +304,24 @@
       "eeTotal": 5,
       "eeHave": 2,
       "gap": 3
+    },
+    {
+      "mg": "82",
+      "name": "Supervisors natural-resources/agri",
+      "total": 5,
+      "have": 2,
+      "eeTotal": 5,
+      "eeHave": 2,
+      "gap": 3
+    },
+    {
+      "mg": "90",
+      "name": "Mgmt manufacturing & utilities",
+      "total": 2,
+      "have": 0,
+      "eeTotal": 2,
+      "eeHave": 0,
+      "gap": 2
     },
     {
       "mg": "30",
@@ -1068,7 +1122,7 @@
     {
       "code": "43204",
       "teer": 3,
-      "title": "Operations Members of the Canadian Armed Forces"
+      "title": "Operations members of the Canadian Armed Forces"
     },
     {
       "code": "50010",
@@ -1659,6 +1713,161 @@
       "code": "73402",
       "teer": 3,
       "title": "Drillers and blasters - surface mining, quarrying and construction"
+    },
+    {
+      "code": "80010",
+      "teer": 0,
+      "title": "Managers in natural resources production and fishing"
+    },
+    {
+      "code": "80020",
+      "teer": 0,
+      "title": "Managers in agriculture"
+    },
+    {
+      "code": "80021",
+      "teer": 0,
+      "title": "Managers in horticulture"
+    },
+    {
+      "code": "80022",
+      "teer": 0,
+      "title": "Managers in aquaculture"
+    },
+    {
+      "code": "82010",
+      "teer": 2,
+      "title": "Supervisors, logging and forestry"
+    },
+    {
+      "code": "82020",
+      "teer": 2,
+      "title": "Supervisors, mining and quarrying"
+    },
+    {
+      "code": "82021",
+      "teer": 2,
+      "title": "Contractors and supervisors, oil and gas drilling and services"
+    },
+    {
+      "code": "83100",
+      "teer": 3,
+      "title": "Underground production and development miners"
+    },
+    {
+      "code": "83101",
+      "teer": 3,
+      "title": "Oil and gas well drillers, servicers, testers and related workers"
+    },
+    {
+      "code": "83110",
+      "teer": 3,
+      "title": "Logging machinery operators"
+    },
+    {
+      "code": "83120",
+      "teer": 3,
+      "title": "Fishing masters and officers"
+    },
+    {
+      "code": "83121",
+      "teer": 3,
+      "title": "Fishermen/women"
+    },
+    {
+      "code": "90010",
+      "teer": 0,
+      "title": "Manufacturing managers"
+    },
+    {
+      "code": "90011",
+      "teer": 0,
+      "title": "Utilities managers"
+    },
+    {
+      "code": "92010",
+      "teer": 2,
+      "title": "Supervisors, mineral and metal processing"
+    },
+    {
+      "code": "92011",
+      "teer": 2,
+      "title": "Supervisors, petroleum, gas and chemical processing and utilities"
+    },
+    {
+      "code": "92012",
+      "teer": 2,
+      "title": "Supervisors, food and beverage processing"
+    },
+    {
+      "code": "92013",
+      "teer": 2,
+      "title": "Supervisors, plastic and rubber products manufacturing"
+    },
+    {
+      "code": "92014",
+      "teer": 2,
+      "title": "Supervisors, forest products processing"
+    },
+    {
+      "code": "92015",
+      "teer": 2,
+      "title": "Supervisors, textile, fabric, fur and leather products processing and manufacturing"
+    },
+    {
+      "code": "92020",
+      "teer": 2,
+      "title": "Supervisors, motor vehicle assembling"
+    },
+    {
+      "code": "92021",
+      "teer": 2,
+      "title": "Supervisors, electronics and electrical products manufacturing"
+    },
+    {
+      "code": "92022",
+      "teer": 2,
+      "title": "Supervisors, furniture and fixtures manufacturing"
+    },
+    {
+      "code": "92023",
+      "teer": 2,
+      "title": "Supervisors, other mechanical and metal products manufacturing"
+    },
+    {
+      "code": "92024",
+      "teer": 2,
+      "title": "Supervisors, other products manufacturing and assembly"
+    },
+    {
+      "code": "92100",
+      "teer": 2,
+      "title": "Power engineers and power systems operators"
+    },
+    {
+      "code": "92101",
+      "teer": 2,
+      "title": "Water and waste treatment plant operators"
+    },
+    {
+      "code": "93100",
+      "teer": 3,
+      "title": "Central control and process operators, mineral and metal processing"
+    },
+    {
+      "code": "93101",
+      "teer": 3,
+      "title": "Central control and process operators, petroleum, gas and chemical processing"
+    },
+    {
+      "code": "93102",
+      "teer": 3,
+      "title": "Pulping, papermaking and coating control operators"
+    },
+    {
+      "code": "93200",
+      "teer": 3,
+      "title": "Aircraft assemblers and aircraft assembly inspectors"
     }
   ],
   "priorityGaps": [
@@ -2511,28 +2720,137 @@
       "code": "73402",
       "teer": 3,
       "title": "Drillers and blasters - surface mining, quarrying and construction"
+    },
+    {
+      "code": "82010",
+      "teer": 2,
+      "title": "Supervisors, logging and forestry"
+    },
+    {
+      "code": "82020",
+      "teer": 2,
+      "title": "Supervisors, mining and quarrying"
+    },
+    {
+      "code": "82021",
+      "teer": 2,
+      "title": "Contractors and supervisors, oil and gas drilling and services"
+    },
+    {
+      "code": "83100",
+      "teer": 3,
+      "title": "Underground production and development miners"
+    },
+    {
+      "code": "83101",
+      "teer": 3,
+      "title": "Oil and gas well drillers, servicers, testers and related workers"
+    },
+    {
+      "code": "83110",
+      "teer": 3,
+      "title": "Logging machinery operators"
+    },
+    {
+      "code": "83120",
+      "teer": 3,
+      "title": "Fishing masters and officers"
+    },
+    {
+      "code": "83121",
+      "teer": 3,
+      "title": "Fishermen/women"
+    },
+    {
+      "code": "92010",
+      "teer": 2,
+      "title": "Supervisors, mineral and metal processing"
+    },
+    {
+      "code": "92011",
+      "teer": 2,
+      "title": "Supervisors, petroleum, gas and chemical processing and utilities"
+    },
+    {
+      "code": "92012",
+      "teer": 2,
+      "title": "Supervisors, food and beverage processing"
+    },
+    {
+      "code": "92013",
+      "teer": 2,
+      "title": "Supervisors, plastic and rubber products manufacturing"
+    },
+    {
+      "code": "92014",
+      "teer": 2,
+      "title": "Supervisors, forest products processing"
+    },
+    {
+      "code": "92015",
+      "teer": 2,
+      "title": "Supervisors, textile, fabric, fur and leather products processing and manufacturing"
+    },
+    {
+      "code": "92020",
+      "teer": 2,
+      "title": "Supervisors, motor vehicle assembling"
+    },
+    {
+      "code": "92021",
+      "teer": 2,
+      "title": "Supervisors, electronics and electrical products manufacturing"
+    },
+    {
+      "code": "92022",
+      "teer": 2,
+      "title": "Supervisors, furniture and fixtures manufacturing"
+    },
+    {
+      "code": "92023",
+      "teer": 2,
+      "title": "Supervisors, other mechanical and metal products manufacturing"
+    },
+    {
+      "code": "92024",
+      "teer": 2,
+      "title": "Supervisors, other products manufacturing and assembly"
+    },
+    {
+      "code": "92100",
+      "teer": 2,
+      "title": "Power engineers and power systems operators"
+    },
+    {
+      "code": "92101",
+      "teer": 2,
+      "title": "Water and waste treatment plant operators"
+    },
+    {
+      "code": "93100",
+      "teer": 3,
+      "title": "Central control and process operators, mineral and metal processing"
+    },
+    {
+      "code": "93101",
+      "teer": 3,
+      "title": "Central control and process operators, petroleum, gas and chemical processing"
+    },
+    {
+      "code": "93102",
+      "teer": 3,
+      "title": "Pulping, papermaking and coating control operators"
+    },
+    {
+      "code": "93200",
+      "teer": 3,
+      "title": "Aircraft assemblers and aircraft assembly inspectors"
     }
   ],
   "missingFromMaster": [
     {
       "code": "72330",
       "title": "Plasterer / Drywall Installer"
-    },
-    {
-      "code": "82030",
-      "title": "Agricultural Equipment Operator"
-    },
-    {
-      "code": "82031",
-      "title": "Farm Supervisor / Agricultural Service Contractor"
-    },
-    {
-      "code": "85100",
-      "title": "Livestock Labourer"
-    },
-    {
-      "code": "94141",
-      "title": "Food and Beverage Processing Worker"
     }
   ]
 }

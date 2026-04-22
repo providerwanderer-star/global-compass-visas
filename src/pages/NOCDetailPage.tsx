@@ -132,7 +132,7 @@ const NOCDetailPage = () => {
   return (
     <div>
       <Helmet>
-        <title>NOC {noc.code} — {noc.title} | TEER {noc.teer}, CRS Impact & PR Pathways | 4 Aces Visa</title>
+        <title>{`NOC ${noc.code} — ${noc.title} | TEER ${noc.teer}, CRS Impact & PR Pathways | 4 Aces Visa`}</title>
         <meta name="description" content={`NOC ${noc.code} ${noc.title}: TEER ${noc.teer}, salary ${noc.salaryRange}, ${noc.eeEligible ? "Express Entry eligible" : "Not EE eligible"}. CRS impact ${impact.range}. PR pathways and live jobs.`} />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={`NOC ${noc.code} — ${noc.title}`} />

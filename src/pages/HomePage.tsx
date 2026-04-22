@@ -796,36 +796,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Tools strip */}
-      <section className="py-10 px-4 bg-gradient-to-br from-primary/5 to-accent/5 border-y border-border">
-        <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-6">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
-              Free immigration tools
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              Score yourself, compare countries, get a checklist — no signup.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-            {[
-              { icon: Award, label: "CRS Calculator", href: "/crs-calculator" },
-              { icon: Search, label: "Eligibility Quiz", href: "/quiz" },
-              { icon: Globe, label: "Compare Countries", href: "/compare" },
-              { icon: TrendingUp, label: "EE Draw Tracker", href: "/express-entry" },
-              { icon: FileText, label: "Doc Checklist", href: "/documents/canada-pr" },
-            ].map((t) => (
-              <Link key={t.label} to={t.href} className="group">
-                <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all">
-                  <t.icon className="h-6 w-6 text-gold mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                  <p className="text-xs md:text-sm font-semibold text-foreground">{t.label}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* High-Demand Jobs → PR Pathway Engine */}
       <HighDemandJobsHome />
 
@@ -834,49 +804,6 @@ const HomePage = () => {
 
       {/* Immigration News strip */}
       <NewsStripHome />
-
-      {/* FAQ */}
-      <section className="section-padding section-light">
-        <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-10">
-            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
-              ❓ Common Questions
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Immigration FAQ 2026
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Copy-paste-ready answers for AI search, social, and WhatsApp.
-            </p>
-          </AnimatedSection>
-          <div className="max-w-3xl mx-auto space-y-3">
-            {homeFaqs.slice(0, 10).map((faq, i) => (
-              <details key={i} className="bg-card rounded-xl border border-border overflow-hidden group">
-                <summary className="flex items-center justify-between gap-3 px-5 py-4 cursor-pointer list-none font-semibold text-foreground text-sm hover:bg-muted/30 transition-colors">
-                  <span>{faq.q}</span>
-                  <span className="text-gold text-xl flex-shrink-0 select-none group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4 border-t border-border pt-3">
-                  <Shareable
-                    question={faq.q}
-                    answer={faq.a}
-                    permalink={`/faq#q${i + 1}`}
-                  >
-                    <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
-                  </Shareable>
-                </div>
-              </details>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link to="/faq">
-              <Button variant="outline" size="lg" className="border-2 border-primary/30 text-primary hover:bg-primary/5 font-semibold">
-                View All FAQs <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="relative section-padding bg-gradient-to-br from-primary via-primary to-primary/90 overflow-hidden">

@@ -249,6 +249,27 @@ const HomePage = () => {
                   "name": faq.q,
                   "acceptedAnswer": { "@type": "Answer", "text": faq.a }
                 }))
+              },
+              {
+                "@type": "HowTo",
+                "name": "How to Migrate to Canada — 4 Aces Visa 5-Step Process",
+                "description": "Our proven 5-step process to assess, optimize, prepare, file, and land your Canadian immigration application.",
+                "totalTime": "P8M",
+                "estimatedCost": { "@type": "MonetaryAmount", "currency": "CAD", "value": "2500" },
+                "supply": [
+                  { "@type": "HowToSupply", "name": "IELTS / CELPIP / TEF score" },
+                  { "@type": "HowToSupply", "name": "Educational Credential Assessment (WES/ECA)" },
+                  { "@type": "HowToSupply", "name": "Work experience reference letters" },
+                  { "@type": "HowToSupply", "name": "Police clearance certificate" },
+                  { "@type": "HowToSupply", "name": "Medical examination report" }
+                ],
+                "step": [
+                  { "@type": "HowToStep", "position": 1, "name": "Free Assessment", "text": "We evaluate your CRS score, education, work experience and language proficiency to identify the best pathway." },
+                  { "@type": "HowToStep", "position": 2, "name": "Strategy & Optimization", "text": "Personalized plan to maximize your CRS score — IELTS coaching, PNP targeting, LMIA coordination." },
+                  { "@type": "HowToStep", "position": 3, "name": "Document Preparation", "text": "Complete document compilation, WES/ECA evaluation, and application-ready dossier preparation." },
+                  { "@type": "HowToStep", "position": 4, "name": "Application Filing", "text": "Expert submission of your Express Entry profile, PNP application, or work permit with zero errors." },
+                  { "@type": "HowToStep", "position": 5, "name": "Landing & Settlement", "text": "Post-approval guidance — COPR, landing prep, and settlement support in Canada." }
+                ]
               }
             ]
           })}
@@ -484,6 +505,36 @@ const HomePage = () => {
               Compare all countries side-by-side →
             </Link>
           </p>
+        </div>
+      </section>
+      {/* Eligibility Decision Engine — quick teaser */}
+      <section className="section-padding section-light">
+        <div className="container-narrow mx-auto">
+          <AnimatedSection className="text-center mb-8">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              ⚡ 60-Second Eligibility Check
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Find Your Best Pathway — Free
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Tell us about your profile and our RCIC-led team will return your personalized eligibility report within 24 hours — Express Entry, PNP, study or work pathway.
+            </p>
+          </AnimatedSection>
+          <div className="max-w-3xl mx-auto bg-card rounded-2xl border border-border p-6 md:p-8 shadow-elevated">
+            <EligibilityForm sourcePage="home-eligibility-teaser" />
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-1"><Shield className="h-3.5 w-3.5 text-success" /> 100% confidential</span>
+              <span className="inline-flex items-center gap-1"><BadgeCheck className="h-3.5 w-3.5 text-success" /> RCIC-regulated</span>
+              <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5 text-success" /> 24-hour response</span>
+            </div>
+            <p className="text-center mt-4 text-sm">
+              Prefer the full quiz?{" "}
+              <Link to="/quiz" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">
+                Take the 2-minute Pathway Quiz →
+              </Link>
+            </p>
+          </div>
         </div>
       </section>
       {/* How We Help You Migrate — Step Process */}

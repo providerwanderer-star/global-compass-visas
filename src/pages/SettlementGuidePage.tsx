@@ -8,6 +8,8 @@ import SeoSchema from "@/components/SeoSchema";
 import FreshnessBanner from "@/components/FreshnessBanner";
 import { getFreshness } from "@/lib/freshness";
 import NotFound from "@/pages/NotFound";
+import RelatedLinks from "@/components/RelatedLinks";
+import { linksForSettlement } from "@/lib/crossLinks";
 
 const SettlementGuidePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -221,6 +223,12 @@ const SettlementGuidePage = () => {
           />
         </div>
       </section>
+
+      <RelatedLinks
+        eyebrow="Cross-reference"
+        title="Other guides newcomers find useful"
+        links={linksForSettlement(data.slug)}
+      />
     </div>
   );
 };

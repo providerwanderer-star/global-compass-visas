@@ -17,6 +17,8 @@ import FreshnessBanner from "@/components/FreshnessBanner";
 import { getFreshness } from "@/lib/freshness";
 import NotFound from "@/pages/NotFound";
 import { findOriginCountry, originCountries } from "@/data/geoOriginData";
+import RelatedLinks from "@/components/RelatedLinks";
+import { linksForOrigin } from "@/lib/crossLinks";
 
 const CanadaPRFromCountryPage = () => {
   const { country: slug } = useParams<{ country: string }>();
@@ -296,6 +298,12 @@ const CanadaPRFromCountryPage = () => {
           </div>
         </div>
       </section>
+
+      <RelatedLinks
+        eyebrow="Continue your research"
+        title={`Next steps after Canada PR from ${data.country}`}
+        links={linksForOrigin(data.slug)}
+      />
 
       {/* Lead form */}
       <section className="section-padding section-light">

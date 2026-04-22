@@ -8,18 +8,24 @@ import { supabase } from "@/integrations/supabase/client";
 
 interface EligibilityFormProps {
   sourcePage?: string;
+  defaultValues?: {
+    destination_country?: string;
+    visa_type?: string;
+    education_level?: string;
+  };
+  heading?: string;
 }
 
-const EligibilityForm = ({ sourcePage = "general" }: EligibilityFormProps) => {
+const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: EligibilityFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     full_name: "",
     email: "",
     phone: "",
-    destination_country: "",
-    visa_type: "",
-    education_level: "",
+    destination_country: defaultValues?.destination_country ?? "",
+    visa_type: defaultValues?.visa_type ?? "",
+    education_level: defaultValues?.education_level ?? "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {

@@ -193,7 +193,10 @@ interface FormState {
   // Core
   age: number;
   hasSpouse: boolean;
-  spouseIsCitizen: boolean; // spouse PR/citizen → score as single
+  spouseAccompanying: boolean; // spouse will come to Canada with you
+  spouseIsCitizen: boolean;    // spouse is already Canadian PR/citizen
+  // Per IRCC: if spouse is NOT accompanying OR is already a Canadian PR/citizen,
+  // the principal applicant is scored as if single.
   education: EduKey;
   // First language — per ability (CLB)
   firstLang: { listening: number; reading: number; writing: number; speaking: number };
@@ -220,6 +223,7 @@ interface FormState {
 const defaults: FormState = {
   age: 30,
   hasSpouse: false,
+  spouseAccompanying: true,
   spouseIsCitizen: false,
   education: "bachelors",
   firstLang: { listening: 8, reading: 8, writing: 8, speaking: 8 },
@@ -261,8 +265,10 @@ const CRSCalculatorPage = () => {
     setCalculated(false);
   };
 
-  // Score as "with spouse" only when married AND spouse is NOT already a Canadian PR/citizen
-  const withSpouse = form.hasSpouse && !form.spouseIsCitizen;
+  // IRCC rule: score with-spouse ONLY when married/common-law AND spouse will accompany
+  // you to Canada AND the spouse is NOT already a Canadian PR/citizen.
+  const withSpouse =
+    form.hasSpouse && form.spouseAccompanying && !form.spouseIsCitizen;
 
   // Minimum CLB across the four abilities — IRCC requires CLB 7 minimum for FSW
   const firstClb = Math.min(...ABILITIES.map((a) => form.firstLang[a]));
@@ -506,20 +512,38 @@ const CRSCalculatorPage = () => {
                   </div>
 
                   {form.hasSpouse && (
-                    <label className="flex items-start gap-3 cursor-pointer p-3 bg-muted/40 rounded-lg">
-                      <input
-                        type="checkbox"
-                        checked={form.spouseIsCitizen}
-                        onChange={(e) => set("spouseIsCitizen", e.target.checked)}
-                        className="w-4 h-4 mt-0.5 accent-gold"
-                      />
-                      <span className="text-xs text-foreground">
-                        My spouse is already a Canadian citizen or PR
-                        <span className="block text-muted-foreground">
-                          (If yes, you are scored as if single — IRCC rule)
+                    <div className="space-y-2">
+                      <div>
+                        <label className="block text-sm font-semibold text-foreground mb-1.5">
+                          Will your spouse / common-law partner come with you to Canada?
+                        </label>
+                        <select
+                          value={form.spouseAccompanying ? "yes" : "no"}
+                          onChange={(e) => set("spouseAccompanying", e.target.value === "yes")}
+                          className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40"
+                        >
+                          <option value="yes">Yes — spouse is accompanying me</option>
+                          <option value="no">No — spouse is staying behind</option>
+                        </select>
+                        <p className="text-[11px] text-muted-foreground mt-1">
+                          Per IRCC: if spouse is NOT accompanying, you are scored as single.
+                        </p>
+                      </div>
+                      <label className="flex items-start gap-3 cursor-pointer p-3 bg-muted/40 rounded-lg">
+                        <input
+                          type="checkbox"
+                          checked={form.spouseIsCitizen}
+                          onChange={(e) => set("spouseIsCitizen", e.target.checked)}
+                          className="w-4 h-4 mt-0.5 accent-gold"
+                        />
+                        <span className="text-xs text-foreground">
+                          My spouse is already a Canadian citizen or PR
+                          <span className="block text-muted-foreground">
+                            (If yes, you are scored as if single — IRCC rule)
+                          </span>
                         </span>
-                      </span>
-                    </label>
+                      </label>
+                    </div>
                   )}
                 </div>
 

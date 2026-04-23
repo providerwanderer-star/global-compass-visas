@@ -265,8 +265,10 @@ const CRSCalculatorPage = () => {
     setCalculated(false);
   };
 
-  // Score as "with spouse" only when married AND spouse is NOT already a Canadian PR/citizen
-  const withSpouse = form.hasSpouse && !form.spouseIsCitizen;
+  // IRCC rule: score with-spouse ONLY when married/common-law AND spouse will accompany
+  // you to Canada AND the spouse is NOT already a Canadian PR/citizen.
+  const withSpouse =
+    form.hasSpouse && form.spouseAccompanying && !form.spouseIsCitizen;
 
   // Minimum CLB across the four abilities — IRCC requires CLB 7 minimum for FSW
   const firstClb = Math.min(...ABILITIES.map((a) => form.firstLang[a]));

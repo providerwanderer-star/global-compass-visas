@@ -223,6 +223,7 @@ interface FormState {
 const defaults: FormState = {
   age: 30,
   hasSpouse: false,
+  spouseAccompanying: true,
   spouseIsCitizen: false,
   education: "bachelors",
   firstLang: { listening: 8, reading: 8, writing: 8, speaking: 8 },

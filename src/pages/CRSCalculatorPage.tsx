@@ -193,7 +193,10 @@ interface FormState {
   // Core
   age: number;
   hasSpouse: boolean;
-  spouseIsCitizen: boolean; // spouse PR/citizen → score as single
+  spouseAccompanying: boolean; // spouse will come to Canada with you
+  spouseIsCitizen: boolean;    // spouse is already Canadian PR/citizen
+  // Per IRCC: if spouse is NOT accompanying OR is already a Canadian PR/citizen,
+  // the principal applicant is scored as if single.
   education: EduKey;
   // First language — per ability (CLB)
   firstLang: { listening: number; reading: number; writing: number; speaking: number };

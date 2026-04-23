@@ -512,20 +512,38 @@ const CRSCalculatorPage = () => {
                   </div>
 
                   {form.hasSpouse && (
-                    <label className="flex items-start gap-3 cursor-pointer p-3 bg-muted/40 rounded-lg">
-                      <input
-                        type="checkbox"
-                        checked={form.spouseIsCitizen}
-                        onChange={(e) => set("spouseIsCitizen", e.target.checked)}
-                        className="w-4 h-4 mt-0.5 accent-gold"
-                      />
-                      <span className="text-xs text-foreground">
-                        My spouse is already a Canadian citizen or PR
-                        <span className="block text-muted-foreground">
-                          (If yes, you are scored as if single — IRCC rule)
+                    <div className="space-y-2">
+                      <div>
+                        <label className="block text-sm font-semibold text-foreground mb-1.5">
+                          Will your spouse / common-law partner come with you to Canada?
+                        </label>
+                        <select
+                          value={form.spouseAccompanying ? "yes" : "no"}
+                          onChange={(e) => set("spouseAccompanying", e.target.value === "yes")}
+                          className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40"
+                        >
+                          <option value="yes">Yes — spouse is accompanying me</option>
+                          <option value="no">No — spouse is staying behind</option>
+                        </select>
+                        <p className="text-[11px] text-muted-foreground mt-1">
+                          Per IRCC: if spouse is NOT accompanying, you are scored as single.
+                        </p>
+                      </div>
+                      <label className="flex items-start gap-3 cursor-pointer p-3 bg-muted/40 rounded-lg">
+                        <input
+                          type="checkbox"
+                          checked={form.spouseIsCitizen}
+                          onChange={(e) => set("spouseIsCitizen", e.target.checked)}
+                          className="w-4 h-4 mt-0.5 accent-gold"
+                        />
+                        <span className="text-xs text-foreground">
+                          My spouse is already a Canadian citizen or PR
+                          <span className="block text-muted-foreground">
+                            (If yes, you are scored as if single — IRCC rule)
+                          </span>
                         </span>
-                      </span>
-                    </label>
+                      </label>
+                    </div>
                   )}
                 </div>
 

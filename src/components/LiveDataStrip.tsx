@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Activity, MapPin, TrendingUp, ArrowRight } from "lucide-react";
-import { expressEntryDraws } from "@/data/expressEntryDraws";
+import { expressEntryDraws, type DrawRecord } from "@/data/expressEntryDraws";
+import { fetchLiveExpressEntryDraws } from "@/lib/liveDraws";
 
 /**
  * LiveDataStrip — 3-card live data block.
@@ -8,8 +10,20 @@ import { expressEntryDraws } from "@/data/expressEntryDraws";
  * Each card shows a "Last updated" indicator.
  */
 const LiveDataStrip = () => {
-  const latestEE = expressEntryDraws[0];
-  const today = new Date().toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" });
+  const [latestEE, setLatestEE] = useState<DrawRecord>(expressEntryDraws[0]);
+  const [lastSync, setLastSync] = useState<string>(
+    new Date().toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" }),
+  );
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchLiveExpressEntryDraws(1).then((rows) => {
+      if (cancelled || rows.length === 0) return;
+      setLatestEE(rows[0]);
+      setLastSync(new Date().toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" }));
+    });
+    return () => { cancelled = true; };
+  }, []);
 
   // Static "latest PNP" snapshot — kept in sync with /pnp-tracker
   const latestPNP = {
@@ -34,7 +48,7 @@ const LiveDataStrip = () => {
             <Activity className="h-5 w-5 text-red-500 animate-pulse" />
             Live Canada Immigration Data
           </h2>
-          <span className="text-xs text-muted-foreground">Last updated: {today}</span>
+          <span className="text-xs text-muted-foreground">Auto-synced every 6h · {lastSync}</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">

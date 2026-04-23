@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      express_entry_draws: {
+        Row: {
+          category: string
+          created_at: string
+          crs_min: number
+          draw_date: string
+          draw_number: number
+          fetched_at: string
+          id: string
+          itas: number
+          source_url: string | null
+          tie_break: string | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          crs_min: number
+          draw_date: string
+          draw_number: number
+          fetched_at?: string
+          id?: string
+          itas: number
+          source_url?: string | null
+          tie_break?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          crs_min?: number
+          draw_date?: string
+          draw_number?: number
+          fetched_at?: string
+          id?: string
+          itas?: number
+          source_url?: string | null
+          tie_break?: string | null
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           created_at: string
@@ -47,6 +86,48 @@ export type Database = {
           phone?: string
           source_page?: string | null
           visa_type?: string | null
+        }
+        Relationships: []
+      }
+      pnp_draws: {
+        Row: {
+          created_at: string
+          draw_date: string
+          fetched_at: string
+          id: string
+          invitations: number
+          min_score: number | null
+          notes: string | null
+          province: string
+          province_code: string
+          source_url: string | null
+          stream: string
+        }
+        Insert: {
+          created_at?: string
+          draw_date: string
+          fetched_at?: string
+          id?: string
+          invitations: number
+          min_score?: number | null
+          notes?: string | null
+          province: string
+          province_code: string
+          source_url?: string | null
+          stream: string
+        }
+        Update: {
+          created_at?: string
+          draw_date?: string
+          fetched_at?: string
+          id?: string
+          invitations?: number
+          min_score?: number | null
+          notes?: string | null
+          province?: string
+          province_code?: string
+          source_url?: string | null
+          stream?: string
         }
         Relationships: []
       }

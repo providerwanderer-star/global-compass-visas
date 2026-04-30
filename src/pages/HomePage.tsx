@@ -105,7 +105,7 @@ const HomePage = () => {
     <div>
       <Helmet>
         <title>Move & Settle to Canada — End-to-end Immigration | 4 Aces Visa</title>
-        <meta name="description" content="Move to Canada end-to-end. For US H-1B holders, Indian professionals, students & families. Express Entry, PNP, LMIA, study & work permits. 15,000+ visas processed. Free assessment." />
+        <meta name="description" content="RCIC-led Canadian immigration consultants. Express Entry PR, LMIA, PNP, study permits & work visas — Canada, Australia, Germany & UK. 15,000+ visas processed. 98% success rate. Free assessment." />
         <link rel="canonical" href="https://www.4acesvisa.com/" />
         <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
         <meta property="og:type" content="website" />

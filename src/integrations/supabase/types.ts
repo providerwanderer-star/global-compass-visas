@@ -14,6 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
+      blog_posts: {
+        Row: {
+          category: string
+          content: string
+          created_at: string
+          date: string
+          excerpt: string
+          id: string
+          meta_description: string
+          published: boolean
+          read_time: string
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category?: string
+          content?: string
+          created_at?: string
+          date?: string
+          excerpt?: string
+          id?: string
+          meta_description?: string
+          published?: boolean
+          read_time?: string
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          content?: string
+          created_at?: string
+          date?: string
+          excerpt?: string
+          id?: string
+          meta_description?: string
+          published?: boolean
+          read_time?: string
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       express_entry_draws: {
         Row: {
           category: string
@@ -89,6 +134,45 @@ export type Database = {
         }
         Relationships: []
       }
+      noc_codes: {
+        Row: {
+          alt_titles: string[]
+          category: string
+          code: string
+          created_at: string
+          description: string
+          express_entry_eligible: boolean
+          id: string
+          median_salary: number | null
+          teer: number
+          title: string
+        }
+        Insert: {
+          alt_titles?: string[]
+          category: string
+          code: string
+          created_at?: string
+          description?: string
+          express_entry_eligible?: boolean
+          id?: string
+          median_salary?: number | null
+          teer: number
+          title: string
+        }
+        Update: {
+          alt_titles?: string[]
+          category?: string
+          code?: string
+          created_at?: string
+          description?: string
+          express_entry_eligible?: boolean
+          id?: string
+          median_salary?: number | null
+          teer?: number
+          title?: string
+        }
+        Relationships: []
+      }
       pnp_draws: {
         Row: {
           created_at: string
@@ -128,6 +212,30 @@ export type Database = {
           province_code?: string
           source_url?: string | null
           stream?: string
+        }
+        Relationships: []
+      }
+      processing_times: {
+        Row: {
+          application_type: string
+          created_at: string
+          id: string
+          processing_time_text: string
+          updated_date: string
+        }
+        Insert: {
+          application_type: string
+          created_at?: string
+          id?: string
+          processing_time_text: string
+          updated_date?: string
+        }
+        Update: {
+          application_type?: string
+          created_at?: string
+          id?: string
+          processing_time_text?: string
+          updated_date?: string
         }
         Relationships: []
       }

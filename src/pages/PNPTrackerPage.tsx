@@ -2,7 +2,8 @@ import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { MapPin, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import { pnpDraws, pnpProvinces } from "@/data/pnpDraws";
+import { pnpProvinces } from "@/data/pnpDraws";
+import { usePnpDraws } from "@/hooks/usePnpDraws";
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
@@ -22,6 +23,7 @@ const provinceColors: Record<string, string> = {
 
 const PNPTrackerPage = () => {
   const [activeProvince, setActiveProvince] = useState<string>("All");
+  const pnpDraws = usePnpDraws();
 
   const filtered = useMemo(() => {
     if (activeProvince === "All") return pnpDraws;

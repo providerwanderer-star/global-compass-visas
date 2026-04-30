@@ -4,7 +4,7 @@ import { ChevronRight, Clock, ArrowLeft, ArrowRight, List, MessageCircle } from 
 import { useState, useMemo } from "react";
 import EligibilityForm from "@/components/EligibilityForm";
 import InternalLinks from "@/components/InternalLinks";
-import { blogPosts } from "@/data/blogData";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 import { blogToServices, getRelatedServiceData } from "@/data/internalLinks";
 import { blogEnhancements } from "@/data/blogEnhancements";
 import FAQCallToAction from "@/components/FAQCallToAction";
@@ -13,6 +13,7 @@ import ConnectedFooter from "@/components/ConnectedFooter";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
+  const blogPosts = useBlogPosts();
   const post = blogPosts.find((p) => p.slug === slug);
   const enhancement = post ? blogEnhancements[post.slug] : undefined;
   const [ctaDismissed, setCtaDismissed] = useState(false);

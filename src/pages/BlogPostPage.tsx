@@ -146,6 +146,26 @@ const BlogPostPage = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title,
+            "description": post.metaDescription || post.excerpt,
+            "datePublished": post.date,
+            "dateModified": post.date,
+            "author": {
+              "@type": "Organization",
+              "name": "4 Aces Visa",
+              "url": "https://www.4acesvisa.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "4 Aces Visa",
+              "logo": { "@type": "ImageObject", "url": "https://www.4acesvisa.com/favicon.ico" }
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.4acesvisa.com" },

@@ -2,7 +2,8 @@ import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Search, CheckCircle2, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { nocData, nocCategories, teerInfo, type NOCEntry } from "@/data/nocData";
+import { nocCategories, teerInfo, type NOCEntry } from "@/data/nocData";
+import { useNocCodes } from "@/hooks/useNocCodes";
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
@@ -14,6 +15,7 @@ const NOCFinderPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedTeer, setSelectedTeer] = useState<string>("All");
   const { update } = useUserProfile();
+  const nocData = useNocCodes();
 
   const results = useMemo<NOCEntry[]>(() => {
     const q = query.trim().toLowerCase();

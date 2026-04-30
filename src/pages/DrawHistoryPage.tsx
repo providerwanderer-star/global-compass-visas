@@ -2,7 +2,8 @@ import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { TrendingUp, CheckCircle2, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { expressEntryDraws, drawCategories, avgCRS } from "@/data/expressEntryDraws";
+import { drawCategories, avgCRS } from "@/data/expressEntryDraws";
+import { useExpressEntryDraws } from "@/hooks/useExpressEntryDraws";
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
@@ -23,6 +24,7 @@ const categoryColors: Record<string, string> = {
 const DrawHistoryPage = () => {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [crsCheck, setCrsCheck] = useState<string>("");
+  const expressEntryDraws = useExpressEntryDraws();
 
   const filtered = useMemo(() => {
     if (activeCategory === "All") return expressEntryDraws;

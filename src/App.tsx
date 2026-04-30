@@ -49,6 +49,7 @@ import SettlementGuidePage from "@/pages/SettlementGuidePage";
 import ProfileDashboardPage from "@/pages/ProfileDashboardPage";
 import ExitIntentModal from "@/components/ExitIntentModal";
 import AdminNocCoveragePage from "@/pages/AdminNocCoveragePage";
+import AdminPage from "@/pages/AdminPage";
 
 const queryClient = new QueryClient();
 

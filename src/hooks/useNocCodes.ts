@@ -17,6 +17,7 @@ export function useNocCodes(): NOCEntry[] {
     supabase
       .from("noc_codes")
       .select("code, title, alt_titles, teer, category, median_salary, express_entry_eligible, description")
+      .limit(1000)
       .then(({ data, error }) => {
         if (cancelled || error || !data || data.length === 0) return;
         // Build a map of static entries by code so we can preserve fields not in the DB (topProvinces).
@@ -33,6 +34,7 @@ export function useNocCodes(): NOCEntry[] {
             salaryRange: salaryRange(r.median_salary),
             topProvinces: fallback?.topProvinces ?? [],
             description: r.description,
+            medianSalary: r.median_salary ?? undefined,
           };
         });
         setCodes(mapped);

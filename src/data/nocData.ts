@@ -8,6 +8,7 @@ export interface NOCEntry {
   salaryRange: string; // CAD/year
   topProvinces: string[];
   description: string;
+  medianSalary?: number; // Annual CAD median (Job Bank). Optional — only present for DB-backed entries.
 }
 
 export const nocCategories = [

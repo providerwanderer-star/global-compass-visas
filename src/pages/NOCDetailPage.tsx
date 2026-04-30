@@ -170,6 +170,7 @@ const NOCDetailPage = () => {
         <meta name="twitter:title" content={`NOC ${noc.code} — ${noc.title}`} />
         <meta name="twitter:description" content={`TEER ${noc.teer} · CRS ${impact.range} · ${noc.salaryRange}. PR pathways for ${noc.title} in Canada.`} />
         <script type="application/ld+json">{JSON.stringify(occupationLD)}</script>
+        <script type="application/ld+json">{JSON.stringify(webPageLD)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLD)}</script>
       </Helmet>
@@ -225,7 +226,10 @@ const NOCDetailPage = () => {
             <div className="grid md:grid-cols-4 gap-3">
               <div className="bg-card border border-border rounded-xl p-4">
                 <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">Salary (CAD/yr)</p>
-                <p className="font-display font-bold text-foreground text-lg mt-1">{noc.salaryRange}</p>
+                <p className="font-display font-bold text-foreground text-lg mt-1">{salaryDisplay}</p>
+                {noc.medianSalary && (
+                  <p className="text-xs text-muted-foreground mt-0.5">Job Bank national median</p>
+                )}
               </div>
               <div className="bg-card border border-border rounded-xl p-4">
                 <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">TEER level</p>

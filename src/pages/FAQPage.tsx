@@ -182,6 +182,11 @@ const FAQPage = () => {
               "@context": "https://schema.org",
               "@type": "FAQPage",
               mainEntity: schemaFaqs,
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: [".faq-question", ".faq-answer"],
+                xpath: ["/html/head/title"],
+              },
             },
             {
               "@context": "https://schema.org",
@@ -190,6 +195,16 @@ const FAQPage = () => {
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com" },
                 { "@type": "ListItem", position: 2, name: "FAQ", item: "https://www.4acesvisa.com/faq" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://www.4acesvisa.com/faq",
+              name: "Immigration FAQ — 4 Aces Visa",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["h1", ".faq-question", ".faq-answer"],
+              },
             },
           ])}
         </script>

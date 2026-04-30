@@ -273,6 +273,20 @@ const HomePage = () => {
             ]
           })}
         </script>
+        {/* Speakable schema — surfaces the H1 + lead intro for Google Assistant / voice search */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            url: "https://www.4acesvisa.com/",
+            name: "4 Aces Visa — Canadian Immigration Consultants",
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", ".speakable", ".lead"],
+              xpath: ["/html/head/title"],
+            },
+          })}
+        </script>
       </Helmet>
 
       {/* Hero — bright split layout with people */}

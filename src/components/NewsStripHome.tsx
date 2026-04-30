@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Newspaper, ArrowRight, TrendingUp, MapPin, BookOpen, Calendar } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import { expressEntryDraws } from "@/data/expressEntryDraws";
-import { pnpDraws } from "@/data/pnpDraws";
-import { blogPosts } from "@/data/blogData";
+import { useExpressEntryDraws } from "@/hooks/useExpressEntryDraws";
+import { usePnpDraws } from "@/hooks/usePnpDraws";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 import { buildNewsSlug } from "@/lib/newsSlug";
 
 /**
@@ -21,7 +21,11 @@ interface Highlight {
   iso: number;
 }
 
-const buildHighlights = (): Highlight[] => {
+const buildHighlights = (
+  expressEntryDraws: ReturnType<typeof useExpressEntryDraws>,
+  pnpDraws: ReturnType<typeof usePnpDraws>,
+  blogPosts: ReturnType<typeof useBlogPosts>,
+): Highlight[] => {
   const items: Highlight[] = [];
 
   expressEntryDraws.slice(0, 3).forEach((d) => items.push({
@@ -61,7 +65,10 @@ const TYPE_STYLES = {
 } as const;
 
 const NewsStripHome = () => {
-  const highlights = buildHighlights();
+  const expressEntryDraws = useExpressEntryDraws();
+  const pnpDraws = usePnpDraws();
+  const blogPosts = useBlogPosts();
+  const highlights = buildHighlights(expressEntryDraws, pnpDraws, blogPosts);
 
   return (
     <section className="py-14 md:py-20 px-4 bg-background">

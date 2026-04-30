@@ -68,13 +68,13 @@ const NOCDetailPage = () => {
   const { code } = useParams<{ code: string }>();
   const nocData = useNocCodes();
   const noc = useMemo(() => nocData.find((n) => n.code === code), [code, nocData]);
+  const drawHistory = useNocDrawHistory(noc?.code, noc?.category as any);
 
   if (!noc) return <NotFound />;
 
   const teer = teerInfo[noc.teer];
   const impact = crsImpact(noc);
   const linkedJob = inDemandJobs.find((j) => j.noc === noc.code);
-  const drawHistory = useNocDrawHistory(noc.code, noc.category as any);
   const recentDraw = drawHistory[0];
   const url = `https://www.4acesvisa.com/noc/${noc.code}`;
   const salaryDisplay = noc.medianSalary

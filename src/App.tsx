@@ -110,6 +110,7 @@ const App = () => (
               <Route path="/settle-in-canada/:slug" element={<SettlementGuidePage />} />
               <Route path="/dashboard" element={<ProfileDashboardPage />} />
               <Route path="/admin/noc-coverage" element={<AdminNocCoveragePage />} />
+              <Route path="/admin" element={<AdminPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

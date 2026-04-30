@@ -10,6 +10,7 @@ export interface DrawRecord {
 // Source: IRCC Express Entry draw results (official)
 // Sorted newest first
 export const expressEntryDraws: DrawRecord[] = [
+  { drawNumber: 344, date: "April 30, 2026",    category: "General",     crsMin: 505, itas: 3600 },
   { drawNumber: 343, date: "April 15, 2026",    category: "STEM",        crsMin: 482, itas: 1500 },
   { drawNumber: 342, date: "April 2, 2026",     category: "General",     crsMin: 510, itas: 3500 },
   { drawNumber: 341, date: "March 19, 2026",    category: "Healthcare",  crsMin: 431, itas: 1000 },

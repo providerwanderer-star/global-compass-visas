@@ -1,9 +1,10 @@
 import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import { Search, CheckCircle2, XCircle } from "lucide-react";
+import { Search, CheckCircle2, XCircle, TrendingUp, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import { nocCategories, teerInfo, type NOCEntry } from "@/data/nocData";
 import { useNocCodes } from "@/hooks/useNocCodes";
+import { useRecentCutoffs } from "@/hooks/useRecentCutoffs";
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
@@ -16,6 +17,7 @@ const NOCFinderPage = () => {
   const [selectedTeer, setSelectedTeer] = useState<string>("All");
   const { update } = useUserProfile();
   const nocData = useNocCodes();
+  const cutoffs = useRecentCutoffs();
 
   const results = useMemo<NOCEntry[]>(() => {
     const q = query.trim().toLowerCase();
@@ -243,14 +245,33 @@ const NOCFinderPage = () => {
                     </p>
 
                     {/* Details */}
-                    <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground border-t border-border pt-3">
+                    <div className="grid grid-cols-3 gap-2 text-xs text-muted-foreground border-t border-border pt-3">
                       <div>
-                        <span className="font-semibold text-foreground block">Salary (CAD/yr)</span>
-                        {noc.salaryRange}
+                        <span className="font-semibold text-foreground block flex items-center gap-1">
+                          <DollarSign className="h-3 w-3" /> Median CAD/yr
+                        </span>
+                        {noc.medianSalary
+                          ? `$${noc.medianSalary.toLocaleString()}`
+                          : noc.salaryRange}
                       </div>
                       <div>
-                        <span className="font-semibold text-foreground block">Top Provinces</span>
-                        {noc.topProvinces.slice(0, 2).join(", ")}
+                        <span className="font-semibold text-foreground block flex items-center gap-1">
+                          <TrendingUp className="h-3 w-3" /> Recent Cutoff
+                        </span>
+                        {cutoffs[noc.code] ? (
+                          <span>
+                            CRS <strong className="text-foreground">{cutoffs[noc.code].crsMin}</strong>
+                            <span className="block text-[10px] opacity-75">
+                              {cutoffs[noc.code].category} draw
+                            </span>
+                          </span>
+                        ) : (
+                          <span className="opacity-60">No recent draw</span>
+                        )}
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground block">Top Province</span>
+                        {noc.topProvinces[0] ?? "—"}
                       </div>
                     </div>
 

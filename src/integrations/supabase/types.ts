@@ -59,6 +59,30 @@ export type Database = {
         }
         Relationships: []
       }
+      draw_noc_codes: {
+        Row: {
+          category: string
+          created_at: string
+          draw_number: number
+          id: string
+          noc_code: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          draw_number: number
+          id?: string
+          noc_code: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          draw_number?: number
+          id?: string
+          noc_code?: string
+        }
+        Relationships: []
+      }
       express_entry_draws: {
         Row: {
           category: string

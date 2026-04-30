@@ -3,9 +3,11 @@ import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
   ArrowLeft, ArrowRight, CheckCircle2, XCircle, MapPin, TrendingUp,
-  Calculator, Briefcase, GraduationCap, ExternalLink, Compass,
+  Calculator, Briefcase, GraduationCap, ExternalLink, Compass, DollarSign,
 } from "lucide-react";
-import { nocData, teerInfo } from "@/data/nocData";
+import { teerInfo } from "@/data/nocData";
+import { useNocCodes } from "@/hooks/useNocCodes";
+import { useNocDrawHistory } from "@/hooks/useNocDrawHistory";
 import { inDemandJobs } from "@/data/inDemandJobs";
 import AnimatedSection from "@/components/AnimatedSection";
 import ConnectedFooter from "@/components/ConnectedFooter";
@@ -64,14 +66,20 @@ function crsImpact(noc: { teer: number; eeEligible: boolean; category: string; c
 
 const NOCDetailPage = () => {
   const { code } = useParams<{ code: string }>();
-  const noc = useMemo(() => nocData.find((n) => n.code === code), [code]);
+  const nocData = useNocCodes();
+  const noc = useMemo(() => nocData.find((n) => n.code === code), [code, nocData]);
+  const drawHistory = useNocDrawHistory(noc?.code, noc?.category as any);
 
   if (!noc) return <NotFound />;
 
   const teer = teerInfo[noc.teer];
   const impact = crsImpact(noc);
   const linkedJob = inDemandJobs.find((j) => j.noc === noc.code);
+  const recentDraw = drawHistory[0];
   const url = `https://www.4acesvisa.com/noc/${noc.code}`;
+  const salaryDisplay = noc.medianSalary
+    ? `$${noc.medianSalary.toLocaleString()} CAD/yr`
+    : noc.salaryRange;
 
   const occupationLD = {
     "@context": "https://schema.org",
@@ -80,7 +88,15 @@ const NOCDetailPage = () => {
     occupationalCategory: `NOC ${noc.code}`,
     description: noc.description,
     url,
-    estimatedSalary: {
+    estimatedSalary: noc.medianSalary ? {
+      "@type": "MonetaryAmountDistribution",
+      name: "base",
+      currency: "CAD",
+      duration: "P1Y",
+      median: noc.medianSalary,
+      minValue: Math.round(noc.medianSalary * 0.8),
+      maxValue: Math.round(noc.medianSalary * 1.2),
+    } : {
       "@type": "MonetaryAmountDistribution",
       name: "base",
       currency: "CAD",
@@ -92,6 +108,16 @@ const NOCDetailPage = () => {
     occupationLocation: noc.topProvinces.map((p) => ({ "@type": "AdministrativeArea", name: p })),
     qualifications: teer.description,
     skills: noc.altTitles.join(", "),
+  };
+
+  const webPageLD = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `NOC ${noc.code} — ${noc.title}`,
+    description: noc.description,
+    url,
+    isPartOf: { "@type": "WebSite", name: "4 Aces Visa", url: "https://www.4acesvisa.com" },
+    primaryImageOfPage: { "@type": "ImageObject", url: "https://www.4acesvisa.com/og-default.jpg" },
   };
 
   const breadcrumbLD = {
@@ -144,6 +170,7 @@ const NOCDetailPage = () => {
         <meta name="twitter:title" content={`NOC ${noc.code} — ${noc.title}`} />
         <meta name="twitter:description" content={`TEER ${noc.teer} · CRS ${impact.range} · ${noc.salaryRange}. PR pathways for ${noc.title} in Canada.`} />
         <script type="application/ld+json">{JSON.stringify(occupationLD)}</script>
+        <script type="application/ld+json">{JSON.stringify(webPageLD)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLD)}</script>
       </Helmet>
@@ -199,7 +226,10 @@ const NOCDetailPage = () => {
             <div className="grid md:grid-cols-4 gap-3">
               <div className="bg-card border border-border rounded-xl p-4">
                 <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">Salary (CAD/yr)</p>
-                <p className="font-display font-bold text-foreground text-lg mt-1">{noc.salaryRange}</p>
+                <p className="font-display font-bold text-foreground text-lg mt-1">{salaryDisplay}</p>
+                {noc.medianSalary && (
+                  <p className="text-xs text-muted-foreground mt-0.5">Job Bank national median</p>
+                )}
               </div>
               <div className="bg-card border border-border rounded-xl p-4">
                 <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">TEER level</p>
@@ -302,6 +332,79 @@ const NOCDetailPage = () => {
                 <p className="text-xs text-muted-foreground mt-3">
                   IRCC matches your <strong>primary duties</strong> — not your job title — to the NOC. If your duties match, alternate titles are accepted.
                 </p>
+              </article>
+            )}
+
+            {/* Recent draw history */}
+            {drawHistory.length > 0 && (
+              <article>
+                <h2 className="font-display text-2xl font-bold text-foreground mb-3 inline-flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-primary" /> Recent Express Entry draws for NOC {noc.code}
+                </h2>
+                {recentDraw && (
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Most recent eligible cutoff: <strong className="text-foreground">CRS {recentDraw.crsMin}</strong> on {recentDraw.date} ({recentDraw.category} category, {recentDraw.itas.toLocaleString()} ITAs).
+                  </p>
+                )}
+                <div className="overflow-x-auto rounded-xl border border-border">
+                  <table className="w-full text-sm">
+                    <thead className="bg-secondary/60 text-foreground">
+                      <tr>
+                        <th className="text-left px-3 py-2 font-semibold">Draw #</th>
+                        <th className="text-left px-3 py-2 font-semibold">Date</th>
+                        <th className="text-left px-3 py-2 font-semibold">Category</th>
+                        <th className="text-right px-3 py-2 font-semibold">CRS Min</th>
+                        <th className="text-right px-3 py-2 font-semibold">ITAs</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {drawHistory.slice(0, 8).map((d) => (
+                        <tr key={d.drawNumber} className="border-t border-border">
+                          <td className="px-3 py-2 font-mono">{d.drawNumber}</td>
+                          <td className="px-3 py-2">{d.date}</td>
+                          <td className="px-3 py-2">{d.category}</td>
+                          <td className="px-3 py-2 text-right font-bold text-primary">{d.crsMin}</td>
+                          <td className="px-3 py-2 text-right">{d.itas.toLocaleString()}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </article>
+            )}
+
+            {/* Median salary visual */}
+            {noc.medianSalary && (
+              <article>
+                <h2 className="font-display text-2xl font-bold text-foreground mb-3 inline-flex items-center gap-2">
+                  <DollarSign className="h-5 w-5 text-primary" /> Median Canadian salary
+                </h2>
+                <div className="bg-card border border-border rounded-xl p-5">
+                  <div className="flex items-end justify-between gap-3 mb-2">
+                    <div>
+                      <p className="text-xs uppercase font-bold text-muted-foreground tracking-wider">National median (CAD/yr)</p>
+                      <p className="font-display text-3xl font-bold text-primary mt-1">${noc.medianSalary.toLocaleString()}</p>
+                    </div>
+                    <p className="text-xs text-muted-foreground">Source: Job Bank Canada</p>
+                  </div>
+                  <div className="space-y-2 mt-4">
+                    {[
+                      { label: "Entry-level (low)", val: Math.round(noc.medianSalary * 0.75), pct: 60 },
+                      { label: "Median", val: noc.medianSalary, pct: 80 },
+                      { label: "Experienced (high)", val: Math.round(noc.medianSalary * 1.25), pct: 100 },
+                    ].map((b) => (
+                      <div key={b.label}>
+                        <div className="flex justify-between text-xs text-muted-foreground mb-1">
+                          <span>{b.label}</span>
+                          <span className="font-semibold text-foreground">${b.val.toLocaleString()}</span>
+                        </div>
+                        <div className="h-3 bg-secondary rounded-full overflow-hidden">
+                          <div className="h-full bg-gradient-to-r from-primary to-gold" style={{ width: `${b.pct}%` }} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </article>
             )}
 

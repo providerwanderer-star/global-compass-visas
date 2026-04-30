@@ -335,6 +335,79 @@ const NOCDetailPage = () => {
               </article>
             )}
 
+            {/* Recent draw history */}
+            {drawHistory.length > 0 && (
+              <article>
+                <h2 className="font-display text-2xl font-bold text-foreground mb-3 inline-flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-primary" /> Recent Express Entry draws for NOC {noc.code}
+                </h2>
+                {recentDraw && (
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Most recent eligible cutoff: <strong className="text-foreground">CRS {recentDraw.crsMin}</strong> on {recentDraw.date} ({recentDraw.category} category, {recentDraw.itas.toLocaleString()} ITAs).
+                  </p>
+                )}
+                <div className="overflow-x-auto rounded-xl border border-border">
+                  <table className="w-full text-sm">
+                    <thead className="bg-secondary/60 text-foreground">
+                      <tr>
+                        <th className="text-left px-3 py-2 font-semibold">Draw #</th>
+                        <th className="text-left px-3 py-2 font-semibold">Date</th>
+                        <th className="text-left px-3 py-2 font-semibold">Category</th>
+                        <th className="text-right px-3 py-2 font-semibold">CRS Min</th>
+                        <th className="text-right px-3 py-2 font-semibold">ITAs</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {drawHistory.slice(0, 8).map((d) => (
+                        <tr key={d.drawNumber} className="border-t border-border">
+                          <td className="px-3 py-2 font-mono">{d.drawNumber}</td>
+                          <td className="px-3 py-2">{d.date}</td>
+                          <td className="px-3 py-2">{d.category}</td>
+                          <td className="px-3 py-2 text-right font-bold text-primary">{d.crsMin}</td>
+                          <td className="px-3 py-2 text-right">{d.itas.toLocaleString()}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </article>
+            )}
+
+            {/* Median salary visual */}
+            {noc.medianSalary && (
+              <article>
+                <h2 className="font-display text-2xl font-bold text-foreground mb-3 inline-flex items-center gap-2">
+                  <DollarSign className="h-5 w-5 text-primary" /> Median Canadian salary
+                </h2>
+                <div className="bg-card border border-border rounded-xl p-5">
+                  <div className="flex items-end justify-between gap-3 mb-2">
+                    <div>
+                      <p className="text-xs uppercase font-bold text-muted-foreground tracking-wider">National median (CAD/yr)</p>
+                      <p className="font-display text-3xl font-bold text-primary mt-1">${noc.medianSalary.toLocaleString()}</p>
+                    </div>
+                    <p className="text-xs text-muted-foreground">Source: Job Bank Canada</p>
+                  </div>
+                  <div className="space-y-2 mt-4">
+                    {[
+                      { label: "Entry-level (low)", val: Math.round(noc.medianSalary * 0.75), pct: 60 },
+                      { label: "Median", val: noc.medianSalary, pct: 80 },
+                      { label: "Experienced (high)", val: Math.round(noc.medianSalary * 1.25), pct: 100 },
+                    ].map((b) => (
+                      <div key={b.label}>
+                        <div className="flex justify-between text-xs text-muted-foreground mb-1">
+                          <span>{b.label}</span>
+                          <span className="font-semibold text-foreground">${b.val.toLocaleString()}</span>
+                        </div>
+                        <div className="h-3 bg-secondary rounded-full overflow-hidden">
+                          <div className="h-full bg-gradient-to-r from-primary to-gold" style={{ width: `${b.pct}%` }} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            )}
+
             {/* FAQ */}
             <article>
               <h2 className="font-display text-2xl font-bold text-foreground mb-3">FAQ — NOC {noc.code}</h2>

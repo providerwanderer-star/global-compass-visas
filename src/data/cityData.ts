@@ -1,7 +1,7 @@
 export interface CityData {
   slug: string;
   name: string;
-  country: "india" | "canada";
+  country: "india" | "canada" | "us";
   region: string;
   metaTitle: string;
   metaDescription: string;

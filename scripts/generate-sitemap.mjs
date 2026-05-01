@@ -69,6 +69,29 @@ const canadianCities = extractQuotedList(
   "canadianCities"
 ).map(toCitySlug);
 
+// Phase 6 — pull NEW PR-intent city slugs added in cityPRContent.ts
+function extractPRCitySlugs(filePath) {
+  const src = readFileSync(filePath, "utf8");
+  // Match both unquoted (TS) and quoted (JSON-style) `slug` keys.
+  return [
+    ...src.matchAll(/"?slug"?\s*:\s*"([a-z0-9-]+)"/g),
+  ].map((m) => m[1]);
+}
+let prCitySlugs = [];
+try {
+  prCitySlugs = extractPRCitySlugs(resolve(root, "src/data/cityPRContent.ts"));
+} catch {
+  prCitySlugs = [];
+}
+
+// US PR-intent city slugs (cityUSContent.ts)
+let usCitySlugs = [];
+try {
+  usCitySlugs = extractPRCitySlugs(resolve(root, "src/data/cityUSContent.ts"));
+} catch {
+  usCitySlugs = [];
+}
+
 const today = new Date().toISOString().slice(0, 10);
 
 // Build URL entries
@@ -135,6 +158,12 @@ for (const slug of settlementSlugs) add(`/settle-in-canada/${slug}`, 0.8);
 
 // City pages (if routed via /city/:slug — the route exists in App.tsx)
 for (const slug of [...indianCities, ...canadianCities]) add(`/city/${slug}`, 0.7);
+
+// Phase 6 — new PR-intent city pages (changefreq monthly, priority 0.7)
+for (const slug of prCitySlugs) add(`/city/${slug}`, 0.7);
+
+// US PR-intent city pages — H-1B / green-card-backlog audience (changefreq monthly, priority 0.7)
+for (const slug of usCitySlugs) add(`/city/${slug}`, 0.7);
 
 // NOC detail pages — high-traffic SEO surface
 for (const code of nocCodes) add(`/noc/${code}`, 0.75);

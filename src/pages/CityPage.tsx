@@ -36,18 +36,27 @@ const CityPage = () => {
     );
   }
 
+  // Phase 6 — upgraded PR-intent city pages render extra sections + new title/meta
+  const isPR = !!city.prContent;
+  const prTitle = `Canada PR from ${city.name} 2026 — Immigration Consultant | 4 Aces Visa`;
+  const prDesc = city.country === "india"
+    ? `Planning to move to Canada from ${city.name}? Get expert Express Entry, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free assessment.`
+    : `Living in ${city.name} on a work or study permit? Get expert CEC, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free PR assessment.`;
+  const pageTitle = isPR ? prTitle : city.metaTitle;
+  const pageDesc = isPR ? prDesc : city.metaDescription;
+
   return (
     <div>
       <Helmet>
-        <title>{city.metaTitle}</title>
-        <meta name="description" content={city.metaDescription} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
         <link rel="canonical" href={`https://www.4acesvisa.com/city/${city.slug}`} />
-        <meta property="og:title" content={city.metaTitle} />
-        <meta property="og:description" content={city.metaDescription} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDesc} />
         <meta property="og:url" content={`https://www.4acesvisa.com/city/${city.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={city.metaTitle} />
-        <meta name="twitter:description" content={city.metaDescription} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDesc} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -55,7 +64,7 @@ const CityPage = () => {
               {
                 "@type": "LocalBusiness",
                 name: `4 Aces Visa – ${city.name}`,
-                description: city.metaDescription,
+                description: pageDesc,
                 url: `https://www.4acesvisa.com/city/${city.slug}`,
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
@@ -66,7 +75,12 @@ const CityPage = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: city.region, item: `https://www.4acesvisa.com/immigration/${city.country === "india" ? "canada" : city.country}` },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: city.country === "india" ? "Immigration from India" : "Immigration from Canada",
+                    item: `https://www.4acesvisa.com/immigration/${city.country === "india" ? "canada" : "canada"}`,
+                  },
                   { "@type": "ListItem", position: 3, name: city.name, item: `https://www.4acesvisa.com/city/${city.slug}` },
                 ],
               },
@@ -98,10 +112,12 @@ const CityPage = () => {
             <span className="text-gold font-medium">{city.region}</span>
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
-            Immigration Consultant in {city.name}
+            {isPR
+              ? `Canada Immigration Consultant in ${city.name} — Express Entry & PR Services 2026`
+              : `Immigration Consultant in ${city.name}`}
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-lg text-primary-foreground/70 max-w-2xl mb-4">
-            {city.intro}
+            {isPR && city.tagline ? city.tagline : city.intro}
           </motion.p>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-gold/80 text-sm font-medium mb-6 badge-pulse inline-block">
             ⚡ Limited free consultation slots available — book your assessment today

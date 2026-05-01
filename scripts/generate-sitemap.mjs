@@ -72,7 +72,10 @@ const canadianCities = extractQuotedList(
 // Phase 6 — pull NEW PR-intent city slugs added in cityPRContent.ts
 function extractPRCitySlugs(filePath) {
   const src = readFileSync(filePath, "utf8");
-  return [...src.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]);
+  // Match both unquoted (TS) and quoted (JSON-style) `slug` keys.
+  return [
+    ...src.matchAll(/"?slug"?\s*:\s*"([a-z0-9-]+)"/g),
+  ].map((m) => m[1]);
 }
 let prCitySlugs = [];
 try {

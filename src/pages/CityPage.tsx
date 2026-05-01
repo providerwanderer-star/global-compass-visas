@@ -134,7 +134,9 @@ const CityPage = () => {
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
             {isPR
-              ? `Canada Immigration Consultant in ${city.name} — Express Entry & PR Services 2026`
+              ? isUS
+                ? `Canada Immigration from ${city.name} — Express Entry PR for US Residents & H-1B Holders 2026`
+                : `Canada Immigration Consultant in ${city.name} — Express Entry & PR Services 2026`
               : `Immigration Consultant in ${city.name}`}
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-lg text-primary-foreground/70 max-w-2xl mb-4">

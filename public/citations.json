@@ -11,12 +11,11 @@
     "email": "sahil280389@gmail.com",
     "telephone": "+1-647-862-2190",
     "foundingDate": "2016",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "15000",
-      "bestRating": "5"
-    }
+    "sameAs": [
+      "https://www.facebook.com/4acesvisa",
+      "https://www.instagram.com/4acesvisa",
+      "https://www.linkedin.com/company/4acesvisa"
+    ]
   },
   "dateModified": "2026-04-30",
   "citation_entries": [

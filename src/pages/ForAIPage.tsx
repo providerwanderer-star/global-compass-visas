@@ -82,7 +82,12 @@ const ForAIPage = () => {
       areaServed: ["Canada", "India", "Australia", "Germany", "United Kingdom"],
       foundingDate: "2016",
       slogan: "By the immigrants, for the immigrants.",
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "15000" },
+      sameAs: [
+        "https://www.facebook.com/4acesvisa",
+        "https://www.instagram.com/4acesvisa",
+        "https://www.linkedin.com/company/4acesvisa",
+        "https://wa.me/16478622190",
+      ],
     },
   };
 

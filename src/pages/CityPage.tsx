@@ -38,12 +38,33 @@ const CityPage = () => {
 
   // Phase 6 — upgraded PR-intent city pages render extra sections + new title/meta
   const isPR = !!city.prContent;
-  const prTitle = `Canada PR from ${city.name} 2026 — Immigration Consultant | 4 Aces Visa`;
-  const prDesc = city.country === "india"
-    ? `Planning to move to Canada from ${city.name}? Get expert Express Entry, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free assessment.`
-    : `Living in ${city.name} on a work or study permit? Get expert CEC, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free PR assessment.`;
+  const isUS = city.country === "us";
+  // Use the city's stored metaTitle/metaDescription when present (US cities
+  // have a US-specific format already baked in). For India/Canada PR cities
+  // fall back to the original PR title format.
+  const prTitle = isUS
+    ? city.metaTitle
+    : `Canada PR from ${city.name} 2026 — Immigration Consultant | 4 Aces Visa`;
+  const prDesc = isUS
+    ? city.metaDescription
+    : city.country === "india"
+      ? `Planning to move to Canada from ${city.name}? Get expert Express Entry, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free assessment.`
+      : `Living in ${city.name} on a work or study permit? Get expert CEC, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free PR assessment.`;
   const pageTitle = isPR ? prTitle : city.metaTitle;
   const pageDesc = isPR ? prDesc : city.metaDescription;
+
+  const addressCountry =
+    city.country === "india" ? "IN" : city.country === "us" ? "US" : "CA";
+  const breadcrumbParentName =
+    city.country === "india"
+      ? "Immigration from India"
+      : city.country === "us"
+        ? "Move to Canada from USA"
+        : "Immigration from Canada";
+  const breadcrumbParentItem =
+    city.country === "us"
+      ? "https://www.4acesvisa.com/canada-pr-from/usa"
+      : "https://www.4acesvisa.com/immigration/canada";
 
   return (
     <div>
@@ -68,7 +89,7 @@ const CityPage = () => {
                 url: `https://www.4acesvisa.com/city/${city.slug}`,
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
-                address: { "@type": "PostalAddress", addressLocality: city.name, addressCountry: city.country === "india" ? "IN" : "CA" },
+                address: { "@type": "PostalAddress", addressLocality: city.name, addressCountry },
                 aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500", bestRating: "5" },
               },
               {
@@ -78,8 +99,8 @@ const CityPage = () => {
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: city.country === "india" ? "Immigration from India" : "Immigration from Canada",
-                    item: `https://www.4acesvisa.com/immigration/${city.country === "india" ? "canada" : "canada"}`,
+                    name: breadcrumbParentName,
+                    item: breadcrumbParentItem,
                   },
                   { "@type": "ListItem", position: 3, name: city.name, item: `https://www.4acesvisa.com/city/${city.slug}` },
                 ],

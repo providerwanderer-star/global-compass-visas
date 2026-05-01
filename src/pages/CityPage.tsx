@@ -143,11 +143,95 @@ const CityPage = () => {
           <AnimatedSection>
             <div className="bg-card rounded-xl border border-gold/20 p-6 md:p-8 mb-12 card-interactive">
               <h2 className="font-display text-xl font-bold text-foreground mb-3">
-                Why {city.name} for Immigration?
+                {isPR
+                  ? `Why ${city.name} Professionals Are Moving to Canada in 2026`
+                  : `Why ${city.name} for Immigration?`}
               </h2>
               <p className="text-muted-foreground leading-relaxed">{city.localInsight}</p>
             </div>
           </AnimatedSection>
+
+          {isPR && city.prContent && (
+            <>
+              {/* Top Canada PR Pathways */}
+              <AnimatedSection>
+                <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-8 card-interactive">
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">
+                    Top Canada PR Pathways for {city.name} Applicants
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{city.prContent.topPathways}</p>
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    <Link to="/services/express-entry" className="text-gold hover:underline font-medium">→ Express Entry guide</Link>
+                    <Link to="/services/pnp-application" className="text-gold hover:underline font-medium">→ PNP application</Link>
+                    <Link to="/crs-calculator" className="text-gold hover:underline font-medium">→ CRS calculator</Link>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Express Entry — How It Works */}
+              <AnimatedSection>
+                <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-8 card-interactive">
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">
+                    Express Entry from {city.name} — How It Works
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{city.prContent.expressEntryHow}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {city.prContent.cityProfile}
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-3 italic">{city.prContent.diasporaNote}</p>
+                </div>
+              </AnimatedSection>
+
+              {/* Popular NOC Codes */}
+              <AnimatedSection>
+                <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-8 card-interactive">
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-4">
+                    Popular NOC Codes Among {city.name} Immigrants
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {city.prContent.topNocCodes.map((noc) => (
+                      <Link
+                        key={noc.code}
+                        to={`/noc/${noc.code}`}
+                        className="flex items-start gap-3 bg-background rounded-lg border border-border p-4 hover:border-gold/50 transition-colors group"
+                      >
+                        <span className="font-mono text-gold font-semibold shrink-0">{noc.code}</span>
+                        <span className="text-sm text-foreground group-hover:text-gold transition-colors">{noc.title}</span>
+                      </Link>
+                    ))}
+                  </div>
+                  <Link to="/noc-finder" className="inline-block mt-4 text-sm text-gold hover:underline font-medium">
+                    → Browse all 460+ NOC codes
+                  </Link>
+                </div>
+              </AnimatedSection>
+
+              {/* Free Eligibility Assessment */}
+              <AnimatedSection>
+                <div className="bg-gradient-to-br from-primary to-primary/90 rounded-xl border border-gold/40 p-6 md:p-8 mb-8 text-primary-foreground">
+                  <h2 className="font-display text-2xl font-bold mb-3">
+                    Free Eligibility Assessment for {city.name} Residents
+                  </h2>
+                  <p className="text-primary-foreground/85 leading-relaxed mb-4">
+                    Find out which Canada PR pathway fits your profile in under 2 minutes.
+                    Our RCIC-led team reviews every {city.name} assessment personally and replies within 24 hours.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <a href="#form">
+                      <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold">
+                        Start Free Assessment <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
+                    <Link to="/contact">
+                      <Button size="lg" variant="outline" className="bg-transparent border-white/40 text-white hover:bg-white/10">
+                        Contact Us
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </AnimatedSection>
+            </>
+          )}
 
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-foreground mb-8">

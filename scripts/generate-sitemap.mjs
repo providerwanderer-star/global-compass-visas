@@ -148,6 +148,9 @@ for (const slug of settlementSlugs) add(`/settle-in-canada/${slug}`, 0.8);
 // City pages (if routed via /city/:slug — the route exists in App.tsx)
 for (const slug of [...indianCities, ...canadianCities]) add(`/city/${slug}`, 0.7);
 
+// Phase 6 — new PR-intent city pages (changefreq monthly, priority 0.7)
+for (const slug of prCitySlugs) add(`/city/${slug}`, 0.7);
+
 // NOC detail pages — high-traffic SEO surface
 for (const code of nocCodes) add(`/noc/${code}`, 0.75);
 

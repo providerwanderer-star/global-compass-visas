@@ -45,6 +45,21 @@ const originSlugs = extractSlugs(resolve(root, "src/data/geoOriginData.ts"));
 const crsBandSlugs = extractSlugs(resolve(root, "src/data/crsBandData.ts"));
 const settlementSlugs = extractSlugs(resolve(root, "src/data/settlementData.ts"));
 
+// Pull NOC codes from the local nocData.ts as a build-time fallback. The
+// live edge function (`/functions/v1/sitemap`) supersedes this with the full
+// Supabase-driven list and per-row lastmod dates.
+function extractNocCodes(filePath) {
+  const src = readFileSync(filePath, "utf8");
+  const matches = [...src.matchAll(/code:\s*"(\d{4,5})"/g)];
+  return [...new Set(matches.map((m) => m[1]))];
+}
+let nocCodes = [];
+try {
+  nocCodes = extractNocCodes(resolve(root, "src/data/nocData.ts"));
+} catch {
+  nocCodes = [];
+}
+
 const indianCities = extractQuotedList(
   resolve(root, "src/data/cityData.ts"),
   "indianCities"
@@ -120,6 +135,17 @@ for (const slug of settlementSlugs) add(`/settle-in-canada/${slug}`, 0.8);
 
 // City pages (if routed via /city/:slug — the route exists in App.tsx)
 for (const slug of [...indianCities, ...canadianCities]) add(`/city/${slug}`, 0.7);
+
+// NOC detail pages — high-traffic SEO surface
+for (const code of nocCodes) add(`/noc/${code}`, 0.75);
+
+// AI / live data pages
+add("/for-ai", 0.5, "weekly");
+add("/express-entry/draws", 0.95, "daily");
+add("/pnp-tracker", 0.9, "daily");
+add("/noc-finder", 0.9, "weekly");
+add("/news", 0.9, "daily");
+add("/processing-times", 0.85, "weekly");
 
 // Generate XML
 const xml = [

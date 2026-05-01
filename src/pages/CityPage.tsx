@@ -38,12 +38,33 @@ const CityPage = () => {
 
   // Phase 6 — upgraded PR-intent city pages render extra sections + new title/meta
   const isPR = !!city.prContent;
-  const prTitle = `Canada PR from ${city.name} 2026 — Immigration Consultant | 4 Aces Visa`;
-  const prDesc = city.country === "india"
-    ? `Planning to move to Canada from ${city.name}? Get expert Express Entry, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free assessment.`
-    : `Living in ${city.name} on a work or study permit? Get expert CEC, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free PR assessment.`;
+  const isUS = city.country === "us";
+  // Use the city's stored metaTitle/metaDescription when present (US cities
+  // have a US-specific format already baked in). For India/Canada PR cities
+  // fall back to the original PR title format.
+  const prTitle = isUS
+    ? city.metaTitle
+    : `Canada PR from ${city.name} 2026 — Immigration Consultant | 4 Aces Visa`;
+  const prDesc = isUS
+    ? city.metaDescription
+    : city.country === "india"
+      ? `Planning to move to Canada from ${city.name}? Get expert Express Entry, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free assessment.`
+      : `Living in ${city.name} on a work or study permit? Get expert CEC, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free PR assessment.`;
   const pageTitle = isPR ? prTitle : city.metaTitle;
   const pageDesc = isPR ? prDesc : city.metaDescription;
+
+  const addressCountry =
+    city.country === "india" ? "IN" : city.country === "us" ? "US" : "CA";
+  const breadcrumbParentName =
+    city.country === "india"
+      ? "Immigration from India"
+      : city.country === "us"
+        ? "Move to Canada from USA"
+        : "Immigration from Canada";
+  const breadcrumbParentItem =
+    city.country === "us"
+      ? "https://www.4acesvisa.com/canada-pr-from/usa"
+      : "https://www.4acesvisa.com/immigration/canada";
 
   return (
     <div>
@@ -68,7 +89,7 @@ const CityPage = () => {
                 url: `https://www.4acesvisa.com/city/${city.slug}`,
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
-                address: { "@type": "PostalAddress", addressLocality: city.name, addressCountry: city.country === "india" ? "IN" : "CA" },
+                address: { "@type": "PostalAddress", addressLocality: city.name, addressCountry },
                 aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500", bestRating: "5" },
               },
               {
@@ -78,8 +99,8 @@ const CityPage = () => {
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: city.country === "india" ? "Immigration from India" : "Immigration from Canada",
-                    item: `https://www.4acesvisa.com/immigration/${city.country === "india" ? "canada" : "canada"}`,
+                    name: breadcrumbParentName,
+                    item: breadcrumbParentItem,
                   },
                   { "@type": "ListItem", position: 3, name: city.name, item: `https://www.4acesvisa.com/city/${city.slug}` },
                 ],
@@ -113,7 +134,9 @@ const CityPage = () => {
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
             {isPR
-              ? `Canada Immigration Consultant in ${city.name} — Express Entry & PR Services 2026`
+              ? isUS
+                ? `Canada Immigration from ${city.name} — Express Entry PR for US Residents & H-1B Holders 2026`
+                : `Canada Immigration Consultant in ${city.name} — Express Entry & PR Services 2026`
               : `Immigration Consultant in ${city.name}`}
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-lg text-primary-foreground/70 max-w-2xl mb-4">
@@ -144,7 +167,9 @@ const CityPage = () => {
             <div className="bg-card rounded-xl border border-gold/20 p-6 md:p-8 mb-12 card-interactive">
               <h2 className="font-display text-xl font-bold text-foreground mb-3">
                 {isPR
-                  ? `Why ${city.name} Professionals Are Moving to Canada in 2026`
+                  ? isUS
+                    ? `Why ${city.name} Residents Are Choosing Canada Over the US Green Card Wait`
+                    : `Why ${city.name} Professionals Are Moving to Canada in 2026`
                   : `Why ${city.name} for Immigration?`}
               </h2>
               <p className="text-muted-foreground leading-relaxed">{city.localInsight}</p>
@@ -318,7 +343,9 @@ const CityPage = () => {
           <AnimatedSection className="text-center mb-8">
             <h2 className="font-display text-3xl font-bold text-foreground">
               {isPR
-                ? `Frequently Asked Questions — Canada Immigration from ${city.name}`
+                ? isUS
+                  ? `Frequently Asked Questions — Moving to Canada from ${city.name}`
+                  : `Frequently Asked Questions — Canada Immigration from ${city.name}`
                 : `Immigration FAQ — ${city.name}`}
             </h2>
           </AnimatedSection>

@@ -10,6 +10,18 @@ export interface CityData {
   services: string[];
   testimonial: { name: string; text: string; visa: string };
   faqs: { question: string; answer: string }[];
+  /** Optional PR-intent structured content (Phase 6 city pages). When present,
+   *  CityPage renders the upgraded SEO/AEO sections. */
+  prContent?: {
+    whyMoving: string;
+    topPathways: string;
+    expressEntryHow: string;
+    topNocCodes: { code: string; title: string }[];
+    cityProfile: string;
+    diasporaNote: string;
+  };
+  /** Optional one-line tagline used in the hero of upgraded city pages. */
+  tagline?: string;
 }
 
 const indianCityInsights: Record<string, string> = {
@@ -222,4 +234,17 @@ const canadianCities: CityData[] = [
   };
 });
 
-export const cities: CityData[] = [...indianCities, ...canadianCities];
+import { buildPRCityEntries } from "@/data/cityPRContent";
+
+// Merge the legacy city entries with the new Phase 6 PR-intent cities.
+// Existing slugs are preserved (no overwrite) so nothing in the legacy
+// pages changes — new cities are only appended.
+const prCityEntries = buildPRCityEntries();
+const existingSlugs = new Set([...indianCities, ...canadianCities].map((c) => c.slug));
+const newCityEntries = prCityEntries.filter((c) => !existingSlugs.has(c.slug));
+
+export const cities: CityData[] = [
+  ...indianCities,
+  ...canadianCities,
+  ...newCityEntries,
+];

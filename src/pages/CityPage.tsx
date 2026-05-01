@@ -36,18 +36,27 @@ const CityPage = () => {
     );
   }
 
+  // Phase 6 — upgraded PR-intent city pages render extra sections + new title/meta
+  const isPR = !!city.prContent;
+  const prTitle = `Canada PR from ${city.name} 2026 — Immigration Consultant | 4 Aces Visa`;
+  const prDesc = city.country === "india"
+    ? `Planning to move to Canada from ${city.name}? Get expert Express Entry, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free assessment.`
+    : `Living in ${city.name} on a work or study permit? Get expert CEC, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free PR assessment.`;
+  const pageTitle = isPR ? prTitle : city.metaTitle;
+  const pageDesc = isPR ? prDesc : city.metaDescription;
+
   return (
     <div>
       <Helmet>
-        <title>{city.metaTitle}</title>
-        <meta name="description" content={city.metaDescription} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
         <link rel="canonical" href={`https://www.4acesvisa.com/city/${city.slug}`} />
-        <meta property="og:title" content={city.metaTitle} />
-        <meta property="og:description" content={city.metaDescription} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDesc} />
         <meta property="og:url" content={`https://www.4acesvisa.com/city/${city.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={city.metaTitle} />
-        <meta name="twitter:description" content={city.metaDescription} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDesc} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -55,7 +64,7 @@ const CityPage = () => {
               {
                 "@type": "LocalBusiness",
                 name: `4 Aces Visa – ${city.name}`,
-                description: city.metaDescription,
+                description: pageDesc,
                 url: `https://www.4acesvisa.com/city/${city.slug}`,
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
@@ -66,7 +75,12 @@ const CityPage = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: city.region, item: `https://www.4acesvisa.com/immigration/${city.country === "india" ? "canada" : city.country}` },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: city.country === "india" ? "Immigration from India" : "Immigration from Canada",
+                    item: `https://www.4acesvisa.com/immigration/${city.country === "india" ? "canada" : "canada"}`,
+                  },
                   { "@type": "ListItem", position: 3, name: city.name, item: `https://www.4acesvisa.com/city/${city.slug}` },
                 ],
               },
@@ -98,10 +112,12 @@ const CityPage = () => {
             <span className="text-gold font-medium">{city.region}</span>
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
-            Immigration Consultant in {city.name}
+            {isPR
+              ? `Canada Immigration Consultant in ${city.name} — Express Entry & PR Services 2026`
+              : `Immigration Consultant in ${city.name}`}
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-lg text-primary-foreground/70 max-w-2xl mb-4">
-            {city.intro}
+            {isPR && city.tagline ? city.tagline : city.intro}
           </motion.p>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-gold/80 text-sm font-medium mb-6 badge-pulse inline-block">
             ⚡ Limited free consultation slots available — book your assessment today
@@ -127,11 +143,95 @@ const CityPage = () => {
           <AnimatedSection>
             <div className="bg-card rounded-xl border border-gold/20 p-6 md:p-8 mb-12 card-interactive">
               <h2 className="font-display text-xl font-bold text-foreground mb-3">
-                Why {city.name} for Immigration?
+                {isPR
+                  ? `Why ${city.name} Professionals Are Moving to Canada in 2026`
+                  : `Why ${city.name} for Immigration?`}
               </h2>
               <p className="text-muted-foreground leading-relaxed">{city.localInsight}</p>
             </div>
           </AnimatedSection>
+
+          {isPR && city.prContent && (
+            <>
+              {/* Top Canada PR Pathways */}
+              <AnimatedSection>
+                <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-8 card-interactive">
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">
+                    Top Canada PR Pathways for {city.name} Applicants
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{city.prContent.topPathways}</p>
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    <Link to="/services/express-entry" className="text-gold hover:underline font-medium">→ Express Entry guide</Link>
+                    <Link to="/services/pnp-application" className="text-gold hover:underline font-medium">→ PNP application</Link>
+                    <Link to="/crs-calculator" className="text-gold hover:underline font-medium">→ CRS calculator</Link>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Express Entry — How It Works */}
+              <AnimatedSection>
+                <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-8 card-interactive">
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">
+                    Express Entry from {city.name} — How It Works
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{city.prContent.expressEntryHow}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {city.prContent.cityProfile}
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-3 italic">{city.prContent.diasporaNote}</p>
+                </div>
+              </AnimatedSection>
+
+              {/* Popular NOC Codes */}
+              <AnimatedSection>
+                <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-8 card-interactive">
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-4">
+                    Popular NOC Codes Among {city.name} Immigrants
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {city.prContent.topNocCodes.map((noc) => (
+                      <Link
+                        key={noc.code}
+                        to={`/noc/${noc.code}`}
+                        className="flex items-start gap-3 bg-background rounded-lg border border-border p-4 hover:border-gold/50 transition-colors group"
+                      >
+                        <span className="font-mono text-gold font-semibold shrink-0">{noc.code}</span>
+                        <span className="text-sm text-foreground group-hover:text-gold transition-colors">{noc.title}</span>
+                      </Link>
+                    ))}
+                  </div>
+                  <Link to="/noc-finder" className="inline-block mt-4 text-sm text-gold hover:underline font-medium">
+                    → Browse all 460+ NOC codes
+                  </Link>
+                </div>
+              </AnimatedSection>
+
+              {/* Free Eligibility Assessment */}
+              <AnimatedSection>
+                <div className="bg-gradient-to-br from-primary to-primary/90 rounded-xl border border-gold/40 p-6 md:p-8 mb-8 text-primary-foreground">
+                  <h2 className="font-display text-2xl font-bold mb-3">
+                    Free Eligibility Assessment for {city.name} Residents
+                  </h2>
+                  <p className="text-primary-foreground/85 leading-relaxed mb-4">
+                    Find out which Canada PR pathway fits your profile in under 2 minutes.
+                    Our RCIC-led team reviews every {city.name} assessment personally and replies within 24 hours.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <a href="#form">
+                      <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-semibold">
+                        Start Free Assessment <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
+                    <Link to="/contact">
+                      <Button size="lg" variant="outline" className="bg-transparent border-white/40 text-white hover:bg-white/10">
+                        Contact Us
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </AnimatedSection>
+            </>
+          )}
 
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-foreground mb-8">
@@ -217,7 +317,9 @@ const CityPage = () => {
         <div className="container-narrow mx-auto max-w-3xl">
           <AnimatedSection className="text-center mb-8">
             <h2 className="font-display text-3xl font-bold text-foreground">
-              Immigration FAQ — {city.name}
+              {isPR
+                ? `Frequently Asked Questions — Canada Immigration from ${city.name}`
+                : `Immigration FAQ — ${city.name}`}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">

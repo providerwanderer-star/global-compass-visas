@@ -167,7 +167,9 @@ const CityPage = () => {
             <div className="bg-card rounded-xl border border-gold/20 p-6 md:p-8 mb-12 card-interactive">
               <h2 className="font-display text-xl font-bold text-foreground mb-3">
                 {isPR
-                  ? `Why ${city.name} Professionals Are Moving to Canada in 2026`
+                  ? isUS
+                    ? `Why ${city.name} Residents Are Choosing Canada Over the US Green Card Wait`
+                    : `Why ${city.name} Professionals Are Moving to Canada in 2026`
                   : `Why ${city.name} for Immigration?`}
               </h2>
               <p className="text-muted-foreground leading-relaxed">{city.localInsight}</p>
@@ -341,7 +343,9 @@ const CityPage = () => {
           <AnimatedSection className="text-center mb-8">
             <h2 className="font-display text-3xl font-bold text-foreground">
               {isPR
-                ? `Frequently Asked Questions — Canada Immigration from ${city.name}`
+                ? isUS
+                  ? `Frequently Asked Questions — Moving to Canada from ${city.name}`
+                  : `Frequently Asked Questions — Canada Immigration from ${city.name}`
                 : `Immigration FAQ — ${city.name}`}
             </h2>
           </AnimatedSection>

@@ -119,7 +119,12 @@ Deno.serve(async (req) => {
         // Home reflects most recent of EE / PNP / today
         lastmod = [eeLastmod, pnpLastmod, t].sort().reverse()[0];
       }
-      urls.push({ loc: `${SITE}${r.loc}`, lastmod, ...r });
+      urls.push({
+        loc: `${SITE}${r.loc}`,
+        lastmod,
+        changefreq: r.changefreq,
+        priority: r.priority,
+      });
     }
 
     // Service pages

@@ -317,7 +317,9 @@ const CityPage = () => {
         <div className="container-narrow mx-auto max-w-3xl">
           <AnimatedSection className="text-center mb-8">
             <h2 className="font-display text-3xl font-bold text-foreground">
-              Immigration FAQ — {city.name}
+              {isPR
+                ? `Frequently Asked Questions — Canada Immigration from ${city.name}`
+                : `Immigration FAQ — ${city.name}`}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">

@@ -69,6 +69,18 @@ const canadianCities = extractQuotedList(
   "canadianCities"
 ).map(toCitySlug);
 
+// Phase 6 — pull NEW PR-intent city slugs added in cityPRContent.ts
+function extractPRCitySlugs(filePath) {
+  const src = readFileSync(filePath, "utf8");
+  return [...src.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]);
+}
+let prCitySlugs = [];
+try {
+  prCitySlugs = extractPRCitySlugs(resolve(root, "src/data/cityPRContent.ts"));
+} catch {
+  prCitySlugs = [];
+}
+
 const today = new Date().toISOString().slice(0, 10);
 
 // Build URL entries

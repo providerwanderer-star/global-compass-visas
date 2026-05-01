@@ -59,7 +59,6 @@ const StateHubPage = () => {
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
                 areaServed: hub.name,
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500", bestRating: "5" },
               },
               {
                 "@type": "BreadcrumbList",

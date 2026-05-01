@@ -128,12 +128,6 @@ const HomePage = () => {
             "logo": "https://www.4acesvisa.com/logo.png",
             "description": "RCIC-regulated Canadian immigration consultants helping skilled workers, families, and students move to Canada.",
             "address": { "@type": "PostalAddress", "addressCountry": "CA" },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "87",
-              "bestRating": "5"
-            },
             "sameAs": [
               "https://www.facebook.com/4acesvisa",
               "https://www.instagram.com/4acesvisa",
@@ -183,7 +177,12 @@ const HomePage = () => {
                   "Australia Skilled Migration", "Germany Job Seeker Visa",
                   "EU Blue Card", "UK Skilled Worker Visa"
                 ],
-                "sameAs": ["https://wa.me/16478622190"]
+                "sameAs": [
+                  "https://www.facebook.com/4acesvisa",
+                  "https://www.instagram.com/4acesvisa",
+                  "https://www.linkedin.com/company/4acesvisa",
+                  "https://wa.me/16478622190"
+                ]
               },
               {
                 "@type": "LocalBusiness",
@@ -220,12 +219,6 @@ const HomePage = () => {
                     "closes": "15:00"
                   }
                 ],
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.9",
-                  "reviewCount": "15000",
-                  "bestRating": "5"
-                },
                 "hasOfferCatalog": {
                   "@type": "OfferCatalog",
                   "name": "Immigration Services",

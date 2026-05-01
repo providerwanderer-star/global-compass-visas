@@ -235,16 +235,21 @@ const canadianCities: CityData[] = [
 });
 
 import { buildPRCityEntries } from "@/data/cityPRContent";
+import { buildUSCityEntries } from "@/data/cityUSContent";
 
 // Merge the legacy city entries with the new Phase 6 PR-intent cities.
 // Existing slugs are preserved (no overwrite) so nothing in the legacy
 // pages changes — new cities are only appended.
 const prCityEntries = buildPRCityEntries();
+const usCityEntries = buildUSCityEntries();
 const existingSlugs = new Set([...indianCities, ...canadianCities].map((c) => c.slug));
 const newCityEntries = prCityEntries.filter((c) => !existingSlugs.has(c.slug));
+const usedSlugs = new Set([...existingSlugs, ...newCityEntries.map((c) => c.slug)]);
+const newUSEntries = usCityEntries.filter((c) => !usedSlugs.has(c.slug));
 
 export const cities: CityData[] = [
   ...indianCities,
   ...canadianCities,
   ...newCityEntries,
+  ...newUSEntries,
 ];

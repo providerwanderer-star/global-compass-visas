@@ -10,6 +10,18 @@ export interface CityData {
   services: string[];
   testimonial: { name: string; text: string; visa: string };
   faqs: { question: string; answer: string }[];
+  /** Optional PR-intent structured content (Phase 6 city pages). When present,
+   *  CityPage renders the upgraded SEO/AEO sections. */
+  prContent?: {
+    whyMoving: string;
+    topPathways: string;
+    expressEntryHow: string;
+    topNocCodes: { code: string; title: string }[];
+    cityProfile: string;
+    diasporaNote: string;
+  };
+  /** Optional one-line tagline used in the hero of upgraded city pages. */
+  tagline?: string;
 }
 
 const indianCityInsights: Record<string, string> = {

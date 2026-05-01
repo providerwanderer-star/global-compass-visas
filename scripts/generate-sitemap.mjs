@@ -81,6 +81,14 @@ try {
   prCitySlugs = [];
 }
 
+// US PR-intent city slugs (cityUSContent.ts)
+let usCitySlugs = [];
+try {
+  usCitySlugs = extractPRCitySlugs(resolve(root, "src/data/cityUSContent.ts"));
+} catch {
+  usCitySlugs = [];
+}
+
 const today = new Date().toISOString().slice(0, 10);
 
 // Build URL entries
@@ -150,6 +158,9 @@ for (const slug of [...indianCities, ...canadianCities]) add(`/city/${slug}`, 0.
 
 // Phase 6 — new PR-intent city pages (changefreq monthly, priority 0.7)
 for (const slug of prCitySlugs) add(`/city/${slug}`, 0.7);
+
+// US PR-intent city pages — H-1B / green-card-backlog audience (changefreq monthly, priority 0.7)
+for (const slug of usCitySlugs) add(`/city/${slug}`, 0.7);
 
 // NOC detail pages — high-traffic SEO surface
 for (const code of nocCodes) add(`/noc/${code}`, 0.75);

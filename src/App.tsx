@@ -34,6 +34,7 @@ import PNPTrackerPage from "@/pages/PNPTrackerPage";
 import ProcessingTimesPage from "@/pages/ProcessingTimesPage";
 import ImmigrationCostPage from "@/pages/ImmigrationCostPage";
 import ComparisonPage from "@/pages/ComparisonPage";
+import ComparePage from "@/pages/ComparePage";
 import AustraliaSubPage from "@/pages/AustraliaSubPage";
 import UKImmigrationPage from "@/pages/UKImmigrationPage";
 import GermanyImmigrationPage from "@/pages/GermanyImmigrationPage";
@@ -88,6 +89,7 @@ const App = () => (
               <Route path="/canada/:slug" element={<StateHubPage />} />
               {/* GEO/AIO Optimized New Pages */}
               <Route path="/compare" element={<ComparisonPage />} />
+              <Route path="/compare/:slug" element={<ComparePage />} />
               <Route path="/australia/skilled-migration" element={<AustraliaSubPage />} />
               <Route path="/australia/subclass-189" element={<AustraliaSubPage />} />
               <Route path="/australia/subclass-190" element={<AustraliaSubPage />} />

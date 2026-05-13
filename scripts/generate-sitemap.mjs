@@ -44,6 +44,7 @@ const stateSlugs = extractSlugs(resolve(root, "src/data/stateHubData.ts"));
 const originSlugs = extractSlugs(resolve(root, "src/data/geoOriginData.ts"));
 const crsBandSlugs = extractSlugs(resolve(root, "src/data/crsBandData.ts"));
 const settlementSlugs = extractSlugs(resolve(root, "src/data/settlementData.ts"));
+const comparisonSlugs = extractSlugs(resolve(root, "src/data/comparisonData.ts"));
 
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
@@ -107,6 +108,7 @@ add("/crs-calculator", 0.9);
 add("/faq", 0.9, "weekly");
 add("/blog", 0.9, "weekly");
 add("/compare", 0.7);
+for (const slug of comparisonSlugs) add(`/compare/${slug}`, 0.85, "monthly");
 add("/express-entry", 0.9, "weekly");
 
 // India hub

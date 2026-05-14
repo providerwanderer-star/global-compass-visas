@@ -46,6 +46,22 @@ const crsBandSlugs = extractSlugs(resolve(root, "src/data/crsBandData.ts"));
 const settlementSlugs = extractSlugs(resolve(root, "src/data/settlementData.ts"));
 const comparisonSlugs = extractSlugs(resolve(root, "src/data/comparisonData.ts"));
 
+// Wave 2 — Origin geo (USA/UK/Australia) and corridor pages
+function extractOriginCityPairs(filePath) {
+  const src = readFileSync(filePath, "utf8");
+  const re = /\{\s*slug:\s*"([a-z0-9-]+)",\s*name:\s*"[^"]+",\s*countrySlug:\s*"([a-z]+)"/g;
+  const out = [];
+  for (const m of src.matchAll(re)) out.push({ country: m[2], city: m[1] });
+  return out;
+}
+let originCountrySlugs = ["usa", "uk", "australia"];
+let originCityPairs = [];
+try {
+  originCityPairs = extractOriginCityPairs(resolve(root, "src/data/originGeoData.ts"));
+} catch {
+  originCityPairs = [];
+}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -110,6 +126,10 @@ add("/blog", 0.9, "weekly");
 add("/compare", 0.7);
 for (const slug of comparisonSlugs) add(`/compare/${slug}`, 0.85, "monthly");
 add("/express-entry", 0.9, "weekly");
+
+// Wave 2 — Origin country hubs + city corridors
+for (const slug of originCountrySlugs) add(`/${slug}`, 0.9, "weekly");
+for (const { country, city } of originCityPairs) add(`/from/${country}/${city}`, 0.8, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

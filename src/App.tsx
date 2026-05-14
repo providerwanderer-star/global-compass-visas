@@ -53,6 +53,8 @@ import AdminNocCoveragePage from "@/pages/AdminNocCoveragePage";
 import AdminPage from "@/pages/AdminPage";
 import ForAIPage from "@/pages/ForAIPage";
 import AboutPage from "@/pages/AboutPage";
+import OriginCountryPage from "@/pages/OriginCountryPage";
+import OriginCityPage from "@/pages/OriginCityPage";
 
 const queryClient = new QueryClient();
 
@@ -117,6 +119,11 @@ const App = () => (
               <Route path="/admin" element={<AdminPage />} />
               <Route path="/for-ai" element={<ForAIPage />} />
               <Route path="/about" element={<AboutPage />} />
+              {/* Wave 2 — Origin geo targeting (USA, UK, Australia → Canada) */}
+              <Route path="/usa" element={<OriginCountryPage />} />
+              <Route path="/uk" element={<OriginCountryPage />} />
+              <Route path="/australia" element={<OriginCountryPage />} />
+              <Route path="/from/:country/:city" element={<OriginCityPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

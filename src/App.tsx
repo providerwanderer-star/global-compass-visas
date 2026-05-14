@@ -55,6 +55,7 @@ import ForAIPage from "@/pages/ForAIPage";
 import AboutPage from "@/pages/AboutPage";
 import OriginCountryPage from "@/pages/OriginCountryPage";
 import OriginCityPage from "@/pages/OriginCityPage";
+import MoveCorridorPage from "@/pages/MoveCorridorPage";
 
 const queryClient = new QueryClient();
 
@@ -124,6 +125,8 @@ const App = () => (
               <Route path="/uk" element={<OriginCountryPage />} />
               <Route path="/australia" element={<OriginCountryPage />} />
               <Route path="/from/:country/:city" element={<OriginCityPage />} />
+              {/* Wave 3 — Move corridors: origin city → Canadian city via program */}
+              <Route path="/move/:corridor/:program" element={<MoveCorridorPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

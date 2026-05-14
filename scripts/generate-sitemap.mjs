@@ -62,6 +62,25 @@ try {
   originCityPairs = [];
 }
 
+// Wave 3 — Move corridor pages: /move/:corridor/:program
+function extractMoveCorridorPairs(filePath) {
+  const src = readFileSync(filePath, "utf8");
+  const out = [];
+  const blockRe = /slug:\s*"([a-z0-9-]+)",[\s\S]*?programs:\s*\[([^\]]+)\]/g;
+  for (const m of src.matchAll(blockRe)) {
+    const slug = m[1];
+    const programs = [...m[2].matchAll(/"([a-z-]+)"/g)].map((x) => x[1]);
+    for (const p of programs) out.push({ corridor: slug, program: p });
+  }
+  return out;
+}
+let moveCorridorPairs = [];
+try {
+  moveCorridorPairs = extractMoveCorridorPairs(resolve(root, "src/data/moveCorridorData.ts"));
+} catch {
+  moveCorridorPairs = [];
+}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -130,6 +149,9 @@ add("/express-entry", 0.9, "weekly");
 // Wave 2 — Origin country hubs + city corridors
 for (const slug of originCountrySlugs) add(`/${slug}`, 0.9, "weekly");
 for (const { country, city } of originCityPairs) add(`/from/${country}/${city}`, 0.8, "monthly");
+
+// Wave 3 — Move corridor pages
+for (const { corridor, program } of moveCorridorPairs) add(`/move/${corridor}/${program}`, 0.8, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

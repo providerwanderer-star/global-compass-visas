@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams, Navigate, Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -15,9 +15,17 @@ import { getOriginCountry } from "@/data/originGeoData";
 
 const SITE = "https://www.4acesvisa.com";
 
-const OriginCountryPage = () => {
-  const { country } = useParams<{ country: string }>();
-  const data = country ? getOriginCountry(country) : undefined;
+interface OriginCountryPageProps {
+  countrySlug?: string;
+}
+
+const OriginCountryPage = ({ countrySlug }: OriginCountryPageProps = {}) => {
+  const params = useParams<{ country: string }>();
+  const { pathname } = useLocation();
+  // Resolve slug from prop > route param > first path segment (for /usa, /uk, /australia static routes)
+  const slug =
+    countrySlug ?? params.country ?? pathname.replace(/^\//, "").split("/")[0];
+  const data = slug ? getOriginCountry(slug) : undefined;
 
   if (!data) return <Navigate to="/" replace />;
 

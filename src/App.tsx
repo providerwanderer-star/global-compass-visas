@@ -65,6 +65,9 @@ import CityIndustryPage from "@/pages/CityIndustryPage";
 import ProcessingTimePage from "@/pages/ProcessingTimePage";
 import CostPage from "@/pages/CostPage";
 import VsComparisonPage from "@/pages/VsComparisonPage";
+import LmiaPage from "@/pages/LmiaPage";
+import ChangeStatusPage from "@/pages/ChangeStatusPage";
+import BringFamilyPage from "@/pages/BringFamilyPage";
 
 const queryClient = new QueryClient();
 
@@ -150,6 +153,10 @@ const App = () => (
               <Route path="/processing-time/:program" element={<ProcessingTimePage />} />
               <Route path="/cost/:program" element={<CostPage />} />
               <Route path="/vs/:comparison" element={<VsComparisonPage />} />
+              {/* Wave 9 — LMIA + Change-status + Bring-family */}
+              <Route path="/lmia/:stream" element={<LmiaPage />} />
+              <Route path="/change-status/:transition" element={<ChangeStatusPage />} />
+              <Route path="/bring-family/:relation" element={<BringFamilyPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

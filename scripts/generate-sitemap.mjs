@@ -126,6 +126,16 @@ try {
   studyFieldPairs = [];
 }
 
+// Wave 6 — Francophone pathways + Sponsorship
+let francophoneSlugs = [];
+let sponsorshipSlugs = [];
+try {
+  francophoneSlugs = extractSlugs(resolve(root, "src/data/francophoneData.ts"));
+} catch {}
+try {
+  sponsorshipSlugs = extractSlugs(resolve(root, "src/data/sponsorshipData.ts"));
+} catch {}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -203,6 +213,10 @@ for (const { occupation, province } of occupationProvincePairs) add(`/jobs/${occ
 
 // Wave 5 — Study field × Province pages
 for (const { field, province } of studyFieldPairs) add(`/study/${field}/${province}`, 0.8, "monthly");
+
+// Wave 6 — French pathways + Family sponsorship
+for (const slug of francophoneSlugs) add(`/francophone/${slug}`, 0.85, "monthly");
+for (const slug of sponsorshipSlugs) add(`/sponsor/${slug}`, 0.85, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

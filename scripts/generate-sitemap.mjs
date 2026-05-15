@@ -103,6 +103,29 @@ try {
   occupationProvincePairs = [];
 }
 
+// Wave 5 — Study field × Province pages: /study/:field/:province
+function extractStudyFieldPairs(fieldsPath, occProvPath) {
+  const fSrc = readFileSync(fieldsPath, "utf8");
+  const fields = [
+    ...fSrc.matchAll(/slug:\s*"([a-z0-9-]+)",\s*\n?\s*name:/g),
+  ].map((m) => m[1]);
+  const oSrc = readFileSync(occProvPath, "utf8");
+  const provBlock = oSrc.match(/PROVINCES:\s*Record<ProvinceSlug,\s*Province>\s*=\s*\{([\s\S]*?)\n\};/)?.[1] ?? "";
+  const provs = [...provBlock.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]);
+  const out = [];
+  for (const f of fields) for (const p of provs) out.push({ field: f, province: p });
+  return out;
+}
+let studyFieldPairs = [];
+try {
+  studyFieldPairs = extractStudyFieldPairs(
+    resolve(root, "src/data/studyFieldData.ts"),
+    resolve(root, "src/data/occupationProvinceData.ts"),
+  );
+} catch {
+  studyFieldPairs = [];
+}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -177,6 +200,9 @@ for (const { corridor, program } of moveCorridorPairs) add(`/move/${corridor}/${
 
 // Wave 4 — Occupation × Province pages
 for (const { occupation, province } of occupationProvincePairs) add(`/jobs/${occupation}/${province}`, 0.8, "monthly");
+
+// Wave 5 — Study field × Province pages
+for (const { field, province } of studyFieldPairs) add(`/study/${field}/${province}`, 0.8, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

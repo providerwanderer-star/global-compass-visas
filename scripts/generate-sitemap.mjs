@@ -149,6 +149,14 @@ try {
   for (const m of src.matchAll(re)) cityIndustryPairs.push({ city: m[1], industry: m[2] });
 } catch {}
 
+// Wave 8 — Processing time + Cost + Vs comparisons
+let processingSlugs = [];
+let costSlugs = [];
+let vsSlugs = [];
+try { processingSlugs = extractSlugs(resolve(root, "src/data/processingTimeData.ts")); } catch {}
+try { costSlugs = extractSlugs(resolve(root, "src/data/costData.ts")); } catch {}
+try { vsSlugs = extractSlugs(resolve(root, "src/data/comparisonVsData.ts")); } catch {}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -234,6 +242,11 @@ for (const slug of sponsorshipSlugs) add(`/sponsor/${slug}`, 0.85, "monthly");
 // Wave 7 — Refusal + City × Industry
 for (const slug of refusalSlugs) add(`/refusal/${slug}`, 0.9, "monthly");
 for (const { city, industry } of cityIndustryPairs) add(`/city/${city}/${industry}`, 0.8, "monthly");
+
+// Wave 8 — Processing time deep-dives, cost breakdowns, vs comparisons
+for (const slug of processingSlugs) add(`/processing-time/${slug}`, 0.85, "weekly");
+for (const slug of costSlugs) add(`/cost/${slug}`, 0.85, "monthly");
+for (const slug of vsSlugs) add(`/vs/${slug}`, 0.85, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

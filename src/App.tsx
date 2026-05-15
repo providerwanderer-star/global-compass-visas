@@ -56,6 +56,7 @@ import AboutPage from "@/pages/AboutPage";
 import OriginCountryPage from "@/pages/OriginCountryPage";
 import OriginCityPage from "@/pages/OriginCityPage";
 import MoveCorridorPage from "@/pages/MoveCorridorPage";
+import OccupationProvincePage from "@/pages/OccupationProvincePage";
 
 const queryClient = new QueryClient();
 
@@ -127,6 +128,8 @@ const App = () => (
               <Route path="/from/:country/:city" element={<OriginCityPage />} />
               {/* Wave 3 — Move corridors: origin city → Canadian city via program */}
               <Route path="/move/:corridor/:program" element={<MoveCorridorPage />} />
+              {/* Wave 4 — Occupation × Province landing pages */}
+              <Route path="/jobs/:occupation/:province" element={<OccupationProvincePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

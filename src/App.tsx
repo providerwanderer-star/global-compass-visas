@@ -62,6 +62,9 @@ import FrancophonePathwayPage from "@/pages/FrancophonePathwayPage";
 import SponsorshipPage from "@/pages/SponsorshipPage";
 import RefusalPage from "@/pages/RefusalPage";
 import CityIndustryPage from "@/pages/CityIndustryPage";
+import ProcessingTimePage from "@/pages/ProcessingTimePage";
+import CostPage from "@/pages/CostPage";
+import VsComparisonPage from "@/pages/VsComparisonPage";
 
 const queryClient = new QueryClient();
 
@@ -143,6 +146,10 @@ const App = () => (
               {/* Wave 7 — Refusal recovery + City × Industry */}
               <Route path="/refusal/:type" element={<RefusalPage />} />
               <Route path="/city/:city/:industry" element={<CityIndustryPage />} />
+              {/* Wave 8 — Processing time + Cost + Vs comparisons */}
+              <Route path="/processing-time/:program" element={<ProcessingTimePage />} />
+              <Route path="/cost/:program" element={<CostPage />} />
+              <Route path="/vs/:comparison" element={<VsComparisonPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

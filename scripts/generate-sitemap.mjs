@@ -164,6 +164,14 @@ try { processingSlugs = extractRecordKeys(resolve(root, "src/data/processingTime
 try { costSlugs = extractRecordKeys(resolve(root, "src/data/costData.ts"), "COSTS"); } catch {}
 try { vsSlugs = extractRecordKeys(resolve(root, "src/data/comparisonVsData.ts"), "VS"); } catch {}
 
+// Wave 9 — LMIA streams + Status changes + Family pathways
+let lmiaSlugs = [];
+let changeSlugs = [];
+let familySlugs = [];
+try { lmiaSlugs = extractRecordKeys(resolve(root, "src/data/lmiaData.ts"), "LMIA"); } catch {}
+try { changeSlugs = extractRecordKeys(resolve(root, "src/data/changeStatusData.ts"), "CHANGES"); } catch {}
+try { familySlugs = extractRecordKeys(resolve(root, "src/data/familyData.ts"), "FAMILY"); } catch {}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -254,6 +262,11 @@ for (const { city, industry } of cityIndustryPairs) add(`/city/${city}/${industr
 for (const slug of processingSlugs) add(`/processing-time/${slug}`, 0.85, "weekly");
 for (const slug of costSlugs) add(`/cost/${slug}`, 0.85, "monthly");
 for (const slug of vsSlugs) add(`/vs/${slug}`, 0.85, "monthly");
+
+// Wave 9 — LMIA, status changes, family pathways
+for (const slug of lmiaSlugs) add(`/lmia/${slug}`, 0.9, "monthly");
+for (const slug of changeSlugs) add(`/change-status/${slug}`, 0.9, "monthly");
+for (const slug of familySlugs) add(`/bring-family/${slug}`, 0.85, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

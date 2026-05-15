@@ -109,7 +109,7 @@ const NewsDetailPage = () => {
   return (
     <div className="min-h-screen bg-secondary/30">
       <Helmet>
-        <title>{item.title} · 4 Aces Visa News</title>
+        <title>{`${item.title} · 4 Aces Visa News`}</title>
         <meta name="description" content={item.summary.slice(0, 158)} />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="article" />

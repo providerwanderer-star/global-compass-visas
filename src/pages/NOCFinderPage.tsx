@@ -1,11 +1,14 @@
 import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import { Search, CheckCircle2, XCircle } from "lucide-react";
+import { Search, CheckCircle2, XCircle, TrendingUp, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
-import { nocData, nocCategories, teerInfo, type NOCEntry } from "@/data/nocData";
+import { nocCategories, teerInfo, type NOCEntry } from "@/data/nocData";
+import { useNocCodes } from "@/hooks/useNocCodes";
+import { useRecentCutoffs } from "@/hooks/useRecentCutoffs";
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
+import DataSourceNote from "@/components/DataSourceNote";
 import { useUserProfile } from "@/hooks/useUserProfile";
 
 const NOCFinderPage = () => {
@@ -13,6 +16,8 @@ const NOCFinderPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedTeer, setSelectedTeer] = useState<string>("All");
   const { update } = useUserProfile();
+  const nocData = useNocCodes();
+  const cutoffs = useRecentCutoffs();
 
   const results = useMemo<NOCEntry[]>(() => {
     const q = query.trim().toLowerCase();
@@ -240,14 +245,33 @@ const NOCFinderPage = () => {
                     </p>
 
                     {/* Details */}
-                    <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground border-t border-border pt-3">
+                    <div className="grid grid-cols-3 gap-2 text-xs text-muted-foreground border-t border-border pt-3">
                       <div>
-                        <span className="font-semibold text-foreground block">Salary (CAD/yr)</span>
-                        {noc.salaryRange}
+                        <span className="font-semibold text-foreground block flex items-center gap-1">
+                          <DollarSign className="h-3 w-3" /> Median CAD/yr
+                        </span>
+                        {noc.medianSalary
+                          ? `$${noc.medianSalary.toLocaleString()}`
+                          : noc.salaryRange}
                       </div>
                       <div>
-                        <span className="font-semibold text-foreground block">Top Provinces</span>
-                        {noc.topProvinces.slice(0, 2).join(", ")}
+                        <span className="font-semibold text-foreground block flex items-center gap-1">
+                          <TrendingUp className="h-3 w-3" /> Recent Cutoff
+                        </span>
+                        {cutoffs[noc.code] ? (
+                          <span>
+                            CRS <strong className="text-foreground">{cutoffs[noc.code].crsMin}</strong>
+                            <span className="block text-[10px] opacity-75">
+                              {cutoffs[noc.code].category} draw
+                            </span>
+                          </span>
+                        ) : (
+                          <span className="opacity-60">No recent draw</span>
+                        )}
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground block">Top Province</span>
+                        {noc.topProvinces[0] ?? "—"}
                       </div>
                     </div>
 
@@ -366,6 +390,16 @@ const NOCFinderPage = () => {
           </div>
         </div>
       </section>
+
+      <DataSourceNote
+        updated="2026-04-22"
+        sources={[
+          { label: "ESDC NOC 2021 v1.0 (official)", href: "https://noc.esdc.gc.ca/" },
+          { label: "IRCC Express Entry — eligible NOCs", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html" },
+          { label: "Job Bank Canada (wage & demand)", href: "https://www.jobbank.gc.ca/trend-analysis" },
+        ]}
+        caveat="Salary ranges are national medians from Job Bank; actual offers vary by employer and province."
+      />
 
       {/* ── CTA ── */}
       <section className="section-padding bg-primary text-primary-foreground">

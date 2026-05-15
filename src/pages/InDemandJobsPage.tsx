@@ -14,6 +14,7 @@ import { supabase } from "@/integrations/supabase/client";
 import AnimatedSection from "@/components/AnimatedSection";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import { Skeleton } from "@/components/ui/skeleton";
+import DataSourceNote from "@/components/DataSourceNote";
 
 const TEER_LEVELS: (0 | 1 | 2 | 3)[] = [0, 1, 2, 3];
 const LAST_UPDATED = "April 2026";
@@ -182,6 +183,17 @@ const InDemandJobsPage = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      <DataSourceNote
+        updated="2026-04-22"
+        sources={[
+          { label: "IRCC Express Entry — category-based draws", href: "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supporting-immigration-goals-federal-economic-priorities.html" },
+          { label: "ESDC NOC 2021 v1.0", href: "https://noc.esdc.gc.ca/" },
+          { label: "Job Bank Canada — labour market trends", href: "https://www.jobbank.gc.ca/trend-analysis" },
+          { label: "Provincial Nominee Programs (official)", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" },
+        ]}
+        caveat="In-demand status reflects published category draws + provincial PNP priority lists. Live job counts come from Job Bank and refresh hourly."
+      />
 
       {/* STICKY FILTERS */}
       <div className="sticky top-16 md:top-20 z-30 bg-background/95 backdrop-blur border-b border-border shadow-sm">

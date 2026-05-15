@@ -70,6 +70,9 @@ const IndiaStudyPermitPage = () => {
         <meta property="og:description" content="Study in Canada from India. Complete guide to study permit, PGWP and PR pathway. Free assessment by expert consultants." />
         <meta property="og:url" content="https://www.4acesvisa.com/india/study-permit-india" />
         <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Canada Study Permit for Indians 2026 | 4 Aces Visa" />
+        <meta name="twitter:description" content="Study in Canada from India. Complete guide to study permit, PGWP and PR pathway. Free assessment by expert consultants." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

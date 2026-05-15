@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, ArrowRight, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -81,6 +81,7 @@ const navLinks = [
   {
     label: "Tools", href: "#",
     children: [
+      { label: "🔎 Search Pathways", href: "/search" },
       { label: "🧮 CRS Calculator", href: "/crs-calculator" },
       { label: "🔍 NOC Finder", href: "/noc-finder" },
       { label: "💼 In-Demand Jobs", href: "/in-demand-jobs" },
@@ -187,6 +188,14 @@ const Navbar = () => {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
+          <Link
+            to="/search"
+            className="flex items-center gap-1.5 text-sm text-foreground/60 hover:text-gold transition-colors"
+            aria-label="Search immigration pathways"
+          >
+            <Search className="h-4 w-4" />
+            <span>Search</span>
+          </Link>
           <a href="tel:+16478622190" className="flex items-center gap-1.5 text-sm text-foreground/60 hover:text-gold transition-colors">
             <Phone className="h-4 w-4" />
             <span>Call Now</span>

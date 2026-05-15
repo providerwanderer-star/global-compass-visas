@@ -1,30 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
-  ArrowRight, Globe, Award, Users, Clock, CheckCircle, Star, BookOpen,
+  ArrowRight, Globe, Award, Clock, CheckCircle, Star,
   Briefcase, GraduationCap, Search, Shield, Heart, Plane, FileText,
-  RefreshCw, MapPin, BadgeCheck, TrendingUp
+  RefreshCw, MapPin, BadgeCheck, TrendingUp, Activity
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import EligibilityForm from "@/components/EligibilityForm";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import AnimatedSection from "@/components/AnimatedSection";
-import Shareable from "@/components/Shareable";
 import LiveExpressEntry from "@/components/LiveExpressEntry";
 import LiveDataStrip from "@/components/LiveDataStrip";
 import HighDemandJobsHome from "@/components/HighDemandJobsHome";
 import LiveJobsHighlightStrip from "@/components/LiveJobsHighlightStrip";
 import NewsStripHome from "@/components/NewsStripHome";
-import heroBg from "@/assets/hero-bg.jpg";
-import studentsImg from "@/assets/students-canada.jpg";
-import familyImg from "@/assets/family-reunion.jpg";
-import newLifeImg from "@/assets/new-life-canada.jpg";
+import GlobalImmigrationSearch from "@/components/GlobalImmigrationSearch";
+import { originCountries } from "@/data/geoOriginData";
+import { crsBands } from "@/data/crsBandData";
 import heroCombined from "@/assets/hero-combined.jpg";
-import consultationImg from "@/assets/consultation.jpg";
-import { countries } from "@/data/countryData";
 import { blogPosts } from "@/data/blogData";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -95,6 +92,8 @@ const stats = [
 ];
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const [jobQuery, setJobQuery] = useState("");
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -106,7 +105,7 @@ const HomePage = () => {
     <div>
       <Helmet>
         <title>Move & Settle to Canada — End-to-end Immigration | 4 Aces Visa</title>
-        <meta name="description" content="Move to Canada end-to-end. For US H-1B holders, Indian professionals, students & families. Express Entry, PNP, LMIA, study & work permits. 15,000+ visas processed. Free assessment." />
+        <meta name="description" content="RCIC-led Canadian immigration consultants. Express Entry PR, LMIA, PNP, study permits & work visas — Canada, Australia, Germany & UK. 15,000+ visas processed. 98% success rate. Free assessment." />
         <link rel="canonical" href="https://www.4acesvisa.com/" />
         <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
         <meta property="og:type" content="website" />
@@ -129,12 +128,6 @@ const HomePage = () => {
             "logo": "https://www.4acesvisa.com/logo.png",
             "description": "RCIC-regulated Canadian immigration consultants helping skilled workers, families, and students move to Canada.",
             "address": { "@type": "PostalAddress", "addressCountry": "CA" },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "87",
-              "bestRating": "5"
-            },
             "sameAs": [
               "https://www.facebook.com/4acesvisa",
               "https://www.instagram.com/4acesvisa",
@@ -184,7 +177,12 @@ const HomePage = () => {
                   "Australia Skilled Migration", "Germany Job Seeker Visa",
                   "EU Blue Card", "UK Skilled Worker Visa"
                 ],
-                "sameAs": ["https://wa.me/16478622190"]
+                "sameAs": [
+                  "https://www.facebook.com/4acesvisa",
+                  "https://www.instagram.com/4acesvisa",
+                  "https://www.linkedin.com/company/4acesvisa",
+                  "https://wa.me/16478622190"
+                ]
               },
               {
                 "@type": "LocalBusiness",
@@ -221,12 +219,6 @@ const HomePage = () => {
                     "closes": "15:00"
                   }
                 ],
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.9",
-                  "reviewCount": "15000",
-                  "bestRating": "5"
-                },
                 "hasOfferCatalog": {
                   "@type": "OfferCatalog",
                   "name": "Immigration Services",
@@ -274,6 +266,20 @@ const HomePage = () => {
             ]
           })}
         </script>
+        {/* Speakable schema — surfaces the H1 + lead intro for Google Assistant / voice search */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            url: "https://www.4acesvisa.com/",
+            name: "4 Aces Visa — Canadian Immigration Consultants",
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", ".speakable", ".lead"],
+              xpath: ["/html/head/title"],
+            },
+          })}
+        </script>
       </Helmet>
 
       {/* Hero — bright split layout with people */}
@@ -305,12 +311,6 @@ const HomePage = () => {
               >
                 Leaving the US on H-1B? Applying from India? Studying, working, or bringing family — one RCIC-led team covers every pathway to Canada.
               </motion.p>
-              <motion.p
-                className="text-base text-muted-foreground/80 mb-8 max-w-xl"
-                initial="hidden" animate="visible" variants={fadeUp} custom={3}
-              >
-                🇨🇦 Canada-first &nbsp;•&nbsp; Also: 🇦🇺 Australia &nbsp;•&nbsp; 🇩🇪 Germany &nbsp;•&nbsp; 🇬🇧 UK — 98% success rate, 15,000+ visas processed.
-              </motion.p>
               <motion.div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" initial="hidden" animate="visible" variants={fadeUp} custom={4}>
                 <Link to="/contact">
                   <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base shadow-gold px-8 py-6 text-lg hover:scale-105 transition-transform">
@@ -323,6 +323,62 @@ const HomePage = () => {
                   </Button>
                 </Link>
               </motion.div>
+
+              {/* Quick Situation Picker — intake chips */}
+              <motion.div
+                className="mt-8"
+                initial="hidden" animate="visible" variants={fadeUp} custom={5}
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+                  What describes you best?
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: "🇺🇸 On H-1B / US visa", href: "/immigration/canada" },
+                    { label: "🇮🇳 Applying from India", href: "/india/canada-pr-india" },
+                    { label: "🎓 Student → PR path", href: "/services/student-visa" },
+                    { label: "👨‍👩‍👧 Family sponsorship", href: "/services/family-sponsorship" },
+                    { label: "💼 Have a job offer", href: "/services/lmia-assistance" },
+                    { label: "🤔 Not sure yet", href: "/quiz" },
+                  ].map((chip) => (
+                    <Link
+                      key={chip.label}
+                      to={chip.href}
+                      className="text-sm font-medium px-3.5 py-2 rounded-full border border-border bg-card hover:border-primary hover:text-primary hover:shadow-sm transition-all"
+                    >
+                      {chip.label}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Job / NOC search bar */}
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const q = jobQuery.trim();
+                    navigate(q ? `/noc-finder?q=${encodeURIComponent(q)}` : "/noc-finder");
+                  }}
+                  className="mt-4 flex gap-2"
+                  role="search"
+                  aria-label="Search occupations or NOC codes"
+                >
+                  <div className="relative flex-1">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                    <Input
+                      type="search"
+                      value={jobQuery}
+                      onChange={(e) => setJobQuery(e.target.value)}
+                      placeholder="Search by job title or NOC code (e.g. Software Developer, 21232)…"
+                      className="pl-10 h-11"
+                      aria-label="Search by job title or NOC code"
+                    />
+                  </div>
+                  <Button type="submit" size="lg" className="h-11">
+                    Search
+                  </Button>
+                </form>
+              </motion.div>
+
               <motion.div className="flex items-center gap-6 mt-6" initial="hidden" animate="visible" variants={fadeUp} custom={5}>
                 <div className="flex items-center gap-1.5">
                   <div className="flex gap-0.5">
@@ -394,7 +450,34 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Global Immigration Search — find your pathway */}
+      <section className="section-padding section-light" aria-labelledby="search-heading">
+        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <AnimatedSection className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              🔎 One Search. Every Pathway.
+            </span>
+            <h2 id="search-heading" className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Find your immigration pathway in 60 seconds
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Search by occupation, NOC code, CRS score or province. We'll match you to the
+              right Express Entry, PNP, study or work-permit route.
+            </p>
+          </AnimatedSection>
+          <GlobalImmigrationSearch />
+        </div>
+      </section>
+
       {/* Live Express Entry draw ticker */}
+      <div className="bg-background pt-4 px-4">
+        <div className="container-narrow mx-auto">
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-success">
+            <Activity className="h-3 w-3 animate-pulse" aria-hidden="true" />
+            Live data — updated with every new draw
+          </span>
+        </div>
+      </div>
       <LiveExpressEntry />
 
       {/* 3-card live data block */}
@@ -477,36 +560,58 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Destination Quick-Select — Where do you want to move? */}
-      <section className="py-8 px-4 bg-white border-b border-border">
-        <div className="container-narrow mx-auto">
+      {/* GEO programmatic — Canada PR by origin & CRS band */}
+      <section className="section-padding bg-card border-b border-border">
+        <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-6">
-            <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">🌐 Where do you want to move?</p>
+            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
+              📍 Canada PR — Tailored Guides
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Country-specific & score-specific PR guides
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Pathways, costs and timelines tailored to where you live and your CRS score.
+            </p>
           </AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              { flag: "🇨🇦", country: "Canada", label: "Express Entry PR", time: "6 months", href: "/immigration/canada" },
-              { flag: "🇦🇺", country: "Australia", label: "Skilled Migration", time: "8–12 months", href: "/australia/skilled-migration" },
-              { flag: "🇩🇪", country: "Germany", label: "EU Blue Card / Chancenkarte", time: "4–12 weeks", href: "/germany/chancenkarte" },
-              { flag: "🇬🇧", country: "United Kingdom", label: "Skilled Worker Visa", time: "3–8 weeks", href: "/uk/skilled-worker" },
-            ].map((c, i) => (
-              <Link key={i} to={c.href} className="block group">
-                <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all h-full">
-                  <span className="text-3xl block mb-2">{c.flag}</span>
-                  <h3 className="font-bold text-foreground text-sm">{c.country}</h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">{c.label}</p>
-                  <span className="text-xs text-gold font-semibold mt-1.5 block">⏱ {c.time}</span>
-                </div>
-              </Link>
-            ))}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h3 className="font-display text-lg font-bold text-foreground mb-3">
+                Canada PR by country of origin
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {originCountries.map((o) => (
+                  <Link
+                    key={o.slug}
+                    to={`/canada-pr-from/${o.slug}`}
+                    className="text-sm font-medium px-3 py-1.5 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors"
+                  >
+                    {o.flag} From {o.country}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="font-display text-lg font-bold text-foreground mb-3">
+                Canada PR by CRS score
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {crsBands.map((b) => (
+                  <Link
+                    key={b.slug}
+                    to={`/canada-pr/crs/${b.slug}`}
+                    className="text-sm font-medium px-3 py-1.5 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors"
+                  >
+                    CRS {b.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
-          <p className="text-center mt-4">
-            <Link to="/compare" className="text-sm text-primary underline underline-offset-2 font-medium hover:text-primary/80">
-              Compare all countries side-by-side →
-            </Link>
-          </p>
         </div>
       </section>
+
       {/* Eligibility Decision Engine — quick teaser */}
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
@@ -537,51 +642,32 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* How We Help You Migrate — Step Process */}
-      <section className="section-padding section-soft">
+      {/* Tools strip — moved above services for fast self-serve access */}
+      <section className="py-10 px-4 bg-gradient-to-br from-primary/5 to-accent/5 border-y border-border">
         <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-10">
-            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
-              🚀 Your Pathway to PR
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              How We Help You Migrate to Canada
+          <AnimatedSection className="text-center mb-6">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Free immigration tools
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Whether you're in Punjab or Ontario, our proven 5-step process has helped 15,000+ immigrants achieve their Canadian dream.
+            <p className="text-sm text-muted-foreground">
+              Score yourself, compare countries, get a checklist — no signup.
             </p>
           </AnimatedSection>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-5 gap-4"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
             {[
-              { step: "01", title: "Free Assessment", desc: "We evaluate your CRS score, education, work experience & language proficiency to identify the best pathway." },
-              { step: "02", title: "Strategy & Optimization", desc: "Personalized plan to maximize your CRS score — IELTS coaching, PNP targeting, LMIA coordination." },
-              { step: "03", title: "Document Preparation", desc: "Complete document compilation, WES/ECA evaluation, and application-ready dossier preparation." },
-              { step: "04", title: "Application Filing", desc: "Expert submission of your Express Entry profile, PNP application, or work permit with zero errors." },
-              { step: "05", title: "Landing & Settlement", desc: "Post-approval guidance — COPR, landing prep, and settlement support in Canada." },
-            ].map((item) => (
-              <motion.div key={item.step} variants={staggerItem}>
-                <div className="bg-card rounded-xl border border-border p-5 h-full card-interactive text-center">
-                  <div className="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center mx-auto mb-3">
-                    <span className="font-display font-bold text-gold text-sm">{item.step}</span>
-                  </div>
-                  <h3 className="font-display text-sm font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+              { icon: Award, label: "CRS Calculator", href: "/crs-calculator" },
+              { icon: Search, label: "Eligibility Quiz", href: "/quiz" },
+              { icon: Globe, label: "Compare Countries", href: "/compare" },
+              { icon: TrendingUp, label: "EE Draw Tracker", href: "/express-entry" },
+              { icon: FileText, label: "Doc Checklist", href: "/documents/canada-pr" },
+            ].map((t) => (
+              <Link key={t.label} to={t.href} className="group">
+                <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all">
+                  <t.icon className="h-6 w-6 text-gold mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                  <p className="text-xs md:text-sm font-semibold text-foreground">{t.label}</p>
                 </div>
-              </motion.div>
+              </Link>
             ))}
-          </motion.div>
-          <div className="mt-8 text-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-gold text-accent-foreground hover:bg-gold-dark font-bold shadow-gold hover:scale-105 transition-transform">
-                Get Your Free Assessment <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
@@ -624,48 +710,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Life in Canada — Visual Showcase */}
-      <section className="section-padding section-soft">
-        <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-8">
-            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
-              Your Future Awaits
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              This Could Be Your Story
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Every year, thousands of immigrants build new lives abroad. Here's what your journey could look like.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { img: studentsImg, alt: "International students on a university campus abroad", tag: "Study Abroad", title: "World-Class Education", desc: "Join thousands of international students at top universities worldwide" },
-              { img: familyImg, alt: "Family reuniting at airport", tag: "Family Sponsorship", title: "Reunite with Family", desc: "Bring your loved ones closer through family sponsorship programs" },
-              { img: newLifeImg, alt: "Young couple with house keys in new neighborhood", tag: "Permanent Residency", title: "Build Your New Life", desc: "From PR to your first home — we help you settle into life abroad" },
-              { img: consultationImg, alt: "Immigration consultant meeting with clients", tag: "Expert Guidance", title: "Personal Consultation", desc: "One-on-one guidance from consultants who've been through the process" },
-            ].map((item, i) => (
-              <motion.div
-                key={item.tag}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="relative group overflow-hidden rounded-2xl cursor-pointer"
-              >
-                <img src={item.img} alt={item.alt} loading="lazy" width={1280} height={720} className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 transform group-hover:-translate-y-1 transition-transform duration-300">
-                  <span className="inline-block bg-gold/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-2">{item.tag}</span>
-                  <h3 className="font-display text-lg font-bold text-white">{item.title}</h3>
-                  <p className="text-white/80 text-sm mt-1">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
@@ -681,13 +725,13 @@ const HomePage = () => {
             </p>
           </AnimatedSection>
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            className="grid grid-cols-1 md:grid-cols-3 gap-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            {testimonials.map((t, i) => (
+            {testimonials.slice(0, 3).map((t, i) => (
               <motion.div key={i} variants={staggerItem}>
                 <div className="bg-card rounded-xl border border-border p-5 h-full flex flex-col shadow-sm">
                   <div className="flex gap-0.5 mb-3">
@@ -732,13 +776,13 @@ const HomePage = () => {
             </Link>
           </AnimatedSection>
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+            className="grid grid-cols-1 md:grid-cols-3 gap-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            {blogPosts.slice(0, 6).map((post) => (
+            {blogPosts.slice(0, 3).map((post) => (
               <motion.div key={post.slug} variants={staggerItem}>
                 <Link to={`/blog/${post.slug}`} className="block h-full group">
                   <article className="bg-card rounded-xl border border-border p-5 h-full flex flex-col card-interactive">
@@ -764,36 +808,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Tools strip */}
-      <section className="py-10 px-4 bg-gradient-to-br from-primary/5 to-accent/5 border-y border-border">
-        <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-6">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
-              Free immigration tools
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              Score yourself, compare countries, get a checklist — no signup.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-            {[
-              { icon: Award, label: "CRS Calculator", href: "/crs-calculator" },
-              { icon: Search, label: "Eligibility Quiz", href: "/quiz" },
-              { icon: Globe, label: "Compare Countries", href: "/compare" },
-              { icon: TrendingUp, label: "EE Draw Tracker", href: "/express-entry" },
-              { icon: FileText, label: "Doc Checklist", href: "/documents/canada-pr" },
-            ].map((t) => (
-              <Link key={t.label} to={t.href} className="group">
-                <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all">
-                  <t.icon className="h-6 w-6 text-gold mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                  <p className="text-xs md:text-sm font-semibold text-foreground">{t.label}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* High-Demand Jobs → PR Pathway Engine */}
       <HighDemandJobsHome />
 
@@ -802,49 +816,6 @@ const HomePage = () => {
 
       {/* Immigration News strip */}
       <NewsStripHome />
-
-      {/* FAQ */}
-      <section className="section-padding section-light">
-        <div className="container-narrow mx-auto">
-          <AnimatedSection className="text-center mb-10">
-            <span className="inline-flex items-center gap-2 text-gold text-sm font-semibold uppercase tracking-wider mb-3">
-              ❓ Common Questions
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Immigration FAQ 2026
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Copy-paste-ready answers for AI search, social, and WhatsApp.
-            </p>
-          </AnimatedSection>
-          <div className="max-w-3xl mx-auto space-y-3">
-            {homeFaqs.slice(0, 10).map((faq, i) => (
-              <details key={i} className="bg-card rounded-xl border border-border overflow-hidden group">
-                <summary className="flex items-center justify-between gap-3 px-5 py-4 cursor-pointer list-none font-semibold text-foreground text-sm hover:bg-muted/30 transition-colors">
-                  <span>{faq.q}</span>
-                  <span className="text-gold text-xl flex-shrink-0 select-none group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <div className="px-5 pb-4 border-t border-border pt-3">
-                  <Shareable
-                    question={faq.q}
-                    answer={faq.a}
-                    permalink={`/faq#q${i + 1}`}
-                  >
-                    <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
-                  </Shareable>
-                </div>
-              </details>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link to="/faq">
-              <Button variant="outline" size="lg" className="border-2 border-primary/30 text-primary hover:bg-primary/5 font-semibold">
-                View All FAQs <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="relative section-padding bg-gradient-to-br from-primary via-primary to-primary/90 overflow-hidden">

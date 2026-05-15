@@ -8,6 +8,9 @@ import {
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/CountdownTimer";
 import EligibilityForm from "@/components/EligibilityForm";
+import AnswerBlock from "@/components/AnswerBlock";
+import FreshnessBanner from "@/components/FreshnessBanner";
+import { getFreshness } from "@/lib/freshness";
 
 // Next anticipated Express Entry draw — update this regularly
 const NEXT_DRAW_DATE = new Date("2026-04-22T12:00:00-04:00");
@@ -35,6 +38,7 @@ const crsFactors = [
 ];
 
 const ExpressEntryLandingPage = () => {
+  const freshness = getFreshness("express-entry");
   return (
     <div>
       <Helmet>
@@ -48,11 +52,13 @@ const ExpressEntryLandingPage = () => {
         <meta property="og:title" content="Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa" />
         <meta property="og:description" content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS calculator, and free eligibility assessment. 98% success rate." />
         <meta property="og:url" content="https://www.4acesvisa.com/express-entry" />
-        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa" />
         <meta name="twitter:description" content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS calculator, and free eligibility assessment." />
-        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adc15f61-3495-4592-a9ee-4f8cecf8b858/id-preview-a6038808--fba6843f-065b-405d-9fa2-e92e64570374.lovable.app-1775668033782.png" />
+        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -191,6 +197,17 @@ const ExpressEntryLandingPage = () => {
             </Button>
           </a>
         </div>
+      </section>
+
+      {/* AEO answer block */}
+      <section className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+        <FreshnessBanner topic="express-entry" className="mb-5" />
+        <AnswerBlock
+          answer="Canada Express Entry is a points-based federal PR system that processes applications in 6 months. Eligible candidates create an online profile, receive a CRS score, and wait for an Invitation to Apply (ITA) in bi-weekly draws. Recent general draw cutoffs: 430–490."
+          whoFor="Skilled workers aged 18–45 with at least one year of NOC TEER 0/1/2/3 work experience, CLB 7+ English, and a post-secondary education credential."
+          whoNotFor="Applicants without skilled work experience, with language scores below CLB 7, or with no intent to settle outside Quebec."
+          lastUpdated={freshness.lastUpdatedLabel}
+        />
       </section>
 
       {/* Recent Draws Table */}

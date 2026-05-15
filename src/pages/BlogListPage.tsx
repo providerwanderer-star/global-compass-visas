@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { BookOpen, ArrowRight } from "lucide-react";
-import { blogPosts } from "@/data/blogData";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 
 const staggerContainer = {
   hidden: {},
@@ -26,6 +26,7 @@ const categories = [
 
 const BlogListPage = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const blogPosts = useBlogPosts();
 
   const filteredPosts = useMemo(
     () => activeFilter === "all" ? blogPosts : blogPosts.filter((p) => p.category === activeFilter),

@@ -4,7 +4,7 @@ import { ChevronRight, Clock, ArrowLeft, ArrowRight, List, MessageCircle } from 
 import { useState, useMemo } from "react";
 import EligibilityForm from "@/components/EligibilityForm";
 import InternalLinks from "@/components/InternalLinks";
-import { blogPosts } from "@/data/blogData";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 import { blogToServices, getRelatedServiceData } from "@/data/internalLinks";
 import { blogEnhancements } from "@/data/blogEnhancements";
 import FAQCallToAction from "@/components/FAQCallToAction";
@@ -13,6 +13,7 @@ import ConnectedFooter from "@/components/ConnectedFooter";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
+  const blogPosts = useBlogPosts();
   const post = blogPosts.find((p) => p.slug === slug);
   const enhancement = post ? blogEnhancements[post.slug] : undefined;
   const [ctaDismissed, setCtaDismissed] = useState(false);
@@ -96,7 +97,7 @@ const BlogPostPage = () => {
   return (
     <div>
       <Helmet>
-        <title>{post.title} | 4 Aces Visa Blog</title>
+        <title>{`${post.title} | 4 Aces Visa Blog`}</title>
         <meta name="description" content={post.metaDescription || post.excerpt} />
         <link rel="canonical" href={`https://www.4acesvisa.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
@@ -141,6 +142,26 @@ const BlogPostPage = () => {
             "articleSection": post.category,
             "wordCount": post.content.split(/\s+/).length,
             "inLanguage": "en-US"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title,
+            "description": post.metaDescription || post.excerpt,
+            "datePublished": post.date,
+            "dateModified": post.date,
+            "author": {
+              "@type": "Organization",
+              "name": "4 Aces Visa",
+              "url": "https://www.4acesvisa.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "4 Aces Visa",
+              "logo": { "@type": "ImageObject", "url": "https://www.4acesvisa.com/favicon.ico" }
+            }
           })}
         </script>
         <script type="application/ld+json">

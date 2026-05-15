@@ -44,6 +44,9 @@ const StateHubPage = () => {
         <meta property="og:title" content={hub.metaTitle} />
         <meta property="og:description" content={hub.metaDescription} />
         <meta property="og:url" content={`https://www.4acesvisa.com${hub.parentPath}/${hub.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={hub.metaTitle} />
+        <meta name="twitter:description" content={hub.metaDescription} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -56,7 +59,6 @@ const StateHubPage = () => {
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
                 areaServed: hub.name,
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500", bestRating: "5" },
               },
               {
                 "@type": "BreadcrumbList",

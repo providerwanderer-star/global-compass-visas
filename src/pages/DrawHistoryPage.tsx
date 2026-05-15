@@ -2,10 +2,13 @@ import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { TrendingUp, CheckCircle2, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { expressEntryDraws, drawCategories, avgCRS } from "@/data/expressEntryDraws";
+import { drawCategories, avgCRS } from "@/data/expressEntryDraws";
+import { useExpressEntryDraws } from "@/hooks/useExpressEntryDraws";
 import PathwayWidget from "@/components/PathwayWidget";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import ReturnLoopCard from "@/components/ReturnLoopCard";
+import FreshnessBanner from "@/components/FreshnessBanner";
+import DataSourceNote from "@/components/DataSourceNote";
 
 const categoryColors: Record<string, string> = {
   General:     "bg-blue-100 text-blue-800 border-blue-200",
@@ -21,6 +24,7 @@ const categoryColors: Record<string, string> = {
 const DrawHistoryPage = () => {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [crsCheck, setCrsCheck] = useState<string>("");
+  const expressEntryDraws = useExpressEntryDraws();
 
   const filtered = useMemo(() => {
     if (activeCategory === "All") return expressEntryDraws;
@@ -119,6 +123,7 @@ const DrawHistoryPage = () => {
       {/* ── DOES MY SCORE QUALIFY? WIDGET ── */}
       <section className="py-8 section-soft border-b border-border">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
+          <FreshnessBanner topic="express-entry" className="mb-6" />
           <div className="bg-card rounded-2xl border-2 border-border p-6 max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
               <TrendingUp className="h-5 w-5 text-primary" />
@@ -281,6 +286,16 @@ const DrawHistoryPage = () => {
           </div>
         </div>
       </section>
+
+      <DataSourceNote
+        updated="2026-04-22"
+        sources={[
+          { label: "IRCC — Express Entry rounds of invitations", href: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" },
+          { label: "IRCC — Category-based selection", href: "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supporting-immigration-goals-federal-economic-priorities.html" },
+          { label: "CIMM Open Data Portal", href: "https://open.canada.ca/data/en/dataset/eed47533-e202-4d68-bb46-1d9a8d9c0307" },
+        ]}
+        caveat="CRS minimums and ITA counts are taken directly from IRCC's published rounds. Future-dated rounds reflect the most recent IRCC schedule and may shift."
+      />
 
       {/* ── CTA ── */}
       <section className="section-padding bg-primary text-primary-foreground">

@@ -14,6 +14,114 @@ export type Database = {
   }
   public: {
     Tables: {
+      blog_posts: {
+        Row: {
+          category: string
+          content: string
+          created_at: string
+          date: string
+          excerpt: string
+          id: string
+          meta_description: string
+          published: boolean
+          read_time: string
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category?: string
+          content?: string
+          created_at?: string
+          date?: string
+          excerpt?: string
+          id?: string
+          meta_description?: string
+          published?: boolean
+          read_time?: string
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          content?: string
+          created_at?: string
+          date?: string
+          excerpt?: string
+          id?: string
+          meta_description?: string
+          published?: boolean
+          read_time?: string
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      draw_noc_codes: {
+        Row: {
+          category: string
+          created_at: string
+          draw_number: number
+          id: string
+          noc_code: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          draw_number: number
+          id?: string
+          noc_code: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          draw_number?: number
+          id?: string
+          noc_code?: string
+        }
+        Relationships: []
+      }
+      express_entry_draws: {
+        Row: {
+          category: string
+          created_at: string
+          crs_min: number
+          draw_date: string
+          draw_number: number
+          fetched_at: string
+          id: string
+          itas: number
+          source_url: string | null
+          tie_break: string | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          crs_min: number
+          draw_date: string
+          draw_number: number
+          fetched_at?: string
+          id?: string
+          itas: number
+          source_url?: string | null
+          tie_break?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          crs_min?: number
+          draw_date?: string
+          draw_number?: number
+          fetched_at?: string
+          id?: string
+          itas?: number
+          source_url?: string | null
+          tie_break?: string | null
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           created_at: string
@@ -50,12 +158,117 @@ export type Database = {
         }
         Relationships: []
       }
+      noc_codes: {
+        Row: {
+          alt_titles: string[]
+          category: string
+          code: string
+          created_at: string
+          description: string
+          express_entry_eligible: boolean
+          id: string
+          median_salary: number | null
+          teer: number
+          title: string
+        }
+        Insert: {
+          alt_titles?: string[]
+          category: string
+          code: string
+          created_at?: string
+          description?: string
+          express_entry_eligible?: boolean
+          id?: string
+          median_salary?: number | null
+          teer: number
+          title: string
+        }
+        Update: {
+          alt_titles?: string[]
+          category?: string
+          code?: string
+          created_at?: string
+          description?: string
+          express_entry_eligible?: boolean
+          id?: string
+          median_salary?: number | null
+          teer?: number
+          title?: string
+        }
+        Relationships: []
+      }
+      pnp_draws: {
+        Row: {
+          created_at: string
+          draw_date: string
+          fetched_at: string
+          id: string
+          invitations: number
+          min_score: number | null
+          notes: string | null
+          province: string
+          province_code: string
+          source_url: string | null
+          stream: string
+        }
+        Insert: {
+          created_at?: string
+          draw_date: string
+          fetched_at?: string
+          id?: string
+          invitations: number
+          min_score?: number | null
+          notes?: string | null
+          province: string
+          province_code: string
+          source_url?: string | null
+          stream: string
+        }
+        Update: {
+          created_at?: string
+          draw_date?: string
+          fetched_at?: string
+          id?: string
+          invitations?: number
+          min_score?: number | null
+          notes?: string | null
+          province?: string
+          province_code?: string
+          source_url?: string | null
+          stream?: string
+        }
+        Relationships: []
+      }
+      processing_times: {
+        Row: {
+          application_type: string
+          created_at: string
+          id: string
+          processing_time_text: string
+          updated_date: string
+        }
+        Insert: {
+          application_type: string
+          created_at?: string
+          id?: string
+          processing_time_text: string
+          updated_date?: string
+        }
+        Update: {
+          application_type?: string
+          created_at?: string
+          id?: string
+          processing_time_text?: string
+          updated_date?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_admin: { Args: never; Returns: boolean }
     }
     Enums: {
       [_ in never]: never

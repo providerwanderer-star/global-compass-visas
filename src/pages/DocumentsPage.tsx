@@ -35,7 +35,7 @@ const DocumentsPage = () => {
   return (
     <>
       <Helmet>
-        <title>{doc.title} | 4 Aces Visa</title>
+        <title>{`${doc.title} | 4 Aces Visa`}</title>
         <meta name="description" content={doc.description} />
         <link rel="canonical" href={`https://www.4acesvisa.com/documents/${doc.slug}`} />
         <meta property="og:type" content="website" />

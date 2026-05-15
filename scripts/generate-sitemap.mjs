@@ -150,12 +150,19 @@ try {
 } catch {}
 
 // Wave 8 — Processing time + Cost + Vs comparisons
+// Data files use mk("slug", ...) pattern; extract slugs from the Record keys.
+function extractRecordKeys(filePath, recordName) {
+  const src = readFileSync(filePath, "utf8");
+  const re = new RegExp(`const\\s+${recordName}[^=]*=\\s*\\{([\\s\\S]*?)\\n\\};`, "m");
+  const block = src.match(re)?.[1] ?? "";
+  return [...new Set([...block.matchAll(/^\s*"([a-z0-9-]+)":/gm)].map((m) => m[1]))];
+}
 let processingSlugs = [];
 let costSlugs = [];
 let vsSlugs = [];
-try { processingSlugs = extractSlugs(resolve(root, "src/data/processingTimeData.ts")); } catch {}
-try { costSlugs = extractSlugs(resolve(root, "src/data/costData.ts")); } catch {}
-try { vsSlugs = extractSlugs(resolve(root, "src/data/comparisonVsData.ts")); } catch {}
+try { processingSlugs = extractRecordKeys(resolve(root, "src/data/processingTimeData.ts"), "PROCESSING"); } catch {}
+try { costSlugs = extractRecordKeys(resolve(root, "src/data/costData.ts"), "COSTS"); } catch {}
+try { vsSlugs = extractRecordKeys(resolve(root, "src/data/comparisonVsData.ts"), "VS"); } catch {}
 
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full

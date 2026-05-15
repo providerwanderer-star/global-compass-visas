@@ -81,6 +81,28 @@ try {
   moveCorridorPairs = [];
 }
 
+// Wave 4 — Occupation × Province pages: /jobs/:occupation/:province
+function extractOccupationProvincePairs(filePath) {
+  const src = readFileSync(filePath, "utf8");
+  const occRe = /OCCUPATIONS:\s*Record<OccupationSlug,\s*Occupation>\s*=\s*\{([\s\S]*?)\n\};/;
+  const provRe = /PROVINCES:\s*Record<ProvinceSlug,\s*Province>\s*=\s*\{([\s\S]*?)\n\};/;
+  const occBlock = src.match(occRe)?.[1] ?? "";
+  const provBlock = src.match(provRe)?.[1] ?? "";
+  const occs = [...occBlock.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]);
+  const provs = [...provBlock.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]);
+  const out = [];
+  for (const o of occs) for (const p of provs) out.push({ occupation: o, province: p });
+  return out;
+}
+let occupationProvincePairs = [];
+try {
+  occupationProvincePairs = extractOccupationProvincePairs(
+    resolve(root, "src/data/occupationProvinceData.ts"),
+  );
+} catch {
+  occupationProvincePairs = [];
+}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -152,6 +174,9 @@ for (const { country, city } of originCityPairs) add(`/from/${country}/${city}`,
 
 // Wave 3 — Move corridor pages
 for (const { corridor, program } of moveCorridorPairs) add(`/move/${corridor}/${program}`, 0.8, "monthly");
+
+// Wave 4 — Occupation × Province pages
+for (const { occupation, province } of occupationProvincePairs) add(`/jobs/${occupation}/${province}`, 0.8, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

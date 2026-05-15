@@ -136,6 +136,19 @@ try {
   sponsorshipSlugs = extractSlugs(resolve(root, "src/data/sponsorshipData.ts"));
 } catch {}
 
+// Wave 7 — Refusal pages + City × Industry pages
+let refusalSlugs = [];
+let cityIndustryPairs = [];
+try {
+  refusalSlugs = extractSlugs(resolve(root, "src/data/refusalData.ts"));
+} catch {}
+try {
+  const src = readFileSync(resolve(root, "src/data/cityIndustryData.ts"), "utf8");
+  // Match objects with city + industry keys
+  const re = /\{\s*city:\s*"([a-z-]+)"[^}]*?industry:\s*"([a-z-]+)"/g;
+  for (const m of src.matchAll(re)) cityIndustryPairs.push({ city: m[1], industry: m[2] });
+} catch {}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -217,6 +230,10 @@ for (const { field, province } of studyFieldPairs) add(`/study/${field}/${provin
 // Wave 6 — French pathways + Family sponsorship
 for (const slug of francophoneSlugs) add(`/francophone/${slug}`, 0.85, "monthly");
 for (const slug of sponsorshipSlugs) add(`/sponsor/${slug}`, 0.85, "monthly");
+
+// Wave 7 — Refusal + City × Industry
+for (const slug of refusalSlugs) add(`/refusal/${slug}`, 0.9, "monthly");
+for (const { city, industry } of cityIndustryPairs) add(`/city/${city}/${industry}`, 0.8, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

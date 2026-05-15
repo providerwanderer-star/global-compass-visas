@@ -60,6 +60,8 @@ import OccupationProvincePage from "@/pages/OccupationProvincePage";
 import StudyFieldProvincePage from "@/pages/StudyFieldProvincePage";
 import FrancophonePathwayPage from "@/pages/FrancophonePathwayPage";
 import SponsorshipPage from "@/pages/SponsorshipPage";
+import RefusalPage from "@/pages/RefusalPage";
+import CityIndustryPage from "@/pages/CityIndustryPage";
 
 const queryClient = new QueryClient();
 
@@ -138,6 +140,9 @@ const App = () => (
               {/* Wave 6 — French pathways + Family sponsorship */}
               <Route path="/francophone/:pathway" element={<FrancophonePathwayPage />} />
               <Route path="/sponsor/:type" element={<SponsorshipPage />} />
+              {/* Wave 7 — Refusal recovery + City × Industry */}
+              <Route path="/refusal/:type" element={<RefusalPage />} />
+              <Route path="/city/:city/:industry" element={<CityIndustryPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

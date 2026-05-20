@@ -71,6 +71,9 @@ import BringFamilyPage from "@/pages/BringFamilyPage";
 import AppealPage from "@/pages/AppealPage";
 import RestorationPage from "@/pages/RestorationPage";
 import CitizenshipPage from "@/pages/CitizenshipPage";
+import ProfessionPage from "@/pages/ProfessionPage";
+import StudyCanadaPage from "@/pages/StudyCanadaPage";
+import PgwpPrPage from "@/pages/PgwpPrPage";
 
 const queryClient = new QueryClient();
 
@@ -164,6 +167,10 @@ const App = () => (
               <Route path="/appeal/:type" element={<AppealPage />} />
               <Route path="/restoration/:scenario" element={<RestorationPage />} />
               <Route path="/citizenship/:topic" element={<CitizenshipPage />} />
+              {/* Wave 11 — Profession guides + Study lifecycle + PGWP→PR */}
+              <Route path="/immigrate-as/:profession" element={<ProfessionPage />} />
+              <Route path="/study-canada/:topic" element={<StudyCanadaPage />} />
+              <Route path="/pgwp-to-pr/:path" element={<PgwpPrPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

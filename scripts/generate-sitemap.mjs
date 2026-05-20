@@ -172,6 +172,14 @@ try { lmiaSlugs = extractRecordKeys(resolve(root, "src/data/lmiaData.ts"), "LMIA
 try { changeSlugs = extractRecordKeys(resolve(root, "src/data/changeStatusData.ts"), "CHANGES"); } catch {}
 try { familySlugs = extractRecordKeys(resolve(root, "src/data/familyData.ts"), "FAMILY"); } catch {}
 
+// Wave 10 — Appeals + Restoration + Citizenship
+let appealSlugs = [];
+let restorationSlugs = [];
+let citizenshipSlugs = [];
+try { appealSlugs = extractRecordKeys(resolve(root, "src/data/appealData.ts"), "APPEALS"); } catch {}
+try { restorationSlugs = extractRecordKeys(resolve(root, "src/data/restorationData.ts"), "RESTORATION"); } catch {}
+try { citizenshipSlugs = extractRecordKeys(resolve(root, "src/data/citizenshipData.ts"), "CITIZENSHIP"); } catch {}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -267,6 +275,11 @@ for (const slug of vsSlugs) add(`/vs/${slug}`, 0.85, "monthly");
 for (const slug of lmiaSlugs) add(`/lmia/${slug}`, 0.9, "monthly");
 for (const slug of changeSlugs) add(`/change-status/${slug}`, 0.9, "monthly");
 for (const slug of familySlugs) add(`/bring-family/${slug}`, 0.85, "monthly");
+
+// Wave 10 — Appeals, restoration, citizenship
+for (const slug of appealSlugs) add(`/appeal/${slug}`, 0.9, "monthly");
+for (const slug of restorationSlugs) add(`/restoration/${slug}`, 0.9, "monthly");
+for (const slug of citizenshipSlugs) add(`/citizenship/${slug}`, 0.9, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

@@ -188,6 +188,14 @@ try { professionSlugs = extractRecordKeys(resolve(root, "src/data/professionData
 try { studyCanadaSlugs = extractRecordKeys(resolve(root, "src/data/studyCanadaData.ts"), "STUDYCANADA"); } catch {}
 try { pgwpPrSlugs = extractRecordKeys(resolve(root, "src/data/pgwpPrData.ts"), "PGWPPR"); } catch {}
 
+// Wave 12 — Business immigration + Pilots + Procedural how-tos
+let businessSlugs = [];
+let pilotSlugs = [];
+let procedureSlugs = [];
+try { businessSlugs = extractRecordKeys(resolve(root, "src/data/businessImmigrationData.ts"), "BUSINESS"); } catch {}
+try { pilotSlugs = extractRecordKeys(resolve(root, "src/data/pilotData.ts"), "PILOTS"); } catch {}
+try { procedureSlugs = extractRecordKeys(resolve(root, "src/data/procedureData.ts"), "PROCEDURES"); } catch {}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.
@@ -293,6 +301,11 @@ for (const slug of citizenshipSlugs) add(`/citizenship/${slug}`, 0.9, "monthly")
 for (const slug of professionSlugs) add(`/immigrate-as/${slug}`, 0.9, "monthly");
 for (const slug of studyCanadaSlugs) add(`/study-canada/${slug}`, 0.9, "monthly");
 for (const slug of pgwpPrSlugs) add(`/pgwp-to-pr/${slug}`, 0.9, "monthly");
+
+// Wave 12 — Business immigration + Pilots + Procedural
+for (const slug of businessSlugs) add(`/business-immigration/${slug}`, 0.9, "monthly");
+for (const slug of pilotSlugs) add(`/pilot/${slug}`, 0.9, "monthly");
+for (const slug of procedureSlugs) add(`/procedure/${slug}`, 0.85, "monthly");
 
 // India hub
 add("/india", 0.9, "weekly");

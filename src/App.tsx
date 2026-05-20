@@ -74,6 +74,9 @@ import CitizenshipPage from "@/pages/CitizenshipPage";
 import ProfessionPage from "@/pages/ProfessionPage";
 import StudyCanadaPage from "@/pages/StudyCanadaPage";
 import PgwpPrPage from "@/pages/PgwpPrPage";
+import BusinessImmigrationPage from "@/pages/BusinessImmigrationPage";
+import PilotPage from "@/pages/PilotPage";
+import ProcedurePage from "@/pages/ProcedurePage";
 
 const queryClient = new QueryClient();
 
@@ -171,6 +174,10 @@ const App = () => (
               <Route path="/immigrate-as/:profession" element={<ProfessionPage />} />
               <Route path="/study-canada/:topic" element={<StudyCanadaPage />} />
               <Route path="/pgwp-to-pr/:path" element={<PgwpPrPage />} />
+              {/* Wave 12 — Business immigration + Atlantic/Rural pilots + IRCC procedures */}
+              <Route path="/business-immigration/:program" element={<BusinessImmigrationPage />} />
+              <Route path="/pilot/:program" element={<PilotPage />} />
+              <Route path="/procedure/:topic" element={<ProcedurePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

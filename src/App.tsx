@@ -68,6 +68,9 @@ import VsComparisonPage from "@/pages/VsComparisonPage";
 import LmiaPage from "@/pages/LmiaPage";
 import ChangeStatusPage from "@/pages/ChangeStatusPage";
 import BringFamilyPage from "@/pages/BringFamilyPage";
+import AppealPage from "@/pages/AppealPage";
+import RestorationPage from "@/pages/RestorationPage";
+import CitizenshipPage from "@/pages/CitizenshipPage";
 
 const queryClient = new QueryClient();
 
@@ -157,6 +160,10 @@ const App = () => (
               <Route path="/lmia/:stream" element={<LmiaPage />} />
               <Route path="/change-status/:transition" element={<ChangeStatusPage />} />
               <Route path="/bring-family/:relation" element={<BringFamilyPage />} />
+              {/* Wave 10 — Appeals + Restoration + Citizenship */}
+              <Route path="/appeal/:type" element={<AppealPage />} />
+              <Route path="/restoration/:scenario" element={<RestorationPage />} />
+              <Route path="/citizenship/:topic" element={<CitizenshipPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

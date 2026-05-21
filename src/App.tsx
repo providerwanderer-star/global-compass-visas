@@ -77,6 +77,9 @@ import PgwpPrPage from "@/pages/PgwpPrPage";
 import BusinessImmigrationPage from "@/pages/BusinessImmigrationPage";
 import PilotPage from "@/pages/PilotPage";
 import ProcedurePage from "@/pages/ProcedurePage";
+import VisitCanadaPage from "@/pages/VisitCanadaPage";
+import WorkPermitPage from "@/pages/WorkPermitPage";
+import PrMaintenancePage from "@/pages/PrMaintenancePage";
 
 const queryClient = new QueryClient();
 
@@ -178,6 +181,10 @@ const App = () => (
               <Route path="/business-immigration/:program" element={<BusinessImmigrationPage />} />
               <Route path="/pilot/:program" element={<PilotPage />} />
               <Route path="/procedure/:topic" element={<ProcedurePage />} />
+              {/* Wave 13 — Visit Canada + Work permit streams + PR maintenance */}
+              <Route path="/visit-canada/:topic" element={<VisitCanadaPage />} />
+              <Route path="/work-permit/:stream" element={<WorkPermitPage />} />
+              <Route path="/pr-maintenance/:topic" element={<PrMaintenancePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

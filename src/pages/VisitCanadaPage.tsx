@@ -127,7 +127,7 @@ const VisitCanadaPage = () => {
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Planning your visit?</h2>
               <p className="mt-2 text-muted-foreground">Sahil Garg's team handles visitor visas and Super Visas every week. Book a free consult.</p>
             </div>
-            <EligibilityForm sourcePage={`visit-canada-${g.slug}`} heading={g.shortName} visaType="visitor-visa" />
+            <EligibilityForm sourcePage={`visit-canada-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "visitor-visa" }} />
           </div>
         </div>
       </section>

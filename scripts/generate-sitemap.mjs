@@ -196,6 +196,14 @@ try { businessSlugs = extractRecordKeys(resolve(root, "src/data/businessImmigrat
 try { pilotSlugs = extractRecordKeys(resolve(root, "src/data/pilotData.ts"), "PILOTS"); } catch {}
 try { procedureSlugs = extractRecordKeys(resolve(root, "src/data/procedureData.ts"), "PROCEDURES"); } catch {}
 
+// Wave 13 — Visit Canada + Work permit streams + PR maintenance
+let visitSlugs = [];
+let workPermitSlugs = [];
+let prMaintSlugs = [];
+try { visitSlugs = extractRecordKeys(resolve(root, "src/data/visitCanadaData.ts"), "VISITS"); } catch {}
+try { workPermitSlugs = extractRecordKeys(resolve(root, "src/data/workPermitData.ts"), "WORKPERMITS"); } catch {}
+try { prMaintSlugs = extractRecordKeys(resolve(root, "src/data/prMaintenanceData.ts"), "PRMAINT"); } catch {}
+
 // Pull NOC codes from the local nocData.ts as a build-time fallback. The
 // live edge function (`/functions/v1/sitemap`) supersedes this with the full
 // Supabase-driven list and per-row lastmod dates.

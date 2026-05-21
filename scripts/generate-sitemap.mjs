@@ -315,6 +315,11 @@ for (const slug of businessSlugs) add(`/business-immigration/${slug}`, 0.9, "mon
 for (const slug of pilotSlugs) add(`/pilot/${slug}`, 0.9, "monthly");
 for (const slug of procedureSlugs) add(`/procedure/${slug}`, 0.85, "monthly");
 
+// Wave 13 — Visit Canada + Work permit streams + PR maintenance
+for (const slug of visitSlugs) add(`/visit-canada/${slug}`, 0.9, "monthly");
+for (const slug of workPermitSlugs) add(`/work-permit/${slug}`, 0.9, "monthly");
+for (const slug of prMaintSlugs) add(`/pr-maintenance/${slug}`, 0.9, "monthly");
+
 // India hub
 add("/india", 0.9, "weekly");
 add("/india/study-permit-india", 0.8);

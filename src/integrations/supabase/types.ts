@@ -130,6 +130,7 @@ export type Database = {
           email: string
           full_name: string
           id: string
+          origin_country: string | null
           phone: string
           source_page: string | null
           visa_type: string | null
@@ -141,6 +142,7 @@ export type Database = {
           email: string
           full_name: string
           id?: string
+          origin_country?: string | null
           phone: string
           source_page?: string | null
           visa_type?: string | null
@@ -152,6 +154,7 @@ export type Database = {
           email?: string
           full_name?: string
           id?: string
+          origin_country?: string | null
           phone?: string
           source_page?: string | null
           visa_type?: string | null

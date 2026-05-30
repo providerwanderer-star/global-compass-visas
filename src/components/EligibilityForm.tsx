@@ -12,6 +12,7 @@ interface EligibilityFormProps {
     destination_country?: string;
     visa_type?: string;
     education_level?: string;
+    origin_country?: string;
   };
   heading?: string;
 }
@@ -26,6 +27,7 @@ const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: Eli
     destination_country: defaultValues?.destination_country ?? "",
     visa_type: defaultValues?.visa_type ?? "",
     education_level: defaultValues?.education_level ?? "",
+    origin_country: defaultValues?.origin_country ?? "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,6 +42,7 @@ const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: Eli
         destination_country: formData.destination_country || null,
         visa_type: formData.visa_type || null,
         education_level: formData.education_level || null,
+        origin_country: formData.origin_country || null,
         source_page: sourcePage,
       });
 
@@ -57,6 +60,7 @@ const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: Eli
           Name: formData.full_name,
           Email: formData.email,
           Phone: formData.phone,
+          "Current Country": formData.origin_country || "Not specified",
           "Destination Country": formData.destination_country || "Not specified",
           "Visa Type": formData.visa_type || "Not specified",
           "Education Level": formData.education_level || "Not specified",
@@ -109,6 +113,15 @@ const EligibilityForm = ({ sourcePage = "general", defaultValues, heading }: Eli
           className="bg-card border-border"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+        />
+        <Input
+          type="text"
+          placeholder="Current Country / Country of Origin *"
+          required
+          maxLength={80}
+          className="bg-card border-border"
+          value={formData.origin_country}
+          onChange={(e) => setFormData({ ...formData, origin_country: e.target.value })}
         />
         <Select value={formData.destination_country || undefined} onValueChange={(v) => setFormData({ ...formData, destination_country: v })}>
           <SelectTrigger className="bg-card border-border">

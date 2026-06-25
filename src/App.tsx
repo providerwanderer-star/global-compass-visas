@@ -80,6 +80,7 @@ import ProcedurePage from "@/pages/ProcedurePage";
 import VisitCanadaPage from "@/pages/VisitCanadaPage";
 import WorkPermitPage from "@/pages/WorkPermitPage";
 import PrMaintenancePage from "@/pages/PrMaintenancePage";
+import PackagesPage from "@/pages/PackagesPage";
 
 const queryClient = new QueryClient();
 
@@ -105,6 +106,7 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/quiz" element={<QuizPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/packages" element={<PackagesPage />} />
               <Route path="/india" element={<IndiaHubPage />} />
               <Route path="/india/study-permit-india" element={<IndiaStudyPermitPage />} />
               <Route path="/india/work-permit-india" element={<IndiaWorkPermitPage />} />

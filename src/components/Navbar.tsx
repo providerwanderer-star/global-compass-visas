@@ -78,6 +78,7 @@ const navLinks = [
     ],
   },
   { label: "FAQ", href: "/faq" },
+  { label: "Packages", href: "/packages" },
   {
     label: "Tools", href: "#",
     children: [

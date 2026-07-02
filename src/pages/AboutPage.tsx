@@ -17,17 +17,16 @@ const SITE = "https://www.4acesvisa.com";
  */
 const AboutPage = () => {
   const url = `${SITE}/about`;
-  const title = "About 4 Aces Visa — RCIC-Led Immigration Consultancy";
+  const title = "About 4 Aces Visa — Immigration Consultancy for Canada, Australia, UK & Germany";
   const description =
-    "RCIC-regulated Canadian immigration consultancy. 15,000+ visas processed since 2016 across Canada, Australia, Germany & UK. Meet the team and our credentials.";
+    "4 Aces Visa is an immigration consultancy team with 15,000+ applications processed since 2016 across Canada, Australia, Germany and the UK. Meet the team and see how we work.";
 
-  const personLD = {
+  const teamLD = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": `${SITE}/about#founder`,
-    name: "Sahil Sharma",
-    jobTitle: "Founder & Senior Immigration Consultant",
-    worksFor: { "@type": "Organization", name: "4 Aces Visa", url: SITE },
+    "@type": "Organization",
+    "@id": `${SITE}/about#team`,
+    name: "4 Aces Visa Immigration Team",
+    url,
     email: "sahil280389@gmail.com",
     telephone: "+1-647-862-2190",
     knowsLanguage: ["English", "Hindi", "Punjabi"],
@@ -41,7 +40,6 @@ const AboutPage = () => {
       "Germany EU Blue Card",
       "UK Skilled Worker Visa",
     ],
-    url,
     sameAs: [
       "https://www.linkedin.com/company/4acesvisa",
       "https://www.instagram.com/4acesvisa",
@@ -58,7 +56,7 @@ const AboutPage = () => {
     inLanguage: "en",
     isPartOf: { "@type": "WebSite", name: "4 Aces Visa", url: SITE },
     about: { "@id": `${SITE}/#organization` },
-    mainEntity: { "@id": `${SITE}/about#founder` },
+    mainEntity: { "@id": `${SITE}/about#team` },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", ".speakable", ".lead"],
@@ -66,9 +64,9 @@ const AboutPage = () => {
   };
 
   const credentials = [
-    { icon: Shield, title: "RCIC Regulated", desc: "Registered with the College of Immigration and Citizenship Consultants (CICC) — the only body authorised to provide Canadian immigration advice for a fee." },
-    { icon: Award, title: "98% Approval Rate", desc: "Consistent track record across Express Entry, PNP, LMIA, study permits and family sponsorships since 2016." },
-    { icon: Users, title: "15,000+ Visas Processed", desc: "Direct, hands-on representation for skilled workers, students, families and business immigrants." },
+    { icon: Shield, title: "Regulated Advice", desc: "In Canada, only Regulated Canadian Immigration Consultants (RCIC) and lawyers may charge for immigration advice. Verify any consultant on the public CICC register at college-ic.ca before paying." },
+    { icon: Award, title: "High Approval Rate", desc: "Consistent track record across Express Entry, PNP, LMIA, study permits and family sponsorships since 2016. Approval-rate figure is our internal all-time average across represented files; individual outcomes depend on IRCC's assessment of each file." },
+    { icon: Users, title: "15,000+ Applications Processed", desc: "Hands-on representation for skilled workers, students, families and business immigrants since 2016." },
     { icon: Globe2, title: "4-Country Coverage", desc: "Canada, Australia, Germany and the United Kingdom — single team, end-to-end service." },
   ];
 
@@ -90,7 +88,7 @@ const AboutPage = () => {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={`${SITE}/og-default.jpg`} />
         <script type="application/ld+json">{JSON.stringify(aboutLD)}</script>
-        <script type="application/ld+json">{JSON.stringify(personLD)}</script>
+        <script type="application/ld+json">{JSON.stringify(teamLD)}</script>
       </Helmet>
 
       <SeoSchema breadcrumbs={[{ name: "About", url: "/about" }]} />
@@ -112,9 +110,10 @@ const AboutPage = () => {
               transition={{ delay: 0.1 }}
               className="lead text-lg text-primary-foreground/80 mb-8"
             >
-              We are a RCIC-regulated Canadian immigration consultancy founded in 2016. Since
-              then we have helped 15,000+ skilled workers, students, families and entrepreneurs
-              move to Canada, Australia, Germany and the UK with a 98% approval rate.
+              4 Aces Visa is an immigration consultancy team founded in 2016. Since then we
+              have helped 15,000+ skilled workers, students, families and entrepreneurs move
+              to Canada, Australia, Germany and the UK. Canadian files are handled with
+              regulated (RCIC / lawyer) representation as required by IRCC.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
               <Link to="/quiz">
@@ -131,11 +130,20 @@ const AboutPage = () => {
       <section className="section-padding section-light">
         <div className="container-narrow mx-auto">
           <AnimatedSection>
-            <h2 className="font-display text-3xl font-bold text-foreground mb-2">Our Credentials</h2>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-2">How We Work</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl">
-              In Canada, only Regulated Canadian Immigration Consultants (RCIC) and lawyers may
-              charge for immigration advice. Always verify your consultant on the public CICC
-              register before paying any fee.
+              We are an immigration consultancy team. Canadian files that require paid
+              representation are handled by regulated consultants (RCIC) or lawyers, as
+              required by IRCC. You can verify any Canadian consultant on the public{" "}
+              <a
+                href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline"
+              >
+                CICC register
+              </a>{" "}
+              before paying any fee.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -159,32 +167,31 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Founder */}
+      {/* Team */}
       <section className="section-padding section-soft">
         <div className="container-narrow mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <AnimatedSection className="lg:col-span-2">
               <h2 className="font-display text-3xl font-bold text-foreground mb-3">
-                Meet the Founder — Sahil Sharma
+                Meet the 4 Aces Visa Immigration Team
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Sahil founded 4 Aces Visa after navigating the Canadian immigration system as
-                a newcomer himself. As a Regulated Canadian Immigration Consultant (RCIC) in
-                good standing with the College of Immigration and Citizenship Consultants
-                (CICC), he leads end-to-end Express Entry, PNP, LMIA and study permit cases
-                from intake to landing.
+                4 Aces Visa was founded in 2016 by immigrants, for immigrants. Our team has
+                since guided 15,000+ skilled workers, international students, families and
+                entrepreneurs through Express Entry, PNP, LMIA, study permits and family
+                sponsorship — plus parallel pathways in Australia, Germany and the UK.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                He speaks English, Hindi and Punjabi, and is the primary point of contact for
-                strategy on every file the firm represents — no junior hand-offs, no
-                offshore call centres.
+                Canadian paid representation is handled by regulated consultants (RCIC) or
+                immigration lawyers, as required under IRCC rules. Every file is managed
+                end-to-end by our team — no junior hand-offs, no offshore call centres.
               </p>
               <ul className="space-y-2 mt-6">
                 {[
-                  "Founded 4 Aces Visa in 2016",
-                  "RCIC member, CICC College of Immigration and Citizenship Consultants",
-                  "15,000+ visa applications represented",
-                  "Specialisation: Express Entry, PNP, LMIA, study permits",
+                  "Founded in 2016",
+                  "15,000+ applications represented across 4 destination countries",
+                  "Canadian files handled by regulated representatives (RCIC / lawyer) per IRCC rules",
+                  "Specialisation: Express Entry, PNP, LMIA, study permits, family sponsorship",
                   "Languages: English, Hindi, Punjabi",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-foreground">
@@ -197,7 +204,7 @@ const AboutPage = () => {
             <aside>
               <div className="bg-card rounded-xl border border-border p-6 sticky top-24 card-interactive">
                 <h3 className="font-display text-lg font-bold text-foreground mb-4">
-                  Talk to an RCIC
+                  Talk to our team
                 </h3>
                 <EligibilityForm sourcePage="about-page" />
               </div>
@@ -217,8 +224,9 @@ const AboutPage = () => {
               advice from anyone who isn't legally authorised to give it.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Every file is handled by an RCIC. Every quote is fixed in writing. Every client
-              gets a direct line to the person managing their case.
+              Canadian files that require paid representation are handled by regulated
+              consultants (RCIC) or lawyers. Every quote is fixed in writing. Every client
+              gets a direct line to the team member managing their case.
             </p>
           </AnimatedSection>
         </div>

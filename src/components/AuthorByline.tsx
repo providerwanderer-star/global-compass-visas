@@ -101,7 +101,7 @@ const AuthorByline = ({
       <div
         className={`flex flex-wrap items-center gap-3 rounded-lg border border-border bg-muted/30 p-3 text-sm ${className}`}
         itemScope
-        itemType="https://schema.org/Person"
+        itemType="https://schema.org/Organization"
       >
         <Avatar className={isCompact ? "h-8 w-8" : "h-10 w-10"}>
           <AvatarImage src={author.image} alt={author.name} />

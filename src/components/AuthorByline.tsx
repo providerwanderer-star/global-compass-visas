@@ -123,9 +123,6 @@ const AuthorByline = ({
             >
               <span itemProp="name">{author.name}</span>
             </a>
-            <span className="text-muted-foreground">
-              , {author.jobTitle} — {author.organization}
-            </span>
           </span>
 
           <span className="hidden text-muted-foreground sm:inline">·</span>

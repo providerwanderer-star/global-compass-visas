@@ -32,7 +32,7 @@ const StudyFieldProvincePage = () => {
   const canonical = `${SITE}/study/${field.slug}/${prov.slug}`;
   const headline = `Study ${field.name} in ${prov.name}, Canada — Cost, Top Colleges & PR Pathway (${YEAR})`;
   const metaTitle = `Study ${field.shortName} in ${prov.name} ${YEAR} — Cost, Colleges, PR | 4 Aces Visa`;
-  const metaDescription = `${field.name} in ${prov.name}: tuition ${field.tuitionCadPerYear}, IELTS ${field.ieltsRequirement.split(";")[0]}, top DLIs and the study-permit → PGWP → PR pathway. Sahil Garg, 4 Aces Visa.`;
+  const metaDescription = `${field.name} in ${prov.name}: tuition ${field.tuitionCadPerYear}, IELTS ${field.ieltsRequirement.split(";")[0]}, top DLIs and the study-permit → PGWP → PR pathway. 4 Aces Visa Immigration Team.`;
 
   const faqs = [
     {
@@ -73,7 +73,7 @@ const StudyFieldProvincePage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: {
       "@type": "Organization",
       name: "4 Aces Visa",
@@ -244,7 +244,7 @@ const StudyFieldProvincePage = () => {
                 Free study-permit + PR roadmap
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Sahil Garg's team will shortlist DLIs in {prov.name} for {field.name},
+                our team will shortlist DLIs in {prov.name} for {field.name},
                 map your IELTS/funds plan and lay out the study → PGWP → PR pipeline.
               </p>
             </div>

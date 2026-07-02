@@ -32,7 +32,7 @@ const BringFamilyPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
@@ -128,7 +128,7 @@ const BringFamilyPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Bring your family to Canada</h2>
-              <p className="mt-2 text-muted-foreground">Tell us your situation — Sahil Garg's team will map the fastest route for your spouse, children or parents.</p>
+              <p className="mt-2 text-muted-foreground">Tell us your situation — our team will map the fastest route for your spouse, children or parents.</p>
             </div>
             <EligibilityForm sourcePage={`bring-family-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "family" }} />
           </div>

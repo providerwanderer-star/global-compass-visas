@@ -19,7 +19,7 @@ const CostPage = () => {
   const canonical = `${SITE}/cost/${g.slug}`;
   const headline = `${g.name} (${YEAR})`;
   const metaTitle = `${g.shortName} ${YEAR} — Total Fees in CAD & INR | 4 Aces Visa`;
-  const metaDescription = `${g.oneLiner} Updated ${YEAR}. Sahil Garg, 4 Aces Visa.`;
+  const metaDescription = `${g.oneLiner} Updated ${YEAR}. 4 Aces Visa Immigration Team.`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -32,7 +32,7 @@ const CostPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
@@ -144,7 +144,7 @@ const CostPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Get a personalised quote</h2>
-              <p className="mt-2 text-muted-foreground">Sahil Garg's team will price out your specific case — no obligation.</p>
+              <p className="mt-2 text-muted-foreground">our team will price out your specific case — no obligation.</p>
             </div>
             <EligibilityForm sourcePage={`cost-${g.slug}`} heading={g.shortName} />
           </div>

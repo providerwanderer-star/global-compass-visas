@@ -25,7 +25,7 @@ const CityIndustryPage = () => {
   const canonical = `${SITE}/city/${ci.city}/${ci.industry}`;
   const headline = `${ci.industryShort} Jobs & Immigration in ${ci.cityName}, ${ci.province} (${YEAR})`;
   const metaTitle = `${ci.industryShort} Jobs in ${ci.cityName} ${YEAR} — Employers, Wage, PR | 4 Aces Visa`;
-  const metaDescription = `${ci.industryName} in ${ci.cityName}, ${ci.province}: top employers, in-demand NOCs, median wage ${ci.medianWageCAD} and the ${ci.pnpStream} pathway. Sahil Garg, 4 Aces Visa.`;
+  const metaDescription = `${ci.industryName} in ${ci.cityName}, ${ci.province}: top employers, in-demand NOCs, median wage ${ci.medianWageCAD} and the ${ci.pnpStream} pathway. 4 Aces Visa Immigration Team.`;
 
   const faqs = [
     { q: `Is ${ci.industryShort.toLowerCase()} hiring in ${ci.cityName}?`, a: `Yes — top employers include ${ci.topEmployers.slice(0, 4).join(", ")}. Median wage is ${ci.medianWageCAD}.` },
@@ -50,7 +50,7 @@ const CityIndustryPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
@@ -175,7 +175,7 @@ const CityIndustryPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Free eligibility check — {ci.industryShort}, {ci.cityName}</h2>
-              <p className="mt-2 text-muted-foreground">Sahil Garg's team will map your profile to the right {ci.cityName} employer + PNP route.</p>
+              <p className="mt-2 text-muted-foreground">our team will map your profile to the right {ci.cityName} employer + PNP route.</p>
             </div>
             <EligibilityForm sourcePage={`city-${ci.city}-${ci.industry}`} heading={`${ci.industryShort} in ${ci.cityName}`} />
           </div>

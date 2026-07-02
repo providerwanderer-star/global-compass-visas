@@ -266,7 +266,7 @@ const MoveCorridorPage = () => {
                 Free eligibility check — {corridor.origin.name} → {corridor.destination.name}
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Sahil Garg's team will map your profile to {program.shortName} and confirm whether
+                our team will map your profile to {program.shortName} and confirm whether
                 another pathway gives you a faster or cheaper route.
               </p>
             </div>

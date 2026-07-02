@@ -42,7 +42,7 @@ export const REFUSALS: Record<RefusalSlug, RefusalGuide> = {
       { t: "Order GCMS / ATIP notes", d: "CAD 5 ATIP request reveals the officer's actual reasoning (not just the boilerplate letter). Takes ~30 days." },
       { t: "Diagnose: curable vs unreasonable", d: "If the officer missed something you submitted → reconsideration or JR. If the file was genuinely weak → re-apply with stronger evidence." },
       { t: "Prepare a stronger re-application", d: "Address every refusal ground head-on with a 'Letter of Explanation' and clearly labelled new evidence." },
-      { t: "Submit with Sahil Garg's review", d: "Free pre-submission review; we flag the 3–4 issues most likely to trigger another refusal." },
+      { t: "Submit with our team's review", d: "Free pre-submission review; we flag the 3–4 issues most likely to trigger another refusal." },
     ],
     faqs: [
       { q: "How many times can I re-apply?", a: "No legal limit, but each refusal goes on your IRCC record. After 2–3 refusals, judicial review or a different visa type becomes more strategic than a 4th re-application." },
@@ -75,7 +75,7 @@ export const REFUSALS: Record<RefusalSlug, RefusalGuide> = {
       { t: "Order GCMS notes (CAD 5 ATIP)", d: "Reveals actual officer reasoning beyond the boilerplate refusal letter." },
       { t: "Re-validate the LMIA if expired", d: "Most positive LMIAs are valid 12 months. Employer may need to re-apply for LMIA." },
       { t: "Tighten the documentation gap", d: "Add proof of credentials, job description matching NOC, employer financials, organisational chart." },
-      { t: "Submit with employer + counsel review", d: "Sahil Garg's team coordinates with the employer to fix the documentation issues IRCC flagged." },
+      { t: "Submit with employer + counsel review", d: "our team coordinates with the employer to fix the documentation issues IRCC flagged." },
     ],
     faqs: [
       { q: "Can my employer be penalised for my refusal?", a: "Not directly — but LMIA-related employer compliance issues can flag the employer for future LMIAs." },
@@ -142,7 +142,7 @@ export const REFUSALS: Record<RefusalSlug, RefusalGuide> = {
       { t: "Identify root cause", d: "Documentation gap? NOC mismatch? Medical? Each route has a different fix." },
       { t: "Diagnose: curable vs JR-worthy", d: "If officer missed evidence or applied wrong test → JR. If file was genuinely weak → re-apply with cure." },
       { t: "Cure the documentation gap", d: "Re-do ECA with correct institution, refresh PCCs, get employment letters that match NOC duties verbatim." },
-      { t: "Re-submit complete file", d: "Don't give IRCC any reason to find new gaps. Sahil Garg's team reviews the entire file before submission." },
+      { t: "Re-submit complete file", d: "Don't give IRCC any reason to find new gaps. our team reviews the entire file before submission." },
     ],
     faqs: [
       { q: "Can I keep working in Canada after a PR refusal?", a: "Only if you have other valid status (work permit, study permit, BOWP). PR refusal alone doesn't strip existing temporary status." },
@@ -209,7 +209,7 @@ export const REFUSALS: Record<RefusalSlug, RefusalGuide> = {
       { t: "Identify the refusal reason", d: "DLI eligibility? 180-day rule? Program length? Each has a different cure." },
       { t: "Apply for restoration + new PGWP", d: "Combined application with CAD 200 restoration + CAD 255 PGWP fees." },
       { t: "Stop working immediately", d: "Implied status doesn't extend to work — working without status = misrepresentation risk on future applications." },
-      { t: "Plan PR pivot", d: "If PGWP isn't curable, work with Sahil Garg's team on alternate routes (LMIA work permit, study extension, leave-and-return)." },
+      { t: "Plan PR pivot", d: "If PGWP isn't curable, work with our team on alternate routes (LMIA work permit, study extension, leave-and-return)." },
     ],
     faqs: [
       { q: "What is the 180-day rule?", a: "You must apply for the PGWP within 180 days of receiving final transcripts/letter confirming program completion." },

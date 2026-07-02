@@ -24,7 +24,7 @@ const SponsorshipPage = () => {
   const canonical = `${SITE}/sponsor/${p.slug}`;
   const headline = `${p.name} — ${YEAR} Guide`;
   const metaTitle = `${p.shortName} ${YEAR} — Eligibility, Cost, Step-by-Step | 4 Aces Visa`;
-  const metaDescription = `${p.oneLiner} Processing time ${p.processingTime}, cost ${p.govFees}, common rejection reasons and FAQs. Sahil Garg, 4 Aces Visa.`;
+  const metaDescription = `${p.oneLiner} Processing time ${p.processingTime}, cost ${p.govFees}, common rejection reasons and FAQs. 4 Aces Visa Immigration Team.`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -41,7 +41,7 @@ const SponsorshipPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
@@ -148,7 +148,7 @@ const SponsorshipPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Free sponsorship eligibility check</h2>
-              <p className="mt-2 text-muted-foreground">Sahil Garg's team will assess sponsor + applicant eligibility, documents and timeline — no cost.</p>
+              <p className="mt-2 text-muted-foreground">our team will assess sponsor + applicant eligibility, documents and timeline — no cost.</p>
             </div>
             <EligibilityForm sourcePage={`sponsor-${p.slug}`} heading={p.shortName} />
           </div>

@@ -28,7 +28,7 @@ const AppealPage = () => {
   const articleSchema = {
     "@context": "https://schema.org", "@type": "Article", headline,
     datePublished: `${YEAR}-01-15`, dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
@@ -125,7 +125,7 @@ const AppealPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Refused or facing removal? Don't wait.</h2>
-              <p className="mt-2 text-muted-foreground">Sahil Garg's team handles appeals, judicial reviews and H&amp;C files. Book a free strategy call.</p>
+              <p className="mt-2 text-muted-foreground">our team handles appeals, judicial reviews and H&amp;C files. Book a free strategy call.</p>
             </div>
             <EligibilityForm sourcePage={`appeal-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "appeal" }} />
           </div>

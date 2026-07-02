@@ -24,7 +24,7 @@ const RefusalPage = () => {
   const canonical = `${SITE}/refusal/${r.slug}`;
   const headline = `${r.name} (${YEAR})`;
   const metaTitle = `${r.shortName} ${YEAR} — Reasons, Reapply or Appeal | 4 Aces Visa`;
-  const metaDescription = `${r.oneLiner} Refusal reasons, GCMS notes, reconsideration vs re-apply vs Federal Court JR. Sahil Garg, 4 Aces Visa.`;
+  const metaDescription = `${r.oneLiner} Refusal reasons, GCMS notes, reconsideration vs re-apply vs Federal Court JR. 4 Aces Visa Immigration Team.`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -41,7 +41,7 @@ const RefusalPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
@@ -156,7 +156,7 @@ const RefusalPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Free refusal review</h2>
-              <p className="mt-2 text-muted-foreground">Send Sahil Garg's team your refusal letter — we'll diagnose the cause and recommend the best path forward at no cost.</p>
+              <p className="mt-2 text-muted-foreground">Send our team your refusal letter — we'll diagnose the cause and recommend the best path forward at no cost.</p>
             </div>
             <EligibilityForm sourcePage={`refusal-${r.slug}`} heading={r.shortName} />
           </div>

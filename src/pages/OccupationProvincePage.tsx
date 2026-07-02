@@ -33,7 +33,7 @@ const OccupationProvincePage = () => {
   const canonical = `${SITE}/jobs/${occ.slug}/${prov.slug}`;
   const headline = `${occ.name} Jobs & PR Pathway in ${prov.name}, Canada (${YEAR})`;
   const metaTitle = `${occ.name} Jobs in ${prov.name} + PR Pathway (${YEAR}) | 4 Aces Visa`;
-  const metaDescription = `${occ.name} (NOC ${occ.noc}, TEER ${occ.teer}) demand, wage, licensing and Express Entry / ${prov.abbr} PNP routes for ${prov.name}. Sahil Garg, 4 Aces Visa.`;
+  const metaDescription = `${occ.name} (NOC ${occ.noc}, TEER ${occ.teer}) demand, wage, licensing and Express Entry / ${prov.abbr} PNP routes for ${prov.name}. 4 Aces Visa Immigration Team.`;
 
   const faqs = [
     {
@@ -74,7 +74,7 @@ const OccupationProvincePage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: {
       "@type": "Organization",
       name: "4 Aces Visa",
@@ -226,7 +226,7 @@ const OccupationProvincePage = () => {
                 Free eligibility check — {occ.name}, {prov.name}
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Sahil Garg's team will check your CRS, map you to the right {prov.abbr} PNP stream,
+                our team will check your CRS, map you to the right {prov.abbr} PNP stream,
                 and lay out timeline and cost.
               </p>
             </div>

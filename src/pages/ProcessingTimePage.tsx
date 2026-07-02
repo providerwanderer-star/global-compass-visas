@@ -19,7 +19,7 @@ const ProcessingTimePage = () => {
   const canonical = `${SITE}/processing-time/${g.slug}`;
   const headline = `${g.name} (${YEAR})`;
   const metaTitle = `${g.shortName} Processing Time ${YEAR} — Real IRCC Timelines | 4 Aces Visa`;
-  const metaDescription = `${g.oneLiner} Updated ${YEAR}. Sahil Garg, 4 Aces Visa.`;
+  const metaDescription = `${g.oneLiner} Updated ${YEAR}. 4 Aces Visa Immigration Team.`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -32,7 +32,7 @@ const ProcessingTimePage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
@@ -148,7 +148,7 @@ const ProcessingTimePage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Get a personalised timeline</h2>
-              <p className="mt-2 text-muted-foreground">Sahil Garg's team will review your profile and give you a realistic timeline based on your country, NOC, and visa office.</p>
+              <p className="mt-2 text-muted-foreground">our team will review your profile and give you a realistic timeline based on your country, NOC, and visa office.</p>
             </div>
             <EligibilityForm sourcePage={`processing-${g.slug}`} heading={g.shortName} />
           </div>

@@ -32,7 +32,7 @@ const ChangeStatusPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Person", name: "Sahil Garg" },
+    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
     publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
@@ -123,7 +123,7 @@ const ChangeStatusPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Switching status? Get it right the first time.</h2>
-              <p className="mt-2 text-muted-foreground">Free assessment with Sahil Garg's team — we'll confirm your timing window and pull together the right document set.</p>
+              <p className="mt-2 text-muted-foreground">Free assessment with our team — we'll confirm your timing window and pull together the right document set.</p>
             </div>
             <EligibilityForm sourcePage={`change-status-${g.slug}`} heading={g.shortName} />
           </div>

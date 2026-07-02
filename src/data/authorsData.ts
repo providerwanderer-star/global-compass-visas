@@ -1,7 +1,8 @@
 /**
  * Author registry. Single source of truth for byline + Person schema across the site.
- * Founder/author name is **Sahil Garg** (NEVER "Sahil Sharma").
- * No fabricated RCIC license numbers — we do not claim CICC registration in schema until a real number is provided.
+ * Bylines credit the in-house 4 Aces Visa Immigration Team (Organization schema).
+ * Personal names and RCIC license numbers are intentionally NOT rendered until verified
+ * credentials are supplied — this keeps the site CICC-compliant.
  */
 
 export interface Author {
@@ -24,14 +25,14 @@ export const SITE = "https://www.4acesvisa.com";
 export const authors: Record<string, Author> = {
   "sahil-garg": {
     id: "sahil-garg",
-    name: "Sahil Garg",
-    jobTitle: "Founder",
+    name: "4 Aces Visa Immigration Team",
+    jobTitle: "Immigration Consultancy Team",
     organization: "4 Aces Visa",
     yearsExperience: 12,
     shortBio:
-      "Founder of 4 Aces Visa. 12+ years guiding skilled professionals, students and families through Canadian, Australian, UK and German immigration pathways.",
+      "The 4 Aces Visa Immigration Team has 12+ years combined experience guiding skilled professionals, students and families through Canadian, Australian, UK and German immigration pathways.",
     bio:
-      "Sahil Garg is the Founder of 4 Aces Visa. Over the last 12+ years he has personally guided thousands of skilled workers, international students and families through Express Entry, PNP, LMIA-backed work permits, study permits and family sponsorship across Canada, Australia, the United Kingdom and Germany. He writes and reviews every guide on this site to make sure the information matches what IRCC, the Department of Home Affairs, UK Home Office and BAMF actually publish — not what social media claims.",
+      "The 4 Aces Visa Immigration Team has, over the last 12+ years, guided thousands of skilled workers, international students and families through Express Entry, PNP, LMIA-backed work permits, study permits and family sponsorship across Canada, Australia, the United Kingdom and Germany. The team writes and reviews every guide on this site to make sure the information matches what IRCC, the Department of Home Affairs, UK Home Office and BAMF actually publish — not what social media claims.",
     image: `${SITE}/og-default.jpg`,
     url: `${SITE}/about`,
     sameAs: [
@@ -45,22 +46,16 @@ export const authors: Record<string, Author> = {
 
 export const defaultAuthor = authors["sahil-garg"];
 
-/** Returns a schema.org Person JSON-LD object for the given author id. */
+/** Returns a schema.org Organization JSON-LD object for the byline entity. */
 export function getAuthorSchema(authorId: string = "sahil-garg") {
   const a = authors[authorId] ?? defaultAuthor;
   return {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": "Organization",
     "@id": `${SITE}/about#${a.id}`,
     name: a.name,
-    jobTitle: a.jobTitle,
-    worksFor: {
-      "@type": "Organization",
-      name: a.organization,
-      url: SITE,
-    },
     description: a.shortBio,
-    image: a.image,
+    logo: a.image,
     url: a.url,
     sameAs: a.sameAs,
     email: a.email,

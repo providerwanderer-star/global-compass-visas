@@ -66,7 +66,7 @@ const AuthorByline = ({
           datePublished: published,
           dateModified: updated,
           author: {
-            "@type": "Person",
+            "@type": "Organization",
             name: author.name,
             url: author.url,
           },

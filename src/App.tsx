@@ -81,6 +81,8 @@ import VisitCanadaPage from "@/pages/VisitCanadaPage";
 import WorkPermitPage from "@/pages/WorkPermitPage";
 import PrMaintenancePage from "@/pages/PrMaintenancePage";
 import PackagesPage from "@/pages/PackagesPage";
+import PrivacyPage from "@/pages/PrivacyPage";
+import TermsPage from "@/pages/TermsPage";
 
 const queryClient = new QueryClient();
 
@@ -187,6 +189,8 @@ const App = () => (
               <Route path="/visit-canada/:topic" element={<VisitCanadaPage />} />
               <Route path="/work-permit/:stream" element={<WorkPermitPage />} />
               <Route path="/pr-maintenance/:topic" element={<PrMaintenancePage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

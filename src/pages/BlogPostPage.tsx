@@ -10,6 +10,26 @@ import { blogEnhancements } from "@/data/blogEnhancements";
 import FAQCallToAction from "@/components/FAQCallToAction";
 import SmartCTA from "@/components/SmartCTA";
 import ConnectedFooter from "@/components/ConnectedFooter";
+import { StreamClosedNotice } from "@/components/StreamClosedNotice";
+
+// Blog posts that reference one or more of Ontario's 8 legacy OINP streams
+// (closed 25–26 June 2026). These get an inline notice at the top of the
+// article body directing readers to the replacement pathway.
+const OINP_LEGACY_POST_SLUGS = new Set<string>([
+  "canada-pnp-programs-explained",
+  "canada-pr-process-from-punjab-2026",
+  "express-entry-vs-pnp-2026",
+  "best-provinces-for-canada-pr-2026",
+  "ontario-pnp-guide-2026",
+  "toronto-immigration-services-2026",
+  "pnp-programs-ontario-vs-bc-vs-alberta-2026",
+  "canada-pr-timeline-how-long-does-it-take-2026",
+  "express-entry-vs-pnp-which-is-better-2026",
+  "canada-work-permit-to-pr-pathway-2026",
+  "best-colleges-ontario-international-students-2026",
+  "canada-pr-from-brampton-guide-2026",
+  "ai-tech-jobs-canada-immigration-2026",
+]);
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -250,6 +270,10 @@ const BlogPostPage = () => {
                     )}
                   </nav>
                 </details>
+              )}
+
+              {OINP_LEGACY_POST_SLUGS.has(post.slug) && (
+                <StreamClosedNotice streamName="Ontario's 8 legacy OINP streams" />
               )}
 
               {renderContent(post.content)}

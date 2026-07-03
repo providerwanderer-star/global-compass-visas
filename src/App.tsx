@@ -85,6 +85,8 @@ import PackagesPage from "@/pages/PackagesPage";
 import PrivacyPage from "@/pages/PrivacyPage";
 import TermsPage from "@/pages/TermsPage";
 import OntarioWorkforcePriorityStreamPage from "@/pages/OntarioWorkforcePriorityStreamPage";
+import USImmigrationHubPage from "@/pages/USImmigrationHubPage";
+import USVisaPage from "@/pages/USVisaPage";
 
 const queryClient = new QueryClient();
 
@@ -135,6 +137,9 @@ const App = () => (
               <Route path="/express-entry/draws" element={<DrawHistoryPage />} />
               <Route path="/pnp-tracker" element={<PNPTrackerPage />} />
               <Route path="/pnp/ontario/workforce-priority-stream" element={<OntarioWorkforcePriorityStreamPage />} />
+              {/* US immigration reference pages — informational only, RCIC disclaimer required */}
+              <Route path="/us-immigration" element={<USImmigrationHubPage />} />
+              <Route path="/us-immigration/:slug" element={<USVisaPage />} />
               <Route path="/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/immigration-cost-calculator" element={<ImmigrationCostPage />} />
               <Route path="/tools" element={<ToolsHubPage />} />

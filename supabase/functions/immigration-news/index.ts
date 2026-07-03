@@ -1,13 +1,16 @@
-// Immigration News Aggregator
-// Fetches the latest IRCC news using Firecrawl and merges with internal blog/draws/PNP signals.
-// Returns a normalized timeline. Cached at edge for 30 minutes.
+// Immigration News (public read-only endpoint)
+// Reads pre-ingested news from `immigration_news` and recent draws from the
+// database. Does NOT call any paid external API at request time — the
+// ingestion pipeline (`ingest-immigration-draws`) is the only writer.
+// Public + heavily cached; safe to expose to anonymous browsers.
+
+import { createClient } from "npm:@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
 };
-
-import { createClient } from "npm:@supabase/supabase-js@2";
 
 interface NewsItem {
   id: string;
@@ -16,46 +19,8 @@ interface NewsItem {
   summary: string;
   url: string;
   source: string;
-  publishedAt: string; // ISO
+  publishedAt: string;
   meta?: Record<string, string | number>;
-}
-
-const FIRECRAWL_V2 = "https://api.firecrawl.dev/v2";
-
-// Firecrawl search across IRCC + provincial immigration sites
-async function fetchIRCCNews(apiKey: string): Promise<NewsItem[]> {
-  try {
-    const res = await fetch(`${FIRECRAWL_V2}/search`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: "site:canada.ca IRCC immigration news 2026 OR site:cicnews.com",
-        limit: 12,
-        tbs: "qdr:m", // last month
-      }),
-    });
-    if (!res.ok) {
-      console.error("Firecrawl search failed", res.status, await res.text());
-      return [];
-    }
-    const data = await res.json();
-    const results: any[] = data?.data?.web ?? data?.data ?? data?.web ?? [];
-    return results.slice(0, 12).map((r: any, i: number) => ({
-      id: `ircc-${i}-${Date.parse(r.publishedDate || r.date || new Date().toISOString())}`,
-      type: r.url?.includes("cicnews") ? "announcement" : "policy",
-      title: r.title || "Immigration Update",
-      summary: (r.description || r.snippet || "").slice(0, 240),
-      url: r.url,
-      source: r.url?.includes("canada.ca") ? "IRCC (canada.ca)" : "CIC News",
-      publishedAt: r.publishedDate || r.date || new Date().toISOString(),
-    }));
-  } catch (err) {
-    console.error("fetchIRCCNews error:", err);
-    return [];
-  }
 }
 
 Deno.serve(async (req) => {
@@ -64,59 +29,95 @@ Deno.serve(async (req) => {
   }
 
   try {
-    // Require authenticated caller to protect paid third-party API from abuse.
-    const authHeader = req.headers.get("Authorization");
-    if (!authHeader?.startsWith("Bearer ")) {
-      return new Response(
-        JSON.stringify({ error: "Unauthorized" }),
-        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-      );
-    }
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_ANON_KEY")!,
-      { global: { headers: { Authorization: authHeader } } },
     );
-    const token = authHeader.replace("Bearer ", "");
-    const { data: claims, error: authError } = await supabase.auth.getClaims(token);
-    if (authError || !claims?.claims || claims.claims.role === "anon") {
-      return new Response(
-        JSON.stringify({ error: "Unauthorized" }),
-        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-      );
+
+    const [newsRes, drawsRes, pnpRes, runRes] = await Promise.all([
+      supabase.from("immigration_news")
+        .select("id, title, summary, source_url, source_name, category, published_at")
+        .order("published_at", { ascending: false })
+        .limit(20),
+      supabase.from("express_entry_draws")
+        .select("id, draw_number, draw_date, category, crs_min, itas, source_url")
+        .order("draw_date", { ascending: false })
+        .limit(10),
+      supabase.from("pnp_draws")
+        .select("id, province, province_code, stream, draw_date, invitations, min_score, notes, source_url")
+        .order("draw_date", { ascending: false })
+        .limit(10),
+      supabase.from("ingestion_runs")
+        .select("finished_at, status, source")
+        .eq("status", "ok")
+        .order("finished_at", { ascending: false })
+        .limit(1),
+    ]);
+
+    const items: NewsItem[] = [];
+
+    for (const n of newsRes.data ?? []) {
+      items.push({
+        id: `news-${n.id}`,
+        type: (n.category === "announcement" ? "announcement" : "policy") as NewsItem["type"],
+        title: n.title,
+        summary: n.summary ?? "",
+        url: n.source_url,
+        source: n.source_name,
+        publishedAt: n.published_at,
+      });
     }
 
-    const apiKey = Deno.env.get("FIRECRAWL_API_KEY");
-    if (!apiKey) {
-      console.error("FIRECRAWL_API_KEY is not configured");
-      return new Response(
-        JSON.stringify({ error: "Service temporarily unavailable" }),
-        { status: 503, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-      );
+    for (const d of drawsRes.data ?? []) {
+      items.push({
+        id: `ee-${d.draw_number}`,
+        type: "draw",
+        title: `Express Entry Draw #${d.draw_number} — ${d.category} (CRS ${d.crs_min})`,
+        summary: `${d.itas.toLocaleString()} ITAs issued in the ${d.category} category. Cutoff CRS ${d.crs_min}.`,
+        url: d.source_url || "/express-entry/draws",
+        source: "IRCC Express Entry",
+        publishedAt: d.draw_date,
+        meta: { crs: d.crs_min, itas: d.itas, category: d.category },
+      });
     }
 
-    const news = await fetchIRCCNews(apiKey);
+    for (const p of pnpRes.data ?? []) {
+      items.push({
+        id: `pnp-${p.id}`,
+        type: "pnp",
+        title: `${p.province} PNP — ${p.stream} (${p.invitations} invites)`,
+        summary: `${p.province} issued ${p.invitations} nominations${p.min_score ? ` with minimum score ${p.min_score}` : ""}.${p.notes ? ` ${p.notes}` : ""}`,
+        url: p.source_url || "/pnp-tracker",
+        source: `${p.province} PNP`,
+        publishedAt: p.draw_date,
+        meta: { invitations: p.invitations, minScore: p.min_score ?? "—" },
+      });
+    }
+
+    items.sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt));
+
+    const lastIngestedAt = runRes.data?.[0]?.finished_at ?? null;
 
     return new Response(
       JSON.stringify({
-        items: news,
+        items,
         fetchedAt: new Date().toISOString(),
-        sourceCount: news.length,
+        lastIngestedAt,
+        sourceCount: items.length,
       }),
       {
         status: 200,
         headers: {
           ...corsHeaders,
           "Content-Type": "application/json",
-          // CDN cache 30 min, stale-while-revalidate 1h
-          "Cache-Control": "public, max-age=1800, s-maxage=1800, stale-while-revalidate=3600",
+          "Cache-Control": "public, max-age=900, s-maxage=900, stale-while-revalidate=3600",
         },
       },
     );
   } catch (err) {
     console.error("immigration-news error:", err);
     return new Response(
-      JSON.stringify({ error: "Internal server error" }),
+      JSON.stringify({ error: "Internal server error", items: [], lastIngestedAt: null }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   }

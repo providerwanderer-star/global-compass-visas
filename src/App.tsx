@@ -53,6 +53,7 @@ import AdminNocCoveragePage from "@/pages/AdminNocCoveragePage";
 import AdminPage from "@/pages/AdminPage";
 import ForAIPage from "@/pages/ForAIPage";
 import AboutPage from "@/pages/AboutPage";
+import ToolsHubPage from "@/pages/ToolsHubPage";
 import OriginCountryPage from "@/pages/OriginCountryPage";
 import OriginCityPage from "@/pages/OriginCityPage";
 import MoveCorridorPage from "@/pages/MoveCorridorPage";
@@ -134,6 +135,7 @@ const App = () => (
               <Route path="/pnp-tracker" element={<PNPTrackerPage />} />
               <Route path="/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/immigration-cost-calculator" element={<ImmigrationCostPage />} />
+              <Route path="/tools" element={<ToolsHubPage />} />
               <Route path="/in-demand-jobs" element={<InDemandJobsPage />} />
               <Route path="/noc/:code" element={<NOCDetailPage />} />
               <Route path="/news" element={<NewsHubPage />} />

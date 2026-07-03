@@ -384,6 +384,7 @@ add("/for-ai", 0.5, "weekly");
 add("/express-entry/draws", 0.95, "daily");
 add("/pnp-tracker", 0.9, "daily");
 add("/noc-finder", 0.9, "weekly");
+add("/tools", 0.9, "weekly");
 add("/news", 0.9, "daily");
 add("/processing-times", 0.85, "weekly");
 

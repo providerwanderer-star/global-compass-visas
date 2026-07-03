@@ -135,6 +135,7 @@ const App = () => (
               <Route path="/pnp-tracker" element={<PNPTrackerPage />} />
               <Route path="/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/immigration-cost-calculator" element={<ImmigrationCostPage />} />
+              <Route path="/tools" element={<ToolsHubPage />} />
               <Route path="/in-demand-jobs" element={<InDemandJobsPage />} />
               <Route path="/noc/:code" element={<NOCDetailPage />} />
               <Route path="/news" element={<NewsHubPage />} />

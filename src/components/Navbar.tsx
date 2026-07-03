@@ -82,6 +82,7 @@ const navLinks = [
   {
     label: "Tools", href: "#",
     children: [
+      { label: "🧰 All Tools Hub", href: "/tools" },
       { label: "🔎 Search Pathways", href: "/search" },
       { label: "🧮 CRS Calculator", href: "/crs-calculator" },
       { label: "🔍 NOC Finder", href: "/noc-finder" },

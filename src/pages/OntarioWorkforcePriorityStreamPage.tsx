@@ -92,13 +92,8 @@ const OntarioWorkforcePriorityStreamPage = () => {
 
   useEffect(() => {
     (async () => {
-      const { data } = await supabase
-        .from("ingestion_runs")
-        .select("finished_at")
-        .eq("status", "ok")
-        .order("finished_at", { ascending: false })
-        .limit(1);
-      setLastIngestedAt(data?.[0]?.finished_at ?? null);
+      const { data } = await supabase.rpc("get_last_ingested_at");
+      setLastIngestedAt((data as string | null) ?? null);
     })();
   }, []);
 

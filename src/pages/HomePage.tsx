@@ -57,7 +57,7 @@ const homeFaqs = [
   { q: "Which country is the easiest to immigrate to in 2026?", a: "Canada offers the fastest PR through Express Entry (6 months). Germany's Chancenkarte (Opportunity Card) visa is easiest to obtain initially with just 6 points. Australia rewards high-skilled professionals with points-based PR. The UK is efficient if you have a job offer. Your best option depends on your age, education, language skills, and work experience." },
   { q: "Can I get Canada PR without a job offer?", a: "Yes, the Federal Skilled Worker Program (FSWP) under Express Entry does not require a job offer. You qualify based on CRS score alone. However, a valid LMIA job offer adds 50-200 CRS points and significantly improves your chances of receiving an ITA." },
   { q: "What is the difference between Express Entry and PNP?", a: "Express Entry is the federal system that ranks all candidates by CRS score and issues ITAs. PNP (Provincial Nominee Program) allows individual provinces like Ontario (OINP), BC, Alberta, and Saskatchewan to nominate candidates based on local labor market needs. A PNP nomination adds 600 CRS points to your Express Entry profile, guaranteeing a PR invitation." },
-  { q: "How much does Canada PR cost from India in 2026?", a: "Total costs include IRCC processing fees (~CAD 1,365), IELTS exam (~₹16,000), WES credential evaluation (~₹15,000), biometrics (CAD 85), police clearances (~₹500-2,000), and medical exam (~₹5,000-8,000). Grand total is typically ₹3-5 lakhs (CAD 2,500-5,000) excluding consultant fees. 4 Aces Visa offers transparent pricing with no hidden charges." },
+  { q: "How much does Canada PR cost from India in 2026?", a: "Total costs include IRCC processing fees (~CAD 1,365), IELTS exam (~₹16,000), WES credential evaluation (~₹15,000), biometrics (CAD 85), police clearances (~₹500-2,000), and medical exam (~₹5,000-8,000). Grand total is typically ₹3-5 lakhs (CAD 2,500-5,000) excluding consultant fees. Garg Brothers offers transparent pricing with no hidden charges." },
   { q: "How long does Canada PR take from India?", a: "Express Entry: 6-8 months from ITA to PR approval. PNP-based: 12-18 months total. Study permit to PR pathway: 3-5 years (2-year program + 3-year PGWP + CEC application). LMIA work permit to PR: 8-14 months. Total timeline from start to PR landing is typically 8-18 months for direct pathways." },
   { q: "What are the best courses in Canada for PR in 2026?", a: "Top PR-friendly programs include: Computer Science & IT (NOC 21232-21234), Nursing & Healthcare (NOC 31301-31302), Business Analytics & Supply Chain Management, Early Childhood Education (high PNP demand), Electrical & Mechanical Engineering Technology, Cybersecurity & Cloud Computing, and Hospitality Management. Choose 2-year diplomas at DLIs for a 3-year PGWP, maximizing your PR pathway." },
   { q: "Which colleges in Canada are best for PR pathway?", a: "Top DLIs for PR pathway include Conestoga College (Ontario), Seneca Polytechnic (Toronto), Douglas College (BC), BCIT (Vancouver), Humber College (Toronto), Fanshawe College (London ON), Saskatchewan Polytechnic, and NAIT (Alberta). Look for programs aligned with NOC TEER 0/1/2/3 occupations and provinces with active PNP draws." },
@@ -72,15 +72,15 @@ const homeFaqs = [
   { q: "What IELTS score do I need for Canada PR?", a: "Minimum CLB 7 for Federal Skilled Worker Program: IELTS L6.0, R6.0, W6.0, S6.0. For maximum CRS points, aim for CLB 10: L8.5, R8.0, W7.5, S7.5. Each band increase from CLB 7 to CLB 9 can add 40-80 CRS points. Canadian Experience Class requires minimum CLB 7 (NOC TEER 0/1) or CLB 5 (NOC TEER 2/3)." },
   { q: "Can I bring my family to Canada with my PR?", a: "Yes. Your spouse/common-law partner and dependent children (under 22, unmarried) are included in your PR application. Your spouse gets an open work permit. After becoming a PR, you can sponsor parents and grandparents through the PGP program or invite them on a Super Visa (10-year multiple entry, 5-year stays per visit)." },
   { q: "What is the Super Visa for parents in 2026?", a: "The Super Visa is a 10-year multiple-entry visa allowing parents and grandparents of Canadian citizens or PRs to stay up to 5 years per visit. Requirements: inviter must meet minimum income (LICO+30%), private medical insurance of minimum $100,000 coverage from a Canadian insurer. Processing takes 3-6 months." },
-  { q: "How do I choose the best immigration consultant?", a: "Look for: proven track record with verifiable success rates, transparent pricing with no hidden fees, personal immigration experience, knowledge of multiple pathways, and free initial assessments. Red flags: guaranteeing visa approval, cash-only payments, high-pressure sales tactics, and inability to explain the process clearly. 4 Aces Visa consultants are immigrants themselves with a 98% success rate." },
+  { q: "How do I choose the best immigration consultant?", a: "Look for: proven track record with verifiable success rates, transparent pricing with no hidden fees, personal immigration experience, knowledge of multiple pathways, and free initial assessments. Red flags: guaranteeing visa approval, cash-only payments, high-pressure sales tactics, and inability to explain the process clearly. Garg Brothers consultants are immigrants themselves with a 98% success rate." },
 ];
 
 const testimonials = [
-  { name: "Rajesh K.", country: "Canada PR", text: "4 Aces Visa helped me get my Canada PR in just 8 months. Their CRS optimization strategy was brilliant! By immigrants, for immigrants — they truly understand the journey.", rating: 5 },
+  { name: "Rajesh K.", country: "Canada PR", text: "Garg Brothers helped me get my Canada PR in just 8 months. Their CRS optimization strategy was brilliant! By immigrants, for immigrants — they truly understand the journey.", rating: 5 },
   { name: "Priya M.", country: "Australia 190", text: "I was confused between Canada and Australia. They analyzed my profile and Australia was perfect. Got my 190 visa! They've been through it themselves — that makes all the difference.", rating: 5 },
   { name: "Ahmed S.", country: "Germany Blue Card", text: "From Job Seeker Visa to EU Blue Card in 4 months. The team knows exactly what they're doing because they've walked this path themselves.", rating: 5 },
   { name: "Sneha R.", country: "Canada Study → PR", text: "Got admission to a top DLI and study permit approved on first try. Now working on my PGWP! By immigrants, for immigrants — they mean it.", rating: 5 },
-  { name: "David L.", country: "UK Skilled Worker", text: "The UK visa process felt overwhelming until 4 Aces Visa stepped in. Got my Skilled Worker visa approved in 5 weeks. Incredible service.", rating: 5 },
+  { name: "David L.", country: "UK Skilled Worker", text: "The UK visa process felt overwhelming until Garg Brothers stepped in. Got my Skilled Worker visa approved in 5 weeks. Incredible service.", rating: 5 },
   { name: "Maria C.", country: "Canada Family Sponsorship", text: "Sponsored my parents through Super Visa. The team handled insurance, documents, everything. So grateful to have my family together in Canada.", rating: 5 },
 ];
 
@@ -104,28 +104,28 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>Move & Settle to Canada — End-to-end Immigration | 4 Aces Visa</title>
+        <title>Move & Settle to Canada — End-to-end Immigration | Garg Brothers</title>
         <meta name="description" content="RCIC-led Canadian immigration consultants. Express Entry PR, LMIA, PNP, study permits & work visas — Canada, Australia, Germany & UK. 15,000+ visas processed. 98% success rate. Free assessment." />
-        <link rel="canonical" href="https://www.4acesvisa.com/" />
-        <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, 4 Aces Visa" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/" />
+        <meta name="keywords" content="Canada PR consultant Punjab, immigration consultant Ontario, work permit Canada from India, Express Entry 2026, LMIA, PNP, study permit Canada, Canada immigration from Punjab, immigration consultant Brampton, Canada PR from India, Garg Brothers" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Move & Settle to Canada — End-to-end Immigration | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Move & Settle to Canada — End-to-end Immigration | Garg Brothers" />
         <meta property="og:description" content="RCIC-regulated Canadian immigration consultants. Express Entry, PNP, study permits, work permits and family sponsorship — end to end." />
-        <meta property="og:url" content="https://www.4acesvisa.com/" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "4 Aces Visa",
-            "url": "https://www.4acesvisa.com",
-            "logo": "https://www.4acesvisa.com/logo.png",
+            "name": "Garg Brothers",
+            "url": "https://www.gargbrothers.ca",
+            "logo": "https://www.gargbrothers.ca/logo.png",
             "description": "RCIC-regulated Canadian immigration consultants helping skilled workers, families, and students move to Canada.",
             "address": { "@type": "PostalAddress", "addressCountry": "CA" },
             "sameAs": [
@@ -141,12 +141,12 @@ const HomePage = () => {
             "@graph": [
               {
                 "@type": "Organization",
-                "@id": "https://www.4acesvisa.com/#organization",
-                "name": "4 Aces Visa",
-                "url": "https://www.4acesvisa.com",
+                "@id": "https://www.gargbrothers.ca/#organization",
+                "name": "Garg Brothers",
+                "url": "https://www.gargbrothers.ca",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://www.4acesvisa.com/favicon.ico",
+                  "url": "https://www.gargbrothers.ca/favicon.ico",
                   "width": 512,
                   "height": 512
                 },
@@ -186,10 +186,10 @@ const HomePage = () => {
               },
               {
                 "@type": "LocalBusiness",
-                "@id": "https://www.4acesvisa.com/#localbusiness",
-                "name": "4 Aces Visa — Immigration Consultants",
-                "image": "https://www.4acesvisa.com/favicon.ico",
-                "url": "https://www.4acesvisa.com",
+                "@id": "https://www.gargbrothers.ca/#localbusiness",
+                "name": "Garg Brothers — Immigration Consultants",
+                "image": "https://www.gargbrothers.ca/favicon.ico",
+                "url": "https://www.gargbrothers.ca",
                 "telephone": "+1-647-862-2190",
                 "email": "sahil280389@gmail.com",
                 "description": "Licensed immigration consultants specializing in Canada Express Entry PR, LMIA work permits, PNP, study permits, family sponsorship, visitor visas & citizenship for Canada, Australia, Germany & UK.",
@@ -244,7 +244,7 @@ const HomePage = () => {
               },
               {
                 "@type": "HowTo",
-                "name": "How to Migrate to Canada — 4 Aces Visa 5-Step Process",
+                "name": "How to Migrate to Canada — Garg Brothers 5-Step Process",
                 "description": "Our proven 5-step process to assess, optimize, prepare, file, and land your Canadian immigration application.",
                 "totalTime": "P8M",
                 "estimatedCost": { "@type": "MonetaryAmount", "currency": "CAD", "value": "2500" },
@@ -271,8 +271,8 @@ const HomePage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            url: "https://www.4acesvisa.com/",
-            name: "4 Aces Visa — Canadian Immigration Consultants",
+            url: "https://www.gargbrothers.ca/",
+            name: "Garg Brothers — Canadian Immigration Consultants",
             speakable: {
               "@type": "SpeakableSpecification",
               cssSelector: ["h1", ".speakable", ".lead"],

@@ -306,7 +306,7 @@ const AdminPage = () => {
 
   if (!session) return (
     <>
-      <Helmet><title>Admin · 4 Aces Visa</title><meta name="robots" content="noindex,nofollow" /></Helmet>
+      <Helmet><title>Admin · Garg Brothers</title><meta name="robots" content="noindex,nofollow" /></Helmet>
       <LoginCard onSignedIn={() => { /* state updates via listener */ }} />
     </>
   );
@@ -326,7 +326,7 @@ const AdminPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet><title>Admin · 4 Aces Visa</title><meta name="robots" content="noindex,nofollow" /></Helmet>
+      <Helmet><title>Admin · Garg Brothers</title><meta name="robots" content="noindex,nofollow" /></Helmet>
       <header className="border-b border-border bg-card">
         <div className="container-narrow mx-auto py-4 flex items-center justify-between">
           <h1 className="font-display text-xl font-bold">Admin panel</h1>

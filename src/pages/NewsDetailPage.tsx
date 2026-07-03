@@ -81,7 +81,7 @@ const NewsDetailPage = () => {
     return <Navigate to="/news" replace />;
   }
 
-  const canonical = `https://www.4acesvisa.com/news/${buildNewsSlug(item.id, item.title)}`;
+  const canonical = `https://www.gargbrothers.ca/news/${buildNewsSlug(item.id, item.title)}`;
   const isExternal = item.url.startsWith("http");
 
   const shareText = `${item.title} — ${item.summary}`.slice(0, 240);
@@ -109,7 +109,7 @@ const NewsDetailPage = () => {
   return (
     <div className="min-h-screen bg-secondary/30">
       <Helmet>
-        <title>{`${item.title} · 4 Aces Visa News`}</title>
+        <title>{`${item.title} · Garg Brothers News`}</title>
         <meta name="description" content={item.summary.slice(0, 158)} />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="article" />
@@ -133,8 +133,8 @@ const NewsDetailPage = () => {
             articleSection: TYPE_LABEL[item.type],
             publisher: {
               "@type": "Organization",
-              name: "4 Aces Visa",
-              url: "https://www.4acesvisa.com",
+              name: "Garg Brothers",
+              url: "https://www.gargbrothers.ca",
             },
             author: {
               "@type": "Organization",

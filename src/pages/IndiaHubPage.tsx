@@ -79,39 +79,39 @@ const IndiaHubPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada Immigration from India 2026 — Work, Study & PR | 4 Aces Visa</title>
+        <title>Canada Immigration from India 2026 — Work, Study & PR | Garg Brothers</title>
         <meta
           name="description"
           content="Canada immigration consultants for Indian nationals. Expert help for work permits, study permits, Express Entry PR & PNP from India. Free assessment. 98% success rate."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/india" />
-        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india" />
-        <meta property="og:title" content="Canada Immigration from India 2026 | 4 Aces Visa" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.gargbrothers.ca/india" />
+        <meta property="og:title" content="Canada Immigration from India 2026 | Garg Brothers" />
         <meta property="og:description" content="Canada immigration consultants for Indian nationals. Expert help for work permits, study permits, Express Entry PR & PNP from India." />
-        <meta property="og:url" content="https://www.4acesvisa.com/india" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/india" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Immigration from India 2026 | 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada Immigration from India 2026 | Garg Brothers" />
         <meta name="twitter:description" content="Canada immigration consultants for Indian nationals. Expert help for work permits, study permits, Express Entry PR & PNP from India." />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
                 "@type": "WebPage",
-                name: "Canada Immigration from India 2026 — 4 Aces Visa",
+                name: "Canada Immigration from India 2026 — Garg Brothers",
                 description: "Comprehensive Canada immigration guide for Indian nationals covering work permits, study permits, Express Entry, and PR pathways.",
-                url: "https://www.4acesvisa.com/india",
+                url: "https://www.gargbrothers.ca/india",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.4acesvisa.com/india" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.gargbrothers.ca/india" },
                 ],
               },
               {

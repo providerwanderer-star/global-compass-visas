@@ -76,7 +76,7 @@ const NOCDetailPage = () => {
   const impact = crsImpact(noc);
   const linkedJob = inDemandJobs.find((j) => j.noc === noc.code);
   const recentDraw = drawHistory[0];
-  const url = `https://www.4acesvisa.com/noc/${noc.code}`;
+  const url = `https://www.gargbrothers.ca/noc/${noc.code}`;
   const salaryDisplay = noc.medianSalary
     ? `$${noc.medianSalary.toLocaleString()} CAD/yr`
     : noc.salaryRange;
@@ -116,16 +116,16 @@ const NOCDetailPage = () => {
     name: `NOC ${noc.code} — ${noc.title}`,
     description: noc.description,
     url,
-    isPartOf: { "@type": "WebSite", name: "4 Aces Visa", url: "https://www.4acesvisa.com" },
-    primaryImageOfPage: { "@type": "ImageObject", url: "https://www.4acesvisa.com/og-default.jpg" },
+    isPartOf: { "@type": "WebSite", name: "Garg Brothers", url: "https://www.gargbrothers.ca" },
+    primaryImageOfPage: { "@type": "ImageObject", url: "https://www.gargbrothers.ca/og-default.jpg" },
   };
 
   const breadcrumbLD = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-      { "@type": "ListItem", position: 2, name: "NOC Finder", item: "https://www.4acesvisa.com/noc-finder" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+      { "@type": "ListItem", position: 2, name: "NOC Finder", item: "https://www.gargbrothers.ca/noc-finder" },
       { "@type": "ListItem", position: 3, name: `NOC ${noc.code} — ${noc.title}`, item: url },
     ],
   };
@@ -160,7 +160,7 @@ const NOCDetailPage = () => {
   return (
     <div>
       <Helmet>
-        <title>{`NOC ${noc.code} — ${noc.title} | TEER ${noc.teer}, CRS Impact & PR Pathways | 4 Aces Visa`}</title>
+        <title>{`NOC ${noc.code} — ${noc.title} | TEER ${noc.teer}, CRS Impact & PR Pathways | Garg Brothers`}</title>
         <meta name="description" content={`NOC ${noc.code} ${noc.title}: TEER ${noc.teer}, salary ${noc.salaryRange}, ${noc.eeEligible ? "Express Entry eligible" : "Not EE eligible"}. CRS impact ${impact.range}. PR pathways and live jobs.`} />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={`NOC ${noc.code} — ${noc.title}`} />

@@ -36,7 +36,7 @@ const pathways: Pathway[] = [
       { label: "Medical exam (per person)", amounts: { single: 225, couple: 450, family: 675 }, notes: "Estimated; varies by clinic" },
       { label: "Police clearance certificate", amounts: { single: 50, couple: 100, family: 150 }, notes: "Per country, estimate" },
       { label: "Document translation (estimate)", amounts: { single: 200, couple: 350, family: 500 } },
-      { label: "RCIC consultant fee (4 Aces)", amounts: { single: 1500, couple: 2000, family: 2500 }, notes: "Varies by complexity" },
+      { label: "RCIC consultant fee (Garg Brothers)", amounts: { single: 1500, couple: 2000, family: 2500 }, notes: "Varies by complexity" },
     ],
   },
   {
@@ -119,7 +119,7 @@ const ImmigrationCostPage = () => {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Canada Immigration Cost Calculator",
-    url: "https://www.4acesvisa.com/immigration-cost-calculator",
+    url: "https://www.gargbrothers.ca/immigration-cost-calculator",
     applicationCategory: "ImmigrationTool",
     description: "Free calculator to estimate total Canada immigration costs in CAD and INR for Express Entry, Study Permit, Work Permit, Super Visa, and Spousal Sponsorship.",
     offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
@@ -159,26 +159,26 @@ const ImmigrationCostPage = () => {
   return (
     <>
       <Helmet>
-        <title>Canada Immigration Cost Calculator 2026 — CAD & INR | 4 Aces Visa</title>
+        <title>Canada Immigration Cost Calculator 2026 — CAD & INR | Garg Brothers</title>
         <meta
           name="description"
           content="Calculate total Canada immigration costs in CAD and INR for Express Entry PR, Study Permit, Work Permit, Super Visa, and Spousal Sponsorship. Updated government fees for 2026."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/immigration-cost-calculator" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/immigration-cost-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Canada Immigration Cost Calculator 2026 — CAD & INR | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Canada Immigration Cost Calculator 2026 — CAD & INR | Garg Brothers" />
         <meta property="og:description" content="Calculate total Canada immigration costs in CAD and INR for Express Entry PR, Study Permit, Work Permit, Super Visa, and Spousal Sponsorship. Updated government fees for 2026." />
-        <meta property="og:url" content="https://www.4acesvisa.com/immigration-cost-calculator" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/immigration-cost-calculator" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Immigration Cost Calculator","item":"https://www.4acesvisa.com/immigration-cost-calculator"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"Immigration Cost Calculator","item":"https://www.gargbrothers.ca/immigration-cost-calculator"}]})}</script>
       </Helmet>
 
       {/* ── HERO ── */}

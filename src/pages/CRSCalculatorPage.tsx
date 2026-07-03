@@ -177,42 +177,42 @@ const CRSCalculatorPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada CRS Score Calculator 2026 — Express Entry Points | 4 Aces Visa</title>
+        <title>Canada CRS Score Calculator 2026 — Express Entry Points | Garg Brothers</title>
         <meta
           name="description"
           content="Free CRS score calculator for Canada Express Entry 2026. Enter your age, education, language scores and get your Comprehensive Ranking System score instantly."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/crs-calculator" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/crs-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Canada CRS Score Calculator 2026 — Express Entry Points | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Canada CRS Score Calculator 2026 — Express Entry Points | Garg Brothers" />
         <meta property="og:description" content="Free CRS score calculator for Canada Express Entry 2026. Enter your age, education, language scores and get your Comprehensive Ranking System score instantly." />
-        <meta property="og:url" content="https://www.4acesvisa.com/crs-calculator" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/crs-calculator" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
                 "@type": "WebApplication",
-                "name": "Canada CRS Score Calculator 2026 — 4 Aces Visa",
+                "name": "Canada CRS Score Calculator 2026 — Garg Brothers",
                 "description": "Free online CRS calculator for Canada Express Entry. Estimate your Comprehensive Ranking System score for PR eligibility.",
-                "url": "https://www.4acesvisa.com/crs-calculator",
+                "url": "https://www.gargbrothers.ca/crs-calculator",
                 "applicationCategory": "UtilityApplication",
                 "operatingSystem": "Any",
                 "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
-                "provider": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://www.4acesvisa.com" }
+                "provider": { "@type": "Organization", "name": "Garg Brothers", "url": "https://www.gargbrothers.ca" }
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "CRS Calculator", item: "https://www.4acesvisa.com/crs-calculator" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "CRS Calculator", item: "https://www.gargbrothers.ca/crs-calculator" },
                 ],
               },
             ],

@@ -124,7 +124,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-1 shrink-0">
           <span className="font-display text-lg md:text-xl font-extrabold tracking-tight text-primary">
-            4 Aces
+            Garg Brothers
           </span>
           <span className="font-display text-lg md:text-xl font-extrabold tracking-tight text-gold">
             Visa

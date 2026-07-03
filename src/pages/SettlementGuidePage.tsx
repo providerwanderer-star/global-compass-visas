@@ -16,7 +16,7 @@ const SettlementGuidePage = () => {
   const data = slug ? findSettlementGuide(slug) : null;
   if (!data) return <NotFound />;
 
-  const canonical = `https://www.4acesvisa.com/settle-in-canada/${data.slug}`;
+  const canonical = `https://www.gargbrothers.ca/settle-in-canada/${data.slug}`;
   const freshness = getFreshness("general");
 
   const faqLd = {

@@ -16,21 +16,21 @@ type Variant = {
 
 const VARIANTS: Record<string, Variant> = {
   "/uk/skilled-worker": {
-    title: "UK Skilled Worker Visa 2026 — Sponsorship, Salary & ILR Guide | 4 Aces Visa",
+    title: "UK Skilled Worker Visa 2026 — Sponsorship, Salary & ILR Guide | Garg Brothers",
     h1: "UK Skilled Worker Visa 2026",
     description:
       "Complete UK Skilled Worker Visa guide for 2026. £26,200 minimum salary, 70-point requirement, licensed sponsor list, processing times and 5-year ILR pathway. Expert RCIC guidance.",
-    canonical: "https://www.4acesvisa.com/uk/skilled-worker",
+    canonical: "https://www.gargbrothers.ca/uk/skilled-worker",
     intro:
       "The UK's main work visa for international skilled professionals with a job offer. 70-point requirement, £26,200 minimum salary, leads to Indefinite Leave to Remain after 5 years.",
     breadcrumbName: "Skilled Worker Visa",
   },
   "/uk/graduate-route": {
-    title: "UK Graduate Route Visa 2026 — 2-Year Post-Study Work | 4 Aces Visa",
+    title: "UK Graduate Route Visa 2026 — 2-Year Post-Study Work | Garg Brothers",
     h1: "UK Graduate Route Visa 2026",
     description:
       "UK Graduate Route lets international graduates work in the UK for 2 years (3 for PhD) with no job offer or salary requirement. Switch to Skilled Worker for ILR. Eligibility & application steps.",
-    canonical: "https://www.4acesvisa.com/uk/graduate-route",
+    canonical: "https://www.gargbrothers.ca/uk/graduate-route",
     intro:
       "Stay and work in the UK for 2 years (3 for PhD) after graduating from a UK university — no sponsor, no job offer, no salary threshold. The smartest stepping stone to a Skilled Worker visa and ILR.",
     breadcrumbName: "Graduate Route",
@@ -309,7 +309,7 @@ export default function UKImmigrationPage() {
       <section className="py-16 px-4 bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Need Help with UK Immigration?</h2>
-          <p className="text-blue-100 mb-8">4 Aces Visa provides expert guidance on Skilled Worker Visa applications, Graduate Route, and ILR. Free assessment with our UK immigration specialists.</p>
+          <p className="text-blue-100 mb-8">Garg Brothers provides expert guidance on Skilled Worker Visa applications, Graduate Route, and ILR. Free assessment with our UK immigration specialists.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-blue-800 hover:bg-blue-50">
               <Link to="/contact">Free UK Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>

@@ -26,7 +26,7 @@ const Footer = () => {
           <motion.div variants={staggerItem}>
             <div className="flex items-center gap-1 mb-4">
               <span className="font-display text-xl font-extrabold tracking-tight text-white">
-                4 Aces
+                Garg Brothers
               </span>
               <span className="font-display text-xl font-extrabold tracking-tight text-gold">
                 Visa
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-foreground/40">© 2026 4 Aces Visa. All rights reserved. By the immigrants, for the immigrants.</p>
+          <p className="text-sm text-primary-foreground/40">© 2026 Garg Brothers. All rights reserved. By the immigrants, for the immigrants.</p>
           <div className="flex gap-6">
             <Link to="/about" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">About</Link>
             <Link to="/dashboard" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">My Dashboard</Link>

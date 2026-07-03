@@ -8,7 +8,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getChange, CHANGES_LIST } from "@/data/changeStatusData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const ChangeStatusPage = () => {
@@ -18,7 +18,7 @@ const ChangeStatusPage = () => {
 
   const canonical = `${SITE}/change-status/${g.slug}`;
   const headline = `${g.name} (${YEAR})`;
-  const metaTitle = `${g.shortName} ${YEAR} — Eligibility, Timing & Documents | 4 Aces Visa`;
+  const metaTitle = `${g.shortName} ${YEAR} — Eligibility, Timing & Documents | Garg Brothers`;
   const metaDescription = `${g.oneLiner}`;
 
   const faqSchema = {
@@ -32,8 +32,8 @@ const ChangeStatusPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = CHANGES_LIST.filter((x) => x.slug !== g.slug);

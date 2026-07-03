@@ -42,38 +42,38 @@ const ExpressEntryLandingPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa</title>
+        <title>Canada Express Entry 2026 — Get PR in 6 Months | Garg Brothers</title>
         <meta
           name="description"
           content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS score calculator, and free eligibility assessment. 98% success rate — 15,000+ visas processed."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/express-entry" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/express-entry" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa" />
+        <meta property="og:title" content="Canada Express Entry 2026 — Get PR in 6 Months | Garg Brothers" />
         <meta property="og:description" content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS calculator, and free eligibility assessment. 98% success rate." />
-        <meta property="og:url" content="https://www.4acesvisa.com/express-entry" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/express-entry" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada Express Entry 2026 — Get PR in 6 Months | Garg Brothers" />
         <meta name="twitter:description" content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS calculator, and free eligibility assessment." />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
                 "@type": "WebPage",
-                name: "Canada Express Entry 2026 – 4 Aces Visa",
+                name: "Canada Express Entry 2026 – Garg Brothers",
                 description: "Dedicated Express Entry landing page with draw countdown, CRS breakdown, and free PR assessment.",
-                url: "https://www.4acesvisa.com/express-entry",
+                url: "https://www.gargbrothers.ca/express-entry",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Express Entry", item: "https://www.4acesvisa.com/express-entry" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Express Entry", item: "https://www.gargbrothers.ca/express-entry" },
                 ],
               },
               {

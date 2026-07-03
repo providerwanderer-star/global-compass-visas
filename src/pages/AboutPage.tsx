@@ -8,7 +8,7 @@ import EligibilityForm from "@/components/EligibilityForm";
 import ConnectedFooter from "@/components/ConnectedFooter";
 import SeoSchema from "@/components/SeoSchema";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 /**
  * /about — E-E-A-T anchor page. Establishes RCIC credentials, founder bio,
@@ -17,15 +17,15 @@ const SITE = "https://www.4acesvisa.com";
  */
 const AboutPage = () => {
   const url = `${SITE}/about`;
-  const title = "About 4 Aces Visa — Immigration Consultancy for Canada, Australia, UK & Germany";
+  const title = "About Garg Brothers — Immigration Consultancy for Canada, Australia, UK & Germany";
   const description =
-    "4 Aces Visa is an immigration consultancy team with 15,000+ applications processed since 2016 across Canada, Australia, Germany and the UK. Meet the team and see how we work.";
+    "Garg Brothers is an immigration consultancy team with 15,000+ applications processed since 2016 across Canada, Australia, Germany and the UK. Meet the team and see how we work.";
 
   const teamLD = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${SITE}/about#team`,
-    name: "4 Aces Visa Immigration Team",
+    name: "Garg Brothers Immigration Team",
     url,
     email: "sahil280389@gmail.com",
     telephone: "+1-647-862-2190",
@@ -54,7 +54,7 @@ const AboutPage = () => {
     name: title,
     description,
     inLanguage: "en",
-    isPartOf: { "@type": "WebSite", name: "4 Aces Visa", url: SITE },
+    isPartOf: { "@type": "WebSite", name: "Garg Brothers", url: SITE },
     about: { "@id": `${SITE}/#organization` },
     mainEntity: { "@id": `${SITE}/about#team` },
     speakable: {
@@ -102,7 +102,7 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4"
             >
-              About 4 Aces Visa — By Immigrants, For Immigrants
+              About Garg Brothers — By Immigrants, For Immigrants
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ const AboutPage = () => {
               transition={{ delay: 0.1 }}
               className="lead text-lg text-primary-foreground/80 mb-8"
             >
-              4 Aces Visa is an immigration consultancy team founded in 2016. Since then we
+              Garg Brothers is an immigration consultancy team founded in 2016. Since then we
               have helped 15,000+ skilled workers, students, families and entrepreneurs move
               to Canada, Australia, Germany and the UK. Canadian files are handled with
               regulated (RCIC / lawyer) representation as required by IRCC.
@@ -173,10 +173,10 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <AnimatedSection className="lg:col-span-2">
               <h2 className="font-display text-3xl font-bold text-foreground mb-3">
-                Meet the 4 Aces Visa Immigration Team
+                Meet the Garg Brothers Immigration Team
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                4 Aces Visa was founded in 2016 by immigrants, for immigrants. Our team has
+                Garg Brothers was founded in 2016 by immigrants, for immigrants. Our team has
                 since guided 15,000+ skilled workers, international students, families and
                 entrepreneurs through Express Entry, PNP, LMIA, study permits and family
                 sponsorship — plus parallel pathways in Australia, Germany and the UK.

@@ -54,7 +54,7 @@ export function buildInternalFeed(): NewsItem[] {
     title: b.title,
     summary: b.excerpt,
     url: `/blog/${b.slug}`,
-    source: `4 Aces Visa · ${b.category}`,
+    source: `Garg Brothers · ${b.category}`,
     publishedAt: toISO(b.date),
     internal: true,
   }));

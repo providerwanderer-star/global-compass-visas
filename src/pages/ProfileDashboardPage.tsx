@@ -48,19 +48,19 @@ const ProfileDashboardPage = () => {
   return (
     <div className="bg-background min-h-screen">
       <Helmet>
-        <title>{`Your immigration dashboard | 4 Aces Visa`}</title>
+        <title>{`Your immigration dashboard | Garg Brothers`}</title>
         <meta
           name="description"
           content="Your personalized Canada immigration dashboard — CRS, NOC, origin and recommended pathway in one view."
         />
         <meta name="robots" content="noindex,follow" />
-        <link rel="canonical" href="https://www.4acesvisa.com/dashboard" />
-        <meta property="og:title" content="Your immigration dashboard | 4 Aces Visa" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/dashboard" />
+        <meta property="og:title" content="Your immigration dashboard | Garg Brothers" />
         <meta property="og:description" content="Your personalized Canada immigration dashboard — CRS, NOC, origin and recommended pathway in one view." />
-        <meta property="og:url" content="https://www.4acesvisa.com/dashboard" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/dashboard" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Your immigration dashboard | 4 Aces Visa" />
+        <meta name="twitter:title" content="Your immigration dashboard | Garg Brothers" />
         <meta name="twitter:description" content="Your personalized Canada immigration dashboard — CRS, NOC, origin and recommended pathway in one view." />
       </Helmet>
 

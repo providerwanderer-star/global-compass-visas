@@ -116,7 +116,7 @@ export function getFreshness(topic: FreshnessTopic): FreshnessSignal {
       const candidates = [
         { iso: new Date(parseDate(ee.date)).toISOString(), label: `Express Entry draw #${ee.drawNumber}`, href: "/express-entry/draws", source: "IRCC" },
         { iso: new Date(parseDate(pnp.date)).toISOString(), label: `${pnp.province} PNP draw`, href: "/pnp-tracker", source: pnp.province },
-        { iso: new Date(parseDate(blog.date)).toISOString(), label: blog.title, href: `/blog/${blog.slug}`, source: "4 Aces Visa" },
+        { iso: new Date(parseDate(blog.date)).toISOString(), label: blog.title, href: `/blog/${blog.slug}`, source: "Garg Brothers" },
       ].sort((a, b) => Date.parse(b.iso) - Date.parse(a.iso));
       const top = candidates[0];
       return {

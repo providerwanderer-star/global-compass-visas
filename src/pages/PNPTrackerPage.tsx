@@ -34,7 +34,7 @@ const PNPTrackerPage = () => {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Canada PNP Draw Tracker",
-    url: "https://www.4acesvisa.com/pnp-tracker",
+    url: "https://www.gargbrothers.ca/pnp-tracker",
     applicationCategory: "ImmigrationTool",
     description:
       "Track Provincial Nominee Program (PNP) draws across all Canadian provinces — minimum scores, invitation counts, and stream details.",
@@ -74,26 +74,26 @@ const PNPTrackerPage = () => {
   return (
     <>
       <Helmet>
-        <title>PNP Draw Tracker 2026 — Provincial Nominee Program Draws | 4 Aces Visa</title>
+        <title>PNP Draw Tracker 2026 — Provincial Nominee Program Draws | Garg Brothers</title>
         <meta
           name="description"
           content="Track all Canadian Provincial Nominee Program (PNP) draws in 2026 — Ontario, BC, Alberta, Saskatchewan, Manitoba and more. Minimum scores, ITAs, and stream details updated regularly."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/pnp-tracker" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/pnp-tracker" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="PNP Draw Tracker 2026 — Provincial Nominee Program Draws | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="PNP Draw Tracker 2026 — Provincial Nominee Program Draws | Garg Brothers" />
         <meta property="og:description" content="Track all Canadian Provincial Nominee Program (PNP) draws in 2026 — Ontario, BC, Alberta, Saskatchewan, Manitoba and more. Minimum scores, ITAs, and stream details updated regularly." />
-        <meta property="og:url" content="https://www.4acesvisa.com/pnp-tracker" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/pnp-tracker" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"PNP Tracker","item":"https://www.4acesvisa.com/pnp-tracker"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"PNP Tracker","item":"https://www.gargbrothers.ca/pnp-tracker"}]})}</script>
       </Helmet>
 
       {/* ── HERO ── */}

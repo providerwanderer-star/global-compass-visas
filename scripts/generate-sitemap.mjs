@@ -14,7 +14,7 @@ import { dirname, resolve } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 // Helper: extract slugs from a TS data file via regex (no compile needed)
 function extractSlugs(filePath) {

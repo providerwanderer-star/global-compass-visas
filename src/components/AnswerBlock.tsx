@@ -64,7 +64,7 @@ const AnswerBlock = ({
       {lastUpdated && (
         <p className="mt-4 pt-3 border-t border-border text-xs text-muted-foreground inline-flex items-center gap-1.5">
           <Clock className="h-3 w-3" aria-hidden="true" />
-          Last updated: <span className="font-semibold">{lastUpdated}</span> by 4 Aces Visa
+          Last updated: <span className="font-semibold">{lastUpdated}</span> by Garg Brothers
         </p>
       )}
     </aside>

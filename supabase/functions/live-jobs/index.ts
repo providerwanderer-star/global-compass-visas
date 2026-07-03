@@ -29,7 +29,7 @@ async function fetchJobBank(query: string, limit: number): Promise<JobOut[]> {
     query,
   )}&locationstring=Canada&sort=D&fsrc=21`;
   const res = await fetch(url, {
-    headers: { "User-Agent": "4AcesVisa-LiveJobs/1.0" },
+    headers: { "User-Agent": "GargBrothers-LiveJobs/1.0" },
   });
   if (!res.ok) throw new Error(`Job Bank ${res.status}`);
   const html = await res.text();

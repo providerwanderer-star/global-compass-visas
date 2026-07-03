@@ -18,7 +18,7 @@ import {
   getMoveProgram,
 } from "@/data/moveCorridorData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 const MoveCorridorPage = () => {
   const { corridor: corridorSlug, program: programSlug } = useParams<{
@@ -34,7 +34,7 @@ const MoveCorridorPage = () => {
 
   const canonical = `${SITE}/move/${corridor.slug}/${program.slug}`;
   const headline = `${corridor.origin.name} to ${corridor.destination.name} via ${program.shortName}`;
-  const metaTitle = `${corridor.origin.name} → ${corridor.destination.name} on ${program.shortName} (${new Date().getFullYear()}) | 4 Aces Visa`;
+  const metaTitle = `${corridor.origin.name} → ${corridor.destination.name} on ${program.shortName} (${new Date().getFullYear()}) | Garg Brothers`;
   const metaDescription = `Step-by-step guide for moving from ${corridor.origin.name}, ${corridor.origin.country} to ${corridor.destination.name}, ${corridor.destination.province} on the ${program.name}. Cost, timeline, eligibility, and FAQs.`;
 
   // Steps templated per program

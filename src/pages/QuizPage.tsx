@@ -325,39 +325,39 @@ const QuizPage = () => {
   return (
     <div className="min-h-screen bg-secondary/30">
       <Helmet>
-        <title>Immigration Pathway Quiz | Find Your Best Visa – 4 Aces Visa</title>
+        <title>Immigration Pathway Quiz | Find Your Best Visa – Garg Brothers</title>
         <meta name="description" content="Take the free Canada immigration quiz — 8 questions, instant result showing your best pathway: Express Entry, PNP, study permit, or family sponsorship." />
-        <link rel="canonical" href="https://www.4acesvisa.com/quiz" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/quiz" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Immigration Pathway Quiz | Find Your Best Visa – 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Immigration Pathway Quiz | Find Your Best Visa – Garg Brothers" />
         <meta property="og:description" content="Take the free Canada immigration quiz — 8 questions, instant result showing your best pathway: Express Entry, PNP, study permit, or family sponsorship." />
-        <meta property="og:url" content="https://www.4acesvisa.com/quiz" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/quiz" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
                 "@type": "WebApplication",
-                "name": "Immigration Pathway Quiz — 4 Aces Visa",
+                "name": "Immigration Pathway Quiz — Garg Brothers",
                 "description": "Free interactive quiz that recommends the best immigration pathway based on your age, education, work experience, and goals.",
-                "url": "https://www.4acesvisa.com/quiz",
+                "url": "https://www.gargbrothers.ca/quiz",
                 "applicationCategory": "UtilityApplication",
                 "operatingSystem": "Any",
                 "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
-                "provider": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://www.4acesvisa.com" }
+                "provider": { "@type": "Organization", "name": "Garg Brothers", "url": "https://www.gargbrothers.ca" }
               },
               {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", "position": 2, "name": "Immigration Quiz", "item": "https://www.4acesvisa.com/quiz" }
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", "position": 2, "name": "Immigration Quiz", "item": "https://www.gargbrothers.ca/quiz" }
                 ]
               }
             ]

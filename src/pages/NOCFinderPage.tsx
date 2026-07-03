@@ -40,7 +40,7 @@ const NOCFinderPage = () => {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Canada NOC Finder",
-    url: "https://www.4acesvisa.com/noc-finder",
+    url: "https://www.gargbrothers.ca/noc-finder",
     applicationCategory: "ImmigrationTool",
     description:
       "Search Canada's National Occupation Classification (NOC) codes, TEER levels, and Express Entry eligibility for 30+ occupations.",
@@ -89,26 +89,26 @@ const NOCFinderPage = () => {
   return (
     <>
       <Helmet>
-        <title>Canada NOC Finder — Search NOC Codes & TEER Levels | 4 Aces Visa</title>
+        <title>Canada NOC Finder — Search NOC Codes & TEER Levels | Garg Brothers</title>
         <meta
           name="description"
           content="Find your Canadian NOC code instantly. Search 500+ occupations by job title, check TEER level, Express Entry eligibility, salary ranges, and top provinces hiring. Updated 2026."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/noc-finder" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/noc-finder" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Canada NOC Finder — Search NOC Codes & TEER Levels | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Canada NOC Finder — Search NOC Codes & TEER Levels | Garg Brothers" />
         <meta property="og:description" content="Find your Canadian NOC code instantly. Search 500+ occupations by job title, check TEER level, Express Entry eligibility, salary ranges, and top provinces hiring. Updated 2026." />
-        <meta property="og:url" content="https://www.4acesvisa.com/noc-finder" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/noc-finder" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"NOC Finder","item":"https://www.4acesvisa.com/noc-finder"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"NOC Finder","item":"https://www.gargbrothers.ca/noc-finder"}]})}</script>
       </Helmet>
 
       {/* ── HERO ── */}

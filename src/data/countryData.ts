@@ -21,7 +21,7 @@ export const countries: CountryData[] = [
     flag: "🇨🇦",
     tagline: "Fastest PR Pathways & Multicultural Living",
     metaTitle: "Canada Immigration 2026 | Express Entry, PNP, Study & Work Visa",
-    metaDescription: "Complete guide to Canada immigration. Express Entry PR, Provincial Nominee Programs, study visas, work permits, and family sponsorship. Expert guidance by 4 Aces Visa.",
+    metaDescription: "Complete guide to Canada immigration. Express Entry PR, Provincial Nominee Programs, study visas, work permits, and family sponsorship. Expert guidance by Garg Brothers.",
     heroDescription: "Canada offers the world's most immigrant-friendly policies with multiple pathways to permanent residency. From Express Entry to Provincial Nominee Programs, discover your path to Canadian PR.",
     pathways: [
       { title: "Express Entry PR", description: "Points-based system for skilled workers. Process PR in just 6 months through CRS ranking.", icon: "rocket" },
@@ -69,7 +69,7 @@ export const countries: CountryData[] = [
     flag: "🇦🇺",
     tagline: "Points-Based Skilled Migration & High Wages",
     metaTitle: "Australia Immigration 2026 | Skilled Migration, Work Visa & PR",
-    metaDescription: "Complete guide to Australia immigration. Skilled migration (189/190/491), work visas, study pathways, and PR options. Expert guidance by 4 Aces Visa.",
+    metaDescription: "Complete guide to Australia immigration. Skilled migration (189/190/491), work visas, study pathways, and PR options. Expert guidance by Garg Brothers.",
     heroDescription: "Australia's points-based skilled migration system rewards qualified professionals with permanent residency. Discover visa subclasses 189, 190, and 491 and find your pathway to Australian PR.",
     pathways: [
       { title: "Skilled Independent (189)", description: "No state nomination required. Permanent residency granted on visa approval.", icon: "star" },
@@ -115,7 +115,7 @@ export const countries: CountryData[] = [
     flag: "🇩🇪",
     tagline: "EU Career Mobility & Blue Card Pathway",
     metaTitle: "Germany Immigration 2026 | Job Seeker Visa, Blue Card & Work Permit",
-    metaDescription: "Complete guide to Germany immigration. Job Seeker Visa, EU Blue Card, work visa pathways, and PR transition. Expert guidance by 4 Aces Visa.",
+    metaDescription: "Complete guide to Germany immigration. Job Seeker Visa, EU Blue Card, work visa pathways, and PR transition. Expert guidance by Garg Brothers.",
     heroDescription: "Germany offers unique access to the European Union job market through its Job Seeker Visa and EU Blue Card programs. Build your career in Europe's largest economy with a clear path to permanent residency.",
     pathways: [
       { title: "Job Seeker Visa", description: "6-month visa to search for employment in Germany. No job offer required to apply.", icon: "search" },
@@ -160,8 +160,8 @@ export const countries: CountryData[] = [
     name: "United Kingdom",
     flag: "🇬🇧",
     tagline: "Skilled Worker Visa & Global Talent Route",
-    metaTitle: "UK Immigration 2026 | Skilled Worker Visa, Study & PR – 4 Aces Visa",
-    metaDescription: "Complete guide to UK immigration. Skilled Worker visa, Global Talent visa, student route, and ILR pathway. Expert guidance by 4 Aces Visa.",
+    metaTitle: "UK Immigration 2026 | Skilled Worker Visa, Study & PR – Garg Brothers",
+    metaDescription: "Complete guide to UK immigration. Skilled Worker visa, Global Talent visa, student route, and ILR pathway. Expert guidance by Garg Brothers.",
     heroDescription: "The United Kingdom offers world-class career opportunities through its points-based immigration system. From the Skilled Worker visa to the prestigious Global Talent route, discover your pathway to settling in the UK.",
     pathways: [
       { title: "Skilled Worker Visa", description: "Points-based work visa with a job offer from a UK-licensed sponsor. Pathway to ILR after 5 years.", icon: "briefcase" },

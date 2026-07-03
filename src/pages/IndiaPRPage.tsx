@@ -89,19 +89,19 @@ const IndiaPRPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada PR from India 2026 — Express Entry & PNP Guide | 4 Aces Visa</title>
+        <title>Canada PR from India 2026 — Express Entry & PNP Guide | Garg Brothers</title>
         <meta
           name="description"
           content="Canada permanent residency from India in 2026. Complete guide to Express Entry, PNP, and family sponsorship pathways. 80,000+ Indians got PR in 2024. Free CRS assessment."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/india/canada-pr-india" />
-        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india/canada-pr-india" />
-        <meta property="og:title" content="Canada PR from India 2026 — Express Entry & PNP | 4 Aces Visa" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/india/canada-pr-india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.gargbrothers.ca/india/canada-pr-india" />
+        <meta property="og:title" content="Canada PR from India 2026 — Express Entry & PNP | Garg Brothers" />
         <meta property="og:description" content="Complete guide to Canada permanent residency from India. Express Entry, PNP, family sponsorship pathways. 80,000+ Indians got PR in 2024." />
-        <meta property="og:url" content="https://www.4acesvisa.com/india/canada-pr-india" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/india/canada-pr-india" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada PR from India 2026 — Express Entry & PNP | 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada PR from India 2026 — Express Entry & PNP | Garg Brothers" />
         <meta name="twitter:description" content="Complete guide to Canada permanent residency from India. Express Entry, PNP, family sponsorship pathways. 80,000+ Indians got PR in 2024." />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -109,16 +109,16 @@ const IndiaPRPage = () => {
             "@graph": [
               {
                 "@type": "WebPage",
-                name: "Canada PR from India 2026 — 4 Aces Visa",
+                name: "Canada PR from India 2026 — Garg Brothers",
                 description: "Complete guide to Canadian permanent residency for Indian nationals, covering Express Entry, PNP, and family sponsorship pathways.",
-                url: "https://www.4acesvisa.com/india/canada-pr-india",
+                url: "https://www.gargbrothers.ca/india/canada-pr-india",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.4acesvisa.com/india" },
-                  { "@type": "ListItem", position: 3, name: "Canada PR from India", item: "https://www.4acesvisa.com/india/canada-pr-india" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.gargbrothers.ca/india" },
+                  { "@type": "ListItem", position: 3, name: "Canada PR from India", item: "https://www.gargbrothers.ca/india/canada-pr-india" },
                 ],
               },
               {

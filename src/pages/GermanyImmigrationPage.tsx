@@ -16,21 +16,21 @@ type Variant = {
 
 const VARIANTS: Record<string, Variant> = {
   "/germany/chancenkarte": {
-    title: "Germany Chancenkarte 2026 — Opportunity Card Guide | 4 Aces Visa",
+    title: "Germany Chancenkarte 2026 — Opportunity Card Guide | Garg Brothers",
     h1: "Germany Chancenkarte (Opportunity Card)",
     description:
       "Germany Chancenkarte 2026 — points-based job search visa. No job offer needed, work 20 hrs/week while searching. 6-of-10 points test, EUR 12,000 blocked account, 1-year validity. Full eligibility and application steps.",
-    canonical: "https://www.4acesvisa.com/germany/chancenkarte",
+    canonical: "https://www.gargbrothers.ca/germany/chancenkarte",
     intro:
       "Germany's new points-based job-search visa (replaced the Job Seeker Visa in 2024). Enter Germany without a job offer, work up to 20 hours/week while searching, and convert to an EU Blue Card on hire.",
     breadcrumbName: "Chancenkarte",
   },
   "/germany/eu-blue-card": {
-    title: "Germany EU Blue Card 2026 — Salary, Eligibility & PR | 4 Aces Visa",
+    title: "Germany EU Blue Card 2026 — Salary, Eligibility & PR | Garg Brothers",
     h1: "Germany EU Blue Card 2026",
     description:
       "Germany EU Blue Card guide for 2026. EUR 43,759 salary threshold (EUR 39,682 for shortage roles), recognized degree, fast-track to permanent residence in 21 months with B1 German. Family joins immediately.",
-    canonical: "https://www.4acesvisa.com/germany/eu-blue-card",
+    canonical: "https://www.gargbrothers.ca/germany/eu-blue-card",
     intro:
       "Germany's premium work permit for highly qualified professionals — fast-track to permanent residence in 21 months (with B1 German), family joins immediately, and free movement across the EU after 18 months.",
     breadcrumbName: "EU Blue Card",
@@ -252,7 +252,7 @@ export default function GermanyImmigrationPage() {
             </div>
           </div>
           <p className="text-center text-sm text-gray-500 mt-4">
-            Not sure if you qualify? <Link to="/contact" className="text-blue-600 underline">Get a free assessment</Link> from 4 Aces Visa.
+            Not sure if you qualify? <Link to="/contact" className="text-blue-600 underline">Get a free assessment</Link> from Garg Brothers.
           </p>
         </div>
       </section>
@@ -306,7 +306,7 @@ export default function GermanyImmigrationPage() {
       <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-yellow-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Start Your Germany Immigration Journey</h2>
-          <p className="text-gray-300 mb-8">Check your Chancenkarte points, verify degree recognition, and get a personalized Germany immigration plan. Free consultation with 4 Aces Visa experts.</p>
+          <p className="text-gray-300 mb-8">Check your Chancenkarte points, verify degree recognition, and get a personalized Germany immigration plan. Free consultation with Garg Brothers experts.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-400 text-gray-900">
               <Link to="/contact">Free Germany Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>

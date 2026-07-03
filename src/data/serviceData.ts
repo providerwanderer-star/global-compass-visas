@@ -16,8 +16,8 @@ export const services: ServiceData[] = [
   {
     slug: "express-entry",
     title: "Canada Express Entry PR",
-    metaTitle: "Canada Express Entry 2026 | PR in 6 Months – 4 Aces Visa",
-    metaDescription: "Apply for Canada Permanent Residency through Express Entry. CRS score optimization, profile creation, and ITA guidance. 98% success rate with 4 Aces Visa.",
+    metaTitle: "Canada Express Entry 2026 | PR in 6 Months – Garg Brothers",
+    metaDescription: "Apply for Canada Permanent Residency through Express Entry. CRS score optimization, profile creation, and ITA guidance. 98% success rate with Garg Brothers.",
     heroDescription: "Express Entry is Canada's flagship immigration system for skilled workers. Get your Permanent Residency in as little as 6 months with our expert CRS optimization strategy.",
     overview: "Canada's Express Entry system manages three federal economic immigration programs: Federal Skilled Worker Program (FSWP), Federal Skilled Trades Program (FSTP), and Canadian Experience Class (CEC). Candidates are ranked using the Comprehensive Ranking System (CRS) and top-ranked candidates receive Invitations to Apply (ITA) for permanent residency through regular draws.",
     benefits: [
@@ -51,8 +51,8 @@ export const services: ServiceData[] = [
   {
     slug: "student-visa",
     title: "Student Visa (Canada)",
-    metaTitle: "Canada Student Visa 2026 | Study Permit, DLI & PGWP – 4 Aces Visa",
-    metaDescription: "Apply for a Canada student visa. DLI admission, study permit processing, and PGWP pathway to PR. Expert guidance from 4 Aces Visa.",
+    metaTitle: "Canada Student Visa 2026 | Study Permit, DLI & PGWP – Garg Brothers",
+    metaDescription: "Apply for a Canada student visa. DLI admission, study permit processing, and PGWP pathway to PR. Expert guidance from Garg Brothers.",
     heroDescription: "Study at Canada's top institutions and build a clear pathway to permanent residency. We handle everything from DLI admission to study permit approval and post-graduation work permits.",
     overview: "Canada's study permit program allows international students to attend Designated Learning Institutions (DLIs) and work part-time during studies. After graduation, the Post-Graduation Work Permit (PGWP) provides 1-3 years of Canadian work experience — a powerful stepping stone to Express Entry PR. With over 400,000 international students choosing Canada annually, the right guidance makes the difference.",
     benefits: [
@@ -84,8 +84,8 @@ export const services: ServiceData[] = [
   {
     slug: "lmia-assistance",
     title: "LMIA Assistance (Canada)",
-    metaTitle: "LMIA Canada 2026 | Labour Market Impact Assessment – 4 Aces Visa",
-    metaDescription: "Get expert LMIA assistance for Canadian work permits. Positive LMIA processing, employer guidance, and CRS boost. 4 Aces Visa.",
+    metaTitle: "LMIA Canada 2026 | Labour Market Impact Assessment – Garg Brothers",
+    metaDescription: "Get expert LMIA assistance for Canadian work permits. Positive LMIA processing, employer guidance, and CRS boost. Garg Brothers.",
     heroDescription: "A positive LMIA is your key to a Canadian work permit — and adds 50-200 CRS points for Express Entry. Our team guides both employers and applicants through every step of the LMIA process.",
     overview: "The Labour Market Impact Assessment (LMIA) is a document that Canadian employers need before hiring foreign workers. A positive LMIA proves that no Canadian citizen or permanent resident is available for the job. For workers, a valid LMIA-based job offer adds 50 points (NOC TEER 0-3) or 200 points (NOC 00 senior management) to your CRS score, dramatically improving Express Entry chances.",
     benefits: [
@@ -118,8 +118,8 @@ export const services: ServiceData[] = [
   {
     slug: "visa-restoration",
     title: "Visa Restoration (Canada)",
-    metaTitle: "Canada Visa Restoration 2026 | Restore Expired Status – 4 Aces Visa",
-    metaDescription: "Lost your legal status in Canada? Apply for visa restoration within 90 days. Expert guidance to restore study permits, work permits, and visitor status. 4 Aces Visa.",
+    metaTitle: "Canada Visa Restoration 2026 | Restore Expired Status – Garg Brothers",
+    metaDescription: "Lost your legal status in Canada? Apply for visa restoration within 90 days. Expert guidance to restore study permits, work permits, and visitor status. Garg Brothers.",
     heroDescription: "Lost your immigration status in Canada? You have 90 days to apply for restoration. Our experts handle urgent restoration applications for study permits, work permits, and visitor records with a high success rate.",
     overview: "If your temporary status in Canada has expired — whether study permit, work permit, or visitor record — you may be eligible to restore your status within 90 days of expiry. Restoration is a critical lifeline that allows you to remain in Canada legally while your new application is processed. Missing the 90-day window means you become inadmissible and must leave Canada. Our team acts fast to protect your status.",
     benefits: [
@@ -151,8 +151,8 @@ export const services: ServiceData[] = [
   {
     slug: "visitor-visa",
     title: "Visitor Visa & Super Visa (Canada)",
-    metaTitle: "Canada Visitor Visa & Super Visa 2026 | Visit Family in Canada – 4 Aces Visa",
-    metaDescription: "Apply for Canada visitor visa or Super Visa for parents and grandparents. 10-year multiple entry, 5-year stay. Expert processing by 4 Aces Visa.",
+    metaTitle: "Canada Visitor Visa & Super Visa 2026 | Visit Family in Canada – Garg Brothers",
+    metaDescription: "Apply for Canada visitor visa or Super Visa for parents and grandparents. 10-year multiple entry, 5-year stay. Expert processing by Garg Brothers.",
     heroDescription: "Visit your family in Canada with a visitor visa or bring your parents and grandparents with the 10-year Super Visa. We ensure strong applications with high approval rates.",
     overview: "Canada's Temporary Resident Visa (TRV) allows you to visit Canada for tourism, family visits, or business. The Super Visa is a special multi-entry visa for parents and grandparents of Canadian citizens or permanent residents, allowing stays of up to 5 years at a time. Both visas require strong ties to your home country and proof of financial support.",
     benefits: [
@@ -185,8 +185,8 @@ export const services: ServiceData[] = [
   {
     slug: "visitor-visa-insurance",
     title: "Visitor Visa Insurance (Canada)",
-    metaTitle: "Canada Visitor Visa Insurance 2026 | Super Visa Insurance – 4 Aces Visa",
-    metaDescription: "Get the right visitor and Super Visa insurance for Canada. Mandatory medical coverage, emergency benefits, and affordable plans. Guidance from 4 Aces Visa.",
+    metaTitle: "Canada Visitor Visa Insurance 2026 | Super Visa Insurance – Garg Brothers",
+    metaDescription: "Get the right visitor and Super Visa insurance for Canada. Mandatory medical coverage, emergency benefits, and affordable plans. Guidance from Garg Brothers.",
     heroDescription: "Mandatory medical insurance for Canada Super Visa and recommended coverage for all visitors. We help you find the right plan with minimum $100K coverage at competitive rates.",
     overview: "Medical insurance is mandatory for Super Visa applicants and highly recommended for all visitors to Canada. Canadian healthcare is not free for visitors — a single hospital visit can cost thousands. We partner with trusted Canadian insurers to help you find comprehensive coverage that meets immigration requirements and protects you financially during your stay.",
     benefits: [
@@ -218,8 +218,8 @@ export const services: ServiceData[] = [
   {
     slug: "pnp-application",
     title: "Provincial Nominee Program (PNP)",
-    metaTitle: "Canada PNP 2026 | Provincial Nominee Program – 4 Aces Visa",
-    metaDescription: "Apply for Canada Provincial Nominee Program. +600 CRS points, province-specific streams, and PR pathway. Expert PNP guidance from 4 Aces Visa.",
+    metaTitle: "Canada PNP 2026 | Provincial Nominee Program – Garg Brothers",
+    metaDescription: "Apply for Canada Provincial Nominee Program. +600 CRS points, province-specific streams, and PR pathway. Expert PNP guidance from Garg Brothers.",
     heroDescription: "A PNP nomination adds 600 CRS points — virtually guaranteeing an Express Entry invitation. We match your profile to the right province and stream for the fastest pathway to Canadian PR.",
     overview: "Canada's Provincial Nominee Program (PNP) allows provinces and territories to nominate immigrants who meet local labour market needs. With 11 provinces and territories each running their own PNP streams, finding the right match is critical. A PNP nomination adds 600 CRS points to your Express Entry profile, making it the most powerful CRS boost available. We analyze your profile against every active PNP stream to find your best option.",
     benefits: [
@@ -252,8 +252,8 @@ export const services: ServiceData[] = [
   {
     slug: "citizenship-application",
     title: "Citizenship Application (Canada)",
-    metaTitle: "Canadian Citizenship 2026 | Citizenship Application – 4 Aces Visa",
-    metaDescription: "Apply for Canadian citizenship. Eligibility check, test preparation, and application filing. Expert guidance from 4 Aces Visa.",
+    metaTitle: "Canadian Citizenship 2026 | Citizenship Application – Garg Brothers",
+    metaDescription: "Apply for Canadian citizenship. Eligibility check, test preparation, and application filing. Expert guidance from Garg Brothers.",
     heroDescription: "Complete your Canadian journey — become a Canadian citizen. We guide you from eligibility verification through the citizenship test to your oath ceremony.",
     overview: "Canadian citizenship is the final milestone in your immigration journey. After living in Canada as a permanent resident for at least 1,095 days (3 years) within the last 5 years, you can apply for citizenship. Canadian citizens enjoy full voting rights, passport privileges (visa-free travel to 180+ countries), and the security of never losing their status. We handle every step from eligibility calculation to test preparation.",
     benefits: [
@@ -285,7 +285,7 @@ export const services: ServiceData[] = [
   {
     slug: "work-permits",
     title: "Work Permits (All Countries)",
-    metaTitle: "Work Permit Visa 2026 | Canada, Australia, Germany & UK – 4 Aces Visa",
+    metaTitle: "Work Permit Visa 2026 | Canada, Australia, Germany & UK – Garg Brothers",
     metaDescription: "Get expert help with work permits for Canada (LMIA), Australia (TSS), Germany, and UK. Employer-sponsored and open work permits. Free consultation.",
     heroDescription: "Secure your international career with the right work permit. We handle LMIA-based Canadian work permits, Australian TSS visas, German work visas, and UK Skilled Worker visas with precision.",
     overview: "Work permits are your gateway to international careers and often serve as stepping stones to permanent residency. Each country has distinct work permit categories — Canada uses LMIA-based and open work permits, Australia offers the Temporary Skill Shortage (TSS/482) visa, Germany provides work visas leading to EU Blue Card, and the UK has its Skilled Worker visa. Our team matches you with the optimal work permit pathway.",
@@ -320,8 +320,8 @@ export const services: ServiceData[] = [
   {
     slug: "study-visas",
     title: "Study Visas (Global)",
-    metaTitle: "Study Visa 2026 | Canada, Australia, Germany & UK Study Abroad – 4 Aces Visa",
-    metaDescription: "Study abroad in Canada, Australia, Germany, or UK. DLI admission, study permits, PGWP, and PR pathways. Complete guidance from 4 Aces Visa.",
+    metaTitle: "Study Visa 2026 | Canada, Australia, Germany & UK Study Abroad – Garg Brothers",
+    metaDescription: "Study abroad in Canada, Australia, Germany, or UK. DLI admission, study permits, PGWP, and PR pathways. Complete guidance from Garg Brothers.",
     heroDescription: "Transform your education into a global career. We guide you from university admission to study permit approval, and help you transition to post-graduation work permits and permanent residency.",
     overview: "Studying abroad is one of the most reliable pathways to permanent residency. Canada's PGWP program, Australia's post-study work visa, Germany's tuition-free universities, and the UK's Graduate Route all make education a strategic immigration move. We help you choose the right institution, program, and country.",
     benefits: [
@@ -355,8 +355,8 @@ export const services: ServiceData[] = [
   {
     slug: "job-seeker-visa",
     title: "Germany Job Seeker Visa",
-    metaTitle: "Germany Job Seeker Visa 2026 | Find Jobs in Germany – 4 Aces Visa",
-    metaDescription: "Apply for Germany Job Seeker Visa. 6-month visa to search for employment. Transition to EU Blue Card and PR. Expert guidance from 4 Aces Visa.",
+    metaTitle: "Germany Job Seeker Visa 2026 | Find Jobs in Germany – Garg Brothers",
+    metaDescription: "Apply for Germany Job Seeker Visa. 6-month visa to search for employment. Transition to EU Blue Card and PR. Expert guidance from Garg Brothers.",
     heroDescription: "Germany's Job Seeker Visa lets you enter Germany for 6 months to find employment — no job offer required. Once you land a job, transition to the EU Blue Card with a fast-track to permanent residency.",
     overview: "The Germany Job Seeker Visa is unique in global immigration — it allows qualified professionals to enter Germany specifically to search for employment. Unlike most work visas that require a pre-arranged job offer, this visa gives you 6 months of on-the-ground job hunting. Once employed, you can transition to an EU Blue Card with fast-track PR (21 months with B1 German).",
     benefits: [
@@ -388,8 +388,8 @@ export const services: ServiceData[] = [
   {
     slug: "family-sponsorship",
     title: "Family Sponsorship (Canada)",
-    metaTitle: "Canada Family Sponsorship 2026 | Sponsor Spouse, Parents & Children – 4 Aces Visa",
-    metaDescription: "Sponsor your spouse, parents, grandparents, or children for Canada PR. Complete family sponsorship guide and expert processing by 4 Aces Visa.",
+    metaTitle: "Canada Family Sponsorship 2026 | Sponsor Spouse, Parents & Children – Garg Brothers",
+    metaDescription: "Sponsor your spouse, parents, grandparents, or children for Canada PR. Complete family sponsorship guide and expert processing by Garg Brothers.",
     heroDescription: "Reunite with your loved ones in Canada. Our family sponsorship experts handle spousal, parent, and dependent child sponsorship with meticulous attention to every document and deadline.",
     overview: "Canada's Family Sponsorship program allows Canadian citizens and permanent residents to sponsor their close family members for immigration. This includes spousal/common-law partner sponsorship, parent and grandparent sponsorship (PGP), and dependent children.",
     benefits: [

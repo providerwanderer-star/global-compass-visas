@@ -38,7 +38,7 @@ const formatDate = (iso: string) => {
 
 /**
  * E-E-A-T byline block.
- * Renders: avatar + "By {Author}" + "Reviewed by 4 Aces Visa Team" + "Updated {date}".
+ * Renders: avatar + "By {Author}" + "Reviewed by Garg Brothers Team" + "Updated {date}".
  * Injects: Person JSON-LD for the author, plus Article JSON-LD when articleHeadline + articleUrl are supplied.
  * No fabricated RCIC license number is emitted in schema (CICC compliance).
  */
@@ -73,7 +73,7 @@ const AuthorByline = ({
           reviewedBy: getReviewerSchema(),
           publisher: {
             "@type": "Organization",
-            name: "4 Aces Visa",
+            name: "Garg Brothers",
             url: SITE,
             logo: {
               "@type": "ImageObject",

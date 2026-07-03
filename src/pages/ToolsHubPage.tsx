@@ -15,7 +15,7 @@ import {
 import SeoSchema from "@/components/SeoSchema";
 import EligibilityForm from "@/components/EligibilityForm";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 interface Tool {
   title: string;
@@ -85,7 +85,7 @@ const TOOLS: Tool[] = [
 ];
 
 const ToolsHubPage = () => {
-  const title = "Free Canada Immigration Tools & Calculators (2026) | 4 Aces Visa";
+  const title = "Free Canada Immigration Tools & Calculators (2026) | Garg Brothers";
   const description =
     "Free tools built by RCIC-regulated consultants: CRS calculator, cost estimator, NOC finder, Express Entry & PNP draw trackers, IRCC processing times.";
   const canonical = `${SITE}/tools`;
@@ -180,7 +180,7 @@ const ToolsHubPage = () => {
             </div>
             <div>
               <h3 className="font-semibold text-foreground mb-1">Human backup</h3>
-              <p>If a result surprises you, our 4 Aces Visa Immigration Team can review it on a free 15-minute discovery call.</p>
+              <p>If a result surprises you, our Garg Brothers Immigration Team can review it on a free 15-minute discovery call.</p>
             </div>
           </div>
         </div>

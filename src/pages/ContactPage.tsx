@@ -18,35 +18,35 @@ const ContactPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Contact Us | Free Immigration Consultation – 4 Aces Visa</title>
-        <meta name="description" content="Get in touch with 4 Aces Visa for a free immigration consultation. Expert guidance for Canada, Australia, Germany, and UK immigration." />
-        <link rel="canonical" href="https://www.4acesvisa.com/contact" />
+        <title>Contact Us | Free Immigration Consultation – Garg Brothers</title>
+        <meta name="description" content="Get in touch with Garg Brothers for a free immigration consultation. Expert guidance for Canada, Australia, Germany, and UK immigration." />
+        <link rel="canonical" href="https://www.gargbrothers.ca/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Contact Us | Free Immigration Consultation – 4 Aces Visa" />
-        <meta property="og:description" content="Get in touch with 4 Aces Visa for a free immigration consultation. Expert guidance for Canada, Australia, Germany, and UK immigration." />
-        <meta property="og:url" content="https://www.4acesvisa.com/contact" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Contact Us | Free Immigration Consultation – Garg Brothers" />
+        <meta property="og:description" content="Get in touch with Garg Brothers for a free immigration consultation. Expert guidance for Canada, Australia, Germany, and UK immigration." />
+        <meta property="og:url" content="https://www.gargbrothers.ca/contact" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "name": "Contact 4 Aces Visa",
-            "url": "https://www.4acesvisa.com/contact",
+            "name": "Contact Garg Brothers",
+            "url": "https://www.gargbrothers.ca/contact",
             "mainEntity": {
               "@type": "Organization",
-              "name": "4 Aces Visa",
+              "name": "Garg Brothers",
               "telephone": "+1-647-862-2190",
               "email": "sahil280389@gmail.com"
             }
           })}
         </script>
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.4acesvisa.com/contact"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.gargbrothers.ca/contact"}]})}</script>
       </Helmet>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +96,7 @@ const ContactPage = () => {
                 ))}
               </motion.div>
 
-              <h3 className="font-display text-lg font-bold text-foreground mb-3">Why Choose 4 Aces Visa?</h3>
+              <h3 className="font-display text-lg font-bold text-foreground mb-3">Why Choose Garg Brothers?</h3>
               <motion.ul
                 className="space-y-2"
                 initial="hidden"

@@ -42,7 +42,7 @@ const DrawHistoryPage = () => {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Express Entry Draw History",
-    url: "https://www.4acesvisa.com/express-entry/draws",
+    url: "https://www.gargbrothers.ca/express-entry/draws",
     applicationCategory: "ImmigrationTool",
     description: "Complete history of Express Entry draws with CRS cutoffs, ITAs issued, and category breakdowns. Updated after every draw.",
   };
@@ -81,26 +81,26 @@ const DrawHistoryPage = () => {
   return (
     <>
       <Helmet>
-        <title>Express Entry Draw History 2025–2026 — CRS Cutoffs & ITAs | 4 Aces Visa</title>
+        <title>Express Entry Draw History 2025–2026 — CRS Cutoffs & ITAs | Garg Brothers</title>
         <meta
           name="description"
           content="Complete Express Entry draw history with CRS cutoffs, ITAs issued, and category breakdown. Check if your score qualifies and see trends for General, STEM, Healthcare, and Trades draws."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/express-entry/draws" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/express-entry/draws" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Express Entry Draw History 2025–2026 — CRS Cutoffs & ITAs | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Express Entry Draw History 2025–2026 — CRS Cutoffs & ITAs | Garg Brothers" />
         <meta property="og:description" content="Complete Express Entry draw history with CRS cutoffs, ITAs issued, and category breakdown. Check if your score qualifies and see trends for General, STEM, Healthcare, and Trades draws." />
-        <meta property="og:url" content="https://www.4acesvisa.com/express-entry/draws" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/express-entry/draws" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Express Entry Draw History","item":"https://www.4acesvisa.com/express-entry/draws"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"Express Entry Draw History","item":"https://www.gargbrothers.ca/express-entry/draws"}]})}</script>
       </Helmet>
 
       {/* ── HERO ── */}

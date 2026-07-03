@@ -8,7 +8,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getLmia, LMIA_LIST } from "@/data/lmiaData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const LmiaPage = () => {
@@ -18,7 +18,7 @@ const LmiaPage = () => {
 
   const canonical = `${SITE}/lmia/${g.slug}`;
   const headline = `${g.name} (${YEAR})`;
-  const metaTitle = `${g.shortName} ${YEAR} — Eligibility, Fees & PR Path | 4 Aces Visa`;
+  const metaTitle = `${g.shortName} ${YEAR} — Eligibility, Fees & PR Path | Garg Brothers`;
   const metaDescription = `${g.oneLiner} Updated ${YEAR}.`;
 
   const faqSchema = {
@@ -32,8 +32,8 @@ const LmiaPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = LMIA_LIST.filter((x) => x.slug !== g.slug);

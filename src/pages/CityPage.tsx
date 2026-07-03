@@ -44,12 +44,12 @@ const CityPage = () => {
   // fall back to the original PR title format.
   const prTitle = isUS
     ? city.metaTitle
-    : `Canada PR from ${city.name} 2026 — Immigration Consultant | 4 Aces Visa`;
+    : `Canada PR from ${city.name} 2026 — Immigration Consultant | Garg Brothers`;
   const prDesc = isUS
     ? city.metaDescription
     : city.country === "india"
-      ? `Planning to move to Canada from ${city.name}? Get expert Express Entry, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free assessment.`
-      : `Living in ${city.name} on a work or study permit? Get expert CEC, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free PR assessment.`;
+      ? `Planning to move to Canada from ${city.name}? Get expert Express Entry, PNP & LMIA help from Garg Brothers. 98% success rate. Free assessment.`
+      : `Living in ${city.name} on a work or study permit? Get expert CEC, PNP & LMIA help from Garg Brothers. 98% success rate. Free PR assessment.`;
   const pageTitle = isPR ? prTitle : city.metaTitle;
   const pageDesc = isPR ? prDesc : city.metaDescription;
 
@@ -63,18 +63,18 @@ const CityPage = () => {
         : "Immigration from Canada";
   const breadcrumbParentItem =
     city.country === "us"
-      ? "https://www.4acesvisa.com/canada-pr-from/usa"
-      : "https://www.4acesvisa.com/immigration/canada";
+      ? "https://www.gargbrothers.ca/canada-pr-from/usa"
+      : "https://www.gargbrothers.ca/immigration/canada";
 
   return (
     <div>
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        <link rel="canonical" href={`https://www.4acesvisa.com/city/${city.slug}`} />
+        <link rel="canonical" href={`https://www.gargbrothers.ca/city/${city.slug}`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
-        <meta property="og:url" content={`https://www.4acesvisa.com/city/${city.slug}`} />
+        <meta property="og:url" content={`https://www.gargbrothers.ca/city/${city.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
@@ -84,9 +84,9 @@ const CityPage = () => {
             "@graph": [
               {
                 "@type": "LocalBusiness",
-                name: `4 Aces Visa – ${city.name}`,
+                name: `Garg Brothers – ${city.name}`,
                 description: pageDesc,
-                url: `https://www.4acesvisa.com/city/${city.slug}`,
+                url: `https://www.gargbrothers.ca/city/${city.slug}`,
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
                 address: { "@type": "PostalAddress", addressLocality: city.name, addressCountry },
@@ -94,14 +94,14 @@ const CityPage = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
                   {
                     "@type": "ListItem",
                     position: 2,
                     name: breadcrumbParentName,
                     item: breadcrumbParentItem,
                   },
-                  { "@type": "ListItem", position: 3, name: city.name, item: `https://www.4acesvisa.com/city/${city.slug}` },
+                  { "@type": "ListItem", position: 3, name: city.name, item: `https://www.gargbrothers.ca/city/${city.slug}` },
                 ],
               },
               {
@@ -286,7 +286,7 @@ const CityPage = () => {
         <div className="container-narrow mx-auto text-center">
           <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Why Choose 4 Aces Visa in {city.name}?
+              Why Choose Garg Brothers in {city.name}?
             </h2>
           </AnimatedSection>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">

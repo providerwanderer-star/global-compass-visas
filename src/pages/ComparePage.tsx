@@ -21,7 +21,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getComparison, comparisons } from "@/data/comparisonData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 const ComparePage = () => {
   const { slug } = useParams<{ slug: string }>();

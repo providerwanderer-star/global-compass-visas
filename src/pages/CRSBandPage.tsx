@@ -26,9 +26,9 @@ const CRSBandPage = () => {
 
   const freshness = getFreshness("crs-band");
 
-  const title = `Canada PR with CRS ${data.label} — Best Pathways 2026 | 4 Aces Visa`;
+  const title = `Canada PR with CRS ${data.label} — Best Pathways 2026 | Garg Brothers`;
   const description = `Can you get Canada PR with a CRS score of ${data.range}? Best PNPs, category-based draws, study and work-permit strategies. Updated April 2026.`;
-  const canonical = `https://www.4acesvisa.com/canada-pr/crs/${data.slug}`;
+  const canonical = `https://www.gargbrothers.ca/canada-pr/crs/${data.slug}`;
 
   const summary = data.realityCheck;
 

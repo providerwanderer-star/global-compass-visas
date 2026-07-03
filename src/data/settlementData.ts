@@ -56,7 +56,7 @@ export const settlementGuides: SettlementGuide[] = [
       { q: "Do I need a SIN to open a bank account?", a: "Most banks request it for tax-reporting purposes (interest income), but legally you can open a chequing account without one. RRSP and TFSA accounts require a SIN." },
     ],
     relatedSlugs: ["open-bank-account", "apply-health-card", "get-driver-licence"],
-    metaTitle: "How to Get a SIN Number in Canada (2026) — New PR Guide | 4 Aces Visa",
+    metaTitle: "How to Get a SIN Number in Canada (2026) — New PR Guide | Garg Brothers",
     metaDescription: "Get your Social Insurance Number (SIN) on landing day. Free, takes 15 minutes at any Service Canada office. Required to work, open bank accounts and file taxes in Canada.",
   },
   {
@@ -94,7 +94,7 @@ export const settlementGuides: SettlementGuide[] = [
       { q: "How long does it take to build Canadian credit?", a: "With a secured or newcomer credit card used responsibly, you can build a basic credit score (650+) in 6–12 months. Excellent credit (750+) typically takes 2–3 years." },
     ],
     relatedSlugs: ["get-sin-number", "rent-apartment", "build-credit-history"],
-    metaTitle: "Open a Canadian Bank Account as a Newcomer (2026) — Free Guide | 4 Aces Visa",
+    metaTitle: "Open a Canadian Bank Account as a Newcomer (2026) — Free Guide | Garg Brothers",
     metaDescription: "Step-by-step: open a Canadian bank account before or after arrival. Compare newcomer packages from RBC, TD, Scotiabank, BMO, CIBC — free banking for 12 months + bonuses up to $500.",
   },
   {
@@ -130,7 +130,7 @@ export const settlementGuides: SettlementGuide[] = [
       { q: "Can I see a specialist directly?", a: "No. You need a referral from your family doctor or walk-in clinic to see a specialist. Wait times for specialists can be weeks to months depending on urgency." },
     ],
     relatedSlugs: ["get-sin-number", "find-family-doctor", "get-driver-licence"],
-    metaTitle: "How to Apply for a Provincial Health Card in Canada (2026) | 4 Aces Visa",
+    metaTitle: "How to Apply for a Provincial Health Card in Canada (2026) | Garg Brothers",
     metaDescription: "Apply for OHIP, BC MSP, RAMQ and other provincial health cards. Step-by-step process, 3-month waiting period in ON/BC/QC, private insurance options for newcomers.",
   },
   {
@@ -168,7 +168,7 @@ export const settlementGuides: SettlementGuide[] = [
       { q: "Are utilities included in rent?", a: "Sometimes. Always confirm what's included. In Quebec, heat is often included; in Ontario, hydro/water are usually separate. Budget CAD 100–250/month for utilities if not included." },
     ],
     relatedSlugs: ["open-bank-account", "build-credit-history", "find-family-doctor"],
-    metaTitle: "How to Rent an Apartment in Canada as a Newcomer (2026) | 4 Aces Visa",
+    metaTitle: "How to Rent an Apartment in Canada as a Newcomer (2026) | Garg Brothers",
     metaDescription: "Rent your first apartment in Canada with no credit history. Step-by-step guide to rental applications, security deposits, lease terms, and avoiding scams in Toronto, Vancouver, Montreal.",
   },
   {
@@ -206,7 +206,7 @@ export const settlementGuides: SettlementGuide[] = [
       { q: "When does the Canadian school year start?", a: "Early September (after Labour Day) to late June. Some provinces start late August. You can enrol mid-year — schools accommodate newcomers year-round." },
     ],
     relatedSlugs: ["rent-apartment", "apply-health-card", "find-childcare"],
-    metaTitle: "Enroll Your Children in Canadian Public School (2026) — Newcomer Guide | 4 Aces Visa",
+    metaTitle: "Enroll Your Children in Canadian Public School (2026) — Newcomer Guide | Garg Brothers",
     metaDescription: "Free K-12 public schooling for PRs and work-permit holders. Step-by-step enrollment, document requirements, ESL programs and French immersion options across Canada.",
   },
   {
@@ -244,7 +244,7 @@ export const settlementGuides: SettlementGuide[] = [
       { q: "Do I need a car in Canada?", a: "Toronto, Montreal and Vancouver have excellent public transit — many residents don't own cars. Suburbs and smaller cities require a car. Calgary, Edmonton and most Atlantic cities are car-dependent." },
     ],
     relatedSlugs: ["get-sin-number", "open-bank-account", "rent-apartment"],
-    metaTitle: "Get a Canadian Driver's Licence as a Newcomer (2026) | 4 Aces Visa",
+    metaTitle: "Get a Canadian Driver's Licence as a Newcomer (2026) | Garg Brothers",
     metaDescription: "Exchange your foreign licence or take Canadian driving tests. Reciprocal agreements with UK, Germany, USA, Japan and more. Insurance tips, road-test prep, and provincial requirements.",
   },
 ];

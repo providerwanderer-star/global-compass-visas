@@ -8,7 +8,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getCitizenship, CITIZENSHIP_LIST } from "@/data/citizenshipData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const CitizenshipPage = () => {
@@ -18,7 +18,7 @@ const CitizenshipPage = () => {
 
   const canonical = `${SITE}/citizenship/${g.slug}`;
   const headline = `${g.name} (${YEAR})`;
-  const metaTitle = `${g.shortName} ${YEAR} — Rules, Timing & How to Apply | 4 Aces Visa`;
+  const metaTitle = `${g.shortName} ${YEAR} — Rules, Timing & How to Apply | Garg Brothers`;
   const metaDescription = `${g.oneLiner} Updated ${YEAR}.`;
 
   const faqSchema = {
@@ -28,8 +28,8 @@ const CitizenshipPage = () => {
   const articleSchema = {
     "@context": "https://schema.org", "@type": "Article", headline,
     datePublished: `${YEAR}-01-15`, dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = CITIZENSHIP_LIST.filter((x) => x.slug !== g.slug);

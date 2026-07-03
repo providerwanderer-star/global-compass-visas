@@ -28,9 +28,9 @@ const CanadaPRFromCountryPage = () => {
 
   const freshness = getFreshness("geo-country");
 
-  const title = `Canada PR from ${data.country} (2026) — Pathways, Cost & Timeline | 4 Aces Visa`;
+  const title = `Canada PR from ${data.country} (2026) — Pathways, Cost & Timeline | Garg Brothers`;
   const description = `Complete 2026 guide to Canada PR from ${data.country}. Express Entry, PNP, study & work permits. Top NOC codes, cost (${data.estCostCAD}) and timeline (${data.avgTimelineMonths}).`;
-  const canonical = `https://www.4acesvisa.com/canada-pr-from/${data.slug}`;
+  const canonical = `https://www.gargbrothers.ca/canada-pr-from/${data.slug}`;
 
   const summary = `Skilled ${data.demonym} applicants typically reach Canada PR in ${data.avgTimelineMonths} via Express Entry, PNP or LMIA-based work permits. Total cost: ${data.estCostCAD}. Top occupations include ${data.topNocs
     .slice(0, 3)

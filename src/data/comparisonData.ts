@@ -48,7 +48,7 @@ export const comparisons: Comparison[] = [
     category: "Canada PR",
     metaTitle: "Express Entry vs PNP (2026): Which Canada PR Pathway Is Faster?",
     metaDescription:
-      "Express Entry vs Provincial Nominee Program — processing time, CRS impact, cost, eligibility and which is faster in 2026. Honest comparison by 4 Aces Visa.",
+      "Express Entry vs Provincial Nominee Program — processing time, CRS impact, cost, eligibility and which is faster in 2026. Honest comparison by Garg Brothers.",
     h1: "Express Entry vs Provincial Nominee Program (PNP)",
     intro:
       "Express Entry and the Provincial Nominee Program are the two main pathways to Canadian permanent residence in 2026. They overlap heavily — most provincial nominations are issued through the 'enhanced' Express Entry stream — but the timeline, cost and CRS strategy are very different.",
@@ -106,7 +106,7 @@ export const comparisons: Comparison[] = [
     category: "Permanent Residence",
     metaTitle: "Canada PR vs Australia PR (2026): Which Is Easier and Faster?",
     metaDescription:
-      "Canada PR vs Australia PR — eligibility, cost, processing time, jobs market and quality of life compared honestly. Updated for 2026 by 4 Aces Visa.",
+      "Canada PR vs Australia PR — eligibility, cost, processing time, jobs market and quality of life compared honestly. Updated for 2026 by Garg Brothers.",
     h1: "Canada PR vs Australia PR",
     intro:
       "Canada and Australia are the two most popular skilled-migration destinations in 2026. Canada accepts roughly 485,000 PRs per year; Australia caps permanent migration at 185,000. Eligibility, cost and timelines are meaningfully different.",

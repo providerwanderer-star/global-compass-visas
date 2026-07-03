@@ -13,7 +13,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getCityIndustry, CITY_INDUSTRIES } from "@/data/cityIndustryData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const CityIndustryPage = () => {
@@ -24,8 +24,8 @@ const CityIndustryPage = () => {
 
   const canonical = `${SITE}/city/${ci.city}/${ci.industry}`;
   const headline = `${ci.industryShort} Jobs & Immigration in ${ci.cityName}, ${ci.province} (${YEAR})`;
-  const metaTitle = `${ci.industryShort} Jobs in ${ci.cityName} ${YEAR} — Employers, Wage, PR | 4 Aces Visa`;
-  const metaDescription = `${ci.industryName} in ${ci.cityName}, ${ci.province}: top employers, in-demand NOCs, median wage ${ci.medianWageCAD} and the ${ci.pnpStream} pathway. 4 Aces Visa Immigration Team.`;
+  const metaTitle = `${ci.industryShort} Jobs in ${ci.cityName} ${YEAR} — Employers, Wage, PR | Garg Brothers`;
+  const metaDescription = `${ci.industryName} in ${ci.cityName}, ${ci.province}: top employers, in-demand NOCs, median wage ${ci.medianWageCAD} and the ${ci.pnpStream} pathway. Garg Brothers Immigration Team.`;
 
   const faqs = [
     { q: `Is ${ci.industryShort.toLowerCase()} hiring in ${ci.cityName}?`, a: `Yes — top employers include ${ci.topEmployers.slice(0, 4).join(", ")}. Median wage is ${ci.medianWageCAD}.` },
@@ -50,8 +50,8 @@ const CityIndustryPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
 

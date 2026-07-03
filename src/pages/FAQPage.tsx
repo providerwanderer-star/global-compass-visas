@@ -37,9 +37,9 @@ const faqCategories = [
     title: "Costs & Timelines",
     icon: "💰",
     faqs: [
-      { q: "How much does Canada PR cost from India in 2026?", a: "Total costs include IRCC processing fees (~CAD 1,365), IELTS exam (~₹16,000), WES credential evaluation (~₹15,000), biometrics (CAD 85), police clearances (~₹500-2,000), and medical exam (~₹5,000-8,000). Grand total is typically ₹3-5 lakhs (CAD 2,500-5,000) excluding consultant fees. 4 Aces Visa offers transparent pricing with no hidden charges." },
+      { q: "How much does Canada PR cost from India in 2026?", a: "Total costs include IRCC processing fees (~CAD 1,365), IELTS exam (~₹16,000), WES credential evaluation (~₹15,000), biometrics (CAD 85), police clearances (~₹500-2,000), and medical exam (~₹5,000-8,000). Grand total is typically ₹3-5 lakhs (CAD 2,500-5,000) excluding consultant fees. Garg Brothers offers transparent pricing with no hidden charges." },
       { q: "How long does Canada PR take from India?", a: "Express Entry: 6-8 months from ITA to PR approval. PNP-based: 12-18 months total. Study permit to PR pathway: 3-5 years (2-year program + 3-year PGWP + CEC application). LMIA work permit to PR: 8-14 months. Total timeline from start to PR landing is typically 8-18 months for direct pathways." },
-      { q: "How much does immigration consulting cost?", a: "4 Aces Visa offers a free initial eligibility assessment. Consulting packages vary by complexity, destination country, and pathway chosen. We provide transparent pricing with no hidden fees — you'll know the exact cost upfront before committing. Book a free assessment to get a personalized quote." },
+      { q: "How much does immigration consulting cost?", a: "Garg Brothers offers a free initial eligibility assessment. Consulting packages vary by complexity, destination country, and pathway chosen. We provide transparent pricing with no hidden fees — you'll know the exact cost upfront before committing. Book a free assessment to get a personalized quote." },
       { q: "What are the costs for Australian PR from India?", a: "Australian PR costs include skills assessment (AUD 500-1,500 depending on authority), IELTS/PTE (₹15,000-20,000), visa application fee (AUD 4,115 for Subclass 189/190), health examination (₹5,000-8,000), police clearance (₹500-2,000), and biometrics. Total: approximately AUD 5,000-7,000 (₹2.5-4 lakhs) excluding consultant fees." },
     ],
   },
@@ -92,10 +92,10 @@ const faqCategories = [
     title: "Choosing a Consultant",
     icon: "✅",
     faqs: [
-      { q: "How do I choose the best immigration consultant?", a: "Look for: proven track record with verifiable success rates, transparent pricing with no hidden fees, personal immigration experience (consultants who've been through the process themselves), knowledge of multiple pathways, and free initial assessments. Red flags: guaranteeing visa approval (no one can), cash-only payments, high-pressure sales tactics, and inability to explain the process clearly. 4 Aces Visa consultants are immigrants themselves with a 98% success rate." },
-      { q: "Does 4 Aces Visa guarantee visa approval?", a: "No ethical consultancy can guarantee visa approval — anyone who does is a red flag. However, our 98% success rate across 15,000+ applications reflects deep expertise in preparing strong, compliant applications. We identify weaknesses in your profile early and address them before submission, maximizing your chances." },
+      { q: "How do I choose the best immigration consultant?", a: "Look for: proven track record with verifiable success rates, transparent pricing with no hidden fees, personal immigration experience (consultants who've been through the process themselves), knowledge of multiple pathways, and free initial assessments. Red flags: guaranteeing visa approval (no one can), cash-only payments, high-pressure sales tactics, and inability to explain the process clearly. Garg Brothers consultants are immigrants themselves with a 98% success rate." },
+      { q: "Does Garg Brothers guarantee visa approval?", a: "No ethical consultancy can guarantee visa approval — anyone who does is a red flag. However, our 98% success rate across 15,000+ applications reflects deep expertise in preparing strong, compliant applications. We identify weaknesses in your profile early and address them before submission, maximizing your chances." },
       { q: "What does 'By immigrants, for immigrants' mean?", a: "Our consultants have personally gone through immigration to Canada, Australia, Germany, and the UK. We understand the stress, uncertainty, and life-changing decisions because we've lived through every step — from IELTS prep to landing day. This firsthand experience means we don't just process paperwork; we provide empathetic, practical guidance based on real lived experience." },
-      { q: "What regions does 4 Aces Visa serve?", a: "We serve clients across India (Punjab, Gujarat, Haryana, Rajasthan — including Ludhiana, Amritsar, Jalandhar, Chandigarh, Ahmedabad, Surat, Gurugram, Jaipur) and Canada (Ontario and British Columbia — including Toronto, Brampton, Mississauga, Vancouver, Surrey). We offer both in-person and virtual consultations for clients worldwide." },
+      { q: "What regions does Garg Brothers serve?", a: "We serve clients across India (Punjab, Gujarat, Haryana, Rajasthan — including Ludhiana, Amritsar, Jalandhar, Chandigarh, Ahmedabad, Surat, Gurugram, Jaipur) and Canada (Ontario and British Columbia — including Toronto, Brampton, Mississauga, Vancouver, Surrey). We offer both in-person and virtual consultations for clients worldwide." },
     ],
   },
   {
@@ -162,20 +162,20 @@ const FAQPage = () => {
   return (
     <>
       <Helmet>
-        <title>Immigration FAQ 2026 — Canada PR, Study Visa, IELTS, CRS | 4 Aces Visa</title>
+        <title>Immigration FAQ 2026 — Canada PR, Study Visa, IELTS, CRS | Garg Brothers</title>
         <meta name="description" content="Answers to the most common Canada immigration questions — Express Entry, PNP, study permits, work permits, and PR processing times." />
-        <link rel="canonical" href="https://www.4acesvisa.com/faq" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/faq" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Immigration FAQ 2026 — Canada PR, Study Visa, IELTS, CRS | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Immigration FAQ 2026 — Canada PR, Study Visa, IELTS, CRS | Garg Brothers" />
         <meta property="og:description" content="Answers to the most common Canada immigration questions — Express Entry, PNP, study permits, work permits, and PR processing times." />
-        <meta property="og:url" content="https://www.4acesvisa.com/faq" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/faq" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify([
             {
@@ -192,15 +192,15 @@ const FAQPage = () => {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com" },
-                { "@type": "ListItem", position: 2, name: "FAQ", item: "https://www.4acesvisa.com/faq" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca" },
+                { "@type": "ListItem", position: 2, name: "FAQ", item: "https://www.gargbrothers.ca/faq" },
               ],
             },
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
-              url: "https://www.4acesvisa.com/faq",
-              name: "Immigration FAQ — 4 Aces Visa",
+              url: "https://www.gargbrothers.ca/faq",
+              name: "Immigration FAQ — Garg Brothers",
               speakable: {
                 "@type": "SpeakableSpecification",
                 cssSelector: ["h1", ".faq-question", ".faq-answer"],

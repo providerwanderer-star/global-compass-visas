@@ -112,12 +112,12 @@ const PackagesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Our Packages — 4 Aces Visa Canada PR Consulting</title>
+        <title>Our Packages — Garg Brothers Canada PR Consulting</title>
         <meta
           name="description"
-          content="Choose the right level of support for your Canada PR journey. Platinum, Gold, Silver and Bronze packages from 4 Aces Visa — transparent pricing from $100."
+          content="Choose the right level of support for your Canada PR journey. Platinum, Gold, Silver and Bronze packages from Garg Brothers — transparent pricing from $100."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/packages" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/packages" />
       </Helmet>
 
       {/* Hero */}

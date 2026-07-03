@@ -78,7 +78,7 @@ function buildInternalFeed(): NewsItem[] {
     title: b.title,
     summary: b.excerpt,
     url: `/blog/${b.slug}`,
-    source: `4 Aces Visa · ${b.category}`,
+    source: `Garg Brothers · ${b.category}`,
     publishedAt: toISO(b.date),
     internal: true,
   }));
@@ -178,18 +178,18 @@ const NewsHubPage = () => {
   return (
     <div className="min-h-screen bg-secondary/30">
       <Helmet>
-        <title>Canada Immigration News & Updates 2026 · 4 Aces Visa</title>
+        <title>Canada Immigration News & Updates 2026 · Garg Brothers</title>
         <meta
           name="description"
           content="Live Canada immigration news: latest IRCC announcements, Express Entry draws, PNP updates, policy changes and PR pathway insights — updated every 30 minutes."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/news" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/news" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Canada Immigration News & Updates 2026 · 4 Aces Visa" />
+        <meta property="og:title" content="Canada Immigration News & Updates 2026 · Garg Brothers" />
         <meta property="og:description" content="Live Canada immigration news: latest IRCC announcements, Express Entry draws, PNP updates, policy changes and PR pathway insights — updated every 30 minutes." />
-        <meta property="og:url" content="https://www.4acesvisa.com/news" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/news" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Immigration News & Updates 2026 · 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada Immigration News & Updates 2026 · Garg Brothers" />
         <meta name="twitter:description" content="Live Canada immigration news: IRCC announcements, Express Entry draws, PNP updates and PR pathway insights." />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -197,7 +197,7 @@ const NewsHubPage = () => {
             "@type": "CollectionPage",
             name: "Canada Immigration News & Updates",
             description: "Live IRCC news, Express Entry draws, PNP updates and policy changes.",
-            url: "https://www.4acesvisa.com/news",
+            url: "https://www.gargbrothers.ca/news",
           })}
         </script>
       </Helmet>

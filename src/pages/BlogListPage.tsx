@@ -36,40 +36,40 @@ const BlogListPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Immigration Blog & Guides | 4 Aces Visa</title>
-        <meta name="description" content="Canada immigration news, guides, and tips from RCIC-regulated consultants at 4 Aces Visa. Express Entry draws, PNP updates, and PR strategies." />
-        <link rel="canonical" href="https://www.4acesvisa.com/blog" />
+        <title>Immigration Blog & Guides | Garg Brothers</title>
+        <meta name="description" content="Canada immigration news, guides, and tips from RCIC-regulated consultants at Garg Brothers. Express Entry draws, PNP updates, and PR strategies." />
+        <link rel="canonical" href="https://www.gargbrothers.ca/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Immigration Blog & Guides | 4 Aces Visa" />
-        <meta property="og:description" content="Canada immigration news, guides, and tips from RCIC-regulated consultants at 4 Aces Visa. Express Entry draws, PNP updates, and PR strategies." />
-        <meta property="og:url" content="https://www.4acesvisa.com/blog" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Immigration Blog & Guides | Garg Brothers" />
+        <meta property="og:description" content="Canada immigration news, guides, and tips from RCIC-regulated consultants at Garg Brothers. Express Entry draws, PNP updates, and PR strategies." />
+        <meta property="og:url" content="https://www.gargbrothers.ca/blog" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "Immigration Blog & Guides",
             "description": "Expert immigration articles for Canada, Australia, Germany, and UK.",
-            "url": "https://www.4acesvisa.com/blog",
-            "publisher": { "@type": "Organization", "name": "4 Aces Visa" },
+            "url": "https://www.gargbrothers.ca/blog",
+            "publisher": { "@type": "Organization", "name": "Garg Brothers" },
             "mainEntity": {
               "@type": "ItemList",
               "itemListElement": blogPosts.map((post, i) => ({
                 "@type": "ListItem",
                 "position": i + 1,
-                "url": `https://www.4acesvisa.com/blog/${post.slug}`,
+                "url": `https://www.gargbrothers.ca/blog/${post.slug}`,
                 "name": post.title
               }))
             }
           })}
         </script>
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.4acesvisa.com/blog"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.gargbrothers.ca/blog"}]})}</script>
       </Helmet>
 
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">

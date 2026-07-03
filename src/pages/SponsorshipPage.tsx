@@ -13,7 +13,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getSponsorship, SPONSORSHIP_LIST } from "@/data/sponsorshipData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const SponsorshipPage = () => {
@@ -23,8 +23,8 @@ const SponsorshipPage = () => {
 
   const canonical = `${SITE}/sponsor/${p.slug}`;
   const headline = `${p.name} — ${YEAR} Guide`;
-  const metaTitle = `${p.shortName} ${YEAR} — Eligibility, Cost, Step-by-Step | 4 Aces Visa`;
-  const metaDescription = `${p.oneLiner} Processing time ${p.processingTime}, cost ${p.govFees}, common rejection reasons and FAQs. 4 Aces Visa Immigration Team.`;
+  const metaTitle = `${p.shortName} ${YEAR} — Eligibility, Cost, Step-by-Step | Garg Brothers`;
+  const metaDescription = `${p.oneLiner} Processing time ${p.processingTime}, cost ${p.govFees}, common rejection reasons and FAQs. Garg Brothers Immigration Team.`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -41,8 +41,8 @@ const SponsorshipPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = SPONSORSHIP_LIST.filter((x) => x.slug !== p.slug);

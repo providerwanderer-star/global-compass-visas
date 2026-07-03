@@ -16,41 +16,41 @@ type Variant = {
 
 const VARIANTS: Record<string, Variant> = {
   "/australia/skilled-migration": {
-    title: "Australia Skilled Migration 2026 | Subclass 189, 190, 491 Guide — 4 Aces Visa",
+    title: "Australia Skilled Migration 2026 | Subclass 189, 190, 491 Guide — Garg Brothers",
     h1: "Australia Skilled Migration 2026",
     description:
       "Complete guide to Australia skilled migration in 2026. Compare Subclass 189, 190, and 491 visas. Points test, skills assessment, processing times, and PR pathway.",
-    canonical: "https://www.4acesvisa.com/australia/skilled-migration",
+    canonical: "https://www.gargbrothers.ca/australia/skilled-migration",
     intro:
       "A points-based immigration system with three main visa subclasses — 189, 190, and 491. Minimum 65 points required; competitive scores are 80–95+. No job offer needed.",
     breadcrumbName: "Skilled Migration",
   },
   "/australia/subclass-189": {
-    title: "Australia Subclass 189 Visa 2026 — Skilled Independent PR Guide | 4 Aces Visa",
+    title: "Australia Subclass 189 Visa 2026 — Skilled Independent PR Guide | Garg Brothers",
     h1: "Australia Subclass 189 — Skilled Independent Visa",
     description:
       "Subclass 189 is Australia's permanent independent skilled visa. No state nomination, no job offer. 90+ points competitive. Processing 12–18 months. Full eligibility, points test, and 2026 invitation rounds.",
-    canonical: "https://www.4acesvisa.com/australia/subclass-189",
+    canonical: "https://www.gargbrothers.ca/australia/subclass-189",
     intro:
       "The Skilled Independent visa — permanent residence on day 1 with no state nomination and no job offer. The most competitive Australian skilled stream — invitations issue at 90+ points in 2026.",
     breadcrumbName: "Subclass 189",
   },
   "/australia/subclass-190": {
-    title: "Australia Subclass 190 Visa 2026 — State Nominated PR | 4 Aces Visa",
+    title: "Australia Subclass 190 Visa 2026 — State Nominated PR | Garg Brothers",
     h1: "Australia Subclass 190 — State Nominated Visa",
     description:
       "Subclass 190 is Australia's state-nominated permanent visa. +5 points from state nomination, 2-year commitment to nominating state, 9–15 month processing. Compare NSW, VIC, SA, TAS occupation lists.",
-    canonical: "https://www.4acesvisa.com/australia/subclass-190",
+    canonical: "https://www.gargbrothers.ca/australia/subclass-190",
     intro:
       "State-nominated permanent visa — gain a +5-point boost from a participating state or territory. Permanent residence from day 1, 2-year commitment to live and work in the nominating state.",
     breadcrumbName: "Subclass 190",
   },
   "/australia/subclass-491": {
-    title: "Australia Subclass 491 Visa 2026 — Skilled Regional Pathway | 4 Aces Visa",
+    title: "Australia Subclass 491 Visa 2026 — Skilled Regional Pathway | Garg Brothers",
     h1: "Australia Subclass 491 — Skilled Work Regional",
     description:
       "Subclass 491 is Australia's regional skilled visa. +15 points from regional nomination — the biggest boost available. 5-year provisional visa, pathway to permanent Subclass 191 after 3 years living regionally.",
-    canonical: "https://www.4acesvisa.com/australia/subclass-491",
+    canonical: "https://www.gargbrothers.ca/australia/subclass-491",
     intro:
       "Regional skilled visa offering the largest points boost (+15) of any Australian stream. Provisional 5-year visa with a clear pathway to permanent Subclass 191 after 3 years in a designated regional area.",
     breadcrumbName: "Subclass 491",

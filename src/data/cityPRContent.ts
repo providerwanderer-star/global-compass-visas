@@ -43,7 +43,7 @@ export function buildAEOFAQs(
     },
     {
       question: `Is there an immigration consultant in ${city} for Canada PR?`,
-      answer: `Yes — 4 Aces Visa serves ${city} residents with a free online assessment available at 4acesvisa.com/contact. Our RCIC-led team works remotely with ${city} clients across Express Entry, PNP, LMIA, and study-to-PR pathways, so no in-person visit is required.`,
+      answer: `Yes — Garg Brothers serves ${city} residents with a free online assessment available at gargbrothers.ca/contact. Our RCIC-led team works remotely with ${city} clients across Express Entry, PNP, LMIA, and study-to-PR pathways, so no in-person visit is required.`,
     },
   ];
 }
@@ -76,7 +76,7 @@ export function buildAEOFAQsCanada(
     },
     {
       question: `Is there an immigration consultant in ${city} for Canada PR?`,
-      answer: `Yes — 4 Aces Visa is an RCIC-led consultancy serving ${city} residents with a free online assessment at 4acesvisa.com/contact. We handle CEC, PNP, LMIA, work permit extensions, and study-to-PR transitions for clients across ${province} entirely online.`,
+      answer: `Yes — Garg Brothers is an RCIC-led consultancy serving ${city} residents with a free online assessment at gargbrothers.ca/contact. We handle CEC, PNP, LMIA, work permit extensions, and study-to-PR transitions for clients across ${province} entirely online.`,
     },
   ];
 }
@@ -580,14 +580,14 @@ export function buildPRCityEntries(): (CityData & { prContent: CityPRContent; ta
       ? buildAEOFAQs(c.name, c.bestProfession)
       : buildAEOFAQsCanada(c.name, c.state, c.pnpStream || `${c.state} PNP`);
 
-    const metaTitle = `Canada PR from ${c.name} 2026 — Immigration Consultant | 4 Aces Visa`;
+    const metaTitle = `Canada PR from ${c.name} 2026 — Immigration Consultant | Garg Brothers`;
     const metaDescription = isIndia
-      ? `Planning to move to Canada from ${c.name}? Get expert Express Entry, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free assessment.`
-      : `Living in ${c.name} on a work or study permit? Get expert CEC, PNP & LMIA help from 4 Aces Visa. 98% success rate. Free PR assessment.`;
+      ? `Planning to move to Canada from ${c.name}? Get expert Express Entry, PNP & LMIA help from Garg Brothers. 98% success rate. Free assessment.`
+      : `Living in ${c.name} on a work or study permit? Get expert CEC, PNP & LMIA help from Garg Brothers. 98% success rate. Free PR assessment.`;
 
     const intro = isIndia
-      ? `Planning your Canada PR move from ${c.name}? 4 Aces Visa is an RCIC-led consultancy helping ${c.name} professionals secure Canadian Permanent Residency through Express Entry, Provincial Nominee Programs, LMIA work permits, and study-to-PR pathways. Our team has guided hundreds of ${c.state} families to PR with a 98% success rate.`
-      : `Already in ${c.name} on a work or study permit and ready for PR? 4 Aces Visa is an RCIC-led consultancy helping ${c.name} residents transition from temporary status to Canadian Permanent Residency through Express Entry CEC, ${c.state} PNP streams, and LMIA-supported job offers — 98% success rate.`;
+      ? `Planning your Canada PR move from ${c.name}? Garg Brothers is an RCIC-led consultancy helping ${c.name} professionals secure Canadian Permanent Residency through Express Entry, Provincial Nominee Programs, LMIA work permits, and study-to-PR pathways. Our team has guided hundreds of ${c.state} families to PR with a 98% success rate.`
+      : `Already in ${c.name} on a work or study permit and ready for PR? Garg Brothers is an RCIC-led consultancy helping ${c.name} residents transition from temporary status to Canadian Permanent Residency through Express Entry CEC, ${c.state} PNP streams, and LMIA-supported job offers — 98% success rate.`;
 
     return {
       slug: c.slug,
@@ -620,8 +620,8 @@ export function buildPRCityEntries(): (CityData & { prContent: CityPRContent; ta
       testimonial: {
         name: isIndia ? `${c.name} PR client` : `${c.name} CEC client`,
         text: isIndia
-          ? `4 Aces Visa walked us through every step of Canada PR from ${c.name} — Express Entry profile, WES, IELTS strategy, and ITA response. We landed in Toronto within 14 months and the experience was seamless.`
-          : `Living in ${c.name} on a work permit, I was overwhelmed by PR options. 4 Aces Visa mapped out CEC and ${c.state} PNP, picked the fastest path, and I got my COPR within 9 months.`,
+          ? `Garg Brothers walked us through every step of Canada PR from ${c.name} — Express Entry profile, WES, IELTS strategy, and ITA response. We landed in Toronto within 14 months and the experience was seamless.`
+          : `Living in ${c.name} on a work permit, I was overwhelmed by PR options. Garg Brothers mapped out CEC and ${c.state} PNP, picked the fastest path, and I got my COPR within 9 months.`,
         visa: "Canada PR",
       },
       faqs,

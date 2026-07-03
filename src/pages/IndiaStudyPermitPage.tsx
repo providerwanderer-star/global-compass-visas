@@ -59,19 +59,19 @@ const IndiaStudyPermitPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada Study Permit for Indians 2026 — PGWP & PR Pathway | 4 Aces Visa</title>
+        <title>Canada Study Permit for Indians 2026 — PGWP & PR Pathway | Garg Brothers</title>
         <meta
           name="description"
           content="Study in Canada from India in 2026. Complete guide to study permit application, top universities, financial requirements, and PGWP to PR pathway. Free assessment."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/india/study-permit-india" />
-        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india/study-permit-india" />
-        <meta property="og:title" content="Canada Study Permit for Indians 2026 | 4 Aces Visa" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/india/study-permit-india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.gargbrothers.ca/india/study-permit-india" />
+        <meta property="og:title" content="Canada Study Permit for Indians 2026 | Garg Brothers" />
         <meta property="og:description" content="Study in Canada from India. Complete guide to study permit, PGWP and PR pathway. Free assessment by expert consultants." />
-        <meta property="og:url" content="https://www.4acesvisa.com/india/study-permit-india" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/india/study-permit-india" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Study Permit for Indians 2026 | 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada Study Permit for Indians 2026 | Garg Brothers" />
         <meta name="twitter:description" content="Study in Canada from India. Complete guide to study permit, PGWP and PR pathway. Free assessment by expert consultants." />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -79,16 +79,16 @@ const IndiaStudyPermitPage = () => {
             "@graph": [
               {
                 "@type": "WebPage",
-                name: "Canada Study Permit for Indians 2026 — 4 Aces Visa",
+                name: "Canada Study Permit for Indians 2026 — Garg Brothers",
                 description: "Complete guide to studying in Canada from India, including study permit application, top institutions, and PGWP to PR pathway.",
-                url: "https://www.4acesvisa.com/india/study-permit-india",
+                url: "https://www.gargbrothers.ca/india/study-permit-india",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.4acesvisa.com/india" },
-                  { "@type": "ListItem", position: 3, name: "Study Permit for Indians", item: "https://www.4acesvisa.com/india/study-permit-india" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.gargbrothers.ca/india" },
+                  { "@type": "ListItem", position: 3, name: "Study Permit for Indians", item: "https://www.gargbrothers.ca/india/study-permit-india" },
                 ],
               },
               {

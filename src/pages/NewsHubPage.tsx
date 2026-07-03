@@ -109,6 +109,7 @@ const NewsHubPage = () => {
   const [filter, setFilter] = useState<FeedType>("all");
   const [visible, setVisible] = useState(15);
   const [lastFetch, setLastFetch] = useState<string>("");
+  const [lastIngestedAt, setLastIngestedAt] = useState<string | null>(null);
 
   const internalFeed = useMemo(buildInternalFeed, []);
 
@@ -121,6 +122,7 @@ const NewsHubPage = () => {
       const items: NewsItem[] = data?.items ?? [];
       setExternalNews(items);
       setLastFetch(data?.fetchedAt ?? new Date().toISOString());
+      setLastIngestedAt(data?.lastIngestedAt ?? null);
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Failed to load latest news";
       console.error("[NewsHub] fetch error", err);
@@ -148,6 +150,11 @@ const NewsHubPage = () => {
 
   const featured = filtered[0];
   const rest = filtered.slice(1, visible);
+
+  // Freshness state: how old is the last successful ingestion?
+  const ingestionAgeMs = lastIngestedAt ? Date.now() - new Date(lastIngestedAt).getTime() : null;
+  const isStale = ingestionAgeMs !== null && ingestionAgeMs > 2 * 60 * 60 * 1000; // >2h
+  const hasNeverIngested = lastIngestedAt === null && !loading;
 
   // Group remaining items by friendly date bucket (Today, Yesterday, This week, Earlier)
   const grouped = useMemo(() => {
@@ -269,9 +276,41 @@ const NewsHubPage = () => {
       </div>
 
       <section className="container-narrow mx-auto px-4 py-8 md:py-12">
-        {error && (
-          <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-900">
-            Could not load latest external news ({error}). Showing internal feed below.
+        {(error || isStale || hasNeverIngested) && (
+          <div
+            className={`mb-6 p-4 rounded-lg text-sm border flex items-start gap-3 ${
+              error
+                ? "bg-red-50 border-red-200 text-red-900"
+                : "bg-amber-50 border-amber-200 text-amber-900"
+            }`}
+            role="status"
+          >
+            <Activity className="h-4 w-4 mt-0.5 shrink-0" />
+            <div className="flex-1">
+              {error ? (
+                <>Live feed unavailable ({error}). Showing the most recent cached updates below.</>
+              ) : hasNeverIngested ? (
+                <>Live data pipeline is initializing — the first automated sync has not completed yet. Manual entries below remain accurate.</>
+              ) : (
+                <>
+                  Data may be delayed — last successful sync {lastIngestedAt ? timeAgo(lastIngestedAt) : "unknown"}.
+                  We&apos;re investigating.
+                </>
+              )}
+            </div>
+            <button
+              onClick={fetchNews}
+              className="text-xs font-semibold underline underline-offset-2 hover:no-underline"
+            >
+              Retry
+            </button>
+          </div>
+        )}
+
+        {lastIngestedAt && !isStale && !error && (
+          <div className="mb-6 text-xs text-muted-foreground inline-flex items-center gap-1.5">
+            <Clock className="h-3 w-3" />
+            Data current — last ingestion {timeAgo(lastIngestedAt)}
           </div>
         )}
 

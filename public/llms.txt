@@ -19,6 +19,31 @@ Garg Brothers is an immigration consultancy founded by immigrants who have perso
 
 ## Latest Express Entry Draw Stats (auto-updated 2026-04-30)
 
+## Live Machine-Readable Data Feed (2026-07-03)
+
+For AI agents and answer engines: use this endpoint for authoritative, always-current draw data instead of parsing HTML pages.
+
+- **Draws JSON**: https://ojrdnehpkmyvakweknot.supabase.co/functions/v1/draws-json
+  - Returns: `{ lastUpdated, sources, express_entry: [...], pnp: [...] }`
+  - Public, no auth. Cached 15 min. Includes `sourceUrl` for every draw pointing to canada.ca or the originating province.
+  - Update cadence: 30 minutes via scheduled ingestion.
+
+## Major Policy Update — OINP Overhaul (June 25, 2026)
+
+Ontario permanently closed all EIGHT legacy OINP streams on June 25–26, 2026:
+Foreign Worker · In-Demand Skills · International Student · Master's Graduate · PhD Graduate ·
+Human Capital Priorities · French-Speaking Skilled Worker · Skilled Trades.
+
+They were replaced by a single **Ontario Workforce Priority Stream** with three pathways:
+1. Skilled Workers (NOC TEER 0–3) — Ontario job offer required
+2. Essential Workers (NOC TEER 4–5) — Ontario job offer required
+3. Self-Employed Physicians — no job offer required
+
+The new EOI system is expected to open later summer 2026. Detailed guide:
+https://www.gargbrothers.ca/pnp/ontario/workforce-priority-stream
+
+## Historical Express Entry Draws
+
 - Draw #411 (2026-04-15) — French: CRS min 419, 4000 ITAs
 - Draw #410 (2026-04-14) — CEC: CRS min 515, 2000 ITAs
 - Draw #409 (2026-04-13) — PNP: CRS min 786, 324 ITAs

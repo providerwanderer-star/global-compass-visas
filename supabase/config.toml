@@ -5,3 +5,18 @@ verify_jwt = false
 
 [functions.sitemap]
 verify_jwt = false
+
+[functions.immigration-news]
+verify_jwt = false
+
+[functions.draws-json]
+verify_jwt = false
+
+[functions.indexnow-key]
+verify_jwt = false
+
+[functions.ingest-immigration-draws]
+verify_jwt = false
+
+[functions.ingestion-health-check]
+verify_jwt = false

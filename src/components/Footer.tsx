@@ -24,12 +24,12 @@ const Footer = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <motion.div variants={staggerItem}>
-            <div className="flex items-center gap-1 mb-4">
+            <div className="flex items-baseline gap-1.5 mb-4">
               <span className="font-display text-xl font-extrabold tracking-tight text-white">
-                Garg Brothers
+                Garg
               </span>
-              <span className="font-display text-xl font-extrabold tracking-tight text-gold">
-                Visa
+              <span className="font-display text-xl font-extrabold tracking-tight text-red-500">
+                Brothers
               </span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-3">

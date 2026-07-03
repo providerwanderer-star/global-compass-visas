@@ -122,12 +122,12 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${scrolled ? "shadow-card border-b border-border" : "shadow-sm"}`}>
       <div className="container-narrow mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-14 md:h-16">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-1 shrink-0">
+        <Link to="/" className="flex items-baseline gap-1.5 shrink-0">
           <span className="font-display text-lg md:text-xl font-extrabold tracking-tight text-primary">
-            Garg Brothers
+            Garg
           </span>
-          <span className="font-display text-lg md:text-xl font-extrabold tracking-tight text-gold">
-            Visa
+          <span className="font-display text-lg md:text-xl font-extrabold tracking-tight text-destructive">
+            Brothers
           </span>
         </Link>
 

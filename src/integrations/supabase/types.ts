@@ -122,6 +122,78 @@ export type Database = {
         }
         Relationships: []
       }
+      immigration_news: {
+        Row: {
+          category: string
+          created_at: string
+          external_id: string | null
+          id: string
+          published_at: string
+          source_name: string
+          source_url: string
+          summary: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category?: string
+          created_at?: string
+          external_id?: string | null
+          id?: string
+          published_at?: string
+          source_name: string
+          source_url: string
+          summary?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          external_id?: string | null
+          id?: string
+          published_at?: string
+          source_name?: string
+          source_url?: string
+          summary?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      ingestion_runs: {
+        Row: {
+          created_at: string
+          error_message: string | null
+          finished_at: string | null
+          id: string
+          items_upserted: number
+          source: string
+          started_at: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          error_message?: string | null
+          finished_at?: string | null
+          id?: string
+          items_upserted?: number
+          source: string
+          started_at?: string
+          status: string
+        }
+        Update: {
+          created_at?: string
+          error_message?: string | null
+          finished_at?: string | null
+          id?: string
+          items_upserted?: number
+          source?: string
+          started_at?: string
+          status?: string
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           created_at: string

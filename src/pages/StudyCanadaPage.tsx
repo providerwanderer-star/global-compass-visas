@@ -125,7 +125,7 @@ const StudyCanadaPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Plan your Canadian study journey</h2>
-              <p className="mt-2 text-muted-foreground">our team helps international students choose PGWP-eligible programs and lock in PR pathways. Book a free consult.</p>
+              <p className="mt-2 text-muted-foreground">Our team helps international students choose PGWP-eligible programs and lock in PR pathways. Book a free consult.</p>
             </div>
             <EligibilityForm sourcePage={`study-canada-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "study-permit" }} />
           </div>

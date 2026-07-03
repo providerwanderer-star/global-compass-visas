@@ -125,7 +125,7 @@ const RestorationPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Out of status? Act before day 90.</h2>
-              <p className="mt-2 text-muted-foreground">our team files restorations, H&amp;C and TRPs every week. Book a same-day call.</p>
+              <p className="mt-2 text-muted-foreground">Our team files restorations, H&amp;C and TRPs every week. Book a same-day call.</p>
             </div>
             <EligibilityForm sourcePage={`restoration-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "restoration" }} />
           </div>

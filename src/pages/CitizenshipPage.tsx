@@ -125,7 +125,7 @@ const CitizenshipPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Ready to become Canadian?</h2>
-              <p className="mt-2 text-muted-foreground">our team prepares citizenship applications and prepares clients for the test. Book a free consult.</p>
+              <p className="mt-2 text-muted-foreground">Our team prepares citizenship applications and prepares clients for the test. Book a free consult.</p>
             </div>
             <EligibilityForm sourcePage={`citizenship-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "citizenship" }} />
           </div>

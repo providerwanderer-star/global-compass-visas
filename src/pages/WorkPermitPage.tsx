@@ -125,7 +125,7 @@ const WorkPermitPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Need a work permit strategy?</h2>
-              <p className="mt-2 text-muted-foreground">our team places workers in Canada through IEC, ICT, CUSMA and Francophone routes every week.</p>
+              <p className="mt-2 text-muted-foreground">Our team places workers in Canada through IEC, ICT, CUSMA and Francophone routes every week.</p>
             </div>
             <EligibilityForm sourcePage={`work-permit-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "work-permit" }} />
           </div>

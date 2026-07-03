@@ -125,7 +125,7 @@ const ProfessionPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Ready to immigrate as a {g.shortName.toLowerCase()}?</h2>
-              <p className="mt-2 text-muted-foreground">our team builds profession-specific PR strategies for skilled workers. Book a free consult.</p>
+              <p className="mt-2 text-muted-foreground">Our team builds profession-specific PR strategies for skilled workers. Book a free consult.</p>
             </div>
             <EligibilityForm sourcePage={`profession-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "express-entry" }} />
           </div>

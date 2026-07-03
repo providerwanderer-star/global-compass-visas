@@ -75,7 +75,7 @@ export const REFUSALS: Record<RefusalSlug, RefusalGuide> = {
       { t: "Order GCMS notes (CAD 5 ATIP)", d: "Reveals actual officer reasoning beyond the boilerplate refusal letter." },
       { t: "Re-validate the LMIA if expired", d: "Most positive LMIAs are valid 12 months. Employer may need to re-apply for LMIA." },
       { t: "Tighten the documentation gap", d: "Add proof of credentials, job description matching NOC, employer financials, organisational chart." },
-      { t: "Submit with employer + counsel review", d: "our team coordinates with the employer to fix the documentation issues IRCC flagged." },
+      { t: "Submit with employer + counsel review", d: "Our team coordinates with the employer to fix the documentation issues IRCC flagged." },
     ],
     faqs: [
       { q: "Can my employer be penalised for my refusal?", a: "Not directly — but LMIA-related employer compliance issues can flag the employer for future LMIAs." },
@@ -142,7 +142,7 @@ export const REFUSALS: Record<RefusalSlug, RefusalGuide> = {
       { t: "Identify root cause", d: "Documentation gap? NOC mismatch? Medical? Each route has a different fix." },
       { t: "Diagnose: curable vs JR-worthy", d: "If officer missed evidence or applied wrong test → JR. If file was genuinely weak → re-apply with cure." },
       { t: "Cure the documentation gap", d: "Re-do ECA with correct institution, refresh PCCs, get employment letters that match NOC duties verbatim." },
-      { t: "Re-submit complete file", d: "Don't give IRCC any reason to find new gaps. our team reviews the entire file before submission." },
+      { t: "Re-submit complete file", d: "Don't give IRCC any reason to find new gaps. Our team reviews the entire file before submission." },
     ],
     faqs: [
       { q: "Can I keep working in Canada after a PR refusal?", a: "Only if you have other valid status (work permit, study permit, BOWP). PR refusal alone doesn't strip existing temporary status." },

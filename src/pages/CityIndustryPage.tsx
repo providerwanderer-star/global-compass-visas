@@ -175,7 +175,7 @@ const CityIndustryPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Free eligibility check — {ci.industryShort}, {ci.cityName}</h2>
-              <p className="mt-2 text-muted-foreground">our team will map your profile to the right {ci.cityName} employer + PNP route.</p>
+              <p className="mt-2 text-muted-foreground">Our team will map your profile to the right {ci.cityName} employer + PNP route.</p>
             </div>
             <EligibilityForm sourcePage={`city-${ci.city}-${ci.industry}`} heading={`${ci.industryShort} in ${ci.cityName}`} />
           </div>

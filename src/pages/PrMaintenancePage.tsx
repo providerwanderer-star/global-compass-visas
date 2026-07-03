@@ -125,7 +125,7 @@ const PrMaintenancePage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Protect your PR status</h2>
-              <p className="mt-2 text-muted-foreground">our team handles PR card renewals, PRTDs and residency obligation appeals every day.</p>
+              <p className="mt-2 text-muted-foreground">Our team handles PR card renewals, PRTDs and residency obligation appeals every day.</p>
             </div>
             <EligibilityForm sourcePage={`pr-maintenance-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "pr-card" }} />
           </div>

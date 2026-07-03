@@ -125,7 +125,7 @@ const ProcedurePage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Need help with this step?</h2>
-              <p className="mt-2 text-muted-foreground">our team handles IRCC procedures every day. Book a free consult.</p>
+              <p className="mt-2 text-muted-foreground">Our team handles IRCC procedures every day. Book a free consult.</p>
             </div>
             <EligibilityForm sourcePage={`procedure-${g.slug}`} heading={g.shortName} />
           </div>

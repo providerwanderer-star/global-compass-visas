@@ -148,7 +148,7 @@ const FrancophonePathwayPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Free eligibility check — {p.shortName}</h2>
-              <p className="mt-2 text-muted-foreground">our team will assess your French level, eligibility and timeline — no cost.</p>
+              <p className="mt-2 text-muted-foreground">Our team will assess your French level, eligibility and timeline — no cost.</p>
             </div>
             <EligibilityForm sourcePage={`francophone-${p.slug}`} heading={p.shortName} />
           </div>

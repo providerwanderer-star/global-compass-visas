@@ -148,7 +148,7 @@ const ProcessingTimePage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Get a personalised timeline</h2>
-              <p className="mt-2 text-muted-foreground">our team will review your profile and give you a realistic timeline based on your country, NOC, and visa office.</p>
+              <p className="mt-2 text-muted-foreground">Our team will review your profile and give you a realistic timeline based on your country, NOC, and visa office.</p>
             </div>
             <EligibilityForm sourcePage={`processing-${g.slug}`} heading={g.shortName} />
           </div>

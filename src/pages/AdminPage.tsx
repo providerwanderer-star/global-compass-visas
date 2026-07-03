@@ -12,8 +12,6 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 
-const ADMIN_EMAIL = "sahil280389@gmail.com";
-
 const EE_CATEGORIES = ["General", "STEM", "Healthcare", "Trades", "Transport", "Agriculture", "French", "Education"] as const;
 const PROVINCES: { name: string; code: string }[] = [
   { name: "Ontario", code: "ON" },
@@ -34,7 +32,6 @@ function slugify(s: string) {
 }
 
 function LoginCard({ onSignedIn }: { onSignedIn: () => void }) {
-  const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
@@ -43,17 +40,8 @@ function LoginCard({ onSignedIn }: { onSignedIn: () => void }) {
     e.preventDefault();
     setBusy(true);
     try {
-      if (mode === "signin") {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
-      } else {
-        const { error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: { emailRedirectTo: window.location.origin + "/admin" },
-        });
-        if (error) throw error;
-      }
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
       onSignedIn();
     } catch (err: any) {
       toast.error(err.message ?? "Authentication failed");
@@ -66,7 +54,7 @@ function LoginCard({ onSignedIn }: { onSignedIn: () => void }) {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <form onSubmit={submit} className="w-full max-w-sm space-y-4 bg-card border border-border rounded-xl p-6 shadow-card">
         <h1 className="text-2xl font-display font-bold text-foreground">Admin sign-in</h1>
-        <p className="text-sm text-muted-foreground">Restricted to {ADMIN_EMAIL}.</p>
+        <p className="text-sm text-muted-foreground">Authorized personnel only.</p>
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -76,15 +64,8 @@ function LoginCard({ onSignedIn }: { onSignedIn: () => void }) {
           <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={8} />
         </div>
         <Button type="submit" disabled={busy} className="w-full">
-          {busy ? "Please wait…" : mode === "signin" ? "Sign in" : "Create account"}
+          {busy ? "Please wait…" : "Sign in"}
         </Button>
-        <button
-          type="button"
-          className="text-xs text-muted-foreground hover:text-foreground w-full text-center"
-          onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
-        >
-          {mode === "signin" ? "First time? Create the admin account" : "Already have an account? Sign in"}
-        </button>
       </form>
     </div>
   );
@@ -295,12 +276,28 @@ function NocForm() {
 const AdminPage = () => {
   const [session, setSession] = useState<Session | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
 
   useEffect(() => {
     const { data: sub } = supabase.auth.onAuthStateChange((_event, s) => setSession(s));
     supabase.auth.getSession().then(({ data }) => { setSession(data.session); setLoaded(true); });
     return () => sub.subscription.unsubscribe();
   }, []);
+
+  useEffect(() => {
+    if (!session) { setIsAdmin(null); return; }
+    let cancelled = false;
+    (async () => {
+      const { data, error } = await supabase
+        .from("user_roles")
+        .select("role")
+        .eq("user_id", session.user.id)
+        .eq("role", "admin")
+        .maybeSingle();
+      if (!cancelled) setIsAdmin(!error && !!data);
+    })();
+    return () => { cancelled = true; };
+  }, [session]);
 
   if (!loaded) return <div className="min-h-screen bg-background" />;
 
@@ -311,13 +308,13 @@ const AdminPage = () => {
     </>
   );
 
-  const isAdmin = session.user.email?.toLowerCase() === ADMIN_EMAIL;
+  if (isAdmin === null) return <div className="min-h-screen bg-background" />;
   if (!isAdmin) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background px-4">
         <div className="max-w-md text-center space-y-4">
           <h1 className="text-2xl font-display font-bold">Access denied</h1>
-          <p className="text-muted-foreground">Signed in as {session.user.email}. Only the project admin can use this panel.</p>
+          <p className="text-muted-foreground">Your account does not have admin access.</p>
           <Button variant="outline" onClick={() => supabase.auth.signOut()}>Sign out</Button>
         </div>
       </div>

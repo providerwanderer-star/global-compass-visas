@@ -49,7 +49,7 @@ const PrMaintenancePage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "PR Maintenance", url: "/pr-maintenance/pr-card-renewal" },
-        { name: g.shortName, url: `/pr-maintenance/${g.slug}` },
+        { name: g.shortName, url: `/pr-maintenance/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

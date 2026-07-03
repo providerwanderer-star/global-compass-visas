@@ -38,12 +38,9 @@ const AboutPage = () => {
       "Family Sponsorship",
       "Australian Skilled Migration",
       "Germany EU Blue Card",
-      "UK Skilled Worker Visa",
+      "UK Skilled Worker Visa"
     ],
-    sameAs: [
-      "https://www.linkedin.com/company/4acesvisa",
-      "https://www.instagram.com/4acesvisa",
-    ],
+    sameAs: [    ],
   };
 
   const aboutLD = {
@@ -67,7 +64,7 @@ const AboutPage = () => {
     { icon: Shield, title: "Regulated Advice", desc: "In Canada, only Regulated Canadian Immigration Consultants (RCIC) and lawyers may charge for immigration advice. Verify any consultant on the public CICC register at college-ic.ca before paying." },
     { icon: Award, title: "High Approval Rate", desc: "Consistent track record across Express Entry, PNP, LMIA, study permits and family sponsorships since 2016. Approval-rate figure is our internal all-time average across represented files; individual outcomes depend on IRCC's assessment of each file." },
     { icon: Users, title: "15,000+ Applications Processed", desc: "Hands-on representation for skilled workers, students, families and business immigrants since 2016." },
-    { icon: Globe2, title: "4-Country Coverage", desc: "Canada, Australia, Germany and the United Kingdom — single team, end-to-end service." },
+    { icon: Globe2, title: "4-Country Coverage", desc: "Canada, Australia, Germany and the United Kingdom — single team, end-to-end service." }
   ];
 
   return (
@@ -192,7 +189,7 @@ const AboutPage = () => {
                   "15,000+ applications represented across 4 destination countries",
                   "Canadian files handled by regulated representatives (RCIC / lawyer) per IRCC rules",
                   "Specialisation: Express Entry, PNP, LMIA, study permits, family sponsorship",
-                  "Languages: English, Hindi, Punjabi",
+                  "Languages: English, Hindi, Punjabi"
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-foreground">
                     <CheckCircle className="h-4 w-4 text-success mt-0.5 shrink-0" />

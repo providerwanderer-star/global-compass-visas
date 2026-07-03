@@ -72,7 +72,7 @@ const ServicePage = () => {
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
                   { "@type": "ListItem", position: 2, name: "Services", item: "https://www.gargbrothers.ca/services" },
-                  { "@type": "ListItem", position: 3, name: service.title, item: `https://www.gargbrothers.ca/services/${service.slug}` },
+                  { "@type": "ListItem", position: 3, name: service.title, item: `https://www.gargbrothers.ca/services/${service.slug}` }
                 ],
               },
               {
@@ -82,7 +82,7 @@ const ServicePage = () => {
                   name: faq.question,
                   acceptedAnswer: { "@type": "Answer", text: faq.answer },
                 })),
-              },
+              }
             ],
           })}
         </script>

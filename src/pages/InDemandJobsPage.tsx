@@ -109,7 +109,7 @@ const InDemandJobsPage = () => {
         "@type": "Question",
         name: "How do I find my NOC code?",
         acceptedAnswer: { "@type": "Answer", text: "Use the free NOC Finder at /noc-finder to match your role to the correct NOC 2021 code and TEER level — required for every Express Entry profile." },
-      },
+      }
     ],
   };
 
@@ -128,7 +128,6 @@ const InDemandJobsPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(itemListLD)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLD)}</script>
@@ -190,7 +189,7 @@ const InDemandJobsPage = () => {
           { label: "IRCC Express Entry — category-based draws", href: "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supporting-immigration-goals-federal-economic-priorities.html" },
           { label: "ESDC NOC 2021 v1.0", href: "https://noc.esdc.gc.ca/" },
           { label: "Job Bank Canada — labour market trends", href: "https://www.jobbank.gc.ca/trend-analysis" },
-          { label: "Provincial Nominee Programs (official)", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" },
+          { label: "Provincial Nominee Programs (official)", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" }
         ]}
         caveat="In-demand status reflects published category draws + provincial PNP priority lists. Live job counts come from Job Bank and refresh hourly."
       />

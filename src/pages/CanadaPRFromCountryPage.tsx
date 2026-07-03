@@ -65,7 +65,7 @@ const CanadaPRFromCountryPage = () => {
       <SeoSchema
         breadcrumbs={[
           { name: "Canada PR from", url: "/canada-pr-from" },
-          { name: data.country, url: `/canada-pr-from/${data.slug}` },
+          { name: data.country, url: `/canada-pr-from/${data.slug}` }
         ]}
       />
 
@@ -237,7 +237,7 @@ const CanadaPRFromCountryPage = () => {
               { href: "/crs-calculator", title: "CRS Calculator", icon: Calculator },
               { href: "/express-entry/draws", title: "Live EE Draws", icon: TrendingUp },
               { href: "/pnp-tracker", title: "PNP Tracker", icon: MapPin },
-              { href: "/in-demand-jobs", title: "In-Demand Jobs", icon: Briefcase },
+              { href: "/in-demand-jobs", title: "In-Demand Jobs", icon: Briefcase }
             ].map((t) => {
               const Icon = t.icon;
               return (

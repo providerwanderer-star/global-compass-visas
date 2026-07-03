@@ -36,7 +36,7 @@ const pathways: Pathway[] = [
       { label: "Medical exam (per person)", amounts: { single: 225, couple: 450, family: 675 }, notes: "Estimated; varies by clinic" },
       { label: "Police clearance certificate", amounts: { single: 50, couple: 100, family: 150 }, notes: "Per country, estimate" },
       { label: "Document translation (estimate)", amounts: { single: 200, couple: 350, family: 500 } },
-      { label: "RCIC consultant fee (Garg Brothers)", amounts: { single: 1500, couple: 2000, family: 2500 }, notes: "Varies by complexity" },
+      { label: "RCIC consultant fee (Garg Brothers)", amounts: { single: 1500, couple: 2000, family: 2500 }, notes: "Varies by complexity" }
     ],
   },
   {
@@ -51,7 +51,7 @@ const pathways: Pathway[] = [
       { label: "IRCC Student Direct Stream (SDS) fee", amounts: { single: 0, couple: 0, family: 0 }, notes: "SDS is free; regular stream = $150" },
       { label: "GIC (Guaranteed Investment Certificate)", amounts: { single: 10200, couple: 10200, family: 10200 }, notes: "Refundable; required for SDS — $10,000 deposited + $200 bank fee" },
       { label: "Tuition (first year estimate)", amounts: { single: 22000, couple: 22000, family: 22000 }, notes: "Varies widely by program and institution" },
-      { label: "RCIC consultation fee", amounts: { single: 500, couple: 500, family: 500 }, notes: "For student permit guidance" },
+      { label: "RCIC consultation fee", amounts: { single: 500, couple: 500, family: 500 }, notes: "For student permit guidance" }
     ],
   },
   {
@@ -65,7 +65,7 @@ const pathways: Pathway[] = [
       { label: "Biometrics", amounts: { single: 85, couple: 170, family: 255 } },
       { label: "Medical exam", amounts: { single: 225, couple: 450, family: 675 } },
       { label: "LMIA fee (paid by employer)", amounts: { single: 1000, couple: 1000, family: 1000 }, notes: "Employer typically covers this" },
-      { label: "RCIC fee", amounts: { single: 800, couple: 800, family: 800 } },
+      { label: "RCIC fee", amounts: { single: 800, couple: 800, family: 800 } }
     ],
   },
   {
@@ -78,7 +78,7 @@ const pathways: Pathway[] = [
       { label: "Biometrics", amounts: { single: 85, couple: 170, family: 170 } },
       { label: "Medical exam", amounts: { single: 225, couple: 450, family: 450 } },
       { label: "Medical insurance (1 year minimum)", amounts: { single: 2000, couple: 4000, family: 4000 }, notes: "Min $100,000 coverage required; varies by age and insurer" },
-      { label: "RCIC consultation fee", amounts: { single: 600, couple: 800, family: 800 } },
+      { label: "RCIC consultation fee", amounts: { single: 600, couple: 800, family: 800 } }
     ],
   },
   {
@@ -93,9 +93,9 @@ const pathways: Pathway[] = [
       { label: "Biometrics (applicant)", amounts: { single: 85, couple: 85, family: 85 } },
       { label: "Medical exam", amounts: { single: 225, couple: 225, family: 225 } },
       { label: "Police clearance", amounts: { single: 50, couple: 50, family: 50 } },
-      { label: "RCIC fee (optional)", amounts: { single: 1000, couple: 1000, family: 1000 }, notes: "Spousal applications have lower refusal risk with professional help" },
+      { label: "RCIC fee (optional)", amounts: { single: 1000, couple: 1000, family: 1000 }, notes: "Spousal applications have lower refusal risk with professional help" }
     ],
-  },
+  }
 ];
 
 const ImmigrationCostPage = () => {
@@ -152,7 +152,7 @@ const ImmigrationCostPage = () => {
           "@type": "Answer",
           text: "Most government processing fees are non-refundable if your application is rejected. The Right of Permanent Residence Fee (CAD $515) is refunded if your PR application is refused. The GIC deposit for study permits (CAD $10,000) is refundable. Biometric fees are non-refundable.",
         },
-      },
+      }
     ],
   };
 
@@ -174,7 +174,6 @@ const ImmigrationCostPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -374,7 +373,7 @@ const ImmigrationCostPage = () => {
               {
                 q: "Do I need to pay a consultant fee?",
                 a: "You're not legally required to use a consultant. However, RCIC-licensed consultants significantly reduce the risk of document errors, refusals, and delays. The consultant fee is typically recovered many times over in time saved and avoided re-application costs.",
-              },
+              }
             ].map(({ q, a }) => (
               <details key={q} className="group bg-card border border-border rounded-xl">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-foreground text-sm list-none">

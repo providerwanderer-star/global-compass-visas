@@ -48,7 +48,7 @@ const Footer = () => {
                 { label: "🇨🇦 Canada Immigration", href: "/immigration/canada" },
                 { label: "🇦🇺 Australia Immigration", href: "/immigration/australia" },
                 { label: "🇩🇪 Germany Immigration", href: "/immigration/germany" },
-                { label: "🇬🇧 UK Immigration", href: "/immigration/uk" },
+                { label: "🇬🇧 UK Immigration", href: "/immigration/uk" }
               ].map((l) => (
                 <li key={l.href}>
                   <Link to={l.href} className="text-sm text-primary-foreground/60 hover:text-gold hover:translate-x-1 inline-block transition-all duration-200">{l.label}</Link>
@@ -68,7 +68,7 @@ const Footer = () => {
                 { label: "Work Permits", href: "/services/work-permits" },
                 { label: "Visitor Visa", href: "/services/visitor-visa" },
                 { label: "Family Sponsorship", href: "/services/family-sponsorship" },
-                { label: "Citizenship", href: "/services/citizenship-application" },
+                { label: "Citizenship", href: "/services/citizenship-application" }
               ].map((l) => (
                 <li key={l.href}>
                   <Link to={l.href} className="text-sm text-primary-foreground/60 hover:text-gold hover:translate-x-1 inline-block transition-all duration-200">{l.label}</Link>

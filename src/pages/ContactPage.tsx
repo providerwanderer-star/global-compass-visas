@@ -30,7 +30,6 @@ const ContactPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -82,7 +81,7 @@ const ContactPage = () => {
               >
                 {[
                   { icon: Phone, title: "Phone", content: <a href="tel:+16478622190" className="text-sm text-muted-foreground hover:text-gold transition-colors">+1 (647) 862-2190</a> },
-                  { icon: MapPin, title: "Offices", content: <p className="text-sm text-muted-foreground">Canada & India</p> },
+                  { icon: MapPin, title: "Offices", content: <p className="text-sm text-muted-foreground">Canada & India</p> }
                 ].map((item) => (
                   <motion.div key={item.title} variants={staggerItem} className="flex items-start gap-4 group">
                     <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">

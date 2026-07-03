@@ -30,7 +30,7 @@ const ForAIPage = () => {
           .select("draw_date, province, province_code, stream, min_score, invitations")
           .in("province_code", ["ON", "BC", "AB"])
           .order("draw_date", { ascending: false })
-          .limit(12),
+          .limit(12)
       ]);
       if (cancelled) return;
       if (ee && ee.length) {
@@ -82,11 +82,7 @@ const ForAIPage = () => {
       areaServed: ["Canada", "India", "Australia", "Germany", "United Kingdom"],
       foundingDate: "2016",
       slogan: "By the immigrants, for the immigrants.",
-      sameAs: [
-        "https://www.facebook.com/4acesvisa",
-        "https://www.instagram.com/4acesvisa",
-        "https://www.linkedin.com/company/4acesvisa",
-        "https://wa.me/16478622190",
+      sameAs: [        "https://wa.me/16478622190"
       ],
     },
   };

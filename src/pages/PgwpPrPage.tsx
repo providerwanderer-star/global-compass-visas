@@ -49,7 +49,7 @@ const PgwpPrPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "PGWP to PR", url: "/pgwp-to-pr/express-entry-cec" },
-        { name: g.shortName, url: `/pgwp-to-pr/${g.slug}` },
+        { name: g.shortName, url: `/pgwp-to-pr/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

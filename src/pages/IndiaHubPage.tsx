@@ -42,14 +42,14 @@ const pathways = [
     desc: "Canada's fastest PR pathway. Average CRS cutoff of 440-480. Our experts maximize your score for the best chances.",
     link: "/express-entry",
     cta: "Check My CRS Score",
-  },
+  }
 ];
 
 const stats = [
   { value: "80,000+", label: "Indians got Canada PR in 2024" },
   { value: "6 Months", label: "Express Entry processing time" },
   { value: "98%", label: "Our visa success rate" },
-  { value: "15,000+", label: "Successful applications" },
+  { value: "15,000+", label: "Successful applications" }
 ];
 
 const faqs = [
@@ -72,7 +72,7 @@ const faqs = [
   {
     q: "What IELTS score do I need for Canada immigration from India?",
     a: "The minimum for Express Entry is CLB 7 (approximately IELTS 6.0 in each band). However, scoring CLB 9 (IELTS 7.0+) significantly boosts your CRS score by up to 124 points.",
-  },
+  }
 ];
 
 const IndiaHubPage = () => {
@@ -111,7 +111,7 @@ const IndiaHubPage = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
-                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.gargbrothers.ca/india" },
+                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.gargbrothers.ca/india" }
                 ],
               },
               {
@@ -121,7 +121,7 @@ const IndiaHubPage = () => {
                   name: faq.q,
                   acceptedAnswer: { "@type": "Answer", text: faq.a },
                 })),
-              },
+              }
             ],
           })}
         </script>
@@ -252,7 +252,7 @@ const IndiaHubPage = () => {
                   "Post-study work permit (PGWP) up to 3 years",
                   "Universal healthcare and world-class education",
                   "Path to citizenship in 3 years of PR",
-                  "Family sponsorship — bring parents & spouse",
+                  "Family sponsorship — bring parents & spouse"
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-foreground">
                     <CheckCircle className="h-4 w-4 text-gold mt-0.5 shrink-0" />
@@ -274,7 +274,7 @@ const IndiaHubPage = () => {
                     { job: "Civil Engineer", demand: "High" },
                     { job: "Financial Analyst", demand: "High" },
                     { job: "Data Scientist", demand: "Very High" },
-                    { job: "Project Manager (IT)", demand: "High" },
+                    { job: "Project Manager (IT)", demand: "High" }
                   ].map((item) => (
                     <div key={item.job} className="flex items-center justify-between bg-white/5 rounded-lg px-4 py-2">
                       <span className="text-sm text-primary-foreground">{item.job}</span>
@@ -305,7 +305,7 @@ const IndiaHubPage = () => {
               { step: "01", title: "Free Assessment", desc: "We evaluate your profile — education, experience, IELTS — and identify the best pathway." },
               { step: "02", title: "Strategy Session", desc: "Our experts create a personalized immigration plan with timelines and success benchmarks." },
               { step: "03", title: "Application Support", desc: "We prepare, review, and submit every document to ensure a complete, error-free application." },
-              { step: "04", title: "Visa & Landing", desc: "From approval to landing in Canada — we guide you every step of the way." },
+              { step: "04", title: "Visa & Landing", desc: "From approval to landing in Canada — we guide you every step of the way." }
             ].map((s, i) => (
               <motion.div
                 key={s.step}
@@ -370,7 +370,7 @@ const IndiaHubPage = () => {
                   "CRS score estimate for Express Entry",
                   "Work & study permit eligibility check",
                   "PNP nomination strategy",
-                  "Response within 24 hours",
+                  "Response within 24 hours"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-foreground">
                     <CheckCircle className="h-4 w-4 text-gold shrink-0" />

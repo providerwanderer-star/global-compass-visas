@@ -49,7 +49,7 @@ const VisitCanadaPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Visit Canada", url: "/visit-canada/visitor-visa-trv" },
-        { name: g.shortName, url: `/visit-canada/${g.slug}` },
+        { name: g.shortName, url: `/visit-canada/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

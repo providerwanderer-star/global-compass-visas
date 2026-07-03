@@ -184,7 +184,7 @@ const SearchResultsPage = () => {
       desc: "Government fees + total move cost estimate.",
       href: "/immigration-cost-calculator",
       icon: Calculator,
-    },
+    }
   ];
 
   // ── Active filter chips ─────────────────────────────────
@@ -195,7 +195,7 @@ const SearchResultsPage = () => {
     province && { label: province, key: "province" },
     jobOffer && { label: `Job offer: ${jobOffer}`, key: "jobOffer" },
     origin && { label: `From ${origin}`, key: "origin" },
-    timeline && { label: `Timeline ${timeline}`, key: "timeline" },
+    timeline && { label: `Timeline ${timeline}`, key: "timeline" }
   ].filter(Boolean) as { label: string; key: string }[];
 
   // ── SEO ─────────────────────────────────────────────────

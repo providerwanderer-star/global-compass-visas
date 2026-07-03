@@ -41,7 +41,7 @@ export const documentsData: DocumentChecklist[] = [
           "Adoption papers / court orders (if applicable)",
           "Legal name change certificate / deed poll (if name differs across documents)",
           "Gender marker change documents (if applicable)",
-          "2 passport-size photographs per applicant (35mm × 45mm, white background, IRCC specs)",
+          "2 passport-size photographs per applicant (35mm × 45mm, white background, IRCC specs)"
         ],
       },
       {
@@ -62,7 +62,7 @@ export const documentsData: DocumentChecklist[] = [
           "Course completion certificates for specialized training",
           "Continuing education / professional development certificates",
           "Verified copies sent directly by institutions to ECA body",
-          "Medium of instruction letter from university (proving English/French instruction)",
+          "Medium of instruction letter from university (proving English/French instruction)"
         ],
       },
       {
@@ -75,7 +75,7 @@ export const documentsData: DocumentChecklist[] = [
           "TCF Canada — score report (French alternative)",
           "Second language test results (if claiming additional points for English + French)",
           "Test centre confirmation / booking receipt",
-          "Score verification receipt (if scores were re-evaluated)",
+          "Score verification receipt (if scores were re-evaluated)"
         ],
       },
       {
@@ -97,7 +97,7 @@ export const documentsData: DocumentChecklist[] = [
           "LinkedIn profile printout (supplementary — not primary evidence)",
           "Resume / CV — detailed, NOC-aligned, covering full work history",
           "Letter from HR confirming employment details (if reference letter unavailable)",
-          "Board resolutions or AGM minutes (if company director / shareholder)",
+          "Board resolutions or AGM minutes (if company director / shareholder)"
         ],
       },
       {
@@ -117,7 +117,7 @@ export const documentsData: DocumentChecklist[] = [
           "Gift deed with donor's bank statements (if funds are gifted)",
           "Loan sanction letter (generally NOT accepted — funds must be unencumbered and available)",
           "Proof that funds are transferable and available (not locked in long-term instruments)",
-          "Minimum funds per IRCC: single = CAD 14,690; couple = CAD 18,288; family of 3 = CAD 22,483; family of 4 = CAD 27,297 (check IRCC for 2026 updates)",
+          "Minimum funds per IRCC: single = CAD 14,690; couple = CAD 18,288; family of 3 = CAD 22,483; family of 4 = CAD 27,297 (check IRCC for 2026 updates)"
         ],
       },
       {
@@ -132,7 +132,7 @@ export const documentsData: DocumentChecklist[] = [
           "Local police verification certificate (some countries require this first)",
           "Court records / case disposition (if any criminal charges — even dismissed)",
           "Rehabilitation documents (if applicable, for DUI or other offenses)",
-          "Military service records / discharge certificate (if served in armed forces)",
+          "Military service records / discharge certificate (if served in armed forces)"
         ],
       },
       {
@@ -147,7 +147,7 @@ export const documentsData: DocumentChecklist[] = [
           "Medical history declaration (HIV, hepatitis, TB, etc.)",
           "Specialist reports (if panel physician refers for further assessment)",
           "Pregnancy-related documents (if applicable at time of medical)",
-          "Child immunization records (for dependent children)",
+          "Child immunization records (for dependent children)"
         ],
       },
       {
@@ -157,7 +157,7 @@ export const documentsData: DocumentChecklist[] = [
           "PNP application acknowledgement / file number",
           "Employer's LMIA or job offer supporting the nomination",
           "Settlement plan / intent to reside in nominating province",
-          "Connection to province evidence — prior work, study, family",
+          "Connection to province evidence — prior work, study, family"
         ],
       },
       {
@@ -169,7 +169,7 @@ export const documentsData: DocumentChecklist[] = [
           "Canadian pay stubs and T4s",
           "Canadian educational transcripts and diplomas",
           "PGWP (Post-Graduation Work Permit) if applicable",
-          "LMIA-approved job offer letter (if claiming arranged employment points)",
+          "LMIA-approved job offer letter (if claiming arranged employment points)"
         ],
       },
       {
@@ -186,9 +186,9 @@ export const documentsData: DocumentChecklist[] = [
           "Digital photograph specifications compliance",
           "Fees payment receipt — processing fee + biometrics fee + RPRF (Right of PR fee)",
           "Biometrics instruction letter and completion confirmation",
-          "Consent form for children (for biometrics)",
+          "Consent form for children (for biometrics)"
         ],
-      },
+      }
     ],
     tips: [
       "Start ECA 3–4 months before you plan to create your Express Entry profile — WES takes 4–8 weeks after documents arrive",
@@ -200,7 +200,7 @@ export const documentsData: DocumentChecklist[] = [
       "Complete your medical exam upfront (before ITA) to save 30–60 days of processing time",
       "Keep all documents in both physical and high-resolution digital (300 DPI+) scanned format",
       "If self-employed, prepare client contracts + invoices + bank deposits matching your claimed income",
-      "Arrange a NOC code validation with a licensed RCIC before submitting — incorrect NOC is a common rejection reason",
+      "Arrange a NOC code validation with a licensed RCIC before submitting — incorrect NOC is a common rejection reason"
     ],
   },
   {
@@ -221,7 +221,7 @@ export const documentsData: DocumentChecklist[] = [
           "4 passport-size photographs meeting destination country specifications",
           "Previous visa refusal letters with reasons (if any — MUST be disclosed)",
           "Previous visa grant notices / entry stamps",
-          "Name change certificate (if applicable)",
+          "Name change certificate (if applicable)"
         ],
       },
       {
@@ -236,7 +236,7 @@ export const documentsData: DocumentChecklist[] = [
           "Tuition fee structure / breakdown from institution",
           "Scholarship / fellowship award letter (if applicable)",
           "Research assistantship / teaching assistantship offer (for grad students)",
-          "Enrollment confirmation for orientation / course registration",
+          "Enrollment confirmation for orientation / course registration"
         ],
       },
       {
@@ -256,7 +256,7 @@ export const documentsData: DocumentChecklist[] = [
           "GRE / GMAT / SAT / ACT score reports (if required by program)",
           "Portfolio (for design, architecture, fine arts programs)",
           "Research proposal (for PhD / research-based programs)",
-          "Publications list (for PhD applicants)",
+          "Publications list (for PhD applicants)"
         ],
       },
       {
@@ -271,7 +271,7 @@ export const documentsData: DocumentChecklist[] = [
           "German language certificate — TestDaF, DSH, Goethe B1/B2/C1 (for Germany)",
           "French language test — TCF / TEF / DELF / DALF (for French-medium programs)",
           "MOI (Medium of Instruction) letter as language waiver (some institutions accept this)",
-          "Pre-sessional English course admission (if conditional on language improvement)",
+          "Pre-sessional English course admission (if conditional on language improvement)"
         ],
       },
       {
@@ -282,7 +282,7 @@ export const documentsData: DocumentChecklist[] = [
           "Study plan (required for Canada SDS and some consulates)",
           "Research interest statement (for graduate programs)",
           "Diversity / personal background essay (if required by institution)",
-          "Why this country and why return to home country (for visa officer assessment)",
+          "Why this country and why return to home country (for visa officer assessment)"
         ],
       },
       {
@@ -306,7 +306,7 @@ export const documentsData: DocumentChecklist[] = [
           "Chartered accountant's net worth certificate of sponsor",
           "Blocked account (Sperrkonto) — €11,904 for Germany (2026 amount — verify)",
           "Living cost calculation / budget plan for destination country",
-          "Proof of part-time employment income (if applicable)",
+          "Proof of part-time employment income (if applicable)"
         ],
       },
       {
@@ -321,7 +321,7 @@ export const documentsData: DocumentChecklist[] = [
           "Travel insurance for initial period",
           "IHS (Immigration Health Surcharge) payment receipt — UK",
           "Prescription and medical history (if ongoing treatment)",
-          "Disability documentation and accommodation request (if applicable)",
+          "Disability documentation and accommodation request (if applicable)"
         ],
       },
       {
@@ -331,7 +331,7 @@ export const documentsData: DocumentChecklist[] = [
           "PCC from any other country lived in 6+ months",
           "Character reference letter (some countries / consulates)",
           "Statutory declaration of good character",
-          "Court records / case disposition (if any previous charges)",
+          "Court records / case disposition (if any previous charges)"
         ],
       },
       {
@@ -349,9 +349,9 @@ export const documentsData: DocumentChecklist[] = [
           "Agent / representative authorization form (if using a consultant)",
           "Biometrics appointment confirmation",
           "Visa fee payment receipt",
-          "Checklist completion form (some visa offices provide their own)",
+          "Checklist completion form (some visa offices provide their own)"
         ],
-      },
+      }
     ],
     tips: [
       "Apply for Canada SDS (Student Direct Stream) if you're from India, China, Philippines, or eligible countries — processing in ~20 days vs 8–12 weeks",
@@ -362,7 +362,7 @@ export const documentsData: DocumentChecklist[] = [
       "Start 6–8 months before your intake — some documents like PCC and medicals take weeks",
       "For Australia, OSHC must cover your entire visa period — don't buy short coverage",
       "Keep certified translations of ALL non-English/French documents ready",
-      "If you have a previous visa refusal, address it honestly in your SOP and provide new evidence showing changed circumstances",
+      "If you have a previous visa refusal, address it honestly in your SOP and provide new evidence showing changed circumstances"
     ],
   },
   {
@@ -385,7 +385,7 @@ export const documentsData: DocumentChecklist[] = [
           "Marriage certificate (if applicable)",
           "Divorce decree (if applicable)",
           "Common-law declaration (if applicable)",
-          "Dependent children's birth certificates and passports",
+          "Dependent children's birth certificates and passports"
         ],
       },
       {
@@ -406,7 +406,7 @@ export const documentsData: DocumentChecklist[] = [
           "Wage offer matching prevailing wage rate for NOC and work location",
           "Job advertisement proof (for LMIA — employer must show recruitment efforts)",
           "LMIA exemption code and justification (if LMIA-exempt: NAFTA/CUSMA, ICT, IEC, etc.)",
-          "International Mobility Program (IMP) offer of employment number (if LMIA-exempt)",
+          "International Mobility Program (IMP) offer of employment number (if LMIA-exempt)"
         ],
       },
       {
@@ -420,7 +420,7 @@ export const documentsData: DocumentChecklist[] = [
           "Specialized training certificates (safety, equipment, software, etc.)",
           "Professional membership proof (law society, medical college, engineering body)",
           "Licence to practice in Canada (if regulated occupation — may need provisional licence)",
-          "Resume / CV — detailed, NOC-aligned",
+          "Resume / CV — detailed, NOC-aligned"
         ],
       },
       {
@@ -434,7 +434,7 @@ export const documentsData: DocumentChecklist[] = [
           "Promotion letters / performance reviews",
           "Business registration (if self-employed / entrepreneur)",
           "Client contracts and invoices (if freelancer)",
-          "Intra-company transfer documentation (if ICT work permit)",
+          "Intra-company transfer documentation (if ICT work permit)"
         ],
       },
       {
@@ -442,7 +442,7 @@ export const documentsData: DocumentChecklist[] = [
         items: [
           "IELTS General Training / CELPIP score report",
           "Language test not always required for work permits — but recommended for LMIA applications in some NOCs",
-          "Employer attestation of language ability (if language test not required)",
+          "Employer attestation of language ability (if language test not required)"
         ],
       },
       {
@@ -450,7 +450,7 @@ export const documentsData: DocumentChecklist[] = [
         items: [
           "Proof of funds for initial settlement (bank statements — 3 months)",
           "Evidence of accommodation in Canada (rental agreement, employer-provided housing letter)",
-          "Travel booking / itinerary",
+          "Travel booking / itinerary"
         ],
       },
       {
@@ -461,7 +461,7 @@ export const documentsData: DocumentChecklist[] = [
           "Vaccination records",
           "Police Clearance Certificate (PCC) from all countries lived 6+ months since age 18",
           "RCMP check (if currently in Canada)",
-          "Court records / rehabilitation documents (if any criminal history)",
+          "Court records / rehabilitation documents (if any criminal history)"
         ],
       },
       {
@@ -471,7 +471,7 @@ export const documentsData: DocumentChecklist[] = [
           "Official transcripts showing program completion",
           "Study permit (current or expired)",
           "Proof of full-time enrollment throughout program",
-          "DLI confirmation that program was eligible for PGWP",
+          "DLI confirmation that program was eligible for PGWP"
         ],
       },
       {
@@ -481,7 +481,7 @@ export const documentsData: DocumentChecklist[] = [
           "Marriage certificate or common-law proof (12 months cohabitation evidence)",
           "Principal applicant's employer letter and NOC code confirmation",
           "Principal applicant's LMIA or job offer",
-          "Joint relationship evidence (lease, bank, photos, communication)",
+          "Joint relationship evidence (lease, bank, photos, communication)"
         ],
       },
       {
@@ -495,9 +495,9 @@ export const documentsData: DocumentChecklist[] = [
           "Employer compliance declaration",
           "Processing fee + biometrics fee payment receipt",
           "Open work permit holder fee (if applicable)",
-          "Biometrics instruction letter and completion confirmation",
+          "Biometrics instruction letter and completion confirmation"
         ],
-      },
+      }
     ],
     tips: [
       "LMIA processing takes 2–5 months depending on the stream — employers should apply well in advance",
@@ -506,7 +506,7 @@ export const documentsData: DocumentChecklist[] = [
       "PGWP must be applied for within 180 days of program completion — don't miss this deadline",
       "If your employer is flagged on the IRCC non-compliant employer list, your permit will be refused",
       "Open work permits don't require a job offer — but you still need all identity, medical, and police documents",
-      "Keep digital scans of everything at 300+ DPI, organized by category in clearly labelled folders",
+      "Keep digital scans of everything at 300+ DPI, organized by category in clearly labelled folders"
     ],
   },
   {
@@ -527,7 +527,7 @@ export const documentsData: DocumentChecklist[] = [
           "Travel itinerary with planned dates of entry and departure",
           "Flight reservation / booking confirmation (round-trip recommended)",
           "Hotel reservation / accommodation details",
-          "Travel insurance policy (recommended for visitor visa, mandatory for Super Visa)",
+          "Travel insurance policy (recommended for visitor visa, mandatory for Super Visa)"
         ],
       },
       {
@@ -545,7 +545,7 @@ export const documentsData: DocumentChecklist[] = [
           "Relationship proof — family photos, communication records, previous visit records, birth certificates showing relationship",
           "Business invitation letter (for business visits — company letterhead, purpose, duration)",
           "Conference / event registration and programme (for business or academic visits)",
-          "Medical appointment confirmation (if visiting for medical treatment)",
+          "Medical appointment confirmation (if visiting for medical treatment)"
         ],
       },
       {
@@ -563,7 +563,7 @@ export const documentsData: DocumentChecklist[] = [
           "Agricultural land records / revenue records (for farming families)",
           "Investment portfolio — mutual funds, stocks, bonds, PPF",
           "Pension statement / retirement benefits (for retired applicants)",
-          "Sponsor's financial affidavit (if someone else is financing the trip)",
+          "Sponsor's financial affidavit (if someone else is financing the trip)"
         ],
       },
       {
@@ -582,7 +582,7 @@ export const documentsData: DocumentChecklist[] = [
           "Vehicle registration / ownership",
           "Ongoing business contracts / commitments",
           "University enrollment (if student visiting during break)",
-          "Previous travel history — stamps, visa copies showing compliance and timely returns",
+          "Previous travel history — stamps, visa copies showing compliance and timely returns"
         ],
       },
       {
@@ -598,7 +598,7 @@ export const documentsData: DocumentChecklist[] = [
           "Signed letter of invitation specifically for Super Visa (with undertaking to support)",
           "Relationship proof — birth certificate of child/grandchild, marriage certificate",
           "Upfront Immigration Medical Examination from IRCC panel physician",
-          "Medical exam results confirmation number",
+          "Medical exam results confirmation number"
         ],
       },
       {
@@ -612,9 +612,9 @@ export const documentsData: DocumentChecklist[] = [
           "Processing fee payment receipt",
           "Biometrics fee and instruction letter",
           "Biometrics completion confirmation",
-          "Consent for minors (if child travelling alone or with one parent)",
+          "Consent for minors (if child travelling alone or with one parent)"
         ],
-      },
+      }
     ],
     tips: [
       "TIES TO HOME COUNTRY are the single most important factor — visa officers must be convinced you will return",
@@ -624,7 +624,7 @@ export const documentsData: DocumentChecklist[] = [
       "Property ownership + stable employment + children in school = strongest tie combination",
       "Super Visa holders can now stay up to 5 years per entry (since July 2022) — ensure insurance covers the full period",
       "Bank statements showing regular salary deposits are stronger than sudden large deposits",
-      "Previous travel to countries like USA, UK, Schengen strengthens your application — include all visa copies",
+      "Previous travel to countries like USA, UK, Schengen strengthens your application — include all visa copies"
     ],
   },
   {
@@ -652,7 +652,7 @@ export const documentsData: DocumentChecklist[] = [
           "Divorce decree / annulment of previous marriages (if applicable)",
           "Death certificate of previous spouse (if applicable)",
           "Signed sponsorship agreement (IMM 1344)",
-          "Undertaking / sponsorship evaluation form",
+          "Undertaking / sponsorship evaluation form"
         ],
       },
       {
@@ -669,7 +669,7 @@ export const documentsData: DocumentChecklist[] = [
           "Name change documents (if applicable)",
           "2 passport-size photographs (IRCC specs)",
           "Educational certificates and transcripts",
-          "Work experience documents / resume",
+          "Work experience documents / resume"
         ],
       },
       {
@@ -699,7 +699,7 @@ export const documentsData: DocumentChecklist[] = [
           "Emergency contact designations at work or school",
           "Health care power of attorney naming partner",
           "Correspondence during periods of separation",
-          "Letters / cards exchanged between partners",
+          "Letters / cards exchanged between partners"
         ],
       },
       {
@@ -713,7 +713,7 @@ export const documentsData: DocumentChecklist[] = [
           "Birth certificates proving parent-child relationship",
           "Adoption documents (if applicable)",
           "Declaration that parent/grandparent will not access social assistance",
-          "Super Visa history (if parents previously visited on Super Visa)",
+          "Super Visa history (if parents previously visited on Super Visa)"
         ],
       },
       {
@@ -728,7 +728,7 @@ export const documentsData: DocumentChecklist[] = [
           "Medical records and immunization history",
           "Previous passports of child",
           "Age of dependency proof (if child is 22+ — enrolled in continuous full-time study since before 22, or dependent due to medical condition)",
-          "Medical condition documentation (if child is dependent due to disability)",
+          "Medical condition documentation (if child is dependent due to disability)"
         ],
       },
       {
@@ -739,7 +739,7 @@ export const documentsData: DocumentChecklist[] = [
           "TB test results",
           "Vaccination records for all applicants",
           "Specialist medical reports (if flagged during examination)",
-          "Ongoing medical treatment documentation",
+          "Ongoing medical treatment documentation"
         ],
       },
       {
@@ -757,9 +757,9 @@ export const documentsData: DocumentChecklist[] = [
           "Authority to Release Information (IMM 5475)",
           "Processing fees + RPRF (Right of PR fee) payment receipt",
           "Biometrics instruction letter and completion confirmation",
-          "Digital photo specifications compliance",
+          "Digital photo specifications compliance"
         ],
-      },
+      }
     ],
     tips: [
       "Quality AND quantity of relationship evidence matters — aim for 50+ pieces of evidence spanning the entire relationship",
@@ -769,7 +769,7 @@ export const documentsData: DocumentChecklist[] = [
       "Parent/grandparent sponsorship requires meeting MNI for 3 CONSECUTIVE years — one low year resets the count",
       "Common-law partners must prove 12 continuous months of cohabitation — short breaks for work/travel are okay if documented",
       "Spousal sponsorship currently takes 12–18 months — apply for an open work permit (OWP) in the meantime if spouse is in Canada",
-      "Communication evidence should show REGULAR contact — daily or near-daily messages, not occasional sporadic chats",
+      "Communication evidence should show REGULAR contact — daily or near-daily messages, not occasional sporadic chats"
     ],
   },
   {
@@ -790,7 +790,7 @@ export const documentsData: DocumentChecklist[] = [
           "Divorce / death of spouse documents (if applicable)",
           "Children's birth certificates and passports",
           "2 passport-size photographs",
-          "Legal name change certificate (if applicable)",
+          "Legal name change certificate (if applicable)"
         ],
       },
       {
@@ -804,7 +804,7 @@ export const documentsData: DocumentChecklist[] = [
           "Professional designations and licences",
           "Trade certification / Red Seal (for skilled trades streams)",
           "Canadian educational credentials (if studied in the province)",
-          "Provincial regulatory body registration (for regulated occupations like nurses, engineers, teachers)",
+          "Provincial regulatory body registration (for regulated occupations like nurses, engineers, teachers)"
         ],
       },
       {
@@ -813,7 +813,7 @@ export const documentsData: DocumentChecklist[] = [
           "IELTS General Training / CELPIP General / PTE Core — score report (valid within 2 years)",
           "TEF / TCF Canada (for French — some provinces give extra points for bilingualism)",
           "Second official language test (for additional PNP points in some provinces)",
-          "Language test must be valid at time of provincial application AND federal application",
+          "Language test must be valid at time of provincial application AND federal application"
         ],
       },
       {
@@ -830,7 +830,7 @@ export const documentsData: DocumentChecklist[] = [
           "Job offer letter from provincial employer (for employer-driven streams)",
           "NOC code verification — duties must match NOC description",
           "Self-employment proof — business registration, client contracts, income proof",
-          "Resume / CV — comprehensive and NOC-aligned",
+          "Resume / CV — comprehensive and NOC-aligned"
         ],
       },
       {
@@ -844,7 +844,7 @@ export const documentsData: DocumentChecklist[] = [
           "Professional network in province — LinkedIn connections, industry contacts",
           "Research about province — demonstrating genuine knowledge of communities, economy, lifestyle",
           "Letter from provincial employer expressing intent to hire or continue employment",
-          "Real estate exploration — correspondence with realtors, rental applications",
+          "Real estate exploration — correspondence with realtors, rental applications"
         ],
       },
       {
@@ -858,7 +858,7 @@ export const documentsData: DocumentChecklist[] = [
           "Investment capital proof — liquid assets available for investment",
           "Business registration in home country",
           "Tax compliance certificates from home country",
-          "Exploratory visit report (some provinces require a prior visit before business application)",
+          "Exploratory visit report (some provinces require a prior visit before business application)"
         ],
       },
       {
@@ -870,7 +870,7 @@ export const documentsData: DocumentChecklist[] = [
           "Investment statements",
           "Medical examination results (IRCC panel physician)",
           "Police Clearance Certificate from all countries lived 6+ months",
-          "Biometrics confirmation",
+          "Biometrics confirmation"
         ],
       },
       {
@@ -882,9 +882,9 @@ export const documentsData: DocumentChecklist[] = [
           "Saskatchewan SINP: OID — Saskatchewan job offer or connection; EE category — minimum 60 SINP points",
           "Manitoba MPNP: SWM — Manitoba connection required (family, work, study); SMI — strong Manitoba connection or invitation",
           "Atlantic AIPP: Employer designation required + endorsement by province; 1-year job offer minimum",
-          "PEI PNP: Expression of Interest system; Labour Impact — employer-driven; Business Impact — entrepreneur stream",
+          "PEI PNP: Expression of Interest system; Labour Impact — employer-driven; Business Impact — entrepreneur stream"
         ],
-      },
+      }
     ],
     tips: [
       "Each province has DIFFERENT streams, eligibility criteria, and document requirements — check the specific stream before preparing documents",
@@ -894,7 +894,7 @@ export const documentsData: DocumentChecklist[] = [
       "Some provinces require you to register with the provincial regulatory body BEFORE applying (e.g., nurses, engineers, teachers)",
       "Keep language test validity in mind — you may need scores valid at both provincial and federal stages",
       "If applying through employer-driven stream, ensure your employer is in good standing with the province and not flagged",
-      "Provincial experience (work or study IN the province) gets significantly more points than out-of-province experience",
+      "Provincial experience (work or study IN the province) gets significantly more points than out-of-province experience"
     ],
   },
   {
@@ -915,7 +915,7 @@ export const documentsData: DocumentChecklist[] = [
           "Name change certificate / marriage certificate (if name differs from PR records)",
           "Travel document (if stateless or unable to obtain passport)",
           "2 citizenship photographs — meeting CPC Sydney specifications",
-          "Photo attestation form signed by guarantor",
+          "Photo attestation form signed by guarantor"
         ],
       },
       {
@@ -938,7 +938,7 @@ export const documentsData: DocumentChecklist[] = [
           "Canadian bank account statements showing in-Canada transactions",
           "Work-from-home employer attestation (if remote worker)",
           "Study records (if time in school counts toward presence)",
-          "Time as temporary resident (counts as half-days, up to 365 days maximum before PR)",
+          "Time as temporary resident (counts as half-days, up to 365 days maximum before PR)"
         ],
       },
       {
@@ -948,7 +948,7 @@ export const documentsData: DocumentChecklist[] = [
           "CRA NOA for each filed year",
           "Any CRA reassessment notices",
           "Proof of tax compliance (no outstanding CRA balance or arrangement)",
-          "Foreign income reporting (T1135 if applicable)",
+          "Foreign income reporting (T1135 if applicable)"
         ],
       },
       {
@@ -961,7 +961,7 @@ export const documentsData: DocumentChecklist[] = [
           "PTE Core — CLB 4 minimum",
           "OR: Canadian secondary / post-secondary diploma/degree (as language evidence)",
           "OR: Completion of government-funded language training (LINC/CLIC) at CLB 4+",
-          "OR: Evidence of achieving CLB 4 through a previously approved test during PR process (some cases)",
+          "OR: Evidence of achieving CLB 4 through a previously approved test during PR process (some cases)"
         ],
       },
       {
@@ -969,7 +969,7 @@ export const documentsData: DocumentChecklist[] = [
         items: [
           "Study guide: 'Discover Canada: The Rights and Responsibilities of Citizenship'",
           "Online practice tests (IRCC official resources)",
-          "Test covers: Canadian history, geography, government, rights, responsibilities, symbols",
+          "Test covers: Canadian history, geography, government, rights, responsibilities, symbols"
         ],
       },
       {
@@ -984,7 +984,7 @@ export const documentsData: DocumentChecklist[] = [
           "Criminal record check — RCMP-based (IRCC may request)",
           "Court records / case disposition for any criminal charges (even if dismissed)",
           "Prohibition order end documentation (if previously prohibited from citizenship)",
-          "Residency questionnaire response (if IRCC sends RQ)",
+          "Residency questionnaire response (if IRCC sends RQ)"
         ],
       },
       {
@@ -997,7 +997,7 @@ export const documentsData: DocumentChecklist[] = [
           "Custody documents (if parents are separated/divorced)",
           "Child's Canadian address proof (school enrollment, health card)",
           "Citizenship photos for child (specifications vary by age)",
-          "No language or knowledge test required for minors",
+          "No language or knowledge test required for minors"
         ],
       },
       {
@@ -1011,9 +1011,9 @@ export const documentsData: DocumentChecklist[] = [
           "Processing fee — $630 adult / $100 minor (verify current IRCC fees)",
           "Right of Citizenship fee (included in adult processing fee)",
           "Payment receipt",
-          "Biometrics (not typically required for citizenship — but may be requested)",
+          "Biometrics (not typically required for citizenship — but may be requested)"
         ],
-      },
+      }
     ],
     tips: [
       "You need 1,095 days (3 years) of physical presence in Canada within the 5 years before applying — use the IRCC online calculator",
@@ -1023,7 +1023,7 @@ export const documentsData: DocumentChecklist[] = [
       "Citizenship test has a 75% pass mark — study 'Discover Canada' thoroughly, focus on rights, responsibilities, and history",
       "Processing currently takes 8–14 months — prepare all documents meticulously to avoid requests for additional documents (GCMS delays)",
       "If you lose your PR card, you can still apply for citizenship — include explanation and any supporting documents",
-      "Oath ceremony can be in-person or virtual — you become a citizen when you take the oath, not when you pass the test",
+      "Oath ceremony can be in-person or virtual — you become a citizen when you take the oath, not when you pass the test"
     ],
   },
   {
@@ -1043,7 +1043,7 @@ export const documentsData: DocumentChecklist[] = [
           "Birth certificate with apostille (from home country)",
           "Marriage certificate with apostille (if applicable)",
           "Divorce decree / death certificate (if applicable)",
-          "Name change certificate (if applicable)",
+          "Name change certificate (if applicable)"
         ],
       },
       {
@@ -1053,7 +1053,7 @@ export const documentsData: DocumentChecklist[] = [
           "Detailed CV / resume — Europass format recommended, chronological, no gaps, covering education + work + skills",
           "CV in both English and German (recommended)",
           "LinkedIn profile URL (optional but recommended)",
-          "Professional portfolio (for creative, IT, design, architecture roles)",
+          "Professional portfolio (for creative, IT, design, architecture roles)"
         ],
       },
       {
@@ -1069,7 +1069,7 @@ export const documentsData: DocumentChecklist[] = [
           "Master craftsman certificate (Meisterbrief equivalent — for trades)",
           "PhD / doctoral certificate (if applicable)",
           "Proof of qualification recognition from relevant German authority (for regulated professions: doctors, engineers, lawyers, teachers, nurses)",
-          "Deficiency notice from recognition authority (if partial recognition — shows remaining steps)",
+          "Deficiency notice from recognition authority (if partial recognition — shows remaining steps)"
         ],
       },
       {
@@ -1082,7 +1082,7 @@ export const documentsData: DocumentChecklist[] = [
           "Freelance / self-employment proof — business registration, client contracts, invoices",
           "Professional training completion certificates",
           "Project portfolio / case studies (for IT, consulting, creative fields)",
-          "Minimum 2 years experience for Opportunity Card points system (in recognized qualification field)",
+          "Minimum 2 years experience for Opportunity Card points system (in recognized qualification field)"
         ],
       },
       {
@@ -1093,7 +1093,7 @@ export const documentsData: DocumentChecklist[] = [
           "English language certificate — IELTS, TOEFL, Cambridge (B2+ recommended)",
           "University medium of instruction letter (if degree was in English or German)",
           "Language course enrollment proof (if currently learning German)",
-          "DSH certificate (if planning to combine with studies)",
+          "DSH certificate (if planning to combine with studies)"
         ],
       },
       {
@@ -1104,7 +1104,7 @@ export const documentsData: DocumentChecklist[] = [
           "Scholarship letter (if applicable — DAAD, Erasmus, or other)",
           "Financial guarantee letter from a German resident (Verpflichtungserklärung) — alternative to blocked account",
           "Employment income proof (if currently employed and planning return)",
-          "Formal declaration of financial self-sufficiency",
+          "Formal declaration of financial self-sufficiency"
         ],
       },
       {
@@ -1113,7 +1113,7 @@ export const documentsData: DocumentChecklist[] = [
           "Proof of accommodation in Germany — rental contract, hotel booking, or host letter",
           "Host's registration certificate (Meldebescheinigung) if staying with someone",
           "Host's passport / ID copy",
-          "Accommodation for at least the first 3 months recommended",
+          "Accommodation for at least the first 3 months recommended"
         ],
       },
       {
@@ -1123,7 +1123,7 @@ export const documentsData: DocumentChecklist[] = [
           "Comprehensive health insurance for the full visa period",
           "Insurance must cover medical, hospital, and repatriation costs",
           "Insurance confirmation letter (in English or German)",
-          "If you have an existing job offer: proof of German statutory health insurance enrollment",
+          "If you have an existing job offer: proof of German statutory health insurance enrollment"
         ],
       },
       {
@@ -1137,7 +1137,7 @@ export const documentsData: DocumentChecklist[] = [
           "Age under 35 — 2 points; 35–40 — 1 point",
           "STEM qualification — 1 point",
           "MINIMUM 6 POINTS required for Opportunity Card",
-          "Provide documents supporting EACH point claimed",
+          "Provide documents supporting EACH point claimed"
         ],
       },
       {
@@ -1150,9 +1150,9 @@ export const documentsData: DocumentChecklist[] = [
           "Consular fee payment receipt",
           "Appointment confirmation from embassy / consulate",
           "Return flight reservation (for initial application — shows intent to comply with visa conditions)",
-          "All non-German / non-English documents must be translated by a sworn translator (vereidigter Übersetzer)",
+          "All non-German / non-English documents must be translated by a sworn translator (vereidigter Übersetzer)"
         ],
-      },
+      }
     ],
     tips: [
       "Check your degree on anabin (https://anabin.kmk.org) FIRST — if it's not rated H+, you need ZAB recognition which takes 3–4 months",
@@ -1163,7 +1163,7 @@ export const documentsData: DocumentChecklist[] = [
       "Opportunity Card gives you 1 year to find a job — you can work up to 20 hours/week on trial or part-time during the search",
       "Combine Job Seeker Visa application with applying directly to German companies — LinkedIn, XING, StepStone, Indeed Germany",
       "All translations must be by sworn/certified translators — unofficial translations are not accepted by German authorities",
-      "STEM graduates and IT professionals have the highest demand — highlight these qualifications prominently",
+      "STEM graduates and IT professionals have the highest demand — highlight these qualifications prominently"
     ],
-  },
+  }
 ];

@@ -15,7 +15,7 @@ const AnimatedCounter = ({ value, label }: AnimatedCounterProps) => {
     if (!isInView) return;
 
     // Extract numeric part and suffix
-    const match = value.match(/^([\d,]+)(.*)$/);
+    const match = value.match(/^([\d]+)(.*)$/);
     if (!match) {
       setDisplayValue(value);
       return;

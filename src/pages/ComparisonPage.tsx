@@ -27,12 +27,12 @@ const countries = [
       "PNP adds +600 CRS (guaranteed ITA)",
       "Largest Indian diaspora (1.4M+)",
       "Free healthcare after landing",
-      "Strong IELTS-to-PR pipeline",
+      "Strong IELTS-to-PR pipeline"
     ],
     cons: [
       "Cold winters in most cities",
       "High cost of living (Toronto/Vancouver)",
-      "CRS scores can be competitive (430–490)",
+      "CRS scores can be competitive (430–490)"
     ],
     link: "/immigration/canada",
   },
@@ -55,13 +55,13 @@ const countries = [
       "Excellent weather and quality of life",
       "Points system (65+ points to apply)",
       "State nomination adds +5 or +15 points",
-      "Strong healthcare and education system",
+      "Strong healthcare and education system"
     ],
     cons: [
       "Slower PR (12–18 months vs Canada's 6)",
       "Skills assessment required before applying",
       "High cost of living in Sydney/Melbourne",
-      "Stricter occupation list requirements",
+      "Stricter occupation list requirements"
     ],
     link: "/immigration/australia",
   },
@@ -84,13 +84,13 @@ const countries = [
       "Chancenkarte allows job search without job offer",
       "Lower cost of living vs Canada/Australia",
       "Strong tech and engineering job market",
-      "Fast-track PR in 21 months with B1 German",
+      "Fast-track PR in 21 months with B1 German"
     ],
     cons: [
       "German language needed for integration",
       "PR requires degree recognition (anabin check)",
       "Cultural adjustment may be challenging",
-      "No immediate PR (settlement permit after 21–33 months)",
+      "No immediate PR (settlement permit after 21–33 months)"
     ],
     link: "/immigration/germany",
   },
@@ -113,17 +113,17 @@ const countries = [
       "Strong English-speaking environment",
       "NHS (healthcare) for residents",
       "London: global finance/tech hub",
-      "ILR after 5 years, citizenship after 6",
+      "ILR after 5 years, citizenship after 6"
     ],
     cons: [
       "Job offer required for Skilled Worker Visa",
       "No equivalent of Canada PNP or Australia state nomination",
       "ILR only after 5 years (longest of 4 countries)",
       "Immigration Health Surcharge adds GBP 1,035/year",
-      "No EU freedom of movement (post-Brexit)",
+      "No EU freedom of movement (post-Brexit)"
     ],
     link: "/immigration/uk",
-  },
+  }
 ];
 
 const comparisonTable = [
@@ -134,7 +134,7 @@ const comparisonTable = [
   { factor: "PR with Indian Degree?", canada: "Yes (WES assessment)", australia: "Yes (skills assessment)", germany: "Yes (anabin recognized)", uk: "Yes (no assessment needed)" },
   { factor: "Family Can Join?", canada: "Yes (immediately with PR)", australia: "Yes (immediately with PR)", germany: "Yes (Blue Card holders)", uk: "Yes (spouse visa)" },
   { factor: "Citizenship Pathway", canada: "3 yrs after PR", australia: "4 yrs from arrival", germany: "5 yrs (3 for exceptional)", uk: "6 yrs total" },
-  { factor: "EU Work Rights?", canada: "No", australia: "No", germany: "Yes (after 18 months Blue Card)", uk: "No (post-Brexit)" },
+  { factor: "EU Work Rights?", canada: "No", australia: "No", germany: "Yes (after 18 months Blue Card)", uk: "No (post-Brexit)" }
 ];
 
 const faqs = [
@@ -157,7 +157,7 @@ const faqs = [
   {
     q: "Which country has the most Indian immigrants?",
     a: "Canada has the largest and fastest-growing Indian diaspora — approximately 1.4 million people of Indian origin, making India the #1 source country for Canadian immigration. The UK has approximately 1.6 million people of Indian heritage. Australia has 700,000+ and Germany has 150,000+.",
-  },
+  }
 ];
 
 export default function ComparisonPage() {
@@ -176,7 +176,6 @@ export default function ComparisonPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -332,7 +331,7 @@ export default function ComparisonPage() {
               { icon: "🎯", title: "Choose Canada if…", points: ["You want permanent residency in 6–8 months", "You have IELTS 6.0+ and skilled work experience", "You're under 40 with CLB 7+ and 1+ year skilled work", "You have family in Canada (sponsor or join)", "You want the fastest path to citizenship (3 years after PR)"] },
               { icon: "☀️", title: "Choose Australia if…", points: ["You prioritize high salaries (AUD 80,000–130,000)", "You're in STEM, healthcare, or engineering", "You're aged 25–32 with 90+ points on the Australian points test", "You want a warmer climate and outdoor lifestyle", "You're okay with a 12–18 month PR timeline"] },
               { icon: "🇪🇺", title: "Choose Germany if…", points: ["You want access to all EU countries for your career", "You're in tech, engineering, or healthcare with a job offer EUR 39,682+", "You're willing to learn German (B1 for fast-track PR)", "You want lower cost of living compared to Canada/Australia", "You want EU Blue Card mobility rights after 18 months"] },
-              { icon: "🎓", title: "Choose UK if…", points: ["You've studied or plan to study in the UK (Graduate Route)", "You have a UK job offer from a UKVI-licensed employer", "You want access to London's global finance/tech ecosystem", "Your employer is sponsoring your Skilled Worker Visa", "You're comfortable with a 5-year ILR pathway"] },
+              { icon: "🎓", title: "Choose UK if…", points: ["You've studied or plan to study in the UK (Graduate Route)", "You have a UK job offer from a UKVI-licensed employer", "You want access to London's global finance/tech ecosystem", "Your employer is sponsoring your Skilled Worker Visa", "You're comfortable with a 5-year ILR pathway"] }
             ].map((rec, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">

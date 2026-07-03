@@ -39,7 +39,7 @@ const ORIGINS = [
   "Nigeria",
   "United Kingdom",
   "Pakistan",
-  "Other",
+  "Other"
 ];
 
 const PATHWAYS = [
@@ -48,7 +48,7 @@ const PATHWAYS = [
   { value: "study", label: "Study → PR" },
   { value: "work", label: "Work Permit / LMIA" },
   { value: "family", label: "Family Sponsorship" },
-  { value: "visitor", label: "Visitor / Super Visa" },
+  { value: "visitor", label: "Visitor / Super Visa" }
 ];
 
 const CRS_BANDS = [
@@ -57,7 +57,7 @@ const CRS_BANDS = [
   { value: "400-450", label: "400 – 450" },
   { value: "450-500", label: "450 – 500" },
   { value: "500+", label: "500+" },
-  { value: "unknown", label: "I don't know yet" },
+  { value: "unknown", label: "I don't know yet" }
 ];
 
 const PROVINCES = [
@@ -70,14 +70,14 @@ const PROVINCES = [
   "New Brunswick",
   "Quebec",
   "Newfoundland & Labrador",
-  "PEI",
+  "PEI"
 ];
 
 const TIMELINES = [
   { value: "0-6", label: "Within 6 months" },
   { value: "6-12", label: "6 – 12 months" },
   { value: "12-24", label: "1 – 2 years" },
-  { value: "24+", label: "2+ years (planning)" },
+  { value: "24+", label: "2+ years (planning)" }
 ];
 
 interface Props {
@@ -281,7 +281,7 @@ const GlobalImmigrationSearch = ({ variant = "hero", className = "" }: Props) =>
             { label: "Nurse", q: "Nurse" },
             { label: "Truck Driver", q: "Truck Driver" },
             { label: "PR with CRS 400–450", q: "", crs: "400-450", pathway: "express-entry" },
-            { label: "Ontario PNP", q: "", province: "Ontario", pathway: "pnp" },
+            { label: "Ontario PNP", q: "", province: "Ontario", pathway: "pnp" }
           ].map((chip) => (
             <button
               key={chip.label}

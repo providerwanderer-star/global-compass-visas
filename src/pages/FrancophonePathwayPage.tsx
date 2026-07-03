@@ -62,7 +62,7 @@ const FrancophonePathwayPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "French Pathways", url: "/francophone/category-based-french-draws" },
-        { name: p.shortName, url: `/francophone/${p.slug}` },
+        { name: p.shortName, url: `/francophone/${p.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

@@ -47,13 +47,13 @@ export const VS: Record<VsSlug, VsGuide> = {
       ["Job offer required", "No (helpful)", "Yes for most streams"],
       ["Where you can settle", "Anywhere in Canada", "Must intend to live in nominating province"],
       ["CRS boost", "None", "+600 if EE-aligned PNP"],
-      ["Eligibility", "67/100 FSW points + 470+ CRS realistic", "Province-specific scoring"],
+      ["Eligibility", "67/100 FSW points + 470+ CRS realistic", "Province-specific scoring"]
     ],
     ["Your CRS is 470+ already", "You don't have a Canadian job offer", "You want flexibility on where to live"],
     ["Your CRS is below 470", "You have a job offer in a specific province", "You're targeting a tech-friendly province (BC, ON, AB)"],
     [
       ["Can I do both at the same time?", "Yes. Submit an EE profile and apply to PNPs in parallel. A nomination boosts your EE score by 600."],
-      ["Which is more reliable?", "PNP is more reliable if your CRS is low — provinces select based on local needs, not pure CRS competition."],
+      ["Which is more reliable?", "PNP is more reliable if your CRS is low — provinces select based on local needs, not pure CRS competition."]
     ],
   ),
   "cec-vs-fsw": mk(
@@ -68,13 +68,13 @@ export const VS: Record<VsSlug, VsGuide> = {
       ["Language minimum", "CLB 7 (NOC TEER 0-1) / CLB 5 (TEER 2-3)", "CLB 7 across all NOCs"],
       ["FSW 67-point grid", "Exempt", "Must score 67/100"],
       ["Processing time", "5-6 months", "6-8 months"],
-      ["Typical applicant", "Former student on PGWP", "Skilled worker overseas"],
+      ["Typical applicant", "Former student on PGWP", "Skilled worker overseas"]
     ],
     ["You have 1+ year of Canadian work experience", "You're on a PGWP and want to convert to PR", "You don't want to prove settlement funds"],
     ["You're applying from outside Canada", "Your work experience is foreign", "You can prove the required CAD 14,690+ settlement funds"],
     [
       ["Can I have both Canadian and foreign experience?", "Yes — you can apply via CEC if you have 1+ year in Canada, and your foreign experience still adds CRS points."],
-      ["Is FSW being phased out?", "No, but Category-Based Selection (French, healthcare, STEM) has dominated FSW draws since 2023."],
+      ["Is FSW being phased out?", "No, but Category-Based Selection (French, healthcare, STEM) has dominated FSW draws since 2023."]
     ],
   ),
   "study-permit-vs-work-permit": mk(
@@ -89,13 +89,13 @@ export const VS: Record<VsSlug, VsGuide> = {
       ["Path to PR", "PGWP → CEC (very strong)", "CEC after 1 year (if NOC TEER 0-3)"],
       ["Family", "Spouse can get OWP if you're in master's/PhD or pilot program", "Spouse OWP only for TEER 0-1 jobs (post-2024)"],
       ["Timeline to PR", "3-5 years total", "2-3 years total (if LMIA-backed)"],
-      ["Risk", "Tuition wasted if studies don't lead to PR", "Job loss = permit invalid"],
+      ["Risk", "Tuition wasted if studies don't lead to PR", "Job loss = permit invalid"]
     ],
     ["You're under 30 and can afford tuition", "You don't have a job offer in Canada yet", "You want to build a Canadian education credential"],
     ["You have a Canadian job offer with LMIA", "You can't afford CAD 30k+ tuition", "You want to start earning quickly"],
     [
       ["Can I switch from work permit to study permit?", "Yes — apply for a study permit while on your work permit. You'll need an LOA from a DLI."],
-      ["Which is faster to PR?", "Work permit + CEC is usually faster (2-3 years) than study permit + PGWP + CEC (3-5 years), but study route has higher PR success rates."],
+      ["Which is faster to PR?", "Work permit + CEC is usually faster (2-3 years) than study permit + PGWP + CEC (3-5 years), but study route has higher PR success rates."]
     ],
   ),
   "lmia-vs-lmia-exempt": mk(
@@ -109,13 +109,13 @@ export const VS: Record<VsSlug, VsGuide> = {
       ["Processing time", "4-6 months ESDC + 10-18 weeks IRCC", "10-18 weeks IRCC only"],
       ["CRS boost", "+50 (TEER 1-3) or +200 (TEER 0 senior management)", "0"],
       ["Permit type", "Employer-specific (closed)", "Often open or employer-specific"],
-      ["Examples", "Most overseas hires, low-wage roles", "Spousal OWP, IEC, intra-company transfer, PGWP, CUSMA, GTS"],
+      ["Examples", "Most overseas hires, low-wage roles", "Spousal OWP, IEC, intra-company transfer, PGWP, CUSMA, GTS"]
     ],
     ["You need the +50 CRS boost for Express Entry", "Your employer is willing to fund the LMIA process", "You're outside Canada with no other pathway"],
     ["You qualify for spousal OWP, IEC, or PGWP", "You want to start work fast", "You're an intra-company transferee"],
     [
       ["Does an LMIA guarantee PR?", "No, but +50 CRS often pushes Express Entry candidates above the cutoff."],
-      ["Is the Global Talent Stream LMIA or LMIA-exempt?", "GTS uses an expedited LMIA (2-week processing) — it is LMIA-backed, just faster."],
+      ["Is the Global Talent Stream LMIA or LMIA-exempt?", "GTS uses an expedited LMIA (2-week processing) — it is LMIA-backed, just faster."]
     ],
   ),
   "pgp-vs-super-visa": mk(
@@ -131,13 +131,13 @@ export const VS: Record<VsSlug, VsGuide> = {
       ["Cost", "~CAD 1,000 application + RPRF", "CAD 100 + medical insurance ~CAD 1,000-3,000/year"],
       ["Sponsor income (LICO)", "Must meet for 3 consecutive years", "Must meet for current year"],
       ["Healthcare access", "Provincial health card after 3 months", "Private medical insurance required"],
-      ["Path to citizenship", "Yes (after 3 years residency)", "No"],
+      ["Path to citizenship", "Yes (after 3 years residency)", "No"]
     ],
     ["Your parents want permanent status", "You can prove 3 years of LICO+ income", "You're willing to wait years and play the lottery"],
     ["You want to bring parents now", "You can't meet 3 years of LICO", "Your parents want to spend extended time but keep their home country status"],
     [
       ["Can my parents apply for both?", "Yes — apply for Super Visa now to bring them quickly, and submit Interest to Sponsor when the PGP window opens."],
-      ["What is LICO?", "Low Income Cut-Off — IRCC's income threshold based on family size. Roughly CAD 50,000 for a family of 4, higher in expensive cities."],
+      ["What is LICO?", "Low Income Cut-Off — IRCC's income threshold based on family size. Roughly CAD 50,000 for a family of 4, higher in expensive cities."]
     ],
   ),
   "pr-vs-citizenship": mk(
@@ -153,13 +153,13 @@ export const VS: Record<VsSlug, VsGuide> = {
       ["Deportation risk", "Possible for serious criminal offences", "None (almost — denaturalisation is rare)"],
       ["Dual citizenship", "N/A", "Yes — Canada permits dual citizenship"],
       ["Time to qualify", "From day 1 of landing", "1,095 days physically present in last 5 years"],
-      ["Cost", "Already paid in PR", "CAD 630 (adult)"],
+      ["Cost", "Already paid in PR", "CAD 630 (adult)"]
     ],
     ["You want low-cost legal status with most rights", "You plan to keep ties to your home country", "You haven't met 1,095-day physical presence yet"],
     ["You want to vote", "You travel internationally often (Canadian passport is stronger)", "You want zero deportation risk"],
     [
       ["Do I have to renounce my home citizenship?", "Not from Canada's side — Canada allows dual citizenship. Some countries (India, China) restrict it on their side."],
-      ["Can I lose PR if I take citizenship of another country?", "No — taking another citizenship doesn't affect Canadian PR or Canadian citizenship."],
+      ["Can I lose PR if I take citizenship of another country?", "No — taking another citizenship doesn't affect Canadian PR or Canadian citizenship."]
     ],
   ),
 };

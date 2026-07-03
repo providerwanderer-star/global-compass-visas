@@ -49,7 +49,7 @@ const RestorationPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Restoration", url: "/restoration/restore-status-90-days" },
-        { name: g.shortName, url: `/restoration/${g.slug}` },
+        { name: g.shortName, url: `/restoration/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

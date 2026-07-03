@@ -83,7 +83,7 @@ export const ALL_INDUSTRIES: Industry[] = [
   "Transportation",
   "Business & Finance",
   "Agriculture & Food",
-  "Education",
+  "Education"
 ];
 
 export const ALL_PROVINCES: Province[] = [
@@ -97,7 +97,7 @@ export const ALL_PROVINCES: Province[] = [
   "New Brunswick",
   "Newfoundland & Labrador",
   "PEI",
-  "Atlantic",
+  "Atlantic"
 ];
 
 export const ALL_PATHWAYS: PRPathway[] = [
@@ -117,7 +117,7 @@ export const ALL_PATHWAYS: PRPathway[] = [
   "PNP — Saskatchewan (SINP)",
   "PNP — Manitoba (MPNP)",
   "Atlantic Immigration Program",
-  "Rural Community Immigration Pilot",
+  "Rural Community Immigration Pilot"
 ];
 
 export const inDemandJobs: InDemandJob[] = [
@@ -562,7 +562,7 @@ export const inDemandJobs: InDemandJob[] = [
     summary: "Healthcare category EE eligible — community + hospital pharmacy shortages nationwide.",
     studyPathways: ["PharmD", "PEBC Bridging Exam for IPGs"],
     liveJobQuery: "pharmacist",
-  },
+  }
 ];
 
 export const totalJobs = inDemandJobs.length;
@@ -580,5 +580,5 @@ export const homeFeaturedJobs: InDemandJob[] = [
   "early-childhood-educator",
   "welder",
   "data-scientist",
-  "agri-supervisor",
+  "agri-supervisor"
 ].map((s) => inDemandJobs.find((j) => j.slug === s)!).filter(Boolean);

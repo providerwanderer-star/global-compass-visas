@@ -113,7 +113,6 @@ const BlogPostPage = () => {
         <meta property="article:author" content="Garg Brothers" />
         <meta property="article:section" content={post.category} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />

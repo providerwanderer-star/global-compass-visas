@@ -19,7 +19,7 @@ export const nocCategories = [
   "Trades & Skilled",
   "Transportation",
   "Education",
-  "Agriculture & Food",
+  "Agriculture & Food"
 ] as const;
 
 export const nocData: NOCEntry[] = [
@@ -939,7 +939,7 @@ export const nocData: NOCEntry[] = [
     topProvinces: ["Alberta", "Ontario", "Manitoba"],
     description:
       "Operates machines and performs manual tasks in food and beverage processing plants.",
-  },
+  }
 ];
 
 export const teerInfo: Record<number, { label: string; color: string; description: string }> = {

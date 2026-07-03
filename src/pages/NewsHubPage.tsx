@@ -99,7 +99,7 @@ const FILTERS: { key: FeedType; label: string }[] = [
   { key: "draw", label: "EE Draws" },
   { key: "pnp", label: "PNP Draws" },
   { key: "policy", label: "Policy & News" },
-  { key: "blog", label: "Guides" },
+  { key: "blog", label: "Guides" }
 ];
 
 const NewsHubPage = () => {

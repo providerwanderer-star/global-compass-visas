@@ -49,7 +49,7 @@ const AppealPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Appeals", url: "/appeal/federal-court-judicial-review" },
-        { name: g.shortName, url: `/appeal/${g.slug}` },
+        { name: g.shortName, url: `/appeal/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

@@ -63,7 +63,7 @@ const SettlementGuidePage = () => {
       <SeoSchema
         breadcrumbs={[
           { name: "Settle in Canada", url: "/settle-in-canada" },
-          { name: data.topic, url: `/settle-in-canada/${data.slug}` },
+          { name: data.topic, url: `/settle-in-canada/${data.slug}` }
         ]}
       />
 

@@ -32,7 +32,7 @@ const CityIndustryPage = () => {
     { q: `Which PR pathway works best?`, a: `${ci.pnpStream} is the most direct provincial route. Express Entry CEC works once you have 12 months of skilled work in Canada.` },
     { q: `What are the in-demand NOC codes?`, a: `${ci.inDemandNocs.map((n) => `NOC ${n.code} (${n.title})`).join(", ")} are currently in highest demand for ${ci.industryShort.toLowerCase()} in ${ci.cityName}.` },
     { q: `What's it like settling in ${ci.cityName}?`, a: ci.settlementNote },
-    { q: `Do I need a job offer to immigrate?`, a: `Not always. Express Entry doesn't require a job offer (though it adds points). Most ${ci.pnpStream.split("—")[0].trim()} streams do require an offer.` },
+    { q: `Do I need a job offer to immigrate?`, a: `Not always. Express Entry doesn't require a job offer (though it adds points). Most ${ci.pnpStream.split("—")[0].trim()} streams do require an offer.` }
   ];
 
   const faqSchema = {
@@ -73,7 +73,7 @@ const CityIndustryPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: ci.cityName, url: `/city/${ci.city}` },
-        { name: ci.industryShort, url: `/city/${ci.city}/${ci.industry}` },
+        { name: ci.industryShort, url: `/city/${ci.city}/${ci.industry}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

@@ -51,17 +51,17 @@ export const RESTORATION: Record<RestorationSlug, RestorationGuide> = {
       "Apply online within 90 days using the appropriate IRCC form",
       "Pay restoration fee (CAD 239.75) plus the underlying permit fee",
       "Submit a written explanation of why status was lost + intention to comply",
-      "Wait 4-6 months for decision; if refused, leave Canada immediately",
+      "Wait 4-6 months for decision; if refused, leave Canada immediately"
     ],
     [
       "Continuing to work/study after expiry — voids restoration eligibility",
       "Missing day 90 — IRCC will refuse and you must depart",
       "Applying for restoration without addressing why status was lost",
-      "Forgetting the restoration fee — application returned",
+      "Forgetting the restoration fee — application returned"
     ],
     [
       ["Can I work while my restoration is pending?", "No — restoration does not give you implied status. You must stop working/studying until the new permit is issued."],
-      ["What happens after day 90?", "You lose restoration eligibility and must leave Canada. Re-entering would require a fresh application from abroad."],
+      ["What happens after day 90?", "You lose restoration eligibility and must leave Canada. Re-entering would require a fresh application from abroad."]
     ],
   ),
   "implied-status-explained": mk(
@@ -79,17 +79,17 @@ export const RESTORATION: Record<RestorationSlug, RestorationGuide> = {
       "Save the IRCC submission receipt — proves implied status to employers/schools",
       "Continue working/studying under same conditions (no employer change on closed permit)",
       "If leaving Canada during implied status, you cannot re-enter without a new permit",
-      "Wait for decision; new permit replaces implied status when issued",
+      "Wait for decision; new permit replaces implied status when issued"
     ],
     [
       "Filing on the expiry date itself — risky if IRCC stamps it next day",
       "Changing employer while on implied status (closed work permit) = unauthorized work",
       "Leaving Canada and trying to re-enter on implied status — denied at border",
-      "Assuming implied status applies to a different permit type (it doesn't)",
+      "Assuming implied status applies to a different permit type (it doesn't)"
     ],
     [
       ["How long does implied status last?", "Until IRCC makes a decision. Processing can take 3-9 months; you stay on implied status the whole time."],
-      ["Can I travel outside Canada on implied status?", "You can leave, but you cannot re-enter on implied status. You must wait for the new permit before returning."],
+      ["Can I travel outside Canada on implied status?", "You can leave, but you cannot re-enter on implied status. You must wait for the new permit before returning."]
     ],
   ),
   "out-of-status-recovery": mk(
@@ -107,17 +107,17 @@ export const RESTORATION: Record<RestorationSlug, RestorationGuide> = {
       "Assess: can you leave Canada and reapply? (cleanest option)",
       "If you cannot leave: consider H&C for PR (24-36 month timeline) or TRP for short-term stay",
       "Consult an authorized representative — out-of-status files require careful handling",
-      "Document everything: rent, employment, family ties — needed for H&C",
+      "Document everything: rent, employment, family ties — needed for H&C"
     ],
     [
       "Working while out of status — creates a misrepresentation history",
       "Marrying solely to fix status — IRCC screens for marriages of convenience",
       "Ignoring a removal order — leads to deportation and 1-year inadmissibility bar",
-      "Filing H&C without strong establishment evidence",
+      "Filing H&C without strong establishment evidence"
     ],
     [
       ["Will leaving Canada get me banned?", "Voluntary departure within a short timeframe usually does not trigger a ban. Removal orders, however, can bar re-entry for 1-5 years."],
-      ["Can I get PR from out of status?", "Yes via H&C, but approval is discretionary and slow. Typical processing 24-36 months."],
+      ["Can I get PR from out of status?", "Yes via H&C, but approval is discretionary and slow. Typical processing 24-36 months."]
     ],
   ),
   "expired-study-permit": mk(
@@ -135,17 +135,17 @@ export const RESTORATION: Record<RestorationSlug, RestorationGuide> = {
       "If expired within 90 days: file restoration + new study permit application",
       "If program is complete: assess PGWP eligibility — 180-day window applies",
       "Stop working/studying the moment status expires",
-      "If past 90 days: leave Canada and reapply from abroad",
+      "If past 90 days: leave Canada and reapply from abroad"
     ],
     [
       "Continuing to attend classes while out of status",
       "Working on/off campus on an expired study permit (unauthorized work)",
       "Missing the 180-day PGWP application window after program completion",
-      "Filing PGWP after restoration without confirming permit validity",
+      "Filing PGWP after restoration without confirming permit validity"
     ],
     [
       ["Can I apply for PGWP if my study permit expired?", "Yes — you have 180 days from program completion to apply, even if the study permit has expired (as long as it was valid when you completed)."],
-      ["What if I stopped studying months ago?", "If past 180 days from program completion, PGWP is no longer available. You'd need a different work permit pathway."],
+      ["What if I stopped studying months ago?", "If past 180 days from program completion, PGWP is no longer available. You'd need a different work permit pathway."]
     ],
   ),
   "expired-work-permit": mk(
@@ -163,17 +163,17 @@ export const RESTORATION: Record<RestorationSlug, RestorationGuide> = {
       "Within 90 days: file restoration + new work permit application (and new LMIA if closed)",
       "Notify employer — many employers don't realize implied status doesn't extend after expiry",
       "If past 90 days: leave Canada and reapply abroad with valid LMIA or job offer",
-      "Consider PNP nomination as a faster PR pathway if eligible",
+      "Consider PNP nomination as a faster PR pathway if eligible"
     ],
     [
       "Continuing to work after permit expiry — unauthorized work + future inadmissibility",
       "Assuming an LMIA stays valid — it expires after 6-18 months and may need renewal",
       "Not applying for spouse open work permit at the same time",
-      "Missing the 90-day window because of slow employer paperwork",
+      "Missing the 90-day window because of slow employer paperwork"
     ],
     [
       ["Can my employer keep me on payroll during restoration?", "No — you cannot legally work. Some employers grant unpaid leave; others terminate. Confirm in writing."],
-      ["Do I need a new LMIA to restore?", "For closed permits, yes — the original LMIA must still be valid or replaced. Open permits don't need an LMIA."],
+      ["Do I need a new LMIA to restore?", "For closed permits, yes — the original LMIA must still be valid or replaced. Open permits don't need an LMIA."]
     ],
   ),
   "visitor-overstay": mk(
@@ -191,17 +191,17 @@ export const RESTORATION: Record<RestorationSlug, RestorationGuide> = {
       "Within 90 days: file Visitor Record restoration online (IMM 5708)",
       "Pay restoration + visitor record fees",
       "Explain reason for overstay (medical, family emergency, flight issues, etc.)",
-      "If past 90 days: depart Canada — voluntary departure is best",
+      "If past 90 days: depart Canada — voluntary departure is best"
     ],
     [
       "Working informally during overstay — creates misrepresentation history",
       "Trying to extend after restoration window closed",
       "Ignoring overstay assuming border won't notice — flagged on next entry",
-      "Marrying or applying for spousal PR solely to stay — IRCC screens for genuineness",
+      "Marrying or applying for spousal PR solely to stay — IRCC screens for genuineness"
     ],
     [
       ["Will overstaying affect my next Canada visa?", "Yes — it must be disclosed on every future application and reduces approval odds. Short overstays with strong explanation can be overcome."],
-      ["Can I just leave and come back?", "You can depart, but re-entry requires a fresh visa or eTA, and the overstay history may trigger refusal."],
+      ["Can I just leave and come back?", "You can depart, but re-entry requires a fresh visa or eTA, and the overstay history may trigger refusal."]
     ],
   ),
   "lost-pr-card": mk(
@@ -219,17 +219,17 @@ export const RESTORATION: Record<RestorationSlug, RestorationGuide> = {
       "Outside Canada: apply for PR Travel Document at nearest visa office",
       "Provide proof of residency obligation compliance (730 days in last 5 years)",
       "Wait 50-100 days for new card; PRTD ~2-4 weeks for urgent cases",
-      "Update IRCC address if moved to ensure card delivery",
+      "Update IRCC address if moved to ensure card delivery"
     ],
     [
       "Letting card expire and missing residency obligation = removal order risk",
       "Trying to board a flight with expired PR card from abroad — denied boarding",
       "Not providing residency proof — IRCC may refuse or initiate H&C review",
-      "Forgetting to update address — card returned to IRCC",
+      "Forgetting to update address — card returned to IRCC"
     ],
     [
       ["Does my PR status expire when my PR card does?", "No — PR status is independent of the card. The card just proves status for travel. You stay a PR until you renounce or are stripped of status."],
-      ["What if I'm stuck abroad without a PR card?", "Apply for a PRTD at the nearest visa office. It's a single-use travel document that lets you board a flight back to Canada."],
+      ["What if I'm stuck abroad without a PR card?", "Apply for a PRTD at the nearest visa office. It's a single-use travel document that lets you board a flight back to Canada."]
     ],
   ),
   "pr-residency-obligation-breach": mk(
@@ -247,17 +247,17 @@ export const RESTORATION: Record<RestorationSlug, RestorationGuide> = {
       "If under 730: do not voluntarily renounce or sign waiver at airport",
       "Apply for PRTD or face inadmissibility report at border — both trigger H&C review",
       "Build H&C case: family in Canada, work transferred abroad, medical issues",
-      "If removal order issued, appeal to IAD within 30 days with full H&C package",
+      "If removal order issued, appeal to IAD within 30 days with full H&C package"
     ],
     [
       "Signing a voluntary renunciation form at the border — irreversible",
       "Counting time abroad with a Canadian citizen spouse incorrectly (counts only if you're accompanying them)",
       "Missing the 30-day IAD appeal deadline",
-      "Weak H&C — best-interest-of-child and establishment in Canada are critical",
+      "Weak H&C — best-interest-of-child and establishment in Canada are critical"
     ],
     [
       ["Does time with my Canadian spouse abroad count?", "Yes — days outside Canada accompanying a Canadian citizen spouse or common-law partner count toward the 730-day requirement."],
-      ["Can I get my PR back after losing it?", "Only via successful IAD appeal or a new PR application from scratch. Lost PR status is rarely restored outside of appeal."],
+      ["Can I get my PR back after losing it?", "Only via successful IAD appeal or a new PR application from scratch. Lost PR status is rarely restored outside of appeal."]
     ],
   ),
 };

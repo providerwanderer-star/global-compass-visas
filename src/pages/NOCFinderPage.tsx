@@ -82,7 +82,7 @@ const NOCFinderPage = () => {
           "@type": "Answer",
           text: "Yes. TEER 3 occupations (like truck driver, NOC 73300) are eligible for Express Entry via the Federal Skilled Trades Program and category-based draws targeting transportation and agriculture. As of 2026, category draws have lowered CRS cutoffs for these occupations.",
         },
-      },
+      }
     ],
   };
 
@@ -104,7 +104,6 @@ const NOCFinderPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -335,7 +334,7 @@ const NOCFinderPage = () => {
                   { teer: "TEER 2", training: "College diploma or 2-yr apprenticeship", eligible: "✅ Yes", examples: "Electrician, Dental Hygienist, Web Designer", bg: "bg-muted/30" },
                   { teer: "TEER 3", training: "High school + short training", eligible: "✅ Yes", examples: "Truck Driver, Security Guard, Admin Officer", bg: "" },
                   { teer: "TEER 4", training: "High school only", eligible: "❌ No", examples: "Food processing worker, Retail clerk", bg: "bg-muted/30" },
-                  { teer: "TEER 5", training: "Short work demonstration only", eligible: "❌ No", examples: "Seasonal labourer, General farmworker", bg: "" },
+                  { teer: "TEER 5", training: "Short work demonstration only", eligible: "❌ No", examples: "Seasonal labourer, General farmworker", bg: "" }
                 ].map((row) => (
                   <tr key={row.teer} className={`border-t border-border ${row.bg}`}>
                     <td className="px-4 py-3 font-bold text-foreground">{row.teer}</td>
@@ -377,7 +376,7 @@ const NOCFinderPage = () => {
               {
                 q: "What if my NOC code is TEER 4 or 5?",
                 a: "You may still qualify for PR through a Provincial Nominee Program (PNP) — many provinces have pathways for lower-TEER workers, especially in agriculture, food processing, and hospitality. Contact us for a free eligibility assessment.",
-              },
+              }
             ].map(({ q, a }) => (
               <details key={q} className="group bg-card border border-border rounded-xl">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-foreground text-sm list-none">
@@ -396,7 +395,7 @@ const NOCFinderPage = () => {
         sources={[
           { label: "ESDC NOC 2021 v1.0 (official)", href: "https://noc.esdc.gc.ca/" },
           { label: "IRCC Express Entry — eligible NOCs", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html" },
-          { label: "Job Bank Canada (wage & demand)", href: "https://www.jobbank.gc.ca/trend-analysis" },
+          { label: "Job Bank Canada (wage & demand)", href: "https://www.jobbank.gc.ca/trend-analysis" }
         ]}
         caveat="Salary ranges are national medians from Job Bank; actual offers vary by employer and province."
       />

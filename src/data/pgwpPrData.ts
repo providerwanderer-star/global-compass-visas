@@ -49,17 +49,17 @@ export const PGWPPR: Record<PgwpPrSlug, PgwpPrGuide> = {
       "Take IELTS/CELPIP or TEF/TCF — minimum CLB 7 (TEER 0/1) or CLB 5 (TEER 2/3)",
       "Create Express Entry profile — CEC pool",
       "Receive ITA in a CEC-specific or general draw (recent cut-offs 521-547)",
-      "Submit complete PR application within 60 days",
+      "Submit complete PR application within 60 days"
     ],
     [
       "Counting self-employment — CEC does not allow self-employed experience",
       "Working in TEER 4/5 jobs — no CEC credit",
       "Letting PGWP expire before ITA — apply for BOWP after submitting PR",
-      "Missing language minimums — CLB 7 for TEER 0/1 is non-negotiable",
+      "Missing language minimums — CLB 7 for TEER 0/1 is non-negotiable"
     ],
     [
       ["How many months of work do I need?", "12 months full-time (30+ hours/week) in TEER 0/1/2/3, or the equivalent in part-time hours. The 12 months must be inside the last 3 years."],
-      ["Can I apply before completing 12 months?", "You can create an Express Entry profile but you can't be issued an ITA until the 12 months are complete."],
+      ["Can I apply before completing 12 months?", "You can create an Express Entry profile but you can't be issued an ITA until the 12 months are complete."]
     ],
   ),
   "bowp-bridging-work-permit": mk(
@@ -77,17 +77,17 @@ export const PGWPPR: Record<PgwpPrSlug, PgwpPrGuide> = {
       "Confirm current work permit has 4 months or less remaining",
       "Apply for BOWP online from inside Canada",
       "Continue working for any employer while BOWP is processed (implied status applies)",
-      "Receive BOWP — keep working until PR is finalised",
+      "Receive BOWP — keep working until PR is finalised"
     ],
     [
       "Applying for BOWP before AOR — application refused",
       "Letting work permit expire without filing for restoration — falls out of status",
       "Provincial nomination not yet received — PNP applicants need the nomination first",
-      "Applying for BOWP from outside Canada — not allowed",
+      "Applying for BOWP from outside Canada — not allowed"
     ],
     [
       ["Can I switch jobs on a BOWP?", "Yes — BOWP is an open work permit. You can work for any Canadian employer in any role."],
-      ["What if my PGWP expires before AOR?", "File for restoration within 90 days of expiry, then apply for BOWP once AOR arrives. You can be on visitor status during the gap if needed."],
+      ["What if my PGWP expires before AOR?", "File for restoration within 90 days of expiry, then apply for BOWP once AOR arrives. You can be on visitor status during the gap if needed."]
     ],
   ),
   "pnp-international-graduate-streams": mk(
@@ -105,17 +105,17 @@ export const PGWPPR: Record<PgwpPrSlug, PgwpPrGuide> = {
       "Confirm you meet the stream's specific work, language, and study requirements",
       "Submit Expression of Interest (or direct apply where allowed)",
       "Receive nomination — claim 600 CRS points in Express Entry",
-      "Submit PR application after receiving ITA",
+      "Submit PR application after receiving ITA"
     ],
     [
       "Applying to a stream in a province you don't actually intend to live in — risks misrepresentation",
       "Missing the post-graduation application window (some streams require apply within 2 years)",
       "Choosing a non-graduate stream when graduate stream is faster",
-      "Overlooking Manitoba and Saskatchewan — far less competitive than ON/BC",
+      "Overlooking Manitoba and Saskatchewan — far less competitive than ON/BC"
     ],
     [
       ["Which province has the easiest grad stream?", "Manitoba (MPNP IES) and Saskatchewan (SINP Graduate Stream) have the lowest thresholds. Ontario's Master's and PhD streams are highly competitive."],
-      ["Do I need a job offer for a graduate stream?", "Some streams require it (BC PNP), others don't (Ontario PhD, MPNP IES). Check the specific stream criteria."],
+      ["Do I need a job offer for a graduate stream?", "Some streams require it (BC PNP), others don't (Ontario PhD, MPNP IES). Check the specific stream criteria."]
     ],
   ),
   "category-based-draws-for-grads": mk(
@@ -133,17 +133,17 @@ export const PGWPPR: Record<PgwpPrSlug, PgwpPrGuide> = {
       "Get 6 months of full-time experience in that NOC (last 3 years)",
       "Create Express Entry profile — indicate category eligibility",
       "Wait for the next category-specific draw",
-      "Submit PR application within 60 days of ITA",
+      "Submit PR application within 60 days of ITA"
     ],
     [
       "Claiming a category when actual duties don't match the NOC lead statement",
       "Missing the 6-month recency requirement",
       "Forgetting French — French-language proficiency draws are easiest for bilinguals",
-      "Assuming category eligibility lasts forever — categories can change each year",
+      "Assuming category eligibility lasts forever — categories can change each year"
     ],
     [
       ["Which category has the lowest CRS cut-offs?", "French-language proficiency draws historically have the lowest cut-offs (often 379-481). STEM and healthcare are next."],
-      ["Can I qualify for multiple categories?", "Yes — IRCC scores your profile against each category. You're considered for any draw you qualify for."],
+      ["Can I qualify for multiple categories?", "Yes — IRCC scores your profile against each category. You're considered for any draw you qualify for."]
     ],
   ),
   "pgwp-extension-options": mk(
@@ -161,17 +161,17 @@ export const PGWPPR: Record<PgwpPrSlug, PgwpPrGuide> = {
       "Apply online before current PGWP expires (or within 90-day restoration window)",
       "Pay PGWP extension + OWP holder fees",
       "Continue working under implied status while application is processed",
-      "If denied: fall back on BOWP (if PR submitted), LMIA, or visitor record",
+      "If denied: fall back on BOWP (if PR submitted), LMIA, or visitor record"
     ],
     [
       "Assuming PGWP extension is automatic — it requires a specific public policy in force",
       "Letting permit expire before applying — adds restoration cost and risk",
       "Switching to closed work permit when BOWP is the better path",
-      "Stopping work the moment PGWP expires — implied status often allows continuation",
+      "Stopping work the moment PGWP expires — implied status often allows continuation"
     ],
     [
       ["Is the PGWP extension still available?", "Eligibility depends on the most recent IRCC public policy. Always check the IRCC website or speak to an RCIC before assuming the extension applies to your case."],
-      ["What if I'm not eligible for the extension?", "Apply for an employer-specific LMIA work permit, a Bridging Open Work Permit (if PR is submitted), or transition to visitor status while you regroup."],
+      ["What if I'm not eligible for the extension?", "Apply for an employer-specific LMIA work permit, a Bridging Open Work Permit (if PR is submitted), or transition to visitor status while you regroup."]
     ],
   ),
   "expired-pgwp-recovery": mk(
@@ -189,17 +189,17 @@ export const PGWPPR: Record<PgwpPrSlug, PgwpPrGuide> = {
       "Within 90 days, submit restoration of status + new permit application",
       "If PR was already submitted: apply for BOWP and use implied status",
       "If no PR yet: pursue LMIA-based work permit or visitor record",
-      "Submit PR application as soon as eligible to lock in CEC pathway",
+      "Submit PR application as soon as eligible to lock in CEC pathway"
     ],
     [
       "Continuing to work after PGWP expiry — destroys future PR chances",
       "Missing the 90-day window — must leave Canada and re-enter on new permit",
       "Trying to extend PGWP itself without an active IRCC public policy",
-      "Failing to declare expired-status work on PR forms — misrepresentation",
+      "Failing to declare expired-status work on PR forms — misrepresentation"
     ],
     [
       ["What happens if I miss the 90-day restoration window?", "You must leave Canada and apply for a new work permit from abroad. Time already worked in Canada still counts toward CEC."],
-      ["Can I work while restoration is processed?", "No — you have no work authorization until restoration is approved. You can remain in Canada while waiting."],
+      ["Can I work while restoration is processed?", "No — you have no work authorization until restoration is approved. You can remain in Canada while waiting."]
     ],
   ),
   "canadian-experience-class-eligibility": mk(
@@ -217,17 +217,17 @@ export const PGWPPR: Record<PgwpPrSlug, PgwpPrGuide> = {
       "Confirm the work was authorised — no work-without-status periods count",
       "Confirm language minimums: CLB 7 (TEER 0/1) or CLB 5 (TEER 2/3) in all four skills",
       "Get an ECA if you want to claim foreign education points (optional for CEC)",
-      "Create Express Entry profile under CEC",
+      "Create Express Entry profile under CEC"
     ],
     [
       "Counting work done on a co-op/internship work permit — does not qualify",
       "Counting hours done as a full-time student off-campus — not eligible",
       "Working in Quebec — Quebec experience does not qualify for CEC (use PEQ instead)",
-      "Misclassifying NOC — IRCC matches duties to NOC lead statement",
+      "Misclassifying NOC — IRCC matches duties to NOC lead statement"
     ],
     [
       ["Does part-time work count for CEC?", "Yes — IRCC totals hours. 12 months full-time (1,560 hours at 30 hrs/week) or equivalent part-time hours qualifies."],
-      ["Can I include experience gained on a co-op or internship permit?", "No — work performed under a co-op or post-graduate research permit does not count for CEC. Only work under PGWP or other open/closed work permits qualifies."],
+      ["Can I include experience gained on a co-op or internship permit?", "No — work performed under a co-op or post-graduate research permit does not count for CEC. Only work under PGWP or other open/closed work permits qualifies."]
     ],
   ),
 };

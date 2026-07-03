@@ -26,7 +26,7 @@ const PROVINCES: { name: string; code: string }[] = [
   { name: "Prince Edward Island", code: "PE" },
   { name: "Newfoundland and Labrador", code: "NL" },
   { name: "Yukon", code: "YT" },
-  { name: "Northwest Territories", code: "NT" },
+  { name: "Northwest Territories", code: "NT" }
 ];
 
 function slugify(s: string) {

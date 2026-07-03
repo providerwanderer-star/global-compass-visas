@@ -92,7 +92,7 @@ const subclasses = [
     requirement: "65+ points + regional nomination",
     live: "Designated regional area (3 years)",
     description: "Regional nomination adds 15 points — the biggest boost available. Provisional 5-year visa with pathway to permanent Subclass 191 after 3 years.",
-  },
+  }
 ];
 
 const pointsTable = [
@@ -110,7 +110,7 @@ const pointsTable = [
   { factor: "Regional study (2+ years)", points: 5 },
   { factor: "State nomination (Subclass 190)", points: 5 },
   { factor: "Regional nomination (Subclass 491)", points: 15 },
-  { factor: "Partner skills (partner under 45, skills assessed)", points: 10 },
+  { factor: "Partner skills (partner under 45, skills assessed)", points: 10 }
 ];
 
 const assessingBodies = [
@@ -119,7 +119,7 @@ const assessingBodies = [
   { occupation: "Accounting / Finance", body: "CPA Australia or CAANZ", time: "4–8 weeks" },
   { occupation: "Nursing / Healthcare", body: "AHPRA (Australian Health Practitioner Regulation)", time: "4–12 weeks" },
   { occupation: "Teaching", body: "AITSL (Australian Institute for Teaching)", time: "6–12 weeks" },
-  { occupation: "Other occupations", body: "VETASSESS", time: "8–16 weeks" },
+  { occupation: "Other occupations", body: "VETASSESS", time: "8–16 weeks" }
 ];
 
 const faqs = [
@@ -142,7 +142,7 @@ const faqs = [
   {
     q: "How long does Australian PR take from India in 2026?",
     a: "Full timeline from India: Skills assessment (2–6 months) → EOI submission (immediate) → invitation (weeks to months based on points and occupation) → lodge visa application → processing (6–18 months). Total: 12–24 months for Subclass 189/190. Subclass 491 may be faster (6–12 months).",
-  },
+  }
 ];
 
 export default function AustraliaSubPage() {
@@ -176,7 +176,7 @@ export default function AustraliaSubPage() {
       <SeoSchema
         breadcrumbs={[
           { name: "Australia Immigration", url: "/australia/skilled-migration" },
-          { name: variant.breadcrumbName, url: location.pathname },
+          { name: variant.breadcrumbName, url: location.pathname }
         ]}
       />
 
@@ -196,7 +196,7 @@ export default function AustraliaSubPage() {
                 { label: "Min. Points", value: "65" },
                 { label: "Competitive Points", value: "80–95+" },
                 { label: "PR Processing", value: "9–18 months" },
-                { label: "Job Offer Required?", value: "No" },
+                { label: "Job Offer Required?", value: "No" }
               ].map((stat, i) => (
                 <div key={i} className="bg-white/20 rounded-xl px-6 py-3">
                   <div className="text-2xl font-bold">{stat.value}</div>
@@ -238,7 +238,7 @@ export default function AustraliaSubPage() {
                       { label: "Residence Type", value: sub.residence },
                       { label: "Processing", value: sub.processing },
                       { label: "Competitive Score", value: sub.requirement },
-                      { label: "Must Live", value: sub.live },
+                      { label: "Must Live", value: sub.live }
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <CheckCircle className="h-4 w-4 text-yellow-500 mt-0.5 flex-shrink-0" />

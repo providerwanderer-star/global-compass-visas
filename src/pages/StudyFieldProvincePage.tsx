@@ -54,7 +54,7 @@ const StudyFieldProvincePage = () => {
     {
       q: `What's the PR pathway after graduating?`,
       a: `${field.prPipeline} Most graduates land PR within 1–3 years of completing studies if they secure skilled work and complete the ${prov.pnpName} graduate stream or federal Express Entry profile early.`,
-    },
+    }
   ];
 
   const faqSchema = {
@@ -103,7 +103,7 @@ const StudyFieldProvincePage = () => {
         breadcrumbs={[
           { name: "Study in Canada", url: "/" },
           { name: field.name, url: `/study/${field.slug}/${prov.slug}` },
-          { name: prov.name, url: `/study/${field.slug}/${prov.slug}` },
+          { name: prov.name, url: `/study/${field.slug}/${prov.slug}` }
         ]}
       />
 

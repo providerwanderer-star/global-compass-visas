@@ -29,13 +29,13 @@ const tiers: Tier[] = [
     tagline: "End-to-end support from day one to your COPR",
     prices: [
       { label: "Individual file", value: "$2,000" },
-      { label: "Couple / PR file", value: "$2,500" },
+      { label: "Couple / PR file", value: "$2,500" }
     ],
     includes: [
       "Full consulting and file assistance through the entire PR process",
       "Unlimited consulting and assessment calls, booked as needed",
       "A dedicated partner with you from day one to your golden COPR email",
-      "Only added cost is the government application fee (payable by you or by us on your behalf)",
+      "Only added cost is the government application fee (payable by you or by us on your behalf)"
     ],
     paymentTerms: "$1,500 advance, balance due once you receive the invitation",
     cta: "Book a Call",
@@ -49,13 +49,13 @@ const tiers: Tier[] = [
     tagline: "Expert guidance while you file it yourself",
     prices: [
       { label: "Individual file", value: "$700" },
-      { label: "Couple file", value: "$1,000" },
+      { label: "Couple file", value: "$1,000" }
     ],
     includes: [
       "All preliminary consulting and discussions through the full PR process",
       "A dedicated partner with you from day one to your COPR",
       "You handle filing and submission; we review your completed documents",
-      "Ideal for hands-on clients who want expert oversight",
+      "Ideal for hands-on clients who want expert oversight"
     ],
     cta: "Get Started",
     icon: Award,
@@ -66,13 +66,13 @@ const tiers: Tier[] = [
     tagline: "Test the waters before you commit",
     prices: [
       { label: "Individual", value: "$250" },
-      { label: "Couple", value: "$300" },
+      { label: "Couple", value: "$300" }
     ],
     includes: [
       "A preliminary round of expert discussions",
       "Help clarifying your pathway options and feasibility",
       "Guidance to support your decision-making",
-      "Fee fully credited toward Platinum or Gold if you move forward",
+      "Fee fully credited toward Platinum or Gold if you move forward"
     ],
     cta: "Get Started",
     icon: Star,
@@ -85,12 +85,12 @@ const tiers: Tier[] = [
     includes: [
       "One-on-one profile review and options discussion",
       "No commitment required",
-      "Fee fully credited toward Platinum or Gold if you move forward",
+      "Fee fully credited toward Platinum or Gold if you move forward"
     ],
     cta: "Book a Call",
     icon: Sparkles,
     metalClass: "from-[#cd7f32] to-[#8b4513]",
-  },
+  }
 ];
 
 const faqs = [
@@ -105,7 +105,7 @@ const faqs = [
   {
     q: "How are calls scheduled?",
     a: "After you book, you'll receive a calendar link to pick a time that works for you. Calls are held over Zoom, Google Meet, or WhatsApp video — whatever you prefer. Platinum clients get priority scheduling and unlimited follow-up calls throughout their file.",
-  },
+  }
 ];
 
 const PackagesPage = () => {

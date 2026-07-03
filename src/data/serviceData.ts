@@ -26,11 +26,11 @@ export const services: ServiceData[] = [
       "Work and live anywhere in Canada",
       "Bring your spouse and children",
       "Path to Canadian citizenship in 3 years",
-      "No job offer required for FSWP",
+      "No job offer required for FSWP"
     ],
     eligibility: [
       { title: "Federal Skilled Worker", items: ["1+ year continuous skilled work experience", "Language: CLB 7 in all abilities (IELTS 6.0+)", "Education: Minimum secondary school (ECA required)", "Minimum 67 points on FSW grid", "Proof of settlement funds"] },
-      { title: "Canadian Experience Class", items: ["1+ year skilled work experience in Canada (within last 3 years)", "Language: CLB 7 for NOC 0/A, CLB 5 for NOC B", "No education requirement", "Must not be self-employed work", "Legal status during work period"] },
+      { title: "Canadian Experience Class", items: ["1+ year skilled work experience in Canada (within last 3 years)", "Language: CLB 7 for NOC 0/A, CLB 5 for NOC B", "No education requirement", "Must not be self-employed work", "Legal status during work period"] }
     ],
     process: [
       { step: 1, title: "Profile Assessment", description: "We evaluate your education, work experience, language scores, and age to calculate your CRS score and identify the best Express Entry stream." },
@@ -38,13 +38,13 @@ export const services: ServiceData[] = [
       { step: 3, title: "Express Entry Profile", description: "Create and submit your Express Entry profile to the CRS pool with optimized documentation." },
       { step: 4, title: "Receive ITA", description: "When your CRS score meets the draw cutoff, you receive an Invitation to Apply for PR." },
       { step: 5, title: "PR Application", description: "Submit complete PR application with police clearances, medical exams, and supporting documents within 60 days." },
-      { step: 6, title: "COPR & Landing", description: "Receive Confirmation of Permanent Residence and complete your landing in Canada." },
+      { step: 6, title: "COPR & Landing", description: "Receive Confirmation of Permanent Residence and complete your landing in Canada." }
     ],
     faqs: [
       { question: "What is a good CRS score for Express Entry?", answer: "Recent general draws have had cutoffs between 430-490. Category-based draws (healthcare, STEM, French) may have lower cutoffs. A PNP nomination adds 600 points, virtually guaranteeing an ITA." },
       { question: "How long does Express Entry take?", answer: "From profile submission to PR approval, the process typically takes 6-8 months if you receive an ITA quickly. The PR application itself is processed in about 6 months." },
       { question: "Can I apply without a job offer?", answer: "Yes! The Federal Skilled Worker Program does not require a Canadian job offer. However, a valid job offer adds 50-200 CRS points." },
-      { question: "What if my CRS score is low?", answer: "Our team specializes in CRS optimization: improving IELTS scores, PNP nominations (+600 points), additional education credentials, and spousal factors can significantly boost your score." },
+      { question: "What if my CRS score is low?", answer: "Our team specializes in CRS optimization: improving IELTS scores, PNP nominations (+600 points), additional education credentials, and spousal factors can significantly boost your score." }
     ],
     relatedCountries: ["canada"],
   },
@@ -61,23 +61,23 @@ export const services: ServiceData[] = [
       "Spouse open work permit available",
       "PGWP for 1-3 years post-graduation",
       "Direct pathway to Express Entry PR",
-      "Access to co-op and internship programs",
+      "Access to co-op and internship programs"
     ],
     eligibility: [
-      { title: "Study Permit Requirements", items: ["Acceptance letter from a DLI", "Proof of funds: CAD 20,635+/year + tuition", "Language proficiency (IELTS 6.0+ or equivalent)", "Valid passport", "Clean criminal and medical records", "Genuine intent to study (SOP)"] },
+      { title: "Study Permit Requirements", items: ["Acceptance letter from a DLI", "Proof of funds: CAD 20,635+/year + tuition", "Language proficiency (IELTS 6.0+ or equivalent)", "Valid passport", "Clean criminal and medical records", "Genuine intent to study (SOP)"] }
     ],
     process: [
       { step: 1, title: "University & Program Selection", description: "We match your academic profile and career goals to the best DLI and program for PR pathway." },
       { step: 2, title: "Admission Application", description: "Prepare and submit university applications with strong SOPs, transcripts, and references." },
       { step: 3, title: "GIC & Financial Preparation", description: "Set up Guaranteed Investment Certificate (GIC) and arrange tuition and living expense proofs." },
       { step: 4, title: "Study Permit Application", description: "File your study permit with complete documentation and compelling SOP." },
-      { step: 5, title: "Pre-Departure Guidance", description: "Visa approval, accommodation setup, and arrival preparation." },
+      { step: 5, title: "Pre-Departure Guidance", description: "Visa approval, accommodation setup, and arrival preparation." }
     ],
     faqs: [
       { question: "How much does studying in Canada cost?", answer: "Tuition varies from CAD 15,000-40,000/year depending on the program and institution. Living expenses add approximately CAD 20,635+/year. Scholarships and bursaries are available." },
       { question: "Can I work while studying in Canada?", answer: "Yes! Study permit holders can work 20 hours/week during semesters and full-time during scheduled breaks. Your spouse may also qualify for an open work permit." },
       { question: "What is PGWP and how does it help with PR?", answer: "The Post-Graduation Work Permit allows 1-3 years of work after graduating from a DLI. This Canadian work experience significantly boosts your CRS score for Express Entry PR." },
-      { question: "Can my spouse come with me?", answer: "Yes, your spouse can apply for an open work permit if you're enrolled in a master's, doctoral, or professional degree program at an eligible DLI." },
+      { question: "Can my spouse come with me?", answer: "Yes, your spouse can apply for an open work permit if you're enrolled in a master's, doctoral, or professional degree program at an eligible DLI." }
     ],
     relatedCountries: ["canada"],
   },
@@ -94,24 +94,24 @@ export const services: ServiceData[] = [
       "Pathway to permanent residency",
       "Employer-sponsored security",
       "Access to Canadian labour market",
-      "Bridging open work permit while PR processes",
+      "Bridging open work permit while PR processes"
     ],
     eligibility: [
       { title: "Employer Requirements", items: ["Valid Canadian business operating for 1+ year", "Must advertise position for 4+ weeks on Job Bank", "Offer prevailing wage or higher", "Demonstrate recruitment efforts for Canadians first", "Transition plan to reduce reliance on foreign workers"] },
-      { title: "Worker Requirements", items: ["Relevant qualifications and experience for the role", "Language proficiency appropriate for the job", "Valid passport", "Clean criminal record", "Ability to perform the job duties"] },
+      { title: "Worker Requirements", items: ["Relevant qualifications and experience for the role", "Language proficiency appropriate for the job", "Valid passport", "Clean criminal record", "Ability to perform the job duties"] }
     ],
     process: [
       { step: 1, title: "Employer Consultation", description: "We assess the employer's eligibility and advise on LMIA category (high-wage, low-wage, or Global Talent Stream)." },
       { step: 2, title: "Recruitment Advertising", description: "Guide employer through mandatory 4-week advertising on Job Bank and additional recruitment platforms." },
       { step: 3, title: "LMIA Application Filing", description: "Prepare and submit complete LMIA application with business legitimacy documents, recruitment evidence, and transition plan." },
       { step: 4, title: "Positive LMIA Issued", description: "Receive positive LMIA and confirmation letter for work permit application." },
-      { step: 5, title: "Work Permit Application", description: "File work permit application using positive LMIA, or add CRS points for Express Entry." },
+      { step: 5, title: "Work Permit Application", description: "File work permit application using positive LMIA, or add CRS points for Express Entry." }
     ],
     faqs: [
       { question: "What is LMIA?", answer: "Labour Market Impact Assessment is a document proving that hiring a foreign worker won't negatively impact the Canadian job market. Employers must show they couldn't find a qualified Canadian for the role." },
       { question: "How long does LMIA processing take?", answer: "Standard LMIA processing takes 2-4 months. Global Talent Stream applications are processed in 2 weeks. Processing times vary by region and occupation." },
       { question: "Does LMIA guarantee a work permit?", answer: "A positive LMIA is required for the work permit application but doesn't guarantee approval. The worker must still meet all work permit eligibility requirements." },
-      { question: "How many CRS points does LMIA add?", answer: "A valid LMIA-based job offer adds 50 CRS points for most NOC TEER 0-3 occupations, and 200 points for NOC 00 senior management positions." },
+      { question: "How many CRS points does LMIA add?", answer: "A valid LMIA-based job offer adds 50 CRS points for most NOC TEER 0-3 occupations, and 200 points for NOC 00 senior management positions." }
     ],
     relatedCountries: ["canada"],
   },
@@ -128,23 +128,23 @@ export const services: ServiceData[] = [
       "Maintain implied status during processing",
       "Preserve your Canadian immigration history",
       "Continue studies or employment (if applicable)",
-      "Protect future immigration applications",
+      "Protect future immigration applications"
     ],
     eligibility: [
-      { title: "Restoration Eligibility", items: ["Must apply within 90 days of status expiry", "Must have maintained conditions of previous status", "Must not be inadmissible on other grounds", "Must meet original requirements for the visa type", "Must pay restoration fee ($229) plus application fee", "Must demonstrate genuine reason for late renewal"] },
+      { title: "Restoration Eligibility", items: ["Must apply within 90 days of status expiry", "Must have maintained conditions of previous status", "Must not be inadmissible on other grounds", "Must meet original requirements for the visa type", "Must pay restoration fee ($229) plus application fee", "Must demonstrate genuine reason for late renewal"] }
     ],
     process: [
       { step: 1, title: "Urgency Assessment", description: "We calculate your 90-day deadline and assess restoration eligibility immediately." },
       { step: 2, title: "Document Rush", description: "Compile all required documents including explanation letter, proof of compliance, and updated forms." },
       { step: 3, title: "Restoration Application", description: "File restoration application with compelling cover letter explaining circumstances of status loss." },
       { step: 4, title: "Implied Status", description: "Once filed, you have implied status to remain in Canada while the application processes." },
-      { step: 5, title: "Status Restored", description: "Receive restored status and new permit/visa with updated validity dates." },
+      { step: 5, title: "Status Restored", description: "Receive restored status and new permit/visa with updated validity dates." }
     ],
     faqs: [
       { question: "How long do I have to apply for restoration?", answer: "You must apply within 90 days of your status expiry date. After 90 days, restoration is no longer available and you may need to leave Canada and apply from outside." },
       { question: "Can I work or study during restoration?", answer: "If you had a valid work or study permit and applied for restoration before expiry, you have implied status and can continue working/studying. If you applied after expiry, you should not work or study until restoration is granted." },
       { question: "How much does restoration cost?", answer: "Restoration fee is $229 CAD plus the regular application fee for your visa type (e.g., $150 for study permit, $155 for work permit). Our consulting fees are separate." },
-      { question: "Will restoration affect my future applications?", answer: "A granted restoration doesn't negatively affect future applications. However, an expired status with no restoration attempt may raise compliance concerns in future applications." },
+      { question: "Will restoration affect my future applications?", answer: "A granted restoration doesn't negatively affect future applications. However, an expired status with no restoration attempt may raise compliance concerns in future applications." }
     ],
     relatedCountries: ["canada"],
   },
@@ -161,24 +161,24 @@ export const services: ServiceData[] = [
       "Multiple entry valid for up to 10 years",
       "Business meetings and conferences",
       "Explore Canada before immigration",
-      "Tourism and sightseeing",
+      "Tourism and sightseeing"
     ],
     eligibility: [
       { title: "Visitor Visa (TRV)", items: ["Valid passport", "Proof of financial support", "Strong ties to home country", "Purpose of visit documentation", "Invitation letter from Canadian host", "Clean immigration history"] },
-      { title: "Super Visa (Parents/Grandparents)", items: ["Parent or grandparent of Canadian citizen/PR", "Signed letter of invitation from child/grandchild", "Child/grandchild meets minimum income (LICO+30%)", "Canadian medical insurance for 1 year (min $100K coverage)", "Immigration medical exam", "Must not be inadmissible"] },
+      { title: "Super Visa (Parents/Grandparents)", items: ["Parent or grandparent of Canadian citizen/PR", "Signed letter of invitation from child/grandchild", "Child/grandchild meets minimum income (LICO+30%)", "Canadian medical insurance for 1 year (min $100K coverage)", "Immigration medical exam", "Must not be inadmissible"] }
     ],
     process: [
       { step: 1, title: "Visa Type Selection", description: "We determine whether a standard visitor visa or Super Visa is right for your situation." },
       { step: 2, title: "Document Preparation", description: "Compile invitation letters, financial proofs, travel history, and ties to home country." },
       { step: 3, title: "Insurance Arrangement", description: "For Super Visa: arrange qualifying medical insurance with minimum $100K coverage." },
       { step: 4, title: "Application Submission", description: "Submit complete application with strong cover letter and supporting documents." },
-      { step: 5, title: "Visa Stamping & Travel", description: "Attend biometrics, receive visa stamp, and prepare for travel to Canada." },
+      { step: 5, title: "Visa Stamping & Travel", description: "Attend biometrics, receive visa stamp, and prepare for travel to Canada." }
     ],
     faqs: [
       { question: "What's the difference between visitor visa and Super Visa?", answer: "A regular visitor visa allows stays of up to 6 months. The Super Visa is exclusively for parents/grandparents and allows stays of up to 5 years per visit, with multi-entry valid for 10 years." },
       { question: "Can I extend my visitor visa in Canada?", answer: "Yes, you can apply for a visitor record extension before your authorized stay expires. Apply at least 30 days before your status expires." },
       { question: "How much income does the inviter need for Super Visa?", answer: "The inviting child/grandchild must meet LICO (Low Income Cut-Off) + 30% for their family size, including the visiting parent. For a family of 3, this is approximately CAD 43,000+." },
-      { question: "Is medical insurance mandatory for Super Visa?", answer: "Yes, Super Visa applicants must have Canadian medical insurance for at least 1 year with minimum $100,000 coverage. This must be purchased from a Canadian insurance provider." },
+      { question: "Is medical insurance mandatory for Super Visa?", answer: "Yes, Super Visa applicants must have Canadian medical insurance for at least 1 year with minimum $100,000 coverage. This must be purchased from a Canadian insurance provider." }
     ],
     relatedCountries: ["canada"],
   },
@@ -195,23 +195,23 @@ export const services: ServiceData[] = [
       "Hospitalization and prescription coverage",
       "Emergency evacuation and repatriation",
       "Pre-existing condition coverage options",
-      "Affordable monthly and annual plans",
+      "Affordable monthly and annual plans"
     ],
     eligibility: [
-      { title: "Super Visa Insurance Requirements", items: ["Must be from a Canadian insurance company", "Minimum $100,000 coverage", "Valid for at least 1 year from entry date", "Cover healthcare, hospitalization, and repatriation", "Must be paid in full or proof of installment plan", "Policy must be valid before visa application"] },
+      { title: "Super Visa Insurance Requirements", items: ["Must be from a Canadian insurance company", "Minimum $100,000 coverage", "Valid for at least 1 year from entry date", "Cover healthcare, hospitalization, and repatriation", "Must be paid in full or proof of installment plan", "Policy must be valid before visa application"] }
     ],
     process: [
       { step: 1, title: "Needs Assessment", description: "We evaluate your health profile, age, and length of stay to determine the best coverage level." },
       { step: 2, title: "Plan Comparison", description: "Compare plans from top Canadian insurers for coverage, price, and pre-existing condition options." },
       { step: 3, title: "Policy Purchase", description: "Purchase the selected policy and receive proof of insurance for your visa application." },
       { step: 4, title: "Visa Application Support", description: "Include insurance documentation in your Super Visa or visitor visa application." },
-      { step: 5, title: "Claims Assistance", description: "If you need medical care in Canada, we guide you through the insurance claims process." },
+      { step: 5, title: "Claims Assistance", description: "If you need medical care in Canada, we guide you through the insurance claims process." }
     ],
     faqs: [
       { question: "Is insurance mandatory for a visitor visa?", answer: "Insurance is mandatory for Super Visa applications. For regular visitor visas, it's not required by IRCC but strongly recommended — Canadian healthcare costs can be extremely expensive for uninsured visitors." },
       { question: "How much does Super Visa insurance cost?", answer: "Costs vary by age and health: approximately $100-200/month for ages 50-65, and $200-400/month for ages 65+. Pre-existing condition coverage costs more. We help you find the most competitive rates." },
       { question: "Does the insurance need to be Canadian?", answer: "Yes, for Super Visa applications, the insurance must be from a Canadian insurance company. Foreign insurance policies are not accepted by IRCC." },
-      { question: "What if I have pre-existing conditions?", answer: "Many Canadian insurers offer pre-existing condition coverage at additional cost, or with stability clauses (e.g., condition stable for 90-180 days). We match you with the right provider." },
+      { question: "What if I have pre-existing conditions?", answer: "Many Canadian insurers offer pre-existing condition coverage at additional cost, or with stability clauses (e.g., condition stable for 90-180 days). We match you with the right provider." }
     ],
     relatedCountries: ["canada"],
   },
@@ -228,24 +228,24 @@ export const services: ServiceData[] = [
       "Multiple streams for different profiles",
       "Some streams don't require job offers",
       "International graduate streams available",
-      "Business immigration options",
+      "Business immigration options"
     ],
     eligibility: [
       { title: "Common PNP Requirements", items: ["Meet Express Entry minimum criteria (for EE-linked streams)", "Occupation on provincial demand list", "Intent to live and work in the nominating province", "Language proficiency (varies by stream)", "Work experience in eligible occupation", "Settlement funds proof"] },
-      { title: "Popular PNP Streams", items: ["Ontario Immigrant Nominee Program (OINP)", "BC Provincial Nominee Program (BC PNP)", "Alberta Advantage Immigration Program (AAIP)", "Saskatchewan Immigrant Nominee Program (SINP)", "Manitoba Provincial Nominee Program (MPNP)", "Atlantic Immigration Program (AIP)"] },
+      { title: "Popular PNP Streams", items: ["Ontario Immigrant Nominee Program (OINP)", "BC Provincial Nominee Program (BC PNP)", "Alberta Advantage Immigration Program (AAIP)", "Saskatchewan Immigrant Nominee Program (SINP)", "Manitoba Provincial Nominee Program (MPNP)", "Atlantic Immigration Program (AIP)"] }
     ],
     process: [
       { step: 1, title: "Profile-Province Matching", description: "We analyze your occupation, experience, and preferences against all active PNP streams across Canada." },
       { step: 2, title: "Expression of Interest", description: "Submit EOI to target provinces and ensure your profile stands out in the competitive pool." },
       { step: 3, title: "Provincial Nomination", description: "Receive nomination from the province, adding 600 CRS points to your Express Entry profile." },
       { step: 4, title: "Express Entry ITA", description: "With +600 CRS points, receive your Invitation to Apply for PR in the next Express Entry draw." },
-      { step: 5, title: "PR Application", description: "Submit complete PR application and receive permanent residency." },
+      { step: 5, title: "PR Application", description: "Submit complete PR application and receive permanent residency." }
     ],
     faqs: [
       { question: "How many CRS points does PNP add?", answer: "A Provincial Nominee Program nomination adds 600 CRS points to your Express Entry profile. With base scores typically between 300-500, this addition virtually guarantees an Invitation to Apply." },
       { question: "Which province is easiest to get nominated by?", answer: "It depends on your profile. Saskatchewan (SINP) and Manitoba (MPNP) are often considered more accessible. Ontario (OINP) has the most draws but higher competition. We match you to your best-fit province." },
       { question: "Do I need a job offer for PNP?", answer: "Not always. Many PNP streams are Express Entry-linked and don't require a job offer. However, employer-driven streams (with job offers) often have lower requirements and faster processing." },
-      { question: "Can I choose which province to apply to?", answer: "Yes, but you must genuinely intend to live and work in the nominating province. If you move to a different province immediately after landing, it may affect future immigration applications." },
+      { question: "Can I choose which province to apply to?", answer: "Yes, but you must genuinely intend to live and work in the nominating province. If you move to a different province immediately after landing, it may affect future immigration applications." }
     ],
     relatedCountries: ["canada"],
   },
@@ -262,23 +262,23 @@ export const services: ServiceData[] = [
       "Cannot be deported from Canada",
       "Dual citizenship allowed",
       "Pass citizenship to children born abroad",
-      "Access to government jobs requiring citizenship",
+      "Access to government jobs requiring citizenship"
     ],
     eligibility: [
-      { title: "Citizenship Requirements", items: ["PR status — must be a permanent resident", "Physical presence: 1,095 days in Canada within last 5 years", "Filed Canadian income taxes for 3 years within the 5-year period", "Language proficiency: CLB 4+ in English or French (ages 18-54)", "Pass citizenship test (ages 18-54)", "No criminal prohibitions or active removal orders"] },
+      { title: "Citizenship Requirements", items: ["PR status — must be a permanent resident", "Physical presence: 1,095 days in Canada within last 5 years", "Filed Canadian income taxes for 3 years within the 5-year period", "Language proficiency: CLB 4+ in English or French (ages 18-54)", "Pass citizenship test (ages 18-54)", "No criminal prohibitions or active removal orders"] }
     ],
     process: [
       { step: 1, title: "Eligibility Calculation", description: "We calculate your exact physical presence days and verify all citizenship requirements are met." },
       { step: 2, title: "Application Preparation", description: "Complete citizenship application form, gather residence proofs, tax documents, and ID photos." },
       { step: 3, title: "Test Preparation", description: "Comprehensive preparation for the Canadian citizenship test covering history, rights, geography, and government." },
       { step: 4, title: "Application Submission", description: "File complete application with IRCC and pay the $630 processing fee." },
-      { step: 5, title: "Test, Interview & Ceremony", description: "Attend citizenship test, pass the interview, and take the Oath of Citizenship at your ceremony." },
+      { step: 5, title: "Test, Interview & Ceremony", description: "Attend citizenship test, pass the interview, and take the Oath of Citizenship at your ceremony." }
     ],
     faqs: [
       { question: "How long does citizenship processing take?", answer: "Current processing time is approximately 12-18 months from application to ceremony. This includes the citizenship test, interview (if needed), and oath ceremony scheduling." },
       { question: "Can I keep my original citizenship?", answer: "Yes! Canada allows dual (or multiple) citizenship. You don't need to renounce your original citizenship to become Canadian. Check if your home country also allows dual citizenship." },
       { question: "What's on the citizenship test?", answer: "The test covers Canadian history, geography, government structure, rights and responsibilities, and Canadian symbols. You need to score 75% (15/20 correct) to pass. We provide comprehensive study materials." },
-      { question: "Do I need to speak English or French?", answer: "Applicants aged 18-54 must demonstrate CLB 4 proficiency in English or French. This can be shown through language test results, completed Canadian education, or evidence during the citizenship interview." },
+      { question: "Do I need to speak English or French?", answer: "Applicants aged 18-54 must demonstrate CLB 4 proficiency in English or French. This can be shown through language test results, completed Canadian education, or evidence during the citizenship interview." }
     ],
     relatedCountries: ["canada"],
   },
@@ -295,25 +295,25 @@ export const services: ServiceData[] = [
       "Access to local job markets and salaries",
       "Bring dependent family members",
       "Build international work experience",
-      "Tax benefits and social security access",
+      "Tax benefits and social security access"
     ],
     eligibility: [
       { title: "Canada Work Permit (LMIA)", items: ["Valid job offer from Canadian employer", "Positive LMIA from employer", "Relevant work experience and qualifications", "Language proficiency", "Clean criminal record and medical clearance"] },
       { title: "Australia TSS Visa (482)", items: ["Occupation on skilled occupation list", "2+ years relevant work experience", "Employer nomination/sponsorship", "Skills assessment (if required)", "English: IELTS 5.0+ (overall)"] },
-      { title: "UK Skilled Worker Visa", items: ["Job offer from UK-licensed sponsor", "Certificate of Sponsorship (CoS)", "Minimum salary: £26,200 or going rate", "English: B1 level", "Meet 70 points threshold"] },
+      { title: "UK Skilled Worker Visa", items: ["Job offer from UK-licensed sponsor", "Certificate of Sponsorship (CoS)", "Minimum salary: £26,200 or going rate", "English: B1 level", "Meet 70 points threshold"] }
     ],
     process: [
       { step: 1, title: "Job Offer Review", description: "We verify your job offer meets immigration requirements for your target country." },
       { step: 2, title: "Employer Coordination", description: "Assist your employer with LMIA (Canada), nomination (Australia), CoS (UK), or contract compliance (Germany)." },
       { step: 3, title: "Documentation", description: "Prepare all required documents including qualifications, experience letters, and language test results." },
       { step: 4, title: "Application Submission", description: "Submit your work permit application with complete, accurate documentation." },
-      { step: 5, title: "Approval & Arrival", description: "Receive your work permit and prepare for relocation with our settlement guidance." },
+      { step: 5, title: "Approval & Arrival", description: "Receive your work permit and prepare for relocation with our settlement guidance." }
     ],
     faqs: [
       { question: "What is LMIA in Canada?", answer: "Labour Market Impact Assessment (LMIA) is a document that a Canadian employer may need before hiring a foreign worker. A positive LMIA shows that no Canadian worker is available for the job." },
       { question: "Can a work permit lead to PR?", answer: "Yes! In Canada, Canadian work experience boosts your CRS score. In Australia, the TSS visa can transition to PR through the ENS (186) visa. In Germany, work visa holders can apply for PR after 21-33 months. In the UK, ILR is available after 5 years." },
       { question: "Can my family accompany me?", answer: "Yes, most work permits allow you to bring your spouse/partner and dependent children. Spouses often receive open work permits as well." },
-      { question: "How long does a work permit take?", answer: "Canada LMIA-based: 3-6 months. Australia TSS: 1-4 months. Germany work visa: 4-12 weeks. UK Skilled Worker: 3-8 weeks." },
+      { question: "How long does a work permit take?", answer: "Canada LMIA-based: 3-6 months. Australia TSS: 1-4 months. Germany work visa: 4-12 weeks. UK Skilled Worker: 3-8 weeks." }
     ],
     relatedCountries: ["canada", "australia", "germany", "uk"],
   },
@@ -330,25 +330,25 @@ export const services: ServiceData[] = [
       "Post-graduation work permits (1-3 years)",
       "Direct pathway to permanent residency",
       "Build local professional network",
-      "Access to scholarships and financial aid",
+      "Access to scholarships and financial aid"
     ],
     eligibility: [
       { title: "Canada Study Permit", items: ["Acceptance letter from a DLI", "Proof of funds: CAD 20,635+ per year", "Language proficiency (IELTS/TOEFL)", "Valid passport", "No criminal record"] },
       { title: "Australia Student Visa (500)", items: ["Enrollment in CRICOS-registered course", "Genuine Temporary Entrant (GTE) requirement", "Financial capacity: AUD 24,505+/year", "English: IELTS 5.5+", "OSHC health cover"] },
-      { title: "UK Student Visa", items: ["CAS from licensed sponsor", "Financial proof: £1,334/month (London)", "English: B2 level (IELTS 5.5+)", "Tuberculosis test (if applicable)", "Valid passport"] },
+      { title: "UK Student Visa", items: ["CAS from licensed sponsor", "Financial proof: £1,334/month (London)", "English: B2 level (IELTS 5.5+)", "Tuberculosis test (if applicable)", "Valid passport"] }
     ],
     process: [
       { step: 1, title: "Course & University Selection", description: "We help you choose the right program and institution based on your career goals and PR pathway." },
       { step: 2, title: "Admission Application", description: "Apply to universities with optimized applications and required documents." },
       { step: 3, title: "Financial Preparation", description: "Arrange proof of funds, GIC (Canada), or blocked account (Germany)." },
       { step: 4, title: "Visa Application", description: "Submit study permit/visa application with complete documentation." },
-      { step: 5, title: "Pre-Departure", description: "Receive your visa, arrange accommodation, and prepare for your journey." },
+      { step: 5, title: "Pre-Departure", description: "Receive your visa, arrange accommodation, and prepare for your journey." }
     ],
     faqs: [
       { question: "Can I work while studying abroad?", answer: "Yes! Canada allows 20 hrs/week during semester. Australia allows 48 hrs/fortnight. Germany allows 120 full days/year. UK allows 20 hrs/week during term." },
       { question: "What is PGWP in Canada?", answer: "Post-Graduation Work Permit allows 1-3 years of work after graduating from a DLI. Key stepping stone to Express Entry PR." },
       { question: "Is studying in Germany really free?", answer: "Most public German universities charge no tuition (only €150-350 semester contribution). Living expenses require ~€11,208/year." },
-      { question: "What is the UK Graduate Route?", answer: "The Graduate Route allows 2 years post-study work (3 years for PhD) without a job offer or minimum salary requirement." },
+      { question: "What is the UK Graduate Route?", answer: "The Graduate Route allows 2 years post-study work (3 years for PhD) without a job offer or minimum salary requirement." }
     ],
     relatedCountries: ["canada", "australia", "germany", "uk"],
   },
@@ -365,23 +365,23 @@ export const services: ServiceData[] = [
       "Access to Europe's largest job market",
       "Transition to EU Blue Card after finding work",
       "Fast-track PR: 21 months with B1 German",
-      "Free movement within Schengen zone during job search",
+      "Free movement within Schengen zone during job search"
     ],
     eligibility: [
-      { title: "Job Seeker Visa Requirements", items: ["Recognized university degree (check anabin database)", "Proof of financial means: ~€11,208 in blocked account", "Health insurance valid in Germany", "German language: B1 recommended", "Accommodation proof for initial period", "Clear job search plan/strategy"] },
+      { title: "Job Seeker Visa Requirements", items: ["Recognized university degree (check anabin database)", "Proof of financial means: ~€11,208 in blocked account", "Health insurance valid in Germany", "German language: B1 recommended", "Accommodation proof for initial period", "Clear job search plan/strategy"] }
     ],
     process: [
       { step: 1, title: "Degree Verification", description: "Check your degree recognition via the anabin database." },
       { step: 2, title: "Financial Preparation", description: "Open a blocked account with ~€11,208 and arrange health insurance." },
       { step: 3, title: "Embassy Application", description: "Book appointment at German embassy and submit visa application." },
       { step: 4, title: "Job Search in Germany", description: "Arrive, attend interviews, network at career fairs, and use job portals." },
-      { step: 5, title: "Blue Card Transition", description: "After securing a qualifying job, apply for EU Blue Card." },
+      { step: 5, title: "Blue Card Transition", description: "After securing a qualifying job, apply for EU Blue Card." }
     ],
     faqs: [
       { question: "Can I work on a Job Seeker Visa?", answer: "No, the Job Seeker Visa does not permit employment. You can attend interviews and networking events but cannot work until you obtain a work visa or Blue Card." },
       { question: "What happens if I don't find a job in 6 months?", answer: "You must return to your home country. Proper preparation, job search strategy, and German language skills significantly improve your chances." },
       { question: "How fast can I get German PR?", answer: "With an EU Blue Card and B1 German, you can apply for permanent settlement after 21 months. Without B1: 33 months." },
-      { question: "Is German language mandatory?", answer: "Not legally mandatory for the visa, but B1 German dramatically improves job prospects and accelerates PR." },
+      { question: "Is German language mandatory?", answer: "Not legally mandatory for the visa, but B1 German dramatically improves job prospects and accelerates PR." }
     ],
     relatedCountries: ["germany"],
   },
@@ -398,25 +398,25 @@ export const services: ServiceData[] = [
       "Access to healthcare, education, and social services",
       "Spouse can work immediately with open work permit",
       "Children get free public education",
-      "Path to Canadian citizenship",
+      "Path to Canadian citizenship"
     ],
     eligibility: [
       { title: "Spousal Sponsorship", items: ["Must be Canadian citizen or PR", "Spouse must be legally married or common-law (1+ year)", "Genuine relationship evidence required", "Sponsor must meet income requirements", "No previous sponsorship default"] },
-      { title: "Parent & Grandparent Sponsorship", items: ["Must be Canadian citizen or PR (18+)", "Meet Minimum Necessary Income (MNI) for 3 years", "Sign undertaking for financial support (20 years)", "Parents must pass medical and security checks", "Submit during annual intake period"] },
+      { title: "Parent & Grandparent Sponsorship", items: ["Must be Canadian citizen or PR (18+)", "Meet Minimum Necessary Income (MNI) for 3 years", "Sign undertaking for financial support (20 years)", "Parents must pass medical and security checks", "Submit during annual intake period"] }
     ],
     process: [
       { step: 1, title: "Eligibility Review", description: "Verify your eligibility as a sponsor and your family member's admissibility." },
       { step: 2, title: "Relationship Documentation", description: "Compile comprehensive evidence of genuine relationship." },
       { step: 3, title: "Application Package", description: "Prepare and submit complete sponsorship application." },
       { step: 4, title: "Processing & Updates", description: "Monitor status and respond to additional document requests." },
-      { step: 5, title: "PR Approval & Landing", description: "Receive PR approval and complete landing procedures." },
+      { step: 5, title: "PR Approval & Landing", description: "Receive PR approval and complete landing procedures." }
     ],
     faqs: [
       { question: "How long does spousal sponsorship take?", answer: "Inland: about 12 months. Outland: 12-18 months. Spouse can apply for open work permit while waiting." },
       { question: "What income do I need to sponsor parents?", answer: "Must meet Minimum Necessary Income (MNI) for 3 consecutive tax years. Approximately CAD 43,000+ for a family of 3." },
       { question: "Can I sponsor my common-law partner?", answer: "Yes! Canada recognizes common-law partnerships (1+ year cohabitation) for sponsorship." },
-      { question: "Can I sponsor my siblings?", answer: "Direct sibling sponsorship is not available. However, if your siblings qualify independently (Express Entry, PNP, etc.), we can guide them." },
+      { question: "Can I sponsor my siblings?", answer: "Direct sibling sponsorship is not available. However, if your siblings qualify independently (Express Entry, PNP, etc.), we can guide them." }
     ],
     relatedCountries: ["canada"],
-  },
+  }
 ];

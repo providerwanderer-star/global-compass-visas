@@ -304,7 +304,7 @@ export const pnpDraws: PNPDraw[] = [
     invitations: 60,
     officialUrl: "https://immigratemanitoba.com/",
     notes: "Long-haul truck drivers with valid job offer",
-  },
+  }
 ];
 
 export const pnpProvinces = ["All", ...Array.from(new Set(pnpDraws.map((d) => d.province)))] as const;

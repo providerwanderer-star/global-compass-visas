@@ -2071,7 +2071,7 @@ function buildUSAEOFAQs(city: string): { question: string; answer: string }[] {
     {
       question: `What Canadian cities are best for ${city} professionals moving to Canada?`,
       answer: `Tech workers from SF/Seattle/Austin → Vancouver or Toronto. Healthcare from Houston/Chicago → Ontario or Alberta. Finance from NYC → Toronto. Engineering from Detroit → Windsor or Hamilton. Garg Brothers matches your profile to the best province and PNP stream for your background.`,
-    },
+    }
   ];
 }
 
@@ -2100,7 +2100,7 @@ export function buildUSCityEntries(): (CityData & {
         `Spouse open work permit + child school admission`,
         `WES & ECA credential evaluations`,
         `IELTS / CELPIP test preparation`,
-        `H-1B to Canada PR transition planning`,
+        `H-1B to Canada PR transition planning`
       ],
       testimonial: {
         name: `${c.name} H-1B client`,

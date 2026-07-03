@@ -81,7 +81,7 @@ const TOOLS: Tool[] = [
     desc: "Answer 6 quick questions and get a personalized shortlist of Canadian PR and work-permit pathways.",
     Icon: Compass,
     tag: "Quiz",
-  },
+  }
 ];
 
 const ToolsHubPage = () => {

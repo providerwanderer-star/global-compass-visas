@@ -30,7 +30,7 @@ const questions: QuizQuestion[] = [
       { label: "Study Abroad", value: "study", icon: <GraduationCap className="w-5 h-5" /> },
       { label: "Work Visa / Job Search", value: "work", icon: <Briefcase className="w-5 h-5" /> },
       { label: "Family Sponsorship", value: "family", icon: <Heart className="w-5 h-5" /> },
-      { label: "Visit / Tourism", value: "visit", icon: <MapPin className="w-5 h-5" /> },
+      { label: "Visit / Tourism", value: "visit", icon: <MapPin className="w-5 h-5" /> }
     ],
   },
   {
@@ -42,7 +42,7 @@ const questions: QuizQuestion[] = [
       { label: "25–30 years", value: "25-30" },
       { label: "31–35 years", value: "31-35" },
       { label: "36–40 years", value: "36-40" },
-      { label: "41+ years", value: "41+" },
+      { label: "41+ years", value: "41+" }
     ],
   },
   {
@@ -54,7 +54,7 @@ const questions: QuizQuestion[] = [
       { label: "Bachelor's Degree", value: "bachelors" },
       { label: "Master's Degree", value: "masters" },
       { label: "PhD / Doctorate", value: "phd" },
-      { label: "Trade / Vocational Certificate", value: "trade" },
+      { label: "Trade / Vocational Certificate", value: "trade" }
     ],
   },
   {
@@ -66,7 +66,7 @@ const questions: QuizQuestion[] = [
       { label: "1–2 years", value: "1-2" },
       { label: "3–5 years", value: "3-5" },
       { label: "6–10 years", value: "6-10" },
-      { label: "10+ years", value: "10+" },
+      { label: "10+ years", value: "10+" }
     ],
   },
   {
@@ -78,7 +78,7 @@ const questions: QuizQuestion[] = [
       { label: "Intermediate (IELTS 5.5–6)", value: "intermediate" },
       { label: "Proficient (IELTS 6.5–7)", value: "proficient" },
       { label: "Expert (IELTS 7.5+)", value: "expert" },
-      { label: "Haven't taken a test yet", value: "none" },
+      { label: "Haven't taken a test yet", value: "none" }
     ],
   },
   {
@@ -90,9 +90,9 @@ const questions: QuizQuestion[] = [
       { label: "₹5–10 Lakh / CAD 8–15K", value: "medium" },
       { label: "₹10–20 Lakh / CAD 15–30K", value: "high" },
       { label: "₹20 Lakh+ / CAD 30K+", value: "very-high" },
-      { label: "Not sure yet", value: "unsure" },
+      { label: "Not sure yet", value: "unsure" }
     ],
-  },
+  }
 ];
 
 interface Recommendation {
@@ -337,7 +337,6 @@ const QuizPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({

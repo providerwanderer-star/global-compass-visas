@@ -53,7 +53,7 @@ const BringFamilyPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Bring Family", url: "/bring-family/spouse-on-work-permit" },
-        { name: g.shortName, url: `/bring-family/${g.slug}` },
+        { name: g.shortName, url: `/bring-family/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

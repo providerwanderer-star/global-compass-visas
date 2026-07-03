@@ -65,7 +65,7 @@ const StateHubPage = () => {
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
                   { "@type": "ListItem", position: 2, name: hub.parentLabel, item: `https://www.gargbrothers.ca${hub.parentPath}` },
-                  { "@type": "ListItem", position: 3, name: hub.name, item: `https://www.gargbrothers.ca${hub.parentPath}/${hub.slug}` },
+                  { "@type": "ListItem", position: 3, name: hub.name, item: `https://www.gargbrothers.ca${hub.parentPath}/${hub.slug}` }
                 ],
               },
               {
@@ -75,7 +75,7 @@ const StateHubPage = () => {
                   name: faq.question,
                   acceptedAnswer: { "@type": "Answer", text: faq.answer },
                 })),
-              },
+              }
             ],
           })}
         </script>

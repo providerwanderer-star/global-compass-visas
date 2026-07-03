@@ -48,7 +48,7 @@ const immigrationServices = [
   { icon: Shield, label: "Travel Insurance", description: "Mandatory medical coverage for visas", href: "/services/visitor-visa-insurance" },
   { icon: Heart, label: "Family Sponsorship", description: "Sponsor spouse, parents & children", href: "/services/family-sponsorship" },
   { icon: BadgeCheck, label: "Citizenship Application", description: "Complete your immigration journey", href: "/services/citizenship-application" },
-  { icon: FileText, label: "Work Permits", description: "Open & employer-specific work permits", href: "/services/work-permits" },
+  { icon: FileText, label: "Work Permits", description: "Open & employer-specific work permits", href: "/services/work-permits" }
 ];
 
 const homeFaqs = [
@@ -72,7 +72,7 @@ const homeFaqs = [
   { q: "What IELTS score do I need for Canada PR?", a: "Minimum CLB 7 for Federal Skilled Worker Program: IELTS L6.0, R6.0, W6.0, S6.0. For maximum CRS points, aim for CLB 10: L8.5, R8.0, W7.5, S7.5. Each band increase from CLB 7 to CLB 9 can add 40-80 CRS points. Canadian Experience Class requires minimum CLB 7 (NOC TEER 0/1) or CLB 5 (NOC TEER 2/3)." },
   { q: "Can I bring my family to Canada with my PR?", a: "Yes. Your spouse/common-law partner and dependent children (under 22, unmarried) are included in your PR application. Your spouse gets an open work permit. After becoming a PR, you can sponsor parents and grandparents through the PGP program or invite them on a Super Visa (10-year multiple entry, 5-year stays per visit)." },
   { q: "What is the Super Visa for parents in 2026?", a: "The Super Visa is a 10-year multiple-entry visa allowing parents and grandparents of Canadian citizens or PRs to stay up to 5 years per visit. Requirements: inviter must meet minimum income (LICO+30%), private medical insurance of minimum $100,000 coverage from a Canadian insurer. Processing takes 3-6 months." },
-  { q: "How do I choose the best immigration consultant?", a: "Look for: proven track record with verifiable success rates, transparent pricing with no hidden fees, personal immigration experience, knowledge of multiple pathways, and free initial assessments. Red flags: guaranteeing visa approval, cash-only payments, high-pressure sales tactics, and inability to explain the process clearly. Garg Brothers consultants are immigrants themselves with a 98% success rate." },
+  { q: "How do I choose the best immigration consultant?", a: "Look for: proven track record with verifiable success rates, transparent pricing with no hidden fees, personal immigration experience, knowledge of multiple pathways, and free initial assessments. Red flags: guaranteeing visa approval, cash-only payments, high-pressure sales tactics, and inability to explain the process clearly. Garg Brothers consultants are immigrants themselves with a 98% success rate." }
 ];
 
 const testimonials = [
@@ -81,14 +81,14 @@ const testimonials = [
   { name: "Ahmed S.", country: "Germany Blue Card", text: "From Job Seeker Visa to EU Blue Card in 4 months. The team knows exactly what they're doing because they've walked this path themselves.", rating: 5 },
   { name: "Sneha R.", country: "Canada Study → PR", text: "Got admission to a top DLI and study permit approved on first try. Now working on my PGWP! By immigrants, for immigrants — they mean it.", rating: 5 },
   { name: "David L.", country: "UK Skilled Worker", text: "The UK visa process felt overwhelming until Garg Brothers stepped in. Got my Skilled Worker visa approved in 5 weeks. Incredible service.", rating: 5 },
-  { name: "Maria C.", country: "Canada Family Sponsorship", text: "Sponsored my parents through Super Visa. The team handled insurance, documents, everything. So grateful to have my family together in Canada.", rating: 5 },
+  { name: "Maria C.", country: "Canada Family Sponsorship", text: "Sponsored my parents through Super Visa. The team handled insurance, documents, everything. So grateful to have my family together in Canada.", rating: 5 }
 ];
 
 const stats = [
   { value: "15,000+", label: "Successful Visas" },
   { value: "98%", label: "Success Rate" },
   { value: "4", label: "Countries Served" },
-  { value: "10+", label: "Years Experience" },
+  { value: "10+", label: "Years Experience" }
 ];
 
 const HomePage = () => {
@@ -117,7 +117,6 @@ const HomePage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -128,11 +127,7 @@ const HomePage = () => {
             "logo": "https://www.gargbrothers.ca/logo.png",
             "description": "RCIC-regulated Canadian immigration consultants helping skilled workers, families, and students move to Canada.",
             "address": { "@type": "PostalAddress", "addressCountry": "CA" },
-            "sameAs": [
-              "https://www.facebook.com/4acesvisa",
-              "https://www.instagram.com/4acesvisa",
-              "https://www.linkedin.com/company/4acesvisa"
-            ]
+            "sameAs": [            ]
           })}
         </script>
         <script type="application/ld+json">
@@ -177,11 +172,7 @@ const HomePage = () => {
                   "Australia Skilled Migration", "Germany Job Seeker Visa",
                   "EU Blue Card", "UK Skilled Worker Visa"
                 ],
-                "sameAs": [
-                  "https://www.facebook.com/4acesvisa",
-                  "https://www.instagram.com/4acesvisa",
-                  "https://www.linkedin.com/company/4acesvisa",
-                  "https://wa.me/16478622190"
+                "sameAs": [                  "https://wa.me/16478622190"
                 ]
               },
               {
@@ -339,7 +330,7 @@ const HomePage = () => {
                     { label: "🎓 Student → PR path", href: "/services/student-visa" },
                     { label: "👨‍👩‍👧 Family sponsorship", href: "/services/family-sponsorship" },
                     { label: "💼 Have a job offer", href: "/services/lmia-assistance" },
-                    { label: "🤔 Not sure yet", href: "/quiz" },
+                    { label: "🤔 Not sure yet", href: "/quiz" }
                   ].map((chip) => (
                     <Link
                       key={chip.label}
@@ -532,7 +523,7 @@ const HomePage = () => {
                 desc: "Sponsor spouse, parents, kids or invite family on Super Visa (10-yr multi-entry).",
                 href: "/services/family-sponsorship",
                 tag: "Keep loved ones close",
-              },
+              }
             ].map((p) => (
               <motion.div key={p.title} variants={staggerItem}>
                 <Link to={p.href} className="block group h-full">
@@ -659,7 +650,7 @@ const HomePage = () => {
               { icon: Search, label: "Eligibility Quiz", href: "/quiz" },
               { icon: Globe, label: "Compare Countries", href: "/compare" },
               { icon: TrendingUp, label: "EE Draw Tracker", href: "/express-entry" },
-              { icon: FileText, label: "Doc Checklist", href: "/documents/canada-pr" },
+              { icon: FileText, label: "Doc Checklist", href: "/documents/canada-pr" }
             ].map((t) => (
               <Link key={t.label} to={t.href} className="group">
                 <div className="bg-card rounded-xl border border-border p-4 text-center card-interactive hover:border-gold/50 transition-all">

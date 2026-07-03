@@ -62,7 +62,7 @@ const SponsorshipPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Family Sponsorship", url: "/sponsor/spouse-common-law-partner" },
-        { name: p.shortName, url: `/sponsor/${p.slug}` },
+        { name: p.shortName, url: `/sponsor/${p.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

@@ -53,7 +53,7 @@ const ChangeStatusPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Change Status", url: "/change-status/visitor-to-work" },
-        { name: g.shortName, url: `/change-status/${g.slug}` },
+        { name: g.shortName, url: `/change-status/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

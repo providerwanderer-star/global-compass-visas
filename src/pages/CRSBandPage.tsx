@@ -60,7 +60,7 @@ const CRSBandPage = () => {
       <SeoSchema
         breadcrumbs={[
           { name: "Canada PR by CRS", url: "/canada-pr/crs" },
-          { name: `CRS ${data.label}`, url: `/canada-pr/crs/${data.slug}` },
+          { name: `CRS ${data.label}`, url: `/canada-pr/crs/${data.slug}` }
         ]}
       />
 
@@ -184,7 +184,7 @@ const CRSBandPage = () => {
             {[
               { href: "/crs-calculator", title: "CRS Calculator", icon: Calculator },
               { href: "/express-entry/draws", title: "Live EE Draws", icon: TrendingUp },
-              { href: "/pnp-tracker", title: "PNP Tracker", icon: MapPin },
+              { href: "/pnp-tracker", title: "PNP Tracker", icon: MapPin }
             ].map((t) => {
               const Icon = t.icon;
               return (

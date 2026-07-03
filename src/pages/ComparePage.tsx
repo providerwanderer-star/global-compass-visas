@@ -62,7 +62,7 @@ const ComparePage = () => {
       <SeoSchema
         breadcrumbs={[
           { name: "Compare", url: "/compare" },
-          { name: `${comp.optionAName} vs ${comp.optionBName}`, url: `/compare/${comp.slug}` },
+          { name: `${comp.optionAName} vs ${comp.optionBName}`, url: `/compare/${comp.slug}` }
         ]}
       />
 

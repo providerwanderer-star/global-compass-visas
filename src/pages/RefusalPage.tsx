@@ -62,7 +62,7 @@ const RefusalPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Refusal Recovery", url: "/refusal/study-permit-refused" },
-        { name: r.shortName, url: `/refusal/${r.slug}` },
+        { name: r.shortName, url: `/refusal/${r.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-destructive/10 via-background to-background">

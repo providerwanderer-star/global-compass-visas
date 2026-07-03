@@ -44,7 +44,7 @@ export function buildAEOFAQs(
     {
       question: `Is there an immigration consultant in ${city} for Canada PR?`,
       answer: `Yes — Garg Brothers serves ${city} residents with a free online assessment available at gargbrothers.ca/contact. Our RCIC-led team works remotely with ${city} clients across Express Entry, PNP, LMIA, and study-to-PR pathways, so no in-person visit is required.`,
-    },
+    }
   ];
 }
 
@@ -77,7 +77,7 @@ export function buildAEOFAQsCanada(
     {
       question: `Is there an immigration consultant in ${city} for Canada PR?`,
       answer: `Yes — Garg Brothers is an RCIC-led consultancy serving ${city} residents with a free online assessment at gargbrothers.ca/contact. We handle CEC, PNP, LMIA, work permit extensions, and study-to-PR transitions for clients across ${province} entirely online.`,
-    },
+    }
   ];
 }
 
@@ -111,7 +111,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "21311", title: "Computer engineers" },
         { code: "21222", title: "Information systems specialists" },
         { code: "11100", title: "Financial auditors and accountants" },
-        { code: "21100", title: "Physical science professionals (pharma R&D)" },
+        { code: "21100", title: "Physical science professionals (pharma R&D)" }
       ],
       cityProfile: "Thane's dominant industries are IT services, pharmaceuticals, BFSI, and chemicals. The most popular Canadian destinations for Thane immigrants are Toronto, Mississauga, and Brampton, followed by Calgary and Vancouver. Thane has a strong Marathi-speaking diaspora in the GTA and a long-standing Gujarati community in Toronto's Etobicoke and Markham areas.",
       diasporaNote: "Marathi Mandal of Toronto and the Maharashtra Cultural Association in the GTA offer strong settlement support for Thane families.",
@@ -131,7 +131,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "21232", title: "Software developers" },
         { code: "41401", title: "Economists and economic policy researchers" },
         { code: "31301", title: "Registered nurses" },
-        { code: "10010", title: "Financial managers" },
+        { code: "10010", title: "Financial managers" }
       ],
       cityProfile: "New Delhi's dominant sectors are government, embassies, MNCs (consulting, IT, finance), media, and healthcare. The most popular Canadian destinations for Delhi immigrants are Toronto, Mississauga, Brampton, and Vancouver, with growing interest in Ottawa due to its government and bilingual workforce. The Punjabi-Hindi diaspora is well established across the GTA, Calgary, and Surrey.",
       diasporaNote: "Delhi-NCR families integrate quickly into Toronto's North York and Brampton's Springdale, where Hindi-speaking communities, gurdwaras, and South Asian grocery networks are extensive.",
@@ -150,7 +150,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "21232", title: "Software developers" },
         { code: "22301", title: "Mechanical engineering technologists" },
         { code: "21321", title: "Industrial engineers" },
-        { code: "31301", title: "Registered nurses" },
+        { code: "31301", title: "Registered nurses" }
       ],
       cityProfile: "Ghaziabad's economy is anchored in IT (Indirapuram, Crossings Republik), engineering services, manufacturing, and logistics. Ghaziabad immigrants typically settle in Brampton, Mississauga, Edmonton, and Winnipeg — provinces and cities where engineering and trades qualifications are in highest demand. UP's well-established North Indian community in the GTA provides strong family and job-network support.",
       diasporaNote: "UP-Bihar associations in Mississauga and Brampton run cultural and settlement events that ease the transition for Ghaziabad newcomers.",
@@ -169,7 +169,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "21311", title: "Computer engineers" },
         { code: "21221", title: "Business systems specialists" },
         { code: "21222", title: "Information systems specialists" },
-        { code: "20012", title: "Computer and information systems managers" },
+        { code: "20012", title: "Computer and information systems managers" }
       ],
       cityProfile: "Mysore's economy is anchored in IT services, engineering R&D, biotech, and tourism. Mysore immigrants gravitate to Toronto, Mississauga, Vancouver, and Calgary — cities with deep South Indian Kannada-speaking communities. The Karnataka Sangha in Toronto and the Kannada Sangha of Vancouver actively support newcomer settlement.",
       diasporaNote: "South Indian Kannada-speaking families are strongly established in Mississauga, Brampton, and Surrey, with active temples, cultural associations, and Kannada-medium weekend schools.",
@@ -188,7 +188,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "32101", title: "Licensed practical nurses" },
         { code: "31303", title: "Physiotherapists" },
         { code: "32109", title: "Other paramedical occupations" },
-        { code: "21232", title: "Software developers" },
+        { code: "21232", title: "Software developers" }
       ],
       cityProfile: "Mangalore's dominant industries are healthcare/nursing, IT services (Infosys, Cognizant Mangalore), banking (Karnataka Bank, Corporation Bank HQs), and education. Mangalore immigrants settle heavily in Toronto, Brampton, Mississauga, Halifax, and Saint John — wherever Catholic and Konkani communities are established. Many Mangalorean nurses move to the Atlantic provinces via AIP.",
       diasporaNote: "Mangalorean Konkani Catholic and GSB Hindu communities in Toronto, Mississauga, and Halifax provide strong cultural and settlement networks.",
@@ -207,7 +207,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "21232", title: "Software developers" },
         { code: "21321", title: "Industrial engineers" },
         { code: "41200", title: "University professors and lecturers" },
-        { code: "31301", title: "Registered nurses" },
+        { code: "31301", title: "Registered nurses" }
       ],
       cityProfile: "Madurai's economy is anchored in textiles, automotive (TVS group), software services, education, and tourism. Madurai immigrants prefer Toronto, Mississauga, Scarborough (Tamil-majority neighbourhoods), Brampton, Calgary, and Halifax. The Greater Toronto Area has the largest Tamil diaspora in the world outside Sri Lanka and Tamil Nadu.",
       diasporaNote: "Scarborough and the GTA host the world's largest Tamil community outside South Asia, with hundreds of temples, Tamil schools, and grocery stores supporting Madurai newcomers.",
@@ -226,7 +226,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "21331", title: "Petroleum engineers" },
         { code: "21300", title: "Civil engineers" },
         { code: "22301", title: "Mechanical engineering technologists" },
-        { code: "73400", title: "Heavy equipment operators" },
+        { code: "73400", title: "Heavy equipment operators" }
       ],
       cityProfile: "Visakhapatnam's dominant sectors are IT services, oil & gas (HPCL, ONGC), defence, shipbuilding, and pharma. Vizag immigrants prefer Toronto, Mississauga, Calgary, and Edmonton — with Telugu-speaking communities especially established in Mississauga, Brampton, and Calgary's Saddle Ridge area.",
       diasporaNote: "TANA (Telugu Association of North America) and Telugu Cultural Association of Toronto host major events and provide settlement support across the GTA and Calgary.",
@@ -245,7 +245,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "21300", title: "Civil engineers" },
         { code: "21311", title: "Computer engineers" },
         { code: "21321", title: "Industrial engineers" },
-        { code: "31301", title: "Registered nurses" },
+        { code: "31301", title: "Registered nurses" }
       ],
       cityProfile: "Vijayawada's economy centres on agriculture trade, education, IT services, and small manufacturing. Vijayawada immigrants typically settle in Toronto, Mississauga, Brampton, Calgary, and Winnipeg, where established Telugu and broader South Indian communities support newcomer settlement.",
       diasporaNote: "TANA and ATA (American Telugu Association) Canada chapters in the GTA, Calgary, and Winnipeg help Vijayawada families integrate culturally and professionally.",
@@ -265,7 +265,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "22310", title: "Electrical engineering technologists" },
         { code: "32101", title: "Licensed practical nurses" },
         { code: "21321", title: "Industrial engineers" },
-        { code: "73400", title: "Heavy equipment operators (port/maritime)" },
+        { code: "73400", title: "Heavy equipment operators (port/maritime)" }
       ],
       cityProfile: "Kochi's dominant industries are IT services, healthcare/nursing, maritime/port logistics, and tourism. Kochi immigrants are heavily concentrated in Toronto, Mississauga, Scarborough, Brampton, Calgary, Edmonton, and Atlantic Canada (Halifax, Moncton, Saint John, Charlottetown). Kerala's Christian, Hindu, and Muslim communities all have strong networks across these regions.",
       diasporaNote: "Malayalee associations across Toronto, Mississauga, Scarborough, Calgary, and Atlantic Canada run vibrant Onam, Vishu, and Christmas events, with strong professional and parish networks.",
@@ -284,7 +284,7 @@ const NEW_INDIAN: NewCity[] = [
         { code: "21311", title: "Computer engineers" },
         { code: "21300", title: "Civil engineers" },
         { code: "31301", title: "Registered nurses" },
-        { code: "21100", title: "Physical science professionals" },
+        { code: "21100", title: "Physical science professionals" }
       ],
       cityProfile: "Trivandrum's economy is dominated by IT services (Technopark), space research (ISRO/VSSC), healthcare, and government. Trivandrum immigrants concentrate in Toronto, Mississauga, Calgary, Edmonton, and Atlantic Canada, with strong Malayalee networks across each region.",
       diasporaNote: "Kerala Hindus of Canada, Malayalee Association of Toronto, and Atlantic Malayalee Association support Trivandrum families with cultural events, settlement help, and professional networking.",
@@ -303,12 +303,12 @@ const NEW_INDIAN: NewCity[] = [
         { code: "32101", title: "Licensed practical nurses" },
         { code: "21300", title: "Civil engineers" },
         { code: "72200", title: "Electricians" },
-        { code: "73300", title: "Transport truck drivers" },
+        { code: "73300", title: "Transport truck drivers" }
       ],
       cityProfile: "Kozhikode's economy is anchored in healthcare, education (NIT Calicut), trade, tourism, and Gulf-remittance services. Kozhikode immigrants concentrate in Atlantic Canada (Halifax, Moncton, Charlottetown, Saint John), the GTA, and Calgary, leveraging Malabar Muslim, Christian, and Hindu networks across each region.",
       diasporaNote: "Malabar associations and the broader Kerala Muslim and Christian communities in Halifax, Moncton, and the GTA give Kozhikode families strong cultural and settlement support.",
     },
-  },
+  }
 ];
 
 const NEW_CANADIAN: NewCity[] = [
@@ -327,7 +327,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "73300", title: "Transport truck drivers" },
         { code: "72106", title: "Welders" },
         { code: "32101", title: "Licensed practical nurses" },
-        { code: "63200", title: "Cooks" },
+        { code: "63200", title: "Cooks" }
       ],
       cityProfile: "Red Deer's economy is anchored in oil and gas services, agri-food processing, healthcare, retail, and trades. Many Red Deer PR applicants are workers and international students currently on permits, transitioning via CEC or AAIP. The city has growing Punjabi, Filipino, and South Asian communities.",
       diasporaNote: "Red Deer's Punjabi and Filipino communities have established cultural centres, gurdwaras, and Catholic parishes that support newcomer settlement and family sponsorship.",
@@ -348,7 +348,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "73300", title: "Transport truck drivers" },
         { code: "63200", title: "Cooks" },
         { code: "85100", title: "Agricultural service contractors and farm supervisors" },
-        { code: "32101", title: "Licensed practical nurses" },
+        { code: "32101", title: "Licensed practical nurses" }
       ],
       cityProfile: "Lethbridge's economy is built on agri-food processing, education, healthcare, and retail/services. Many Lethbridge PR applicants are international students from India, Nigeria, and the Philippines on PGWPs, transitioning to CEC or AAIP. The city has growing Punjabi, Filipino, and Latin American communities.",
       diasporaNote: "Lethbridge's Sikh Society gurdwara and Filipino-Canadian Association support Punjabi and Filipino newcomers with cultural events and settlement help.",
@@ -369,7 +369,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "21321", title: "Industrial engineers" },
         { code: "21100", title: "Physical science professionals" },
         { code: "41200", title: "University professors and lecturers" },
-        { code: "31301", title: "Registered nurses" },
+        { code: "31301", title: "Registered nurses" }
       ],
       cityProfile: "Montreal's tech, AI, gaming (Ubisoft), aerospace, and life-sciences ecosystems make it Canada's most diverse metropolitan PR market. Many Montreal PR applicants are international students from McGill, Concordia, UdeM, and Polytechnique transitioning via PEQ. The city's South Asian, Maghrebi, and Latin American communities are extensive.",
       diasporaNote: "Montreal's Quebec South Asian Community Centre and the broader Indo-Canadian, Maghrebi, and Filipino networks in Côte-des-Neiges, NDG, and Brossard support newcomer settlement.",
@@ -390,7 +390,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "21222", title: "Information systems specialists" },
         { code: "11100", title: "Financial auditors and accountants" },
         { code: "31301", title: "Registered nurses" },
-        { code: "10010", title: "Financial managers" },
+        { code: "10010", title: "Financial managers" }
       ],
       cityProfile: "Markham's economy is dominated by technology (IBM, AMD, Oracle), finance (Allstate, Aviva), and biotech. Markham PR applicants are typically international workers and graduates from York University and Seneca College. The city has Canada's largest Chinese-Canadian community and a growing South Asian (Tamil, Punjabi, Hindu) population.",
       diasporaNote: "Markham's Chinese-Canadian community is the largest in North America by share of population, with Cantonese and Mandarin services widely available; South Asian temples and gurdwaras also support newcomer settlement.",
@@ -411,7 +411,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "21300", title: "Civil engineers" },
         { code: "72200", title: "Electricians" },
         { code: "72106", title: "Welders" },
-        { code: "21232", title: "Software developers" },
+        { code: "21232", title: "Software developers" }
       ],
       cityProfile: "Vaughan's economy is anchored by construction, logistics, manufacturing, retail (Vaughan Mills), and entertainment. PR applicants in Vaughan are typically temporary workers and international graduates working in trades, engineering, and IT. The city has Canada's largest Italian-Canadian community and growing Russian, Persian, and South Asian populations.",
       diasporaNote: "Vaughan's Italian-Canadian community is North America's largest, with extensive cultural infrastructure; the city's Persian, Russian, and South Asian temples and centres also support newcomers.",
@@ -432,7 +432,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "11100", title: "Financial auditors and accountants" },
         { code: "31301", title: "Registered nurses" },
         { code: "21221", title: "Business systems specialists" },
-        { code: "10010", title: "Financial managers" },
+        { code: "10010", title: "Financial managers" }
       ],
       cityProfile: "Richmond Hill's economy spans technology, finance, healthcare, and professional services. PR applicants in Richmond Hill are typically international workers and graduates working at Markham/Vaughan tech firms or downtown Toronto financial institutions. The city has large Chinese-Canadian, Persian-Canadian, and Korean-Canadian communities.",
       diasporaNote: "Richmond Hill has one of Canada's highest concentrations of Chinese-Canadian and Persian-Canadian families, with Mandarin, Cantonese, and Farsi services widely available throughout the city.",
@@ -453,7 +453,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "10010", title: "Financial managers" },
         { code: "21321", title: "Industrial engineers" },
         { code: "21300", title: "Civil engineers" },
-        { code: "31301", title: "Registered nurses" },
+        { code: "31301", title: "Registered nurses" }
       ],
       cityProfile: "Oakville's economy is anchored by corporate HQs (Ford, Siemens), automotive engineering, finance, healthcare, and biotech. PR applicants in Oakville are typically senior international workers on closed work permits or graduates from Sheridan College and McMaster University. The city has growing South Asian, Chinese, and Eastern European communities.",
       diasporaNote: "Oakville's South Asian community is well established with gurdwaras, Hindu temples, and Indian grocery stores; the city's professional networks also support newcomers from China, Iran, and Eastern Europe.",
@@ -474,7 +474,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "63200", title: "Cooks" },
         { code: "73300", title: "Transport truck drivers" },
         { code: "72106", title: "Welders" },
-        { code: "32101", title: "Licensed practical nurses" },
+        { code: "32101", title: "Licensed practical nurses" }
       ],
       cityProfile: "Barrie's economy is anchored by manufacturing, healthcare, tourism (Lake Simcoe, Horseshoe Resort), trades, and retail. PR applicants in Barrie are typically international workers and Georgian College graduates on PGWPs. The city has growing South Asian, Filipino, and Caribbean communities.",
       diasporaNote: "Barrie's South Asian and Filipino communities are growing rapidly, with new gurdwaras, churches, and grocery stores supporting newcomer families.",
@@ -495,7 +495,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "41200", title: "University professors and lecturers" },
         { code: "21300", title: "Civil engineers" },
         { code: "31301", title: "Registered nurses" },
-        { code: "21311", title: "Computer engineers" },
+        { code: "21311", title: "Computer engineers" }
       ],
       cityProfile: "Guelph's economy is anchored by agri-food research, biotech, IT, manufacturing (Linamar), and education. PR applicants in Guelph are heavily international students and graduates from the University of Guelph, transitioning via Ontario INP Masters Graduate stream or CEC. The city has growing South Asian, Chinese, and African communities.",
       diasporaNote: "Guelph's growing South Asian and African student/graduate communities are supported by university student associations and local cultural centres.",
@@ -516,7 +516,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "31301", title: "Registered nurses" },
         { code: "72200", title: "Electricians" },
         { code: "73300", title: "Transport truck drivers" },
-        { code: "32101", title: "Licensed practical nurses" },
+        { code: "32101", title: "Licensed practical nurses" }
       ],
       cityProfile: "Oshawa's economy is built on automotive (GM legacy + Stellantis), healthcare (Lakeridge Health), education, and trades. PR applicants in Oshawa are typically temporary workers in trades and Ontario Tech / Trent Durham graduates on PGWPs. The city has growing Caribbean, South Asian, and Filipino communities.",
       diasporaNote: "Oshawa's South Asian, Caribbean, and Filipino communities are anchored by gurdwaras, churches, and cultural associations supporting newcomer settlement.",
@@ -537,7 +537,7 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "21232", title: "Software developers" },
         { code: "11100", title: "Financial auditors and accountants" },
         { code: "72200", title: "Electricians" },
-        { code: "32101", title: "Licensed practical nurses" },
+        { code: "32101", title: "Licensed practical nurses" }
       ],
       cityProfile: "Ajax's economy spans logistics (Amazon, distribution centres), healthcare (Ajax-Pickering Hospital), IT, and retail. PR applicants in Ajax are typically temporary workers and international graduates from Centennial College and University of Toronto Scarborough campus. The city has large Caribbean, South Asian, Filipino, and African communities.",
       diasporaNote: "Ajax's Caribbean (especially Guyanese and Trinidadian) and South Asian communities are large and well-organized, with churches, mandirs, mosques, and gurdwaras supporting newcomers.",
@@ -558,12 +558,12 @@ const NEW_CANADIAN: NewCity[] = [
         { code: "41200", title: "University professors and lecturers" },
         { code: "11100", title: "Financial auditors and accountants" },
         { code: "32101", title: "Licensed practical nurses" },
-        { code: "21222", title: "Information systems specialists" },
+        { code: "21222", title: "Information systems specialists" }
       ],
       cityProfile: "Fredericton's economy spans IT (Cyber Centre, IBM, McKesson), government (provincial capital), education (University of New Brunswick, St. Thomas), and healthcare. PR applicants in Fredericton are typically international workers, AIP-recruited professionals, and UNB/NBCC graduates. The city has growing South Asian, Filipino, and Latin American communities.",
       diasporaNote: "Fredericton's Indo-Canadian, Filipino, and Latin American communities are anchored by cultural associations, gurdwara, and Catholic parishes that support newcomer integration.",
     },
-  },
+  }
 ];
 
 export const NEW_CITIES_PR: NewCity[] = [...NEW_INDIAN, ...NEW_CANADIAN];
@@ -606,7 +606,7 @@ export function buildPRCityEntries(): (CityData & { prContent: CityPRContent; ta
             `Study Permits with PGWP-to-PR pathways`,
             `WES & ECA credential evaluations`,
             `IELTS & CELPIP preparation guidance`,
-            `Family sponsorship after PR landing`,
+            `Family sponsorship after PR landing`
           ]
         : [
             `Express Entry CEC for current ${c.name} workers`,
@@ -615,7 +615,7 @@ export function buildPRCityEntries(): (CityData & { prContent: CityPRContent; ta
             `Study permit to PR transition (PGWP)`,
             `Family sponsorship (spouse, parents, children)`,
             `Citizenship application after PR`,
-            `Bridging Open Work Permit (BOWP) support`,
+            `Bridging Open Work Permit (BOWP) support`
           ],
       testimonial: {
         name: isIndia ? `${c.name} PR client` : `${c.name} CEC client`,

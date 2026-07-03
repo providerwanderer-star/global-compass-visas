@@ -150,7 +150,7 @@ const CRSCalculatorPage = () => {
     { name: "General", draw: latestGeneral },
     { name: "STEM", draw: latestSTEM },
     { name: "Healthcare", draw: latestHealth },
-    { name: "French", draw: latestFrench },
+    { name: "French", draw: latestFrench }
   ].filter((c) => c.draw);
 
   const breakdown = [
@@ -161,7 +161,7 @@ const CRSCalculatorPage = () => {
     { label: "Foreign Work Exp.", points: foreignExp, max: form.hasSpouse ? 38 : 38 },
     { label: "Canadian Work Exp.", points: canadianExp, max: 80 },
     { label: "Skill Transferability", points: skillTransfer, max: 100 },
-    { label: "Additional (PNP/Offer/etc)", points: additional, max: 600 },
+    { label: "Additional (PNP/Offer/etc)", points: additional, max: 600 }
   ];
 
   const getCutoffStatus = () => {
@@ -192,7 +192,6 @@ const CRSCalculatorPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -212,9 +211,9 @@ const CRSCalculatorPage = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
-                  { "@type": "ListItem", position: 2, name: "CRS Calculator", item: "https://www.gargbrothers.ca/crs-calculator" },
+                  { "@type": "ListItem", position: 2, name: "CRS Calculator", item: "https://www.gargbrothers.ca/crs-calculator" }
                 ],
-              },
+              }
             ],
           })}
         </script>
@@ -545,7 +544,7 @@ const CRSCalculatorPage = () => {
                 title: "Obtain Canadian Work Experience",
                 impact: "Up to +80 points",
                 desc: "1 year of skilled Canadian work experience adds 40 points. Combined with your foreign experience and language score, it creates powerful skill transferability bonuses.",
-              },
+              }
             ].map((tip, i) => (
               <motion.div
                 key={tip.title}
@@ -589,7 +588,7 @@ const CRSCalculatorPage = () => {
                   { clb: "CLB 7", l: "6.0", r: "6.0", w: "6.0", s: "6.0" },
                   { clb: "CLB 8", l: "7.5", r: "6.5", w: "6.5", s: "6.5" },
                   { clb: "CLB 9", l: "8.0", r: "7.0", w: "7.0", s: "7.0" },
-                  { clb: "CLB 10", l: "8.5", r: "8.0", w: "7.5", s: "7.5" },
+                  { clb: "CLB 10", l: "8.5", r: "8.0", w: "7.5", s: "7.5" }
                 ].map((row, i) => (
                   <tr key={row.clb} className={`border-t border-border ${i === 2 ? "bg-gold/5" : ""}`}>
                     <td className="px-4 py-3 font-bold text-primary">{row.clb}{i === 2 ? " ⭐" : ""}</td>
@@ -625,7 +624,7 @@ const CRSCalculatorPage = () => {
                   "PNP stream matching to your profile",
                   "IELTS coaching referrals",
                   "Canadian job offer connections",
-                  "Free — no obligation consultation",
+                  "Free — no obligation consultation"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-primary-foreground">
                     <CheckCircle className="h-4 w-4 text-gold shrink-0" />

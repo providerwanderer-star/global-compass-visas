@@ -53,7 +53,7 @@ const ProcessingTimePage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Processing Times", url: "/processing-times" },
-        { name: g.shortName, url: `/processing-time/${g.slug}` },
+        { name: g.shortName, url: `/processing-time/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

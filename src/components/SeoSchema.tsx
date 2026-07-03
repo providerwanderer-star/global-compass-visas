@@ -72,11 +72,7 @@ const SeoSchema = ({
       email: "sahil280389@gmail.com",
       availableLanguage: ["English", "Hindi", "Punjabi"],
     },
-    sameAs: [
-      "https://www.facebook.com/4acesvisa",
-      "https://www.instagram.com/4acesvisa",
-      "https://www.linkedin.com/company/4acesvisa",
-    ],
+    sameAs: [    ],
   };
 
   // LocalBusiness — appears on EVERY page so AI engines and local search
@@ -108,17 +104,13 @@ const SeoSchema = ({
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
+          "Saturday"
         ],
         opens: "09:00",
         closes: "18:00",
-      },
+      }
     ],
-    sameAs: [
-      "https://www.facebook.com/4acesvisa",
-      "https://www.instagram.com/4acesvisa",
-      "https://www.linkedin.com/company/4acesvisa",
-    ],
+    sameAs: [    ],
   };
 
   // Resolve breadcrumb trail: explicit > auto-from-URL > none

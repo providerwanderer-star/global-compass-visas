@@ -209,7 +209,7 @@ export const MOVE_CORRIDORS: MoveCorridor[] = [
     topIndustries: ["Mining / resources", "Tech", "Finance", "Healthcare"],
     programs: ["express-entry", "pnp"],
     timelineMonths: "6–12 months",
-  },
+  }
 ];
 
 export function getMoveCorridor(slug?: string) {

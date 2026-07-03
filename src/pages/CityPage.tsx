@@ -101,7 +101,7 @@ const CityPage = () => {
                     name: breadcrumbParentName,
                     item: breadcrumbParentItem,
                   },
-                  { "@type": "ListItem", position: 3, name: city.name, item: `https://www.gargbrothers.ca/city/${city.slug}` },
+                  { "@type": "ListItem", position: 3, name: city.name, item: `https://www.gargbrothers.ca/city/${city.slug}` }
                 ],
               },
               {
@@ -111,7 +111,7 @@ const CityPage = () => {
                   name: faq.question,
                   acceptedAnswer: { "@type": "Answer", text: faq.answer },
                 })),
-              },
+              }
             ],
           })}
         </script>
@@ -294,7 +294,7 @@ const CityPage = () => {
               { value: "98%", label: "Success Rate" },
               { value: "15,000+", label: "Visas Processed" },
               { value: "10+", label: "Years Experience" },
-              { value: "0", label: "Initial Assessment Cost" },
+              { value: "0", label: "Initial Assessment Cost" }
             ].map((stat) => (
               <motion.div
                 key={stat.label}

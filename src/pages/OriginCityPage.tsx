@@ -53,7 +53,7 @@ const OriginCityPage = () => {
       <SeoSchema
         breadcrumbs={[
           { name: `${countryData.name} to Canada`, url: `/${countryData.slug}` },
-          { name: `${cityData.name} to Canada`, url: `/from/${countryData.slug}/${cityData.slug}` },
+          { name: `${cityData.name} to Canada`, url: `/from/${countryData.slug}/${cityData.slug}` }
         ]}
       />
 

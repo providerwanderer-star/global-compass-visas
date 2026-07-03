@@ -49,7 +49,7 @@ const ProcedurePage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Procedures", url: "/procedure/biometrics-collection" },
-        { name: g.shortName, url: `/procedure/${g.slug}` },
+        { name: g.shortName, url: `/procedure/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

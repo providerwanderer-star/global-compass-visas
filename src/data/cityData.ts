@@ -130,7 +130,7 @@ const indianCities: CityData[] = [
       `Study Visa for Canada & Australia`,
       `Work Permits & LMIA Processing`,
       `Provincial Nominee Programs (PNP)`,
-      `Family Sponsorship & Visitor Visa`,
+      `Family Sponsorship & Visitor Visa`
     ],
     testimonial: {
       name: `Client from ${name}`,
@@ -141,7 +141,7 @@ const indianCities: CityData[] = [
       { question: `Who is the best immigration consultant in ${name}?`, answer: `Garg Brothers is rated among the top immigration consultants in ${name}, with a 98% success rate across Canada, Australia, and Germany immigration applications. We offer personalized pathway guidance, transparent pricing, and free initial assessments.` },
       { question: `How much does Canada PR cost from ${name}?`, answer: `Canada PR costs from ${name} include government fees (CAD 1,365), IELTS exam (~₹16,000), WES evaluation (~₹15,000), and consulting fees. Garg Brothers offers transparent all-inclusive packages. Book a free consultation for an exact quote.` },
       { question: `Can I apply for Australia PR from ${name}?`, answer: `Yes! Many professionals from ${name} qualify for Australia's skilled migration program. You need 65+ points, an occupation on the Skilled Occupation List, and a valid skills assessment. Our ${name} team handles the entire process.` },
-      { question: `What documents do I need for Germany visa from ${name}?`, answer: `For Germany Job Seeker Visa from ${name}, you need a recognized degree, proof of funds (~€11,208 blocked account), health insurance, and ideally B1 German proficiency. Contact our ${name} office for a document checklist.` },
+      { question: `What documents do I need for Germany visa from ${name}?`, answer: `For Germany Job Seeker Visa from ${name}, you need a recognized degree, proof of funds (~€11,208 blocked account), health insurance, and ideally B1 German proficiency. Contact our ${name} office for a document checklist.` }
     ],
   };
 });
@@ -218,7 +218,7 @@ const canadianCities: CityData[] = [
       `Citizenship Application`,
       `Provincial Nominee Program (PNP)`,
       `Study Permit & Post-Graduation Work Permit`,
-      `Visitor Visa & Super Visa`,
+      `Visitor Visa & Super Visa`
     ],
     testimonial: {
       name: `Client in ${name}`,
@@ -229,7 +229,7 @@ const canadianCities: CityData[] = [
       { question: `What immigration services are available in ${name}?`, answer: `Garg Brothers in ${name} offers Express Entry PR, work permits, family sponsorship, PNP applications, study permits, visitor visas, and citizenship guidance. Book a free consultation to discuss your specific needs.` },
       { question: `How long does PR processing take from ${name}?`, answer: `Express Entry PR processing from ${name} typically takes 6 months after receiving an Invitation to Apply (ITA). PNP-based applications may take 12-18 months. Our ${name} team expedites every step.` },
       { question: `Can I sponsor my family from ${name}?`, answer: `Yes! If you're a Canadian PR or citizen in ${name}, you can sponsor your spouse, common-law partner, parents, and dependent children. Processing times vary — spousal sponsorship takes about 12 months.` },
-      { question: `Do you offer in-person consultations in ${name}?`, answer: `Yes, Garg Brothers offers both in-person and virtual consultations in ${name}. Book a free initial assessment online or call our ${name} office.` },
+      { question: `Do you offer in-person consultations in ${name}?`, answer: `Yes, Garg Brothers offers both in-person and virtual consultations in ${name}. Book a free initial assessment online or call our ${name} office.` }
     ],
   };
 });
@@ -251,5 +251,5 @@ export const cities: CityData[] = [
   ...indianCities,
   ...canadianCities,
   ...newCityEntries,
-  ...newUSEntries,
+  ...newUSEntries
 ];

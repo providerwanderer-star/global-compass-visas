@@ -15,7 +15,7 @@ import { inDemandJobs } from "@/data/inDemandJobs";
 const SETTLEMENT_DEFAULT_SLUGS = [
   "get-sin-number",
   "open-bank-account",
-  "apply-health-card",
+  "apply-health-card"
 ];
 
 /** Map a NOC's industry → category-based draw label used on CRS pages. */
@@ -68,7 +68,7 @@ export function linksForNoc(nocCode: string, teer = 1): RelatedLink[] {
       label: "Latest Express Entry draws",
       sublabel: "Fresh CRS cut-offs each round",
       emoji: "📈",
-    },
+    }
   ];
 }
 
@@ -87,7 +87,7 @@ export function linksForOrigin(originSlug: string): RelatedLink[] {
       label: `Canada PR with CRS ${defaultBand.label}`,
       sublabel: "Most common range for skilled applicants",
       emoji: "📊",
-    },
+    }
   ];
 
   if (topNoc) {
@@ -199,6 +199,6 @@ export function linksForSettlement(currentSlug: string): RelatedLink[] {
       label: "Re-check your CRS",
       sublabel: "Boost your score with Canadian experience",
       emoji: "📊",
-    },
+    }
   ];
 }

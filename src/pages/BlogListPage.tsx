@@ -21,7 +21,7 @@ const categories = [
   { label: "Work Permit", value: "Work Permit" },
   { label: "Study Visa", value: "Study Visa" },
   { label: "Local Intent", value: "Local Intent" },
-  { label: "Immigration Guide", value: "Immigration Guide" },
+  { label: "Immigration Guide", value: "Immigration Guide" }
 ];
 
 const BlogListPage = () => {
@@ -48,7 +48,6 @@ const BlogListPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({

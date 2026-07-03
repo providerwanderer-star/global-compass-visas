@@ -35,10 +35,7 @@ export const authors: Record<string, Author> = {
       "The Garg Brothers Immigration Team has, over the last 12+ years, guided thousands of skilled workers, international students and families through Express Entry, PNP, LMIA-backed work permits, study permits and family sponsorship across Canada, Australia, the United Kingdom and Germany. The team writes and reviews every guide on this site to make sure the information matches what IRCC, the Department of Home Affairs, UK Home Office and BAMF actually publish — not what social media claims.",
     image: `${SITE}/og-default.jpg`,
     url: `${SITE}/about`,
-    sameAs: [
-      "https://www.linkedin.com/company/4acesvisa",
-      "https://www.facebook.com/4acesvisa",
-    ],
+    sameAs: [    ],
     email: "sahil280389@gmail.com",
     telephone: "+1-647-862-2190",
   },

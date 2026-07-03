@@ -126,7 +126,7 @@ const NOCDetailPage = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
       { "@type": "ListItem", position: 2, name: "NOC Finder", item: "https://www.gargbrothers.ca/noc-finder" },
-      { "@type": "ListItem", position: 3, name: `NOC ${noc.code} — ${noc.title}`, item: url },
+      { "@type": "ListItem", position: 3, name: `NOC ${noc.code} — ${noc.title}`, item: url }
     ],
   };
 
@@ -153,7 +153,7 @@ const NOCDetailPage = () => {
         "@type": "Question",
         name: `Which provinces hire ${noc.title}?`,
         acceptedAnswer: { "@type": "Answer", text: `Top hiring provinces: ${noc.topProvinces.join(", ")}.` },
-      },
+      }
     ],
   };
 
@@ -391,7 +391,7 @@ const NOCDetailPage = () => {
                     {[
                       { label: "Entry-level (low)", val: Math.round(noc.medianSalary * 0.75), pct: 60 },
                       { label: "Median", val: noc.medianSalary, pct: 80 },
-                      { label: "Experienced (high)", val: Math.round(noc.medianSalary * 1.25), pct: 100 },
+                      { label: "Experienced (high)", val: Math.round(noc.medianSalary * 1.25), pct: 100 }
                     ].map((b) => (
                       <div key={b.label}>
                         <div className="flex justify-between text-xs text-muted-foreground mb-1">

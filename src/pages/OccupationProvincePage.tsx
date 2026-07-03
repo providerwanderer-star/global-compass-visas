@@ -55,7 +55,7 @@ const OccupationProvincePage = () => {
     {
       q: `How long does PR take from profile to landing?`,
       a: `Express Entry CEC: typically 6–8 months after ITA. ${prov.abbr} PNP base stream: 12–18 months end-to-end including nomination. Add 2–4 months for Enhanced ${prov.abbr} PNP via Express Entry.`,
-    },
+    }
   ];
 
   const faqSchema = {
@@ -106,7 +106,7 @@ const OccupationProvincePage = () => {
         breadcrumbs={[
           { name: "Jobs & PR Pathways", url: "/" },
           { name: occ.name, url: `/jobs/${occ.slug}/${prov.slug}` },
-          { name: prov.name, url: `/jobs/${occ.slug}/${prov.slug}` },
+          { name: prov.name, url: `/jobs/${occ.slug}/${prov.slug}` }
         ]}
       />
 

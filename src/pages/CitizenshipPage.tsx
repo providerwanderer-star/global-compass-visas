@@ -49,7 +49,7 @@ const CitizenshipPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Citizenship", url: "/citizenship/eligibility-requirements" },
-        { name: g.shortName, url: `/citizenship/${g.slug}` },
+        { name: g.shortName, url: `/citizenship/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

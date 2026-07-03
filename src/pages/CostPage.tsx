@@ -53,7 +53,7 @@ const CostPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Cost Calculator", url: "/immigration-cost-calculator" },
-        { name: g.shortName, url: `/cost/${g.slug}` },
+        { name: g.shortName, url: `/cost/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

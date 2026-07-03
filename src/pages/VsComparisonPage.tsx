@@ -53,7 +53,7 @@ const VsComparisonPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Compare", url: "/compare" },
-        { name: g.shortName, url: `/vs/${g.slug}` },
+        { name: g.shortName, url: `/vs/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

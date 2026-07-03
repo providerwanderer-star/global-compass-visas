@@ -4545,6 +4545,6 @@ Present COPR and passport at Port of Entry. PR status activated. Receive SIN wit
 Language + credential assessment: 6-10 weeks parallel. Profile creation: 1-2 weeks. Pool wait: 2 weeks to 12 months. PR application preparation: 60 days. IRCC processing: 6 months. Total: 8-18 months.
 
 Contact Garg Brothers for a free assessment and realistic timeline for your profile.`
-  },
+  }
 
 ];

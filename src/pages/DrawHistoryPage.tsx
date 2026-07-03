@@ -74,7 +74,7 @@ const DrawHistoryPage = () => {
           "@type": "Answer",
           text: "Canada introduced category-based draws in 2023 to target occupations with the highest labour shortages. Instead of drawing purely by CRS score, IRCC selects candidates from specific fields like STEM or Healthcare. Category draws often have lower CRS cutoffs than General draws.",
         },
-      },
+      }
     ],
   };
 
@@ -96,7 +96,6 @@ const DrawHistoryPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -273,7 +272,7 @@ const DrawHistoryPage = () => {
               {
                 q: "What CRS score do I need for Express Entry in 2026?",
                 a: `General draws in 2026 have required roughly 505–515 CRS. Category draws (STEM, Healthcare) have required 431–482. Your target score depends on which category you fall into. Use our CRS Calculator to find your score.`,
-              },
+              }
             ].map(({ q, a }) => (
               <details key={q} className="group bg-card border border-border rounded-xl">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-foreground text-sm list-none">
@@ -292,7 +291,7 @@ const DrawHistoryPage = () => {
         sources={[
           { label: "IRCC — Express Entry rounds of invitations", href: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" },
           { label: "IRCC — Category-based selection", href: "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supporting-immigration-goals-federal-economic-priorities.html" },
-          { label: "CIMM Open Data Portal", href: "https://open.canada.ca/data/en/dataset/eed47533-e202-4d68-bb46-1d9a8d9c0307" },
+          { label: "CIMM Open Data Portal", href: "https://open.canada.ca/data/en/dataset/eed47533-e202-4d68-bb46-1d9a8d9c0307" }
         ]}
         caveat="CRS minimums and ITA counts are taken directly from IRCC's published rounds. Future-dated rounds reflect the most recent IRCC schedule and may shift."
       />

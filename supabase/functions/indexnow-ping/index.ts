@@ -85,7 +85,7 @@ Deno.serve(async (req) => {
     const msg = err instanceof Error ? err.message : "unknown error";
     console.error("[indexnow] error:", msg);
     return new Response(
-      JSON.stringify({ ok: false, error: msg }),
+      JSON.stringify({ ok: false, error: "Internal server error" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   }

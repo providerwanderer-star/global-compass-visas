@@ -272,6 +272,10 @@ const BlogPostPage = () => {
                 </details>
               )}
 
+              {OINP_LEGACY_POST_SLUGS.has(post.slug) && (
+                <StreamClosedNotice streamName="Ontario's 8 legacy OINP streams" />
+              )}
+
               {renderContent(post.content)}
 
               {/* Mid-content conversion */}

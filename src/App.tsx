@@ -84,6 +84,7 @@ import PrMaintenancePage from "@/pages/PrMaintenancePage";
 import PackagesPage from "@/pages/PackagesPage";
 import PrivacyPage from "@/pages/PrivacyPage";
 import TermsPage from "@/pages/TermsPage";
+import OntarioWorkforcePriorityStreamPage from "@/pages/OntarioWorkforcePriorityStreamPage";
 
 const queryClient = new QueryClient();
 
@@ -133,6 +134,7 @@ const App = () => (
               <Route path="/noc-finder" element={<NOCFinderPage />} />
               <Route path="/express-entry/draws" element={<DrawHistoryPage />} />
               <Route path="/pnp-tracker" element={<PNPTrackerPage />} />
+              <Route path="/pnp/ontario/workforce-priority-stream" element={<OntarioWorkforcePriorityStreamPage />} />
               <Route path="/processing-times" element={<ProcessingTimesPage />} />
               <Route path="/immigration-cost-calculator" element={<ImmigrationCostPage />} />
               <Route path="/tools" element={<ToolsHubPage />} />

@@ -129,7 +129,7 @@ const LmiaPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Need an LMIA-backed job offer?</h2>
-              <p className="mt-2 text-muted-foreground">our team helps employers and candidates secure LMIA approvals — book a free assessment.</p>
+              <p className="mt-2 text-muted-foreground">Our team helps employers and candidates secure LMIA approvals — book a free assessment.</p>
             </div>
             <EligibilityForm sourcePage={`lmia-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "lmia" }} />
           </div>

@@ -125,7 +125,7 @@ const PilotPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Want PR via a regional pilot?</h2>
-              <p className="mt-2 text-muted-foreground">our team matches candidates with designated employers and communities. Book a free consult.</p>
+              <p className="mt-2 text-muted-foreground">Our team matches candidates with designated employers and communities. Book a free consult.</p>
             </div>
             <EligibilityForm sourcePage={`pilot-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "pr" }} />
           </div>

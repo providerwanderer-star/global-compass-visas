@@ -125,7 +125,7 @@ const PgwpPrPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">From PGWP to Canadian PR</h2>
-              <p className="mt-2 text-muted-foreground">our team maps your fastest PGWP-to-PR path. Book a free consult before your permit clock runs out.</p>
+              <p className="mt-2 text-muted-foreground">Our team maps your fastest PGWP-to-PR path. Book a free consult before your permit clock runs out.</p>
             </div>
             <EligibilityForm sourcePage={`pgwp-pr-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "express-entry" }} />
           </div>

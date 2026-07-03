@@ -144,7 +144,7 @@ const CostPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Get a personalised quote</h2>
-              <p className="mt-2 text-muted-foreground">our team will price out your specific case — no obligation.</p>
+              <p className="mt-2 text-muted-foreground">Our team will price out your specific case — no obligation.</p>
             </div>
             <EligibilityForm sourcePage={`cost-${g.slug}`} heading={g.shortName} />
           </div>

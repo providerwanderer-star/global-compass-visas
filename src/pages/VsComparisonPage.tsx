@@ -133,7 +133,7 @@ const VsComparisonPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Not sure which to pick?</h2>
-              <p className="mt-2 text-muted-foreground">our team will recommend the right path based on your profile — free.</p>
+              <p className="mt-2 text-muted-foreground">Our team will recommend the right path based on your profile — free.</p>
             </div>
             <EligibilityForm sourcePage={`vs-${g.slug}`} heading={g.shortName} />
           </div>

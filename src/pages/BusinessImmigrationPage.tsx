@@ -125,7 +125,7 @@ const BusinessImmigrationPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Building a business case for Canada?</h2>
-              <p className="mt-2 text-muted-foreground">our team prepares investor and entrepreneur applications end-to-end. Book a free consult.</p>
+              <p className="mt-2 text-muted-foreground">Our team prepares investor and entrepreneur applications end-to-end. Book a free consult.</p>
             </div>
             <EligibilityForm sourcePage={`business-${g.slug}`} heading={g.shortName} defaultValues={{ visa_type: "business" }} />
           </div>

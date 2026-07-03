@@ -148,7 +148,7 @@ const SponsorshipPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="text-2xl font-bold text-foreground md:text-3xl">Free sponsorship eligibility check</h2>
-              <p className="mt-2 text-muted-foreground">our team will assess sponsor + applicant eligibility, documents and timeline — no cost.</p>
+              <p className="mt-2 text-muted-foreground">Our team will assess sponsor + applicant eligibility, documents and timeline — no cost.</p>
             </div>
             <EligibilityForm sourcePage={`sponsor-${p.slug}`} heading={p.shortName} />
           </div>

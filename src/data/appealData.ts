@@ -51,17 +51,17 @@ export const APPEALS: Record<AppealSlug, AppealGuide> = {
       "Order the GCMS notes and Certified Tribunal Record once leave is perfected",
       "File the Applicant's Record with Memorandum of Argument within 30 days",
       "Federal Court grants or denies leave on paper (no hearing at this stage)",
-      "If leave granted, oral hearing scheduled; outcome is usually a redetermination order, not a visa",
+      "If leave granted, oral hearing scheduled; outcome is usually a redetermination order, not a visa"
     ],
     [
       "Missing the 15/60-day deadline — extensions are rare",
       "Filing without ordering GCMS notes first — you can't argue the record you haven't seen",
       "Expecting the court to issue your visa — it can only send the file back to IRCC",
-      "Self-represented applicants often miss the Memorandum-of-Argument requirement",
+      "Self-represented applicants often miss the Memorandum-of-Argument requirement"
     ],
     [
       ["Will I get my visa if I win at Federal Court?", "No — the court sends the file back to IRCC for a new decision by a different officer. The redetermination may still be a refusal."],
-      ["Can I reapply instead of going to Federal Court?", "Often yes, and it's faster + cheaper. JR makes sense when the refusal was legally unreasonable or you want to preserve the original record."],
+      ["Can I reapply instead of going to Federal Court?", "Often yes, and it's faster + cheaper. JR makes sense when the refusal was legally unreasonable or you want to preserve the original record."]
     ],
   ),
   "irb-appeal-division": mk(
@@ -79,17 +79,17 @@ export const APPEALS: Record<AppealSlug, AppealGuide> = {
       "IRCC files the Appeal Record (refusal reasons + evidence)",
       "Appellant files counter-disclosure: relationship evidence, H&C factors, hardship",
       "Alternative Dispute Resolution conference or full hearing",
-      "IAD allows, dismisses, or stays the appeal with conditions",
+      "IAD allows, dismisses, or stays the appeal with conditions"
     ],
     [
       "Missing the 30-day deadline (rare extensions only with serious explanation)",
       "Going to hearing without an ADR attempt — IAD prefers settlement",
       "Weak H&C evidence — best-interest-of-child and establishment letters are critical",
-      "Failing to update IAD on address changes — appeal can be declared abandoned",
+      "Failing to update IAD on address changes — appeal can be declared abandoned"
     ],
     [
       ["What's the difference between IAD and Federal Court?", "IAD is a full re-hearing with new evidence and H&C powers. Federal Court only reviews the original decision for legal errors."],
-      ["Can I appeal to IAD if I'm a foreign national, not a PR?", "Generally no — IAD jurisdiction is limited to PRs, sponsors and protected persons. Foreign nationals must use Federal Court JR."],
+      ["Can I appeal to IAD if I'm a foreign national, not a PR?", "Generally no — IAD jurisdiction is limited to PRs, sponsors and protected persons. Foreign nationals must use Federal Court JR."]
     ],
   ),
   "refused-study-permit-appeal": mk(
@@ -107,17 +107,17 @@ export const APPEALS: Record<AppealSlug, AppealGuide> = {
       "Decide path: reconsideration (if officer overlooked evidence) vs JR (legal error) vs reapply (most common)",
       "For reapplication: address each refusal reason in a new study plan + stronger financials + ties",
       "Submit through your IRCC account; new application = new processing time",
-      "Track decision; if refused again, JR becomes more viable",
+      "Track decision; if refused again, JR becomes more viable"
     ],
     [
       "Reapplying with the exact same documents — IRCC sees prior file",
       "Filing JR without GCMS notes — you're arguing blind",
       "Ignoring the dual intent issue — students refused for 'not leaving Canada' must address it explicitly",
-      "Missing the 60-day Federal Court deadline while waiting on reconsideration",
+      "Missing the 60-day Federal Court deadline while waiting on reconsideration"
     ],
     [
       ["Should I do reconsideration or just reapply?", "Reconsideration almost never succeeds. Reapply with a stronger file that directly answers each refusal reason — that's the fastest fix."],
-      ["Is there an internal IRCC appeal for study permits?", "No — study permits have no IAD appeal route. Only options are reconsideration, JR at Federal Court, or reapplication."],
+      ["Is there an internal IRCC appeal for study permits?", "No — study permits have no IAD appeal route. Only options are reconsideration, JR at Federal Court, or reapplication."]
     ],
   ),
   "refused-work-permit-appeal": mk(
@@ -135,17 +135,17 @@ export const APPEALS: Record<AppealSlug, AppealGuide> = {
       "If LMIA is still valid: reapply with a stronger genuineness letter from employer",
       "If genuineness or dual-intent issue: address it head-on in a cover letter",
       "If legal error on the record: file JR within deadline",
-      "Keep status if inside Canada — apply for visitor record while planning next step",
+      "Keep status if inside Canada — apply for visitor record while planning next step"
     ],
     [
       "Letting status expire while waiting for the next decision — leads to restoration issues",
       "Filing JR while reapplying — court will likely dismiss as moot",
       "Ignoring the dual-intent finding — must include PR pathway intent and ties",
-      "Not asking employer for an updated/strengthened offer letter",
+      "Not asking employer for an updated/strengthened offer letter"
     ],
     [
       ["Can I work while my reapplication is being processed?", "Only if you had implied or maintained status. Once your original work permit expires, you generally cannot work until a new permit is issued."],
-      ["Does a work permit refusal affect future applications?", "It must be disclosed but isn't a permanent bar. A well-prepared reapplication that addresses the refusal reasons can succeed."],
+      ["Does a work permit refusal affect future applications?", "It must be disclosed but isn't a permanent bar. A well-prepared reapplication that addresses the refusal reasons can succeed."]
     ],
   ),
   "refused-pr-appeal": mk(
@@ -163,17 +163,17 @@ export const APPEALS: Record<AppealSlug, AppealGuide> = {
       "Identify whether the refusal is curable (proof of funds, language) or hard (criminality, misrep)",
       "For misrepresentation: JR is often the only option — 5-year bar applies otherwise",
       "For curable issues: rebuild EE profile or new PNP nomination and create a fresh ITA",
-      "If JR succeeds, file is redetermined by a new officer",
+      "If JR succeeds, file is redetermined by a new officer"
     ],
     [
       "Treating a misrepresentation finding as a simple error — it carries a 5-year bar",
       "Reapplying without addressing the original refusal ground",
       "Not responding to a PFL within the deadline (usually 7-30 days)",
-      "Ignoring medical inadmissibility instead of seeking mitigation letters / rehab",
+      "Ignoring medical inadmissibility instead of seeking mitigation letters / rehab"
     ],
     [
       ["Is there an appeal for refused Express Entry PR?", "No internal appeal. Only Federal Court JR or a new ITA via a fresh profile or PNP nomination."],
-      ["What if I'm found inadmissible for misrepresentation?", "Standard consequence is a 5-year ban from applying. JR is usually the only way to set aside the finding."],
+      ["What if I'm found inadmissible for misrepresentation?", "Standard consequence is a 5-year ban from applying. JR is usually the only way to set aside the finding."]
     ],
   ),
   "sponsorship-appeal": mk(
@@ -191,17 +191,17 @@ export const APPEALS: Record<AppealSlug, AppealGuide> = {
       "IRCC files Appeal Record with refusal reasons (often genuineness / primary purpose)",
       "Sponsor files counter-disclosure: photos, communication logs, joint finances, travel history",
       "Attend ADR conference — many spousal appeals settle here",
-      "If no settlement, full hearing with both spouses testifying",
+      "If no settlement, full hearing with both spouses testifying"
     ],
     [
       "Thin relationship evidence — IAD wants continuity, not just a wedding album",
       "Excluded family member trap (R117(9)(d)) — undeclared dependants can bar future sponsorship",
       "Inconsistent testimony between sponsor and applicant at hearing",
-      "Missing the 30-day deadline — almost no extensions",
+      "Missing the 30-day deadline — almost no extensions"
     ],
     [
       ["Can my spouse come to Canada while we wait for the appeal?", "Not automatically. Some applicants apply for a TRV in parallel; success depends on showing genuine ties and intent to leave if needed."],
-      ["What if my parent sponsorship was refused on income?", "Income refusals can be appealed on H&C grounds — best-interest-of-child, hardship, family reunification all weigh in."],
+      ["What if my parent sponsorship was refused on income?", "Income refusals can be appealed on H&C grounds — best-interest-of-child, hardship, family reunification all weigh in."]
     ],
   ),
   "removal-order-appeal": mk(
@@ -219,17 +219,17 @@ export const APPEALS: Record<AppealSlug, AppealGuide> = {
       "Apply for a stay of removal while appeal is pending",
       "Gather H&C evidence: establishment, family ties, best interests of children, rehabilitation",
       "Attend hearing or ADR — IAD weighs Ribic factors heavily for criminal cases",
-      "Outcome: appeal allowed, dismissed, or stayed with conditions for 3-5 years",
+      "Outcome: appeal allowed, dismissed, or stayed with conditions for 3-5 years"
     ],
     [
       "Conviction with sentence of 6+ months strips IAD appeal rights — only Federal Court JR remains",
       "Filing late — strict 30-day deadline",
       "Weak rehabilitation evidence for criminal appeals — need counseling, employment, community support",
-      "Failing to disclose ongoing criminal matters during the appeal",
+      "Failing to disclose ongoing criminal matters during the appeal"
     ],
     [
       ["Can I appeal if my crime had a 7-month sentence?", "No — section 64 of IRPA strips IAD appeal rights for serious criminality (sentence of 6 months or more, or offence punishable by 10+ years). Only Federal Court JR remains."],
-      ["What is a stay of removal?", "The IAD pauses removal for 3-5 years with conditions (reporting, no further offences). If you comply, the appeal may eventually be allowed."],
+      ["What is a stay of removal?", "The IAD pauses removal for 3-5 years with conditions (reporting, no further offences). If you comply, the appeal may eventually be allowed."]
     ],
   ),
   "h-and-c-application": mk(
@@ -247,17 +247,17 @@ export const APPEALS: Record<AppealSlug, AppealGuide> = {
       "Document establishment: employment, taxes, community, language, volunteering",
       "Best-interest-of-child analysis for any Canadian or established children",
       "Hardship analysis: country conditions, medical, family separation",
-      "Wait 24-36 months; if approved, PR is granted in stages",
+      "Wait 24-36 months; if approved, PR is granted in stages"
     ],
     [
       "Thin establishment evidence — needs 3-5+ years of community ties typically",
       "Generic country-condition documents without personal nexus",
       "Missing the best-interest-of-child analysis for kids in Canada",
-      "Filing H&C as a substitute for a refused refugee claim within 12 months (bar applies)",
+      "Filing H&C as a substitute for a refused refugee claim within 12 months (bar applies)"
     ],
     [
       ["Does H&C give me work authorization while waiting?", "Not automatically. You may apply for an open work permit after passing the first stage of H&C, typically 12+ months in."],
-      ["Can I be removed while my H&C is pending?", "Yes — H&C does not stay removal. You must file a separate deferral request or stay motion if removal is scheduled."],
+      ["Can I be removed while my H&C is pending?", "Yes — H&C does not stay removal. You must file a separate deferral request or stay motion if removal is scheduled."]
     ],
   ),
 };

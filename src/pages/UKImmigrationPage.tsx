@@ -16,21 +16,21 @@ type Variant = {
 
 const VARIANTS: Record<string, Variant> = {
   "/uk/skilled-worker": {
-    title: "UK Skilled Worker Visa 2026 — Sponsorship, Salary & ILR Guide | 4 Aces Visa",
+    title: "UK Skilled Worker Visa 2026 — Sponsorship, Salary & ILR Guide | Garg Brothers",
     h1: "UK Skilled Worker Visa 2026",
     description:
       "Complete UK Skilled Worker Visa guide for 2026. £26,200 minimum salary, 70-point requirement, licensed sponsor list, processing times and 5-year ILR pathway. Expert RCIC guidance.",
-    canonical: "https://www.4acesvisa.com/uk/skilled-worker",
+    canonical: "https://www.gargbrothers.ca/uk/skilled-worker",
     intro:
       "The UK's main work visa for international skilled professionals with a job offer. 70-point requirement, £26,200 minimum salary, leads to Indefinite Leave to Remain after 5 years.",
     breadcrumbName: "Skilled Worker Visa",
   },
   "/uk/graduate-route": {
-    title: "UK Graduate Route Visa 2026 — 2-Year Post-Study Work | 4 Aces Visa",
+    title: "UK Graduate Route Visa 2026 — 2-Year Post-Study Work | Garg Brothers",
     h1: "UK Graduate Route Visa 2026",
     description:
       "UK Graduate Route lets international graduates work in the UK for 2 years (3 for PhD) with no job offer or salary requirement. Switch to Skilled Worker for ILR. Eligibility & application steps.",
-    canonical: "https://www.4acesvisa.com/uk/graduate-route",
+    canonical: "https://www.gargbrothers.ca/uk/graduate-route",
     intro:
       "Stay and work in the UK for 2 years (3 for PhD) after graduating from a UK university — no sponsor, no job offer, no salary threshold. The smartest stepping stone to a Skilled Worker visa and ILR.",
     breadcrumbName: "Graduate Route",
@@ -50,7 +50,7 @@ const routes = [
       "Certificate of Sponsorship (CoS)",
       "Salary: £26,200+ or going rate (whichever higher)",
       "English: B1 level minimum",
-      "Score 70 points total",
+      "Score 70 points total"
     ],
     processing: "3–8 weeks",
     iLRPath: "5 years",
@@ -66,7 +66,7 @@ const routes = [
       "Held a valid Student Visa at time of application",
       "Apply from within the UK",
       "No job offer required",
-      "No minimum salary requirement",
+      "No minimum salary requirement"
     ],
     processing: "8 weeks",
     iLRPath: "Transition to Skilled Worker → 5 years to ILR",
@@ -81,12 +81,12 @@ const routes = [
       "Endorsement from approved body (Tech Nation, Royal Society, etc.)",
       "Recognized leader OR exceptional promise",
       "No job offer required",
-      "No minimum salary requirement",
+      "No minimum salary requirement"
     ],
     processing: "3–8 weeks",
     iLRPath: "3 years (exceptional talent) or 5 years (exceptional promise)",
     link: "/immigration/uk",
-  },
+  }
 ];
 
 const pointsBreakdown = [
@@ -96,7 +96,7 @@ const pointsBreakdown = [
   { criterion: "Salary ≥ £26,200/year or going rate", points: 20, mandatory: false },
   { criterion: "PhD in job-relevant subject", points: 10, mandatory: false },
   { criterion: "Shortage occupation role", points: 20, mandatory: false },
-  { criterion: "New entrant + PhD + shortage occupation", points: 20, mandatory: false },
+  { criterion: "New entrant + PhD + shortage occupation", points: 20, mandatory: false }
 ];
 
 const faqs = [
@@ -119,7 +119,7 @@ const faqs = [
   {
     q: "How long does it take to get permanent residence (ILR) in the UK?",
     a: "ILR (Indefinite Leave to Remain) is available after 5 continuous years of legal UK residence on a Skilled Worker Visa. Requirements include: passing the Life in the UK test, demonstrating English proficiency, not having been absent from the UK for more than 180 days in any 12-month period, and having no serious criminal convictions.",
-  },
+  }
 ];
 
 export default function UKImmigrationPage() {
@@ -153,7 +153,7 @@ export default function UKImmigrationPage() {
       <SeoSchema
         breadcrumbs={[
           { name: "UK Immigration", url: "/uk/skilled-worker" },
-          { name: variant.breadcrumbName, url: location.pathname },
+          { name: variant.breadcrumbName, url: location.pathname }
         ]}
       />
 
@@ -173,7 +173,7 @@ export default function UKImmigrationPage() {
                 { label: "Points Threshold", value: "70 pts" },
                 { label: "Min. Salary", value: "£26,200" },
                 { label: "ILR After", value: "5 years" },
-                { label: "Post-Study Work", value: "2–3 years" },
+                { label: "Post-Study Work", value: "2–3 years" }
               ].map((stat, i) => (
                 <div key={i} className="bg-white/20 rounded-xl px-6 py-3">
                   <div className="text-2xl font-bold">{stat.value}</div>
@@ -275,7 +275,7 @@ export default function UKImmigrationPage() {
               { year: "Year 0", title: "Arrive on Skilled Worker Visa", desc: "Job offer secured, CoS issued, visa approved. Salary: £26,200+. Bring family on Dependant visa." },
               { year: "Years 1–4", title: "Build UK Work Experience", desc: "Progress in your career. Spouse works freely. Children access free state education. NHS healthcare available." },
               { year: "Year 5", title: "Apply for ILR (Indefinite Leave to Remain)", desc: "Pass Life in the UK test, confirm English, prove continuous residence (max 180 days/year absent). Fee: £2,885." },
-              { year: "Year 6", title: "Apply for British Citizenship", desc: "1 year after ILR (6 years total in UK). Pass citizenship test. Dual citizenship allowed — no need to renounce Indian passport if India allows dual citizenship." },
+              { year: "Year 6", title: "Apply for British Citizenship", desc: "1 year after ILR (6 years total in UK). Pass citizenship test. Dual citizenship allowed — no need to renounce Indian passport if India allows dual citizenship." }
             ].map((step, i) => (
               <div key={i} className="relative pl-16 pb-8 last:pb-0">
                 <div className="absolute left-3 w-6 h-6 bg-blue-600 rounded-full text-white text-xs flex items-center justify-center font-bold">{i + 1}</div>
@@ -309,7 +309,7 @@ export default function UKImmigrationPage() {
       <section className="py-16 px-4 bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Need Help with UK Immigration?</h2>
-          <p className="text-blue-100 mb-8">4 Aces Visa provides expert guidance on Skilled Worker Visa applications, Graduate Route, and ILR. Free assessment with our UK immigration specialists.</p>
+          <p className="text-blue-100 mb-8">Garg Brothers provides expert guidance on Skilled Worker Visa applications, Graduate Route, and ILR. Free assessment with our UK immigration specialists.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-blue-800 hover:bg-blue-50">
               <Link to="/contact">Free UK Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>

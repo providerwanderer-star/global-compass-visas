@@ -41,7 +41,7 @@ export const expressEntryDraws: DrawRecord[] = [
   { drawNumber: 316, date: "March 26, 2025",    category: "General",     crsMin: 519, itas: 3500 },
   { drawNumber: 315, date: "March 12, 2025",    category: "Agriculture", crsMin: 358, itas: 450  },
   { drawNumber: 314, date: "February 26, 2025", category: "STEM",        crsMin: 477, itas: 1600 },
-  { drawNumber: 313, date: "February 12, 2025", category: "General",     crsMin: 522, itas: 3700 },
+  { drawNumber: 313, date: "February 12, 2025", category: "General",     crsMin: 522, itas: 3700 }
 ];
 
 export const drawCategories = ["All", "General", "STEM", "Healthcare", "Trades", "Transport", "Agriculture", "French", "Education"] as const;

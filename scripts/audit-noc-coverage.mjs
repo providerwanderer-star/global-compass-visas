@@ -130,7 +130,7 @@ const PRIORITY_GROUPS = ["21", "22", "31", "32", "33", "41", "42", "44", "62", "
 const priorityGaps = eeGaps.filter((r) => PRIORITY_GROUPS.includes(r.code.slice(0, 2)));
 
 // ── Report ───────────────────────────────────────────────────────────────────
-console.log("\n📋 4 Aces Visa — NOC Coverage Audit");
+console.log("\n📋 Garg Brothers — NOC Coverage Audit");
 console.log("══════════════════════════════════════════════════════════");
 console.log(`Curated NOCs              : ${ourCodes.size}`);
 console.log(`ESDC NOC 2021 master      : ${masterRows.length} unit groups`);

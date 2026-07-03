@@ -31,7 +31,7 @@ const CountdownTimer = ({ targetDate, label = "Next Express Entry Draw" }: Count
     { value: timeLeft.days, label: "Days" },
     { value: timeLeft.hours, label: "Hours" },
     { value: timeLeft.minutes, label: "Min" },
-    { value: timeLeft.seconds, label: "Sec" },
+    { value: timeLeft.seconds, label: "Sec" }
   ];
 
   return (

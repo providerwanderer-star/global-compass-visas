@@ -6,10 +6,10 @@ import SeoSchema from "@/components/SeoSchema";
 import EligibilityForm from "@/components/EligibilityForm";
 
 const SettlementHubPage = () => {
-  const title = "Settle in Canada — Newcomer Step-by-Step Hub (2026) | 4 Aces Visa";
+  const title = "Settle in Canada — Newcomer Step-by-Step Hub (2026) | Garg Brothers";
   const description =
     "Everything you need after landing: SIN, banking, healthcare, housing, schools, driver's licence. Free step-by-step guides from licensed RCIC consultants.";
-  const canonical = "https://www.4acesvisa.com/settle-in-canada";
+  const canonical = "https://www.gargbrothers.ca/settle-in-canada";
 
   const itemListLd = {
     "@context": "https://schema.org",
@@ -17,7 +17,7 @@ const SettlementHubPage = () => {
     itemListElement: settlementGuides.map((g, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `https://www.4acesvisa.com/settle-in-canada/${g.slug}`,
+      url: `https://www.gargbrothers.ca/settle-in-canada/${g.slug}`,
       name: g.topic,
     })),
   };

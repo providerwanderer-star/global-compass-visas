@@ -18,7 +18,7 @@ import {
   getMoveProgram,
 } from "@/data/moveCorridorData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 const MoveCorridorPage = () => {
   const { corridor: corridorSlug, program: programSlug } = useParams<{
@@ -34,7 +34,7 @@ const MoveCorridorPage = () => {
 
   const canonical = `${SITE}/move/${corridor.slug}/${program.slug}`;
   const headline = `${corridor.origin.name} to ${corridor.destination.name} via ${program.shortName}`;
-  const metaTitle = `${corridor.origin.name} → ${corridor.destination.name} on ${program.shortName} (${new Date().getFullYear()}) | 4 Aces Visa`;
+  const metaTitle = `${corridor.origin.name} → ${corridor.destination.name} on ${program.shortName} (${new Date().getFullYear()}) | Garg Brothers`;
   const metaDescription = `Step-by-step guide for moving from ${corridor.origin.name}, ${corridor.origin.country} to ${corridor.destination.name}, ${corridor.destination.province} on the ${program.name}. Cost, timeline, eligibility, and FAQs.`;
 
   // Steps templated per program
@@ -44,28 +44,28 @@ const MoveCorridorPage = () => {
       { t: "Create Express Entry profile", d: `Submit your profile online. Your CRS score is calculated based on age, education, work experience, language and any provincial nomination.` },
       { t: "Wait for ITA in a draw", d: `Recent CEC / FSW draw cut-offs sit between 480 and 540. Profiles below this should target a PNP boost.` },
       { t: "Submit complete PR application", d: `60 days to upload PCC, medicals, employment proofs, IELTS, ECA, fees (CAD ~1,365 single / ~2,710 couple).` },
-      { t: "Land in ${corridor.destination.name}", d: `Most ${corridor.origin.name} → ${corridor.destination.name} files complete in ${corridor.timelineMonths}.` },
+      { t: "Land in ${corridor.destination.name}", d: `Most ${corridor.origin.name} → ${corridor.destination.name} files complete in ${corridor.timelineMonths}.` }
     ],
     pnp: [
       { t: "Pick the right province", d: `From ${corridor.origin.name}, the strongest PNP routes are Ontario OINP Tech, BC PNP Tech and Alberta AAIP — based on your NOC and job offer status.` },
       { t: "Express Entry profile + EOI", d: `Create an EE profile and an Expression of Interest in the chosen province's portal.` },
       { t: "Provincial nomination", d: `Nomination = +600 CRS points. After this, an ITA in the next federal draw is virtually guaranteed.` },
       { t: "Federal PR application", d: `Submit complete PR file with PCC, medicals, proofs and fees.` },
-      { t: "Move to ${corridor.destination.province}", d: `Most PNP-backed PR files land in ${corridor.timelineMonths}.` },
+      { t: "Move to ${corridor.destination.province}", d: `Most PNP-backed PR files land in ${corridor.timelineMonths}.` }
     ],
     "study-permit": [
       { t: "Shortlist DLI colleges in ${corridor.destination.province}", d: `Target public colleges and universities — required for PGWP eligibility under the latest IRCC rules.` },
       { t: "Get LOA + GIC + IELTS", d: `Pay first-year tuition, lock CAD 20,635 GIC, score IELTS 6.0+ overall (no band below 6.0 for SDS).` },
       { t: "Apply via SDS", d: `Study Direct Stream gives ${corridor.origin.country} students a faster, more predictable decision.` },
       { t: "Land, study, and work part-time", d: `Up to 24 hrs/week off-campus during studies as of late 2024 rules.` },
-      { t: "PGWP → CEC PR", d: `Graduates get a 1–3 year open work permit and qualify for Canadian Experience Class PR after 1 year of skilled NOC TEER 0/1/2/3 work.` },
+      { t: "PGWP → CEC PR", d: `Graduates get a 1–3 year open work permit and qualify for Canadian Experience Class PR after 1 year of skilled NOC TEER 0/1/2/3 work.` }
     ],
     "work-permit": [
       { t: "Find a Canadian employer", d: `Target ${corridor.destination.name} employers in ${corridor.topIndustries.slice(0, 2).join(" and ")} — Global Talent Stream covers most NOC 21231/21234/21311 roles.` },
       { t: "LMIA or LMIA-exempt offer", d: `GTS LMIAs are issued in ~10 business days. ICT, CUSMA and Free-Trade exemptions skip LMIA entirely.` },
       { t: "Apply for the work permit", d: `${corridor.origin.country} nationals: standard processing 8–12 weeks; GTS 2 weeks via the 2-Week Service Standard.` },
       { t: "Land and start working", d: `Spouse gets an open work permit; kids get free K-12 schooling.` },
-      { t: "Convert to PR via CEC / PNP", d: `After 12 months of skilled work, file CEC Express Entry or use the employer-driven PNP stream.` },
+      { t: "Convert to PR via CEC / PNP", d: `After 12 months of skilled work, file CEC Express Entry or use the employer-driven PNP stream.` }
     ],
   };
 
@@ -91,7 +91,7 @@ const MoveCorridorPage = () => {
     {
       q: `What if my CRS / English score is low?`,
       a: `We map you to a PNP, study-permit-to-PR or LMIA-backed work permit instead. There's almost always a legal pathway — it just may not be the one you started with.`,
-    },
+    }
   ];
 
   const faqSchema = {
@@ -132,7 +132,7 @@ const MoveCorridorPage = () => {
             name: `${corridor.origin.name} → ${corridor.destination.name}`,
             url: `/move/${corridor.slug}/${corridor.programs[0]}`,
           },
-          { name: program.shortName, url: `/move/${corridor.slug}/${program.slug}` },
+          { name: program.shortName, url: `/move/${corridor.slug}/${program.slug}` }
         ]}
       />
 

@@ -13,7 +13,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getCityIndustry, CITY_INDUSTRIES } from "@/data/cityIndustryData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const CityIndustryPage = () => {
@@ -24,15 +24,15 @@ const CityIndustryPage = () => {
 
   const canonical = `${SITE}/city/${ci.city}/${ci.industry}`;
   const headline = `${ci.industryShort} Jobs & Immigration in ${ci.cityName}, ${ci.province} (${YEAR})`;
-  const metaTitle = `${ci.industryShort} Jobs in ${ci.cityName} ${YEAR} — Employers, Wage, PR | 4 Aces Visa`;
-  const metaDescription = `${ci.industryName} in ${ci.cityName}, ${ci.province}: top employers, in-demand NOCs, median wage ${ci.medianWageCAD} and the ${ci.pnpStream} pathway. 4 Aces Visa Immigration Team.`;
+  const metaTitle = `${ci.industryShort} Jobs in ${ci.cityName} ${YEAR} — Employers, Wage, PR | Garg Brothers`;
+  const metaDescription = `${ci.industryName} in ${ci.cityName}, ${ci.province}: top employers, in-demand NOCs, median wage ${ci.medianWageCAD} and the ${ci.pnpStream} pathway. Garg Brothers Immigration Team.`;
 
   const faqs = [
     { q: `Is ${ci.industryShort.toLowerCase()} hiring in ${ci.cityName}?`, a: `Yes — top employers include ${ci.topEmployers.slice(0, 4).join(", ")}. Median wage is ${ci.medianWageCAD}.` },
     { q: `Which PR pathway works best?`, a: `${ci.pnpStream} is the most direct provincial route. Express Entry CEC works once you have 12 months of skilled work in Canada.` },
     { q: `What are the in-demand NOC codes?`, a: `${ci.inDemandNocs.map((n) => `NOC ${n.code} (${n.title})`).join(", ")} are currently in highest demand for ${ci.industryShort.toLowerCase()} in ${ci.cityName}.` },
     { q: `What's it like settling in ${ci.cityName}?`, a: ci.settlementNote },
-    { q: `Do I need a job offer to immigrate?`, a: `Not always. Express Entry doesn't require a job offer (though it adds points). Most ${ci.pnpStream.split("—")[0].trim()} streams do require an offer.` },
+    { q: `Do I need a job offer to immigrate?`, a: `Not always. Express Entry doesn't require a job offer (though it adds points). Most ${ci.pnpStream.split("—")[0].trim()} streams do require an offer.` }
   ];
 
   const faqSchema = {
@@ -50,8 +50,8 @@ const CityIndustryPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
 
@@ -73,7 +73,7 @@ const CityIndustryPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: ci.cityName, url: `/city/${ci.city}` },
-        { name: ci.industryShort, url: `/city/${ci.city}/${ci.industry}` },
+        { name: ci.industryShort, url: `/city/${ci.city}/${ci.industry}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

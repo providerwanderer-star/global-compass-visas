@@ -8,7 +8,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getRestoration, RESTORATION_LIST } from "@/data/restorationData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const RestorationPage = () => {
@@ -18,7 +18,7 @@ const RestorationPage = () => {
 
   const canonical = `${SITE}/restoration/${g.slug}`;
   const headline = `${g.name} (${YEAR})`;
-  const metaTitle = `${g.shortName} ${YEAR} — Rules, Fees & Recovery Steps | 4 Aces Visa`;
+  const metaTitle = `${g.shortName} ${YEAR} — Rules, Fees & Recovery Steps | Garg Brothers`;
   const metaDescription = `${g.oneLiner} Updated ${YEAR}.`;
 
   const faqSchema = {
@@ -28,8 +28,8 @@ const RestorationPage = () => {
   const articleSchema = {
     "@context": "https://schema.org", "@type": "Article", headline,
     datePublished: `${YEAR}-01-15`, dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = RESTORATION_LIST.filter((x) => x.slug !== g.slug);
@@ -49,7 +49,7 @@ const RestorationPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Restoration", url: "/restoration/restore-status-90-days" },
-        { name: g.shortName, url: `/restoration/${g.slug}` },
+        { name: g.shortName, url: `/restoration/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

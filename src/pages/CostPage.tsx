@@ -8,7 +8,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getCost, COSTS_LIST } from "@/data/costData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const CostPage = () => {
@@ -18,8 +18,8 @@ const CostPage = () => {
 
   const canonical = `${SITE}/cost/${g.slug}`;
   const headline = `${g.name} (${YEAR})`;
-  const metaTitle = `${g.shortName} ${YEAR} — Total Fees in CAD & INR | 4 Aces Visa`;
-  const metaDescription = `${g.oneLiner} Updated ${YEAR}. 4 Aces Visa Immigration Team.`;
+  const metaTitle = `${g.shortName} ${YEAR} — Total Fees in CAD & INR | Garg Brothers`;
+  const metaDescription = `${g.oneLiner} Updated ${YEAR}. Garg Brothers Immigration Team.`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -32,8 +32,8 @@ const CostPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = COSTS_LIST.filter((x) => x.slug !== g.slug);
@@ -53,7 +53,7 @@ const CostPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Cost Calculator", url: "/immigration-cost-calculator" },
-        { name: g.shortName, url: `/cost/${g.slug}` },
+        { name: g.shortName, url: `/cost/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

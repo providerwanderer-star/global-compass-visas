@@ -10,7 +10,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const today = () => new Date().toISOString().slice(0, 10);
 const toDate = (v: string | null | undefined) =>
   v ? new Date(v).toISOString().slice(0, 10) : today();

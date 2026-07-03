@@ -50,7 +50,7 @@ const usaCities: OriginCity[] = [
       "Canadian PR in 6–18 months via Express Entry vs. decades-long EB-2/EB-3 waits.",
       "No H-1B lottery, no employer dependency, no 60-day grace-period anxiety.",
       "Big Tech has Canadian offices (Amazon YVR, Microsoft Vancouver) — internal transfers possible.",
-      "Spouse gets an open work permit on day one of your work permit.",
+      "Spouse gets an open work permit on day one of your work permit."
     ],
     topPathways: ["Express Entry (CEC/FSW)", "Global Talent Stream (2-week LMIA)", "BC PNP Tech"],
     destinationCities: ["Vancouver", "Toronto", "Calgary"],
@@ -62,7 +62,7 @@ const usaCities: OriginCity[] = [
       {
         q: "How long does PR take from Seattle vs. waiting for a US green card?",
         a: "Express Entry from Seattle typically takes 6–12 months end to end. The current EB-2/EB-3 backlog for India-born applicants is 50–80+ years.",
-      },
+      }
     ],
     metaTitle: "Seattle to Canada Immigration — H-1B to Canadian PR in 12 Months",
     metaDescription: "Skip the green-card backlog. Move from Seattle to Vancouver or Toronto via Express Entry, BC PNP Tech, or intra-company transfer.",
@@ -77,7 +77,7 @@ const usaCities: OriginCity[] = [
       "Canada's Start-Up Visa gives PR to founders with $200K+ in committed VC.",
       "Post-layoff: 60-day H-1B grace period vs. unlimited time on a Canadian work permit.",
       "Single-payer healthcare ends $25K/year insurance premiums.",
-      "Citizenship in 3 years vs. 5+ in the US.",
+      "Citizenship in 3 years vs. 5+ in the US."
     ],
     topPathways: ["Express Entry (CEC/FSW)", "Start-Up Visa", "Global Talent Stream"],
     destinationCities: ["Toronto", "Vancouver", "Montreal"],
@@ -89,7 +89,7 @@ const usaCities: OriginCity[] = [
       {
         q: "Does my US tech experience count for Canadian Express Entry?",
         a: "Yes — every year of full-time skilled work in the US counts toward your CRS score and FSW eligibility, with no degree re-credentialing needed beyond an ECA.",
-      },
+      }
     ],
     metaTitle: "San Francisco to Canada — Bay Area Tech Workers Move to Toronto & Vancouver",
     metaDescription: "From SF to Toronto or Vancouver: Express Entry, Start-Up Visa, and Global Talent Stream pathways for Bay Area tech workers and founders.",
@@ -104,7 +104,7 @@ const usaCities: OriginCity[] = [
       "Direct 1.5-hour flights NYC ↔ Toronto, same Eastern time zone.",
       "MBA and consulting backgrounds score 470+ CRS easily.",
       "Canadian PR is permanent — no renewals, no employer ties.",
-      "Tax-advantaged TFSA and RRSP plus universal healthcare.",
+      "Tax-advantaged TFSA and RRSP plus universal healthcare."
     ],
     topPathways: ["Express Entry (FSW/CEC)", "Ontario PNP Human Capital Priorities", "Provincial Nominee streams"],
     destinationCities: ["Toronto", "Montreal", "Ottawa"],
@@ -116,7 +116,7 @@ const usaCities: OriginCity[] = [
       {
         q: "How does Ontario PNP work for finance professionals?",
         a: "Ontario's Human Capital Priorities Stream regularly invites Express Entry candidates with 460+ CRS and tech/finance NOCs, fast-tracking PR in 6–9 months.",
-      },
+      }
     ],
     metaTitle: "New York to Canada — NYC Professionals Move to Toronto & Montreal",
     metaDescription: "Move from New York to Toronto via Express Entry or Ontario PNP. Designed for Wall Street, consulting, and tech professionals on H-1B or O-1.",
@@ -131,7 +131,7 @@ const usaCities: OriginCity[] = [
       "Calgary and Vancouver tech scenes are growing fast with PNP-tech fast-tracks.",
       "Get PR before your H-1B clock runs out, then keep working remotely for US employers.",
       "Spouse gets open work permit; kids get free public schooling.",
-      "BC and Ontario tech draws happen monthly — predictable timeline.",
+      "BC and Ontario tech draws happen monthly — predictable timeline."
     ],
     topPathways: ["Express Entry (CEC)", "BC PNP Tech", "Ontario Tech Draws"],
     destinationCities: ["Toronto", "Vancouver", "Calgary"],
@@ -143,7 +143,7 @@ const usaCities: OriginCity[] = [
       {
         q: "Is Toronto really comparable to Austin for tech?",
         a: "Toronto-Waterloo has 250K+ tech workers, the second-largest tech hub in North America after the Bay Area, with offices for Google, Shopify, OpenAI, Cohere, and most US scale-ups.",
-      },
+      }
     ],
     metaTitle: "Austin to Canada — Texas Tech Workers Move to Toronto & Vancouver",
     metaDescription: "Austin tech workers: get Canadian PR via Express Entry or BC PNP Tech. Skip H-1B caps, keep remote US salary, gain a permanent backup plan.",
@@ -158,7 +158,7 @@ const usaCities: OriginCity[] = [
       "Canadian universities recognize US PhDs and postdocs without re-credentialing.",
       "Healthcare workers benefit from Canada-wide credential pathways and loan-forgiveness in underserved areas.",
       "Quebec PEQ and Ontario PNP have streams for researchers and PhDs.",
-      "Public healthcare means no $1,500/month family insurance.",
+      "Public healthcare means no $1,500/month family insurance."
     ],
     topPathways: ["Express Entry (FSW)", "Quebec Skilled Worker", "Ontario PhD Stream"],
     destinationCities: ["Toronto", "Montreal", "Vancouver"],
@@ -170,11 +170,11 @@ const usaCities: OriginCity[] = [
       {
         q: "Will my US medical license transfer to Canada?",
         a: "US-trained MDs go through the MCC qualifying exams. Most provinces have practice-ready assessments that let you start working within 3–6 months of arrival.",
-      },
+      }
     ],
     metaTitle: "Boston to Canada — Biotech, Academia & Healthcare Workers Move North",
     metaDescription: "Boston PhDs, postdocs, and healthcare workers: Express Entry, Quebec PEQ, and Ontario PhD streams to Canadian PR. Free assessment.",
-  },
+  }
 ];
 
 const ukCities: OriginCity[] = [
@@ -188,7 +188,7 @@ const ukCities: OriginCity[] = [
       "Toronto and Vancouver salaries (CAD) often beat London (GBP) on purchasing-power basis.",
       "Space — actual houses, gardens, and commutes under 30 minutes.",
       "British qualifications and English fluency give you near-maximum CRS language scores.",
-      "Citizenship in 3 years; dual UK/Canadian citizenship is permitted.",
+      "Citizenship in 3 years; dual UK/Canadian citizenship is permitted."
     ],
     topPathways: ["Express Entry (FSW/CEC)", "Atlantic Immigration Program", "Provincial Nominee Programs"],
     destinationCities: ["Toronto", "Vancouver", "Calgary"],
@@ -200,7 +200,7 @@ const ukCities: OriginCity[] = [
       {
         q: "How does Canadian Express Entry compare to UK Skilled Worker?",
         a: "Express Entry leads to permanent residence in 6–12 months with no employer dependency. UK Skilled Worker requires sponsorship, 5 years to ILR, and ongoing employer ties.",
-      },
+      }
     ],
     metaTitle: "London to Canada — UK Professionals Move to Toronto & Vancouver",
     metaDescription: "From London to Toronto: Express Entry pathway for British finance, tech, and professional workers. Permanent residence in 6–12 months.",
@@ -215,7 +215,7 @@ const ukCities: OriginCity[] = [
       "NHS nurses and doctors are heavily recruited by Canadian provinces with relocation packages.",
       "Skilled trades have direct PR via Federal Skilled Trades.",
       "Manchester's tech scene maps well to Toronto, Vancouver, and Halifax.",
-      "Public healthcare maintained without NHS workforce pressure.",
+      "Public healthcare maintained without NHS workforce pressure."
     ],
     topPathways: ["Express Entry (FST/FSW)", "Atlantic Immigration Program", "Alberta Advantage Stream"],
     destinationCities: ["Calgary", "Toronto", "Halifax"],
@@ -227,7 +227,7 @@ const ukCities: OriginCity[] = [
       {
         q: "Are UK trades qualifications recognized in Canada?",
         a: "Yes, via the Red Seal program. UK time-served tradespeople usually qualify for challenge exams to earn the Red Seal, which is recognized in every province.",
-      },
+      }
     ],
     metaTitle: "Manchester to Canada — UK Tech, Trades & NHS Workers Move North",
     metaDescription: "Manchester to Calgary, Toronto, or Halifax: Express Entry and Atlantic Immigration for UK tech, trades, and NHS professionals.",
@@ -242,7 +242,7 @@ const ukCities: OriginCity[] = [
       "Birmingham university grads can apply directly via Federal Skilled Worker.",
       "Predictable PR timeline beats Skilled Worker visa renewals and ILR uncertainty.",
       "Strong South Asian community in Toronto and Brampton mirrors Birmingham demographics.",
-      "Family reunification is straightforward — bring spouse and kids on the same PR application.",
+      "Family reunification is straightforward — bring spouse and kids on the same PR application."
     ],
     topPathways: ["Express Entry (FSW)", "Ontario Human Capital Priorities", "BC Skills Immigration"],
     destinationCities: ["Toronto", "Brampton", "Calgary"],
@@ -254,11 +254,11 @@ const ukCities: OriginCity[] = [
       {
         q: "Is the Brampton/Mississauga area really comparable to Birmingham?",
         a: "Demographically and culturally, yes — large Punjabi, Gujarati, and South Asian communities, gurdwaras, mandirs, and authentic restaurants are everywhere across the GTA.",
-      },
+      }
     ],
     metaTitle: "Birmingham to Canada — Engineers, Grads & Families Move to Toronto",
     metaDescription: "Birmingham to Toronto, Brampton, or Calgary: Canadian PR via Express Entry and Ontario PNP for UK engineers and families.",
-  },
+  }
 ];
 
 const ausCities: OriginCity[] = [
@@ -272,7 +272,7 @@ const ausCities: OriginCity[] = [
       "Sydney cost of living is among the world's highest — Toronto and Vancouver are slightly cheaper.",
       "Canadian citizenship in 3 years, then easy travel back to AU/UK.",
       "Most Australian work experience counts at maximum CRS points.",
-      "Healthcare and parental leave are comparable to Australia's Medicare and PPL.",
+      "Healthcare and parental leave are comparable to Australia's Medicare and PPL."
     ],
     topPathways: ["Express Entry (FSW/CEC)", "BC PNP", "Ontario PNP"],
     destinationCities: ["Vancouver", "Toronto", "Calgary"],
@@ -284,7 +284,7 @@ const ausCities: OriginCity[] = [
       {
         q: "Does my Australian work experience count for Canadian Express Entry?",
         a: "Yes — every year of skilled (NOC TEER 0/1/2/3) employment in Australia adds full points to your CRS, identical to UK or US experience.",
-      },
+      }
     ],
     metaTitle: "Sydney to Canada — Australian Skilled Workers Move to Vancouver & Toronto",
     metaDescription: "From Sydney to Vancouver or Toronto: Canadian PR via Express Entry in 6–12 months — faster than Australia's 189/190 in 2025.",
@@ -299,7 +299,7 @@ const ausCities: OriginCity[] = [
       "Canadian Express Entry is points-based and predictable — no occupation ceilings like SkillSelect.",
       "Quebec offers French-track PR for bilingual Melbournians.",
       "Citizenship in 3 years preserves dual nationality with Australia.",
-      "Stronger winter, milder summer — but no bushfires, no extreme heat domes.",
+      "Stronger winter, milder summer — but no bushfires, no extreme heat domes."
     ],
     topPathways: ["Express Entry (FSW/CEC)", "Quebec Skilled Worker (PEQ)", "Ontario PNP"],
     destinationCities: ["Toronto", "Montreal", "Vancouver"],
@@ -311,7 +311,7 @@ const ausCities: OriginCity[] = [
       {
         q: "How does Toronto's tech market compare to Melbourne's?",
         a: "Toronto has roughly 4x the tech workforce of Melbourne with similar AUD-equivalent salaries and a denser ecosystem of US-headquartered companies hiring locally.",
-      },
+      }
     ],
     metaTitle: "Melbourne to Canada — Australians Move to Toronto, Montreal & Vancouver",
     metaDescription: "Melbourne to Canada: Express Entry, Quebec PEQ, and Ontario PNP pathways for Australian skilled workers, creatives, and academics.",
@@ -326,7 +326,7 @@ const ausCities: OriginCity[] = [
       "Federal Skilled Trades and Alberta Advantage Stream fast-track trades to PR.",
       "Red Seal recognition of Australian trade tickets via challenge exams.",
       "Comparable lifestyle: outdoor culture, big sky, low density — Calgary is often called Perth's Canadian twin.",
-      "PR via Express Entry in 6–9 months for high-CRS trades and engineers.",
+      "PR via Express Entry in 6–9 months for high-CRS trades and engineers."
     ],
     topPathways: ["Express Entry (FST)", "Alberta Advantage Stream", "BC Skills Immigration"],
     destinationCities: ["Calgary", "Edmonton", "Vancouver"],
@@ -338,11 +338,11 @@ const ausCities: OriginCity[] = [
       {
         q: "Is Calgary really like Perth?",
         a: "Lifestyle-wise, very similar — outdoorsy, family-oriented, lower density than Toronto, with a strong energy economy.",
-      },
+      }
     ],
     metaTitle: "Perth to Canada — Mining & O&G Workers Move to Calgary & Edmonton",
     metaDescription: "Perth to Calgary or Edmonton: Express Entry, Federal Skilled Trades, and Alberta Advantage for Australian mining, energy, and trades workers.",
-  },
+  }
 ];
 
 const allCities: OriginCity[] = [...usaCities, ...ukCities, ...ausCities];
@@ -375,7 +375,7 @@ export const originCountries: Record<string, OriginCountry> = {
       {
         title: "Faster path to citizenship",
         body: "3 years of physical presence as a PR earns Canadian citizenship — half the US naturalization timeline. Dual citizenship is permitted.",
-      },
+      }
     ],
     pathways: [
       {
@@ -413,7 +413,7 @@ export const originCountries: Record<string, OriginCountry> = {
           "If your US employer has a Canadian entity, ICT work permits can be issued in days with no LMIA required.",
         bestFor: "Employees of Amazon, Microsoft, Meta, Google, and other multinationals.",
         timeline: "Days to weeks for work permit; PR via CEC after 1 year.",
-      },
+      }
     ],
     faqs: [
       {
@@ -435,7 +435,7 @@ export const originCountries: Record<string, OriginCountry> = {
       {
         q: "Is the Canadian healthcare system actually better?",
         a: "It's universal and tax-funded — no premiums, no employer dependency, no surprise bills. Wait times for specialists can be longer than top-tier US private care, but coverage is universal.",
-      },
+      }
     ],
     cities: usaCities.map((c) => c.slug),
     lastUpdated: today,
@@ -467,7 +467,7 @@ export const originCountries: Record<string, OriginCountry> = {
       {
         title: "Citizenship in 3 years",
         body: "Dual UK/Canadian citizenship is permitted. Maintain your UK passport while gaining Canadian rights.",
-      },
+      }
     ],
     pathways: [
       {
@@ -505,7 +505,7 @@ export const originCountries: Record<string, OriginCountry> = {
           "Quebec's independent PR system. French language is a major advantage but not always required.",
         bestFor: "Bilingual UK applicants or those open to French immersion.",
         timeline: "12–24 months.",
-      },
+      }
     ],
     faqs: [
       {
@@ -527,7 +527,7 @@ export const originCountries: Record<string, OriginCountry> = {
       {
         q: "Can I bring my family on the same application?",
         a: "Yes. Spouse and dependent children (under 22) are included in your PR application at no extra processing fee per dependant beyond standard government charges.",
-      },
+      }
     ],
     cities: ukCities.map((c) => c.slug),
     lastUpdated: today,
@@ -559,7 +559,7 @@ export const originCountries: Record<string, OriginCountry> = {
       {
         title: "Citizenship + dual nationality",
         body: "Canadian citizenship in 3 years; Australia permits dual citizenship.",
-      },
+      }
     ],
     pathways: [
       {
@@ -597,7 +597,7 @@ export const originCountries: Record<string, OriginCountry> = {
           "Direct PR for founders with designated VC or angel funding.",
         bestFor: "Australian founders ready to base their company in Canada.",
         timeline: "12–18 months.",
-      },
+      }
     ],
     faqs: [
       {
@@ -619,7 +619,7 @@ export const originCountries: Record<string, OriginCountry> = {
       {
         q: "Is CANZUK a real pathway?",
         a: "CANZUK is a political proposal, not a current immigration program. For now, Australians use standard Canadian PR pathways like Express Entry.",
-      },
+      }
     ],
     cities: ausCities.map((c) => c.slug),
     lastUpdated: today,

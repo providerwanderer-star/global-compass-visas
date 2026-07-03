@@ -14,7 +14,7 @@ import EligibilityForm from "@/components/EligibilityForm";
 import { getStudyField, STUDY_FIELD_LIST } from "@/data/studyFieldData";
 import { getProvince, PROVINCE_LIST } from "@/data/occupationProvinceData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const StudyFieldProvincePage = () => {
@@ -31,8 +31,8 @@ const StudyFieldProvincePage = () => {
 
   const canonical = `${SITE}/study/${field.slug}/${prov.slug}`;
   const headline = `Study ${field.name} in ${prov.name}, Canada — Cost, Top Colleges & PR Pathway (${YEAR})`;
-  const metaTitle = `Study ${field.shortName} in ${prov.name} ${YEAR} — Cost, Colleges, PR | 4 Aces Visa`;
-  const metaDescription = `${field.name} in ${prov.name}: tuition ${field.tuitionCadPerYear}, IELTS ${field.ieltsRequirement.split(";")[0]}, top DLIs and the study-permit → PGWP → PR pathway. 4 Aces Visa Immigration Team.`;
+  const metaTitle = `Study ${field.shortName} in ${prov.name} ${YEAR} — Cost, Colleges, PR | Garg Brothers`;
+  const metaDescription = `${field.name} in ${prov.name}: tuition ${field.tuitionCadPerYear}, IELTS ${field.ieltsRequirement.split(";")[0]}, top DLIs and the study-permit → PGWP → PR pathway. Garg Brothers Immigration Team.`;
 
   const faqs = [
     {
@@ -54,7 +54,7 @@ const StudyFieldProvincePage = () => {
     {
       q: `What's the PR pathway after graduating?`,
       a: `${field.prPipeline} Most graduates land PR within 1–3 years of completing studies if they secure skilled work and complete the ${prov.pnpName} graduate stream or federal Express Entry profile early.`,
-    },
+    }
   ];
 
   const faqSchema = {
@@ -73,10 +73,10 @@ const StudyFieldProvincePage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
     publisher: {
       "@type": "Organization",
-      name: "4 Aces Visa",
+      name: "Garg Brothers",
       logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` },
     },
     mainEntityOfPage: canonical,
@@ -103,7 +103,7 @@ const StudyFieldProvincePage = () => {
         breadcrumbs={[
           { name: "Study in Canada", url: "/" },
           { name: field.name, url: `/study/${field.slug}/${prov.slug}` },
-          { name: prov.name, url: `/study/${field.slug}/${prov.slug}` },
+          { name: prov.name, url: `/study/${field.slug}/${prov.slug}` }
         ]}
       />
 

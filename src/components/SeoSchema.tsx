@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 interface BreadcrumbItem {
   name: string;
-  url: string; // absolute or path; will be absolutized to 4acesvisa.com
+  url: string; // absolute or path; will be absolutized to gargbrothers.ca
 }
 
 interface SeoSchemaProps {
@@ -16,7 +16,7 @@ interface SeoSchemaProps {
   skipAutoBreadcrumbs?: boolean;
 }
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 const absolutize = (url: string) =>
   url.startsWith("http") ? url : `${SITE}${url.startsWith("/") ? "" : "/"}${url}`;
@@ -60,7 +60,7 @@ const SeoSchema = ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${SITE}/#organization`,
-    name: "4 Aces Visa",
+    name: "Garg Brothers",
     url: SITE,
     logo: `${SITE}/favicon.ico`,
     description:
@@ -72,11 +72,7 @@ const SeoSchema = ({
       email: "sahil280389@gmail.com",
       availableLanguage: ["English", "Hindi", "Punjabi"],
     },
-    sameAs: [
-      "https://www.facebook.com/4acesvisa",
-      "https://www.instagram.com/4acesvisa",
-      "https://www.linkedin.com/company/4acesvisa",
-    ],
+    sameAs: [    ],
   };
 
   // LocalBusiness — appears on EVERY page so AI engines and local search
@@ -85,7 +81,7 @@ const SeoSchema = ({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": `${SITE}/#localbusiness`,
-    name: "4 Aces Visa",
+    name: "Garg Brothers",
     description:
       "RCIC-led Canadian immigration consultants. Express Entry, LMIA, PNP, study permits, work visas.",
     url: SITE,
@@ -108,17 +104,13 @@ const SeoSchema = ({
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
+          "Saturday"
         ],
         opens: "09:00",
         closes: "18:00",
-      },
+      }
     ],
-    sameAs: [
-      "https://www.facebook.com/4acesvisa",
-      "https://www.instagram.com/4acesvisa",
-      "https://www.linkedin.com/company/4acesvisa",
-    ],
+    sameAs: [    ],
   };
 
   // Resolve breadcrumb trail: explicit > auto-from-URL > none

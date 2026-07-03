@@ -21,7 +21,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getComparison, comparisons } from "@/data/comparisonData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 const ComparePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -62,7 +62,7 @@ const ComparePage = () => {
       <SeoSchema
         breadcrumbs={[
           { name: "Compare", url: "/compare" },
-          { name: `${comp.optionAName} vs ${comp.optionBName}`, url: `/compare/${comp.slug}` },
+          { name: `${comp.optionAName} vs ${comp.optionBName}`, url: `/compare/${comp.slug}` }
         ]}
       />
 

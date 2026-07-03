@@ -42,11 +42,11 @@ const ServicePage = () => {
       <Helmet>
         <title>{service.metaTitle}</title>
         <meta name="description" content={service.metaDescription} />
-        <link rel="canonical" href={`https://www.4acesvisa.com/services/${service.slug}`} />
+        <link rel="canonical" href={`https://www.gargbrothers.ca/services/${service.slug}`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={service.metaTitle} />
         <meta property="og:description" content={service.metaDescription} />
-        <meta property="og:url" content={`https://www.4acesvisa.com/services/${service.slug}`} />
+        <meta property="og:url" content={`https://www.gargbrothers.ca/services/${service.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={service.metaTitle} />
         <meta name="twitter:description" content={service.metaDescription} />
@@ -58,21 +58,21 @@ const ServicePage = () => {
                 "@type": "Service",
                 name: service.title,
                 description: service.metaDescription,
-                url: `https://www.4acesvisa.com/services/${service.slug}`,
+                url: `https://www.gargbrothers.ca/services/${service.slug}`,
                 provider: {
                   "@type": "Organization",
-                  name: "4 Aces Visa",
+                  name: "Garg Brothers",
                   telephone: "+16478622190",
                   email: "sahil280389@gmail.com",
-                  url: "https://www.4acesvisa.com",
+                  url: "https://www.gargbrothers.ca",
                 },
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Services", item: "https://www.4acesvisa.com/services" },
-                  { "@type": "ListItem", position: 3, name: service.title, item: `https://www.4acesvisa.com/services/${service.slug}` },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Services", item: "https://www.gargbrothers.ca/services" },
+                  { "@type": "ListItem", position: 3, name: service.title, item: `https://www.gargbrothers.ca/services/${service.slug}` }
                 ],
               },
               {
@@ -82,7 +82,7 @@ const ServicePage = () => {
                   name: faq.question,
                   acceptedAnswer: { "@type": "Answer", text: faq.answer },
                 })),
-              },
+              }
             ],
           })}
         </script>

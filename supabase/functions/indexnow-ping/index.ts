@@ -9,7 +9,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-const HOST = "www.4acesvisa.com";
+const HOST = "www.gargbrothers.ca";
 const KEY = "87f145e9b8d0733bd7518e33eaa050df";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 

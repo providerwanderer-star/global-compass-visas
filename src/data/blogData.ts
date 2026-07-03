@@ -56,7 +56,7 @@ Germany provides unique access to the European Union job market through its Job 
 - **Choose Australia** if you're a skilled professional seeking high wages
 - **Choose Germany** if you want EU access and career growth in tech/engineering
 
-The best choice depends on your profession, budget, language skills, and long-term goals. Book a free consultation with 4 Aces Visa to get personalized guidance.`
+The best choice depends on your profession, budget, language skills, and long-term goals. Book a free consultation with Garg Brothers to get personalized guidance.`
   },
   {
     slug: "canada-express-entry-2026-guide",
@@ -106,7 +106,7 @@ Recent draws have seen CRS cutoffs between 430-490 for general draws. Category-b
 | Pool entry to ITA | Varies (2 weeks - 1 year) |
 | PR application processing | 6 months |
 
-Contact 4 Aces Visa for a free CRS assessment and personalized immigration strategy.`
+Contact Garg Brothers for a free CRS assessment and personalized immigration strategy.`
   },
   {
     slug: "study-in-canada-complete-guide",
@@ -159,7 +159,7 @@ After completing your program, apply for a PGWP:
 - Direct pathway to PR through Express Entry
 - Safe, multicultural environment
 
-Start your Canadian education journey with 4 Aces Visa's expert guidance.`
+Start your Canadian education journey with Garg Brothers's expert guidance.`
   },
   {
     slug: "canada-work-permit-types-explained",
@@ -213,7 +213,7 @@ LMIA-based work permits offer the strongest PR pathway because:
 - [ ] Medical exam
 - [ ] Police clearance
 
-Get expert guidance on choosing the right work permit — contact 4 Aces Visa today.`
+Get expert guidance on choosing the right work permit — contact Garg Brothers today.`
   },
   {
     slug: "australia-skilled-migration-explained",
@@ -273,7 +273,7 @@ Your occupation must be on the relevant SOL. Key occupations include:
 - Invitation to Apply: 2-12 months
 - Visa processing: 6-12 months
 
-Maximize your points score with 4 Aces Visa's skilled migration experts.`
+Maximize your points score with Garg Brothers's skilled migration experts.`
   },
   {
     slug: "germany-job-seeker-visa-guide",
@@ -327,7 +327,7 @@ After finding a job with a minimum salary of €45,300 (€39,682 for shortage o
 - High quality of life
 - Path to EU permanent residency
 
-Start your Germany immigration journey with 4 Aces Visa.`
+Start your Germany immigration journey with Garg Brothers.`
   },
   {
     slug: "canada-pnp-programs-explained",
@@ -393,7 +393,7 @@ Each Canadian province and territory operates its own immigration programs targe
 
 A provincial nomination essentially guarantees your PR invitation by adding 600 points to your CRS score. Even candidates with lower base scores can receive PR through PNP.
 
-Explore your PNP options with 4 Aces Visa's provincial immigration experts.`
+Explore your PNP options with Garg Brothers's provincial immigration experts.`
   },
   {
     slug: "ielts-tips-immigration-success",
@@ -453,7 +453,7 @@ Explore your PNP options with 4 Aces Visa's provincial immigration experts.`
 | 5-6 | Full practice tests under timed conditions |
 | 7-8 | Fine-tuning and confidence building |
 
-Get personalized IELTS guidance as part of your immigration strategy with 4 Aces Visa.`
+Get personalized IELTS guidance as part of your immigration strategy with Garg Brothers.`
   },
   {
     slug: "canada-family-sponsorship-explained",
@@ -517,7 +517,7 @@ If PGP spots are filled, the Super Visa allows parents/grandparents to:
 - Requires private medical insurance
 - Faster processing than PGP
 
-Reunite your family in Canada — contact 4 Aces Visa for expert sponsorship guidance.`
+Reunite your family in Canada — contact Garg Brothers for expert sponsorship guidance.`
   },
   {
     slug: "canada-visitor-visa-guide",
@@ -582,7 +582,7 @@ Reunite your family in Canada — contact 4 Aces Visa for expert sponsorship gui
 - **Be honest** — misrepresentation leads to bans
 - **Apply early** — at least 4-6 weeks before travel
 
-Need help with your visitor visa application? 4 Aces Visa ensures every detail is covered.`
+Need help with your visitor visa application? Garg Brothers ensures every detail is covered.`
   },
   {
     slug: "canada-pr-process-from-punjab-2026",
@@ -696,7 +696,7 @@ The Labour Market Impact Assessment (LMIA) pathway is popular among Punjab appli
 ## Frequently Asked Questions
 
 **Q: Can I apply for Canada PR from Ludhiana, Amritsar, or Jalandhar?**
-A: Yes! You can apply from anywhere in Punjab. 4 Aces Visa serves clients across Ludhiana, Amritsar, Jalandhar, Chandigarh, and Mohali with personalized PR pathway guidance.
+A: Yes! You can apply from anywhere in Punjab. Garg Brothers serves clients across Ludhiana, Amritsar, Jalandhar, Chandigarh, and Mohali with personalized PR pathway guidance.
 
 **Q: Is Canada PR getting harder from Punjab in 2026?**
 A: While CRS cutoffs have increased, new category-based draws and expanded PNP allocations create more opportunities. The key is choosing the right pathway and optimizing your profile.
@@ -710,7 +710,7 @@ A: Yes! Your spouse and dependent children (under 22) can be included in your PR
 **Q: How much bank balance is needed for Canada PR from Punjab?**
 A: For a single applicant: CAD 13,757 (~₹8.5 lakhs). For a family of 4: CAD 25,564 (~₹16 lakhs). Funds must be available for at least 6 months.
 
-Start your Canada PR journey from Punjab today. [Book a free assessment](/contact) with 4 Aces Visa — by immigrants, for immigrants.`
+Start your Canada PR journey from Punjab today. [Book a free assessment](/contact) with Garg Brothers — by immigrants, for immigrants.`
   },
   {
     slug: "lmia-jobs-canada-from-india-2026",
@@ -765,7 +765,7 @@ LMIA is a document that a Canadian employer must obtain before hiring a foreign 
 1. **Leverage Punjab diaspora networks**: Many Canadians of Punjabi origin own businesses in Ontario, BC, and Alberta
 2. **Job Bank Canada**: Search LMIA-eligible positions at jobbank.gc.ca
 3. **LinkedIn networking**: Connect with Canadian employers in your field
-4. **Immigration consultants**: 4 Aces Visa has employer partnerships for LMIA processing
+4. **Immigration consultants**: Garg Brothers has employer partnerships for LMIA processing
 5. **Provincial job boards**: Check province-specific employment websites
 
 ## LMIA Categories
@@ -817,7 +817,7 @@ A: Absolutely! LMIA boosts your CRS score for Express Entry and provides Canadia
 **Q: Is LMIA mandatory for Canada PR?**
 A: No, LMIA is not mandatory. You can get PR through Express Entry without a job offer. However, LMIA significantly improves your CRS score and chances.
 
-Get expert LMIA guidance — [contact 4 Aces Visa](/contact) for a free consultation.`
+Get expert LMIA guidance — [contact Garg Brothers](/contact) for a free consultation.`
   },
   {
     slug: "express-entry-vs-pnp-2026",
@@ -932,7 +932,7 @@ A: Saskatchewan (SINP) and Manitoba (MPNP) generally have lower requirements. At
 **Q: Can I change provinces after getting PNP PR?**
 A: Legally, as a PR you can live anywhere in Canada. However, you're expected to intend to settle in the nominating province, and provinces track settlement outcomes.
 
-Not sure which pathway is right for you? [Get a free assessment](/contact) from 4 Aces Visa.`
+Not sure which pathway is right for you? [Get a free assessment](/contact) from Garg Brothers.`
   },
   {
     slug: "cost-of-canada-pr-from-india-2026",
@@ -1016,7 +1016,7 @@ Medical must be done at IRCC-designated panel physicians. Results are valid for 
 | PNP application assistance | ₹1,00,000 - ₹2,50,000 |
 | LMIA processing | ₹1,50,000 - ₹3,00,000 |
 
-**Note:** 4 Aces Visa offers transparent pricing with free initial assessment. Never pay upfront without a clear service agreement.
+**Note:** Garg Brothers offers transparent pricing with free initial assessment. Never pay upfront without a clear service agreement.
 
 ### 8. Post-Landing Costs (Additional Budget)
 
@@ -1046,9 +1046,9 @@ A: Government fees are mandatory and cannot be waived. However, you can save on 
 A: Proof of funds must be available in your account but is not spent on the application. You keep this money for settlement in Canada.
 
 **Q: Are consulting fees refundable if PR is rejected?**
-A: Policies vary by consultant. 4 Aces Visa offers transparent terms — ask about our refund policy during your free initial consultation.
+A: Policies vary by consultant. Garg Brothers offers transparent terms — ask about our refund policy during your free initial consultation.
 
-Ready to plan your Canada PR budget? [Get a free cost assessment](/contact) from 4 Aces Visa.`
+Ready to plan your Canada PR budget? [Get a free cost assessment](/contact) from Garg Brothers.`
   },
   {
     slug: "study-visa-canada-complete-guide-2026",
@@ -1182,7 +1182,7 @@ A: Yes, your parents can apply for a visitor visa or Super Visa to visit you in 
 **Q: Is Canada study visa getting harder in 2026?**
 A: Canada has introduced study permit caps, but genuine students with strong profiles and proper documentation still get approved. The key is a strong SOP and financial proof.
 
-Plan your study-to-PR pathway — [book a free consultation](/contact) with 4 Aces Visa.`
+Plan your study-to-PR pathway — [book a free consultation](/contact) with Garg Brothers.`
   },
   {
     slug: "top-reasons-visa-rejection-canada-2026",
@@ -1316,7 +1316,7 @@ A: A refusal alone doesn't permanently affect you, but multiple refusals create 
 **Q: How can I find out why my visa was refused?**
 A: Request your GCMS notes through an Access to Information request. This reveals the officer's exact concerns and refusal reasons.
 
-Avoid rejection — [get expert guidance](/contact) from 4 Aces Visa before you apply.`
+Avoid rejection — [get expert guidance](/contact) from Garg Brothers before you apply.`
   },
   {
     slug: "spouse-open-work-permit-canada-2026",
@@ -1412,7 +1412,7 @@ A: If your spouse already has a valid Canadian work/study permit, you can apply 
 **Q: What happens if my spouse's permit expires?**
 A: Your SOWP validity is linked to your spouse's permit. If their permit expires, your SOWP also expires unless they renew.
 
-Need help with Spouse Open Work Permit? [Contact 4 Aces Visa](/contact) for expert guidance.`
+Need help with Spouse Open Work Permit? [Contact Garg Brothers](/contact) for expert guidance.`
   },
   {
     slug: "best-provinces-for-canada-pr-2026",
@@ -1552,7 +1552,7 @@ A: Ontario has the largest job market overall. Alberta and BC also have strong d
 **Q: Which province is cheapest to live in?**
 A: Saskatchewan and Manitoba offer the lowest cost of living among major provinces, followed by Atlantic provinces.
 
-Find your ideal province — [get a free province matching assessment](/contact) from 4 Aces Visa.`
+Find your ideal province — [get a free province matching assessment](/contact) from Garg Brothers.`
   },
   {
     slug: "increase-crs-score-fast-2026",
@@ -1561,7 +1561,7 @@ Find your ideal province — [get a free province matching assessment](/contact)
     date: "2026-03-30",
     readTime: "11 min",
     category: "Canada",
-    metaDescription: "15 proven strategies to increase your CRS score fast in 2026. IELTS tips, PNP nomination, LMIA job offers, French skills, and more. Expert advice from 4 Aces Visa.",
+    metaDescription: "15 proven strategies to increase your CRS score fast in 2026. IELTS tips, PNP nomination, LMIA job offers, French skills, and more. Expert advice from Garg Brothers.",
     content: `Your CRS score determines whether you receive a PR invitation through Express Entry. Here are 15 proven strategies to boost your score — from quick wins to game-changers.
 
 ## Quick CRS Score Boosters (1-3 Months)
@@ -1677,12 +1677,12 @@ A: Yes, significantly. Maximum points at age 20-29 (110 points). Points decrease
 **Q: Can I increase CRS by 100 points?**
 A: Yes! Improving IELTS by 1 CLB level (+30-50) + adding spouse's language (+10-20) + French skills (+30-50) can add 70-120 points.
 
-Maximize your CRS score — [get a free strategy session](/contact) with 4 Aces Visa.`
+Maximize your CRS score — [get a free strategy session](/contact) with Garg Brothers.`
   },
   {
     slug: "choosing-right-immigration-consultant-2026",
     title: "How to Choose the Right Immigration Consultant in 2026",
-    excerpt: "Guide to choosing a legitimate immigration consultant. Red flags, RCIC verification, questions to ask, and why 4 Aces Visa stands out.",
+    excerpt: "Guide to choosing a legitimate immigration consultant. Red flags, RCIC verification, questions to ask, and why Garg Brothers stands out.",
     date: "2026-03-28",
     readTime: "9 min",
     category: "Tips",
@@ -1756,7 +1756,7 @@ Only **Regulated Canadian Immigration Consultants (RCICs)** or **lawyers** can l
 - Post-landing guidance (for PR applications)
 - Ongoing support for questions
 
-## Why 4 Aces Visa Stands Out
+## Why Garg Brothers Stands Out
 
 ### "By Immigrants, For Immigrants"
 Our consultants have personally gone through the immigration process. We understand the stress, confusion, and life-changing decisions because we've lived it.
@@ -1810,10 +1810,10 @@ A: Yes, it's possible to self-apply. However, professional guidance significantl
 **Q: What if my current consultant is not performing?**
 A: You have the right to switch consultants at any time. Request your file and documents, and hire a new registered consultant.
 
-**Q: Is 4 Aces Visa a registered consultancy?**
-A: Yes, 4 Aces Visa operates with qualified immigration professionals. We offer a free initial assessment so you can evaluate our expertise before committing.
+**Q: Is Garg Brothers a registered consultancy?**
+A: Yes, Garg Brothers operates with qualified immigration professionals. We offer a free initial assessment so you can evaluate our expertise before committing.
 
-Ready to work with a trusted consultant? [Book your free assessment](/contact) with 4 Aces Visa — by immigrants, for immigrants.`
+Ready to work with a trusted consultant? [Book your free assessment](/contact) with Garg Brothers — by immigrants, for immigrants.`
   },
   {
     slug: "ontario-pnp-guide-2026",
@@ -1891,7 +1891,7 @@ The Ontario Immigrant Nominee Program allows the province to nominate skilled wo
 - World-class universities and healthcare
 - Multicultural communities, especially strong Punjabi and South Asian presence
 
-👉 Book a free OINP eligibility assessment with 4 Aces Visa today.`
+👉 Book a free OINP eligibility assessment with Garg Brothers today.`
   },
   {
     slug: "punjab-to-canada-work-permit-2026",
@@ -1967,7 +1967,7 @@ A work permit is not just a temporary stay — it's a stepping stone to permanen
 - High wages compared to India (even for manual labour)
 - Clear pathway from work permit to PR to citizenship
 
-👉 Get a free work permit assessment from 4 Aces Visa — trusted by thousands of Punjabi families.`
+👉 Get a free work permit assessment from Garg Brothers — trusted by thousands of Punjabi families.`
   },
   {
     slug: "brampton-immigration-guide-2026",
@@ -2026,7 +2026,7 @@ Students at Sheridan College, Algoma University, or other Brampton-area institut
 4. **Spousal Sponsorship** — For partners of Canadian citizens/PRs
 5. **Super Visa** — 5-year multiple-entry visa for parents
 
-## 4 Aces Visa in Brampton
+## Garg Brothers in Brampton
 
 Our team serves the Brampton community with:
 - In-person and virtual consultations
@@ -2035,7 +2035,7 @@ Our team serves the Brampton community with:
 - 98% application success rate
 - 15,000+ successful applications
 
-👉 Book your free Brampton immigration consultation with 4 Aces Visa today.`
+👉 Book your free Brampton immigration consultation with Garg Brothers today.`
   },
   {
     slug: "canada-pr-points-calculator-guide-2026",
@@ -2134,7 +2134,7 @@ French proficiency (TEF/TCF) adds 25-50 bonus points, even if your first languag
 - **Myth:** You need Canadian education → Not required, but helps
 - **Myth:** Single applicants always score higher → Skilled spouses can add points
 
-👉 Use our free CRS calculator at 4acesvisa.com/crs-calculator to check your score instantly.`
+👉 Use our free CRS calculator at gargbrothers.ca/crs-calculator to check your score instantly.`
   },
   {
     slug: "toronto-immigration-services-2026",
@@ -2194,7 +2194,7 @@ With hundreds of consultants in the GTA, here's how to choose wisely:
 4. **Ask about specialization** — some focus on Express Entry, others on business immigration
 5. **Get a written retainer agreement** — never pay without documentation
 
-## 4 Aces Visa Toronto Services
+## Garg Brothers Toronto Services
 
 - Virtual and in-person consultations across the GTA
 - 15,000+ successful applications processed
@@ -2202,7 +2202,7 @@ With hundreds of consultants in the GTA, here's how to choose wisely:
 - Punjabi, Hindi, Urdu, and English-speaking consultants
 - Free initial eligibility assessment
 
-👉 Book your free Toronto immigration consultation with 4 Aces Visa today.`
+👉 Book your free Toronto immigration consultation with Garg Brothers today.`
   },
   {
     slug: "ielts-score-canada-immigration-punjab-2026",
@@ -2286,7 +2286,7 @@ If your first attempt doesn't meet your target:
 - Consider IELTS Online for faster scheduling
 - Many successful PR applicants took IELTS 2-3 times
 
-👉 Get a free CRS assessment and IELTS guidance from 4 Aces Visa — we've helped thousands of Punjab residents maximize their scores.`
+👉 Get a free CRS assessment and IELTS guidance from Garg Brothers — we've helped thousands of Punjab residents maximize their scores.`
   },
   {
     slug: "canada-pr-fees-from-india-complete-breakdown-2026",
@@ -2371,7 +2371,7 @@ Medical exams must be done at IRCC-designated panel physicians. Major cities in 
 - PR leads to citizenship in 3 years
 - ROI recovered within first year of Canadian employment
 
-👉 Get a free cost estimate customized to your profile from 4 Aces Visa. No hidden charges — transparent pricing from day one.`
+👉 Get a free cost estimate customized to your profile from Garg Brothers. No hidden charges — transparent pricing from day one.`
   },
   {
     slug: "pnp-programs-ontario-vs-bc-vs-alberta-2026",
@@ -2475,7 +2475,7 @@ You can express interest in multiple provinces simultaneously:
 4. Accept the first nomination you receive
 5. Apply for PR with +600 CRS points
 
-👉 Not sure which PNP fits your profile? Get a free assessment from 4 Aces Visa — we've helped thousands navigate provincial programs successfully.`
+👉 Not sure which PNP fits your profile? Get a free assessment from Garg Brothers — we've helped thousands navigate provincial programs successfully.`
   },
   {
     slug: "canada-student-visa-from-punjab-2026",
@@ -2484,7 +2484,7 @@ You can express interest in multiple provinces simultaneously:
     date: "2026-03-24",
     readTime: "10 min",
     category: "Punjab",
-    metaDescription: "Canada student visa guide for Punjab students 2026. SDS stream, DLI admissions, GIC, PGWP, and PR pathways. Expert help from 4 Aces Visa.",
+    metaDescription: "Canada student visa guide for Punjab students 2026. SDS stream, DLI admissions, GIC, PGWP, and PR pathways. Expert help from Garg Brothers.",
     content: `Canada remains the top study destination for students from Punjab. With the Student Direct Stream (SDS) and clear pathways to permanent residency, studying in Canada is both an educational and immigration investment.
 
 ## Student Direct Stream (SDS) from Punjab
@@ -2572,7 +2572,7 @@ This is the most reliable PR pathway for Punjab students:
 | Saskatchewan PNP | 6-10 months | Job offer or SINP criteria |
 | Alberta PNP | 6-10 months | Alberta work experience |
 
-👉 Planning to study in Canada from Punjab? Get free guidance on DLI selection and study permit application from 4 Aces Visa.`
+👉 Planning to study in Canada from Punjab? Get free guidance on DLI selection and study permit application from Garg Brothers.`
   },
   {
     slug: "family-sponsorship-super-visa-parents-2026",
@@ -2684,7 +2684,7 @@ The Super Visa is a faster, more accessible option:
 - **Weak ties to home country:** Show parents have reasons to return (Super Visa)
 - **Missing insurance:** Super Visa requires valid insurance before applying
 
-👉 Need help sponsoring your parents or applying for a Super Visa? 4 Aces Visa has helped thousands of families reunite in Canada. Book your free assessment today.`
+👉 Need help sponsoring your parents or applying for a Super Visa? Garg Brothers has helped thousands of families reunite in Canada. Book your free assessment today.`
   },
 
   // ==================== CLUSTER 1: CANADA PR ====================
@@ -2760,7 +2760,7 @@ IELTS General Training scores for CLB equivalency:
 5. **Explore PNP** — Provincial streams can add 600 points
 6. **Submit Express Entry profile** — Enter the draw pool
 
-👉 Not sure if you qualify? Book a free eligibility assessment with 4 Aces Visa — our experts review your complete profile and recommend the best pathway.`
+👉 Not sure if you qualify? Book a free eligibility assessment with Garg Brothers — our experts review your complete profile and recommend the best pathway.`
   },
   {
     slug: "canada-pr-timeline-how-long-does-it-take-2026",
@@ -2818,7 +2818,7 @@ CEC applicants already have Canadian work experience, so preparation time is sho
 4. **Respond to requests immediately** — IRCC gives 30-day deadlines
 5. **Work with an expert** — Avoid common mistakes that trigger additional review
 
-👉 Want a personalized PR timeline? 4 Aces Visa creates custom immigration roadmaps. Book your free assessment today.`
+👉 Want a personalized PR timeline? Garg Brothers creates custom immigration roadmaps. Book your free assessment today.`
   },
   {
     slug: "express-entry-vs-pnp-which-is-better-2026",
@@ -2875,9 +2875,9 @@ Yes! The smartest strategy is:
 
 ## Success Rate Comparison
 
-At 4 Aces Visa, our Express Entry success rate is 97% for clients with CRS 470+. For PNP applications, our success rate is 95% across all provinces. The combined strategy yields a 99% overall PR approval rate.
+At Garg Brothers, our Express Entry success rate is 97% for clients with CRS 470+. For PNP applications, our success rate is 95% across all provinces. The combined strategy yields a 99% overall PR approval rate.
 
-👉 Not sure which pathway fits your profile? Book a free consultation with 4 Aces Visa — we'll analyze your CRS score and recommend the optimal strategy.`
+👉 Not sure which pathway fits your profile? Book a free consultation with Garg Brothers — we'll analyze your CRS score and recommend the optimal strategy.`
   },
 
   // ==================== CLUSTER 2: WORK PERMIT ====================
@@ -2935,7 +2935,7 @@ A valid LMIA job offer gives you:
 2. **Indeed Canada** — Filter by "visa sponsorship"
 3. **LinkedIn** — Search for LMIA-positive employers
 4. **Provincial job boards** — Each province has dedicated immigration-friendly job listings
-5. **Immigration consultants** — 4 Aces Visa connects qualified candidates with LMIA-ready employers
+5. **Immigration consultants** — Garg Brothers connects qualified candidates with LMIA-ready employers
 
 ## Common LMIA Mistakes to Avoid
 
@@ -2944,7 +2944,7 @@ A valid LMIA job offer gives you:
 - Not checking if your occupation is LMIA-exempt
 - Missing the work permit application deadline after LMIA approval
 
-👉 Looking for LMIA job opportunities in Canada? 4 Aces Visa has employer connections across Ontario, BC, Alberta, and Manitoba. Book your free consultation today.`
+👉 Looking for LMIA job opportunities in Canada? Garg Brothers has employer connections across Ontario, BC, Alberta, and Manitoba. Book your free consultation today.`
   },
   {
     slug: "canada-work-permit-to-pr-pathway-2026",
@@ -3006,7 +3006,7 @@ A valid LMIA job offer gives you:
 - **Expired work permit:** Apply for extension BEFORE expiry
 - **Not tracking hours:** Keep pay stubs and employment letters for CEC proof
 
-👉 On a work permit and ready for PR? 4 Aces Visa specializes in work-permit-to-PR transitions. Book your free assessment today.`
+👉 On a work permit and ready for PR? Garg Brothers specializes in work-permit-to-PR transitions. Book your free assessment today.`
   },
   {
     slug: "open-work-permit-canada-who-qualifies-2026",
@@ -3067,7 +3067,7 @@ A valid LMIA job offer gives you:
 5. Provide biometrics if required
 6. Wait for processing and approval
 
-👉 Need help with an open work permit application? 4 Aces Visa processes hundreds of OWP applications annually with a 98% approval rate. Book your free consultation.`
+👉 Need help with an open work permit application? Garg Brothers processes hundreds of OWP applications annually with a 98% approval rate. Book your free consultation.`
   },
 
   // ==================== CLUSTER 3: STUDY VISA ====================
@@ -3134,7 +3134,7 @@ Choose Non-SDS if:
 4. **Ties to home country** — Demonstrate you plan to return (property, family, career)
 5. **Gap explanation** — If there's a study gap, explain it clearly
 
-👉 Confused about SDS vs Non-SDS? 4 Aces Visa has helped thousands of students get their Canada study visa. Book a free consultation for personalized advice.`
+👉 Confused about SDS vs Non-SDS? Garg Brothers has helped thousands of students get their Canada study visa. Book a free consultation for personalized advice.`
   },
   {
     slug: "best-colleges-ontario-international-students-2026",
@@ -3212,7 +3212,7 @@ Choose Non-SDS if:
 4. **Apply for OINP** — Human Capital Priorities or Job Offer streams
 5. **Get PR** — PNP + CEC combination has 99% success rate
 
-👉 Planning to study in Ontario? 4 Aces Visa helps you choose the right college AND plan your PR pathway from day one. Free consultation available.`
+👉 Planning to study in Ontario? Garg Brothers helps you choose the right college AND plan your PR pathway from day one. Free consultation available.`
   },
   {
     slug: "cost-of-studying-in-canada-from-india-2026",
@@ -3290,7 +3290,7 @@ Choose Non-SDS if:
 - **Prodigy Finance:** No collateral required for select programs
 - **MPOWER Financing:** No cosigner needed for top-ranked schools
 
-👉 Need help planning your Canada study budget? 4 Aces Visa provides free financial planning consultations for students. Book your session today.`
+👉 Need help planning your Canada study budget? Garg Brothers provides free financial planning consultations for students. Book your session today.`
   },
 
   // ==================== CLUSTER 4: LOCAL INTENT ====================
@@ -3324,9 +3324,9 @@ Before comparing specific consultants, understand what to look for:
 - Offering "direct job placement" in Canada for a fee
 - Using fake success stories or reviews
 
-## How 4 Aces Visa Compares
+## How Garg Brothers Compares
 
-| Feature | 4 Aces Visa | Typical Ludhiana Consultant |
+| Feature | Garg Brothers | Typical Ludhiana Consultant |
 |---|---|---|
 | ICCRC registered | ✅ Yes | Sometimes |
 | Success rate | 98% | 60-70% (claimed) |
@@ -3364,7 +3364,7 @@ A legitimate immigration consultant in Ludhiana should offer:
 4. "What's included in your fee? What's extra?"
 5. "What happens if my application is refused?"
 
-👉 4 Aces Visa is one of Ludhiana's top-rated immigration consultants with 98% success rate. Book your free assessment — no obligation, no hidden fees.`
+👉 Garg Brothers is one of Ludhiana's top-rated immigration consultants with 98% success rate. Book your free assessment — no obligation, no hidden fees.`
   },
   {
     slug: "canada-pr-from-brampton-guide-2026",
@@ -3432,7 +3432,7 @@ Brampton has one of Canada's highest family sponsorship rates:
 4. **Apply for Ontario PNP** — If your CRS needs a boost
 5. **Submit Express Entry** — CEC stream for fastest processing
 
-👉 Living in Brampton and want PR? 4 Aces Visa has helped thousands of Brampton residents get their permanent residency. Free assessment available — call or visit us today.`
+👉 Living in Brampton and want PR? Garg Brothers has helped thousands of Brampton residents get their permanent residency. Free assessment available — call or visit us today.`
   },
   {
     slug: "immigration-consultant-punjab-vs-canada-based-2026",
@@ -3473,7 +3473,7 @@ Brampton has one of Canada's highest family sponsorship rates:
 
 ## The Best Approach: Hybrid Model
 
-4 Aces Visa operates a hybrid model:
+Garg Brothers operates a hybrid model:
 - **Canada-based RCIC expertise** — Legally authorized representation
 - **Punjab client support** — Virtual consultations in Punjabi and Hindi
 - **24/7 online portal** — Track your application from anywhere
@@ -3495,7 +3495,7 @@ Brampton has one of Canada's highest family sponsorship rates:
 - No written agreement or contract
 - Asking for original documents without receipts
 
-👉 4 Aces Visa is a Canada-based, RCIC-licensed consultancy serving Punjab clients remotely. Get the best of both worlds — Canadian expertise with Punjab accessibility. Book your free assessment today.`
+👉 Garg Brothers is a Canada-based, RCIC-licensed consultancy serving Punjab clients remotely. Get the best of both worlds — Canadian expertise with Punjab accessibility. Book your free assessment today.`
   },
 
   {
@@ -3572,7 +3572,7 @@ A: Absolutely. Chemical engineers, IT professionals, and accountants from Gujara
 **Q: How long does Canada PR take from Gujarat?**
 A: Express Entry typically takes 6-8 months from ITA. Total timeline including preparation is 10-16 months.
 
-Book a free assessment with 4 Aces Visa to start your Canada PR journey from Gujarat today.`
+Book a free assessment with Garg Brothers to start your Canada PR journey from Gujarat today.`
   },
   {
     slug: "best-immigration-consultant-haryana-2026",
@@ -3589,7 +3589,7 @@ Book a free assessment with 4 Aces Visa to start your Canada PR journey from Guj
 When choosing an immigration consultant in Haryana, look for:
 
 1. **RCIC/CICC Registration** — Verify the consultant is licensed by Canada's regulatory body
-2. **Proven Track Record** — Ask for documented success rates (4 Aces Visa: 98%)
+2. **Proven Track Record** — Ask for documented success rates (Garg Brothers: 98%)
 3. **Transparent Pricing** — No hidden fees, clear breakdown of all costs
 4. **Personalized Assessment** — Free initial evaluation of your profile
 5. **End-to-End Support** — From IELTS coaching guidance to post-landing assistance
@@ -3639,7 +3639,7 @@ When choosing an immigration consultant in Haryana, look for:
 - No written service agreement
 - Asking for original documents without receipts
 
-## Why 4 Aces Visa for Haryana?
+## Why Garg Brothers for Haryana?
 
 - Canada-based RCIC-licensed consultancy
 - 98% success rate across 15,000+ applications
@@ -3750,7 +3750,7 @@ BC PNP uses its own scoring system (separate from CRS):
 - Abbotsford and Surrey have established Punjabi communities for settlement support
 - Tech professionals should target the BC PNP Tech stream for fastest processing
 
-Start your BC PNP journey with 4 Aces Visa — book a free assessment to evaluate your eligibility.`
+Start your BC PNP journey with Garg Brothers — book a free assessment to evaluate your eligibility.`
   },
   {
     slug: "rajasthan-to-canada-immigration-guide-2026",
@@ -3826,7 +3826,7 @@ Rajasthan's lower cost of living is an advantage — proof-of-funds requirements
 ## FAQ
 
 **Q: Can I apply for Canada PR from Jaipur?**
-A: Yes! The entire process is online. 4 Aces Visa provides virtual consultations for all Rajasthan cities.
+A: Yes! The entire process is online. Garg Brothers provides virtual consultations for all Rajasthan cities.
 
 **Q: Is Kota good for study visa to Canada?**
 A: Excellent! Kota students' academic backgrounds help them gain admission to top Canadian DLIs and transition to PR through PGWP.
@@ -3834,7 +3834,7 @@ A: Excellent! Kota students' academic backgrounds help them gain admission to to
 **Q: Which province is best for Rajasthan immigrants?**
 A: Ontario (tech, manufacturing), BC (tech, hospitality), and Saskatchewan (lower CRS cutoffs) are popular choices.
 
-Start your Canada immigration journey from Rajasthan with 4 Aces Visa — book a free assessment today.`
+Start your Canada immigration journey from Rajasthan with Garg Brothers — book a free assessment today.`
   },
   {
     slug: "fastest-way-to-get-canada-pr-2026",
@@ -3903,7 +3903,7 @@ IRCC targets 6-month processing for Express Entry applications.
 | Study → PGWP → CEC | 3-5 years |
 | LMIA work permit → PR | 8-14 months |
 
-Book a free assessment with 4 Aces Visa to identify your fastest PR pathway.`
+Book a free assessment with Garg Brothers to identify your fastest PR pathway.`
   },
   {
     slug: "canada-immigration-policy-changes-2026",
@@ -3985,7 +3985,7 @@ Several provinces launched specialized streams:
 4. Verify PGWP eligibility for any study program
 5. Book a consultation for personalized strategy
 
-Stay ahead of policy changes — 4 Aces Visa monitors every IRCC update and adjusts your strategy accordingly.`
+Stay ahead of policy changes — Garg Brothers monitors every IRCC update and adjusts your strategy accordingly.`
   },
   {
     slug: "canada-pr-without-ielts-possible-2026",
@@ -4054,7 +4054,7 @@ Adding French proficiency (TEF/TCF) can boost your CRS by 25-50 points even if E
 - **Choose PTE Core** if you want fastest results and AI-scored consistency
 - **Add TEF/TCF** for bonus CRS points regardless of your English test
 
-Contact 4 Aces Visa for personalized test recommendations based on your profile.`
+Contact Garg Brothers for personalized test recommendations based on your profile.`
   },
   {
     slug: "ai-tech-jobs-canada-immigration-2026",
@@ -4145,7 +4145,7 @@ The Global Talent Stream provides work permits in just 2 weeks:
 - Open-source contributions demonstrate expertise
 - Canadian AI hubs: Toronto (Vector Institute), Montreal (Mila), Edmonton (Amii)
 
-Get a personalized tech immigration strategy from 4 Aces Visa — our consultants specialize in STEM pathways.`
+Get a personalized tech immigration strategy from Garg Brothers — our consultants specialize in STEM pathways.`
   },
   {
     slug: "how-much-money-needed-canada-immigration-2026",
@@ -4222,7 +4222,7 @@ You must show sufficient settlement funds (not a fee — just proof in your bank
 | Winnipeg | $1,500-2,200 |
 | Halifax | $1,800-2,500 |
 
-Get a personalized cost estimate for your specific situation — book a free assessment with 4 Aces Visa.`
+Get a personalized cost estimate for your specific situation — book a free assessment with Garg Brothers.`
   },
   {
     slug: "canada-pr-for-nurses-healthcare-workers-2026",
@@ -4318,7 +4318,7 @@ Each province has its own nursing regulatory body:
 **Challenge:** Canadian experience preferred by employers
 **Solution:** Some provinces offer supervised practice programs for IEHPs
 
-Book a free healthcare immigration assessment with 4 Aces Visa — we specialize in fast-tracking nurses and healthcare professionals to Canada.`
+Book a free healthcare immigration assessment with Garg Brothers — we specialize in fast-tracking nurses and healthcare professionals to Canada.`
   },
 
   {
@@ -4328,7 +4328,7 @@ Book a free healthcare immigration assessment with 4 Aces Visa — we specialize
     date: "2026-04-10",
     readTime: "9 min",
     category: "UK",
-    metaDescription: "Complete guide to UK Skilled Worker Visa 2026. Learn the 70-point system, £26,200 salary threshold, Graduate Route, and path to ILR. Expert advice from 4 Aces Visa.",
+    metaDescription: "Complete guide to UK Skilled Worker Visa 2026. Learn the 70-point system, £26,200 salary threshold, Graduate Route, and path to ILR. Expert advice from Garg Brothers.",
     content: `The UK Skilled Worker Visa is the main work visa route for overseas nationals with a job offer from a licensed UK employer. It leads to ILR (permanent residence) after 5 years.
 
 ## The 70-Point System (2026)
@@ -4361,7 +4361,7 @@ The minimum salary is GBP 26,200/year (raised from GBP 25,600 in April 2024). Fo
 
 After 5 continuous years on a Skilled Worker Visa: Life in the UK test, English proof, continuous residence (max 180 days/year absence). Citizenship eligible 1 year after ILR.
 
-Book a free consultation with 4 Aces Visa for UK immigration guidance.`
+Book a free consultation with Garg Brothers for UK immigration guidance.`
   },
   {
     slug: "australia-subclass-189-190-491-comparison-2026",
@@ -4391,7 +4391,7 @@ Required before submitting EOI. ACS for IT, Engineers Australia for engineers, A
 
 South Australia (SA), Tasmania (TAS), and Northern Territory (NT) often have shorter waits and broader occupation lists than NSW or VIC.
 
-Get expert Australia PR guidance from 4 Aces Visa — free assessment available.`
+Get expert Australia PR guidance from Garg Brothers — free assessment available.`
   },
   {
     slug: "germany-chancenkarte-eu-blue-card-guide-2026",
@@ -4427,7 +4427,7 @@ Check anabin database (anabin.kmk.org). IIT and NIT degrees typically rated H+ (
 
 1. Chancenkarte (no job offer) -> 2. Find job in Germany -> 3. Switch to EU Blue Card -> 4. Work 21 months with B1 German -> 5. Apply for Niederlassungserlaubnis (permanent settlement). Total: approximately 3-4 years.
 
-Book a free Germany immigration consultation with 4 Aces Visa.`
+Book a free Germany immigration consultation with Garg Brothers.`
   },
   {
     slug: "crs-score-draw-history-statistics-2026",
@@ -4461,7 +4461,7 @@ PNP nomination: +600. LMIA job offer (senior management): +200. LMIA job offer (
 
 IRCC has reduced targets to 395,000 PRs in 2025 and 380,000 in 2026. This may increase CRS cutoffs due to more competition. Optimize your profile now.
 
-Contact 4 Aces Visa for a free CRS assessment and personalized draw strategy.`
+Contact Garg Brothers for a free CRS assessment and personalized draw strategy.`
   },
   {
     slug: "ielts-vs-pte-vs-celpip-canada-immigration-2026",
@@ -4497,7 +4497,7 @@ In India with IELTS access: Take IELTS (most familiar, globally recognized). Wan
 
 Improving from CLB 7 to CLB 9 adds +40-80 CRS points. Strategy: take diagnostic tests for each format, choose the format where you score best, study 4-6 weeks intensively, aim for CLB 9 in all four bands.
 
-Book a free CRS assessment with 4 Aces Visa for personalized language test strategy.`
+Book a free CRS assessment with Garg Brothers for personalized language test strategy.`
   },
   {
     slug: "canada-pr-timeline-week-by-week-2026",
@@ -4544,7 +4544,7 @@ Present COPR and passport at Port of Entry. PR status activated. Receive SIN wit
 
 Language + credential assessment: 6-10 weeks parallel. Profile creation: 1-2 weeks. Pool wait: 2 weeks to 12 months. PR application preparation: 60 days. IRCC processing: 6 months. Total: 8-18 months.
 
-Contact 4 Aces Visa for a free assessment and realistic timeline for your profile.`
-  },
+Contact Garg Brothers for a free assessment and realistic timeline for your profile.`
+  }
 
 ];

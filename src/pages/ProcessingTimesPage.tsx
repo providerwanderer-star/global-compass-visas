@@ -25,7 +25,7 @@ const processingData: ProcessingCategory[] = [
       { name: "Federal Skilled Worker (FSW)", time: "6 months", trend: "stable", fee: "CAD $1,505/person", notes: "From ITA to PR" },
       { name: "Canadian Experience Class (CEC)", time: "5–6 months", trend: "stable", fee: "CAD $1,505/person" },
       { name: "Federal Skilled Trades (FST)", time: "6 months", trend: "stable", fee: "CAD $1,505/person" },
-      { name: "PNP (Enhanced via EE)", time: "6 months", trend: "stable", fee: "CAD $1,505/person + provincial fee" },
+      { name: "PNP (Enhanced via EE)", time: "6 months", trend: "stable", fee: "CAD $1,505/person + provincial fee" }
     ],
   },
   {
@@ -35,7 +35,7 @@ const processingData: ProcessingCategory[] = [
       { name: "BC PNP", time: "12–15 months", trend: "stable", fee: "CAD $1,150 (provincial)" },
       { name: "Alberta PNP (AINP)", time: "14–18 months", trend: "slower", fee: "No provincial fee" },
       { name: "Saskatchewan (SINP)", time: "10–14 months", trend: "stable", fee: "CAD $350 (provincial)" },
-      { name: "Manitoba (MPNP)", time: "10–14 months", trend: "faster", fee: "No provincial fee" },
+      { name: "Manitoba (MPNP)", time: "10–14 months", trend: "faster", fee: "No provincial fee" }
     ],
   },
   {
@@ -45,7 +45,7 @@ const processingData: ProcessingCategory[] = [
       { name: "LMIA-Exempt Work Permit (CUSMA/IEC)", time: "1–3 months", trend: "faster", fee: "CAD $155 + $230 open work permit" },
       { name: "Post-Graduation Work Permit (PGWP)", time: "5–9 months", trend: "slower", fee: "CAD $255", notes: "Apply before study permit expires" },
       { name: "Spousal Open Work Permit", time: "5–8 months", trend: "stable", fee: "CAD $255" },
-      { name: "Intra-Company Transfer (ICT)", time: "2–4 months", trend: "stable", fee: "CAD $155" },
+      { name: "Intra-Company Transfer (ICT)", time: "2–4 months", trend: "stable", fee: "CAD $155" }
     ],
   },
   {
@@ -53,7 +53,7 @@ const processingData: ProcessingCategory[] = [
     items: [
       { name: "Study Permit — Online", time: "4–8 weeks", trend: "faster", fee: "CAD $150", notes: "Acceptance letter from DLI required" },
       { name: "Study Permit — At Port of Entry", time: "Same day", trend: "stable", fee: "CAD $150", notes: "Only if visa-exempt and letter of introduction" },
-      { name: "Study Permit Extension (Inside Canada)", time: "3–5 months", trend: "stable", fee: "CAD $150" },
+      { name: "Study Permit Extension (Inside Canada)", time: "3–5 months", trend: "stable", fee: "CAD $150" }
     ],
   },
   {
@@ -61,7 +61,7 @@ const processingData: ProcessingCategory[] = [
     items: [
       { name: "Spousal / Common-Law Sponsorship", time: "12 months", trend: "faster", fee: "CAD $1,080 total", notes: "Inside Canada faster than overseas" },
       { name: "Parent & Grandparent Sponsorship", time: "24–36 months", trend: "slower", fee: "CAD $1,080 total", notes: "Lottery system — not always open" },
-      { name: "Child Sponsorship", time: "12 months", trend: "stable", fee: "CAD $155" },
+      { name: "Child Sponsorship", time: "12 months", trend: "stable", fee: "CAD $155" }
     ],
   },
   {
@@ -69,9 +69,9 @@ const processingData: ProcessingCategory[] = [
     items: [
       { name: "Temporary Resident Visa (TRV)", time: "1–4 weeks", trend: "stable", fee: "CAD $100" },
       { name: "Super Visa (Parents)", time: "8 weeks", trend: "faster", fee: "CAD $100", notes: "Medical insurance required" },
-      { name: "Electronic Travel Authorization (eTA)", time: "Minutes to 72 hrs", trend: "stable", fee: "CAD $7" },
+      { name: "Electronic Travel Authorization (eTA)", time: "Minutes to 72 hrs", trend: "stable", fee: "CAD $7" }
     ],
-  },
+  }
 ];
 
 const TrendIcon = ({ trend }: { trend: "faster" | "stable" | "slower" }) => {
@@ -88,7 +88,7 @@ const ProcessingTimesPage = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Canada Immigration Processing Times 2026",
-    url: "https://www.4acesvisa.com/processing-times",
+    url: "https://www.gargbrothers.ca/processing-times",
     description: "Current Canada immigration processing times for Express Entry, PNP, work permits, study permits, and family sponsorship. Updated April 2026.",
   };
 
@@ -119,33 +119,32 @@ const ProcessingTimesPage = () => {
           "@type": "Answer",
           text: "Common causes of delays include incomplete applications or missing documents, biometrics not submitted, medical exam issues, additional background checks, high application volumes, and requests for additional information (procedural fairness letters). Submitting a complete application and responding quickly to IRCC requests minimizes delays.",
         },
-      },
+      }
     ],
   };
 
   return (
     <>
       <Helmet>
-        <title>Canada Immigration Processing Times 2026 — Work Permit, PR, Study | 4 Aces Visa</title>
+        <title>Canada Immigration Processing Times 2026 — Work Permit, PR, Study | Garg Brothers</title>
         <meta
           name="description"
           content="Current Canada immigration processing times for Express Entry (6 months), work permits (1–5 months), study permits (4–8 weeks), PNP (10–18 months), and family sponsorship. Updated April 2026."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/processing-times" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/processing-times" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Canada Immigration Processing Times 2026 — Work Permit, PR, Study | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Canada Immigration Processing Times 2026 — Work Permit, PR, Study | Garg Brothers" />
         <meta property="og:description" content="Current Canada immigration processing times for Express Entry (6 months), work permits (1–5 months), study permits (4–8 weeks), PNP (10–18 months), and family sponsorship. Updated April 2026." />
-        <meta property="og:url" content="https://www.4acesvisa.com/processing-times" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/processing-times" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"Processing Times","item":"https://www.4acesvisa.com/processing-times"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"Processing Times","item":"https://www.gargbrothers.ca/processing-times"}]})}</script>
       </Helmet>
 
       {/* ── HERO ── */}
@@ -173,7 +172,7 @@ const ProcessingTimesPage = () => {
               { label: "Express Entry PR", time: "~6 months", icon: "🇨🇦", color: "border-blue-200 bg-blue-50" },
               { label: "Work Permit", time: "1–5 months", icon: "💼", color: "border-orange-200 bg-orange-50" },
               { label: "Study Permit", time: "4–8 weeks", icon: "🎓", color: "border-emerald-200 bg-emerald-50" },
-              { label: "Spouse Sponsorship", time: "~12 months", icon: "❤️", color: "border-pink-200 bg-pink-50" },
+              { label: "Spouse Sponsorship", time: "~12 months", icon: "❤️", color: "border-pink-200 bg-pink-50" }
             ].map(({ label, time, icon, color }) => (
               <div key={label} className={`rounded-xl border p-4 text-center ${color}`}>
                 <div className="text-2xl mb-1">{icon}</div>
@@ -251,7 +250,7 @@ const ProcessingTimesPage = () => {
               { cause: "Medical exam not completed", fix: "Get your medical exam from a designated panel physician as soon as you apply." },
               { cause: "Missing translations", fix: "All non-English/French documents must have certified translations with the translator's credentials." },
               { cause: "Procedural Fairness Letter (PFL)", fix: "Respond within the deadline (usually 30 days) with a detailed written response and supporting documents." },
-              { cause: "Background / security checks", fix: "Disclose all international travel, prior visa refusals, and work history accurately." },
+              { cause: "Background / security checks", fix: "Disclose all international travel, prior visa refusals, and work history accurately." }
             ].map(({ cause, fix }) => (
               <div key={cause} className="bg-card rounded-xl border border-border p-4">
                 <div className="font-semibold text-foreground text-sm mb-1">⚠️ {cause}</div>
@@ -283,7 +282,7 @@ const ProcessingTimesPage = () => {
               {
                 q: "Can I track my immigration application status?",
                 a: "Yes. Use IRCC's online portal (My Application) or IRCC Web Form to track your application. You can also check your application status via the IRCC website using your application number. Hiring an authorized representative (RCIC) allows them to track and communicate with IRCC on your behalf.",
-              },
+              }
             ].map(({ q, a }) => (
               <details key={q} className="group bg-card border border-border rounded-xl">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-foreground text-sm list-none">

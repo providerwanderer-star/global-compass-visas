@@ -18,7 +18,7 @@ import {
   PROVINCE_LIST,
 } from "@/data/occupationProvinceData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const OccupationProvincePage = () => {
@@ -32,8 +32,8 @@ const OccupationProvincePage = () => {
 
   const canonical = `${SITE}/jobs/${occ.slug}/${prov.slug}`;
   const headline = `${occ.name} Jobs & PR Pathway in ${prov.name}, Canada (${YEAR})`;
-  const metaTitle = `${occ.name} Jobs in ${prov.name} + PR Pathway (${YEAR}) | 4 Aces Visa`;
-  const metaDescription = `${occ.name} (NOC ${occ.noc}, TEER ${occ.teer}) demand, wage, licensing and Express Entry / ${prov.abbr} PNP routes for ${prov.name}. 4 Aces Visa Immigration Team.`;
+  const metaTitle = `${occ.name} Jobs in ${prov.name} + PR Pathway (${YEAR}) | Garg Brothers`;
+  const metaDescription = `${occ.name} (NOC ${occ.noc}, TEER ${occ.teer}) demand, wage, licensing and Express Entry / ${prov.abbr} PNP routes for ${prov.name}. Garg Brothers Immigration Team.`;
 
   const faqs = [
     {
@@ -55,7 +55,7 @@ const OccupationProvincePage = () => {
     {
       q: `How long does PR take from profile to landing?`,
       a: `Express Entry CEC: typically 6–8 months after ITA. ${prov.abbr} PNP base stream: 12–18 months end-to-end including nomination. Add 2–4 months for Enhanced ${prov.abbr} PNP via Express Entry.`,
-    },
+    }
   ];
 
   const faqSchema = {
@@ -74,10 +74,10 @@ const OccupationProvincePage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
     publisher: {
       "@type": "Organization",
-      name: "4 Aces Visa",
+      name: "Garg Brothers",
       logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` },
     },
     mainEntityOfPage: canonical,
@@ -106,7 +106,7 @@ const OccupationProvincePage = () => {
         breadcrumbs={[
           { name: "Jobs & PR Pathways", url: "/" },
           { name: occ.name, url: `/jobs/${occ.slug}/${prov.slug}` },
-          { name: prov.name, url: `/jobs/${occ.slug}/${prov.slug}` },
+          { name: prov.name, url: `/jobs/${occ.slug}/${prov.slug}` }
         ]}
       />
 

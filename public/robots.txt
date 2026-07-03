@@ -66,6 +66,6 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.4acesvisa.com/sitemap.xml
+Sitemap: https://www.gargbrothers.ca/sitemap.xml
 # Live, Supabase-driven sitemap (lastmod auto-updates with new draws & posts)
 Sitemap: https://ojrdnehpkmyvakweknot.supabase.co/functions/v1/sitemap

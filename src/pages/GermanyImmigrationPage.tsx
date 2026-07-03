@@ -16,21 +16,21 @@ type Variant = {
 
 const VARIANTS: Record<string, Variant> = {
   "/germany/chancenkarte": {
-    title: "Germany Chancenkarte 2026 — Opportunity Card Guide | 4 Aces Visa",
+    title: "Germany Chancenkarte 2026 — Opportunity Card Guide | Garg Brothers",
     h1: "Germany Chancenkarte (Opportunity Card)",
     description:
       "Germany Chancenkarte 2026 — points-based job search visa. No job offer needed, work 20 hrs/week while searching. 6-of-10 points test, EUR 12,000 blocked account, 1-year validity. Full eligibility and application steps.",
-    canonical: "https://www.4acesvisa.com/germany/chancenkarte",
+    canonical: "https://www.gargbrothers.ca/germany/chancenkarte",
     intro:
       "Germany's new points-based job-search visa (replaced the Job Seeker Visa in 2024). Enter Germany without a job offer, work up to 20 hours/week while searching, and convert to an EU Blue Card on hire.",
     breadcrumbName: "Chancenkarte",
   },
   "/germany/eu-blue-card": {
-    title: "Germany EU Blue Card 2026 — Salary, Eligibility & PR | 4 Aces Visa",
+    title: "Germany EU Blue Card 2026 — Salary, Eligibility & PR | Garg Brothers",
     h1: "Germany EU Blue Card 2026",
     description:
       "Germany EU Blue Card guide for 2026. EUR 43,759 salary threshold (EUR 39,682 for shortage roles), recognized degree, fast-track to permanent residence in 21 months with B1 German. Family joins immediately.",
-    canonical: "https://www.4acesvisa.com/germany/eu-blue-card",
+    canonical: "https://www.gargbrothers.ca/germany/eu-blue-card",
     intro:
       "Germany's premium work permit for highly qualified professionals — fast-track to permanent residence in 21 months (with B1 German), family joins immediately, and free movement across the EU after 18 months.",
     breadcrumbName: "EU Blue Card",
@@ -50,7 +50,7 @@ const pathways = [
       "EUR 12,000 in blocked account (Sperrkonto)",
       "Work up to 20 hrs/week while job searching",
       "Trial work: up to 2 weeks with potential employer",
-      "Valid 1 year; convert to EU Blue Card after finding work",
+      "Valid 1 year; convert to EU Blue Card after finding work"
     ],
     processing: "2–4 months",
     link: "/services/job-seeker-visa",
@@ -65,7 +65,7 @@ const pathways = [
       "Job offer: EUR 43,759/year (general) or EUR 39,682/year (shortage occupations)",
       "Bring family immediately on Dependent Visa",
       "Permanent residence: 21 months (B1 German) or 33 months (no B1)",
-      "Move to another EU country after 18 months",
+      "Move to another EU country after 18 months"
     ],
     processing: "4–12 weeks",
     link: "/immigration/germany",
@@ -80,11 +80,11 @@ const pathways = [
       "Job offer in the qualified occupation",
       "No fixed salary minimum (but must be appropriate for role)",
       "Permanent residence after 4–5 years",
-      "State-specific processing at Ausländerbehörde",
+      "State-specific processing at Ausländerbehörde"
     ],
     processing: "2–6 months",
     link: "/immigration/germany",
-  },
+  }
 ];
 
 const chancenkartePoints = [
@@ -94,7 +94,7 @@ const chancenkartePoints = [
   { criterion: "German language skills at A1 or A2", points: 1 },
   { criterion: "2+ years relevant work experience", points: 1 },
   { criterion: "Under 35 years of age", points: 2 },
-  { criterion: "Previous stay in Germany (study/work/training)", points: 1 },
+  { criterion: "Previous stay in Germany (study/work/training)", points: 1 }
 ];
 
 const faqs = [
@@ -117,7 +117,7 @@ const faqs = [
   {
     q: "Can I bring my family to Germany on a work visa?",
     a: "Yes. EU Blue Card holders can bring their family immediately — spouses do not need to demonstrate German language skills (unlike regular work permit holders). Your spouse receives a residence permit allowing them to work freely in Germany. Children under 18 can join and access free public schooling.",
-  },
+  }
 ];
 
 export default function GermanyImmigrationPage() {
@@ -151,7 +151,7 @@ export default function GermanyImmigrationPage() {
       <SeoSchema
         breadcrumbs={[
           { name: "Germany Immigration", url: "/germany/chancenkarte" },
-          { name: variant.breadcrumbName, url: location.pathname },
+          { name: variant.breadcrumbName, url: location.pathname }
         ]}
       />
 
@@ -171,7 +171,7 @@ export default function GermanyImmigrationPage() {
                 { label: "Chancenkarte Points", value: "6 min." },
                 { label: "Blue Card Salary", value: "€43,759" },
                 { label: "PR Timeline (B1 German)", value: "21 months" },
-                { label: "EU Access After", value: "18 months" },
+                { label: "EU Access After", value: "18 months" }
               ].map((stat, i) => (
                 <div key={i} className="bg-white/10 rounded-xl px-6 py-3">
                   <div className="text-2xl font-bold">{stat.value}</div>
@@ -252,7 +252,7 @@ export default function GermanyImmigrationPage() {
             </div>
           </div>
           <p className="text-center text-sm text-gray-500 mt-4">
-            Not sure if you qualify? <Link to="/contact" className="text-blue-600 underline">Get a free assessment</Link> from 4 Aces Visa.
+            Not sure if you qualify? <Link to="/contact" className="text-blue-600 underline">Get a free assessment</Link> from Garg Brothers.
           </p>
         </div>
       </section>
@@ -269,7 +269,7 @@ export default function GermanyImmigrationPage() {
               { step: "Months 1–12", title: "Job Search in Germany (Chancenkarte route)", desc: "Arrive in Germany. Attend interviews, job fairs, use German job portals (Indeed.de, StepStone, XING, LinkedIn). Work up to 20 hrs/week part-time. Trial work for up to 2 weeks.", badge: "Job Search" },
               { step: "After Finding Work", title: "Convert to EU Blue Card", desc: "Once you have a qualifying job offer (EUR 39,682+ for shortage occupations), visit the Ausländerbehörde (immigration office) and apply for an EU Blue Card. Processing: 4–12 weeks.", badge: "Upgrade" },
               { step: "Month 21 (with B1 German)", title: "Apply for Permanent Settlement (Niederlassungserlaubnis)", desc: "After 21 months on EU Blue Card with B1 German proof: apply for permanent settlement. Requirements: paid pension contributions, secure livelihood, no serious criminal convictions.", badge: "Permanent" },
-              { step: "Year 5–8", title: "Apply for German Citizenship (Optional)", desc: "After 5 years of legal residence (3 for exceptional cases): apply for naturalization. Germany allows dual citizenship for most cases since 2024.", badge: "Citizen" },
+              { step: "Year 5–8", title: "Apply for German Citizenship (Optional)", desc: "After 5 years of legal residence (3 for exceptional cases): apply for naturalization. Germany allows dual citizenship for most cases since 2024.", badge: "Citizen" }
             ].map((step, i) => (
               <div key={i} className="relative pl-16 pb-8 last:pb-0">
                 <div className="absolute left-3 w-6 h-6 bg-yellow-500 rounded-full text-gray-900 text-xs flex items-center justify-center font-bold">{i + 1}</div>
@@ -306,7 +306,7 @@ export default function GermanyImmigrationPage() {
       <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-yellow-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Start Your Germany Immigration Journey</h2>
-          <p className="text-gray-300 mb-8">Check your Chancenkarte points, verify degree recognition, and get a personalized Germany immigration plan. Free consultation with 4 Aces Visa experts.</p>
+          <p className="text-gray-300 mb-8">Check your Chancenkarte points, verify degree recognition, and get a personalized Germany immigration plan. Free consultation with Garg Brothers experts.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-yellow-500 hover:bg-yellow-400 text-gray-900">
               <Link to="/contact">Free Germany Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>

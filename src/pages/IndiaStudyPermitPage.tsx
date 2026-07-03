@@ -20,7 +20,7 @@ const topUniversities = [
   { name: "McGill University", rank: "#46 QS World", programs: "Law, Medicine, Science" },
   { name: "University of Waterloo", rank: "Top 5 CS Globally", programs: "Computer Science, Engineering" },
   { name: "York University (Toronto)", rank: "Ontario's Largest", programs: "Business, IT, Social Work" },
-  { name: "Conestoga College", rank: "Top Ontario College", programs: "IT, Business, Healthcare" },
+  { name: "Conestoga College", rank: "Top Ontario College", programs: "IT, Business, Healthcare" }
 ];
 
 const steps = [
@@ -29,7 +29,7 @@ const steps = [
   { step: "03", title: "Apply for Study Permit", desc: "Submit your study permit application with your LOA, financial proof, and passport. Biometrics required.", time: "Month 4-6" },
   { step: "04", title: "Study in Canada", desc: "Arrive, study, and work part-time (24 hrs/week on or off campus). Your spouse gets an open work permit.", time: "Year 1-4" },
   { step: "05", title: "Get Your PGWP", desc: "Graduate and apply for a Post-Graduation Work Permit valid for up to 3 years. Build Canadian work experience for PR.", time: "After Graduation" },
-  { step: "06", title: "Apply for PR", desc: "Use Canadian work experience + education to apply through Express Entry or PNP. Most PGWP holders qualify.", time: "1-2 Years After PGWP" },
+  { step: "06", title: "Apply for PR", desc: "Use Canadian work experience + education to apply through Express Entry or PNP. Most PGWP holders qualify.", time: "1-2 Years After PGWP" }
 ];
 
 const faqs = [
@@ -52,26 +52,26 @@ const faqs = [
   {
     q: "Does my IELTS score affect study permit approval?",
     a: "IELTS is primarily required for university/college admission. Most institutions require a minimum overall band of 6.0-6.5. A higher score opens more program options.",
-  },
+  }
 ];
 
 const IndiaStudyPermitPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada Study Permit for Indians 2026 — PGWP & PR Pathway | 4 Aces Visa</title>
+        <title>Canada Study Permit for Indians 2026 — PGWP & PR Pathway | Garg Brothers</title>
         <meta
           name="description"
           content="Study in Canada from India in 2026. Complete guide to study permit application, top universities, financial requirements, and PGWP to PR pathway. Free assessment."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/india/study-permit-india" />
-        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india/study-permit-india" />
-        <meta property="og:title" content="Canada Study Permit for Indians 2026 | 4 Aces Visa" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/india/study-permit-india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.gargbrothers.ca/india/study-permit-india" />
+        <meta property="og:title" content="Canada Study Permit for Indians 2026 | Garg Brothers" />
         <meta property="og:description" content="Study in Canada from India. Complete guide to study permit, PGWP and PR pathway. Free assessment by expert consultants." />
-        <meta property="og:url" content="https://www.4acesvisa.com/india/study-permit-india" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/india/study-permit-india" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Study Permit for Indians 2026 | 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada Study Permit for Indians 2026 | Garg Brothers" />
         <meta name="twitter:description" content="Study in Canada from India. Complete guide to study permit, PGWP and PR pathway. Free assessment by expert consultants." />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -79,16 +79,16 @@ const IndiaStudyPermitPage = () => {
             "@graph": [
               {
                 "@type": "WebPage",
-                name: "Canada Study Permit for Indians 2026 — 4 Aces Visa",
+                name: "Canada Study Permit for Indians 2026 — Garg Brothers",
                 description: "Complete guide to studying in Canada from India, including study permit application, top institutions, and PGWP to PR pathway.",
-                url: "https://www.4acesvisa.com/india/study-permit-india",
+                url: "https://www.gargbrothers.ca/india/study-permit-india",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.4acesvisa.com/india" },
-                  { "@type": "ListItem", position: 3, name: "Study Permit for Indians", item: "https://www.4acesvisa.com/india/study-permit-india" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.gargbrothers.ca/india" },
+                  { "@type": "ListItem", position: 3, name: "Study Permit for Indians", item: "https://www.gargbrothers.ca/india/study-permit-india" }
                 ],
               },
               {
@@ -98,7 +98,7 @@ const IndiaStudyPermitPage = () => {
                   name: faq.q,
                   acceptedAnswer: { "@type": "Answer", text: faq.a },
                 })),
-              },
+              }
             ],
           })}
         </script>
@@ -152,7 +152,7 @@ const IndiaStudyPermitPage = () => {
               { value: "4-8 Weeks", label: "Study permit processing" },
               { value: "3 Years", label: "PGWP after 2yr program" },
               { value: "24 hrs/week", label: "Work while studying" },
-              { value: "6 Months", label: "PR after PGWP (Express Entry)" },
+              { value: "6 Months", label: "PR after PGWP (Express Entry)" }
             ].map((s, i) => (
               <motion.div key={s.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <div className="font-display text-xl md:text-2xl font-bold text-accent-foreground">{s.value}</div>
@@ -258,7 +258,7 @@ const IndiaStudyPermitPage = () => {
                   { item: "Living expenses (IRCC minimum)", cost: "$20,635" },
                   { item: "Health insurance", cost: "$600 – $1,200" },
                   { item: "Study permit fee", cost: "$150 (one-time)" },
-                  { item: "Biometrics", cost: "$85 (one-time)" },
+                  { item: "Biometrics", cost: "$85 (one-time)" }
                 ].map((row, i) => (
                   <tr key={row.item} className={`border-t border-border ${i % 2 === 0 ? "" : "bg-secondary/20"}`}>
                     <td className="px-4 py-3 text-sm text-foreground">{row.item}</td>
@@ -299,7 +299,7 @@ const IndiaStudyPermitPage = () => {
                 "Medical examination (if required)",
                 "Police Clearance Certificate (PCC)",
                 "Proof of ties to India (employment, property)",
-                "Bank statements (last 6 months)",
+                "Bank statements (last 6 months)"
               ].map((doc) => (
                 <div key={doc} className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-gold mt-0.5 shrink-0" />
@@ -349,7 +349,7 @@ const IndiaStudyPermitPage = () => {
                   "Scholarship identification",
                   "Study permit document review",
                   "PGWP & PR strategy planning",
-                  "Response within 24 hours",
+                  "Response within 24 hours"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-primary-foreground">
                     <CheckCircle className="h-4 w-4 text-gold shrink-0" />

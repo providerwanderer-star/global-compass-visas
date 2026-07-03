@@ -46,7 +46,7 @@ const prPathways = [
     desc: "If you're already working in Canada on a PGWP or work permit, CEC rewards your Canadian work experience with a direct Express Entry pathway.",
     link: "/express-entry",
     pros: ["1 year Canadian experience qualifies", "No foreign experience needed", "Strong CRS score with CLB 7+"],
-  },
+  }
 ];
 
 const crsBoostTips = [
@@ -55,7 +55,7 @@ const crsBoostTips = [
   { tip: "Apply for a PNP nomination", impact: "+600 CRS points", icon: Star },
   { tip: "Complete education in Canada", impact: "+15 to +30 CRS points", icon: TrendingUp },
   { tip: "Earn a Canadian degree/diploma", impact: "+up to 150 CRS points", icon: Award },
-  { tip: "Gain 3+ years skilled work experience", impact: "+up to 80 CRS points", icon: Users },
+  { tip: "Gain 3+ years skilled work experience", impact: "+up to 80 CRS points", icon: Users }
 ];
 
 const faqs = [
@@ -82,26 +82,26 @@ const faqs = [
   {
     q: "Can I bring my family with me to Canada on PR?",
     a: "Yes. When you apply for PR through Express Entry, you can include your spouse/common-law partner and dependent children (under 22) in the same application. They receive PR simultaneously.",
-  },
+  }
 ];
 
 const IndiaPRPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada PR from India 2026 — Express Entry & PNP Guide | 4 Aces Visa</title>
+        <title>Canada PR from India 2026 — Express Entry & PNP Guide | Garg Brothers</title>
         <meta
           name="description"
           content="Canada permanent residency from India in 2026. Complete guide to Express Entry, PNP, and family sponsorship pathways. 80,000+ Indians got PR in 2024. Free CRS assessment."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/india/canada-pr-india" />
-        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india/canada-pr-india" />
-        <meta property="og:title" content="Canada PR from India 2026 — Express Entry & PNP | 4 Aces Visa" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/india/canada-pr-india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.gargbrothers.ca/india/canada-pr-india" />
+        <meta property="og:title" content="Canada PR from India 2026 — Express Entry & PNP | Garg Brothers" />
         <meta property="og:description" content="Complete guide to Canada permanent residency from India. Express Entry, PNP, family sponsorship pathways. 80,000+ Indians got PR in 2024." />
-        <meta property="og:url" content="https://www.4acesvisa.com/india/canada-pr-india" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/india/canada-pr-india" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada PR from India 2026 — Express Entry & PNP | 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada PR from India 2026 — Express Entry & PNP | Garg Brothers" />
         <meta name="twitter:description" content="Complete guide to Canada permanent residency from India. Express Entry, PNP, family sponsorship pathways. 80,000+ Indians got PR in 2024." />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -109,16 +109,16 @@ const IndiaPRPage = () => {
             "@graph": [
               {
                 "@type": "WebPage",
-                name: "Canada PR from India 2026 — 4 Aces Visa",
+                name: "Canada PR from India 2026 — Garg Brothers",
                 description: "Complete guide to Canadian permanent residency for Indian nationals, covering Express Entry, PNP, and family sponsorship pathways.",
-                url: "https://www.4acesvisa.com/india/canada-pr-india",
+                url: "https://www.gargbrothers.ca/india/canada-pr-india",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.4acesvisa.com/india" },
-                  { "@type": "ListItem", position: 3, name: "Canada PR from India", item: "https://www.4acesvisa.com/india/canada-pr-india" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.gargbrothers.ca/india" },
+                  { "@type": "ListItem", position: 3, name: "Canada PR from India", item: "https://www.gargbrothers.ca/india/canada-pr-india" }
                 ],
               },
               {
@@ -128,7 +128,7 @@ const IndiaPRPage = () => {
                   name: faq.q,
                   acceptedAnswer: { "@type": "Answer", text: faq.a },
                 })),
-              },
+              }
             ],
           })}
         </script>
@@ -182,7 +182,7 @@ const IndiaPRPage = () => {
               { value: "80,000+", label: "Indians got PR in 2024" },
               { value: "6 Months", label: "Express Entry processing" },
               { value: "+600", label: "CRS points with PNP" },
-              { value: "3 Years", label: "To Canadian citizenship" },
+              { value: "3 Years", label: "To Canadian citizenship" }
             ].map((s, i) => (
               <motion.div key={s.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <div className="font-display text-xl md:text-2xl font-bold text-accent-foreground">{s.value}</div>
@@ -297,7 +297,7 @@ const IndiaPRPage = () => {
               { time: "Week 2-8", title: "Enter the Express Entry Pool", desc: "Submit profile, receive CRS score. Begin waiting for an Invitation to Apply." },
               { time: "Week 8 – Month 6", title: "Receive ITA", desc: "Receive your Invitation to Apply. You have 60 days to submit your full PR application." },
               { time: "Month 6-12", title: "Submit PR Application", desc: "Submit all documents, biometrics, medical exam. IRCC processes within 6 months." },
-              { time: "Month 12-18", title: "Receive PR & Land in Canada", desc: "Receive Confirmation of PR, COPR document. Book your landing flight to Canada!" },
+              { time: "Month 12-18", title: "Receive PR & Land in Canada", desc: "Receive Confirmation of PR, COPR document. Book your landing flight to Canada!" }
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -360,7 +360,7 @@ const IndiaPRPage = () => {
                   "Best PR pathway for your profile",
                   "PNP options analysis",
                   "IELTS improvement strategy",
-                  "Complete immigration roadmap",
+                  "Complete immigration roadmap"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-primary-foreground">
                     <CheckCircle className="h-4 w-4 text-gold shrink-0" />

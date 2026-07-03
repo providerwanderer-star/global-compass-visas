@@ -40,10 +40,10 @@ const StateHubPage = () => {
       <Helmet>
         <title>{hub.metaTitle}</title>
         <meta name="description" content={hub.metaDescription} />
-        <link rel="canonical" href={`https://www.4acesvisa.com${hub.parentPath}/${hub.slug}`} />
+        <link rel="canonical" href={`https://www.gargbrothers.ca${hub.parentPath}/${hub.slug}`} />
         <meta property="og:title" content={hub.metaTitle} />
         <meta property="og:description" content={hub.metaDescription} />
-        <meta property="og:url" content={`https://www.4acesvisa.com${hub.parentPath}/${hub.slug}`} />
+        <meta property="og:url" content={`https://www.gargbrothers.ca${hub.parentPath}/${hub.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={hub.metaTitle} />
         <meta name="twitter:description" content={hub.metaDescription} />
@@ -53,9 +53,9 @@ const StateHubPage = () => {
             "@graph": [
               {
                 "@type": "ProfessionalService",
-                name: `4 Aces Visa – ${hub.name}`,
+                name: `Garg Brothers – ${hub.name}`,
                 description: hub.metaDescription,
-                url: `https://www.4acesvisa.com${hub.parentPath}/${hub.slug}`,
+                url: `https://www.gargbrothers.ca${hub.parentPath}/${hub.slug}`,
                 telephone: "+16478622190",
                 email: "sahil280389@gmail.com",
                 areaServed: hub.name,
@@ -63,9 +63,9 @@ const StateHubPage = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: hub.parentLabel, item: `https://www.4acesvisa.com${hub.parentPath}` },
-                  { "@type": "ListItem", position: 3, name: hub.name, item: `https://www.4acesvisa.com${hub.parentPath}/${hub.slug}` },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: hub.parentLabel, item: `https://www.gargbrothers.ca${hub.parentPath}` },
+                  { "@type": "ListItem", position: 3, name: hub.name, item: `https://www.gargbrothers.ca${hub.parentPath}/${hub.slug}` }
                 ],
               },
               {
@@ -75,7 +75,7 @@ const StateHubPage = () => {
                   name: faq.question,
                   acceptedAnswer: { "@type": "Answer", text: faq.answer },
                 })),
-              },
+              }
             ],
           })}
         </script>

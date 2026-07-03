@@ -42,7 +42,7 @@ const permitTypes = [
     badge: "Tech Fast-Track",
     desc: "Canada's fastest work permit for tech workers — 2-week processing. IT companies can hire Indian tech professionals under this LMIA-exempt program.",
     requirements: ["NOC TEER 0 or 1 occupation", "Designated employer partnership", "Highly specialized tech role", "Degree or equivalent experience"],
-  },
+  }
 ];
 
 const inDemandJobs = [
@@ -51,7 +51,7 @@ const inDemandJobs = [
   { noc: "21311", title: "Civil Engineer", salary: "CAD $80,000–$110,000", demand: "High" },
   { noc: "11101", title: "Financial Analyst", salary: "CAD $70,000–$100,000", demand: "High" },
   { noc: "21223", title: "Data Scientist / ML", salary: "CAD $100,000–$150,000", demand: "Very High" },
-  { noc: "10019", title: "IT Project Manager", salary: "CAD $90,000–$130,000", demand: "High" },
+  { noc: "10019", title: "IT Project Manager", salary: "CAD $90,000–$130,000", demand: "High" }
 ];
 
 const faqs = [
@@ -74,26 +74,26 @@ const faqs = [
   {
     q: "What IELTS score do I need for a Canada work permit?",
     a: "IELTS is not required for all work permit types. However, if your employer's LMIA requires language testing, CLB 5 (approximately IELTS 5.0 in each band) is the typical minimum. Higher scores boost CRS for eventual PR.",
-  },
+  }
 ];
 
 const IndiaWorkPermitPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada Work Permit for Indians 2026 — LMIA & PR Pathway | 4 Aces Visa</title>
+        <title>Canada Work Permit for Indians 2026 — LMIA & PR Pathway | Garg Brothers</title>
         <meta
           name="description"
           content="Canada work permit for Indian professionals in 2026. LMIA work permits, Global Talent Stream, and employer-specific permits. Build Canadian experience for PR. Free assessment."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/india/work-permit-india" />
-        <link rel="alternate" hrefLang="en-IN" href="https://www.4acesvisa.com/india/work-permit-india" />
-        <meta property="og:title" content="Canada Work Permit for Indians 2026 | 4 Aces Visa" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/india/work-permit-india" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.gargbrothers.ca/india/work-permit-india" />
+        <meta property="og:title" content="Canada Work Permit for Indians 2026 | Garg Brothers" />
         <meta property="og:description" content="Canada work permit for Indian professionals. LMIA permits, Global Talent Stream, and PR pathway guidance. Free expert assessment." />
-        <meta property="og:url" content="https://www.4acesvisa.com/india/work-permit-india" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/india/work-permit-india" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Work Permit for Indians 2026 | 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada Work Permit for Indians 2026 | Garg Brothers" />
         <meta name="twitter:description" content="Canada work permit for Indian professionals. LMIA permits, Global Talent Stream, and PR pathway guidance." />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -101,16 +101,16 @@ const IndiaWorkPermitPage = () => {
             "@graph": [
               {
                 "@type": "WebPage",
-                name: "Canada Work Permit for Indians 2026 — 4 Aces Visa",
+                name: "Canada Work Permit for Indians 2026 — Garg Brothers",
                 description: "Complete guide to Canadian work permits for Indian professionals, covering LMIA, Global Talent Stream, and PR pathway.",
-                url: "https://www.4acesvisa.com/india/work-permit-india",
+                url: "https://www.gargbrothers.ca/india/work-permit-india",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.4acesvisa.com/india" },
-                  { "@type": "ListItem", position: 3, name: "Work Permit for Indians", item: "https://www.4acesvisa.com/india/work-permit-india" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Canada from India", item: "https://www.gargbrothers.ca/india" },
+                  { "@type": "ListItem", position: 3, name: "Work Permit for Indians", item: "https://www.gargbrothers.ca/india/work-permit-india" }
                 ],
               },
               {
@@ -120,7 +120,7 @@ const IndiaWorkPermitPage = () => {
                   name: faq.q,
                   acceptedAnswer: { "@type": "Answer", text: faq.a },
                 })),
-              },
+              }
             ],
           })}
         </script>
@@ -174,7 +174,7 @@ const IndiaWorkPermitPage = () => {
               { value: "4-8 Weeks", label: "Work permit processing" },
               { value: "+200 CRS", label: "With valid LMIA job offer" },
               { value: "2 Weeks", label: "Global Talent Stream" },
-              { value: "3 Years", label: "Canadian experience for PR" },
+              { value: "3 Years", label: "Canadian experience for PR" }
             ].map((s, i) => (
               <motion.div key={s.label} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <div className="font-display text-xl md:text-2xl font-bold text-accent-foreground">{s.value}</div>
@@ -303,7 +303,7 @@ const IndiaWorkPermitPage = () => {
                 "Medical examination (if required)",
                 "Police Clearance Certificate (PCC from India)",
                 "Proof of ties to home country",
-                "Digital photo meeting IRCC specifications",
+                "Digital photo meeting IRCC specifications"
               ].map((doc) => (
                 <div key={doc} className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-gold mt-0.5 shrink-0" />
@@ -353,7 +353,7 @@ const IndiaWorkPermitPage = () => {
                   "LMIA employer connection support",
                   "NOC code verification",
                   "CRS score impact analysis",
-                  "PR strategy from work permit",
+                  "PR strategy from work permit"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-primary-foreground">
                     <CheckCircle className="h-4 w-4 text-gold shrink-0" />

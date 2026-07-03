@@ -8,7 +8,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getBusiness, BUSINESS_LIST } from "@/data/businessImmigrationData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const BusinessImmigrationPage = () => {
@@ -18,7 +18,7 @@ const BusinessImmigrationPage = () => {
 
   const canonical = `${SITE}/business-immigration/${g.slug}`;
   const headline = `${g.name} (${YEAR})`;
-  const metaTitle = `${g.shortName} ${YEAR} — Investment, Timing & Process | 4 Aces Visa`;
+  const metaTitle = `${g.shortName} ${YEAR} — Investment, Timing & Process | Garg Brothers`;
   const metaDescription = `${g.oneLiner} Updated ${YEAR}.`;
 
   const faqSchema = {
@@ -28,8 +28,8 @@ const BusinessImmigrationPage = () => {
   const articleSchema = {
     "@context": "https://schema.org", "@type": "Article", headline,
     datePublished: `${YEAR}-01-15`, dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = BUSINESS_LIST.filter((x) => x.slug !== g.slug);
@@ -49,7 +49,7 @@ const BusinessImmigrationPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Business Immigration", url: "/business-immigration/start-up-visa" },
-        { name: g.shortName, url: `/business-immigration/${g.slug}` },
+        { name: g.shortName, url: `/business-immigration/${g.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

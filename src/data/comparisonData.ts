@@ -48,7 +48,7 @@ export const comparisons: Comparison[] = [
     category: "Canada PR",
     metaTitle: "Express Entry vs PNP (2026): Which Canada PR Pathway Is Faster?",
     metaDescription:
-      "Express Entry vs Provincial Nominee Program — processing time, CRS impact, cost, eligibility and which is faster in 2026. Honest comparison by 4 Aces Visa.",
+      "Express Entry vs Provincial Nominee Program — processing time, CRS impact, cost, eligibility and which is faster in 2026. Honest comparison by Garg Brothers.",
     h1: "Express Entry vs Provincial Nominee Program (PNP)",
     intro:
       "Express Entry and the Provincial Nominee Program are the two main pathways to Canadian permanent residence in 2026. They overlap heavily — most provincial nominations are issued through the 'enhanced' Express Entry stream — but the timeline, cost and CRS strategy are very different.",
@@ -61,19 +61,19 @@ export const comparisons: Comparison[] = [
       { attribute: "Job offer required?", optionA: "No", optionB: "Often yes (most streams)", note: "A few enhanced streams allow no-job-offer applicants in priority occupations." },
       { attribute: "Ties to a province required?", optionA: "No", optionB: "Yes — work, study or family link" },
       { attribute: "Where you must live after PR", optionA: "Anywhere in Canada", optionB: "Intent to settle in nominating province" },
-      { attribute: "Best for", optionA: "High-CRS skilled workers", optionB: "Mid-CRS applicants with provincial connection" },
+      { attribute: "Best for", optionA: "High-CRS skilled workers", optionB: "Mid-CRS applicants with provincial connection" }
     ],
     chooseA: [
       "Your CRS is 470 or above without a nomination",
       "You want the fastest possible federal timeline",
       "You have no preference on which Canadian province to settle in",
-      "You qualify under category-based draws (healthcare, STEM, trades, French)",
+      "You qualify under category-based draws (healthcare, STEM, trades, French)"
     ],
     chooseB: [
       "Your CRS is between 350 and 469",
       "You already have a Canadian job offer or work permit",
       "You studied in or have family in a specific province",
-      "Your occupation is on a provincial in-demand list (e.g. Ontario Tech Draws, BC Healthcare)",
+      "Your occupation is on a provincial in-demand list (e.g. Ontario Tech Draws, BC Healthcare)"
     ],
     faqs: [
       {
@@ -95,7 +95,7 @@ export const comparisons: Comparison[] = [
         question: "Can I move to a different province after getting PR through PNP?",
         answer:
           "Legally, the Charter of Rights guarantees mobility within Canada, so you cannot be forced to stay. In practice, however, you must show genuine intent to settle in the nominating province at the time of application — moving immediately raises misrepresentation concerns.",
-      },
+      }
     ],
     lastUpdated: "2026-05-13",
   },
@@ -106,7 +106,7 @@ export const comparisons: Comparison[] = [
     category: "Permanent Residence",
     metaTitle: "Canada PR vs Australia PR (2026): Which Is Easier and Faster?",
     metaDescription:
-      "Canada PR vs Australia PR — eligibility, cost, processing time, jobs market and quality of life compared honestly. Updated for 2026 by 4 Aces Visa.",
+      "Canada PR vs Australia PR — eligibility, cost, processing time, jobs market and quality of life compared honestly. Updated for 2026 by Garg Brothers.",
     h1: "Canada PR vs Australia PR",
     intro:
       "Canada and Australia are the two most popular skilled-migration destinations in 2026. Canada accepts roughly 485,000 PRs per year; Australia caps permanent migration at 185,000. Eligibility, cost and timelines are meaningfully different.",
@@ -119,19 +119,19 @@ export const comparisons: Comparison[] = [
       { attribute: "Processing time", optionA: "5–6 months", optionB: "8–14 months" },
       { attribute: "Government fees (single)", optionA: "CAD $1,525 (~AUD $1,675)", optionB: "AUD $4,765 (Subclass 189)" },
       { attribute: "Median full-time wage", optionA: "CAD $68,000", optionB: "AUD $98,000" },
-      { attribute: "Path to citizenship", optionA: "3 years out of last 5", optionB: "4 years residence + 1 year as PR" },
+      { attribute: "Path to citizenship", optionA: "3 years out of last 5", optionB: "4 years residence + 1 year as PR" }
     ],
     chooseA: [
       "You want the fastest skilled-migration outcome",
       "Your CRS or equivalent points are mid-range (470–520)",
       "You value lower upfront cost and broader provincial options",
-      "You have French-language ability (huge CRS boost in 2026)",
+      "You have French-language ability (huge CRS boost in 2026)"
     ],
     chooseB: [
       "You score 90+ on Australia's points test",
       "Your occupation is on the Core Skills Occupation List (CSOL)",
       "You prioritise higher post-migration earnings",
-      "You prefer warmer climate and Asia-Pacific business proximity",
+      "You prefer warmer climate and Asia-Pacific business proximity"
     ],
     faqs: [
       {
@@ -153,7 +153,7 @@ export const comparisons: Comparison[] = [
         question: "Which country has a faster path to citizenship?",
         answer:
           "Canada is faster: 3 years of physical presence in the last 5 after becoming PR. Australia requires 4 years lawful residence with at least 1 year as a permanent resident.",
-      },
+      }
     ],
     lastUpdated: "2026-05-13",
   },
@@ -177,19 +177,19 @@ export const comparisons: Comparison[] = [
       { attribute: "Employer-specific?", optionA: "Yes — closed work permit", optionB: "No — open work permit" },
       { attribute: "Validity", optionA: "Up to 3 years (matches LMIA)", optionB: "8 months to 3 years (program length)" },
       { attribute: "CRS boost for PR", optionA: "+50 to +200 points", optionB: "No automatic boost" },
-      { attribute: "Spouse work permit", optionA: "Only if TEER 0/1 (post-2024)", optionB: "Yes — open spouse OWP" },
+      { attribute: "Spouse work permit", optionA: "Only if TEER 0/1 (post-2024)", optionB: "Yes — open spouse OWP" }
     ],
     chooseA: [
       "You have a confirmed Canadian job offer",
       "Your employer is willing and able to obtain an LMIA",
       "You need the +50/+200 CRS boost for Express Entry",
-      "Your role is in a high-wage TEER 0 or TEER 1 occupation",
+      "Your role is in a high-wage TEER 0 or TEER 1 occupation"
     ],
     chooseB: [
       "You graduated from an eligible Designated Learning Institution (DLI)",
       "You want the freedom to work for any Canadian employer",
       "You want to test the Canadian job market before committing to one company",
-      "You plan to apply for PR via Canadian Experience Class (CEC) after 12 months of work",
+      "You plan to apply for PR via Canadian Experience Class (CEC) after 12 months of work"
     ],
     faqs: [
       {
@@ -211,7 +211,7 @@ export const comparisons: Comparison[] = [
         question: "Can my spouse work in Canada on either permit?",
         answer:
           "PGWP holders: spouses still receive an open spousal work permit. LMIA holders: as of 2024, spouses receive an open work permit only if the principal applicant works in TEER 0 or TEER 1 (high-skill) occupations.",
-      },
+      }
     ],
     lastUpdated: "2026-05-13",
   },
@@ -236,19 +236,19 @@ export const comparisons: Comparison[] = [
       { attribute: "Government fees (5y, single)", optionA: "£1,519 visa + £5,175 NHS surcharge", optionB: "CAD $1,525 (~£890)" },
       { attribute: "Spouse work rights", optionA: "Yes — unrestricted", optionB: "Yes — open work permit" },
       { attribute: "Path to permanent status", optionA: "ILR after 5 years", optionB: "PR on day one" },
-      { attribute: "Path to citizenship", optionA: "ILR + 1 year (6 total)", optionB: "3 of last 5 years" },
+      { attribute: "Path to citizenship", optionA: "ILR + 1 year (6 total)", optionB: "3 of last 5 years" }
     ],
     chooseA: [
       "You already have a confirmed UK job offer at £41,700+",
       "You want to start working abroad within 2 months",
       "You prefer Europe, NHS healthcare and London's job market",
-      "You're comfortable with a 5-year wait for permanent status",
+      "You're comfortable with a 5-year wait for permanent status"
     ],
     chooseB: [
       "You want permanent status from day one",
       "You don't have a confirmed overseas job offer yet",
       "You want the fastest realistic path to a second citizenship",
-      "You're bringing a spouse and want guaranteed work rights for them",
+      "You're bringing a spouse and want guaranteed work rights for them"
     ],
     faqs: [
       {
@@ -270,7 +270,7 @@ export const comparisons: Comparison[] = [
         question: "Does the UK Skilled Worker visa lead to citizenship?",
         answer:
           "Yes, but slowly. You must complete 5 years on the Skilled Worker route to qualify for Indefinite Leave to Remain, then wait another 12 months before applying for British citizenship — 6 years minimum total.",
-      },
+      }
     ],
     lastUpdated: "2026-05-13",
   },
@@ -294,19 +294,19 @@ export const comparisons: Comparison[] = [
       { attribute: "Processing time", optionA: "1–3 months", optionB: "4–8 weeks" },
       { attribute: "Family reunification", optionA: "Immediate, spouse can work", optionB: "Allowed if income proven" },
       { attribute: "Path to PR (Niederlassungserlaubnis)", optionA: "21 months (B1 German) or 27 months (A1)", optionB: "After switching to work permit + 4 years" },
-      { attribute: "Best for", optionA: "Senior STEM, IT, medical professionals", optionB: "Mid-career skilled workers without an offer" },
+      { attribute: "Best for", optionA: "Senior STEM, IT, medical professionals", optionB: "Mid-career skilled workers without an offer" }
     ],
     chooseA: [
       "You have a German job offer ≥ €48,300 (or €43,759.80 in a shortage occupation)",
       "Your degree is recognised by anabin or you hold a German qualification",
       "You want the fastest route to German PR (21 months with B1 German)",
-      "You're a senior STEM, IT, medical or engineering professional",
+      "You're a senior STEM, IT, medical or engineering professional"
     ],
     chooseB: [
       "You don't yet have a German job offer",
       "You score at least 6 points on the Chancenkarte system",
       "You hold a recognised vocational or university qualification (2+ years)",
-      "You want to physically be in Germany while job-searching",
+      "You want to physically be in Germany while job-searching"
     ],
     faqs: [
       {
@@ -328,7 +328,7 @@ export const comparisons: Comparison[] = [
         question: "Can my spouse work in Germany on either visa?",
         answer:
           "Spouses of EU Blue Card holders receive an immediate unrestricted work permit. Chancenkarte holders can bring family only if they prove sufficient income — and family members on the dependant permit have restricted work rights until the principal switches to a work residence permit.",
-      },
+      }
     ],
     lastUpdated: "2026-05-13",
   },
@@ -352,19 +352,19 @@ export const comparisons: Comparison[] = [
       { attribute: "Path to PR", optionA: "PGWP → CEC / PNP", optionB: "CEC after 12 months / PNP / EE" },
       { attribute: "Total time to PR", optionA: "3–5 years", optionB: "18–30 months" },
       { attribute: "Spouse rights", optionA: "Open WP only if Master's/PhD", optionB: "Open WP if TEER 0/1" },
-      { attribute: "Best age range", optionA: "18–29", optionB: "25–40" },
+      { attribute: "Best age range", optionA: "18–29", optionB: "25–40" }
     ],
     chooseA: [
       "You're under 30 and want a Canadian credential on your CV",
       "You can fund 1–2 years of tuition without a loan",
       "Your target program is PGWP-eligible AND in a long-term shortage occupation",
-      "You want to settle in Canada long-term and prefer a 'soft landing'",
+      "You want to settle in Canada long-term and prefer a 'soft landing'"
     ],
     chooseB: [
       "You already have 3+ years of skilled work experience",
       "You can secure (or your employer can secure) a positive LMIA",
       "You want the fastest realistic route to PR",
-      "You'd rather earn CAD $60,000+ than spend CAD $40,000 on tuition",
+      "You'd rather earn CAD $60,000+ than spend CAD $40,000 on tuition"
     ],
     faqs: [
       {
@@ -386,10 +386,10 @@ export const comparisons: Comparison[] = [
         question: "Do I need a PAL/TAL for both?",
         answer:
           "No. The Provincial / Territorial Attestation Letter (PAL/TAL) is required only for new study permit applications. Work permit applications do not require a PAL.",
-      },
+      }
     ],
     lastUpdated: "2026-05-13",
-  },
+  }
 ];
 
 export const getComparison = (slug: string): Comparison | undefined =>

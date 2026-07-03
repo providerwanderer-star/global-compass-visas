@@ -34,7 +34,7 @@ const PNPTrackerPage = () => {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Canada PNP Draw Tracker",
-    url: "https://www.4acesvisa.com/pnp-tracker",
+    url: "https://www.gargbrothers.ca/pnp-tracker",
     applicationCategory: "ImmigrationTool",
     description:
       "Track Provincial Nominee Program (PNP) draws across all Canadian provinces — minimum scores, invitation counts, and stream details.",
@@ -67,33 +67,32 @@ const PNPTrackerPage = () => {
           "@type": "Answer",
           text: "A Provincial Nominee Program (PNP) nomination adds 600 additional CRS points to your Express Entry profile. Since the maximum CRS without PNP is around 1,200, a nomination effectively guarantees you will receive an Invitation to Apply (ITA) in the next general draw.",
         },
-      },
+      }
     ],
   };
 
   return (
     <>
       <Helmet>
-        <title>PNP Draw Tracker 2026 — Provincial Nominee Program Draws | 4 Aces Visa</title>
+        <title>PNP Draw Tracker 2026 — Provincial Nominee Program Draws | Garg Brothers</title>
         <meta
           name="description"
           content="Track all Canadian Provincial Nominee Program (PNP) draws in 2026 — Ontario, BC, Alberta, Saskatchewan, Manitoba and more. Minimum scores, ITAs, and stream details updated regularly."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/pnp-tracker" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/pnp-tracker" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="PNP Draw Tracker 2026 — Provincial Nominee Program Draws | 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="PNP Draw Tracker 2026 — Provincial Nominee Program Draws | Garg Brothers" />
         <meta property="og:description" content="Track all Canadian Provincial Nominee Program (PNP) draws in 2026 — Ontario, BC, Alberta, Saskatchewan, Manitoba and more. Minimum scores, ITAs, and stream details updated regularly." />
-        <meta property="og:url" content="https://www.4acesvisa.com/pnp-tracker" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/pnp-tracker" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.4acesvisa.com/"},{"@type":"ListItem","position":2,"name":"PNP Tracker","item":"https://www.4acesvisa.com/pnp-tracker"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"PNP Tracker","item":"https://www.gargbrothers.ca/pnp-tracker"}]})}</script>
       </Helmet>
 
       {/* ── HERO ── */}
@@ -230,7 +229,7 @@ const PNPTrackerPage = () => {
                   ["Processing time", "~6 months", "~12–18 months (base PNP)"],
                   ["Job offer required?", "No (but helps +50/200 CRS)", "Often yes (some streams)"],
                   ["Best for", "High CRS scores (480+)", "Lower CRS but in-demand occupation"],
-                  ["Combined pathway", "—", "PNP nomination adds +600 CRS"],
+                  ["Combined pathway", "—", "PNP nomination adds +600 CRS"]
                 ].map(([factor, ee, pnp], i) => (
                   <tr key={factor} className={`border-t border-border ${i % 2 === 0 ? "" : "bg-muted/20"}`}>
                     <td className="px-4 py-3 font-semibold text-foreground">{factor}</td>
@@ -265,7 +264,7 @@ const PNPTrackerPage = () => {
               {
                 q: "How long does PNP processing take?",
                 a: "Base PNP applications (outside Express Entry) typically take 12–18 months: 6–12 months for provincial processing plus 6–12 months for IRCC PR processing. Enhanced PNP (through Express Entry) is faster — typically 6 months — once you receive the provincial nomination.",
-              },
+              }
             ].map(({ q, a }) => (
               <details key={q} className="group bg-card border border-border rounded-xl">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-foreground text-sm list-none">
@@ -286,7 +285,7 @@ const PNPTrackerPage = () => {
           { label: "BC PNP", href: "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-pnp" },
           { label: "Alberta (AAIP)", href: "https://www.alberta.ca/alberta-advantage-immigration-program" },
           { label: "Saskatchewan (SINP)", href: "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program" },
-          { label: "Manitoba (MPNP)", href: "https://immigratemanitoba.com/" },
+          { label: "Manitoba (MPNP)", href: "https://immigratemanitoba.com/" }
         ]}
         caveat="Each province publishes its own draw history; we mirror the most recent invitations and minimum scores. Always confirm eligibility on the official provincial site before applying."
       />

@@ -13,7 +13,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getOriginCity, getOriginCountry } from "@/data/originGeoData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 
 const OriginCityPage = () => {
   const { country, city } = useParams<{ country: string; city: string }>();
@@ -53,7 +53,7 @@ const OriginCityPage = () => {
       <SeoSchema
         breadcrumbs={[
           { name: `${countryData.name} to Canada`, url: `/${countryData.slug}` },
-          { name: `${cityData.name} to Canada`, url: `/from/${countryData.slug}/${cityData.slug}` },
+          { name: `${cityData.name} to Canada`, url: `/from/${countryData.slug}/${cityData.slug}` }
         ]}
       />
 

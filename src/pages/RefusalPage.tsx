@@ -13,7 +13,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getRefusal, REFUSAL_LIST } from "@/data/refusalData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const RefusalPage = () => {
@@ -23,8 +23,8 @@ const RefusalPage = () => {
 
   const canonical = `${SITE}/refusal/${r.slug}`;
   const headline = `${r.name} (${YEAR})`;
-  const metaTitle = `${r.shortName} ${YEAR} — Reasons, Reapply or Appeal | 4 Aces Visa`;
-  const metaDescription = `${r.oneLiner} Refusal reasons, GCMS notes, reconsideration vs re-apply vs Federal Court JR. 4 Aces Visa Immigration Team.`;
+  const metaTitle = `${r.shortName} ${YEAR} — Reasons, Reapply or Appeal | Garg Brothers`;
+  const metaDescription = `${r.oneLiner} Refusal reasons, GCMS notes, reconsideration vs re-apply vs Federal Court JR. Garg Brothers Immigration Team.`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -41,8 +41,8 @@ const RefusalPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = REFUSAL_LIST.filter((x) => x.slug !== r.slug);
@@ -62,7 +62,7 @@ const RefusalPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "Refusal Recovery", url: "/refusal/study-permit-refused" },
-        { name: r.shortName, url: `/refusal/${r.slug}` },
+        { name: r.shortName, url: `/refusal/${r.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-destructive/10 via-background to-background">

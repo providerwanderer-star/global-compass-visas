@@ -26,7 +26,7 @@ const Footer = () => {
           <motion.div variants={staggerItem}>
             <div className="flex items-center gap-1 mb-4">
               <span className="font-display text-xl font-extrabold tracking-tight text-white">
-                4 Aces
+                Garg Brothers
               </span>
               <span className="font-display text-xl font-extrabold tracking-tight text-gold">
                 Visa
@@ -48,7 +48,7 @@ const Footer = () => {
                 { label: "🇨🇦 Canada Immigration", href: "/immigration/canada" },
                 { label: "🇦🇺 Australia Immigration", href: "/immigration/australia" },
                 { label: "🇩🇪 Germany Immigration", href: "/immigration/germany" },
-                { label: "🇬🇧 UK Immigration", href: "/immigration/uk" },
+                { label: "🇬🇧 UK Immigration", href: "/immigration/uk" }
               ].map((l) => (
                 <li key={l.href}>
                   <Link to={l.href} className="text-sm text-primary-foreground/60 hover:text-gold hover:translate-x-1 inline-block transition-all duration-200">{l.label}</Link>
@@ -68,7 +68,7 @@ const Footer = () => {
                 { label: "Work Permits", href: "/services/work-permits" },
                 { label: "Visitor Visa", href: "/services/visitor-visa" },
                 { label: "Family Sponsorship", href: "/services/family-sponsorship" },
-                { label: "Citizenship", href: "/services/citizenship-application" },
+                { label: "Citizenship", href: "/services/citizenship-application" }
               ].map((l) => (
                 <li key={l.href}>
                   <Link to={l.href} className="text-sm text-primary-foreground/60 hover:text-gold hover:translate-x-1 inline-block transition-all duration-200">{l.label}</Link>
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-foreground/40">© 2026 4 Aces Visa. All rights reserved. By the immigrants, for the immigrants.</p>
+          <p className="text-sm text-primary-foreground/40">© 2026 Garg Brothers. All rights reserved. By the immigrants, for the immigrants.</p>
           <div className="flex gap-6">
             <Link to="/about" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">About</Link>
             <Link to="/dashboard" className="text-sm text-primary-foreground/40 hover:text-gold transition-colors">My Dashboard</Link>

@@ -30,7 +30,7 @@ const questions: QuizQuestion[] = [
       { label: "Study Abroad", value: "study", icon: <GraduationCap className="w-5 h-5" /> },
       { label: "Work Visa / Job Search", value: "work", icon: <Briefcase className="w-5 h-5" /> },
       { label: "Family Sponsorship", value: "family", icon: <Heart className="w-5 h-5" /> },
-      { label: "Visit / Tourism", value: "visit", icon: <MapPin className="w-5 h-5" /> },
+      { label: "Visit / Tourism", value: "visit", icon: <MapPin className="w-5 h-5" /> }
     ],
   },
   {
@@ -42,7 +42,7 @@ const questions: QuizQuestion[] = [
       { label: "25–30 years", value: "25-30" },
       { label: "31–35 years", value: "31-35" },
       { label: "36–40 years", value: "36-40" },
-      { label: "41+ years", value: "41+" },
+      { label: "41+ years", value: "41+" }
     ],
   },
   {
@@ -54,7 +54,7 @@ const questions: QuizQuestion[] = [
       { label: "Bachelor's Degree", value: "bachelors" },
       { label: "Master's Degree", value: "masters" },
       { label: "PhD / Doctorate", value: "phd" },
-      { label: "Trade / Vocational Certificate", value: "trade" },
+      { label: "Trade / Vocational Certificate", value: "trade" }
     ],
   },
   {
@@ -66,7 +66,7 @@ const questions: QuizQuestion[] = [
       { label: "1–2 years", value: "1-2" },
       { label: "3–5 years", value: "3-5" },
       { label: "6–10 years", value: "6-10" },
-      { label: "10+ years", value: "10+" },
+      { label: "10+ years", value: "10+" }
     ],
   },
   {
@@ -78,7 +78,7 @@ const questions: QuizQuestion[] = [
       { label: "Intermediate (IELTS 5.5–6)", value: "intermediate" },
       { label: "Proficient (IELTS 6.5–7)", value: "proficient" },
       { label: "Expert (IELTS 7.5+)", value: "expert" },
-      { label: "Haven't taken a test yet", value: "none" },
+      { label: "Haven't taken a test yet", value: "none" }
     ],
   },
   {
@@ -90,9 +90,9 @@ const questions: QuizQuestion[] = [
       { label: "₹5–10 Lakh / CAD 8–15K", value: "medium" },
       { label: "₹10–20 Lakh / CAD 15–30K", value: "high" },
       { label: "₹20 Lakh+ / CAD 30K+", value: "very-high" },
-      { label: "Not sure yet", value: "unsure" },
+      { label: "Not sure yet", value: "unsure" }
     ],
-  },
+  }
 ];
 
 interface Recommendation {
@@ -325,39 +325,38 @@ const QuizPage = () => {
   return (
     <div className="min-h-screen bg-secondary/30">
       <Helmet>
-        <title>Immigration Pathway Quiz | Find Your Best Visa – 4 Aces Visa</title>
+        <title>Immigration Pathway Quiz | Find Your Best Visa – Garg Brothers</title>
         <meta name="description" content="Take the free Canada immigration quiz — 8 questions, instant result showing your best pathway: Express Entry, PNP, study permit, or family sponsorship." />
-        <link rel="canonical" href="https://www.4acesvisa.com/quiz" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/quiz" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="4 Aces Visa" />
-        <meta property="og:title" content="Immigration Pathway Quiz | Find Your Best Visa – 4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
+        <meta property="og:title" content="Immigration Pathway Quiz | Find Your Best Visa – Garg Brothers" />
         <meta property="og:description" content="Take the free Canada immigration quiz — 8 questions, instant result showing your best pathway: Express Entry, PNP, study permit, or family sponsorship." />
-        <meta property="og:url" content="https://www.4acesvisa.com/quiz" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/quiz" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
                 "@type": "WebApplication",
-                "name": "Immigration Pathway Quiz — 4 Aces Visa",
+                "name": "Immigration Pathway Quiz — Garg Brothers",
                 "description": "Free interactive quiz that recommends the best immigration pathway based on your age, education, work experience, and goals.",
-                "url": "https://www.4acesvisa.com/quiz",
+                "url": "https://www.gargbrothers.ca/quiz",
                 "applicationCategory": "UtilityApplication",
                 "operatingSystem": "Any",
                 "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
-                "provider": { "@type": "Organization", "name": "4 Aces Visa", "url": "https://www.4acesvisa.com" }
+                "provider": { "@type": "Organization", "name": "Garg Brothers", "url": "https://www.gargbrothers.ca" }
               },
               {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", "position": 2, "name": "Immigration Quiz", "item": "https://www.4acesvisa.com/quiz" }
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", "position": 2, "name": "Immigration Quiz", "item": "https://www.gargbrothers.ca/quiz" }
                 ]
               }
             ]

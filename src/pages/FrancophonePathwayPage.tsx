@@ -13,7 +13,7 @@ import AuthorByline from "@/components/AuthorByline";
 import EligibilityForm from "@/components/EligibilityForm";
 import { getFrancophonePathway, FRANCOPHONE_LIST } from "@/data/francophoneData";
 
-const SITE = "https://www.4acesvisa.com";
+const SITE = "https://www.gargbrothers.ca";
 const YEAR = new Date().getFullYear();
 
 const FrancophonePathwayPage = () => {
@@ -23,8 +23,8 @@ const FrancophonePathwayPage = () => {
 
   const canonical = `${SITE}/francophone/${p.slug}`;
   const headline = `${p.name} (${YEAR})`;
-  const metaTitle = `${p.shortName} ${YEAR} — Eligibility, Cost, Step-by-Step | 4 Aces Visa`;
-  const metaDescription = `${p.oneLiner} ${p.shortName} requirements, processing time (${p.processingTime}), and the realistic step-by-step. 4 Aces Visa Immigration Team.`;
+  const metaTitle = `${p.shortName} ${YEAR} — Eligibility, Cost, Step-by-Step | Garg Brothers`;
+  const metaDescription = `${p.oneLiner} ${p.shortName} requirements, processing time (${p.processingTime}), and the realistic step-by-step. Garg Brothers Immigration Team.`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -41,8 +41,8 @@ const FrancophonePathwayPage = () => {
     headline,
     datePublished: `${YEAR}-01-15`,
     dateModified: new Date().toISOString().slice(0, 10),
-    author: { "@type": "Organization", name: "4 Aces Visa Immigration Team" },
-    publisher: { "@type": "Organization", name: "4 Aces Visa", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
+    author: { "@type": "Organization", name: "Garg Brothers Immigration Team" },
+    publisher: { "@type": "Organization", name: "Garg Brothers", logo: { "@type": "ImageObject", url: `${SITE}/placeholder.svg` } },
     mainEntityOfPage: canonical,
   };
   const others = FRANCOPHONE_LIST.filter((x) => x.slug !== p.slug);
@@ -62,7 +62,7 @@ const FrancophonePathwayPage = () => {
       </Helmet>
       <SeoSchema breadcrumbs={[
         { name: "French Pathways", url: "/francophone/category-based-french-draws" },
-        { name: p.shortName, url: `/francophone/${p.slug}` },
+        { name: p.shortName, url: `/francophone/${p.slug}` }
       ]} />
 
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">

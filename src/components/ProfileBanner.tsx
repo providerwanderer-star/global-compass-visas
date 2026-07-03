@@ -21,7 +21,7 @@ const ProfileBanner = () => {
   const userScore = profile.crsScore;
   const delta = userScore ? userScore - cutoff : null;
 
-  let headline = "Welcome back to 4 Aces Visa";
+  let headline = "Welcome back to Garg Brothers";
   let sub = "Your personalized Canada immigration dashboard.";
   let ctaLabel = "Continue your journey";
   let ctaHref = "/quiz";

@@ -2070,8 +2070,8 @@ function buildUSAEOFAQs(city: string): { question: string; answer: string }[] {
     },
     {
       question: `What Canadian cities are best for ${city} professionals moving to Canada?`,
-      answer: `Tech workers from SF/Seattle/Austin → Vancouver or Toronto. Healthcare from Houston/Chicago → Ontario or Alberta. Finance from NYC → Toronto. Engineering from Detroit → Windsor or Hamilton. 4 Aces Visa matches your profile to the best province and PNP stream for your background.`,
-    },
+      answer: `Tech workers from SF/Seattle/Austin → Vancouver or Toronto. Healthcare from Houston/Chicago → Ontario or Alberta. Finance from NYC → Toronto. Engineering from Detroit → Windsor or Hamilton. Garg Brothers matches your profile to the best province and PNP stream for your background.`,
+    }
   ];
 }
 
@@ -2080,9 +2080,9 @@ export function buildUSCityEntries(): (CityData & {
   tagline: string;
 })[] {
   return US_CITIES.map((c) => {
-    const metaTitle = `Move to Canada from ${c.name} 2026 — H-1B & PR Guide | 4 Aces Visa`;
-    const metaDescription = `Living in ${c.name} on H-1B or green card backlog? Move to Canada in 6 months via Express Entry. Free assessment from 4 Aces Visa — 98% success rate.`;
-    const intro = `Living in ${c.name} on H-1B, OPT, or facing the US green card backlog? 4 Aces Visa is an RCIC-led Canadian immigration consultancy helping ${c.name} professionals secure Canada PR through Express Entry, BC PNP Tech, Ontario INP, and LMIA-supported pathways. Most ${c.name} clients land Canadian PR in 6–12 months — without leaving their US job until ready.`;
+    const metaTitle = `Move to Canada from ${c.name} 2026 — H-1B & PR Guide | Garg Brothers`;
+    const metaDescription = `Living in ${c.name} on H-1B or green card backlog? Move to Canada in 6 months via Express Entry. Free assessment from Garg Brothers — 98% success rate.`;
+    const intro = `Living in ${c.name} on H-1B, OPT, or facing the US green card backlog? Garg Brothers is an RCIC-led Canadian immigration consultancy helping ${c.name} professionals secure Canada PR through Express Entry, BC PNP Tech, Ontario INP, and LMIA-supported pathways. Most ${c.name} clients land Canadian PR in 6–12 months — without leaving their US job until ready.`;
 
     return {
       slug: c.slug,
@@ -2100,11 +2100,11 @@ export function buildUSCityEntries(): (CityData & {
         `Spouse open work permit + child school admission`,
         `WES & ECA credential evaluations`,
         `IELTS / CELPIP test preparation`,
-        `H-1B to Canada PR transition planning`,
+        `H-1B to Canada PR transition planning`
       ],
       testimonial: {
         name: `${c.name} H-1B client`,
-        text: `After 8 years on H-1B in ${c.name} with no green card in sight, 4 Aces Visa got me Canadian PR in 11 months. I kept my US job the whole time and landed in Toronto when ready. Best decision for my family.`,
+        text: `After 8 years on H-1B in ${c.name} with no green card in sight, Garg Brothers got me Canadian PR in 11 months. I kept my US job the whole time and landed in Toronto when ready. Best decision for my family.`,
         visa: "Canada PR",
       },
       faqs: buildUSAEOFAQs(c.name),

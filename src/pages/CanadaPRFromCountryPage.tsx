@@ -28,9 +28,9 @@ const CanadaPRFromCountryPage = () => {
 
   const freshness = getFreshness("geo-country");
 
-  const title = `Canada PR from ${data.country} (2026) — Pathways, Cost & Timeline | 4 Aces Visa`;
+  const title = `Canada PR from ${data.country} (2026) — Pathways, Cost & Timeline | Garg Brothers`;
   const description = `Complete 2026 guide to Canada PR from ${data.country}. Express Entry, PNP, study & work permits. Top NOC codes, cost (${data.estCostCAD}) and timeline (${data.avgTimelineMonths}).`;
-  const canonical = `https://www.4acesvisa.com/canada-pr-from/${data.slug}`;
+  const canonical = `https://www.gargbrothers.ca/canada-pr-from/${data.slug}`;
 
   const summary = `Skilled ${data.demonym} applicants typically reach Canada PR in ${data.avgTimelineMonths} via Express Entry, PNP or LMIA-based work permits. Total cost: ${data.estCostCAD}. Top occupations include ${data.topNocs
     .slice(0, 3)
@@ -65,7 +65,7 @@ const CanadaPRFromCountryPage = () => {
       <SeoSchema
         breadcrumbs={[
           { name: "Canada PR from", url: "/canada-pr-from" },
-          { name: data.country, url: `/canada-pr-from/${data.slug}` },
+          { name: data.country, url: `/canada-pr-from/${data.slug}` }
         ]}
       />
 
@@ -237,7 +237,7 @@ const CanadaPRFromCountryPage = () => {
               { href: "/crs-calculator", title: "CRS Calculator", icon: Calculator },
               { href: "/express-entry/draws", title: "Live EE Draws", icon: TrendingUp },
               { href: "/pnp-tracker", title: "PNP Tracker", icon: MapPin },
-              { href: "/in-demand-jobs", title: "In-Demand Jobs", icon: Briefcase },
+              { href: "/in-demand-jobs", title: "In-Demand Jobs", icon: Briefcase }
             ].map((t) => {
               const Icon = t.icon;
               return (

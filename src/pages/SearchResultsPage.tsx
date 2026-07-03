@@ -184,7 +184,7 @@ const SearchResultsPage = () => {
       desc: "Government fees + total move cost estimate.",
       href: "/immigration-cost-calculator",
       icon: Calculator,
-    },
+    }
   ];
 
   // ── Active filter chips ─────────────────────────────────
@@ -195,13 +195,13 @@ const SearchResultsPage = () => {
     province && { label: province, key: "province" },
     jobOffer && { label: `Job offer: ${jobOffer}`, key: "jobOffer" },
     origin && { label: `From ${origin}`, key: "origin" },
-    timeline && { label: `Timeline ${timeline}`, key: "timeline" },
+    timeline && { label: `Timeline ${timeline}`, key: "timeline" }
   ].filter(Boolean) as { label: string; key: string }[];
 
   // ── SEO ─────────────────────────────────────────────────
   const seoTitle = q
-    ? `Search: ${q} — Immigration Pathways & NOC | 4 Aces Visa`
-    : "Immigration Search — Find Your Pathway | 4 Aces Visa";
+    ? `Search: ${q} — Immigration Pathways & NOC | Garg Brothers`
+    : "Immigration Search — Find Your Pathway | Garg Brothers";
 
   const seoDesc = q
     ? `Find immigration pathways, NOC codes, PR options and provinces matching “${q}”. Personalized recommendations for Canada Express Entry, PNP, study and work permits.`
@@ -212,12 +212,12 @@ const SearchResultsPage = () => {
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDesc} />
-        <link rel="canonical" href="https://www.4acesvisa.com/search" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/search" />
         <meta name="robots" content="noindex,follow" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDesc} />
-        <meta property="og:url" content="https://www.4acesvisa.com/search" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/search" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDesc} />

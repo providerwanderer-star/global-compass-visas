@@ -25,7 +25,7 @@ const recentDraws = [
   { date: "Mar 4, 2026", type: "General", itas: "3,500", cutoff: "456" },
   { date: "Feb 19, 2026", type: "Healthcare", itas: "2,000", cutoff: "422" },
   { date: "Feb 5, 2026", type: "General", itas: "4,500", cutoff: "440" },
-  { date: "Jan 22, 2026", type: "STEM", itas: "3,200", cutoff: "435" },
+  { date: "Jan 22, 2026", type: "STEM", itas: "3,200", cutoff: "435" }
 ];
 
 const crsFactors = [
@@ -34,7 +34,7 @@ const crsFactors = [
   { factor: "Language (CLB 10+)", points: "Up to 136", icon: Target },
   { factor: "Work Experience (5+ yrs)", points: "Up to 80", icon: TrendingUp },
   { factor: "PNP Nomination", points: "+600 Bonus", icon: Zap },
-  { factor: "Job Offer (NOC 00)", points: "+200 Bonus", icon: Shield },
+  { factor: "Job Offer (NOC 00)", points: "+200 Bonus", icon: Shield }
 ];
 
 const ExpressEntryLandingPage = () => {
@@ -42,38 +42,38 @@ const ExpressEntryLandingPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa</title>
+        <title>Canada Express Entry 2026 — Get PR in 6 Months | Garg Brothers</title>
         <meta
           name="description"
           content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS score calculator, and free eligibility assessment. 98% success rate — 15,000+ visas processed."
         />
-        <link rel="canonical" href="https://www.4acesvisa.com/express-entry" />
+        <link rel="canonical" href="https://www.gargbrothers.ca/express-entry" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa" />
+        <meta property="og:title" content="Canada Express Entry 2026 — Get PR in 6 Months | Garg Brothers" />
         <meta property="og:description" content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS calculator, and free eligibility assessment. 98% success rate." />
-        <meta property="og:url" content="https://www.4acesvisa.com/express-entry" />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content="https://www.gargbrothers.ca/express-entry" />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Express Entry 2026 — Get PR in 6 Months | 4 Aces Visa" />
+        <meta name="twitter:title" content="Canada Express Entry 2026 — Get PR in 6 Months | Garg Brothers" />
         <meta name="twitter:description" content="Apply for Canada PR through Express Entry in 2026. Next draw countdown, CRS calculator, and free eligibility assessment." />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
                 "@type": "WebPage",
-                name: "Canada Express Entry 2026 – 4 Aces Visa",
+                name: "Canada Express Entry 2026 – Garg Brothers",
                 description: "Dedicated Express Entry landing page with draw countdown, CRS breakdown, and free PR assessment.",
-                url: "https://www.4acesvisa.com/express-entry",
+                url: "https://www.gargbrothers.ca/express-entry",
               },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.4acesvisa.com/" },
-                  { "@type": "ListItem", position: 2, name: "Express Entry", item: "https://www.4acesvisa.com/express-entry" },
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://www.gargbrothers.ca/" },
+                  { "@type": "ListItem", position: 2, name: "Express Entry", item: "https://www.gargbrothers.ca/express-entry" }
                 ],
               },
               {
@@ -94,9 +94,9 @@ const ExpressEntryLandingPage = () => {
                       "@type": "Answer",
                       text: "From profile creation to PR landing, the entire process can take as little as 6 months if you receive an ITA quickly.",
                     },
-                  },
+                  }
                 ],
-              },
+              }
             ],
           })}
         </script>
@@ -171,7 +171,7 @@ const ExpressEntryLandingPage = () => {
                 {[
                   { value: "~4,000", label: "ITAs Expected" },
                   { value: "440-460", label: "CRS Cutoff Range" },
-                  { value: "6 mo", label: "PR Processing" },
+                  { value: "6 mo", label: "PR Processing" }
                 ].map((s) => (
                   <div key={s.label} className="bg-white/5 rounded-lg p-3">
                     <div className="font-display text-lg font-bold text-gold">{s.value}</div>
@@ -310,7 +310,7 @@ const ExpressEntryLandingPage = () => {
             {[
               { step: "01", title: "Free CRS Assessment", desc: "We calculate your score, identify gaps, and build a strategy to maximize your CRS points.", time: "Day 1" },
               { step: "02", title: "Profile & Optimization", desc: "Create your Express Entry profile with optimized documentation. Explore PNP nominations for +600 points.", time: "Week 1-4" },
-              { step: "03", title: "ITA & PR Application", desc: "Receive your Invitation to Apply and submit your complete PR application. Land in Canada!", time: "Month 2-6" },
+              { step: "03", title: "ITA & PR Application", desc: "Receive your Invitation to Apply and submit your complete PR application. Land in Canada!", time: "Month 2-6" }
             ].map((s, i) => (
               <motion.div
                 key={s.step}
@@ -377,7 +377,7 @@ const ExpressEntryLandingPage = () => {
                   "Gap analysis & optimization strategy",
                   "PNP nomination eligibility check",
                   "Response within 24 hours",
-                  "100% free — no obligation",
+                  "100% free — no obligation"
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-foreground">
                     <CheckCircle className="h-4 w-4 text-gold shrink-0" />

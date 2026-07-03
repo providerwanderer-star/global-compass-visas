@@ -97,48 +97,47 @@ const BlogPostPage = () => {
   return (
     <div>
       <Helmet>
-        <title>{`${post.title} | 4 Aces Visa Blog`}</title>
+        <title>{`${post.title} | Garg Brothers Blog`}</title>
         <meta name="description" content={post.metaDescription || post.excerpt} />
-        <link rel="canonical" href={`https://www.4acesvisa.com/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://www.gargbrothers.ca/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="4 Aces Visa" />
+        <meta property="og:site_name" content="Garg Brothers" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:url" content={`https://www.4acesvisa.com/blog/${post.slug}`} />
-        <meta property="og:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta property="og:url" content={`https://www.gargbrothers.ca/blog/${post.slug}`} />
+        <meta property="og:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content={post.title} />
         <meta property="article:published_time" content={post.date} />
-        <meta property="article:author" content="4 Aces Visa" />
+        <meta property="article:author" content="Garg Brothers" />
         <meta property="article:section" content={post.category} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@4acesvisa" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content="https://www.4acesvisa.com/og-default.jpg" />
+        <meta name="twitter:image" content="https://www.gargbrothers.ca/og-default.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": post.title,
             "description": post.metaDescription || post.excerpt,
-            "image": "https://www.4acesvisa.com/og-default.jpg",
-            "url": `https://www.4acesvisa.com/blog/${post.slug}`,
+            "image": "https://www.gargbrothers.ca/og-default.jpg",
+            "url": `https://www.gargbrothers.ca/blog/${post.slug}`,
             "datePublished": post.date,
             "dateModified": post.date,
             "author": {
               "@type": "Person",
-              "name": "4 Aces Visa Team",
+              "name": "Garg Brothers Team",
               "jobTitle": "RCIC-Regulated Immigration Consultant",
-              "url": "https://www.4acesvisa.com/about"
+              "url": "https://www.gargbrothers.ca/about"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "4 Aces Visa",
-              "logo": { "@type": "ImageObject", "url": "https://www.4acesvisa.com/logo.png" }
+              "name": "Garg Brothers",
+              "logo": { "@type": "ImageObject", "url": "https://www.gargbrothers.ca/logo.png" }
             },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.4acesvisa.com/blog/${post.slug}` },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.gargbrothers.ca/blog/${post.slug}` },
             "articleSection": post.category,
             "wordCount": post.content.split(/\s+/).length,
             "inLanguage": "en-US"
@@ -154,13 +153,13 @@ const BlogPostPage = () => {
             "dateModified": post.date,
             "author": {
               "@type": "Organization",
-              "name": "4 Aces Visa",
-              "url": "https://www.4acesvisa.com"
+              "name": "Garg Brothers",
+              "url": "https://www.gargbrothers.ca"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "4 Aces Visa",
-              "logo": { "@type": "ImageObject", "url": "https://www.4acesvisa.com/favicon.ico" }
+              "name": "Garg Brothers",
+              "logo": { "@type": "ImageObject", "url": "https://www.gargbrothers.ca/favicon.ico" }
             }
           })}
         </script>
@@ -169,9 +168,9 @@ const BlogPostPage = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.4acesvisa.com" },
-              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.4acesvisa.com/blog" },
-              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.4acesvisa.com/blog/${post.slug}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gargbrothers.ca" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.gargbrothers.ca/blog" },
+              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.gargbrothers.ca/blog/${post.slug}` }
             ]
           })}
         </script>
@@ -279,7 +278,7 @@ const BlogPostPage = () => {
               {/* Final CTA */}
               <div className="bg-primary rounded-xl p-6 mt-10">
                 <h3 className="font-display text-lg font-bold text-primary-foreground mb-2">Need Expert Immigration Guidance?</h3>
-                <p className="text-primary-foreground/70 text-sm mb-4">Book a free consultation with 4 Aces Visa. 98% success rate, 15,000+ visas processed.</p>
+                <p className="text-primary-foreground/70 text-sm mb-4">Book a free consultation with Garg Brothers. 98% success rate, 15,000+ visas processed.</p>
                 <Link to="/contact" className="inline-flex items-center text-sm font-semibold text-gold hover:underline">
                   Get Free Assessment <ArrowRight className="ml-1 h-3 w-3" />
                 </Link>

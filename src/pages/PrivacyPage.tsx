@@ -3,15 +3,15 @@ import { Helmet } from "react-helmet-async";
 const PrivacyPage = () => (
   <div className="min-h-screen bg-background">
     <Helmet>
-      <title>Privacy Policy | 4 Aces Visa</title>
-      <meta name="description" content="How 4 Aces Visa collects, uses, stores, and protects personal information submitted through our website and consultation forms." />
-      <link rel="canonical" href="https://www.4acesvisa.com/privacy" />
+      <title>Privacy Policy | Garg Brothers</title>
+      <meta name="description" content="How Garg Brothers collects, uses, stores, and protects personal information submitted through our website and consultation forms." />
+      <link rel="canonical" href="https://www.gargbrothers.ca/privacy" />
     </Helmet>
     <div className="container mx-auto max-w-3xl px-4 py-16 prose prose-slate">
       <h1>Privacy Policy</h1>
       <p><em>Last updated: July 2026</em></p>
 
-      <p>4 Aces Visa ("we", "our", "us") respects your privacy. This policy explains what personal information we collect through www.4acesvisa.com, how we use it, and the choices you have.</p>
+      <p>Garg Brothers ("we", "our", "us") respects your privacy. This policy explains what personal information we collect through www.gargbrothers.ca, how we use it, and the choices you have.</p>
 
       <h2>Information we collect</h2>
       <ul>

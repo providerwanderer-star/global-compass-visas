@@ -11,7 +11,7 @@ const navLinks = [
       { label: "🇨🇦 Canada", href: "/immigration/canada" },
       { label: "🇦🇺 Australia", href: "/immigration/australia" },
       { label: "🇩🇪 Germany", href: "/immigration/germany" },
-      { label: "🇬🇧 United Kingdom", href: "/immigration/uk" },
+      { label: "🇬🇧 United Kingdom", href: "/immigration/uk" }
     ],
   },
   {
@@ -29,7 +29,7 @@ const navLinks = [
       { label: "Citizenship Application", href: "/services/citizenship-application" },
       { label: "Visitor Visa Insurance", href: "/services/visitor-visa-insurance" },
       { label: "Job Seeker Visa (Germany)", href: "/services/job-seeker-visa" },
-      { label: "Study Visas (Global)", href: "/services/study-visas" },
+      { label: "Study Visas (Global)", href: "/services/study-visas" }
     ],
   },
   {
@@ -61,7 +61,7 @@ const navLinks = [
       { label: "Milton", href: "/city/milton" },
       { label: "Waterloo", href: "/city/waterloo" },
       { label: "Vancouver", href: "/city/vancouver" },
-      { label: "Calgary", href: "/city/calgary" },
+      { label: "Calgary", href: "/city/calgary" }
     ],
   },
   {
@@ -74,7 +74,7 @@ const navLinks = [
       { label: "👨‍👩‍👧‍👦 Family Sponsorship", href: "/documents/family-sponsorship" },
       { label: "🏛️ PNP Application", href: "/documents/pnp-application" },
       { label: "🍁 Citizenship", href: "/documents/citizenship" },
-      { label: "🇩🇪 Germany Job Seeker", href: "/documents/job-seeker-visa" },
+      { label: "🇩🇪 Germany Job Seeker", href: "/documents/job-seeker-visa" }
     ],
   },
   { label: "FAQ", href: "/faq" },
@@ -92,12 +92,12 @@ const navLinks = [
       { label: "⏱️ Processing Times", href: "/processing-times" },
       { label: "💰 Cost Calculator", href: "/immigration-cost-calculator" },
       { label: "🧭 Pathway Quiz", href: "/quiz" },
-      { label: "🌍 Compare Countries", href: "/compare" },
+      { label: "🌍 Compare Countries", href: "/compare" }
     ],
   },
   { label: "Pathway Quiz", href: "/quiz" },
   { label: "News", href: "/news" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/contact" }
 ];
 
 const Navbar = () => {
@@ -124,7 +124,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-1 shrink-0">
           <span className="font-display text-lg md:text-xl font-extrabold tracking-tight text-primary">
-            4 Aces
+            Garg Brothers
           </span>
           <span className="font-display text-lg md:text-xl font-extrabold tracking-tight text-gold">
             Visa

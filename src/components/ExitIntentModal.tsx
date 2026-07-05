@@ -99,7 +99,10 @@ const ExitIntentModal = () => {
       const { error } = await supabase.from("leads").insert({
         full_name: "Exit-intent capture",
         email: email.trim(),
-        phone: "n/a",
+        // Placeholder — leads table requires a phone matching ^[0-9+()\-.\s/]+$
+        // (length 3-32). Exit-intent modal only collects email, so we send a
+        // clearly-synthetic numeric sentinel that satisfies the constraint.
+        phone: "000",
         destination_country: "Canada",
         visa_type: profile.intent ?? null,
         source_page: "exit-intent-modal",

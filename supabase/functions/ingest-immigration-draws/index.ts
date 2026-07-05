@@ -32,18 +32,47 @@ function serviceClient() {
   );
 }
 
-async function firecrawlScrape(url: string, apiKey: string): Promise<string | null> {
-  const res = await fetch(`${FIRECRAWL_V2}/scrape`, {
-    method: "POST",
-    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ url, formats: ["markdown"], onlyMainContent: true }),
-  });
-  if (!res.ok) {
-    console.error("Firecrawl scrape failed", res.status, await res.text().catch(() => ""));
-    return null;
+async function firecrawlScrape(
+  url: string,
+  apiKey: string,
+): Promise<{ markdown: string | null; html: string | null }> {
+  // Retry with exponential backoff on 5xx / network errors. Firecrawl
+  // frequently returns transient 500 UNKNOWN_ERROR on the IRCC page.
+  const attempts = 3;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const res = await fetch(`${FIRECRAWL_V2}/scrape`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          url,
+          // Ask for both formats so we can fall back to HTML table parsing
+          // if markdown loses the pipe-table structure.
+          formats: ["markdown", "html"],
+          onlyMainContent: false,
+        }),
+      });
+      if (res.status >= 500 && res.status < 600) {
+        console.warn(`Firecrawl ${res.status} (attempt ${i + 1}/${attempts})`);
+        await new Promise((r) => setTimeout(r, 1000 * Math.pow(2, i)));
+        continue;
+      }
+      if (!res.ok) {
+        console.error("Firecrawl scrape failed", res.status, await res.text().catch(() => ""));
+        return { markdown: null, html: null };
+      }
+      const data = await res.json();
+      const payload = data?.data ?? data ?? {};
+      return {
+        markdown: payload.markdown ?? null,
+        html: payload.html ?? payload.rawHtml ?? null,
+      };
+    } catch (err) {
+      console.warn(`Firecrawl fetch threw (attempt ${i + 1}/${attempts}):`, err);
+      await new Promise((r) => setTimeout(r, 1000 * Math.pow(2, i)));
+    }
   }
-  const data = await res.json();
-  return data?.data?.markdown ?? data?.markdown ?? null;
+  return { markdown: null, html: null };
 }
 
 // Parse the EE rounds markdown table. IRCC publishes one row per round with
@@ -85,6 +114,60 @@ function parseEERounds(md: string): Array<{
     const crs = parseInt(cells[4].replace(/[^\d]/g, ""), 10);
     if (!Number.isFinite(itas) || !Number.isFinite(crs)) continue;
 
+    out.push({
+      drawNumber: num,
+      drawDate: dateMatch[0],
+      category,
+      itas,
+      crsMin: crs,
+      tieBreak: cells[5] ?? null,
+    });
+  }
+  return out;
+}
+
+// Fallback: parse the EE rounds HTML <table>. IRCC's page ships a real
+// table so this works even if Firecrawl's markdown conversion drops the
+// pipe-table structure.
+function parseEERoundsHtml(html: string): Array<{
+  drawNumber: number;
+  drawDate: string;
+  category: string;
+  itas: number;
+  crsMin: number;
+  tieBreak: string | null;
+}> {
+  const out: Array<{
+    drawNumber: number;
+    drawDate: string;
+    category: string;
+    itas: number;
+    crsMin: number;
+    tieBreak: string | null;
+  }> = [];
+
+  const stripTags = (s: string) =>
+    s.replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+
+  const rowRe = /<tr\b[^>]*>([\s\S]*?)<\/tr>/gi;
+  const cellRe = /<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi;
+  let rowMatch: RegExpExecArray | null;
+  while ((rowMatch = rowRe.exec(html)) !== null) {
+    const cells: string[] = [];
+    let cellMatch: RegExpExecArray | null;
+    cellRe.lastIndex = 0;
+    while ((cellMatch = cellRe.exec(rowMatch[1])) !== null) {
+      cells.push(stripTags(cellMatch[1]));
+    }
+    if (cells.length < 5) continue;
+    const num = parseInt(cells[0].replace(/[^\d]/g, ""), 10);
+    if (!Number.isFinite(num) || num < 1 || num > 100000) continue;
+    const dateMatch = cells[1].match(/\d{4}-\d{2}-\d{2}/);
+    if (!dateMatch) continue;
+    const category = cells[2] || "General";
+    const itas = parseInt(cells[3].replace(/[^\d]/g, ""), 10);
+    const crs = parseInt(cells[4].replace(/[^\d]/g, ""), 10);
+    if (!Number.isFinite(itas) || !Number.isFinite(crs)) continue;
     out.push({
       drawNumber: num,
       drawDate: dateMatch[0],
@@ -174,10 +257,13 @@ async function notifyIndexNow(urls: string[]) {
 async function ingestExpressEntry(supabase: ReturnType<typeof serviceClient>, apiKey: string) {
   const startedAt = new Date().toISOString();
   try {
-    const md = await firecrawlScrape(EE_ROUNDS_URL, apiKey);
-    if (!md) throw new Error("scrape returned empty");
-    const rounds = parseEERounds(md);
-    if (rounds.length === 0) throw new Error("no rounds parsed from markdown");
+    const { markdown, html } = await firecrawlScrape(EE_ROUNDS_URL, apiKey);
+    if (!markdown && !html) throw new Error("scrape returned empty");
+    let rounds = markdown ? parseEERounds(markdown) : [];
+    if (rounds.length === 0 && html) {
+      rounds = parseEERoundsHtml(html);
+    }
+    if (rounds.length === 0) throw new Error("no rounds parsed from markdown or html");
 
     // Only upsert rounds newer than the max already stored, to keep this cheap
     const { data: latest } = await supabase

@@ -50,6 +50,7 @@ import SettlementGuidePage from "@/pages/SettlementGuidePage";
 import ProfileDashboardPage from "@/pages/ProfileDashboardPage";
 import ExitIntentModal from "@/components/ExitIntentModal";
 import AdminNocCoveragePage from "@/pages/AdminNocCoveragePage";
+import AdminGscPage from "@/pages/AdminGscPage";
 import AdminPage from "@/pages/AdminPage";
 import ForAIPage from "@/pages/ForAIPage";
 import AboutPage from "@/pages/AboutPage";
@@ -154,6 +155,7 @@ const App = () => (
               <Route path="/settle-in-canada/:slug" element={<SettlementGuidePage />} />
               <Route path="/dashboard" element={<ProfileDashboardPage />} />
               <Route path="/admin/noc-coverage" element={<AdminNocCoveragePage />} />
+              <Route path="/admin/gsc" element={<AdminGscPage />} />
               <Route path="/admin" element={<AdminPage />} />
               <Route path="/for-ai" element={<ForAIPage />} />
               <Route path="/about" element={<AboutPage />} />

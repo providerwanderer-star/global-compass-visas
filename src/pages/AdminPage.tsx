@@ -11,6 +11,7 @@ import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 
 const EE_CATEGORIES = ["General", "STEM", "Healthcare", "Trades", "Transport", "Agriculture", "French", "Education"] as const;
 const PROVINCES: { name: string; code: string }[] = [
@@ -327,7 +328,10 @@ const AdminPage = () => {
       <header className="border-b border-border bg-card">
         <div className="container-narrow mx-auto py-4 flex items-center justify-between">
           <h1 className="font-display text-xl font-bold">Admin panel</h1>
-          <Button variant="outline" size="sm" onClick={() => supabase.auth.signOut()}>Sign out</Button>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" asChild><Link to="/admin/gsc">GSC Traffic</Link></Button>
+            <Button variant="outline" size="sm" onClick={() => supabase.auth.signOut()}>Sign out</Button>
+          </div>
         </div>
       </header>
       <main className="container-narrow mx-auto py-8 px-4">

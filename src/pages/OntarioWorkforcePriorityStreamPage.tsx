@@ -92,8 +92,13 @@ const OntarioWorkforcePriorityStreamPage = () => {
 
   useEffect(() => {
     (async () => {
-      const { data } = await supabase.rpc("get_last_ingested_at");
-      setLastIngestedAt((data as string | null) ?? null);
+      try {
+        const { data } = await supabase.functions.invoke("immigration-news");
+        const ts = (data as { lastIngestedAt?: string | null } | null)?.lastIngestedAt ?? null;
+        setLastIngestedAt(ts);
+      } catch {
+        setLastIngestedAt(null);
+      }
     })();
   }, []);
 

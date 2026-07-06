@@ -381,6 +381,9 @@ for (const code of nocCodes) add(`/noc/${code}`, 0.75);
 
 // AI / live data pages
 add("/for-ai", 0.5, "weekly");
+add("/brand", 0.8, "monthly");
+add("/4aces", 0.6, "monthly");
+add("/4-aces-visa", 0.6, "monthly");
 add("/express-entry/draws", 0.95, "daily");
 add("/pnp-tracker", 0.9, "daily");
 add("/noc-finder", 0.9, "weekly");

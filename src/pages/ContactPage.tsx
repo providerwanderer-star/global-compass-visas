@@ -46,6 +46,17 @@ const ContactPage = () => {
           })}
         </script>
         <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gargbrothers.ca/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.gargbrothers.ca/contact"}]})}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            { "@type": "Question", name: "How do I book a free immigration consultation with Garg Brothers?", acceptedAnswer: { "@type": "Answer", text: "You can book a free 30-minute consultation by filling out the contact form on this page, calling/WhatsApp +1-647-862-2190, or emailing sahil280389@gmail.com. We typically respond within 4 business hours and offer video calls in English, Hindi, and Punjabi." } },
+            { "@type": "Question", name: "Is the initial consultation really free?", acceptedAnswer: { "@type": "Answer", text: "Yes. Your first eligibility assessment and pathway recommendation is 100% free with no obligation. You only pay if you decide to retain us for a full application package (Express Entry, PNP, study permit, work permit, family sponsorship, etc.)." } },
+            { "@type": "Question", name: "Are Garg Brothers licensed immigration consultants?", acceptedAnswer: { "@type": "Answer", text: "Yes — Garg Brothers (formerly 4 Aces Visa) is a licensed Canadian immigration consultancy with 10+ years of experience, 15,000+ successful visas, and a 98% approval rate across Canada, Australia, Germany, and the UK." } },
+            { "@type": "Question", name: "Which countries do you handle immigration for?", acceptedAnswer: { "@type": "Answer", text: "We specialize in Canada (Express Entry, PNP, LMIA, study permits, work permits, family sponsorship, super visa, citizenship), Australia (Subclass 189/190/491), Germany (Chancenkarte, EU Blue Card), and the United Kingdom (Skilled Worker Visa, Graduate Route)." } },
+            { "@type": "Question", name: "How quickly can you start my application?", acceptedAnswer: { "@type": "Answer", text: "Once you retain us, we begin document collection within 24–48 hours. Most Express Entry profiles are live in the pool within 7–10 days; PNP and study permit files typically launch within 2–3 weeks of onboarding." } }
+          ]
+        })}</script>
       </Helmet>
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">

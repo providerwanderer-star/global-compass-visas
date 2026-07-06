@@ -217,6 +217,17 @@ const CRSCalculatorPage = () => {
             ],
           })}
         </script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            { "@type": "Question", name: "What CRS score do I need for Canada PR in 2026?", acceptedAnswer: { "@type": "Answer", text: "Recent 2026 Express Entry general draws have cut off around 505–520 CRS. Category-based draws (French, healthcare, STEM, trades, agriculture, transport) invite candidates from roughly 379 to 490. A provincial nomination adds +600 CRS and virtually guarantees an ITA." } },
+            { "@type": "Question", name: "How is the CRS score calculated?", acceptedAnswer: { "@type": "Answer", text: "The Comprehensive Ranking System scores you out of 1,200 based on age, education, official language ability (English/French), Canadian and foreign work experience, spouse factors, and skill transferability. Additional points come from a provincial nomination (+600), qualifying job offer (+50 or +200), Canadian study, or French proficiency." } },
+            { "@type": "Question", name: "How can I increase my CRS score?", acceptedAnswer: { "@type": "Answer", text: "The fastest boosts are: retake IELTS/CELPIP for CLB 9+ in all four abilities, add French (NCLC 7+) for up to 50 bonus points, secure a provincial nomination (+600), obtain an LMIA-backed job offer (+50/+200), complete a Canadian credential, or add a year of skilled Canadian work experience." } },
+            { "@type": "Question", name: "Is this CRS calculator accurate for 2026?", acceptedAnswer: { "@type": "Answer", text: "Yes — our calculator uses the current IRCC CRS grid effective in 2026, including all category-based draw factors, French bonus points, and the latest spouse/common-law scoring. Results are an estimate; the official score is confirmed only when IRCC processes your Express Entry profile." } },
+            { "@type": "Question", name: "Is the CRS calculator free?", acceptedAnswer: { "@type": "Answer", text: "Yes. The Garg Brothers CRS calculator is 100% free, requires no sign-up, and gives you an instant score plus tailored suggestions to improve your ranking for Express Entry, PNP, and category-based draws." } }
+          ]
+        })}</script>
       </Helmet>
 
       {/* Hero */}

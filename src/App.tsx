@@ -54,6 +54,7 @@ import AdminGscPage from "@/pages/AdminGscPage";
 import AdminPage from "@/pages/AdminPage";
 import ForAIPage from "@/pages/ForAIPage";
 import AboutPage from "@/pages/AboutPage";
+import BrandPage from "@/pages/BrandPage";
 import ToolsHubPage from "@/pages/ToolsHubPage";
 import OriginCountryPage from "@/pages/OriginCountryPage";
 import OriginCityPage from "@/pages/OriginCityPage";
@@ -159,6 +160,9 @@ const App = () => (
               <Route path="/admin" element={<AdminPage />} />
               <Route path="/for-ai" element={<ForAIPage />} />
               <Route path="/about" element={<AboutPage />} />
+              <Route path="/brand" element={<BrandPage />} />
+              <Route path="/4aces" element={<BrandPage />} />
+              <Route path="/4-aces-visa" element={<BrandPage />} />
               {/* Wave 2 — Origin geo targeting (USA, UK, Australia → Canada) */}
               <Route path="/usa" element={<OriginCountryPage />} />
               <Route path="/uk" element={<OriginCountryPage />} />

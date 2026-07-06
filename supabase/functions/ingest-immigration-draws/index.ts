@@ -24,6 +24,23 @@ const FIRECRAWL_V2 = "https://api.firecrawl.dev/v2";
 const EE_ROUNDS_URL =
   "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html";
 
+// IRCC publishes dates as either ISO ("2026-06-25") or long-form
+// ("June 25, 2026"). Normalize to YYYY-MM-DD, return null if neither matches.
+const MONTHS: Record<string, string> = {
+  january: "01", february: "02", march: "03", april: "04", may: "05", june: "06",
+  july: "07", august: "08", september: "09", october: "10", november: "11", december: "12",
+};
+function normalizeDate(cell: string): string | null {
+  const iso = cell.match(/\d{4}-\d{2}-\d{2}/);
+  if (iso) return iso[0];
+  const long = cell.match(/([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})/);
+  if (long) {
+    const mm = MONTHS[long[1].toLowerCase()];
+    if (mm) return `${long[3]}-${mm}-${long[2].padStart(2, "0")}`;
+  }
+  return null;
+}
+
 function serviceClient() {
   return createClient(
     Deno.env.get("SUPABASE_URL")!,
@@ -106,8 +123,8 @@ function parseEERounds(md: string): Array<{
     const num = parseInt(first.replace(/[^\d]/g, ""), 10);
     if (!Number.isFinite(num) || num < 1 || num > 100000) continue;
 
-    const dateMatch = cells[1].match(/\d{4}-\d{2}-\d{2}/);
-    if (!dateMatch) continue;
+    const drawDate = normalizeDate(cells[1]);
+    if (!drawDate) continue;
 
     const category = cells[2].replace(/\*|_/g, "").trim() || "General";
     const itas = parseInt(cells[3].replace(/[^\d]/g, ""), 10);
@@ -116,7 +133,7 @@ function parseEERounds(md: string): Array<{
 
     out.push({
       drawNumber: num,
-      drawDate: dateMatch[0],
+      drawDate,
       category,
       itas,
       crsMin: crs,
@@ -162,15 +179,15 @@ function parseEERoundsHtml(html: string): Array<{
     if (cells.length < 5) continue;
     const num = parseInt(cells[0].replace(/[^\d]/g, ""), 10);
     if (!Number.isFinite(num) || num < 1 || num > 100000) continue;
-    const dateMatch = cells[1].match(/\d{4}-\d{2}-\d{2}/);
-    if (!dateMatch) continue;
+    const drawDate = normalizeDate(cells[1]);
+    if (!drawDate) continue;
     const category = cells[2] || "General";
     const itas = parseInt(cells[3].replace(/[^\d]/g, ""), 10);
     const crs = parseInt(cells[4].replace(/[^\d]/g, ""), 10);
     if (!Number.isFinite(itas) || !Number.isFinite(crs)) continue;
     out.push({
       drawNumber: num,
-      drawDate: dateMatch[0],
+      drawDate,
       category,
       itas,
       crsMin: crs,
